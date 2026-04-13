@@ -366,40 +366,39 @@ footer p {{
 
 
 def generate_article_card_html(info, slug):
-    """產生首頁用的文章卡片 HTML"""
+    """產生首頁用的小格卡片 HTML（符合 articles-grid 格式）"""
     excerpt = info.get('synopsis', '') or info.get('supplement', '')
     if not excerpt:
         excerpt = f"推理難度 {info['deducibility_stars']}，迷霧等級 {info['fog_stars']}。"
+    # 擷取前 120 字做卡片摘要
+    short_excerpt = excerpt[:120] + ('…' if len(excerpt) > 120 else '')
 
-    return f'''
-    <div class="analysis-card">
-      <div class="analysis-card-header">
-        <div class="analysis-card-title">
-          {info['title']}
-          <small>{info.get('author', '')} · {info.get('year', '')}</small>
+    title_parts = info['title'].split('（')
+    title_zh = title_parts[0]
+    title_en = title_parts[1].rstrip('）') if len(title_parts) > 1 else ''
+    author_short = info.get('author', '').split('（')[0]
+
+    return f'''      <a href="articles/{slug}.html" class="article-card">
+        <div class="article-card-meta">{author_short} · {info.get('year', '')}</div>
+        <div>
+          <div class="article-card-title">{title_zh}</div>
+          {"<div class='article-card-sub'>" + title_en + "</div>" if title_en else ""}
         </div>
-        <div class="analysis-ratings">
-          <div class="rating-badge">
-            <div class="rating-badge-label">推理難度</div>
-            <div class="rating-badge-stars">{info['deducibility_stars']}</div>
-          </div>
-          <div class="rating-badge">
-            <div class="rating-badge-label">迷霧等級</div>
-            <div class="rating-badge-stars">{info['fog_stars']}</div>
-          </div>
+        <div class="article-card-ratings">
+          <div class="article-card-badge">推理難度 <span>{info['deducibility_stars']}</span></div>
+          <div class="article-card-badge">迷霧等級 <span>{info['fog_stars']}</span></div>
         </div>
-      </div>
-      <div class="analysis-card-excerpt">{excerpt}</div>
-      <a href="articles/{slug}.html" class="read-more">閱讀完整分析 →</a>
-    </div>'''
+        <div class="article-card-excerpt">{short_excerpt}</div>
+        <div class="article-card-link">閱讀完整分析 →</div>
+      </a>'''
 
 
 def generate_fb_summary(info, slug, site_url=""):
     """產生給 openclaw 的 FB 貼文摘要"""
     stars_text = f"推理難度 {'★' * info['deducibility_count']}{'☆' * (5 - info['deducibility_count'])} | 迷霧等級 {'★' * info['fog_count']}{'☆' * (5 - info['fog_count'])}"
 
-    synopsis = info.get('synopsis', '')[:150]
-    if len(info.get('synopsis', '')) > 150:
+    synopsis = info.get('synopsis', '')[:400]
+    if len(info.get('synopsis', '')) > 400:
         synopsis += '…'
 
     article_url = f"{site_url}/articles/{slug}.html" if site_url else f"articles/{slug}.html"
@@ -442,12 +441,11 @@ def update_index_html(articles_data):
     # 產生所有文章卡片（最新的在前）
     cards_html = ""
     for art in reversed(articles_data):
-        cards_html += art['card_html']
+        cards_html += art['card_html'] + "\n"
 
-    # 替換 <!-- LATEST ANALYSIS --> 區塊中的文章卡片
-    # 找到 section-title 之後、</section> 之前的所有 analysis-card
-    pattern = r'(<h2 class="section-title">已完成的分析報告</h2>)([\s\S]*?)(</div>\s*</section>)'
-    replacement = f'\\1\n{cards_html}\n  \\3'
+    # 替換 articles-grid 區塊內的卡片（最新的在最前）
+    pattern = r'(<div class="articles-grid">)([\s\S]*?)(</div>\s*</div>\s*</div>)'
+    replacement = f'\\1\n{cards_html}    \\3'
     new_html = re.sub(pattern, replacement, html)
 
     # 寫入 docs/index.html
@@ -459,11 +457,20 @@ def update_index_html(articles_data):
 
 
 def build():
-    """主建置流程"""
+    """主建置流程：每次只發布一篇新文章（每日一篇機制）"""
     print("🔨 推理解剖室 — 開始建置\n")
     ensure_dirs()
 
-    # 掃描所有 _analysis.md
+    # ── 讀取已發布清單 ──────────────────────────────────────────
+    published_path = os.path.join(DOCS_DIR, "published.json")
+    if os.path.exists(published_path):
+        with open(published_path, 'r', encoding='utf-8') as f:
+            published = json.load(f)   # [{"slug": ..., "published_at": ...}, ...]
+    else:
+        published = []
+    published_slugs = [p['slug'] for p in published]
+
+    # ── 掃描所有 _analysis.md ───────────────────────────────────
     analysis_files = []
     for author_dir in AUTHOR_DIRS:
         pattern = os.path.join(BASE_DIR, author_dir, "*_analysis.md")
@@ -473,19 +480,47 @@ def build():
         print("⚠️  未找到任何 _analysis.md 檔案")
         return
 
-    print(f"📚 找到 {len(analysis_files)} 篇分析報告\n")
+    # ── 找出今天要新發布的一篇 ──────────────────────────────────
+    all_slugs_files = {}
+    for filepath in sorted(analysis_files):
+        filename = os.path.basename(filepath)
+        slug = slugify(filename.replace('_analysis.md', ''))
+        all_slugs_files[slug] = filepath
 
+    new_slugs = [s for s in sorted(all_slugs_files.keys()) if s not in published_slugs]
+
+    # 今天（台灣時間）是否已發布過新文章？
+    now_tw = datetime.now(timezone(timedelta(hours=8)))
+    today_date = now_tw.date().isoformat()
+    last_published_date = published[-1]['published_at'][:10] if published else None
+
+    if new_slugs and last_published_date != today_date:
+        today_slug = new_slugs[0]   # 按字母順序取第一篇
+        published.append({"slug": today_slug, "published_at": now_tw.isoformat()})
+        published_slugs.append(today_slug)
+        print(f"🆕 今日新發布：{today_slug}")
+    elif new_slugs and last_published_date == today_date:
+        today_slug = None
+        print(f"ℹ️  今日（{today_date}）已發布過新文章，略過")
+    else:
+        today_slug = None
+        print("ℹ️  今日無新文章（所有分析稿均已發布）")
+
+    print(f"📚 已發布 {len(published_slugs)} 篇\n")
+
+    # ── 建置所有已發布的文章頁 ──────────────────────────────────
     articles_data = []
     latest_fb = None
 
-    for filepath in sorted(analysis_files):
+    for slug in published_slugs:
+        if slug not in all_slugs_files:
+            continue
+        filepath = all_slugs_files[slug]
         filename = os.path.basename(filepath)
         author_key = get_author_dir(filepath)
-        slug = slugify(filename.replace('_analysis.md', ''))
 
         print(f"  📖 處理：{filename}")
 
-        # 解析 markdown
         info = parse_analysis_md(filepath)
 
         # 產生文章頁 HTML
@@ -495,11 +530,9 @@ def build():
             f.write(article_html)
         print(f"     → 文章頁：articles/{slug}.html")
 
-        # 產生文章卡片
         card_html = generate_article_card_html(info, slug)
 
-        # 產生 FB 摘要
-        fb_summary = generate_fb_summary(info, slug)
+        fb_summary = generate_fb_summary(info, slug, site_url="https://murderresearch.github.io/Detective-Analysis")
         fb_path = os.path.join(FB_DIR, f"{slug}.json")
         with open(fb_path, 'w', encoding='utf-8') as f:
             json.dump(fb_summary, f, ensure_ascii=False, indent=2)
@@ -512,26 +545,34 @@ def build():
             'fb_summary': fb_summary
         })
 
-        latest_fb = fb_summary
+        # latest = 今天新發布的那篇
+        if slug == today_slug:
+            latest_fb = fb_summary
 
-    # 更新首頁
+    # ── 更新首頁（只顯示已發布的文章）────────────────────────────
     print(f"\n🏠 更新首頁...")
     update_index_html(articles_data)
 
-    # 寫入最新一篇的 FB 摘要（供 openclaw 讀取）
+    # ── 儲存已發布清單 ──────────────────────────────────────────
+    with open(published_path, 'w', encoding='utf-8') as f:
+        json.dump(published, f, ensure_ascii=False, indent=2)
+    print(f"✅ 發布清單：docs/published.json")
+
+    # ── 寫入最新 FB 摘要（供 openclaw 讀取）───────────────────────
     if latest_fb:
         latest_path = os.path.join(FB_DIR, "latest.json")
         with open(latest_path, 'w', encoding='utf-8') as f:
             json.dump(latest_fb, f, ensure_ascii=False, indent=2)
         print(f"✅ 最新 FB 摘要：fb-summaries/latest.json")
 
-        # 也輸出純文字版本方便 openclaw 直接讀取
         latest_txt_path = os.path.join(FB_DIR, "latest.txt")
         with open(latest_txt_path, 'w', encoding='utf-8') as f:
             f.write(latest_fb['post_text'])
         print(f"✅ 最新 FB 貼文：fb-summaries/latest.txt")
+    else:
+        print("ℹ️  今日無新文章，latest.json / latest.txt 未更新")
 
-    print(f"\n🎉 建置完成！共處理 {len(articles_data)} 篇分析報告")
+    print(f"\n🎉 建置完成！共發布 {len(articles_data)} 篇分析報告")
     print(f"   輸出目錄：{DOCS_DIR}")
 
 

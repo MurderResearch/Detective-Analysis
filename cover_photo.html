@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;700;900&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1640px;
+    height: 624px;
+    overflow: hidden;
+    background: #07060e;
+  }
+  .container {
+    width: 1640px;
+    height: 624px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #07060e 0%, #12101e 40%, #0d0b17 70%, #07060e 100%);
+    overflow: hidden;
+  }
+  /* Background texture dots */
+  .bg-dots {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(200,160,80,0.06) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  /* Left decorative panel */
+  .left-panel {
+    width: 560px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+    padding: 60px;
+  }
+  /* Vertical divider */
+  .v-divider {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    bottom: 60px;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(200,160,80,0.5) 30%, rgba(200,160,80,0.5) 70%, transparent);
+  }
+  .v-divider::before {
+    content: '◆';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #c8a050;
+    font-size: 10px;
+  }
+  /* Big title */
+  .main-title {
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 900;
+    font-size: 96px;
+    letter-spacing: 16px;
+    color: #e8d5a3;
+    text-shadow: 0 0 60px rgba(200, 160, 80, 0.35), 0 0 120px rgba(200, 160, 80, 0.15);
+    line-height: 1;
+    text-align: center;
+  }
+  .title-en {
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 300;
+    font-size: 15px;
+    letter-spacing: 8px;
+    color: rgba(200,160,80,0.55);
+    margin-top: 16px;
+    text-align: center;
+  }
+
+  /* Right panel */
+  .right-panel {
+    flex: 1;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+  }
+  .tagline {
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: #e8d5a3;
+    letter-spacing: 4px;
+    line-height: 1.6;
+  }
+  .tagline em {
+    font-style: normal;
+    color: #c8a050;
+  }
+  .desc {
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: rgba(220, 200, 160, 0.65);
+    letter-spacing: 3px;
+    line-height: 1.8;
+  }
+  /* Authors row */
+  .authors {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-top: 8px;
+  }
+  .author-item {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13px;
+    color: rgba(200,160,80,0.7);
+    letter-spacing: 2px;
+    padding: 6px 16px;
+    border: 1px solid rgba(200,160,80,0.2);
+  }
+  .author-item:first-child { border-right: none; }
+  .author-item:not(:first-child):not(:last-child) { border-right: none; }
+
+  /* Number badge */
+  .badge {
+    position: absolute;
+    top: 50px;
+    right: 80px;
+    text-align: center;
+  }
+  .badge-num {
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 900;
+    font-size: 64px;
+    color: rgba(200,160,80,0.15);
+    line-height: 1;
+    letter-spacing: -2px;
+  }
+  .badge-label {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: rgba(200,160,80,0.3);
+  }
+  /* Corner decorations */
+  .corner { position: absolute; width: 50px; height: 50px; opacity: 0.35; }
+  .corner-tl { top: 24px; left: 24px; border-top: 2px solid #c8a050; border-left: 2px solid #c8a050; }
+  .corner-tr { top: 24px; right: 24px; border-top: 2px solid #c8a050; border-right: 2px solid #c8a050; }
+  .corner-bl { bottom: 24px; left: 24px; border-bottom: 2px solid #c8a050; border-left: 2px solid #c8a050; }
+  .corner-br { bottom: 24px; right: 24px; border-bottom: 2px solid #c8a050; border-right: 2px solid #c8a050; }
+
+  /* Top horizontal line */
+  .h-line-top {
+    position: absolute;
+    top: 50px;
+    left: 80px; right: 80px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(200,160,80,0.2) 20%, rgba(200,160,80,0.2) 80%, transparent);
+  }
+  .h-line-bottom {
+    position: absolute;
+    bottom: 50px;
+    left: 80px; right: 80px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(200,160,80,0.2) 20%, rgba(200,160,80,0.2) 80%, transparent);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="bg-dots"></div>
+  <div class="corner corner-tl"></div>
+  <div class="corner corner-tr"></div>
+  <div class="corner corner-bl"></div>
+  <div class="corner corner-br"></div>
+  <div class="h-line-top"></div>
+  <div class="h-line-bottom"></div>
+
+  <div class="left-panel">
+    <div class="main-title">推理<br>解剖室</div>
+    <div class="title-en">DETECTIVE DISSECTION</div>
+    <div class="v-divider"></div>
+  </div>
+
+  <div class="right-panel">
+    <div class="tagline">88天，解剖<em>5位</em>推理大師<br>每日一本，深度分析</div>
+    <div class="desc">
+      愛倫坡・柯南道爾・勒布朗<br>
+      卻斯特頓・阿嘉莎・克莉絲蒂
+    </div>
+    <div class="authors">
+      <div class="author-item">推理難度</div>
+      <div class="author-item">迷霧等級</div>
+      <div class="author-item">⭐ 每日更新</div>
+    </div>
+  </div>
+
+  <div class="badge">
+    <div class="badge-num">88</div>
+    <div class="badge-label">DAYS</div>
+  </div>
+</div>
+</body>
+</html>
