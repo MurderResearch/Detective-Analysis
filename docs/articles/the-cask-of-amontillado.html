@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>一桶阿蒙提拉多（The Cask of Amontillado） — 推理解剖室</title>
+<meta name="description" content="嘉年華狂歡的夜晚，敘述者蒙特雷索爾（Montresor）在街上遇見老友福圖納托（Fortunato）。Montresor 以一桶珍稀的阿蒙提拉多雪莉酒為誘餌，引導這位以品酒聞名、此刻半醉的男人深入自家宅邸的地下墓穴。到達最深處後，Montresor 將 Fortunato 鎖鍊固定，以磚塊和灰泥將其活埋在壁龕之中。故事">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f;
+  --bg-card: #13131a;
+  --bg-card-hover: #1a1a24;
+  --gold: #d4a853;
+  --gold-dim: #a07c3a;
+  --gold-glow: rgba(212, 168, 83, 0.15);
+  --red: #8b3a3a;
+  --red-light: #c45c5c;
+  --text-primary: #e8e4dc;
+  --text-secondary: #9a9590;
+  --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif TC', serif;
+  --font-sans: 'Noto Sans TC', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  line-height: 1.8;
+  min-height: 100vh;
+}
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 10, 15, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 0;
+}
+nav .container {
+  display: flex; justify-content: space-between; align-items: center;
+  max-width: 800px;
+}
+.nav-logo {
+  font-family: var(--font-serif); font-weight: 900;
+  font-size: 1.1rem; color: var(--gold); letter-spacing: 2px;
+  text-decoration: none;
+}
+.nav-links { display: flex; gap: 28px; }
+.nav-links a {
+  color: var(--text-secondary); text-decoration: none;
+  font-size: 0.85rem; font-weight: 400; letter-spacing: 1px;
+  transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--gold); }
+
+/* ARTICLE HEADER */
+.article-header {
+  padding: 140px 0 60px;
+  border-bottom: 1px solid var(--border);
+}
+.article-meta {
+  font-size: 0.8rem; color: var(--gold-dim);
+  letter-spacing: 3px; text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.article-header h1 {
+  font-family: var(--font-serif); font-weight: 900;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  line-height: 1.4; margin-bottom: 12px;
+}
+.article-header .subtitle {
+  font-size: 1rem; color: var(--text-secondary);
+  margin-bottom: 28px;
+}
+.ratings-bar {
+  display: flex; gap: 24px; flex-wrap: wrap;
+}
+.rating-badge {
+  text-align: center; padding: 10px 20px;
+  border: 1px solid var(--border); border-radius: 8px;
+  background: rgba(212, 168, 83, 0.04);
+}
+.rating-badge-label {
+  font-size: 0.65rem; color: var(--text-dim);
+  letter-spacing: 1px; margin-bottom: 4px;
+}
+.rating-badge-stars {
+  color: var(--gold); font-size: 1rem; letter-spacing: 2px;
+}
+
+/* ARTICLE BODY */
+.article-body {
+  padding: 60px 0 80px;
+}
+.article-body h1 { display: none; }  /* 隱藏重複的頂層標題 */
+.article-body h2 {
+  font-family: var(--font-serif); font-size: 1.5rem;
+  font-weight: 700; margin: 48px 0 20px;
+  padding-bottom: 12px; border-bottom: 1px solid var(--border);
+  color: var(--gold);
+}
+.article-body h3 {
+  font-family: var(--font-serif); font-size: 1.2rem;
+  font-weight: 700; margin: 36px 0 16px;
+  color: var(--text-primary);
+}
+.article-body h4 {
+  font-size: 1rem; font-weight: 500;
+  margin: 24px 0 12px; color: var(--gold-dim);
+}
+.article-body p {
+  font-size: 0.95rem; color: var(--text-secondary);
+  line-height: 2; margin-bottom: 16px;
+}
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote {
+  border-left: 3px solid var(--gold-dim);
+  padding: 12px 20px; margin: 20px 0;
+  background: rgba(212, 168, 83, 0.04);
+  border-radius: 0 8px 8px 0;
+}
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table {
+  width: 100%; border-collapse: collapse;
+  margin: 20px 0; font-size: 0.88rem;
+}
+.article-body th, .article-body td {
+  padding: 10px 14px; text-align: left;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+.article-body th {
+  color: var(--gold-dim); font-weight: 500;
+  font-size: 0.8rem; letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.article-body tr:hover td { background: rgba(212, 168, 83, 0.03); }
+.article-body ul, .article-body ol {
+  margin: 12px 0 12px 24px; color: var(--text-secondary);
+}
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr {
+  border: none; border-top: 1px solid var(--border);
+  margin: 48px 0;
+}
+
+/* BACK LINK */
+.back-link {
+  display: inline-block; margin-top: 40px;
+  color: var(--gold); text-decoration: none;
+  font-size: 0.85rem; letter-spacing: 1px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s;
+}
+.back-link:hover { border-bottom-color: var(--gold); }
+
+/* FOOTER */
+footer {
+  padding: 60px 0 40px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+footer p {
+  font-size: 0.8rem; color: var(--text-dim);
+  letter-spacing: 1px;
+}
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">推理解剖室</a>
+    <div class="nav-links">
+      <a href="../index.html">首頁</a>
+      <a href="../index.html#latest">所有分析</a>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">愛倫·坡 · 1846</div>
+    <h1>一桶阿蒙提拉多（The Cask of Amontillado）</h1>
+    <div class="subtitle">愛倫·坡（Edgar Allan Poe） · 短篇</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">推理難度</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">迷霧等級</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    <h1 id="the-cask-of-amontillado">一桶阿蒙提拉多（The Cask of Amontillado）— 推理分析</h1>
+<h2 id="_1">基本資訊</h2>
+<ul>
+<li>作者：愛倫·坡（Edgar Allan Poe）</li>
+<li>出版年：1846年</li>
+<li>類型：短篇</li>
+<li>偵探角色：無（敘述者即兇手）</li>
+<li>核心謎團類型：howdunit + 不可靠敘述者（unreliable narrator）</li>
+</ul>
+<hr>
+<h2 id="_2">推理難度總評</h2>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星等</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難度（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>平均收斂點 80% — 計謀的完整輪廓要到70%才浮現，深層動機謎團則延伸至90%</td>
+</tr>
+<tr>
+<td>迷霧等級（Fog Rating）</td>
+<td>⭐⭐⭐⭐</td>
+<td>不可靠敘述者貫穿全篇：讀者被迫從殺手視角理解事件，真正的「真相」始終被敘述聲音所遮蔽</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_3">故事大綱</h2>
+<p>嘉年華狂歡的夜晚，敘述者蒙特雷索爾（Montresor）在街上遇見老友福圖納托（Fortunato）。Montresor 以一桶珍稀的阿蒙提拉多雪莉酒為誘餌，引導這位以品酒聞名、此刻半醉的男人深入自家宅邸的地下墓穴。到達最深處後，Montresor 將 Fortunato 鎖鍊固定，以磚塊和灰泥將其活埋在壁龕之中。故事以 Montresor 的補充收尾——這一切已過去整整五十年，無人察覺。</p>
+<p>這個故事的特殊之處在於：<strong>我們從頭就知道兇手是誰、受害者是誰</strong>。傳統的 whodunit 結構被完全顛覆——謎團不在「誰幹的」，而在「如何做到」與「為什麼這麼執著」。</p>
+<hr>
+<h2 id="_4">真相拆解</h2>
+<h3 id="howdunit">真相一：復仇計謀的完整設計（howdunit）</h3>
+<ul>
+<li><strong>線索收斂點：約 70%</strong></li>
+<li>答案：Montresor 預先清空了宅邸（利用僕人的人性），在地下墓穴最深處的壁龕中安置好鐵鍊與鎖，大衣下暗藏泥刀，並準備好建築石材——全程以酒和虛榮心操控 Fortunato 深入陷阱。</li>
+</ul>
+<h4 id="_5">關鍵線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Fortunato 的弱點是品酒的虛榮心，且 Montresor 特別強調這一點</td>
+<td>約 8%</td>
+<td>解釋誘餌設計的根基——Amontillado 是專門針對 Fortunato 設計的誘餌</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Montresor 反覆提到 Luchesi 來激起 Fortunato 的競爭心</td>
+<td>約 12–18%</td>
+<td>不讓 Fortunato 有退路，這是操控手法的核心機制</td>
+</tr>
+<tr>
+<td>3</td>
+<td>宅邸僕役全數不在（Montresor 下令不得外出，卻知道他們一定會立刻離去）</td>
+<td>約 22%</td>
+<td>預謀的關鍵——Montresor 提前清場，確保無目擊者</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Montresor 大衣下藏著一把泥刀（trowel）</td>
+<td>約 50%</td>
+<td><strong>最重要的線索之一</strong>——砌磚工具早已備妥，說明整個計畫早已完整設計</td>
+</tr>
+<tr>
+<td>5</td>
+<td>壁龕深處預先安置了鐵鍊與鎖（iron staples, chain, padlock）</td>
+<td>約 70%</td>
+<td>此為最後的關鍵線索，計謀的完整輪廓至此才徹底浮現</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_6">輔助線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>嘉年華夜晚的混亂提供完美掩護</td>
+<td>約 10%</td>
+<td>失蹤者不易被立刻發現</td>
+</tr>
+<tr>
+<td>2</td>
+<td>地下墓穴位置極深、遠離地面，且充滿屍骨</td>
+<td>約 30–45%</td>
+<td>強化「無人能聽見」的隔絕感</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Fortunato 全程醉意濃厚</td>
+<td>貫穿</td>
+<td>解釋他為何沒有察覺危機</td>
+</tr>
+<tr>
+<td>4</td>
+<td>壁龕旁預先堆放了建築石材與砂漿</td>
+<td>約 72%</td>
+<td>呼應泥刀，確認整套計謀的預謀性質</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_7">假線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Montresor 多次假意要折返，表示擔心 Fortunato 的健康</td>
+<td>約 28%、42%</td>
+<td>讓讀者（以及 Fortunato）以為他是出於關心，掩蓋真實動機</td>
+</tr>
+<tr>
+<td>2</td>
+<td>共濟會（Freemason）玩笑對話——Fortunato 不信 Montresor 是石匠</td>
+<td>約 50%</td>
+<td>表面像是酒後閒談，實則暗藏雙關：Montresor 即將展示他「真正的」砌磚技術</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="montresor-whydunit">真相二：不可靠敘述者——Montresor 的精神狀態與真實動機（whydunit）</h3>
+<ul>
+<li><strong>線索收斂點：約 90%</strong></li>
+<li>答案：故事從未給出確定答案。Fortunato 的「千次傷害」與最終「侮辱」始終未被說明。細讀全文，可以發現 Montresor 的陳述充滿矛盾與執念，他很可能是一個偏執的不可靠敘述者——他口中的「正當復仇」背後，或許只是積累多年的嫉妒與偏執。</li>
+</ul>
+<h4 id="_8">關鍵線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>復仇動機始終模糊：「injuries」與「insult」從未被具體說明</td>
+<td>約 1%</td>
+<td>一個真正有正當理由的人，通常不需要隱藏理由——尤其在告白場合</td>
+</tr>
+<tr>
+<td>2</td>
+<td>蒙特雷索爾家族的家徽：「足踩蛇，但蛇咬腳跟」格言「<em>Nemo me impune lacessit</em>」（無人傷我而不受懲）</td>
+<td>約 44%</td>
+<td>揭示這個家族根深蒂固的復仇文化，暗示 Montresor 的行為可能是一種家族心理</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Montresor 說「你富有、受人尊重、受人愛戴、你幸福，就像我曾經的樣子」</td>
+<td>約 30%</td>
+<td>隱藏的嫉妒——「曾經」二字暗示 Montresor 自身的失落與怨恨</td>
+</tr>
+<tr>
+<td>4</td>
+<td>告白對象是「深知我靈魂本質的你」（You, who so well know the nature of my soul）</td>
+<td>約 1%</td>
+<td>五十年後的告白，對象是誰？神父？舊識？這個謎從未解開，暗示 Montresor 始終帶著某種罪疚感或自我辯解的需求</td>
+</tr>
+<tr>
+<td>5</td>
+<td>最後一刻 Montresor 「心中感到一陣噁心」（My heart grew sick）——他將其歸因於地窖的潮濕</td>
+<td>約 95%</td>
+<td>這一句是全篇最曖昧的時刻，是良心的一閃，還是身體反應？敘述者自己也在逃避直視</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_9">輔助線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Montresor 計謀之縝密，顯示長期的執念與籌謀</td>
+<td>全篇</td>
+<td>如此精密的預謀，背後是累積已久的偏執</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Fortunato 對 Montresor 全無戒心，始終稱他為「朋友」</td>
+<td>全篇</td>
+<td>從 Fortunato 的反應看，Montresor 口中的「千次傷害」是否為真？</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_10">假線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>「Fortunato 傷害了我一千次，而我一直忍耐」的開場</td>
+<td>約 1%</td>
+<td>讓讀者立刻站到 Montresor 的立場，接受他的詮釋，忽略這段話本身缺乏任何實質依據</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_11">推理路徑重建</h2>
+<p><strong>第一條推理路徑：howdunit</strong></p>
+<p>讀到約 22%（宅邸空無一人）時，細心的讀者應該開始意識到這是預謀。到 50% 的泥刀出現，確認了「砌磚」計畫的存在。70% 的鐵鍊是最終確認點——此刻計謀的完整輪廓清晰成形。</p>
+<p><strong>第二條推理路徑：不可靠敘述</strong></p>
+<p>這條路徑需要讀者主動抵抗敘述者的操控。第一個訊號在故事開篇（1%）：動機不明、對象不確定的告白語境。30% 的「你幸福，而我曾經也是」是最重要的心理線索——Montresor 不只在復仇，他在填補內心的某個空洞。到 95% 的「心中噁心」，讀者才終於捕捉到敘述者的情感裂縫。但作者從不給出確定答案——這個謎本身就是作品的核心。</p>
+<hr>
+<h2 id="_12">補充說明</h2>
+<p><strong>《一桶阿蒙提拉多》在推理文學史上的特殊地位</strong></p>
+<p>這篇短篇是推理文學最有趣的悖論之一：它是一個沒有偵探、沒有解謎、沒有「案件」的推理故事。愛倫·坡在《莫爾格街兇殺案》（1841）中發明了偵探小說；五年後，在這篇故事裡，他把同樣的分析精神徹底翻轉——讓讀者站在兇手的位置，體驗一場「完美犯罪」的實施過程。</p>
+<p><strong>與《莫爾格街兇殺案》的對比</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>莫爾格街兇殺案</th>
+<th>一桶阿蒙提拉多</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>核心問題</td>
+<td>誰幹的？</td>
+<td>為什麼幹？</td>
+</tr>
+<tr>
+<td>敘述視角</td>
+<td>旁觀助手</td>
+<td>兇手本人</td>
+</tr>
+<tr>
+<td>推理方向</td>
+<td>解碼真相</td>
+<td>遮蔽真相</td>
+</tr>
+<tr>
+<td>讀者角色</td>
+<td>協助偵探</td>
+<td>被操控的旁觀者</td>
+</tr>
+</tbody>
+</table>
+<p><strong>文學技術分析</strong></p>
+<p>愛倫·坡在這篇故事中使用了「反推理」結構：所有線索都清晰可見，但沒有人在解謎。泥刀的雙關（工具 vs. 共濟會象徵）、家族格言的預示、開篇的告白語氣——這些技巧在 1846 年是驚人的創新，直到一百年後才被後人（如克莉絲蒂的不可靠敘述者）充分繼承和發展。</p>
+<p><strong>對台灣讀者的補充</strong></p>
+<p>阿蒙提拉多（Amontillado）是西班牙赫雷斯地區的稀有雪莉酒，以榛果香氣和複雜層次著稱。在十九世紀，這是極具收藏價值的頂級佳釀——等同於今日的頂級波爾多。Fortunato 對酒的執著，在當時讀者眼中是完全可信的角色弱點。</p>
+<hr>
+<h2 id="fb-openclaw">FB 摘要（供 openclaw 使用）</h2>
+<pre><code>【推理解剖室 D2】愛倫·坡《一桶阿蒙提拉多》
+
+推理難度 ⭐⭐⭐⭐　迷霧等級 ⭐⭐⭐⭐
+
+「我忍受了福圖納托千次的傷害，但當他侮辱我的那一刻——我決定復仇。」
+
+這是一個你從第一行就知道結局的故事。
+沒有偵探。沒有謎團。兇手親自告訴你一切。
+
+但等等——他真的告訴你「一切」了嗎？
+
+🍷 誘餌：一桶珍稀的阿蒙提拉多雪莉酒
+⛓️ 陷阱：地下墓穴深處預先安置的鐵鍊
+🧱 結局：磚塊一層一層，將人活埋在牆裡
+
+愛倫·坡在 1846 年寫出了推理文學最驚人的翻轉：
+不是「誰幹的」，而是「他為什麼這麼做」——而這個問題，他永遠不給你答案。
+
+那個開場的「你，深知我靈魂本質的你」——是誰？
+五十年後的告白，究竟是良心，還是炫耀？
+
+閱讀完整分析 → [網站連結]
+
+#推理解剖室 #愛倫坡 #一桶阿蒙提拉多 #不可靠敘述者 #推理小說 #經典文學
+</code></pre>
+    <a href="../index.html" class="back-link">← 回到首頁</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">推理解剖室</p>
+    <p>五位作者 · 八十八部作品 · 一百三十五年推理文學的難度演化</p>
+  </div>
+</footer>
+
+</body>
+</html>
