@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>推理解剖室 — 經典推理小說難度分析</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg-dark: #0a0a0f;
+  --bg-card: #13131a;
+  --bg-card-hover: #1a1a24;
+  --gold: #d4a853;
+  --gold-dim: #a07c3a;
+  --gold-glow: rgba(212, 168, 83, 0.15);
+  --red: #8b3a3a;
+  --red-light: #c45c5c;
+  --text-primary: #e8e4dc;
+  --text-secondary: #9a9590;
+  --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif TC', serif;
+  --font-sans: 'Noto Sans TC', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  line-height: 1.8;
+  min-height: 100vh;
+}
+
+/* ===== LAYOUT ===== */
+.container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+/* ===== NAV ===== */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 10, 15, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 0;
+}
+nav .container {
+  display: flex; justify-content: space-between; align-items: center;
+}
+.nav-logo {
+  font-family: var(--font-serif); font-weight: 900;
+  font-size: 1.1rem; color: var(--gold); letter-spacing: 2px;
+  text-decoration: none;
+}
+.nav-links { display: flex; gap: 28px; }
+.nav-links a {
+  color: var(--text-secondary); text-decoration: none;
+  font-size: 0.85rem; font-weight: 400; letter-spacing: 1px;
+  transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--gold); }
+
+/* ===== HERO ===== */
+.hero {
+  padding: 160px 0 100px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(212,168,83,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-subtitle {
+  font-size: 0.85rem; color: var(--gold-dim);
+  letter-spacing: 6px; text-transform: uppercase;
+  margin-bottom: 24px; font-weight: 500;
+}
+.hero h1 {
+  font-family: var(--font-serif); font-weight: 900;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1.4; color: var(--text-primary);
+  margin-bottom: 28px;
+}
+.hero h1 span { color: var(--gold); }
+.hero-desc {
+  font-size: 1.05rem; color: var(--text-secondary);
+  max-width: 600px; margin: 0 auto 40px; line-height: 2;
+}
+.hero-stats {
+  display: flex; justify-content: center; gap: 48px;
+  margin-top: 40px;
+}
+.hero-stat-num {
+  font-family: var(--font-serif); font-size: 2.4rem;
+  font-weight: 900; color: var(--gold);
+}
+.hero-stat-label {
+  font-size: 0.8rem; color: var(--text-dim);
+  letter-spacing: 2px; margin-top: 4px;
+}
+
+/* ===== SECTION COMMON ===== */
+section { padding: 80px 0; }
+.section-label {
+  font-size: 0.75rem; color: var(--gold-dim);
+  letter-spacing: 5px; text-transform: uppercase;
+  font-weight: 500; margin-bottom: 16px;
+}
+.section-title {
+  font-family: var(--font-serif); font-size: 1.8rem;
+  font-weight: 700; margin-bottom: 24px; line-height: 1.5;
+}
+
+/* ===== ABOUT / INTRO ===== */
+.about-text {
+  font-size: 1rem; color: var(--text-secondary);
+  line-height: 2; max-width: 750px;
+}
+.about-text p { margin-bottom: 20px; }
+.about-text strong { color: var(--text-primary); font-weight: 500; }
+
+/* ===== METRICS ===== */
+.metrics-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+  margin-top: 40px;
+}
+.metric-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px;
+  transition: border-color 0.3s, background 0.3s;
+}
+.metric-card:hover {
+  border-color: var(--gold-dim);
+  background: var(--bg-card-hover);
+}
+.metric-icon {
+  font-size: 1.6rem; margin-bottom: 16px;
+}
+.metric-name {
+  font-family: var(--font-serif); font-size: 1.15rem;
+  font-weight: 700; margin-bottom: 8px; color: var(--gold);
+}
+.metric-en {
+  font-size: 0.75rem; color: var(--text-dim);
+  letter-spacing: 1px; margin-bottom: 16px;
+}
+.metric-desc {
+  font-size: 0.9rem; color: var(--text-secondary); line-height: 1.8;
+}
+.stars-table {
+  margin-top: 16px; width: 100%;
+  font-size: 0.82rem; color: var(--text-secondary);
+}
+.stars-table td {
+  padding: 6px 0; vertical-align: top;
+}
+.stars-table td:first-child {
+  color: var(--gold); width: 90px; white-space: nowrap;
+}
+
+/* ===== TIMELINE ===== */
+.timeline { position: relative; margin-top: 40px; }
+.timeline::before {
+  content: '';
+  position: absolute; left: 20px; top: 0; bottom: 0;
+  width: 2px; background: var(--border);
+}
+.timeline-item {
+  position: relative;
+  padding-left: 56px;
+  margin-bottom: 48px;
+}
+.timeline-item:last-child { margin-bottom: 0; }
+.timeline-dot {
+  position: absolute; left: 12px; top: 6px;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--gold-dim);
+  background: var(--bg-dark);
+  transition: background 0.3s, border-color 0.3s;
+}
+.timeline-item:hover .timeline-dot {
+  background: var(--gold);
+  border-color: var(--gold);
+}
+.timeline-phase {
+  font-size: 0.7rem; color: var(--gold-dim);
+  letter-spacing: 3px; text-transform: uppercase;
+  font-weight: 500;
+}
+.timeline-author {
+  font-family: var(--font-serif); font-size: 1.3rem;
+  font-weight: 700; margin: 6px 0 4px;
+}
+.timeline-years {
+  font-size: 0.8rem; color: var(--text-dim); margin-bottom: 12px;
+}
+.timeline-desc {
+  font-size: 0.9rem; color: var(--text-secondary); line-height: 1.8;
+}
+.timeline-tag {
+  display: inline-block; margin-top: 12px;
+  padding: 4px 12px;
+  font-size: 0.72rem; color: var(--gold-dim);
+  border: 1px solid var(--border);
+  border-radius: 20px; letter-spacing: 1px;
+}
+
+/* ===== LATEST ANALYSIS ===== */
+.analysis-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 40px;
+  margin-top: 32px;
+  transition: border-color 0.3s;
+}
+.analysis-card:hover { border-color: var(--gold-dim); }
+.analysis-card-header {
+  display: flex; justify-content: space-between;
+  align-items: flex-start; margin-bottom: 20px;
+  flex-wrap: wrap; gap: 16px;
+}
+.analysis-card-title {
+  font-family: var(--font-serif); font-size: 1.4rem;
+  font-weight: 700; line-height: 1.4;
+}
+.analysis-card-title small {
+  display: block; font-size: 0.8rem;
+  color: var(--text-dim); font-weight: 400;
+  font-family: var(--font-sans); margin-top: 4px;
+}
+.analysis-ratings {
+  display: flex; gap: 20px;
+}
+.rating-badge {
+  text-align: center; padding: 8px 16px;
+  border: 1px solid var(--border); border-radius: 8px;
+  background: rgba(212, 168, 83, 0.04);
+}
+.rating-badge-label {
+  font-size: 0.65rem; color: var(--text-dim);
+  letter-spacing: 1px; margin-bottom: 4px;
+}
+.rating-badge-stars {
+  color: var(--gold); font-size: 0.95rem; letter-spacing: 2px;
+}
+.analysis-card-excerpt {
+  font-size: 0.92rem; color: var(--text-secondary);
+  line-height: 1.9; margin-bottom: 24px;
+}
+.read-more {
+  display: inline-block;
+  color: var(--gold); text-decoration: none;
+  font-size: 0.85rem; font-weight: 500;
+  letter-spacing: 1px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s;
+}
+.read-more:hover { border-bottom-color: var(--gold); }
+
+/* ===== FOOTER ===== */
+footer {
+  padding: 60px 0 40px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+footer p {
+  font-size: 0.8rem; color: var(--text-dim);
+  letter-spacing: 1px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 640px) {
+  .hero-stats { gap: 24px; }
+  .metrics-grid { grid-template-columns: 1fr; }
+  .analysis-card-header { flex-direction: column; }
+  .nav-links { gap: 16px; }
+  .nav-links a { font-size: 0.78rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="container">
+    <a href="#" class="nav-logo">推理解剖室</a>
+    <div class="nav-links">
+      <a href="#about">關於</a>
+      <a href="#metrics">指標</a>
+      <a href="#authors">作者</a>
+      <a href="#latest">最新分析</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-subtitle">推理小說難度分析計畫</div>
+    <h1>你能比偵探<span>更早</span>破案嗎？</h1>
+    <p class="hero-desc">
+      用一套全新的評估方法，逐本拆解推理文學史上最經典的作品——<br>
+      找出每一本書裡，讀者最早可以在哪裡靠線索推導出真相。
+    </p>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-num">5</div>
+        <div class="hero-stat-label">位經典作者</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">88</div>
+        <div class="hero-stat-label">部作品分析</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">135</div>
+        <div class="hero-stat-label">年文學跨度</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="section-label">關於這個計畫</div>
+    <h2 class="section-title">不是書評，是推理實驗</h2>
+    <div class="about-text">
+      <p>推理小說的書評和導讀已經很多了。有人分析角色塑造，有人討論敘事結構，有人梳理文學史的脈絡。但很少有人認真面對一個推理小說讀者最原始的慾望——<strong>我想贏過偵探。</strong></p>
+      <p>每個讀推理小說的人心裡都有一個聲音：「讓我猜猜看。」但猜完之後呢？你猜對了，是因為你真的從線索中推導出來，還是只是運氣好？你猜錯了，是因為你漏看了什麼，還是因為作者根本沒給你公平的機會？</p>
+      <p>這個系列要替每一本經典推理小說回答一個問題：<strong>如果你是一個認真的讀者，最早可以在讀到哪裡的時候，靠作者已經給出的線索，自己推導出真相？</strong></p>
+      <p>不是靠直覺，不是靠套路經驗，而是根據文本中實際出現的線索，用邏輯推出答案。每篇分析都會列出所有找到的線索——關鍵的、輔助的、還有作者刻意放的假線索——讓你可以回頭驗證每一條。</p>
+    </div>
+  </div>
+</section>
+
+<!-- METRICS -->
+<section id="metrics" style="background: var(--bg-card);">
+  <div class="container">
+    <div class="section-label">評估工具</div>
+    <h2 class="section-title">兩把尺，量出推理的真實面貌</h2>
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-icon">🔍</div>
+        <div class="metric-name">推理難度</div>
+        <div class="metric-en">DEDUCIBILITY SCORE</div>
+        <div class="metric-desc">
+          讀者最早可以在書的百分之幾處，根據已出現的線索合理推出真相。星等越高，越晚才能破案。
+        </div>
+        <table class="stars-table">
+          <tr><td>⭐</td><td>極易推理——讀不到三成就能破案</td></tr>
+          <tr><td>⭐⭐</td><td>較易推理——前半段即可推導</td></tr>
+          <tr><td>⭐⭐⭐</td><td>中等難度——需讀過半</td></tr>
+          <tr><td>⭐⭐⭐⭐</td><td>高難度——後段才浮現線索</td></tr>
+          <tr><td>⭐⭐⭐⭐⭐</td><td>極高難度——幾乎不可能提前破案</td></tr>
+        </table>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">🌫️</div>
+        <div class="metric-name">迷霧等級</div>
+        <div class="metric-en">FOG RATING</div>
+        <div class="metric-desc">
+          作者有多努力把你往錯的方向帶——假線索的數量與巧妙程度、敘述者是否可靠、是否利用你的預期來誤導。
+        </div>
+        <table class="stars-table">
+          <tr><td>⭐</td><td>幾乎無誤導，線索清晰直接</td></tr>
+          <tr><td>⭐⭐</td><td>輕度誤導，少量假線索</td></tr>
+          <tr><td>⭐⭐⭐</td><td>中度誤導，紅鯡魚可觀</td></tr>
+          <tr><td>⭐⭐⭐⭐</td><td>高度誤導，大量假線索與隱藏資訊</td></tr>
+          <tr><td>⭐⭐⭐⭐⭐</td><td>極度誤導，敘事結構本身就是陷阱</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUTHORS TIMELINE -->
+<section id="authors">
+  <div class="container">
+    <div class="section-label">發文順序</div>
+    <h2 class="section-title">五位作者，一條時間線</h2>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-phase">Phase 1</div>
+        <div class="timeline-author">愛倫·坡</div>
+        <div class="timeline-years">Edgar Allan Poe · 1809–1849</div>
+        <div class="timeline-desc">
+          推理小說之父。1841 年寫出人類史上第一篇偵探小說《莫爾格街兇殺案》，創造了第一位虛構偵探杜賓，建立密室推理原型，確立「天才偵探 + 平凡助手」的經典結構。在他的世界裡，推理是純粹的智識展演。
+        </div>
+        <span class="timeline-tag">11 部作品</span>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-phase">Phase 2</div>
+        <div class="timeline-author">柯南·道爾</div>
+        <div class="timeline-years">Arthur Conan Doyle · 1859–1930</div>
+        <div class="timeline-desc">
+          福爾摩斯的創造者。讓「演繹法」成為推理的代名詞——從袖口磨損推斷職業，從鞋底泥土判斷去過哪裡。他的線索是物質性的、可觀察的，理論上讀者和偵探看到的東西完全一樣。
+        </div>
+        <span class="timeline-tag">10 部作品</span>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-phase">Phase 3</div>
+        <div class="timeline-author">莫里斯·盧布朗</div>
+        <div class="timeline-years">Maurice Leblanc · 1864–1941</div>
+        <div class="timeline-desc">
+          怪盜紳士亞森·羅蘋的創造者。翻轉推理小說的視角——主角不是偵探而是小偷。讀者要推理的不是「誰是兇手」，而是「他怎麼騙過了所有人」。「真相」的定義在這裡需要重新思考。
+        </div>
+        <span class="timeline-tag">20 部作品</span>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-phase">Phase 4</div>
+        <div class="timeline-author">吉爾伯特·基思·卻斯特頓</div>
+        <div class="timeline-years">G.K. Chesterton · 1874–1936</div>
+        <div class="timeline-desc">
+          布朗神父的創造者。不靠物證，不靠演繹，靠「理解犯罪者的靈魂」。線索藏在人的行為模式與道德矛盾裡，是心理派推理的先驅。
+        </div>
+        <span class="timeline-tag">8 部作品</span>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-phase">Phase 5</div>
+        <div class="timeline-author">阿嘉莎·克莉絲蒂</div>
+        <div class="timeline-years">Agatha Christie · 1890–1976</div>
+        <div class="timeline-desc">
+          推理女王。創造了白羅與乃乃爾小姐兩大偵探。精巧到令人髮指的詭計設計，擅長在結尾徹底翻轉你以為自己已經搞懂的一切。如果要找推理難度和迷霧等級都滿星的作品——來她的書架找。
+        </div>
+        <span class="timeline-tag">35+ 部作品</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- LATEST ANALYSIS -->
+<section id="latest" style="background: var(--bg-card);">
+  <div class="container">
+    <div class="section-label">最新分析</div>
+    <h2 class="section-title">已完成的分析報告</h2>
+
+    <div class="analysis-card">
+      <div class="analysis-card-header">
+        <div class="analysis-card-title">
+          莫爾格街兇殺案（The Murders in the Rue Morgue）
+          <small>愛倫·坡（Edgar Allan Poe） · 1841</small>
+        </div>
+        <div class="analysis-ratings">
+          <div class="rating-badge">
+            <div class="rating-badge-label">推理難度</div>
+            <div class="rating-badge-stars">⭐⭐⭐</div>
+          </div>
+          <div class="rating-badge">
+            <div class="rating-badge-label">迷霧等級</div>
+            <div class="rating-badge-stars">⭐⭐</div>
+          </div>
+        </div>
+      </div>
+      <div class="analysis-card-excerpt">故事發生在十九世紀的巴黎。敘事者是一位旅居巴黎的美國人，偶然結識了沒落貴族乃·奧古斯特·杜賓——一個擁有超凡分析能力的年輕人。兩人合租了一棟老宅，過著與世隔絕的生活，白天關門讀書，入夜後才出門散步。 某天，他們從報紙上讀到一則驚人的兇殺案：住在莫爾格街四樓的萊絲乃納耶母女雙雙遇害。女兒卡蜜兒被人活活掐死後，屍體竟被頭朝下塞進了煙囪裡；母親則被扔出窗外，頭幾乎完全被割斷，全身粉碎性骨折。 案發現場是一個完美的密室：門從內部上鎖，窗戶也從裡面釘死。鄰居破門而入時，聽到了兩個聲音在爭吵——一個是法國人的粗嗓音，另一個是刺耳的尖銳聲音。但對於這個尖銳聲音，來自五個不同國家的證人各有各的說法，沒有人真正…</div>
+      <a href="articles/the-murders-in-the-rue-morgue.html" class="read-more">閱讀完整分析 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">推理解剖室</p>
+    <p>五位作者 · 八十八部作品 · 一百三十五年推理文學的難度演化</p>
+  </div>
+</footer>
+
+</body>
+</html>
