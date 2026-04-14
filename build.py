@@ -534,6 +534,11 @@ def build():
 
         fb_summary = generate_fb_summary(info, slug, site_url="https://murderresearch.github.io/Detective-Analysis")
         fb_path = os.path.join(FB_DIR, f"{slug}.json")
+        # 若 JSON 已存在且非今日新文章，保留原有 generated_at（避免每次 build 都產生 git diff）
+        if os.path.exists(fb_path) and slug != today_slug:
+            with open(fb_path, 'r', encoding='utf-8') as f:
+                existing = json.load(f)
+            fb_summary['generated_at'] = existing.get('generated_at', fb_summary['generated_at'])
         with open(fb_path, 'w', encoding='utf-8') as f:
             json.dump(fb_summary, f, ensure_ascii=False, indent=2)
         print(f"     → FB 摘要：fb-summaries/{slug}.json")
