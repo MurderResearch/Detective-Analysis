@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>アモンティリャードの樽（The Cask of Amontillado） — 推理解剖室</title>
+<meta name="description" content="カーニバルで狂騒する夜、語り手モントレゾール（Montresor）は街で旧知のフォルトゥナート（Fortunato）に出会う。モントレゾールは珍酒アモンティリャードの一樽を餌に、利き酒で名を馳せ折しも酒に酔った男を、自邸の地下墓穴の奥深くへと誘い込む。最深部に辿り着くと、モントレゾールはフォルトゥナートを鎖で固定し、煉">
+<link rel="alternate" hreflang="zh-TW" href="/articles/the-cask-of-amontillado.html">
+<link rel="alternate" hreflang="zh-CN" href="/zh-CN/articles/the-cask-of-amontillado.html">
+<link rel="alternate" hreflang="en" href="/en/articles/the-cask-of-amontillado.html">
+<link rel="alternate" hreflang="ja" href="/ja/articles/the-cask-of-amontillado.html">
+<link rel="alternate" hreflang="ko" href="/ko/articles/the-cask-of-amontillado.html">
+<link rel="alternate" hreflang="de" href="/de/articles/the-cask-of-amontillado.html">
+<link rel="alternate" hreflang="es" href="/es/articles/the-cask-of-amontillado.html">
+<link rel="alternate" hreflang="fr" href="/fr/articles/the-cask-of-amontillado.html">
+<link rel="alternate" hreflang="x-default" href="/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif JP', serif;
+  --font-sans: 'Noto Sans JP', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+
+  // 決定目前頁面位於哪個語系 prefix
+  var path = window.location.pathname;
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === path) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">推理解剖室</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">ホーム</a>
+        <a href="../index.html#latest">最新</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="言語" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 日本語</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/articles/the-cask-of-amontillado.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/zh-CN/articles/the-cask-of-amontillado.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/en/articles/the-cask-of-amontillado.html">English</a>
+      <a class="lang-item active" data-lang="ja" href="/ja/articles/the-cask-of-amontillado.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/ko/articles/the-cask-of-amontillado.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/de/articles/the-cask-of-amontillado.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/es/articles/the-cask-of-amontillado.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/fr/articles/the-cask-of-amontillado.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">エドガー・アラン・ポー · 1846</div>
+    <h1>アモンティリャードの樽（The Cask of Amontillado）</h1>
+    <div class="subtitle">エドガー・アラン・ポー（Edgar Allan Poe） · </div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">推理難易度</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">霧の濃度</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="the-cask-of-amontillado">アモンティリャードの樽（The Cask of Amontillado）— 推理分析</h1>
+<h2 id="_1">基本情報</h2>
+<ul>
+<li>著者：エドガー・アラン・ポー（Edgar Allan Poe）</li>
+<li>発表年：1846</li>
+<li>種別：短編</li>
+<li>探偵：なし（語り手がそのまま犯人）</li>
+<li>中心となる謎の型：howdunit ＋ 信頼できない語り手（unreliable narrator）</li>
+</ul>
+<hr>
+<h2 id="_2">推理難易度総評</h2>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難易度（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>平均収束点 80% — 計画の全体像が浮かぶのは 70%、動機の深部の謎は 90% まで及ぶ</td>
+</tr>
+<tr>
+<td>霧の濃度（Fog Rating）</td>
+<td>⭐⭐⭐⭐</td>
+<td>信頼できない語り手が全篇を覆う：読者は殺人者の視点から事件を理解することを強いられ、真の「真相」は終始語りの声に遮られる</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_3">あらすじ</h2>
+<p>カーニバルで狂騒する夜、語り手モントレゾール（Montresor）は街で旧知のフォルトゥナート（Fortunato）に出会う。モントレゾールは珍酒アモンティリャードの一樽を餌に、利き酒で名を馳せ折しも酒に酔った男を、自邸の地下墓穴の奥深くへと誘い込む。最深部に辿り着くと、モントレゾールはフォルトゥナートを鎖で固定し、煉瓦と漆喰で壁龕の中に生き埋めにする。物語はモントレゾールの付言で閉じる——これらは五十年前のこと、誰にも気づかれていない。</p>
+<p>この作品の特異さは、<strong>冒頭から誰が犯人で誰が被害者かを知らされている</strong>点にある。伝統的な whodunit の構造はまったく覆される——謎は「誰がやったか」ではなく、「いかに為したか」「なぜそれほどまで執着するのか」にある。</p>
+<hr>
+<h2 id="_4">真相の分解</h2>
+<h3 id="howdunit">真相その一：復讐計画の全設計（howdunit）</h3>
+<ul>
+<li><strong>収束点：約 70%</strong></li>
+<li>答え：モントレゾールは事前に邸を空にし（使用人の人情を利用）、地下墓穴最深部の壁龕に鉄鎖と鍵を整え、外套の下に鏝を忍ばせ、建築用石材を用意した——酒と虚栄心を通じて全過程にわたりフォルトゥナートを罠の奥へと操った。</li>
+</ul>
+<h4 id="_5">重要な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかり</th>
+<th>出現位置</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>フォルトゥナートの弱点は利き酒家としての虚栄心であり、モントレゾールは特にそれを強調する</td>
+<td>約 8%</td>
+<td>餌の設計の根幹を説明する——アモンティリャードはフォルトゥナート専用の餌</td>
+</tr>
+<tr>
+<td>2</td>
+<td>モントレゾールは繰り返しルケージ（Luchesi）の名を挙げてフォルトゥナートの対抗心を煽る</td>
+<td>約 12–18%</td>
+<td>退路を断つ——これが操作の核心機構</td>
+</tr>
+<tr>
+<td>3</td>
+<td>邸の使用人はすべて不在（モントレゾールは外出を禁じたが、そう命じれば即座に出て行くと知っていた）</td>
+<td>約 22%</td>
+<td>予謀の鍵——あらかじめ現場を払い、目撃者を排除</td>
+</tr>
+<tr>
+<td>4</td>
+<td>モントレゾールの外套の下に鏝（trowel）が隠されている</td>
+<td>約 50%</td>
+<td><strong>最も重要な手がかりの一つ</strong>——煉瓦積みの道具は既に用意されており、計画が完全に設計済みであったことを示す</td>
+</tr>
+<tr>
+<td>5</td>
+<td>壁龕の最奥に鉄のかすがいと鎖、南京錠があらかじめ据えられている</td>
+<td>約 70%</td>
+<td>これが最後の決定的な手がかり——計画の全体像がここで徹底的に浮かぶ</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_6">補助的な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかり</th>
+<th>出現位置</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>カーニバル夜の喧騒が完璧な遮蔽を提供する</td>
+<td>約 10%</td>
+<td>失踪者がすぐに気づかれない</td>
+</tr>
+<tr>
+<td>2</td>
+<td>地下墓穴は極めて深く、地表から遠く、骨で満ちている</td>
+<td>約 30–45%</td>
+<td>「誰にも聞こえない」隔絶感を強化</td>
+</tr>
+<tr>
+<td>3</td>
+<td>フォルトゥナートは全篇を通じて酩酊している</td>
+<td>全篇</td>
+<td>危機に気づかない理由を説明</td>
+</tr>
+<tr>
+<td>4</td>
+<td>壁龕の脇に建築石材と漆喰があらかじめ積まれている</td>
+<td>約 72%</td>
+<td>鏝と呼応し、計画の予謀性を確認</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_7">偽の手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかり</th>
+<th>出現位置</th>
+<th>誤導の方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>モントレゾールは何度も引き返すふりをしてフォルトゥナートの健康を心配する</td>
+<td>約 28%・42%</td>
+<td>読者（そしてフォルトゥナート）に「気遣いから出た行為」と思わせ、真の動機を覆う</td>
+</tr>
+<tr>
+<td>2</td>
+<td>フリーメイソンの冗談——フォルトゥナートはモントレゾールを石工（mason）とは信じない</td>
+<td>約 50%</td>
+<td>表面は酔後の戯言だが、裏に二重の意味がある：モントレゾールは間もなく「本当の」煉瓦積みの技を披露する</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="whydunit">真相その二：信頼できない語り手——モントレゾールの精神状態と真の動機（whydunit）</h3>
+<ul>
+<li><strong>収束点：約 90%</strong></li>
+<li>答え：物語は確定的な答えを与えない。フォルトゥナートの「千の傷害」と最終的な「侮辱」は一度も具体化されない。精読すると、モントレゾールの陳述は矛盾と執着に満ち、彼はおそらく偏執的な不信頼な語り手である——彼の口にする「正当な復讐」の背後には、年月をかけて蓄積された嫉妬と妄執しかないかもしれない。</li>
+</ul>
+<h4 id="_8">重要な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかり</th>
+<th>出現位置</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>復讐の動機が一貫して曖昧：「injuries」と「insult」が一度も具体化されない</td>
+<td>約 1%</td>
+<td>真に正当な理由を持つ者は、とくに告白の場で理由を隠す必要はない</td>
+</tr>
+<tr>
+<td>2</td>
+<td>モントレゾール家の紋章——「蛇を踏む足、しかし蛇は踵に噛みつく」、格言は <em>Nemo me impune lacessit</em>（誰も我を損なって罰せられずに済まぬ）</td>
+<td>約 44%</td>
+<td>家系に根差す復讐の文化——モントレゾールの行為もまた家族的病理であることを暗示</td>
+</tr>
+<tr>
+<td>3</td>
+<td>モントレゾールが言う「おまえは富み、尊敬され、愛されている、幸福だ——かつての私と同じように」</td>
+<td>約 30%</td>
+<td>隠された嫉妬——「かつて」という語がモントレゾール自身の喪失と怨恨を示す</td>
+</tr>
+<tr>
+<td>4</td>
+<td>告白の聞き手は「私の魂の本質をよく知るあなた」（You, who so well know the nature of my soul）</td>
+<td>約 1%</td>
+<td>五十年後の告白、その相手は誰か？神父？旧知？この謎は最後まで解かれず、モントレゾールが何らかの罪悪感あるいは自己弁護の欲求を抱え続けていることを暗示</td>
+</tr>
+<tr>
+<td>5</td>
+<td>最後の瞬間、モントレゾールは「心が悪くなる」（My heart grew sick）と述べ、それを墓穴の湿気のせいにする</td>
+<td>約 95%</td>
+<td>全篇で最も曖昧な瞬間——良心の閃光か、身体の反応か？語り手自身も直視を避けている</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_9">補助的な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかり</th>
+<th>出現位置</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>モントレゾールの計画の緻密さは、長期にわたる執着と画策を示す</td>
+<td>全篇</td>
+<td>これほど精密な予謀は、蓄積された偏執を背景に持つ</td>
+</tr>
+<tr>
+<td>2</td>
+<td>フォルトゥナートはモントレゾールに対して終始まったく警戒せず、最後まで彼を「友」と呼ぶ</td>
+<td>全篇</td>
+<td>フォルトゥナートの側から見て、モントレゾール言うところの「千の傷害」は本当にあったのか？</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_10">偽の手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかり</th>
+<th>出現位置</th>
+<th>誤導の方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>「フォルトゥナートは私を千の傷で痛めつけ、私はずっと忍んできた」という冒頭</td>
+<td>約 1%</td>
+<td>読者をただちにモントレゾールの立場に立たせ、彼の解釈を受け入れさせ、この発言自体が何の実質的根拠も欠いていることを忘れさせる</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_11">推論過程の再構築</h2>
+<p><strong>第一の経路：howdunit</strong></p>
+<p>約 22%（邸に人がいないと分かる箇所）まで読めば、注意深い読者はこれが予謀だと意識し始めるはずである。50% の鏝の登場で「煉瓦積みの計画」の存在が確証され、70% の鉄鎖で最終確認——ここで計画の全体像が鮮明に立ち上がる。</p>
+<p><strong>第二の経路：信頼できない語り</strong></p>
+<p>この経路は、読者が能動的に語り手の操作に抵抗することを要する。最初の信号は冒頭（1%）——動機も対象も不明な告白の枠組み。30% の「おまえは幸福だ、かつての私のように」こそ最重要の心理的手がかりである——モントレゾールは単に復讐しているのではない、心の空洞を埋めようとしているのだ。95% の「心が悪くなった」に至ってようやく、読者は語り手の感情の亀裂を捉える。しかし作者は最後まで確定した答えを与えない——この謎自体こそ作品の核である。</p>
+<hr>
+<h2 id="_12">補足</h2>
+<p><strong>『アモンティリャードの樽』の推理文学史における特殊な位置</strong></p>
+<p>本作は推理文学史上でも最も興味深いパラドックスの一つである——探偵もおらず、解決もなく、「事件」も存在しない推理小説なのである。ポーは『モルグ街の殺人』（1841）で探偵小説を発明した。その五年後、本作で彼は同じ分析精神を徹底的に裏返し、読者を犯人の位置に立たせて、「完璧な犯罪」の実行過程を体験させた。</p>
+<p><strong>『モルグ街の殺人』との対比</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>モルグ街の殺人</th>
+<th>アモンティリャードの樽</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>中心となる問い</td>
+<td>誰がやったか？</td>
+<td>なぜやったか？</td>
+</tr>
+<tr>
+<td>語りの視点</td>
+<td>傍観する友</td>
+<td>犯人本人</td>
+</tr>
+<tr>
+<td>推論の方向</td>
+<td>真相を解読する</td>
+<td>真相を覆い隠す</td>
+</tr>
+<tr>
+<td>読者の役割</td>
+<td>探偵を助ける</td>
+<td>操られる傍観者</td>
+</tr>
+</tbody>
+</table>
+<p><strong>文学的技法の分析</strong></p>
+<p>ポーは本作で「反推理」の構造を用いる——すべての手がかりがはっきりと見えているのに、誰一人として謎を解いていない。鏝の二重性（道具かフリーメイソンの象徴か）、家紋格言の予兆、冒頭の告白的口吻——これらは 1846 年には驚くべき革新であり、その百年後、クリスティらの「信頼できない語り手」に至って初めて十全に継承・発展された。</p>
+<p><strong>読者への補足</strong></p>
+<p>アモンティリャードはスペインのヘレス地方で産出される稀少なシェリー酒で、ヘーゼルナッツの香りと複雑な層が賞賛される。十九世紀においては高い収集価値を持つ最上等の酒であった——今日の最高級ボルドーに相当する。フォルトゥナートの酒への執着は、当時の読者にとって完全に信じうる人物の弱点であった。</p>
+    <a href="../index.html" class="back-link">← ホームに戻る</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">推理解剖室</p>
+    <p>五人の作家・八十八の作品・135年にわたる推理文学の難易度の進化。</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

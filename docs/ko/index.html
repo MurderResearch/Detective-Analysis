@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="ko">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>推理解剖室 — 經典推理小說難度分析</title>
-<meta name="description" content="用一套全新的評估方法，逐本拆解推理文學史上最經典的作品。">
+<title>추리해부실 — 고전 추리소설 난이도 분석 프로젝트</title>
+<meta name="description" content="추리문학사의 고전을 한 권씩 해부해 난이도를 평가하는 새로운 시도.">
 <link rel="alternate" hreflang="zh-TW" href="/">
 <link rel="alternate" hreflang="zh-CN" href="/zh-CN/">
 <link rel="alternate" hreflang="en" href="/en/">
@@ -14,7 +14,7 @@
 <link rel="alternate" hreflang="es" href="/es/">
 <link rel="alternate" hreflang="fr" href="/fr/">
 <link rel="alternate" hreflang="x-default" href="/">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 /* ===== RESET & BASE ===== */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -30,8 +30,8 @@
   --text-secondary: #9a9590;
   --text-dim: #5a5652;
   --border: #2a2a35;
-  --font-serif: 'Noto Serif TC', serif;
-  --font-sans: 'Noto Sans TC', sans-serif;
+  --font-serif: 'Noto Serif KR', serif;
+  --font-sans: 'Noto Sans KR', sans-serif;
 }
 
 html { scroll-behavior: smooth; }
@@ -333,22 +333,22 @@ footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
 <!-- NAV -->
 <nav>
   <div class="container">
-    <a href="#" class="nav-logo">推理解剖室</a>
+    <a href="#" class="nav-logo">추리해부실</a>
     <div class="nav-right">
       <div class="nav-links">
-        <a href="#latest">最新分析</a>
-        <a href="#about">關於</a>
-        <a href="#metrics">指標</a>
-        <a href="#authors">作者</a>
+        <a href="#latest">최신</a>
+        <a href="#about">소개</a>
+        <a href="#metrics">지표</a>
+        <a href="#authors">작가</a>
       </div>
       <div class="lang-switcher" id="lang-switcher">
-    <button class="lang-switcher-btn" type="button" aria-label="語言" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 繁體中文</button>
+    <button class="lang-switcher-btn" type="button" aria-label="언어" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 한국어</button>
     <div class="lang-switcher-menu" id="lang-menu">
-      <a class="lang-item active" data-lang="zh-TW" href="/">繁體中文</a>
+      <a class="lang-item" data-lang="zh-TW" href="/">繁體中文</a>
       <a class="lang-item" data-lang="zh-CN" href="/zh-CN/">简体中文</a>
       <a class="lang-item" data-lang="en" href="/en/">English</a>
       <a class="lang-item" data-lang="ja" href="/ja/">日本語</a>
-      <a class="lang-item" data-lang="ko" href="/ko/">한국어</a>
+      <a class="lang-item active" data-lang="ko" href="/ko/">한국어</a>
       <a class="lang-item" data-lang="de" href="/de/">Deutsch</a>
       <a class="lang-item" data-lang="es" href="/es/">Español</a>
       <a class="lang-item" data-lang="fr" href="/fr/">Français</a>
@@ -361,21 +361,21 @@ footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
 <!-- HERO -->
 <section class="hero">
   <div class="container">
-    <div class="hero-subtitle">推理小說難度分析計畫</div>
-    <h1>你能比偵探<span>更早</span>破案嗎？</h1>
-    <p class="hero-desc">用一套全新的評估方法，逐本拆解推理文學史上最經典的作品——<br>找出每一本書裡，讀者最早可以在哪裡靠線索推導出真相。</p>
+    <div class="hero-subtitle">추리소설 난이도 분석 프로젝트</div>
+    <h1>당신은 탐정보다<span>먼저</span>사건을 풀 수 있는가?</h1>
+    <p class="hero-desc">새로운 평가 틀로 추리문학사의 대표작을 한 권씩 해부하고,<br>독자가 단서만으로 진실을 도출할 수 있는 가장 이른 지점을 찾아낸다.</p>
     <div class="hero-stats">
       <div>
         <div class="hero-stat-num">5</div>
-        <div class="hero-stat-label">位經典作者</div>
+        <div class="hero-stat-label">명의 고전 작가</div>
       </div>
       <div>
         <div class="hero-stat-num">88</div>
-        <div class="hero-stat-label">部作品分析</div>
+        <div class="hero-stat-label">개 작품 분석</div>
       </div>
       <div>
         <div class="hero-stat-num">135</div>
-        <div class="hero-stat-label">年文學跨度</div>
+        <div class="hero-stat-label">년의 문학적 폭</div>
       </div>
     </div>
   </div>
@@ -384,33 +384,33 @@ footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
 <!-- LATEST ANALYSIS GRID -->
 <div class="articles-section" id="latest">
   <div class="container">
-    <div class="section-label">最新分析報告</div>
+    <div class="section-label">최신 분석</div>
     <div class="articles-grid">
       <a href="articles/the-cask-of-amontillado.html" class="article-card">
-        <div class="article-card-meta">愛倫·坡 · </div>
+        <div class="article-card-meta">에드거 앨런 포(Edgar Allan Poe) · 1846</div>
         <div>
-          <div class="article-card-title">一桶阿蒙提拉多</div>
-          <div class='article-card-sub'>The Cask of Amontillado</div>
+          <div class="article-card-title">아몬티야도 술통(The Cask of Amontillado) — 추리 분석</div>
+          
         </div>
         <div class="article-card-ratings">
-          <div class="article-card-badge">推理難度 <span>⭐⭐⭐⭐</span></div>
-          <div class="article-card-badge">迷霧等級 <span>⭐⭐⭐⭐</span></div>
+          <div class="article-card-badge">추리 난이도 <span>⭐⭐⭐⭐</span></div>
+          <div class="article-card-badge">안개 등급 <span>⭐⭐⭐⭐</span></div>
         </div>
-        <div class="article-card-excerpt">嘉年華狂歡的夜晚，敘述者蒙特雷索爾（Montresor）在街上遇見老友福圖納托（Fortunato）。Montresor 以一桶珍稀的阿蒙提拉多雪莉酒為誘餌，引導這位以品酒聞名、此刻半醉的男人深入自家宅邸的地下墓穴。到達最深處後，Montr…</div>
-        <div class="article-card-link">閱讀完整分析 →</div>
+        <div class="article-card-excerpt">카니발이 요동치는 밤, 화자 몬트레소르(Montresor)는 길에서 옛 지인 포르투나토(Fortunato)를 마주친다. 몬트레소르는 희귀한 아몬티야도 셰리주 한 통을 미끼 삼아, 시음으로 명성을 얻고 마침 반쯤 취해…</div>
+        <div class="article-card-link">전체 분석 읽기 →</div>
       </a>
       <a href="articles/the-murders-in-the-rue-morgue.html" class="article-card">
-        <div class="article-card-meta">愛倫·坡 · 1841</div>
+        <div class="article-card-meta">에드거 앨런 포(Edgar Allan Poe) · 1841</div>
         <div>
-          <div class="article-card-title">莫爾格街兇殺案</div>
-          <div class='article-card-sub'>The Murders in the Rue Morgue</div>
+          <div class="article-card-title">모르그가의 살인(The Murders in the Rue Morgue) — 추리 분석</div>
+          
         </div>
         <div class="article-card-ratings">
-          <div class="article-card-badge">推理難度 <span>⭐⭐⭐</span></div>
-          <div class="article-card-badge">迷霧等級 <span>⭐⭐</span></div>
+          <div class="article-card-badge">추리 난이도 <span>⭐⭐⭐</span></div>
+          <div class="article-card-badge">안개 등급 <span>⭐⭐</span></div>
         </div>
-        <div class="article-card-excerpt">故事發生在十九世紀的巴黎。敘事者是一位旅居巴黎的美國人，偶然結識了沒落貴族乃·奧古斯特·杜賓——一個擁有超凡分析能力的年輕人。兩人合租了一棟老宅，過著與世隔絕的生活，白天關門讀書，入夜後才出門散步。 某天，他們從報紙上讀到一則驚人的兇殺案：…</div>
-        <div class="article-card-link">閱讀完整分析 →</div>
+        <div class="article-card-excerpt">이야기의 배경은 19세기 파리다. 화자는 파리에 체류 중인 미국인으로, 우연히 몰락한 귀족 청년 C. 오귀스트 뒤팽 — 비범한 분석력을 지닌 인물 — 과 친분을 맺는다. 두 사람은 낡은 저택을 함께 빌려 세상과 단절…</div>
+        <div class="article-card-link">전체 분석 읽기 →</div>
       </a>
     </div>
   </div>
@@ -419,13 +419,13 @@ footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
 <!-- ABOUT -->
 <section id="about" style="background: var(--bg-card);">
   <div class="container">
-    <div class="section-label">關於這個計畫</div>
-    <h2 class="section-title">不是書評，是推理實驗</h2>
+    <div class="section-label">이 프로젝트에 대하여</div>
+    <h2 class="section-title">서평이 아니라, 추리 실험입니다.</h2>
     <div class="about-text">
-      <p>推理小說的書評和導讀已經很多了。有人分析角色塑造，有人討論敘事結構，有人梳理文學史的脈絡。但很少有人認真面對一個推理小說讀者最原始的慾望——<strong>我想贏過偵探。</strong></p>
-      <p>每個讀推理小說的人心裡都有一個聲音：「讓我猜猜看。」但猜完之後呢？你猜對了，是因為你真的從線索中推導出來，還是只是運氣好？你猜錯了，是因為你漏看了什麼，還是因為作者根本沒給你公平的機會？</p>
-      <p>這個系列要替每一本經典推理小說回答一個問題：<strong>如果你是一個認真的讀者，最早可以在讀到哪裡的時候，靠作者已經給出的線索，自己推導出真相？</strong></p>
-      <p>不是靠直覺，不是靠套路經驗，而是根據文本中實際出現的線索，用邏輯推出答案。每篇分析都會列出所有找到的線索——關鍵的、輔助的、還有作者刻意放的假線索——讓你可以回頭驗證每一條。</p>
+      <p>추리소설의 서평과 해설은 이미 충분히 많다. 인물 조형을 분석하는 사람도, 서사 구조를 논하는 사람도, 문학사의 맥락을 정리하는 사람도 있다. 그러나 추리소설 독자의 가장 원초적인 욕망을 정면으로 다루는 글은 드물다——<strong>나는 탐정을 이기고 싶다.</strong></p>
+      <p>추리소설을 읽는 사람의 마음속에는 언제나 같은 목소리가 있다. 「맞혀 보자.」 그런데 맞힌 뒤에는? 맞았다면 정말 단서에서 추론한 결과인가, 아니면 그저 운이 좋았던가? 틀렸다면 뭔가를 놓친 탓인가, 아니면 작가가 처음부터 공정한 기회를 주지 않은 탓인가?</p>
+      <p>이 시리즈는 고전 추리소설 한 권마다 이 질문에 답한다——<strong>성실한 독자라면, 작가가 이미 제시한 단서만으로 책의 어느 지점에서 처음으로 진실을 도출할 수 있는가?</strong></p>
+      <p>직감이 아니라, 장르적 경험이 아니라, 본문에 실제로 등장한 단서와 논리만으로 답을 끌어낸다. 모든 분석은 발견된 모든 단서를 나열한다——결정적 단서, 보조 단서, 작가가 고의로 심은 가짜 단서까지——독자가 하나씩 직접 검증할 수 있도록.</p>
     </div>
   </div>
 </section>
@@ -433,33 +433,33 @@ footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
 <!-- METRICS -->
 <section id="metrics">
   <div class="container">
-    <div class="section-label">評估工具</div>
-    <h2 class="section-title">兩把尺，量出推理的真實面貌</h2>
+    <div class="section-label">평가 지표</div>
+    <h2 class="section-title">두 개의 자로, 추리의 참모습을 잰다.</h2>
     <div class="metrics-grid">
       <div class="metric-card">
         <div class="metric-icon">🔍</div>
-        <div class="metric-name">推理難度</div>
+        <div class="metric-name">추리 난이도</div>
         <div class="metric-en">DEDUCIBILITY SCORE</div>
-        <div class="metric-desc">讀者最早可以在書的百分之幾處，根據已出現的線索合理推出真相。星等越高，越晚才能破案。</div>
+        <div class="metric-desc">제시된 단서에서 합리적으로 진실을 도출할 수 있는, 책 안에서 가장 이른 지점(%). 별이 많을수록 늦게 풀린다.</div>
         <table class="stars-table">
-          <tr><td>⭐</td><td>極易推理——讀不到三成就能破案</td></tr>
-          <tr><td>⭐⭐</td><td>較易推理——前半段即可推導</td></tr>
-          <tr><td>⭐⭐⭐</td><td>中等難度——需讀過半</td></tr>
-          <tr><td>⭐⭐⭐⭐</td><td>高難度——後段才浮現線索</td></tr>
-          <tr><td>⭐⭐⭐⭐⭐</td><td>極高難度——幾乎不可能提前破案</td></tr>
+          <tr><td>⭐</td><td>매우 쉬움 — 30% 미만에서 해결 가능.</td></tr>
+          <tr><td>⭐⭐</td><td>비교적 쉬움 — 전반부에서 추리 가능.</td></tr>
+          <tr><td>⭐⭐⭐</td><td>보통 — 중반을 넘어야 함.</td></tr>
+          <tr><td>⭐⭐⭐⭐</td><td>어려움 — 후반부에야 단서가 드러남.</td></tr>
+          <tr><td>⭐⭐⭐⭐⭐</td><td>극도로 어려움 — 조기 추리가 거의 불가능.</td></tr>
         </table>
       </div>
       <div class="metric-card">
         <div class="metric-icon">🌫️</div>
-        <div class="metric-name">迷霧等級</div>
+        <div class="metric-name">안개 등급</div>
         <div class="metric-en">FOG RATING</div>
-        <div class="metric-desc">作者有多努力把你往錯的方向帶——假線索的數量與巧妙程度、敘述者是否可靠、是否利用你的預期來誤導。</div>
+        <div class="metric-desc">작가가 독자를 오도하기 위해 얼마나 노력하는가 — 가짜 단서의 수와 정교함, 화자의 신뢰성, 독자의 예단을 역이용하는지 여부.</div>
         <table class="stars-table">
-          <tr><td>⭐</td><td>幾乎無誤導，線索清晰直接</td></tr>
-          <tr><td>⭐⭐</td><td>輕度誤導，少量假線索</td></tr>
-          <tr><td>⭐⭐⭐</td><td>中度誤導，紅鯡魚可觀</td></tr>
-          <tr><td>⭐⭐⭐⭐</td><td>高度誤導，大量假線索與隱藏資訊</td></tr>
-          <tr><td>⭐⭐⭐⭐⭐</td><td>極度誤導，敘事結構本身就是陷阱</td></tr>
+          <tr><td>⭐</td><td>오도 거의 없음. 단서가 명확.</td></tr>
+          <tr><td>⭐⭐</td><td>가벼운 오도. 가짜 단서 소수.</td></tr>
+          <tr><td>⭐⭐⭐</td><td>중간 정도. 레드헤링 상당수.</td></tr>
+          <tr><td>⭐⭐⭐⭐</td><td>강한 오도. 다수의 가짜 단서와 은폐된 정보.</td></tr>
+          <tr><td>⭐⭐⭐⭐⭐</td><td>극도의 오도. 서사 구조 자체가 함정.</td></tr>
         </table>
       </div>
     </div>
@@ -469,48 +469,48 @@ footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
 <!-- AUTHORS TIMELINE -->
 <section id="authors" style="background: var(--bg-card);">
   <div class="container">
-    <div class="section-label">發文順序</div>
-    <h2 class="section-title">五位作者，一條時間線</h2>
+    <div class="section-label">공개 순서</div>
+    <h2 class="section-title">다섯 작가, 하나의 타임라인.</h2>
     <div class="timeline">
       <div class="timeline-item">
         <div class="timeline-dot"></div>
-        <div class="timeline-phase">Phase 1 — 進行中</div>
+        <div class="timeline-phase">Phase 1 — 진행 중</div>
         <div class="timeline-author">Edgar Allan Poe</div>
         <div class="timeline-years">1809–1849</div>
-        <div class="timeline-desc">推理小說之父。1841 年寫出人類史上第一篇偵探小說《莫爾格街兇殺案》，創造了第一位虛構偵探杜賓，建立密室推理原型，確立「天才偵探 + 平凡助手」的經典結構。</div>
-        <span class="timeline-tag">11 部作品</span>
+        <div class="timeline-desc">추리소설의 아버지. 1841년 인류 최초의 탐정소설 『모르그 가의 살인』을 발표해 최초의 가공 탐정 뒤팽을 창조하고, 밀실 추리의 원형과 「천재 탐정 + 평범한 조수」의 고전적 구조를 확립했다.</div>
+        <span class="timeline-tag">11 작품</span>
       </div>
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-phase">Phase 2</div>
         <div class="timeline-author">Arthur Conan Doyle</div>
         <div class="timeline-years">1859–1930</div>
-        <div class="timeline-desc">福爾摩斯的創造者。讓「演繹法」成為推理的代名詞——從袖口磨損推斷職業，從鞋底泥土判斷去過哪裡。</div>
-        <span class="timeline-tag">10 部作品</span>
+        <div class="timeline-desc">셜록 홈즈의 창조자. 「연역법」을 추리의 대명사로 만든 작가 — 소맷부리의 마모로 직업을, 구두창의 흙으로 다녀온 곳을 추정한다.</div>
+        <span class="timeline-tag">10 작품</span>
       </div>
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-phase">Phase 3</div>
         <div class="timeline-author">Maurice Leblanc</div>
         <div class="timeline-years">1864–1941</div>
-        <div class="timeline-desc">怪盜紳士亞森·羅蘋的創造者。翻轉推理小說的視角——主角不是偵探而是小偷。</div>
-        <span class="timeline-tag">20 部作品</span>
+        <div class="timeline-desc">괴도 신사 아르센 뤼팽의 창조자. 추리소설의 시점을 뒤집어 주인공을 탐정이 아닌 도둑으로 삼은 작가.</div>
+        <span class="timeline-tag">20 작품</span>
       </div>
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-phase">Phase 4</div>
         <div class="timeline-author">G.K. Chesterton</div>
         <div class="timeline-years">1874–1936</div>
-        <div class="timeline-desc">布朗神父的創造者。不靠物證，靠「理解犯罪者的靈魂」，是心理派推理的先驅。</div>
-        <span class="timeline-tag">8 部作品</span>
+        <div class="timeline-desc">브라운 신부의 창조자. 물증이 아니라 「범죄자의 영혼을 이해하는」 방식으로 사건을 푸는 심리파 추리의 선구자.</div>
+        <span class="timeline-tag">8 작품</span>
       </div>
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-phase">Phase 5</div>
         <div class="timeline-author">Agatha Christie</div>
         <div class="timeline-years">1890–1976</div>
-        <div class="timeline-desc">推理女王。擅長在結尾徹底翻轉你以為已經搞懂的一切。推理難度和迷霧等級都最高的作者。</div>
-        <span class="timeline-tag">35+ 部作品</span>
+        <div class="timeline-desc">미스터리의 여왕. 독자가 이해했다고 믿은 모든 것을 결말에서 뒤집는 데 능하다. 추리 난이도와 안개 등급 모두 최고 수준의 작가.</div>
+        <span class="timeline-tag">35+ 작품</span>
       </div>
     </div>
   </div>
@@ -519,8 +519,8 @@ footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
 <!-- FOOTER -->
 <footer>
   <div class="container">
-    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 10px;">推理解剖室</p>
-    <p>五位作者 · 八十八部作品 · 一百三十五年推理文學的難度演化</p>
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 10px;">추리해부실</p>
+    <p>다섯 작가 · 여든여덟 작품 · 135년에 걸친 추리문학 난이도의 진화.</p>
   </div>
 </footer>
 

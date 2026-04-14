@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="{{HTML_LANG}}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{SITE_TITLE}} — {{SITE_TAGLINE}}</title>
+<meta name="description" content="{{PAGE_DESCRIPTION}}">
+{{HREFLANG_ALTERNATES}}
+<link href="https://fonts.googleapis.com/css2?family={{FONT_SERIF_URL}}:wght@400;700;900&family={{FONT_SANS_URL}}:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg-dark: #0a0a0f;
+  --bg-card: #13131a;
+  --bg-card-hover: #1a1a24;
+  --gold: #d4a853;
+  --gold-dim: #a07c3a;
+  --gold-glow: rgba(212, 168, 83, 0.15);
+  --text-primary: #e8e4dc;
+  --text-secondary: #9a9590;
+  --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: '{{FONT_SERIF}}', serif;
+  --font-sans: '{{FONT_SANS}}', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  line-height: 1.8;
+  min-height: 100vh;
+}
+.container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+/* ===== NAV ===== */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10,10,15,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 0;
+}
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.nav-logo {
+  font-family: var(--font-serif); font-weight: 900;
+  font-size: 1.1rem; color: var(--gold); letter-spacing: 2px;
+  text-decoration: none; white-space: nowrap;
+}
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a {
+  color: var(--text-secondary); text-decoration: none;
+  font-size: 0.85rem; font-weight: 400; letter-spacing: 1px;
+  transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--gold); }
+
+/* ===== LANGUAGE SWITCHER ===== */
+.lang-switcher {
+  position: relative; font-size: 0.8rem;
+}
+.lang-switcher-btn {
+  background: transparent; border: 1px solid var(--border);
+  color: var(--text-secondary); padding: 5px 12px;
+  border-radius: 6px; cursor: pointer;
+  font-size: 0.78rem; letter-spacing: 0.5px;
+  font-family: inherit;
+  transition: border-color 0.3s, color 0.3s;
+}
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu {
+  position: absolute; top: calc(100% + 6px); right: 0;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 8px; min-width: 140px;
+  padding: 6px 0; display: none;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a {
+  display: block; padding: 8px 14px;
+  color: var(--text-secondary); text-decoration: none;
+  font-size: 0.82rem;
+  transition: background 0.2s, color 0.2s;
+}
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+/* ===== HERO ===== */
+.hero {
+  padding: 110px 0 56px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: 600px; height: 400px;
+  background: radial-gradient(circle, rgba(212,168,83,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-subtitle {
+  font-size: 0.8rem; color: var(--gold-dim);
+  letter-spacing: 6px; text-transform: uppercase;
+  margin-bottom: 18px; font-weight: 500;
+}
+.hero h1 {
+  font-family: var(--font-serif); font-weight: 900;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.4; color: var(--text-primary);
+  margin-bottom: 20px;
+}
+.hero h1 span { color: var(--gold); }
+.hero-desc {
+  font-size: 0.98rem; color: var(--text-secondary);
+  max-width: 620px; margin: 0 auto 28px; line-height: 2;
+}
+.hero-stats {
+  display: flex; justify-content: center; gap: 40px; margin-top: 28px;
+}
+.hero-stat-num {
+  font-family: var(--font-serif); font-size: 2rem;
+  font-weight: 900; color: var(--gold);
+}
+.hero-stat-label {
+  font-size: 0.75rem; color: var(--text-dim);
+  letter-spacing: 2px; margin-top: 4px;
+}
+
+/* ===== ARTICLES GRID ===== */
+.articles-section { padding: 0 0 72px; }
+.articles-section .section-label {
+  font-size: 0.75rem; color: var(--gold-dim);
+  letter-spacing: 5px; text-transform: uppercase;
+  font-weight: 500; margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 16px;
+}
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+.article-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 24px 22px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color 0.25s, background 0.25s, transform 0.2s;
+}
+.article-card:hover {
+  border-color: var(--gold-dim);
+  background: var(--bg-card-hover);
+  transform: translateY(-2px);
+}
+.article-card-meta { font-size: 0.7rem; color: var(--gold-dim); letter-spacing: 1px; font-weight: 500; }
+.article-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.05rem; font-weight: 700;
+  color: var(--text-primary); line-height: 1.4;
+}
+.article-card-sub { font-size: 0.75rem; color: var(--text-dim); margin-top: 2px; }
+.article-card-ratings { display: flex; gap: 10px; flex-wrap: wrap; }
+.article-card-badge {
+  font-size: 0.68rem; color: var(--text-secondary);
+  border: 1px solid var(--border);
+  border-radius: 6px; padding: 4px 10px;
+}
+.article-card-badge span { color: var(--gold); }
+.article-card-excerpt {
+  font-size: 0.82rem; color: var(--text-secondary);
+  line-height: 1.75;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.article-card-link { font-size: 0.78rem; color: var(--gold); letter-spacing: 0.5px; margin-top: auto; }
+
+/* ===== SECTION COMMON ===== */
+section { padding: 72px 0; }
+.section-label {
+  font-size: 0.75rem; color: var(--gold-dim);
+  letter-spacing: 5px; text-transform: uppercase;
+  font-weight: 500; margin-bottom: 16px;
+}
+.section-title {
+  font-family: var(--font-serif); font-size: 1.7rem;
+  font-weight: 700; margin-bottom: 24px; line-height: 1.5;
+}
+
+/* ===== ABOUT ===== */
+.about-text { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; max-width: 750px; }
+.about-text p { margin-bottom: 18px; }
+.about-text strong { color: var(--text-primary); font-weight: 500; }
+
+/* ===== METRICS ===== */
+.metrics-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 32px; }
+.metric-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 10px; padding: 28px;
+  transition: border-color 0.3s, background 0.3s;
+}
+.metric-card:hover { border-color: var(--gold-dim); background: var(--bg-card-hover); }
+.metric-icon { font-size: 1.4rem; margin-bottom: 14px; }
+.metric-name { font-family: var(--font-serif); font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; color: var(--gold); }
+.metric-en { font-size: 0.72rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 14px; }
+.metric-desc { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.8; }
+.stars-table { margin-top: 14px; width: 100%; font-size: 0.8rem; color: var(--text-secondary); }
+.stars-table td { padding: 5px 0; vertical-align: top; }
+.stars-table td:first-child { color: var(--gold); width: 90px; white-space: nowrap; }
+
+/* ===== TIMELINE ===== */
+.timeline { position: relative; margin-top: 36px; }
+.timeline::before {
+  content: ''; position: absolute; left: 20px; top: 0; bottom: 0;
+  width: 2px; background: var(--border);
+}
+.timeline-item { position: relative; padding-left: 56px; margin-bottom: 44px; }
+.timeline-item:last-child { margin-bottom: 0; }
+.timeline-dot {
+  position: absolute; left: 12px; top: 6px;
+  width: 18px; height: 18px; border-radius: 50%;
+  border: 2px solid var(--gold-dim); background: var(--bg-dark);
+  transition: background 0.3s, border-color 0.3s;
+}
+.timeline-item:hover .timeline-dot { background: var(--gold); border-color: var(--gold); }
+.timeline-phase { font-size: 0.7rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; font-weight: 500; }
+.timeline-author { font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; margin: 6px 0 4px; }
+.timeline-years { font-size: 0.78rem; color: var(--text-dim); margin-bottom: 10px; }
+.timeline-desc { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.8; }
+.timeline-tag {
+  display: inline-block; margin-top: 10px;
+  padding: 3px 12px; font-size: 0.7rem; color: var(--gold-dim);
+  border: 1px solid var(--border); border-radius: 20px; letter-spacing: 1px;
+}
+
+/* ===== FOOTER ===== */
+footer { padding: 52px 0 36px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 640px) {
+  .hero-stats { gap: 20px; }
+  .metrics-grid { grid-template-columns: 1fr; }
+  .articles-grid { grid-template-columns: 1fr; }
+  .nav-links { gap: 12px; }
+  .nav-links a { font-size: 0.76rem; }
+  .nav-right { gap: 10px; }
+}
+</style>
+{{AUTO_DETECT_SCRIPT}}
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="container">
+    <a href="{{HOME_URL}}" class="nav-logo">{{SITE_TITLE}}</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="#latest">{{NAV_LATEST}}</a>
+        <a href="#about">{{NAV_ABOUT}}</a>
+        <a href="#metrics">{{NAV_METRICS}}</a>
+        <a href="#authors">{{NAV_AUTHORS}}</a>
+      </div>
+      {{LANG_SWITCHER}}
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-subtitle">{{HERO_SUBTITLE}}</div>
+    <h1>{{HERO_H1_BEFORE}}<span>{{HERO_H1_HIGHLIGHT}}</span>{{HERO_H1_AFTER}}</h1>
+    <p class="hero-desc">{{HERO_DESC}}</p>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-num">5</div>
+        <div class="hero-stat-label">{{STAT_AUTHORS}}</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">88</div>
+        <div class="hero-stat-label">{{STAT_WORKS}}</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">135</div>
+        <div class="hero-stat-label">{{STAT_YEARS}}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LATEST ANALYSIS GRID -->
+<div class="articles-section" id="latest">
+  <div class="container">
+    <div class="section-label">{{LATEST_SECTION}}</div>
+    <div class="articles-grid">
+{{ARTICLES_GRID}}
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" style="background: var(--bg-card);">
+  <div class="container">
+    <div class="section-label">{{ABOUT_LABEL}}</div>
+    <h2 class="section-title">{{ABOUT_TITLE}}</h2>
+    <div class="about-text">
+      <p>{{ABOUT_P1}}</p>
+      <p>{{ABOUT_P2}}</p>
+      <p>{{ABOUT_P3}}</p>
+      <p>{{ABOUT_P4}}</p>
+    </div>
+  </div>
+</section>
+
+<!-- METRICS -->
+<section id="metrics">
+  <div class="container">
+    <div class="section-label">{{METRICS_LABEL}}</div>
+    <h2 class="section-title">{{METRICS_TITLE}}</h2>
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-icon">🔍</div>
+        <div class="metric-name">{{RATING_DEDUCIBILITY}}</div>
+        <div class="metric-en">DEDUCIBILITY SCORE</div>
+        <div class="metric-desc">{{METRIC_DED_DESC}}</div>
+        <table class="stars-table">
+          <tr><td>⭐</td><td>{{METRIC_DED_S1}}</td></tr>
+          <tr><td>⭐⭐</td><td>{{METRIC_DED_S2}}</td></tr>
+          <tr><td>⭐⭐⭐</td><td>{{METRIC_DED_S3}}</td></tr>
+          <tr><td>⭐⭐⭐⭐</td><td>{{METRIC_DED_S4}}</td></tr>
+          <tr><td>⭐⭐⭐⭐⭐</td><td>{{METRIC_DED_S5}}</td></tr>
+        </table>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">🌫️</div>
+        <div class="metric-name">{{RATING_FOG}}</div>
+        <div class="metric-en">FOG RATING</div>
+        <div class="metric-desc">{{METRIC_FOG_DESC}}</div>
+        <table class="stars-table">
+          <tr><td>⭐</td><td>{{METRIC_FOG_S1}}</td></tr>
+          <tr><td>⭐⭐</td><td>{{METRIC_FOG_S2}}</td></tr>
+          <tr><td>⭐⭐⭐</td><td>{{METRIC_FOG_S3}}</td></tr>
+          <tr><td>⭐⭐⭐⭐</td><td>{{METRIC_FOG_S4}}</td></tr>
+          <tr><td>⭐⭐⭐⭐⭐</td><td>{{METRIC_FOG_S5}}</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUTHORS TIMELINE -->
+<section id="authors" style="background: var(--bg-card);">
+  <div class="container">
+    <div class="section-label">{{AUTHORS_LABEL}}</div>
+    <h2 class="section-title">{{AUTHORS_TITLE}}</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-phase">Phase 1 — {{PHASE_IN_PROGRESS}}</div>
+        <div class="timeline-author">Edgar Allan Poe</div>
+        <div class="timeline-years">1809–1849</div>
+        <div class="timeline-desc">{{AUTHOR_POE_DESC}}</div>
+        <span class="timeline-tag">{{AUTHOR_POE_COUNT}}</span>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-phase">Phase 2</div>
+        <div class="timeline-author">Arthur Conan Doyle</div>
+        <div class="timeline-years">1859–1930</div>
+        <div class="timeline-desc">{{AUTHOR_DOYLE_DESC}}</div>
+        <span class="timeline-tag">{{AUTHOR_DOYLE_COUNT}}</span>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-phase">Phase 3</div>
+        <div class="timeline-author">Maurice Leblanc</div>
+        <div class="timeline-years">1864–1941</div>
+        <div class="timeline-desc">{{AUTHOR_LEBLANC_DESC}}</div>
+        <span class="timeline-tag">{{AUTHOR_LEBLANC_COUNT}}</span>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-phase">Phase 4</div>
+        <div class="timeline-author">G.K. Chesterton</div>
+        <div class="timeline-years">1874–1936</div>
+        <div class="timeline-desc">{{AUTHOR_CHESTERTON_DESC}}</div>
+        <span class="timeline-tag">{{AUTHOR_CHESTERTON_COUNT}}</span>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-phase">Phase 5</div>
+        <div class="timeline-author">Agatha Christie</div>
+        <div class="timeline-years">1890–1976</div>
+        <div class="timeline-desc">{{AUTHOR_CHRISTIE_DESC}}</div>
+        <span class="timeline-tag">{{AUTHOR_CHRISTIE_COUNT}}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 10px;">{{SITE_TITLE}}</p>
+    <p>{{FOOTER_TAGLINE}}</p>
+  </div>
+</footer>
+
+{{LANG_SWITCHER_JS}}
+
+</body>
+</html>

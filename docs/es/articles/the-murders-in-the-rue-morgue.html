@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Los crímenes de la calle Morgue (The Murders in the Rue Morgue) — Sala de Disección Detectivesca</title>
+<meta name="description" content="La historia transcurre en el París del siglo XIX. El narrador, un estadounidense residente en la ciudad, traba amistad por casualidad con C. Auguste Dupin, un j">
+<link rel="alternate" hreflang="zh-TW" href="/articles/the-murders-in-the-rue-morgue.html">
+<link rel="alternate" hreflang="zh-CN" href="/zh-CN/articles/the-murders-in-the-rue-morgue.html">
+<link rel="alternate" hreflang="en" href="/en/articles/the-murders-in-the-rue-morgue.html">
+<link rel="alternate" hreflang="ja" href="/ja/articles/the-murders-in-the-rue-morgue.html">
+<link rel="alternate" hreflang="ko" href="/ko/articles/the-murders-in-the-rue-morgue.html">
+<link rel="alternate" hreflang="de" href="/de/articles/the-murders-in-the-rue-morgue.html">
+<link rel="alternate" hreflang="es" href="/es/articles/the-murders-in-the-rue-morgue.html">
+<link rel="alternate" hreflang="fr" href="/fr/articles/the-murders-in-the-rue-morgue.html">
+<link rel="alternate" hreflang="x-default" href="/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+
+  // 決定目前頁面位於哪個語系 prefix
+  var path = window.location.pathname;
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === path) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Sala de Disección Detectivesca</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Inicio</a>
+        <a href="../index.html#latest">Recientes</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Idioma" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 Español</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/articles/the-murders-in-the-rue-morgue.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/zh-CN/articles/the-murders-in-the-rue-morgue.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/en/articles/the-murders-in-the-rue-morgue.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/ja/articles/the-murders-in-the-rue-morgue.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/ko/articles/the-murders-in-the-rue-morgue.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/de/articles/the-murders-in-the-rue-morgue.html">Deutsch</a>
+      <a class="lang-item active" data-lang="es" href="/es/articles/the-murders-in-the-rue-morgue.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/fr/articles/the-murders-in-the-rue-morgue.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">Edgar Allan Poe · 1841</div>
+    <h1>Los crímenes de la calle Morgue (The Murders in the Rue Morgue)</h1>
+    <div class="subtitle">Edgar Allan Poe · </div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Deducibilidad</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Nivel de niebla</div>
+        <div class="rating-badge-stars">⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="los-crimenes-de-la-calle-morgue-the-murders-in-the-rue-morgue-analisis-de-deducibilidad">Los crímenes de la calle Morgue (The Murders in the Rue Morgue) — Análisis de deducibilidad</h1>
+<h2 id="datos-basicos">Datos básicos</h2>
+<ul>
+<li>Autor: Edgar Allan Poe</li>
+<li>Año de publicación: 1841</li>
+<li>Tipo: Relato corto (unas 14.000 palabras)</li>
+<li>Detective: C. Auguste Dupin</li>
+<li>Tipo central de enigma: whodunit (¿quién lo hizo?) + howdunit (¿cómo entró y salió?)</li>
+</ul>
+<h2 id="valoracion-general-de-la-dificultad">Valoración general de la dificultad</h2>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Estrellas</th>
+<th>Nota</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deducibilidad</td>
+<td>⭐⭐⭐ (3/5)</td>
+<td>Punto medio de convergencia 67% — hace falta pasar la mitad para encajar las pistas, pero el avance central es alcanzable al 42%.</td>
+</tr>
+<tr>
+<td>Nivel de niebla (Fog Rating)</td>
+<td>⭐⭐ (2/5)</td>
+<td>Pocas pistas falsas. La dificultad proviene del cotejo, no de la desviación deliberada.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="sinopsis">Sinopsis</h2>
+<p>La historia transcurre en el París del siglo XIX. El narrador, un estadounidense residente en la ciudad, traba amistad por casualidad con C. Auguste Dupin, un joven aristócrata venido a menos y dotado de una capacidad analítica extraordinaria. Ambos alquilan juntos una vieja casa y llevan una vida apartada del mundo: durante el día leen a puerta cerrada y solo salen a pasear al caer la noche.</p>
+<p>Un día leen en el periódico la noticia de un doble crimen estremecedor: en un cuarto piso de la calle Morgue, madame L'Espanaye y su hija Camille han sido asesinadas. A la hija, estrangulada en vida, le han metido el cadáver, cabeza abajo, por el cañón de la chimenea; a la madre la han arrojado por la ventana, con la cabeza casi cercenada y el cuerpo deshecho por múltiples fracturas.</p>
+<p>La escena es una habitación cerrada perfecta: la puerta está atrancada por dentro y las ventanas están clavadas desde el interior. Cuando los vecinos fuerzan la puerta, oyen arriba dos voces que discuten: una, ruda, de un francés; la otra, chillona y aguda. Sobre esa voz aguda, cinco testigos de nacionalidades distintas dan versiones completamente diferentes; nadie entendió de verdad lo que decía.</p>
+<p>La policía de París, desbordada, detiene al empleado de banco Le Bon, que había entregado dinero a las mujeres, pero sin pruebas reales. Dupin se interesa por el caso y decide investigar personalmente el lugar. Tras un riguroso razonamiento descubre un mecanismo de la ventana que la policía pasó por alto y obtiene sobre el terreno la prueba decisiva. Finalmente no solo revela la identidad verdadera del culpable, sino que, mediante un ingenioso anuncio en el periódico, hace comparecer al personaje clave del trasfondo, y así sale a la luz el panorama completo del crimen.</p>
+<hr>
+<h2 id="desmontaje-de-la-verdad">Desmontaje de la verdad</h2>
+<p>La verdad de este caso puede desglosarse en cuatro aspectos. A continuación analizo la distribución de pistas en cada uno y el punto más temprano en que el lector puede deducir la respuesta.</p>
+<blockquote>
+<p><strong>Nota sobre el progreso de lectura:</strong> Los porcentajes indican la posición de cada pista en el conjunto del texto. «Hacia el 30 %» significa alrededor de un tercio leído.</p>
+</blockquote>
+<hr>
+<h3 id="verdad-uno-el-culpable-no-es-un-ser-humano">Verdad uno: el culpable no es un ser humano</h3>
+<ul>
+<li><strong>Respuesta:</strong> el culpable es un orangután de Borneo.</li>
+<li><strong>Punto de convergencia: 42%</strong> — terminada la lectura de las declaraciones de los testigos, los indicios bastan para concluir que el asesino no es humano.</li>
+</ul>
+<p>Es el giro central del relato. Poe esconde todos los indicios cruciales en el párrafo periodístico con las declaraciones de los testigos: quien lee con cuidado puede adivinar la verdad antes de llegar a la mitad.</p>
+<h4 id="pistas-clave">Pistas clave</h4>
+<p><strong>Pista 1: el enigma de la voz chillona (hacia el 30–38 %)</strong></p>
+<p>Es el grupo de pistas más importante del caso. Durante el crimen los vecinos oyeron discutir arriba dos voces. Todos coinciden en que la ruda pertenecía a un francés; pero sobre la otra, chillona, cinco testigos de nacionalidades distintas ofrecen descripciones flagrantemente contradictorias:</p>
+<table>
+<thead>
+<tr>
+<th>Nacionalidad del testigo</th>
+<th>Cree que la voz chillona hablaba…</th>
+<th>Pero en realidad…</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Francés (el gendarme Isidore Musèt)</td>
+<td>español</td>
+<td>no entiende el español</td>
+</tr>
+<tr>
+<td>Neerlandés (Odenheimer)</td>
+<td>francés</td>
+<td>no entiende el francés y declaró con intérprete</td>
+</tr>
+<tr>
+<td>Inglés (el sastre William Bird)</td>
+<td>alemán</td>
+<td>no entiende el alemán</td>
+</tr>
+<tr>
+<td>Español (el empresario funerario Alfonso Garcio)</td>
+<td>inglés</td>
+<td>no entiende el inglés y se guió solo por la entonación</td>
+</tr>
+<tr>
+<td>Italiano (el confitero Alberto Montani)</td>
+<td>ruso</td>
+<td>nunca habló con un ruso</td>
+</tr>
+</tbody>
+</table>
+<p>Cada uno afirma que «no era su idioma»; cada uno imagina una lengua que él mismo no entiende; y ninguno captó una sola palabra. Cruzar las cinco declaraciones lleva a una única conclusión: <strong>no era lengua humana en absoluto.</strong></p>
+<p><strong>Pista 2: violencia fuera del alcance humano (hacia el 24–39 %)</strong></p>
+<p>El grado de violencia en el lugar supera con mucho las fuerzas de una persona corriente:
+- El cuerpo adulto de la hija fue introducido <strong>hacia arriba</strong> por un cañón estrecho; hicieron falta cuatro o cinco hombres para bajarlo (hacia el 26%).
+- Se arrancaron grandes mechones de pelo con todo y cuero cabelludo (hacia el 24%).
+- A la anciana se le casi cercenó la cabeza; brazo y pierna derechos y costillas izquierdas, todos destrozados (hacia el 39%).
+- El forense declara: «ninguna mujer habría podido causar tales heridas con arma alguna» (hacia el 39%).</p>
+<p><strong>Pista 3: carece por completo de móvil (hacia el 25 %)</strong></p>
+<p>Tres días antes, madre e hija habían retirado del banco 4.000 francos en oro. Tras el crimen el dinero quedó intacto en el suelo. Un robo no deja atrás todo el botín.</p>
+<p><strong>Sumando 1 + 2 + 3:</strong> no habla idioma humano, posee una fuerza sobrehumana y carece de motivo racional. Alrededor del 42%, el lector puede inferir razonablemente: el asesino no es humano.</p>
+<h4 id="pistas-de-apoyo">Pistas de apoyo</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Pista</th>
+<th>Posición</th>
+<th>Nota</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El cuarto está en total desorden, con muebles rotos y volcados</td>
+<td>~24%</td>
+<td>Sugiere violencia irracional, no un crimen planeado</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Puerta atrancada por dentro, ventanas cerradas: cuarto cerrado perfecto</td>
+<td>~36%</td>
+<td>Apunta a un modo extraordinario de entrada y salida</td>
+</tr>
+<tr>
+<td>3</td>
+<td>El cañón solo admite el cepillo del deshollinador; ningún cuerpo humano cabría</td>
+<td>~38%</td>
+<td>Excluye al humano como vía por la chimenea</td>
+</tr>
+<tr>
+<td>4</td>
+<td>La voz chillona se describe como «rápida y desigual»</td>
+<td>~34%</td>
+<td>Encaja con el grito animal, no con el ritmo del habla humana</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Madre e hija vivían apartadísimas, sin casi contacto externo</td>
+<td>~28%</td>
+<td>Descarta crímenes por conflictos personales</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-falsas-red-herrings">Pistas falsas (red herrings)</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Pista</th>
+<th>Posición</th>
+<th>Sentido del engaño</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Tres días antes se retiraron 4.000 francos, escoltados por un empleado hasta la casa</td>
+<td>~33%</td>
+<td>Lleva al lector y a la policía a pensar en un robo con homicidio</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Detienen al empleado Le Bon</td>
+<td>~42%</td>
+<td>Dirige la atención hacia «buscar un culpable humano»</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Durante el crimen hubo, en efecto, una voz ruda de un francés</td>
+<td>~30%</td>
+<td>Sugiere que al menos un humano estuvo presente — en realidad era el dueño del orangután gritando de terror desde fuera de la ventana</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="verdad-dos-la-identidad-concreta-del-culpable-un-orangutan">Verdad dos: la identidad concreta del culpable — un orangután</h3>
+<ul>
+<li><strong>Respuesta:</strong> un orangután de la variedad de Borneo (Ourang-Outang).</li>
+<li><strong>Punto de convergencia: 79%</strong> — solo confirmable cuando Dupin presenta las pruebas materiales.</li>
+</ul>
+<p>El lector puede barruntar hacia el 42 % que «el culpable es algún animal», pero fijar la especie requiere esperar a las dos pruebas capitales que revela Dupin:</p>
+<h4 id="pistas-clave_1">Pistas clave</h4>
+<p><strong>Pista 1: pelo no humano (hacia el 76 %)</strong></p>
+<p>Dupin extrae un mechón de pelo del puño crispado de la anciana. Al pasárselo al narrador, este reconoce de inmediato: «esto no es pelo humano». Es una prueba que el lector solo conoce cuando Dupin la muestra — no debe confundirse con los «cabellos humanos grises» mencionados en la crónica periodística.</p>
+<p><strong>Pista 2: huellas de dedos fuera del alcance humano (hacia el 77 %)</strong></p>
+<p>A partir de las marcas y contusiones en el cuello de la hija, Dupin dibuja un diagrama a tamaño natural. Pide al narrador que intente ajustar sus propios dedos a las huellas: imposible, la separación entre dedos rebasa con mucho los límites de la mano humana. Dupin presenta entonces la descripción anatómica del orangután de Borneo hecha por el naturalista francés Cuvier; las huellas coinciden exactamente con la mano del animal.</p>
+<h4 id="pista-de-apoyo">Pista de apoyo</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Pista</th>
+<th>Posición</th>
+<th>Nota</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Saltar del pararrayos a la contraventana y columpiarse hasta la ventana exige «una agilidad y audacia casi sobrehumanas»</td>
+<td>~68%</td>
+<td>Dupin insiste en esa agilidad casi sobrenatural — gran indicio de que no es humano</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="verdad-tres-el-enigma-del-cuarto-cerrado-como-entro-y-salio">Verdad tres: el enigma del cuarto cerrado — cómo entró y salió</h3>
+<ul>
+<li><strong>Respuesta:</strong> el culpable trepó por el pararrayos de la parte trasera del edificio y, por la contraventana entreabierta (tipo <em>ferrade</em> antigua, con celosía), se columpió hasta la ventana del cuarto piso. Al salir, la ventana se cerró sola por efecto de un resorte oculto. El clavo del marco estaba ya roto por la mitad: solo la cabeza permanecía en su sitio, dando apariencia de clavado, aunque en realidad no sujetaba nada.</li>
+<li><strong>Punto de convergencia: 65%</strong> — no se arma hasta la inspección ocular de Dupin.</li>
+</ul>
+<h4 id="pistas-clave_2">Pistas clave</h4>
+<p><strong>Pista 1: todas las salidas normales están selladas (hacia el 36–38 %)</strong></p>
+<p>Las declaraciones fijan estos hechos: puerta atrancada por dentro, con la llave dentro; ambas ventanas, delantera y trasera, cerradas y clavadas; chimenea demasiado estrecha para un cuerpo; la trampilla del tejado clavada desde hace años. Para el lector, es un punto de partida lógico: si todas las salidas son imposibles, una de esas «imposibles» tiene que ser en realidad posible.</p>
+<p><strong>Pista 2: el secreto de la ventana — resorte oculto y clavo roto (hacia el 62–65 %)</strong></p>
+<p>Dupin parte de la lógica: el culpable escapó, luego lo «imposible» ha de ser ilusión. Revisando una a una, halla en cada marco un resorte escondido que, al presionarse, permite abrir la ventana. El clavo de la primera está intacto: descartada. Pero el clavo de la segunda —idéntico al de la primera en apariencia— está, en realidad, partido por la mitad, con solo la cabeza clavada en la madera. Cerrado, el clavo roto parece clavado; en la práctica la ventana se abre y cierra con libertad. Tras salir el culpable, el resorte cierra la ventana solo y crea la ilusión de «cerrado desde dentro».</p>
+<p><strong>Pista 3: pararrayos y contraventana como trepador (hacia el 66–67 %)</strong></p>
+<p>Dupin advierte, a unos cinco pies y medio fuera de la ventana, un pararrayos. La contraventana es del tipo antiguo <em>ferrade</em>, con celosía en su mitad inferior; abierta del todo, queda a solo dos pies y medio del pararrayos. Un ser sumamente ágil —en fin, «criatura»— podría saltar del pararrayos a la celosía y columpiarse al interior.</p>
+<h4 id="pista-de-apoyo_1">Pista de apoyo</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Pista</th>
+<th>Posición</th>
+<th>Nota</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Al inspeccionar la ventana, la policía se contenta con ver los clavos y concluye «imposible escapar por aquí», sin intentar arrancarlos</td>
+<td>~37%</td>
+<td>La negligencia policial deja al lector espacio para la duda: ¿revisaron de verdad?</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="verdad-cuatro-quien-es-el-frances">Verdad cuatro: ¿quién es el francés?</h3>
+<ul>
+<li><strong>Respuesta:</strong> un marinero francés en un buque maltés, dueño del orangután. Había capturado al animal en las Indias Orientales y lo había llevado a París para venderlo. La noche de autos el orangután escapó del armario donde se le guardaba, tomó una navaja de afeitar (había aprendido, observando a su amo, a imitar el afeitado) y salió a la calle. El marinero lo persiguió hasta la calle Morgue, trepó por el pararrayos y, desde fuera de la ventana, presenció impotente cómo irrumpía en el cuarto piso y mataba a las dos mujeres. Es inocente.</li>
+<li><strong>Punto de convergencia: 83%</strong> — depende casi por completo de una prueba que encuentra Dupin en solitario.</li>
+</ul>
+<h4 id="pistas-clave_3">Pistas clave</h4>
+<p><strong>Pista 1: la voz ruda es un francés aterrado (hacia el 30–38 %)</strong></p>
+<p>Todos coinciden en que la voz ruda pertenecía a un francés. Las palabras oídas — «<em>sacré</em>», «<em>diable</em>», «<em>mon Dieu</em>»— son exclamaciones de espanto, no órdenes ni amenazas. El confitero Montani precisa que el tono era «como el que reprende» (expostulating). Esto insinúa: había un francés en el lugar, pero no como autor, sino como testigo.</p>
+<p><strong>Pista 2: la cinta del marinero maltés (hacia el 83 %)</strong></p>
+<p>Al pie del pararrayos, Dupin encuentra una cinta: grasienta, del tipo con que los marineros atan el pelo; el nudo, peculiar de los marineros malteses. De ahí deduce que el francés es marinero en un buque maltés. Esta pista, sin embargo, la obtiene Dupin solo en el lugar; el lector no podía conocerla antes.</p>
+<h4 id="pista-de-apoyo_2">Pista de apoyo</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Pista</th>
+<th>Posición</th>
+<th>Nota</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Montani describe el tono de la voz ruda como «de reproche, de súplica»</td>
+<td>~38%</td>
+<td>Pasa fácilmente desapercibido, pero apunta al papel inocente del francés</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="reconstruccion-del-camino-deductivo">Reconstrucción del camino deductivo</h2>
+<p>El recorrido más probable de un lector atento:</p>
+<p><strong>Primera fase: surgen las preguntas (hasta el 14–27 %)</strong></p>
+<p>Tras la crónica del crimen afloran tres anomalías: violencia desmesurada, dinero intacto y cadáver metido en el cañón de forma inconcebible. Cualquier lector intuye: esto no es un robo ordinario.</p>
+<p><strong>Segunda fase: el avance central — el culpable no es humano (hasta el 27–42 %)</strong></p>
+<p>Es el punto de inflexión. La contradicción entre las descripciones de la voz chillona por cinco testigos de nacionalidades distintas forma el racimo más importante. Si el lector logra cotejarlas —notando que cada uno indica la lengua que él mismo no entiende y que nadie captó palabras concretas—, la conclusión es ineludible: no es lengua humana. Sumadas la fuerza sobrehumana y la ausencia de móvil, «el culpable no es humano» queda establecido.</p>
+<p><strong>Tercera fase: esperar la prueba material (entre el 42 y el 79 %)</strong></p>
+<p>El lector quizás ya suponga un simio o un animal grande, pero le falta la prueba para fijarlo. En este tramo Dupin investiga el lugar, resuelve el enigma del cuarto cerrado y por fin muestra pelo y huellas — completando progresivamente las piezas.</p>
+<p><strong>Cuarta fase: el cuadro completo (a partir del 79 %)</strong></p>
+<p>Dupin, con el anuncio en el periódico, atrae al marinero, que relata en persona el curso de los hechos: la fuga del orangután, la imitación del afeitado, la irrupción en la vivienda, el arrebato brutal. Todos los fragmentos encajan.</p>
+<hr>
+<h2 id="calculo-de-la-deducibilidad">Cálculo de la deducibilidad</h2>
+<table>
+<thead>
+<tr>
+<th>Faceta de la verdad</th>
+<th>Punto de convergencia</th>
+<th>Nota</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Culpable no humano</td>
+<td>42%</td>
+<td>Basta el cotejo de los testimonios</td>
+</tr>
+<tr>
+<td>Identidad concreta (orangután)</td>
+<td>79%</td>
+<td>Requiere pelo y huellas como pruebas</td>
+</tr>
+<tr>
+<td>Mecanismo del cuarto cerrado</td>
+<td>65%</td>
+<td>Requiere el hallazgo <em>in situ</em> de Dupin</td>
+</tr>
+<tr>
+<td>Papel del marinero</td>
+<td>83%</td>
+<td>Depende por entero de la cinta que recoge Dupin</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Punto medio de convergencia = (42 + 79 + 65 + 83) / 4 = 67% → Deducibilidad ⭐⭐⭐ (3/5)</strong></p>
+<p>Tres estrellas equivalen a dificultad media: el lector debe cubrir aproximadamente dos tercios del texto para dominar todas las facetas. Pero el avance central — «el culpable no es humano»— se alcanza ya al 42 %, algo relativamente temprano en la novela policíaca. Aislado, ese problema nuclear merecería solo ⭐⭐ (bastante fácil). Son las tres verdades restantes, que exigen las pruebas materiales de Dupin, las que elevan la calificación global.</p>
+<hr>
+<h2 id="evaluacion-del-nivel-de-niebla-25">Evaluación del nivel de niebla: ⭐⭐ (2/5)</h2>
+<p>Poe no usa demasiada desviación activa en este relato. La niebla proviene de dos fuentes.</p>
+<p>La primera es la «coincidencia del dinero»: la retirada reciente de una suma considerable lleva naturalmente a lector y policía a sospechar robo. Pero Poe disipa pronto la trampa subrayando que el dinero quedó intacto en el suelo: no es un engaño difícil.</p>
+<p>La segunda es «la detención de Le Bon»: la policía lo encierra por haber sido el último en tocar el dinero. Esto desvía por un momento al lector hacia «buscar sospechoso humano», pero el efecto no se prolonga.</p>
+<p>En conjunto, el estilo de Poe tiende al «juego limpio»: todas las pistas clave están a la vista; la dificultad reside en que el lector quiera cotejarlas, no en ser llevado a ciegas por pistas falsas. Es coherente con la idea de Poe como fundador del género: mostrar la potencia del análisis racional, no jugar al gato y al ratón con el lector.</p>
+<hr>
+<h2 id="nota-final-lugar-del-relato-en-la-historia-del-genero-policial">Nota final: lugar del relato en la historia del género policial</h2>
+<p>«Los crímenes de la calle Morgue» (1841) se considera, por consenso, el primer relato detectivesco de la historia. En una sola obra, Poe establece varios elementos clásicos que el género ha seguido usando desde entonces.</p>
+<p>La estructura narrativa de «detective brillante y acompañante corriente» — Dupin y el narrador anónimo— fue íntegramente heredada por Holmes y Watson de Conan Doyle, y reaparece en Poirot y Hastings, en el padre Brown y Flambeau, como variaciones de la misma fórmula.</p>
+<p>El prototipo del misterio de cuarto cerrado —puerta atrancada por dentro, ventanas clavadas, chimenea impracticable— sigue vivo hoy en la ficción policíaca.</p>
+<p>El método lógico de «descartar lo imposible y aceptar lo que queda» — Dupin elimina una a una todas las vías imposibles hasta quedarse con la ventana. Esta lógica cristalizaría luego en la célebre máxima de Holmes: «Cuando hayas eliminado lo imposible, lo que quede, por improbable que parezca, tiene que ser la verdad».</p>
+<p>Una última observación: la deducibilidad (67%) no es hoy especialmente alta, y el avance central llega ya al 42 %. Pero en 1841 la sola idea de que «el culpable podía no ser humano» no tenía precedentes — el lector contemporáneo carecía de cualquier convención de género a la que asirse; para ellos la dificultad real del relato superaba con creces la que hoy concedemos retrospectivamente.</p>
+    <a href="../index.html" class="back-link">← Volver al inicio</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Sala de Disección Detectivesca</p>
+    <p>Cinco autores · ochenta y ocho obras · 135 años de evolución de la dificultad en la narrativa policíaca.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

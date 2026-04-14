@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>모르그가의 살인(The Murders in the Rue Morgue) — 추리 분석 — 추리해부실</title>
+<meta name="description" content="이야기의 배경은 19세기 파리다. 화자는 파리에 체류 중인 미국인으로, 우연히 몰락한 귀족 청년 C. 오귀스트 뒤팽 — 비범한 분석력을 지닌 인물 — 과 친분을 맺는다. 두 사람은 낡은 저택을 함께 빌려 세상과 단절된 생활을 보낸다. 낮에는 문을 닫고 독서에 몰두하다가 밤이 되어서야 거">
+<link rel="alternate" hreflang="zh-TW" href="/articles/the-murders-in-the-rue-morgue.html">
+<link rel="alternate" hreflang="zh-CN" href="/zh-CN/articles/the-murders-in-the-rue-morgue.html">
+<link rel="alternate" hreflang="en" href="/en/articles/the-murders-in-the-rue-morgue.html">
+<link rel="alternate" hreflang="ja" href="/ja/articles/the-murders-in-the-rue-morgue.html">
+<link rel="alternate" hreflang="ko" href="/ko/articles/the-murders-in-the-rue-morgue.html">
+<link rel="alternate" hreflang="de" href="/de/articles/the-murders-in-the-rue-morgue.html">
+<link rel="alternate" hreflang="es" href="/es/articles/the-murders-in-the-rue-morgue.html">
+<link rel="alternate" hreflang="fr" href="/fr/articles/the-murders-in-the-rue-morgue.html">
+<link rel="alternate" hreflang="x-default" href="/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif KR', serif;
+  --font-sans: 'Noto Sans KR', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+
+  // 決定目前頁面位於哪個語系 prefix
+  var path = window.location.pathname;
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === path) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">추리해부실</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">홈</a>
+        <a href="../index.html#latest">최신</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="언어" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 한국어</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/articles/the-murders-in-the-rue-morgue.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/zh-CN/articles/the-murders-in-the-rue-morgue.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/en/articles/the-murders-in-the-rue-morgue.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/ja/articles/the-murders-in-the-rue-morgue.html">日本語</a>
+      <a class="lang-item active" data-lang="ko" href="/ko/articles/the-murders-in-the-rue-morgue.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/de/articles/the-murders-in-the-rue-morgue.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/es/articles/the-murders-in-the-rue-morgue.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/fr/articles/the-murders-in-the-rue-morgue.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">에드거 앨런 포 · 1841</div>
+    <h1>모르그가의 살인(The Murders in the Rue Morgue) — 추리 분석</h1>
+    <div class="subtitle">에드거 앨런 포(Edgar Allan Poe) · 단편소설(약 14,000단어)</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">추리 난이도</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">안개 등급</div>
+        <div class="rating-badge-stars">⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="the-murders-in-the-rue-morgue">모르그가의 살인(The Murders in the Rue Morgue) — 추리 분석</h1>
+<h2 id="_1">기본 정보</h2>
+<ul>
+<li>저자: 에드거 앨런 포(Edgar Allan Poe)</li>
+<li>출판년도: 1841</li>
+<li>장르: 단편소설(약 14,000단어)</li>
+<li>탐정: C. 오귀스트 뒤팽(C. Auguste Dupin)</li>
+<li>핵심 수수께끼 유형: whodunit(누가 저질렀는가) + howdunit(어떻게 드나들었는가)</li>
+</ul>
+<h2 id="_2">추리 난이도 총평</h2>
+<table>
+<thead>
+<tr>
+<th>지표</th>
+<th>별점</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>추리 난이도(Deducibility)</td>
+<td>⭐⭐⭐(3/5)</td>
+<td>평균 수렴점 67% — 절반을 넘겨야 단서가 맞춰지지만 핵심 돌파는 42%에서 가능</td>
+</tr>
+<tr>
+<td>안개 등급(Fog Rating)</td>
+<td>⭐⭐(2/5)</td>
+<td>가짜 단서는 적고 난이도는 의도적 오도가 아닌 교차 대조에서 온다</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_3">줄거리</h2>
+<p>이야기의 배경은 19세기 파리다. 화자는 파리에 체류 중인 미국인으로, 우연히 몰락한 귀족 청년 C. 오귀스트 뒤팽 — 비범한 분석력을 지닌 인물 — 과 친분을 맺는다. 두 사람은 낡은 저택을 함께 빌려 세상과 단절된 생활을 보낸다. 낮에는 문을 닫고 독서에 몰두하다가 밤이 되어서야 거리로 나가 산책한다.</p>
+<p>어느 날 신문에서 충격적인 살인 사건 기사를 읽는다. 모르그가 4층에 사는 레스파네 부인과 딸 카미유가 함께 살해당한 것이다. 딸은 산 채로 목이 졸려 살해된 뒤 시신이 머리부터 굴뚝에 쑤셔 박혔고, 어머니는 창밖으로 던져져 목이 거의 완전히 잘리고 온몸이 산산이 부러져 있었다.</p>
+<p>사건 현장은 완벽한 밀실이다. 문은 안에서 빗장이 걸려 있고 창은 안쪽에서 못으로 박혀 있었다. 이웃들이 문을 부수고 들어갔을 때 위층에서 두 목소리가 다투는 것을 들었다 — 하나는 프랑스인의 거친 목소리, 다른 하나는 귀를 찢는 날카로운 목소리. 그러나 이 날카로운 목소리에 대해 다섯 개의 서로 다른 국적의 증인들이 저마다 다른 말을 내놓았고, 아무도 그 목소리가 정확히 무엇을 말하고 있는지 알아듣지 못했다.</p>
+<p>파리 경찰은 속수무책이 되어 모녀에게 돈을 전달한 은행 직원 르 봉을 체포하지만 실질적 증거는 전혀 없다. 뒤팽은 사건에 흥미를 느끼고 직접 현장 조사에 나선다. 치밀한 추리 끝에 그는 경찰이 완전히 간과한 창문의 장치를 발견하고 현장에서 결정적인 물증도 확보한다. 마침내 그는 범인의 정체를 밝혀내는 것에 그치지 않고, 교묘한 신문 광고로 사건 배후의 핵심 인물을 유인해내어 사건의 전모를 밝힌다.</p>
+<hr>
+<h2 id="_4">진실의 해체</h2>
+<p>이 사건의 진실은 네 가지 측면으로 나누어 분석할 수 있다. 아래에서는 각 측면의 단서 분포와, 독자가 가장 이른 시점에서 답을 추론할 수 있는 위치를 하나씩 살핀다.</p>
+<blockquote>
+<p><strong>읽기 진도에 관한 주석:</strong> 본문에서는 전체 분량에서 단서가 등장하는 위치를 백분율로 표기한다. "약 30%"는 전체의 약 3분의 1까지 읽은 지점을 뜻한다.</p>
+</blockquote>
+<hr>
+<h3 id="_5">진실 하나: 범인은 인간이 아니다</h3>
+<ul>
+<li><strong>답:</strong> 범인은 보르네오산 오랑우탄.</li>
+<li><strong>수렴점: 42%</strong> — 증인 진술을 모두 읽고 나면 범인이 인간이 아니라는 추론에 충분한 재료가 모인다.</li>
+</ul>
+<p>이 이야기의 가장 핵심적인 돌파구다. 포는 모든 결정적 단서를 신문 기사의 증언 단락 안에 숨겨두었다 — 주의 깊게 읽으면 절반에 이르기 전에 진실을 추측해낼 수 있다.</p>
+<h4 id="_6">핵심 단서</h4>
+<p><strong>단서 1: 날카로운 목소리의 수수께끼(약 30–38%)</strong></p>
+<p>이것이 전 사건에서 가장 중요한 단서 묶음이다. 사건 당시 이웃들은 위층에서 두 목소리가 다투는 것을 들었다. 거친 목소리가 프랑스인의 것이라는 데는 모두가 동의한다. 그러나 또 하나의 날카로운 목소리에 대해서는 다섯 명의 서로 다른 국적의 증인이 완전히 모순되는 묘사를 내놓는다.</p>
+<table>
+<thead>
+<tr>
+<th>증인의 국적</th>
+<th>날카로운 목소리가 …라고 생각</th>
+<th>그러나 실제로는</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>프랑스인(헌병 이지도르 뮈제)</td>
+<td>스페인어</td>
+<td>그는 스페인어를 모른다</td>
+</tr>
+<tr>
+<td>네덜란드인(오덴하이머)</td>
+<td>프랑스어</td>
+<td>그는 프랑스어를 모르며 증언에 통역이 필요했다</td>
+</tr>
+<tr>
+<td>영국인(재단사 윌리엄 버드)</td>
+<td>독일어</td>
+<td>그는 독일어를 모른다</td>
+</tr>
+<tr>
+<td>스페인인(장의사 알폰소 가르시오)</td>
+<td>영어</td>
+<td>그는 영어를 모르고 순전히 "억양"으로 판단했다</td>
+</tr>
+<tr>
+<td>이탈리아인(과자상 알베르토 몬타니)</td>
+<td>러시아어</td>
+<td>그는 러시아인과 말해본 적이 없다</td>
+</tr>
+</tbody>
+</table>
+<p>모두가 그 목소리를 "자국어가 아니다"라고 단언하고, 모두가 자기가 모르는 언어로 추측하며, 단 한 사람도 구체적인 "단어"를 알아듣지 못했다. 이 다섯 증언을 맞춰놓으면 결론은 하나뿐이다 — <strong>그것은 애초에 인간의 언어가 아니었다.</strong></p>
+<p><strong>단서 2: 인간을 뛰어넘는 폭력(약 24–39%)</strong></p>
+<p>범행 현장의 폭력 정도는 일반인의 능력을 크게 넘어선다.
+- 성인 여성의 시신이 좁은 굴뚝에 <strong>위를 향해</strong> 쑤셔 박혀 있었으며, 나중에 네다섯 명이 합심해야 끌어내릴 수 있었다(약 26%).
+- 머리카락이 대량으로 두피째 뜯겨 나갔다(약 24%).
+- 노부인의 목은 거의 완전히 절단되었고, 오른팔과 오른다리, 왼쪽 갈비뼈가 모조리 산산조각 났다(약 39%).
+- 법의관 증언: "어떤 무기로도 여성이 이런 상처를 입힐 수는 없다"(약 39%).</p>
+<p><strong>단서 3: 동기가 전혀 없음(약 25%)</strong></p>
+<p>모녀는 사흘 전 은행에서 4천 프랑의 금화를 인출했다. 그러나 사건 후 이 돈은 그대로 바닥에 남아 있었다. 강도 사건이라면 범인이 돈을 전부 두고 떠났을 리 없다.</p>
+<p><strong>단서 1 + 2 + 3을 합하면:</strong> 사람 말을 못 하고, 괴력을 지녔고, 이성적 동기도 없다 — 독자는 약 42% 지점에서 범인이 인간이 아니라고 합리적으로 추론할 수 있다.</p>
+<h4 id="_7">보조 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서</th>
+<th>출현 위치</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>방이 극도로 어지럽혀져 있고 가구가 깨지고 쓰러져 있다</td>
+<td>약 24%</td>
+<td>계획 범죄가 아닌 비이성적 폭력을 시사</td>
+</tr>
+<tr>
+<td>2</td>
+<td>문은 안에서 빗장, 창은 닫힌 채 — 완벽한 밀실</td>
+<td>약 36%</td>
+<td>출입 방식이 평범하지 않음을 시사</td>
+</tr>
+<tr>
+<td>3</td>
+<td>굴뚝은 청소부 브러시만 통과할 만큼 좁아 인체는 절대 통과 불가</td>
+<td>약 38%</td>
+<td>굴뚝을 통한 인간 출입을 배제</td>
+</tr>
+<tr>
+<td>4</td>
+<td>날카로운 목소리는 "빠르고 고르지 않다"고 묘사</td>
+<td>약 34%</td>
+<td>동물 울음의 특징에 부합하며 인간 언어의 리듬이 아님</td>
+</tr>
+<tr>
+<td>5</td>
+<td>모녀는 극도로 은둔한 삶을 살며 외부 접촉이 거의 없었다</td>
+<td>약 28%</td>
+<td>대인 갈등으로 인한 범죄 가능성을 배제</td>
+</tr>
+</tbody>
+</table>
+<h4 id="red-herring">가짜 단서(Red Herring)</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서</th>
+<th>출현 위치</th>
+<th>오도 방향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>사흘 전 4천 프랑을 인출, 은행 직원이 호위해 집까지 배달</td>
+<td>약 33%</td>
+<td>독자와 경찰을 강도살인으로 유도</td>
+</tr>
+<tr>
+<td>2</td>
+<td>은행 직원 르 봉이 체포됨</td>
+<td>약 42%</td>
+<td>"인간 범인을 찾는" 방향으로 주의를 돌림</td>
+</tr>
+<tr>
+<td>3</td>
+<td>사건 당시 실제로 프랑스인의 거친 목소리가 현장에 있었다</td>
+<td>약 30%</td>
+<td>"적어도 한 명의 인간 범인이 현장에 있었다"고 오인하게 만듦 — 실은 그것이 오랑우탄 주인이 창밖에서 공포로 외치는 소리였다</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_8">진실 둘: 범인의 구체적 정체 — 오랑우탄</h3>
+<ul>
+<li><strong>답:</strong> 보르네오종 오랑우탄(Ourang-Outang).</li>
+<li><strong>수렴점: 79%</strong> — 뒤팽이 물증을 제시해야만 확인 가능.</li>
+</ul>
+<p>독자는 42%에서 "범인은 어떤 동물"이라고 짐작할 수는 있으나, 어떤 동물인지 확정하려면 뒤팽이 드러내는 두 가지 핵심 물증을 기다려야 한다.</p>
+<h4 id="_9">핵심 단서</h4>
+<p><strong>단서 1: 인간이 아닌 털(약 76%)</strong></p>
+<p>뒤팽은 노부인이 꽉 쥔 주먹에서 한 움큼의 털을 꺼낸다. 화자에게 건네자 화자는 즉시 "이건 사람의 털이 아니다"라고 인정한다. 이는 뒤팽이 공개할 때까지 독자가 알 수 없었던 물증이다 — 현장 보도에 나온 "회색 인간 모발"과는 별개다.</p>
+<p><strong>단서 2: 인간의 손을 넘어서는 손자국(약 77%)</strong></p>
+<p>뒤팽은 딸의 목에 난 멍과 손톱자국을 실제 크기로 스케치한다. 화자에게 자기 손가락을 그 자국에 맞춰보게 하지만, 손가락 간격이 사람 손의 한계를 크게 초과해 전혀 맞지 않는다. 이어 뒤팽은 프랑스 박물학자 퀴비에의 보르네오 오랑우탄 해부학 기술을 제시하며, 손자국이 그 유인원의 손과 완벽히 일치함을 보인다.</p>
+<h4 id="_10">보조 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서</th>
+<th>출현 위치</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>피뢰침에서 덧문으로 뛰어 창으로 흔들어 들어오려면 "거의 초인적인 민첩성과 대담함"이 필요</td>
+<td>약 68%</td>
+<td>뒤팽이 이 "거의 초자연적인 민첩성"을 특별히 강조 — 범인이 인간이 아님을 암시</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_11">진실 셋: 밀실의 수수께끼 — 범인은 어떻게 드나들었는가</h3>
+<ul>
+<li><strong>답:</strong> 범인은 건물 뒤쪽 피뢰침을 타고 올라, 반쯤 열린 덧문(구식 ferrade형, 격자 구조)을 이용해 4층 창으로 흔들어 들어왔다. 떠날 때 창은 숨겨진 용수철에 의해 자동으로 닫혔다. 창틀의 쇠못은 이미 중간에 부러져 머리만 제자리에 남아 있었기 때문에 겉으로는 못질된 것처럼 보이지만 실제로는 아무것도 고정하지 않았다.</li>
+<li><strong>수렴점: 65%</strong> — 뒤팽의 현장 조사 결과가 있어야 맞춰진다.</li>
+</ul>
+<h4 id="_12">핵심 단서</h4>
+<p><strong>단서 1: 모든 정상적 출구가 봉쇄됨(약 36–38%)</strong></p>
+<p>증언으로 다음이 확인된다. 문은 안에서 빗장이 걸려 있고 열쇠는 안쪽에 있다. 앞뒤 창은 모두 닫힌 채 못으로 박혀 있다. 굴뚝은 사람이 들어갈 수 없을 만큼 좁다. 지붕의 쪽문은 수년 전부터 못질되어 있다. 독자에게 이는 중요한 논리적 출발점이다 — 모든 출구가 불가능하다면, "불가능해 보이는" 어느 하나가 사실은 가능해야 한다.</p>
+<p><strong>단서 2: 창문의 비밀 — 숨겨진 용수철과 부러진 쇠못(약 62–65%)</strong></p>
+<p>뒤팽은 논리에서 출발한다. 범인은 분명히 현장에서 도망쳤다. 따라서 "불가능"은 허상일 수밖에 없다. 하나씩 점검하니, 각 창틀에는 눌렀을 때 창을 열 수 있는 용수철 장치가 숨겨져 있었다. 첫 번째 창의 못은 멀쩡하므로 배제. 그러나 두 번째 창의 못은 — 외관은 첫 번째와 완전히 똑같지만 — 실은 중간에서 부러져 머리만 나무에 박혀 있었다. 창을 닫으면 부러진 못 머리가 못질된 것처럼 보이지만, 실제로는 창이 자유롭게 열고 닫힌다. 범인이 떠난 뒤 용수철이 자동으로 창을 닫아 "안에서 잠긴" 착시를 만들어냈다.</p>
+<p><strong>단서 3: 피뢰침과 덧문이 이루는 등반 경로(약 66–67%)</strong></p>
+<p>뒤팽은 창밖 약 5.5피트 지점에 피뢰침이 있음을 주목한다. 창의 덧문은 구식 ferrade 형으로 아랫부분이 격자 구조다. 완전히 펼치면 피뢰침에서 2.5피트만 떨어져 있을 뿐이다. 대단히 민첩한 — 글쎄, "생물" — 이라면 피뢰침에서 덧문의 격자로 뛰어 방 안으로 흔들어 들어올 수 있다.</p>
+<h4 id="_13">보조 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서</th>
+<th>출현 위치</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>경찰은 창을 점검할 때 쇠못을 보고 "여기로는 달아날 수 없다"고 단정할 뿐 실제로 못을 뽑아보지 않았다</td>
+<td>약 37%</td>
+<td>경찰의 허술함이 독자에게 의심의 여지를 남긴다 — 정말 꼼꼼히 살폈는가?</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_14">진실 넷: 그 프랑스인은 누구인가?</h3>
+<ul>
+<li><strong>답:</strong> 몰타 선적 선박에서 일하는 프랑스인 선원으로, 오랑우탄의 주인이다. 동인도제도에서 이 유인원을 포획하여 팔 생각으로 파리로 데려왔다. 사건 당일 밤 오랑우탄은 가둬둔 벽장에서 탈출하여, 면도칼(주인이 면도하는 모습을 훔쳐보며 흉내 내는 법을 익혔다)을 손에 쥔 채 거리로 뛰쳐나갔다. 선원은 오랑우탄을 쫓아 모르그가에 이르렀고, 피뢰침을 타고 올라 창밖에서 오랑우탄이 4층에 난입해 모녀를 살해하는 전 과정을 목격했으나 저지할 수 없었다. 그는 무고하다.</li>
+<li><strong>수렴점: 83%</strong> — 거의 전적으로 뒤팽이 단독으로 발견한 물증에 의존한다.</li>
+</ul>
+<h4 id="_15">핵심 단서</h4>
+<p><strong>단서 1: 거친 목소리는 겁에 질린 프랑스인(약 30–38%)</strong></p>
+<p>모든 증인이 사건 당시 들린 거친 목소리가 프랑스인의 것이라는 데 동의한다. 그들이 들은 말에는 "sacré"(망할), "diable"(악마), "mon Dieu"(맙소사) 같은 말이 포함된다 — 모두 놀람의 감탄사일 뿐, 명령이나 위협이 아니다. 과자상 몬타니는 특히 그 어조가 "타이르는 듯하다"(expostulating)고 했다. 이 세부들은 다음을 시사한다 — 사건 당시 한 프랑스인이 그 자리에 있었으되 가해자가 아니라 목격자였다.</p>
+<p><strong>단서 2: 몰타 선원의 리본(약 83%)</strong></p>
+<p>뒤팽은 피뢰침 아래에서 리본 하나를 줍는다. 기름때가 묻어 있고, 형태는 선원이 머리를 묶을 때 쓰는 것이며, 매듭은 몰타 선원 특유의 것이다. 여기서 뒤팽은 그 프랑스인이 몰타 선적 선박에서 일하는 선원이라고 추론한다. 다만 이 단서는 전적으로 뒤팽이 현장에서 얻은 것이며, 독자는 그 이전에는 알 길이 없다.</p>
+<h4 id="_16">보조 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서</th>
+<th>출현 위치</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>몬타니가 거친 목소리의 어조를 "타이르고 애원하는" 것으로 묘사</td>
+<td>약 38%</td>
+<td>놓치기 쉽지만 프랑스인의 무고한 역할을 암시</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_17">추리 경로의 재구성</h2>
+<p>다음은 주의 깊게 읽는 독자가 거쳐갈 가능성이 가장 큰 추리 과정이다.</p>
+<p><strong>1단계: 의문 부상(약 14–27%까지 읽음)</strong></p>
+<p>신문의 현장 보도를 다 읽고 나면 세 가지 이상이 수면 위로 떠오른다 — 폭력의 정도가 일반을 크게 벗어나고, 돈이 전혀 사라지지 않았으며, 시신이 굴뚝에 쑤셔 박히는 기이한 처리가 되어 있다. 어느 독자든 이 시점에 "이건 평범한 강도살인이 아니다"라고 느낀다.</p>
+<p><strong>2단계: 핵심 돌파 — 범인은 인간이 아니다(약 27–42%까지 읽음)</strong></p>
+<p>본 소설 추리의 전환점이다. 다섯 명의 서로 다른 국적의 증인이 "날카로운 목소리"에 대해 내놓은 모순된 묘사가 가장 핵심적인 단서 묶음이다. 독자가 교차 대조할 수 있다면 — 누구나 그것을 "자기가 모르는 언어"라고 말했고, 아무도 구체적인 단어를 알아듣지 못했음을 알아챈다면 — 결론은 피할 수 없다. 그것은 사람 말이 아니다. 초인적 힘과 동기의 완전한 부재를 더하면 "범인은 인간이 아니다"라는 추론은 이미 성립한다.</p>
+<p><strong>3단계: 물증 확인 대기(약 42–79%까지 읽음)</strong></p>
+<p>독자는 범인이 어떤 유인원이나 대형 동물이라고 가정할 수 있으나 구체적으로 무엇인지 확정할 물증이 없다. 이 구간에서 뒤팽은 현장 조사를 하고 밀실 수수께끼를 풀며 마침내 털과 손자국을 제시하여 독자가 필요로 하는 퍼즐 조각을 단계적으로 채워준다.</p>
+<p><strong>4단계: 전모의 공개(79% 이후)</strong></p>
+<p>뒤팽은 신문 광고로 선원을 유인해내고, 선원은 사건의 전 과정을 직접 진술한다 — 오랑우탄의 탈출, 면도 흉내, 민가 침입, 짐승 같은 분노 폭발로 인한 살인. 모든 조각이 여기서 맞춰진다.</p>
+<hr>
+<h2 id="_18">추리 난이도 계산</h2>
+<table>
+<thead>
+<tr>
+<th>진실의 측면</th>
+<th>수렴점</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>범인은 인간이 아니다</td>
+<td>42%</td>
+<td>증인 진술의 교차 대조만으로 추론 가능</td>
+</tr>
+<tr>
+<td>구체적 정체(오랑우탄)</td>
+<td>79%</td>
+<td>털과 손자국 물증이 필요</td>
+</tr>
+<tr>
+<td>밀실의 출입 방식</td>
+<td>65%</td>
+<td>뒤팽의 현장 조사 발견이 필요</td>
+</tr>
+<tr>
+<td>선원의 역할</td>
+<td>83%</td>
+<td>전적으로 뒤팽이 주운 리본에 의존</td>
+</tr>
+</tbody>
+</table>
+<p><strong>평균 수렴점 = (42 + 79 + 65 + 83) / 4 = 67% → 추리 난이도 ⭐⭐⭐(3/5)</strong></p>
+<p>별 세 개는 중간 난이도를 의미한다. 독자는 대체로 전체의 3분의 2까지 읽어야 모든 진실 측면의 단서를 파악할 수 있다. 그러나 가장 핵심적인 돌파 — "범인은 인간이 아니다" — 는 42%에서 추론 가능하며, 추리소설로서는 상당히 이른 편이다. 이 핵심 문제만 놓고 보면 난이도는 ⭐⭐(비교적 쉬운 편)에 불과하다. 전체 별점을 끌어올리는 것은 뒤팽의 물증을 기다려야 확정되는 나머지 세 가지 진실이다.</p>
+<hr>
+<h2 id="25">안개 등급 평가: ⭐⭐(2/5)</h2>
+<p>포는 이 작품에서 적극적인 오도를 많이 사용하지 않았다. 주된 안개의 근원은 두 가지다.</p>
+<p>첫째는 "돈의 우연". 모녀가 사흘 전에 큰돈을 인출했기에 독자와 경찰은 자연히 강도 동기를 떠올린다. 그러나 포는 "돈이 그대로 바닥에 남아 있었다"는 사실로 이 오도를 곧 해소하므로 그리 까다로운 함정은 아니다.</p>
+<p>둘째는 "르 봉의 체포". 경찰은 르 봉이 마지막으로 돈에 손을 댔다는 이유로 그를 체포한다. 이는 잠시 독자의 사고를 "인간 용의자를 찾는" 방향으로 유도하지만 오래가지는 않는다.</p>
+<p>전체적으로 포의 스타일은 "공정한 제시"에 가깝다 — 핵심 단서가 모두 독자 앞에 펼쳐져 있고, 추리의 난이도는 독자가 능동적으로 교차 대조하느냐에 달려 있지, 작가가 가짜 단서로 일부러 빗나가게 만드는 데 있지 않다. 이는 추리소설의 창시자로서 포의 이념을 반영한다 — 그가 보여주고자 한 것은 "이성적 분석의 힘이 얼마나 강한가"였지, 독자와 오도의 숨바꼭질을 하는 것이 아니었다.</p>
+<hr>
+<h2 id="_19">보충: 이 작품의 추리문학사적 위치</h2>
+<p>『모르그가의 살인』(1841)은 인류 역사상 최초의 탐정소설로 널리 인정된다. 포는 이 한 작품에서 후세 추리소설이 오늘날까지 계승하는 몇 가지 고전적 요소를 한꺼번에 확립했다.</p>
+<p>"천재 탐정과 평범한 조수"의 서사 구조 — 뒤팽과 이름 없는 화자 — 이 조합은 훗날 코난 도일의 홈즈와 왓슨에게 완벽히 계승되었고, 이후 푸아로와 헤이스팅스, 브라운 신부와 플람보 모두 이 패턴의 변주다.</p>
+<p>밀실 추리(locked-room mystery)의 원형 — 문은 안에서 빗장, 창은 못질, 굴뚝은 통과 불가, 그렇다면 범인은 대체 어떻게 떠났을까? 이 수수께끼의 형식은 추리소설에서 오늘까지 이어진다.</p>
+<p>"불가능을 제거하면 남는 것이 진실"이라는 논리적 방법 — 뒤팽은 불가능한 모든 탈출 경로를 하나씩 배제하고 마지막에 창으로 좁혀간다. 이 추론의 논리는 뒤에 홈즈의 가장 유명한 격언 "모든 불가능을 제거했을 때 남은 것은 아무리 믿기 어려워도 반드시 진실이다"로 결정된다.</p>
+<p>끝으로 한 가지 언급할 만한 점은, 본 작품의 추리 난이도(67%)는 오늘의 기준으로 결코 높지 않으며 핵심 돌파점이 42%에서 이미 나타난다는 것이다. 그러나 1841년에 "범인이 인간이 아닐 수 있다"는 발상 자체가 전례가 없는 것이었다 — 당시 독자에게는 참조할 "추리소설의 공식"이 전혀 없었기에, 그들에게 이 이야기의 실제 추리 난이도는 오늘의 우리가 되돌아보며 분석한 결과보다 훨씬 높았다.</p>
+    <a href="../index.html" class="back-link">← 홈으로</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">추리해부실</p>
+    <p>다섯 작가 · 여든여덟 작품 · 135년에 걸친 추리문학 난이도의 진화.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El tonel de amontillado (The Cask of Amontillado) — Sala de Disección Detectivesca</title>
+<meta name="description" content="En la noche del Carnaval, el narrador Montresor se topa en la calle con Fortunato, viejo conocido. Con el cebo de un tonel de raro jerez amontillado, Montresor ">
+<link rel="alternate" hreflang="zh-TW" href="/articles/the-cask-of-amontillado.html">
+<link rel="alternate" hreflang="zh-CN" href="/zh-CN/articles/the-cask-of-amontillado.html">
+<link rel="alternate" hreflang="en" href="/en/articles/the-cask-of-amontillado.html">
+<link rel="alternate" hreflang="ja" href="/ja/articles/the-cask-of-amontillado.html">
+<link rel="alternate" hreflang="ko" href="/ko/articles/the-cask-of-amontillado.html">
+<link rel="alternate" hreflang="de" href="/de/articles/the-cask-of-amontillado.html">
+<link rel="alternate" hreflang="es" href="/es/articles/the-cask-of-amontillado.html">
+<link rel="alternate" hreflang="fr" href="/fr/articles/the-cask-of-amontillado.html">
+<link rel="alternate" hreflang="x-default" href="/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+
+  // 決定目前頁面位於哪個語系 prefix
+  var path = window.location.pathname;
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === path) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Sala de Disección Detectivesca</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Inicio</a>
+        <a href="../index.html#latest">Recientes</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Idioma" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 Español</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/articles/the-cask-of-amontillado.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/zh-CN/articles/the-cask-of-amontillado.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/en/articles/the-cask-of-amontillado.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/ja/articles/the-cask-of-amontillado.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/ko/articles/the-cask-of-amontillado.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/de/articles/the-cask-of-amontillado.html">Deutsch</a>
+      <a class="lang-item active" data-lang="es" href="/es/articles/the-cask-of-amontillado.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/fr/articles/the-cask-of-amontillado.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">Edgar Allan Poe · 1846</div>
+    <h1>El tonel de amontillado (The Cask of Amontillado)</h1>
+    <div class="subtitle">Edgar Allan Poe · </div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Deducibilidad</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Nivel de niebla</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="el-tonel-de-amontillado-the-cask-of-amontillado-analisis-de-deducibilidad">El tonel de amontillado (The Cask of Amontillado) — Análisis de deducibilidad</h1>
+<h2 id="datos-basicos">Datos básicos</h2>
+<ul>
+<li>Autor: Edgar Allan Poe</li>
+<li>Año de publicación: 1846</li>
+<li>Tipo: relato corto</li>
+<li>Detective: ninguno (el narrador es el propio asesino)</li>
+<li>Tipo central de enigma: howdunit + narrador no fiable (unreliable narrator)</li>
+</ul>
+<hr>
+<h2 id="valoracion-general-de-la-dificultad">Valoración general de la dificultad</h2>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Estrellas</th>
+<th>Nota</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deducibilidad</td>
+<td>⭐⭐⭐⭐</td>
+<td>Punto medio de convergencia 80 % — el contorno completo del plan solo aflora al 70 %; el enigma profundo del móvil se extiende hasta el 90 %.</td>
+</tr>
+<tr>
+<td>Nivel de niebla (Fog Rating)</td>
+<td>⭐⭐⭐⭐</td>
+<td>El narrador no fiable impregna todo el texto: el lector debe comprender los hechos desde la mirada del asesino; la verdadera «verdad» queda siempre velada por la voz que narra.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="sinopsis">Sinopsis</h2>
+<p>En la noche del Carnaval, el narrador Montresor se topa en la calle con Fortunato, viejo conocido. Con el cebo de un tonel de raro jerez amontillado, Montresor guía a este célebre catador — a estas horas medio ebrio— hasta lo más profundo de las catacumbas de su propia casa. En el recoveco más hondo, Montresor lo sujeta con cadenas y, a ladrillo y mortero, lo empareda vivo en un nicho. El cuento se cierra con la coletilla de Montresor: han pasado cincuenta años y nadie ha descubierto el crimen.</p>
+<p>Lo peculiar del relato es que <strong>desde la primera línea sabemos quién es el asesino y quién la víctima.</strong> La estructura clásica del whodunit queda del todo invertida — el enigma no reside en «quién lo hizo», sino en «cómo lo hizo» y en «por qué esa obsesión tan honda».</p>
+<hr>
+<h2 id="desmontaje-de-la-verdad">Desmontaje de la verdad</h2>
+<h3 id="verdad-uno-el-diseno-completo-de-la-venganza-howdunit">Verdad uno: el diseño completo de la venganza (howdunit)</h3>
+<ul>
+<li><strong>Punto de convergencia: alrededor del 70 %</strong></li>
+<li>Respuesta: Montresor vació con antelación la residencia (sirviéndose del natural humano de los criados), dispuso grapas de hierro y candado en el nicho más hondo, ocultó una paleta bajo su capa y apiló el material de obra — guiando todo el tiempo a Fortunato a la trampa mediante el vino y la vanidad.</li>
+</ul>
+<h4 id="pistas-clave">Pistas clave</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Pista</th>
+<th>Posición</th>
+<th>Nota</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>La flaqueza de Fortunato es su vanidad como catador, y Montresor la subraya expresamente</td>
+<td>~8 %</td>
+<td>Explica la lógica del cebo — el amontillado está hecho a la medida de Fortunato</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Montresor invoca repetidamente a Luchesi para azuzar el afán competitivo de Fortunato</td>
+<td>~12–18 %</td>
+<td>Le cierra el paso — mecanismo central de la manipulación</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Todos los sirvientes están ausentes (Montresor les había prohibido salir, sabiendo que eso bastaría para que saliesen enseguida)</td>
+<td>~22 %</td>
+<td>Clave de la premeditación — ha limpiado la escena de antemano, no hay testigos</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Bajo la capa de Montresor se oculta una paleta (trowel)</td>
+<td>~50 %</td>
+<td><strong>Una de las pistas más importantes</strong> — la herramienta de albañilería ya está preparada, el plan está completamente diseñado</td>
+</tr>
+<tr>
+<td>5</td>
+<td>En el fondo del nicho hay dispuestas de antemano grapas, cadena y candado</td>
+<td>~70 %</td>
+<td>Es la última pista clave: aquí la silueta del plan se dibuja por completo</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-de-apoyo">Pistas de apoyo</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Pista</th>
+<th>Posición</th>
+<th>Nota</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El tumulto del Carnaval brinda una coartada perfecta</td>
+<td>~10 %</td>
+<td>No se repara al instante en un desaparecido</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Las catacumbas son muy profundas, alejadas de la superficie y colmadas de huesos</td>
+<td>~30–45 %</td>
+<td>Refuerza la sensación de aislamiento absoluto — nadie puede oír</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Fortunato está ebrio todo el tiempo</td>
+<td>a lo largo</td>
+<td>Explica por qué no percibe peligro</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Junto al nicho hay apilada, de antemano, la piedra y el mortero</td>
+<td>~72 %</td>
+<td>Se hace eco de la paleta y confirma la premeditación</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-falsas">Pistas falsas</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Pista</th>
+<th>Posición</th>
+<th>Sentido del engaño</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Montresor finge repetidas veces querer regresar, diciendo preocuparse por la salud de Fortunato</td>
+<td>~28 %, 42 %</td>
+<td>Hace creer al lector (y a Fortunato) que actúa por solicitud, velando el móvil real</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Broma masónica — Fortunato no cree que Montresor sea un <em>mason</em></td>
+<td>~50 %</td>
+<td>Parece charla ebria, pero esconde un doble sentido: Montresor está a punto de mostrar su «auténtica» albañilería</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="verdad-dos-el-narrador-no-fiable-estado-mental-y-movil-real-de-montresor-whydunit">Verdad dos: el narrador no fiable — estado mental y móvil real de Montresor (whydunit)</h3>
+<ul>
+<li><strong>Punto de convergencia: alrededor del 90 %</strong></li>
+<li>Respuesta: el relato no da nunca una respuesta firme. Las «mil heridas» y la «afrenta» última de Fortunato jamás se concretan. Leído con atención, el relato de Montresor está lleno de contradicciones y obsesiones; es muy probable que sea un narrador paranoico y no fiable — su «justa venganza» puede apoyarse, en el fondo, en años de envidia y delirio acumulados.</li>
+</ul>
+<h4 id="pistas-clave_1">Pistas clave</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Pista</th>
+<th>Posición</th>
+<th>Nota</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El móvil de venganza es siempre vago: «injuries» e «insult» nunca reciben contenido concreto</td>
+<td>~1 %</td>
+<td>Quien tiene un motivo verdaderamente justo no lo oculta, y menos en un acto de confesión</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Escudo de los Montresor: un pie aplasta a una serpiente cuyos colmillos muerden el talón — lema <em>Nemo me impune lacessit</em> («Nadie me hiere impunemente»)</td>
+<td>~44 %</td>
+<td>Revela una tradición familiar de venganza profundamente arraigada — sugiere que el acto de Montresor es también una patología familiar</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Montresor dice: «Eres rico, respetado, admirado, amado; eres feliz, como yo lo fui alguna vez»</td>
+<td>~30 %</td>
+<td>La envidia escondida — ese «alguna vez» insinúa el sentido de pérdida y resentimiento del propio Montresor</td>
+</tr>
+<tr>
+<td>4</td>
+<td>El destinatario de la confesión es «vos, que conocéis bien la naturaleza de mi alma»</td>
+<td>~1 %</td>
+<td>Cincuenta años después, ¿a quién habla? ¿a un sacerdote? ¿a un viejo amigo? El misterio no se resuelve y sugiere que Montresor carga con una culpa persistente o con una necesidad continua de autojustificación</td>
+</tr>
+<tr>
+<td>5</td>
+<td>En el último instante Montresor dice «mi corazón desfalleció» (My heart grew sick) y lo achaca a la humedad del sótano</td>
+<td>~95 %</td>
+<td>El momento más ambiguo del relato — ¿un destello de conciencia o una reacción física? El propio narrador rehúye la respuesta</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-de-apoyo_1">Pistas de apoyo</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Pista</th>
+<th>Posición</th>
+<th>Nota</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El refinamiento del plan de Montresor delata una obsesión y una maquinación prolongadas</td>
+<td>a lo largo</td>
+<td>Una premeditación tan exacta se nutre de una paranoia macerada durante años</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Fortunato no muestra recelo alguno hacia Montresor y lo llama «amigo» hasta el final</td>
+<td>a lo largo</td>
+<td>Desde su lado, ¿existen siquiera las «mil heridas» que Montresor dice?</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pista-falsa">Pista falsa</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Pista</th>
+<th>Posición</th>
+<th>Sentido del engaño</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El arranque: «Fortunato me había injuriado mil veces, y yo lo había soportado»</td>
+<td>~1 %</td>
+<td>Coloca al lector de inmediato del lado de Montresor y lo invita a aceptar su interpretación, haciéndole pasar por alto que la afirmación misma carece de todo respaldo sustantivo</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="reconstruccion-del-camino-deductivo">Reconstrucción del camino deductivo</h2>
+<p><strong>Primera ruta: howdunit</strong></p>
+<p>Hacia el 22 % (la casa resulta vacía), el lector atento empezará a oler premeditación. Al 50 %, la paleta confirma la existencia de un plan de albañilería. Al 70 %, las cadenas de hierro son la confirmación definitiva — el contorno del plan se fija.</p>
+<p><strong>Segunda ruta: narración no fiable</strong></p>
+<p>Esta ruta exige que el lector resista activamente la manipulación del narrador. El primer indicio surge en el incipit (1 %): una confesión con móvil y destinatario ambos nebulosos. Al 30 %, «eres feliz, como yo lo fui alguna vez» es la pista psicológica crucial — Montresor no solo se venga: trata de tapar un hueco interior. Al 95 %, con el «corazón desfalleció», el lector por fin atrapa una grieta en la voz del narrador. Pero el autor nunca entrega una respuesta fija — ese misterio es el corazón del relato.</p>
+<hr>
+<h2 id="notas-complementarias">Notas complementarias</h2>
+<p><strong>El lugar de «El tonel de amontillado» en la historia del género policial</strong></p>
+<p>Este cuento es una de las paradojas más interesantes de la historia del relato policial: una obra policial sin detective, sin resolución, sin «caso». En «Los crímenes de la calle Morgue» (1841), Poe inventó el relato detectivesco; cinco años después, en este cuento, invierte por completo el mismo espíritu analítico: sienta al lector en el puesto del asesino y lo pone a vivir en vivo un «crimen perfecto».</p>
+<p><strong>Comparación con «Los crímenes de la calle Morgue»</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Calle Morgue</th>
+<th>Tonel de amontillado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pregunta central</td>
+<td>¿Quién lo hizo?</td>
+<td>¿Por qué lo hizo?</td>
+</tr>
+<tr>
+<td>Perspectiva</td>
+<td>el compañero que observa</td>
+<td>el propio asesino</td>
+</tr>
+<tr>
+<td>Dirección deductiva</td>
+<td>descifrar la verdad</td>
+<td>ocultar la verdad</td>
+</tr>
+<tr>
+<td>Papel del lector</td>
+<td>asistir al detective</td>
+<td>espectador manipulado</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Análisis técnico-literario</strong></p>
+<p>Poe emplea aquí una estructura «antideductiva»: todas las pistas están a la vista, pero nadie resuelve. El doble sentido de la paleta (herramienta frente a símbolo masónico), la presagiación del lema familiar, el tono confesional del inicio — en 1846 eran innovaciones asombrosas que solo un siglo después, con los narradores no fiables de Christie y otros, serían plenamente heredadas y desarrolladas.</p>
+<p><strong>Nota para quien lea</strong></p>
+<p>El amontillado es un jerez raro de la región española de Jerez, celebrado por sus aromas a avellana y su compleja estratificación. En el siglo XIX se trataba de un vino de altísima categoría y valor coleccionable — equivalente al Burdeos de gran crianza de hoy. La obsesión de Fortunato por el vino era, para los contemporáneos de Poe, una flaqueza de personaje totalmente verosímil.</p>
+    <a href="../index.html" class="back-link">← Volver al inicio</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Sala de Disección Detectivesca</p>
+    <p>Cinco autores · ochenta y ocho obras · 135 años de evolución de la dificultad en la narrativa policíaca.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

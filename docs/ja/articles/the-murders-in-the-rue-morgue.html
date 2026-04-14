@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>モルグ街の殺人（The Murders in the Rue Morgue） — 推理解剖室</title>
+<meta name="description" content="舞台は十九世紀のパリ。語り手は当地に滞在中のアメリカ人で、偶然、没落貴族の青年 C・オーギュスト・デュパン——並外れた分析力を持つ人物——と知り合う。二人は古びた屋敷を借りて世間から隔絶した生活を送り、昼間は閉じこもって読書に耽り、夜になって初めて街へ散策に出る。 ある日、新聞である衝撃的な殺人事件の記事を読む。モルグ">
+<link rel="alternate" hreflang="zh-TW" href="/articles/the-murders-in-the-rue-morgue.html">
+<link rel="alternate" hreflang="zh-CN" href="/zh-CN/articles/the-murders-in-the-rue-morgue.html">
+<link rel="alternate" hreflang="en" href="/en/articles/the-murders-in-the-rue-morgue.html">
+<link rel="alternate" hreflang="ja" href="/ja/articles/the-murders-in-the-rue-morgue.html">
+<link rel="alternate" hreflang="ko" href="/ko/articles/the-murders-in-the-rue-morgue.html">
+<link rel="alternate" hreflang="de" href="/de/articles/the-murders-in-the-rue-morgue.html">
+<link rel="alternate" hreflang="es" href="/es/articles/the-murders-in-the-rue-morgue.html">
+<link rel="alternate" hreflang="fr" href="/fr/articles/the-murders-in-the-rue-morgue.html">
+<link rel="alternate" hreflang="x-default" href="/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif JP', serif;
+  --font-sans: 'Noto Sans JP', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+
+  // 決定目前頁面位於哪個語系 prefix
+  var path = window.location.pathname;
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === path) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">推理解剖室</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">ホーム</a>
+        <a href="../index.html#latest">最新</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="言語" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 日本語</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/articles/the-murders-in-the-rue-morgue.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/zh-CN/articles/the-murders-in-the-rue-morgue.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/en/articles/the-murders-in-the-rue-morgue.html">English</a>
+      <a class="lang-item active" data-lang="ja" href="/ja/articles/the-murders-in-the-rue-morgue.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/ko/articles/the-murders-in-the-rue-morgue.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/de/articles/the-murders-in-the-rue-morgue.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/es/articles/the-murders-in-the-rue-morgue.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/fr/articles/the-murders-in-the-rue-morgue.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">エドガー・アラン・ポー · 1841</div>
+    <h1>モルグ街の殺人（The Murders in the Rue Morgue）</h1>
+    <div class="subtitle">エドガー・アラン・ポー（Edgar Allan Poe） · </div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">推理難易度</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">霧の濃度</div>
+        <div class="rating-badge-stars">⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="the-murders-in-the-rue-morgue">モルグ街の殺人（The Murders in the Rue Morgue）— 推理分析</h1>
+<h2 id="_1">基本情報</h2>
+<ul>
+<li>著者：エドガー・アラン・ポー（Edgar Allan Poe）</li>
+<li>発表年：1841</li>
+<li>種別：短編小説（約14,000語）</li>
+<li>探偵：C・オーギュスト・デュパン（C. Auguste Dupin）</li>
+<li>中心となる謎の型：whodunit（犯人は誰か）＋ howdunit（どうやって出入りしたか）</li>
+</ul>
+<h2 id="_2">推理難易度総評</h2>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難易度（Deducibility）</td>
+<td>⭐⭐⭐（3/5）</td>
+<td>平均収束点 67%——過半を読まねば手がかりは揃わないが、中心的突破は 42% で可能</td>
+</tr>
+<tr>
+<td>霧の濃度（Fog Rating）</td>
+<td>⭐⭐（2/5）</td>
+<td>偽の手がかりは少なく、難しさは意図的誤導ではなく手がかりの照合にある</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_3">あらすじ</h2>
+<p>舞台は十九世紀のパリ。語り手は当地に滞在中のアメリカ人で、偶然、没落貴族の青年 C・オーギュスト・デュパン——並外れた分析力を持つ人物——と知り合う。二人は古びた屋敷を借りて世間から隔絶した生活を送り、昼間は閉じこもって読書に耽り、夜になって初めて街へ散策に出る。</p>
+<p>ある日、新聞である衝撃的な殺人事件の記事を読む。モルグ街の四階に住むレスパネー夫人と娘カミーユが共に殺害されたのである。娘は生きたまま絞殺された後、遺体は頭を下にして煙突へ押し込まれていた。母親は窓から投げ出され、首はほぼ完全に切り離され、全身が粉砕骨折を起こしていた。</p>
+<p>現場は完全な密室であった。扉は内側から閂が差され、窓も内側から釘付けされていた。隣人たちが扉を破って踏み込んだとき、上階から二つの声が言い争うのを聞いている。一つはフランス人の粗い声、もう一つは甲高く耳障りな声。しかしこの甲高い声について、五つの異なる国籍の証人がそれぞれ全く異なる言語だと主張し、誰一人として実際の言葉を聞き取れていない。</p>
+<p>パリ警察はなす術を失い、母娘のもとへ金を届けていた銀行員ル・ボンを逮捕するが、実質的な証拠は何もない。デュパンはこの事件に興味を抱き、自ら現場へ赴いて調査する。緻密な推理の末、彼は警察が完全に見落としていた窓の仕掛けを発見し、決定的な物証も現場から得る。最終的に彼は犯人の正体を突き止めるのみならず、巧妙に仕組んだ新聞広告で背後の鍵となる人物を呼び寄せ、事件の全貌を明らかにする。</p>
+<hr>
+<h2 id="_4">真相の分解</h2>
+<p>本件の真相は四つの側面に分けて分析できる。以下、それぞれの手がかりの分布と、読者が最も早くその答えを導ける位置を示す。</p>
+<blockquote>
+<p><strong>読書進度の注記：</strong> 本稿ではパーセンテージで手がかりの出現位置を示す。「約30%」とは全体のほぼ三分の一まで読んだ地点を指す。</p>
+</blockquote>
+<hr>
+<h3 id="_5">真相その一：犯人は人間ではない</h3>
+<ul>
+<li><strong>答え：</strong> 犯人はボルネオ産のオランウータン。</li>
+<li><strong>収束点：42%</strong> — 証人の証言を全て読み終えた時点で、犯人が人間でないと推論するに足る材料は揃う。</li>
+</ul>
+<p>本作全体の核心的な突破口である。ポーは重要な手がかりを全て、新聞記事の証言の段落に仕込んでいる——注意深く読めば、半分に達しないうちに真相を推測できる。</p>
+<h4 id="_6">重要な手がかり</h4>
+<p><strong>手がかり 1：甲高い声の謎（約30–38%）</strong></p>
+<p>これは本件で最も重要な手がかり群である。事件当時、隣人たちは上階で二つの声が争うのを耳にした。粗い声がフランス人のものだという点では全員が一致している。しかしもう一方の甲高い声については、五人の異なる国籍の証人がまったく矛盾する証言をする。</p>
+<table>
+<thead>
+<tr>
+<th>証人の国籍</th>
+<th>彼が考えた甲高い声の言語</th>
+<th>実際のところ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>フランス人（憲兵イジドール・ミュゼ）</td>
+<td>スペイン語</td>
+<td>彼はスペイン語を解さない</td>
+</tr>
+<tr>
+<td>オランダ人（オーデンハイマー）</td>
+<td>フランス語</td>
+<td>彼はフランス語を解さず、証言には通訳を要した</td>
+</tr>
+<tr>
+<td>イギリス人（仕立屋ウィリアム・バード）</td>
+<td>ドイツ語</td>
+<td>彼はドイツ語を解さない</td>
+</tr>
+<tr>
+<td>スペイン人（葬儀業アルフォンソ・ガルシオ）</td>
+<td>英語</td>
+<td>彼は英語を解さず、「抑揚」だけで判断した</td>
+</tr>
+<tr>
+<td>イタリア人（菓子商アルベルト・モンターニ）</td>
+<td>ロシア語</td>
+<td>彼はロシア人と話したことが一度もない</td>
+</tr>
+</tbody>
+</table>
+<p>誰もがその声を「自国の言語ではない」と断定し、誰もが自分の解さぬ言語だと推測し、誰一人として具体的な「単語」を聞き取れていない。この五つの証言を照合すれば、導かれる結論は一つしかない——<strong>それはそもそも人間の言語ではなかった。</strong></p>
+<p><strong>手がかり 2：人知を超えた暴力（約24–39%）</strong></p>
+<p>現場の暴力の程度は、通常の人間の能力を遥かに超えている。
+- 成人女性の遺体が狭い煙突に <strong>上向き</strong> に押し込まれており、後に四、五人がかりで引き下ろす必要があった（約26%）
+- 大量の髪の毛が頭皮ごと引きちぎられていた（約24%）
+- 老婦人の首はほぼ完全に切断され、右腕・右脚・左側の肋骨がすべて粉砕されていた（約39%）
+- 検視医の証言：「いかなる武器を用いても女性にこのような傷を負わせることは不可能」（約39%）</p>
+<p><strong>手がかり 3：動機が完全に欠如（約25%）</strong></p>
+<p>三日前、母娘は銀行から四千フランの金貨を引き出していた。しかし事件後、その金は床に手つかずのまま残されていた。これが強盗殺人なら、犯人が金銭をすべて残して立ち去るはずはない。</p>
+<p><strong>手がかり 1 + 2 + 3 を合わせて：</strong> 人語を発さず、怪力を持ち、理性的動機もない——読者は約 42% の地点で、犯人は人間ではないと合理的に推論できる。</p>
+<h4 id="_7">補助的な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかり</th>
+<th>出現位置</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>室内は激しく乱れ、家具が打ち壊され倒れている</td>
+<td>約24%</td>
+<td>計画的犯行ではなく非理性的な暴力の示唆</td>
+</tr>
+<tr>
+<td>2</td>
+<td>扉は内側から閂、窓は閉ざされている——完全な密室</td>
+<td>約36%</td>
+<td>並外れた出入りの方法を示唆</td>
+</tr>
+<tr>
+<td>3</td>
+<td>煙突は煙突掃除のブラシしか通らぬほど狭く、人体は絶対に通れない</td>
+<td>約38%</td>
+<td>煙突からの人間の出入りを排除</td>
+</tr>
+<tr>
+<td>4</td>
+<td>甲高い声は「早口で不均等」と形容される</td>
+<td>約34%</td>
+<td>動物の鳴き声の特徴に合い、人間の言語のリズムではない</td>
+</tr>
+<tr>
+<td>5</td>
+<td>母娘は極度に隠遁した生活を送り、ほぼ外部との接触がなかった</td>
+<td>約28%</td>
+<td>人間関係のもつれに起因する犯罪の可能性を排除</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_8">偽の手がかり（レッドヘリング）</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかり</th>
+<th>出現位置</th>
+<th>誤導の方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>三日前に四千フランを引き出し、銀行員が付き添って持ち帰った</td>
+<td>約33%</td>
+<td>読者と警察に強盗殺人を疑わせる</td>
+</tr>
+<tr>
+<td>2</td>
+<td>銀行員ル・ボンが逮捕される</td>
+<td>約42%</td>
+<td>「人間の犯人を探す」方向へ注意を誘導</td>
+</tr>
+<tr>
+<td>3</td>
+<td>事件当時、確かにフランス人の粗い声がその場にいた</td>
+<td>約30%</td>
+<td>読者に「少なくとも一人の人間の犯人が現場にいた」と誤認させる——実際にはそれはオランウータンの飼い主が窓外で怯えて叫んでいた声だった</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_9">真相その二：犯人の具体的な正体——オランウータン</h3>
+<ul>
+<li><strong>答え：</strong> ボルネオ産のオランウータン（Ourang-Outang）。</li>
+<li><strong>収束点：79%</strong> — デュパンが物証を示すまで確定しえない。</li>
+</ul>
+<p>読者は 42% の段階で「犯人は何らかの動物」と推測できるかもしれないが、それが具体的にどの動物かを確定するには、デュパンが示す二つの重要な物証を待たねばならない。</p>
+<h4 id="_10">重要な手がかり</h4>
+<p><strong>手がかり 1：人間ではない毛髪（約76%）</strong></p>
+<p>デュパンは老婦人の握りしめた拳から一房の毛を取り出す。語り手に渡すと、語り手は即座に「これは人間の毛ではない」と認める。これはデュパンが明かすまで読者には知られなかった物証である——現場報道にあった「灰色の人間の毛」とは別のものである。</p>
+<p><strong>手がかり 2：人の手を超えた指の跡（約77%）</strong></p>
+<p>デュパンは娘の喉の痣と爪痕を実寸大で描き起こす。語り手に自分の指を跡と合わせるよう求めるが、指の間隔が人の手の限界を超えており、まったく合わない。続いてデュパンはフランスの博物学者キュヴィエによるボルネオ産オランウータンの解剖学的記述を取り出し、指の跡がその猩々の手と完全に一致することを示す。</p>
+<h4 id="_11">補助的な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかり</th>
+<th>出現位置</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>避雷針から鎧戸へ跳び、窓へ振り込むには「ほとんど超人的な敏捷さと大胆さ」が要る</td>
+<td>約68%</td>
+<td>デュパン自身がこの「ほぼ超自然的な敏捷さ」を特に強調している——犯人が人間でないことの強い示唆</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_12">真相その三：密室の謎——犯人はいかに出入りしたか</h3>
+<ul>
+<li><strong>答え：</strong> 犯人は建物背面の避雷針を攀じ登り、半開きの鎧戸（旧式の ferrade 型で格子状）を介して四階の窓へ振り込んだ。退出時、窓は隠し発条で自動的に閉じた。窓枠の鉄釘はすでに中ほどで折れ、釘の頭だけが元の位置に残っていたため、外見上は釘付けに見えるが、実際には何も固定していなかった。</li>
+<li><strong>収束点：65%</strong> — デュパンの現場調査を待たなければ組み立てられない。</li>
+</ul>
+<h4 id="_13">重要な手がかり</h4>
+<p><strong>手がかり 1：通常の出口がすべて封じられている（約36–38%）</strong></p>
+<p>証言により以下が確認されている。扉は内側から閂が差され、鍵は内側にある。前後の窓はいずれも閉ざされ釘付けされている。煙突は人体が通らぬほど狭い。屋根の上げ蓋は何年も前から釘付けされている。読者にとってこれは重要な論理的出発点である——すべての出口が不可能ならば、「不可能に見えるが実は可能」なものが必ず一つある。</p>
+<p><strong>手がかり 2：窓の秘密——隠し発条と折れた鉄釘（約62–65%）</strong></p>
+<p>デュパンは論理から出発する。犯人は確実にその場から逃げた。ゆえに「不可能」は虚構にすぎない。一つひとつ検分すると、各窓枠に発条の仕掛けが隠されており、押せば窓が開くことが分かる。最初の窓の釘は無傷——排除。しかし二つ目の窓の釘は——外見は最初の窓とまったく同じだが——実は中ほどで折れており、頭部だけが木枠に埋まっていた。窓を閉じると折れた釘頭が釘付けに見えるが、実際には窓は自由に開閉する。犯人が立ち去った後、発条が自動的に窓を閉じ、「内側から施錠されている」という錯覚が生まれた。</p>
+<p><strong>手がかり 3：避雷針と鎧戸が構成する攀登路（約66–67%）</strong></p>
+<p>デュパンは窓外約五フィート半のところに避雷針があることに気づく。窓の鎧戸は旧式の ferrade 型で、下半分が格子構造になっており、完全に開くと避雷針から二フィート半しか離れない。極めて敏捷な——まあ「生き物」——ならば、避雷針から鎧戸の格子へ跳び、そのまま部屋へ振り込むことができる。</p>
+<h4 id="_14">補助的な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかり</th>
+<th>出現位置</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>警察は窓を検分した際、鉄釘を見て「ここからは逃げられない」と断定し、実際に釘を抜いてみなかった</td>
+<td>約37%</td>
+<td>警察の粗雑さが読者に疑問の余地を残す——本当に丁寧に検分したのか？</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_15">真相その四：そのフランス人は誰か？</h3>
+<ul>
+<li><strong>答え：</strong> マルタ船籍の船で働くフランス人水夫で、オランウータンの飼い主である。東インド諸島で捕獲したこの猩々をパリへ連れ帰り、売却するつもりだった。事件の夜、猩々は閉じ込めていた物置から逃げ出し、カミソリ（主人が髭を剃るのを覗き見て真似ることを覚えた）を手にしたまま街へ飛び出した。水夫は猩々を追ってモルグ街へ至り、避雷針を攀じ登り、窓外から猩々が四階に闖入し母娘を殺害する全貌を目撃するが、止めることができなかった。彼は無実である。</li>
+<li><strong>収束点：83%</strong> — ほぼ全面的にデュパンが単独で発見した物証に依存する。</li>
+</ul>
+<h4 id="_16">重要な手がかり</h4>
+<p><strong>手がかり 1：粗い声は怯えたフランス人（約30–38%）</strong></p>
+<p>全員が事件時に聞こえた粗い声はフランス人のものだと一致している。聞き取られた言葉は "sacré"（忌々しい）、"diable"（悪魔）、"mon Dieu"（我が神よ）——これらはすべて驚愕の感嘆詞であり、命令や脅迫ではない。菓子商モンターニは特に、その口調を「諫めるような」（expostulating）と形容している。これらの細部は示唆する——事件時その場にフランス人はいたが、彼は加害者ではなく目撃者であった。</p>
+<p><strong>手がかり 2：マルタ水夫のリボン（約83%）</strong></p>
+<p>デュパンは避雷針の根元で一本のリボンを拾う。油染みた、水夫が髪を束ねるのに用いる型のもので、結び目はマルタ水夫に特有の形をしている。ここからデュパンは、あのフランス人はマルタ船籍の船で働く水夫だと推論する。ただしこの手がかりはデュパンが現場で単独に得たものであり、読者はそれ以前には知りようがない。</p>
+<h4 id="_17">補助的な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかり</th>
+<th>出現位置</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>モンターニが粗い声の口調を「諫め、哀願する」と形容</td>
+<td>約38%</td>
+<td>見落としやすいが、フランス人が無実の役割であることを示唆</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_18">推論過程の再構築</h2>
+<p>以下は、注意深い読者がたどるであろう最も典型的な推論の過程である。</p>
+<p><strong>第一段階：疑問の浮上（約14–27%まで読む）</strong></p>
+<p>新聞の現場報道を読み終えた時点で、三つの異常が浮かび上がる——暴力の程度が尋常ではなく、金銭は一切持ち去られていず、遺体が煙突に押し込まれるという尋常ならざる処理がされている。どの読者もこの時点で「これは普通の強盗殺人ではない」と感じる。</p>
+<p><strong>第二段階：中心的突破——犯人は人間ではない（約27–42%まで読む）</strong></p>
+<p>本作の推論の転回点である。五人の異なる国籍の証人による「甲高い声」についての矛盾した描写が最重要の手がかり群である。読者が照合できるなら——誰もがそれを「自分の解さぬ言語」だと言い、具体的な単語を聞き取れた者はいない、と気づくなら——結論は避けがたい：それは人語ではない。超人的な力と動機の完全な欠如を加味すれば、「犯人は人間ではない」という推論はすでに成立している。</p>
+<p><strong>第三段階：物証の確認を待つ（約42–79%まで読む）</strong></p>
+<p>読者は犯人が類人猿か大型動物だろうと仮定しているかもしれないが、具体的に何かを確定する物証が欠けている。この区間でデュパンは現場調査を行い、密室の謎を解き、最後に毛髪と指の跡を示すことで、読者に必要なパズルの残りの断片を段階的に埋めていく。</p>
+<p><strong>第四段階：全貌の判明（79%以降）</strong></p>
+<p>デュパンは新聞広告で水夫を呼び寄せ、水夫は事件の顛末を自ら語る——オランウータンの脱走、髭剃りの模倣、民家への闖入、獣性の発露による殺害。すべての断片がここで組み上がる。</p>
+<hr>
+<h2 id="_19">推理難易度の算出</h2>
+<table>
+<thead>
+<tr>
+<th>真相の側面</th>
+<th>収束点</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>犯人は非人間</td>
+<td>42%</td>
+<td>証人証言の照合で推論可能</td>
+</tr>
+<tr>
+<td>具体的な正体（オランウータン）</td>
+<td>79%</td>
+<td>毛髪と指の跡の物証が必要</td>
+</tr>
+<tr>
+<td>密室の出入方法</td>
+<td>65%</td>
+<td>デュパンの現場調査の発見が必要</td>
+</tr>
+<tr>
+<td>水夫の役割</td>
+<td>83%</td>
+<td>デュパンが拾ったリボンに全面的に依存</td>
+</tr>
+</tbody>
+</table>
+<p><strong>平均収束点 = (42 + 79 + 65 + 83) / 4 = 67% → 推理難易度 ⭐⭐⭐（3/5）</strong></p>
+<p>三つ星は中級の難度を意味する。読者はおおむね全体の三分の二を読まないと、すべての真相の側面に関する手がかりを掌握できない。しかし最も中心的な突破——「犯人は人間ではない」——は 42% で推論可能であり、推理小説としてはかなり早い部類に入る。この核心の問題だけを見れば、難度は ⭐⭐（比較的容易）でしかない。全体の星を引き上げているのは、デュパンの物証を待たねば確定できない残り三つの真相である。</p>
+<hr>
+<h2 id="25">霧の濃度評価：⭐⭐（2/5）</h2>
+<p>ポーは本作において積極的な誤導をあまり用いていない。主な霧の源は二つ。</p>
+<p>第一は「金銭の偶然」。母娘が三日前に大金を引き出していたことで、読者も警察も自然に強盗動機を連想する。しかしポーは「金銭が手つかずに床に残されていた」という事実でこの誤導をすぐに解消しており、さして難儀な罠ではない。</p>
+<p>第二は「ル・ボンの逮捕」。警察は金銭に最後に触れたのが彼だからという理由で彼を逮捕する。これは読者の思考を一時的に「人間の容疑者を探す」方向へ誘導するが、長続きはしない。</p>
+<p>全体として、ポーのスタイルは「公正な出し方」に近い——鍵となる手がかりはすべて読者の前に並べられており、推理の難しさは能動的に照合するかどうかにかかっており、作者が偽の手がかりで意図的に脇へ誘導することではない。これは推理小説の開祖としてのポーの理念を反映している——彼が示したかったのは「理性的分析の力がいかに強大か」であり、読者と誤導のイタチごっこをすることではなかった。</p>
+<hr>
+<h2 id="_20">補足：本作の推理文学史における位置</h2>
+<p>『モルグ街の殺人』（1841）は、人類史上最初の探偵小説として広く認められている。ポーはこの一作において、後世の推理小説が今日まで継承するいくつかの古典的要素を一気に打ち立てた。</p>
+<p>「天才探偵と凡庸な助手」という語りの構造——デュパンと無名の語り手——この組み合わせはのちにコナン・ドイルのホームズとワトソンに完全に継承され、さらに後のポアロとヘイスティングス、ブラウン神父とフランボーもすべてこのパターンの変奏である。</p>
+<p>「密室推理」（locked-room mystery）の原型——扉は内側から閂、窓は釘付け、煙突は通らない、犯人はいったいどうやって去ったのか？この謎の型は、推理小説において今日まで脈々と続いている。</p>
+<p>「不可能を排除すれば残ったものが真実」という論理的方法——デュパンはすべての不可能な脱出経路を一つずつ排除し、最後に窓へと絞り込む。この推論の論理はのちにホームズの最も有名な格言「すべての不可能を排除したとき、残ったものは、どれほど信じがたくとも、必ず真実である」へと結晶する。</p>
+<p>最後に一つ付言したい。本作の推理難易度（67%）は今日の基準から見れば決して高くはなく、中心的突破点も 42% で現れる。しかし 1841 年において、「犯人が人間でない可能性」という発想それ自体が前例のないものであった——当時の読者には参照できる「推理小説の定石」は一切なく、彼らにとって本作の実際の推理難度は、今日の我々が遡って分析した結果よりも遥かに高かったのである。</p>
+    <a href="../index.html" class="back-link">← ホームに戻る</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">推理解剖室</p>
+    <p>五人の作家・八十八の作品・135年にわたる推理文学の難易度の進化。</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
