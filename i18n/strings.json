@@ -1,5 +1,6 @@
 {
   "_meta": {
+    "base_path": "/Detective-Analysis",
     "languages": {
       "zh-TW": { "name": "繁體中文", "html_lang": "zh-Hant", "is_default": true, "path_prefix": "" },
       "zh-CN": { "name": "简体中文", "html_lang": "zh-Hans", "is_default": false, "path_prefix": "zh-CN" },

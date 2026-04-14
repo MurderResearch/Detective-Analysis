@@ -5,15 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Salle de Dissection Policière — Étude de déductibilité sur le roman policier classique</title>
 <meta name="description" content="Un nouveau cadre d'analyse pour disséquer, livre par livre, les chefs-d'œuvre du roman policier.">
-<link rel="alternate" hreflang="zh-TW" href="/">
-<link rel="alternate" hreflang="zh-CN" href="/zh-CN/">
-<link rel="alternate" hreflang="en" href="/en/">
-<link rel="alternate" hreflang="ja" href="/ja/">
-<link rel="alternate" hreflang="ko" href="/ko/">
-<link rel="alternate" hreflang="de" href="/de/">
-<link rel="alternate" hreflang="es" href="/es/">
-<link rel="alternate" hreflang="fr" href="/fr/">
-<link rel="alternate" hreflang="x-default" href="/">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 /* ===== RESET & BASE ===== */
@@ -272,9 +272,16 @@ footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
   // 所有支援語系 → path_prefix 的對照
   var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
   var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
 
   // 決定目前頁面位於哪個語系 prefix
-  var path = window.location.pathname;
   var currentPrefix = '';
   for (var code in LANG_PREFIX) {
     var p = LANG_PREFIX[code];
@@ -321,9 +328,9 @@ footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
   } else {
     tail = path;
   }
-  var newPath = (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
   newPath = newPath.replace(/\/{2,}/g, '/');
-  if (newPath === path) return;
+  if (newPath === rawPath) return;
   window.location.replace(newPath + window.location.search + window.location.hash);
 })();
 </script>
@@ -344,14 +351,14 @@ footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
       <div class="lang-switcher" id="lang-switcher">
     <button class="lang-switcher-btn" type="button" aria-label="Langue" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 Français</button>
     <div class="lang-switcher-menu" id="lang-menu">
-      <a class="lang-item" data-lang="zh-TW" href="/">繁體中文</a>
-      <a class="lang-item" data-lang="zh-CN" href="/zh-CN/">简体中文</a>
-      <a class="lang-item" data-lang="en" href="/en/">English</a>
-      <a class="lang-item" data-lang="ja" href="/ja/">日本語</a>
-      <a class="lang-item" data-lang="ko" href="/ko/">한국어</a>
-      <a class="lang-item" data-lang="de" href="/de/">Deutsch</a>
-      <a class="lang-item" data-lang="es" href="/es/">Español</a>
-      <a class="lang-item active" data-lang="fr" href="/fr/">Français</a>
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/">Español</a>
+      <a class="lang-item active" data-lang="fr" href="/Detective-Analysis/fr/">Français</a>
     </div>
   </div>
     </div>

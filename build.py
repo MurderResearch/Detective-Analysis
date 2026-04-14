@@ -52,6 +52,9 @@ STRINGS = load_strings()
 LANG_META = STRINGS["_meta"]["languages"]
 LANG_CODES = [c for c in LANG_META.keys()]   # ordered: zh-TW first (default)
 DEFAULT_LANG = next(c for c, m in LANG_META.items() if m.get("is_default"))
+# 站台部署的 base path（GitHub Pages 專案站點需要子路徑，例：/Detective-Analysis；根網域則為 ""）
+# 可被環境變數 BASE_PATH 覆寫（方便本機測試）
+BASE_PATH = os.environ.get("BASE_PATH", STRINGS["_meta"].get("base_path", "")).rstrip("/")
 
 
 # ===== 工具函式 =====
@@ -178,12 +181,12 @@ def hreflang_links(page_kind, slug=None):
     for lang, meta in LANG_META.items():
         prefix = meta["path_prefix"]
         if page_kind == "home":
-            path = f"/{prefix}/" if prefix else "/"
+            path = f"{BASE_PATH}/{prefix}/" if prefix else f"{BASE_PATH}/"
         else:
-            path = f"/{prefix}/articles/{slug}.html" if prefix else f"/articles/{slug}.html"
+            path = f"{BASE_PATH}/{prefix}/articles/{slug}.html" if prefix else f"{BASE_PATH}/articles/{slug}.html"
         lines.append(f'<link rel="alternate" hreflang="{lang}" href="{path}">')
     # x-default 指向預設語系（zh-TW）
-    lines.append('<link rel="alternate" hreflang="x-default" href="/">')
+    lines.append(f'<link rel="alternate" hreflang="x-default" href="{BASE_PATH}/">')
     return "\n".join(lines)
 
 
@@ -193,9 +196,9 @@ def build_switcher_html(current_lang, page_kind, slug=None):
     for lang, meta in LANG_META.items():
         prefix = meta["path_prefix"]
         if page_kind == "home":
-            href = f"/{prefix}/" if prefix else "/"
+            href = f"{BASE_PATH}/{prefix}/" if prefix else f"{BASE_PATH}/"
         else:
-            href = f"/{prefix}/articles/{slug}.html" if prefix else f"/articles/{slug}.html"
+            href = f"{BASE_PATH}/{prefix}/articles/{slug}.html" if prefix else f"{BASE_PATH}/articles/{slug}.html"
         active = " active" if lang == current_lang else ""
         items.append(f'      <a class="lang-item{active}" data-lang="{lang}" href="{href}">{meta["name"]}</a>')
 
@@ -220,9 +223,16 @@ def build_auto_detect_script():
   // 所有支援語系 → path_prefix 的對照
   var LANG_PREFIX = {''' + lang_pairs + '''};
   var DEFAULT_LANG = ''' + repr(DEFAULT_LANG) + ''';
+  var BASE_PATH = ''' + repr(BASE_PATH) + ''';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
 
   // 決定目前頁面位於哪個語系 prefix
-  var path = window.location.pathname;
   var currentPrefix = '';
   for (var code in LANG_PREFIX) {
     var p = LANG_PREFIX[code];
@@ -269,9 +279,9 @@ def build_auto_detect_script():
   } else {
     tail = path;
   }
-  var newPath = (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
   newPath = newPath.replace(/\\/{2,}/g, '/');
-  if (newPath === path) return;
+  if (newPath === rawPath) return;
   window.location.replace(newPath + window.location.search + window.location.hash);
 })();
 </script>'''
