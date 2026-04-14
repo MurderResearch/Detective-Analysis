@@ -1,0 +1,22 @@
+{
+  "name": "fb-reply-bot",
+  "version": "0.2.0",
+  "description": "Polling-based Facebook reply bot: every hour fetches page comments and Messenger DMs, then auto-replies via Claude or OpenAI.",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/index.js",
+    "once": "node src/index.js",
+    "watch": "node src/index.js --watch",
+    "dry": "node src/index.js --dry-run"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.27.0",
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5",
+    "openai": "^4.56.0"
+  }
+}
