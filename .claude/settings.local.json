@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /Users/letranger/Library/CloudStorage/Dropbox/Working/MurderResearch -type f -name .*)",
+      "Bash(grep -r \"token\\\\|api\\\\|secret\\\\|key\\\\|auth\\\\|credentials\\\\|facebook\\\\|graph\\\\|post\" /Users/letranger/Library/CloudStorage/Dropbox/Working/MurderResearch --include=*.json)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(ls:*)",
+      "Bash(git push:*)",
+      "Bash(find /Users/letranger -name *config* -type f)",
+      "Bash(grep -E \"\\\\.\\(json|yaml|yml|toml|txt|py\\)$\")",
+      "Bash(find /Users/letranger -name *cred* -type f)",
+      "Bash(find /Users/letranger/.openclaw/workspace/agents/agatha -type f -name *.py -o -name *.js -o -name *.sh)",
+      "Bash(crontab -l)",
+      "Bash(find /Users/letranger -name *.plist)"
+    ]
+  }
+}
