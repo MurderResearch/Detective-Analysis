@@ -31,4 +31,18 @@ fi
 git push
 
 echo ""
+echo "📱 發文到 FB 粉專..."
+# 若今日已發文過，script 會自行跳過；失敗不中斷整體流程（僅警告）
+if ! python3 scripts/post-to-fb.py; then
+  echo "⚠️  FB 發文失敗，請檢查 token 或手動執行 python3 scripts/post-to-fb.py"
+fi
+
+# 若 FB 發文後更新了 fb-posted.json，再提交一次
+if ! git diff --quiet docs/fb-summaries/fb-posted.json 2>/dev/null; then
+  git add docs/fb-summaries/fb-posted.json
+  git commit -m "$(date '+%Y-%m-%d') FB 發文紀錄" || true
+  git push || true
+fi
+
+echo ""
 echo "✅ 完成！網站將在 1-2 分鐘內更新。"
