@@ -56,7 +56,7 @@ Analysis files follow a strict structure defined in `ANALYSIS_FRAMEWORK.md`: 基
 
 ## 每日自動化 SOP（Cowork 排程任務會觸發此流程）
 
-這個 repo 由 Cowork 排程任務 `daily-murder-analysis` 每天早上 08:06（Taiwan time）觸發一個 Claude session 來執行。那個 session 的 Claude（= 你，如果你正在讀這段）請**完整依序執行以下步驟**：
+這個 repo 由 Cowork 排程任務 `daily-murder-analysis` 每天清晨 05:06（Taiwan time）觸發一個 Claude session 來執行。那個 session 的 Claude（= 你，如果你正在讀這段）請**完整依序執行以下步驟**：
 
 ### Step 1：判斷今天該分析哪本書
 
