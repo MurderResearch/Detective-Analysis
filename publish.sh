@@ -7,7 +7,7 @@ set -euo pipefail
 cd "$(dirname "$0")"
 
 # 清掉可能殘留的 git lock 檔（前次當掉造成）
-rm -f .git/HEAD.lock .git/refs/remotes/origin/main.lock 2>/dev/null || true
+rm -f .git/HEAD.lock .git/index.lock .git/refs/remotes/origin/main.lock 2>/dev/null || true
 
 echo "🔨 建置網站..."
 if ! python3 build.py; then

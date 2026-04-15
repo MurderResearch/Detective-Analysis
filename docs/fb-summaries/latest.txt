@@ -1,10 +1,10 @@
-📖 【推理解剖室】一桶阿蒙提拉多（The Cask of Amontillado）
-✍️ 愛倫·坡（Edgar Allan Poe） · 1846
+📖 【推理解剖室】厄舍府的沒落（The Fall of the House of Usher）
+✍️ 愛倫·坡（Edgar Allan Poe） · 
 
 推理難度 ★★★★☆ | 迷霧等級 ★★★★☆
 
-嘉年華狂歡的夜晚，敘述者蒙特雷索爾（Montresor）在街上遇見老友福圖納托（Fortunato）。Montresor 以一桶珍稀的阿蒙提拉多雪莉酒為誘餌，引導這位以品酒聞名、此刻半醉的男人深入自家宅邸的地下墓穴。到達最深處後，Montresor 將 Fortunato 鎖鍊固定，以磚塊和灰泥將其活埋在壁龕之中。故事以 Montresor 的補充收尾——這一切已過去整整五十年，無人察覺。 這個故事的特殊之處在於：我們從頭就知道兇手是誰、受害者是誰。傳統的 whodunit 結構被完全顛覆——謎團不在「誰幹的」，而在「如何做到」與「為什麼這麼執著」。 ---
+敘述者受童年好友羅德里克·厄舍（Roderick Usher）之邀，來到荒涼湖畔的厄舍古宅陪伴這位神經衰弱的朋友。羅德里克的雙胞胎妹妹瑪德琳（Madeline）罹患一種「偶爾會局部僵直（cataleptical）」的怪病，來訪後不久即被宣告死亡。兄妹二人將瑪德琳暫厝於宅邸地下深處的銅襯墓室中，鎖上沉重鐵門。一週後的暴風雨夜，敘述者讀一部騎士傳奇給羅德里克聽，故事裡每一段「破門」「怪物哀嚎」「盾牌墜地」的聲響，都與宅邸遠處傳來的真實聲音一一對應。羅德里克終於崩潰嘶喊「我們把她活埋了！」話音未落，滿身鮮血的瑪德琳出現在門外，撲向兄長，兩人同時倒地而亡。敘述者奪門而出，回望古宅，屋頂那道本來若有似無…
 
-🔗 完整分析 → https://murderresearch.github.io/Detective-Analysis/articles/the-cask-of-amontillado.html
+🔗 完整分析 → https://murderresearch.github.io/Detective-Analysis/articles/the-fall-of-the-house-of-usher.html
 
 #推理小說 #推理解剖室 #愛倫坡
