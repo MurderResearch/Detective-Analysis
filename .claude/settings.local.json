@@ -12,7 +12,25 @@
       "Bash(find /Users/letranger -name *cred* -type f)",
       "Bash(find /Users/letranger/.openclaw/workspace/agents/agatha -type f -name *.py -o -name *.js -o -name *.sh)",
       "Bash(crontab -l)",
-      "Bash(find /Users/letranger -name *.plist)"
+      "Bash(find /Users/letranger -name *.plist)",
+      "Bash(python3:*)",
+      "Bash(pip3 install:*)",
+      "Bash(npm run:*)",
+      "Bash(curl -s 'https://graph.facebook.com/v20.0/me/permissions?access_token=EAAWdR6WTc5EBRLRhqOuHVoWQ7KpXzN2UIndNkctwllBLiWAzUTapcFFrDcFmZBxXCvQpi9Ccly42U3jD9HgcEjlVvlyNbyPS3usKrCDlSo4BAo5NZBPFDy1mS5NZA8sGw9YcKjF4ON26DkUxAfTuKBGHdZCkYtid6cvDqEGIsJSEXiv1dRkUYorpsRmBsEViaTnvjOqZC')",
+      "Bash(curl -s 'https://graph.facebook.com/v20.0/me?fields=id,name&access_token=EAAWdR6WTc5EBRLRhqOuHVoWQ7KpXzN2UIndNkctwllBLiWAzUTapcFFrDcFmZBxXCvQpi9Ccly42U3jD9HgcEjlVvlyNbyPS3usKrCDlSo4BAo5NZBPFDy1mS5NZA8sGw9YcKjF4ON26DkUxAfTuKBGHdZCkYtid6cvDqEGIsJSEXiv1dRkUYorpsRmBsEViaTnvjOqZC')",
+      "Bash(curl -s 'https://graph.facebook.com/v20.0/1045051432031782/posts?fields=id,message,created_time&limit=3&access_token=EAAWdR6WTc5EBRLRhqOuHVoWQ7KpXzN2UIndNkctwllBLiWAzUTapcFFrDcFmZBxXCvQpi9Ccly42U3jD9HgcEjlVvlyNbyPS3usKrCDlSo4BAo5NZBPFDy1mS5NZA8sGw9YcKjF4ON26DkUxAfTuKBGHdZCkYtid6cvDqEGIsJSEXiv1dRkUYorpsRmBsEViaTnvjOqZC')",
+      "Bash(curl -s 'https://graph.facebook.com/v20.0/122098695512738585_883186574782323/comments?fields=id,from,message&access_token=EAAWdR6WTc5EBRLRhqOuHVoWQ7KpXzN2UIndNkctwllBLiWAzUTapcFFrDcFmZBxXCvQpi9Ccly42U3jD9HgcEjlVvlyNbyPS3usKrCDlSo4BAo5NZBPFDy1mS5NZA8sGw9YcKjF4ON26DkUxAfTuKBGHdZCkYtid6cvDqEGIsJSEXiv1dRkUYorpsRmBsEViaTnvjOqZC')",
+      "Bash(bash:*)",
+      "Bash(launchctl print:*)",
+      "Bash(node:*)",
+      "Bash(launchctl kickstart:*)",
+      "Bash(chmod +x:*)",
+      "Bash(launchctl bootout:*)",
+      "Bash(launchctl bootstrap:*)",
+      "Bash(launchctl enable:*)",
+      "Read(//private/tmp/**)",
+      "Bash(ln:*)",
+      "Bash(crontab -)"
     ]
   }
 }

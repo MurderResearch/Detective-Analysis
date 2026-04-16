@@ -24,7 +24,7 @@
   <string>__PROJECT_DIR__</string>
 
   <key>StartInterval</key>
-  <integer>3600</integer>
+  <integer>1200</integer>
 
   <key>RunAtLoad</key>
   <true/>

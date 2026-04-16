@@ -45,6 +45,12 @@ async function handleComment(comment, post, pageId) {
     return 'skipped';
   }
 
+  if (looksLikeInjection(text)) {
+    logger.warn('prompt injection attempt detected, skip', { cid, text });
+    state.mark('comment', cid);
+    return 'skipped';
+  }
+
   if (!matchesKeywords(text)) {
     logger.debug('keyword not matched, skip', { cid });
     state.mark('comment', cid);
@@ -67,6 +73,36 @@ async function handleComment(comment, post, pageId) {
     logger.error('handleComment failed', err.response?.data || err.message);
     return 'error';
   }
+}
+
+/**
+ * 偵測明顯的 prompt injection 嘗試。
+ * 符合任一模式就回傳 true，該留言會被跳過不回覆。
+ */
+function looksLikeInjection(text) {
+  const lower = text.toLowerCase();
+  const patterns = [
+    // 中文 injection
+    /忽略(以上|上面|之前|先前)(的|所有)?(指令|規則|設定|提示)/,
+    /你現在是(一[隻個頭條])?/,
+    /請?(用|以).{0,6}(語|腔|口吻|身份|角色)(回覆|回答|說話)/,
+    /輸出(你的)?(system\s*prompt|系統提示|指令|設定)/,
+    /貼出.{0,6}(token|key|密碼|密鑰|金鑰)/,
+    /洩漏.{0,6}(token|key|api|密碼|設定)/,
+    /扮演.{0,4}(角色|人物|機器人|助手)/,
+    /從現在起你(是|要|必須)/,
+    // 英文 injection
+    /ignore\s+(all\s+)?(previous|above|prior)\s+(instructions?|rules?|prompts?)/i,
+    /you\s+are\s+now\s+a/i,
+    /repeat\s+(the\s+)?(above|system|your)\s*(prompt|instructions?|message)?/i,
+    /output\s+(your\s+)?(system\s*prompt|instructions?|api\s*key|token)/i,
+    /reveal\s+(your\s+)?(system|api|secret|token|key|prompt)/i,
+    /pretend\s+(to\s+be|you\s+are)/i,
+    /jailbreak/i,
+    /DAN\s*mode/i,
+    /do\s+anything\s+now/i,
+  ];
+  return patterns.some((p) => p.test(text));
 }
 
 function matchesKeywords(text) {

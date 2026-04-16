@@ -73,6 +73,20 @@ Analysis files follow a strict structure defined in `ANALYSIS_FRAMEWORK.md`: 基
 3. 依框架寫出 `{作者}/{書名}_analysis.md`，**檔名必須與 .txt 原始檔一致、後加 `_analysis`**（例：`The_Fall_of_the_House_of_Usher_analysis.md`）。
 4. 品質底線：必須包含「基本資訊 / 推理難度總評 / 故事大綱 / 真相拆解（含關鍵線索、輔助線索、假線索三表）/ 推理路徑重建 / 補充說明」六大段。可參考 `poe/The_Cask_of_Amontillado_analysis.md` 作為文風與深度範本。
 
+### Step 2.5：翻譯分析稿為其他語系
+
+分析稿寫完後，必須為該篇產生 7 個語系的翻譯檔，放入 `{作者}/translations/` 目錄：
+
+1. 翻譯檔命名規則：`{slug}.{lang}.md`（slug 是 kebab-case，例：`the-fall-of-the-house-of-usher.en.md`）
+2. 需要產生的語系：`en`、`zh-CN`、`ja`、`ko`、`de`、`es`、`fr`
+3. 每個翻譯檔必須是**完整、忠實**的翻譯——不可摘要或省略任何段落、表格、線索
+4. metadata 標籤必須使用該語系的對應詞（見 `build.py` 的 `META_LABELS` 字典），以便 build 時正確解析
+5. ⭐ 星等保持原樣不翻譯
+6. 可參考 `poe/translations/the-cask-of-amontillado.en.md` 作為英文翻譯範本
+7. `zh-CN` 版本需將繁體中文全部轉為簡體中文
+
+**提示：** 可同時啟動多個 Agent 並行翻譯以加速。
+
 ### Step 3：建置 + Push + 發 FB（一條龍）
 
 ```bash
