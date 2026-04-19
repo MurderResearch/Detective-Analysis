@@ -50,13 +50,8 @@ jobs:
           TITLE=$(python3 -c "import json; print(json.load(open('docs/fb-summaries/fb-posted.json'))['title'])" 2>/dev/null || echo "unknown")
           POST_ID=$(python3 -c "import json; print(json.load(open('docs/fb-summaries/fb-posted.json'))['post_id'])" 2>/dev/null || echo "")
           DATE=$(TZ='Asia/Taipei' date '+%Y-%m-%d')
-          MSG="✅ ${DATE} 每日分析發布完成
-📖 ${TITLE}
-🔗 https://www.facebook.com/${POST_ID}
-🌐 https://murderresearch.github.io/Detective-Analysis/"
-          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
-            --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
-            --data-urlencode "text=${MSG}" > /dev/null
+          MSG=$(printf '✅ %s 每日分析發布完成\n📖 %s\n🔗 https://www.facebook.com/%s\n🌐 https://murderresearch.github.io/Detective-Analysis/' "$DATE" "$TITLE" "$POST_ID")
+          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" --data-urlencode "text=${MSG}" > /dev/null
 
       - name: Notify Telegram (failure)
         if: failure()
@@ -65,8 +60,5 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           DATE=$(TZ='Asia/Taipei' date '+%Y-%m-%d')
-          MSG="❌ ${DATE} FB 發文 workflow 失敗
-Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
-            --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
-            --data-urlencode "text=${MSG}" > /dev/null
+          MSG=$(printf '❌ %s FB 發文 workflow 失敗\nRun: %s/%s/actions/runs/%s' "$DATE" "${{ github.server_url }}" "${{ github.repository }}" "${{ github.run_id }}")
+          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" --data-urlencode "text=${MSG}" > /dev/null
