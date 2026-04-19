@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>アーサー・ゴードン・ピムの物語（The Narrative of Arthur Gordon Pym of Nantucket） — 推理解剖室</title>
+<meta name="description" content="語り手アーサー・ゴードン・ピムはナンタケット島の人である。親友オーガスタス・バーナードの唆しにより、彼は水夫に変装して捕鯨船グランパス号に密航し、海上冒険を試みようとする。彼は船艙の最深部にある貨物箱に隠されるが、船上で突発した反乱によって暗がりに忘れ去られ、窒息と飢餓寸前に陥り——愛犬タイガーのおかげでかろうじて生き">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-narrative-of-arthur-gordon-pym.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-narrative-of-arthur-gordon-pym.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-narrative-of-arthur-gordon-pym.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-narrative-of-arthur-gordon-pym.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-narrative-of-arthur-gordon-pym.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-narrative-of-arthur-gordon-pym.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-narrative-of-arthur-gordon-pym.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-narrative-of-arthur-gordon-pym.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif JP', serif;
+  --font-sans: 'Noto Sans JP', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">推理解剖室</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">ホーム</a>
+        <a href="../index.html#latest">最新</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="言語" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 日本語</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-narrative-of-arthur-gordon-pym.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-narrative-of-arthur-gordon-pym.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-narrative-of-arthur-gordon-pym.html">English</a>
+      <a class="lang-item active" data-lang="ja" href="/Detective-Analysis/ja/articles/the-narrative-of-arthur-gordon-pym.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/the-narrative-of-arthur-gordon-pym.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/the-narrative-of-arthur-gordon-pym.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/the-narrative-of-arthur-gordon-pym.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/the-narrative-of-arthur-gordon-pym.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">エドガー・アラン・ポー · </div>
+    <h1>アーサー・ゴードン・ピムの物語（The Narrative of Arthur Gordon Pym of Nantucket）</h1>
+    <div class="subtitle">エドガー・アラン・ポー（Edgar Allan Poe） · 長編（ポー唯一の完成された長編小説）</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">推理難易度</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">霧の濃度</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="the-narrative-of-arthur-gordon-pym-of-nantucket">アーサー・ゴードン・ピムの物語（The Narrative of Arthur Gordon Pym of Nantucket）— 推理分析</h1>
+<h2 id="_1">基本情報</h2>
+<ul>
+<li>著者：エドガー・アラン・ポー（Edgar Allan Poe）</li>
+<li>発表年：1838年</li>
+<li>ジャンル：長編（ポー唯一の完成された長編小説）</li>
+<li>探偵：なし（一人称の語り手ピムが当事者かつ目撃者）</li>
+<li>中心となる謎の型：whydunit + whatdunit + 信頼できない語り手（unreliable narrator）+ 擬似記録的枠組み（pseudo-documentary hoax）</li>
+</ul>
+<hr>
+<h2 id="_2">推理難易度総評</h2>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難易度（Deducibility）</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>平均収束点95%——大半の謎は終章XXVに至るまで浮上せず、そして最も核心の「白き巨人」の謎には答えそのものが存在しない：本文は唐突に中断され、手がかりは「著者が意図的に読者に収束させない」という一点に収束する</td>
+</tr>
+<tr>
+<td>霧の濃度（Fog Rating）</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>極度の誤導——ポーは同時に擬似的な序文（本書を実在の回想録だと偽る）、信頼できない語り手、唐突な章の中断、そして「編者」と署名された付記が逆に本文を解釈し直すという仕掛けを発動させる。小説全体が一つの推理の罠なのである</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_3">あらすじ</h2>
+<p>語り手アーサー・ゴードン・ピムはナンタケット島の人である。親友オーガスタス・バーナードの唆しにより、彼は水夫に変装して捕鯨船グランパス号に密航し、海上冒険を試みようとする。彼は船艙の最深部にある貨物箱に隠されるが、船上で突発した反乱によって暗がりに忘れ去られ、窒息と飢餓寸前に陥り——愛犬タイガーのおかげでかろうじて生き延びる。</p>
+<p>船を乗っ取った者たちは二派に分かれて内紛を起こし、生き残った反乱者の中には半インディアンの血を引く水夫ピーターズがいる。ピム、オーガスタス、ピーターズは反撃を密かに計画し、死体の「幽霊」に扮して嵐の夜に船艙内に現れ、反乱首領を驚愕死させ、混戦の中で船を奪還する。しかし船は直後に嵐で破壊され、四人は残骸の上で漂流し、極度の飢えと渇きを経験した末、ついに籤を引いて人肉を食することを決する——引き当てられた水夫パーカーが殺害され、分け合って食される。オーガスタスは傷の感染で死亡する。</p>
+<p>ピムとピーターズはイギリスのスクーナー船ジェーン・ガイ号に救助され、その南極探検に加わる。船は南緯83度付近の島ツァラル（Tsalal）に到着する——島の住民、動植物、歯までもがすべて漆黒であるにもかかわらず、いかなる「白色」のもの（白布、白い動物の死骸、白い人間の皮膚）に対しても極度の恐怖と憎悪を示す。島王トゥーウィット（Too-wit）は表面上は友好的だが、実は罠を仕掛けている：船員を谷へと誘い込んだのち山崩れを起こし全員を生き埋めにする。ピムとピーターズは運よく裂け目に身を潜めて難を逃れ、島民がジェーン・ガイ号を略奪・焼き討ちするのを目撃するが、最後には火薬爆発によって島民側も甚大な犠牲を被る。</p>
+<p>逃亡の過程で、ピムは山体の裂け目に奇怪な形状の坑道と刻印の連続を発見する——後の「編者注」がこれらの刻印が、それぞれエチオピア語の「影」、アラビア語の「白」、古代エジプト語の「南方の領域」であることを明かす。ピムとピーターズはツァラルの人質ヌー・ヌーを連れて丸木舟で南へ漂流を続け、次第に暖かくなり、海水が乳白色を呈し、空気中に白い灰が舞い落ちる不可解な海域に入る。白い大鳥が絶えず「テケリ・リ！」と叫び声を上げながら飛び越え、海水の温度は触れられないほどに高まる。ついに語り手は、南の地平線に横たわる巨大な白い瀑布と、その瀑布の中から立ち昇る「いかなる人間よりも巨大で、全身が白に覆われた人影」を目にする——そして<strong>叙述はここで中断する</strong>。</p>
+<p>本書の末尾には「編者」の付記が付され、ピムがある事故で死亡したこと、最後の二、三章を書き終える前に終えたこと、そして「永久に失われた」と信じられていることが告げられ、さらに山中の裂け目に刻まれた文字の語源学的解読が示され、無数の未解の謎が残される。</p>
+<hr>
+<h2 id="_4">真相の分解</h2>
+<p>本書の「真相」は単一の事件の謎の答えではなく、多層的に重なり合う謎の面によって構成されている。ポーはこの小説において、読者自身を対象としたメタ推理ゲームを繰り広げている：<strong>謎は決して閉じられることなく、作者によって意図的に切断され、宙吊りにされ、問い返されている</strong>のだ。</p>
+<h3 id="whydunit">真相その一：ツァラル島の「白色への恐怖」とは何か？（whydunit）</h3>
+<ul>
+<li><strong>手がかりの収束点：約95%（本文は明示せず、終章「編者注」の語源的手がかりと組み合わせて初めて組み立てられる）</strong></li>
+<li>答え：作者は確定的な答えを与えていない。しかしすべての手がかりは一つの可能な読解を指し示している——ツァラルの黒い世界と極南の白い世界は、葬られたある古代文明／宇宙論の両極である。ツァラル島民と白色との間には、原始的、宗教的、あるいは種族的な対立関係が存在する；そしてこの対立の根源、本質、記憶はすべて失われ、島民自身にも説明のつかない「テケリ・リ！」という叫びしか残っていない。</li>
+</ul>
+<h4 id="_5">重要な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかり</th>
+<th>出現位置（百分比）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>ツァラル島では「すべてが黒い」——人、動物、植物、岩石、歯までもが</td>
+<td>約75–80%</td>
+<td>島の住民生態と「白色」との絶対的対立を設定している</td>
+</tr>
+<tr>
+<td>2</td>
+<td>トゥーウィットは船艙内の白い板張りと白鏡を見るや恐怖に震え、痙攣し、怯え竦む</td>
+<td>約78%</td>
+<td>白色が生理的レベルの反応を引き起こしており、単なる好奇心ではない</td>
+</tr>
+<tr>
+<td>3</td>
+<td>島民は船上で拾った白い動物の死骸を取り囲み、遠巻きに眺めながら「テケリ・リ！」と一斉に叫ぶ</td>
+<td>約85%</td>
+<td>白色は神聖な禁忌であり、また何らかの恐怖を指し示す記号でもある</td>
+</tr>
+<tr>
+<td>4</td>
+<td>ヌー・ヌーは白いハンカチで顔を軽く撫でられただけで痙攣し昏倒する</td>
+<td>約93%</td>
+<td>白色はほとんど魔法のような致傷力を備えている</td>
+</tr>
+<tr>
+<td>5</td>
+<td>終章の編者注：裂け目の象形文字はそれぞれエチオピア語の「影」、アラビア語の「白」、古代エジプト語の「南方の領域」であり、北側の人像の腕は南を指している</td>
+<td>約99%</td>
+<td><strong>最後の重要な手がかり</strong>——島の黒、南の白、そして古代文字における「白影の対立」を一つの宇宙論的構図へと連結する</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_6">補助的な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかり</th>
+<th>出現位置（百分比）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>島名「Tsalal」は冒頭に長く伸びる歯擦音を発し、島王の名「Tsalemon」と同じく、また島特有の黒鷺の鳴き声とも同じである</td>
+<td>約95%</td>
+<td>言語、地理、生物の三重の同型性は、古代の語源を暗示する</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ジェーン・ガイ号の爆発時、白い動物の死骸が浜辺へと吹き飛ばされ、島民は集団で暴動を起こし、木杭を立て直して儀式を再開する</td>
+<td>約90%</td>
+<td>白い遺骸は禁忌の物体と見なされ、儀式によって封印せねばならない</td>
+</tr>
+<tr>
+<td>3</td>
+<td>島民は「上唇を持ち上げて黒い歯を見せる」動作を、ある種の識別あるいは誓約の所作として慣用している</td>
+<td>約97%</td>
+<td>黒は身体的アイデンティティの記号であり、白との対立を成す</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_7">偽の手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかり</th>
+<th>出現位置（百分比）</th>
+<th>誤導の方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>トゥーウィットは終始熱心にもてなし、島の産物を披露し、船員を内陸深くへと誘う</td>
+<td>約80–84%</td>
+<td>船員（と読者）にこれは第一級接触の友好的交流だと思わせ、伏兵の陰謀を覆い隠す</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ガイ船長が鏡、斧、ガラス玉などの「ヨーロッパの商品」で島民の反応を試す</td>
+<td>約78%</td>
+<td>読者にこれを一般的な植民地遭遇記であると思わせ、島民の反応の奇妙な細部を見落とさせる</td>
+</tr>
+<tr>
+<td>3</td>
+<td>「白色への恐怖とは単に世間知らずゆえである」という示唆</td>
+<td>全篇中盤</td>
+<td>読者に文明的優越感をもって先住民を読解させ、その中の宇宙論的な手がかりを見失わせる</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="howdunit">真相その二：ツァラル島民はいかにしてジェーン・ガイ号の船員を屠殺したか？（howdunit）</h3>
+<ul>
+<li><strong>手がかりの収束点：約85%</strong></li>
+<li>答え：トゥーウィットは船員を狭い谷間へと誘い込み、両側の岩壁に事前に木杭を打ち込んで岩塊を緩めておき、隊列が谷底に入るのを待って同時に押し落とし、船員全体を山崩れの下に生き埋めにした。隊列の最後尾を歩き、経路から逸れていたピムとピーターズだけが難を免れた。</li>
+</ul>
+<h4 id="_8">重要な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかり</th>
+<th>出現位置（百分比）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>トゥーウィットは「自ら案内する」と島の特産を見に行くことに固執するが、遠回りをし、狭い山道を選ぶ</td>
+<td>約83%</td>
+<td>地形を主体的に選択することは、罠を設計するための前提である</td>
+</tr>
+<tr>
+<td>2</td>
+<td>隊列が谷に入ると、両側の岩壁の上方には大勢の先住民が「見物している」が、一人として降りてこない</td>
+<td>約84%</td>
+<td>この時、岩壁の上方にいる者たちは実は操作者であり、観客ではない</td>
+</tr>
+<tr>
+<td>3</td>
+<td>ピムとピーターズは好奇心からちょうど遅れ、側方の裂け目に潜り込んだ——その直後、巨大な崩落音を耳にする</td>
+<td>約85%</td>
+<td>山崩れのタイミングは船員の位置と完璧に対応しており、「自然の事故」を排除する</td>
+</tr>
+<tr>
+<td>4</td>
+<td>その後、裂け目の洞口から観察すると、山の斜面の岩の緩みの痕跡は規則的に配列されており、人為的にこじ開けられたことを示している</td>
+<td>約86%</td>
+<td>決定的な物証——地質構造から罠の設計を確認する</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_9">補助的な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかり</th>
+<th>出現位置（百分比）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>島民はジェーン・ガイ号の武器（特に大砲）に対して淡々とした反応を示し、備えがあるように見える</td>
+<td>約82%</td>
+<td>彼らはあらかじめ船を襲う計画を立てており、即興ではない</td>
+</tr>
+<tr>
+<td>2</td>
+<td>山崩れの直後、島民はすぐに船の脇に現れて船を奪おうとし、動作は演習のように熟練している</td>
+<td>約85–86%</td>
+<td>全行動は予行演習された連続攻撃であることを示す</td>
+</tr>
+<tr>
+<td>3</td>
+<td>島民の配置：黒肌の戦士が山道を守り、丸木舟隊は船の後方に回り、筏隊が正面で牽制する</td>
+<td>約88%</td>
+<td>三方向に分かれた戦術は、予謀であって即興の蜂起ではない</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_10">偽の手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかり</th>
+<th>出現位置（百分比）</th>
+<th>誤導の方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>トゥーウィットは頻繁に服従の姿勢を見せる（地面にひれ伏す、衣の裾に口づけする）</td>
+<td>約80%</td>
+<td>船長に「野蛮人が文明を畏敬している」と誤判させる</td>
+</tr>
+<tr>
+<td>2</td>
+<td>島民は運搬、積み込みを手伝い、アザラシの皮を贈り物として贈る</td>
+<td>約81%</td>
+<td>交易上の相互信頼の幻影を作り出す</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="whatdunit">真相その三：「白き巨人」と南極の謎とは何か？（whatdunit、著者が意図的に余白として残す）</h3>
+<ul>
+<li><strong>手がかりの収束点：無限大（99%+）——著者が意図的に叙述を切断する</strong></li>
+<li>答え：<strong>ポーは意図的に読者に答えを見つけさせない</strong>。本文はピムが巨人と正面から向き合う瞬間に中断され、さらに「編者」が死亡告知と語源学的解読を付け加えることで、読者を二重の宙吊りに押し込む：この光景が現実なのか幻覚なのかも確認できず、語り手がまだ生きているのかどうかも確認できない。</li>
+</ul>
+<h4 id="_11">重要な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかり</th>
+<th>出現位置（百分比）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>ベネット島を離れて以降、ひたすら南下しているにもかかわらず氷層は一切見られず、海水はかえってますます暖かくなる</td>
+<td>約95%</td>
+<td>地理的常識が覆される——読者はこれが現実的意味における南極ではないことを警戒すべきである</td>
+</tr>
+<tr>
+<td>2</td>
+<td>海水は乳白色となり透明度を失うが、「近くは極めて静かであるが、遠くはしばしば突然湧き立つ」</td>
+<td>約96%</td>
+<td>海面下に巨大な存在あるいは地殻活動があることを暗示する</td>
+</tr>
+<tr>
+<td>3</td>
+<td>空から「灰のようで灰ではない」白い粉末が舞い落ちる</td>
+<td>約97%</td>
+<td>すでに自然的な気象現象ではない</td>
+</tr>
+<tr>
+<td>4</td>
+<td>白い大鳥が絶えず「テケリ・リ」と鳴きながら飛び越え、ツァラル人質の白に対する反応と完全に呼応する</td>
+<td>約98%</td>
+<td>白い鳥はツァラルと結ぶ越境的な証人である</td>
+</tr>
+<tr>
+<td>5</td>
+<td>乳白色の深海から光が立ち昇り、「いかなる人間よりも巨大で、全身が真っ白で覆い隠された人影」が現れる——叙述はここで中断する</td>
+<td>約99%</td>
+<td><strong>最後の重要な手がかり</strong>であり同時に最後の一文でもある——しかし答えは与えられない</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_12">補助的な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかり</th>
+<th>出現位置（百分比）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>ヌー・ヌーは死の間際まで「なぜお前たちの仲間を屠殺したのか」という問いに答えることを拒み、逆に唇を持ち上げて黒い歯を見せる</td>
+<td>約98%</td>
+<td>「屠殺」は政治的動機ではなく、宇宙論的な禁忌であることを暗示する——言語は既に機能しない</td>
+</tr>
+<tr>
+<td>2</td>
+<td>奇異な海域が現れる前、ピムは「心身に名状しがたい鈍麻が生じる」と記述する</td>
+<td>約96%</td>
+<td>語り手の意識状態は異常であり、読者はこの時点の描写が覚醒した観察であると信じることができない</td>
+</tr>
+<tr>
+<td>3</td>
+<td>ピムは「明らかな理由により、日付を厳密に記すことができない」と述べる</td>
+<td>約95%（脚注）</td>
+<td>語り手は自ら時間感覚が狂っていることを認めており、考証不能な結末をあらかじめ免責している</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_13">偽の手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかり</th>
+<th>出現位置（百分比）</th>
+<th>誤導の方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>本書前半は精密な航海、捕鯨、地理技術の描写によって「写実小説」のスタイルを築く</td>
+<td>約0–60%</td>
+<td>読者をドキュメンタリー的な思考に慣れさせ、警戒を緩めさせ、後半でようやく超現実に陥っていることに気づかせる</td>
+</tr>
+<tr>
+<td>2</td>
+<td>序文は「本書の前半はポー氏による代筆だが、一事として事実が歪曲されていない」と主張する</td>
+<td>約1%</td>
+<td>「ポー」と「語り手」の位置を入れ替え——ポーが編集者に過ぎず著者ではないと読者に思わせるが、実は全体がポーの虚構である</td>
+</tr>
+<tr>
+<td>3</td>
+<td>末尾の編者注は厳密な学術的口調で象形文字を論ずる</td>
+<td>約99.5%</td>
+<td>「学術的分析」を装って推理の解答であるかのように偽装するが、実は謎をより広い範囲（古代文明、南極地理、語源学）へと押し広げる</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="meta-mystery">真相その四：語り手の信頼性（meta-mystery）</h3>
+<ul>
+<li><strong>手がかりの収束点：約1%で既に仕掛けられ、約100%に至って初めて作者の意図が確認できる</strong></li>
+<li>答え：ピム自身が信頼できない語り手である。<strong>「Arthur Gordon Pym」</strong> という名前の三つの音節は、それぞれ <strong>Edgar Allan Poe</strong> に対応している（A–Pの頭文字、長音節の対応するリズム）。全編はポーが虚構の語り手の口を借りて行った大規模な擬似記録的実験なのである。</li>
+</ul>
+<h4 id="_14">重要な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかり</th>
+<th>出現位置（百分比）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>序文は本書が「実在の回想録」だと偽り、「ポー」を作者の位置ではなく登場人物の位置に置く</td>
+<td>約1%</td>
+<td>叙述の枠組み全体が冒頭から嘘をついている——これはポーのメタ的手法である</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ピムは繰り返し、記憶が曖昧であり、日付が照合できず、夢と覚醒が入り混じることを認める</td>
+<td>全篇を貫いて</td>
+<td>語り手自身が信頼できないと自認している</td>
+</tr>
+<tr>
+<td>3</td>
+<td>ピムは陸上でピーターズと再会して互いの叙述を検証することが一切ない——物語には第三者による裏付けがない</td>
+<td>全篇</td>
+<td>単独の証言であり真偽を問うのが難しい</td>
+</tr>
+<tr>
+<td>4</td>
+<td>「編者注」は最後に逆にピムが裂け目の文字を見誤ったことを指摘する——語り手の重要な判断が、作者によって同じ本の中で否定される</td>
+<td>約99.5%</td>
+<td>作者は編者の身分で自ら筆下の語り手の誤りを暴き、本文に対する読者の信頼を揺るがす</td>
+</tr>
+<tr>
+<td>5</td>
+<td>本書の末尾のあの一文「<em>我、これを山中に刻めり、我が復讐は岩の塵の上に</em>」は署名も注釈もなく、誰の手によるのか分からない</td>
+<td>99.9%</td>
+<td>最後の重要な手がかり——しかし永遠の裂け目でもある</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_15">補助的な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかり</th>
+<th>出現位置（百分比）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>本書には時間論理の前後に齟齬がある（日付、星象、緯度の推算に矛盾がある）</td>
+<td>全篇を貫いて</td>
+<td>実在の回想録にあるような誤りのパターンに合致するが、同時に虚構の証拠でもある</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ピーターズの人物像描写は、極度に誇張される一方（巨大な力、長い腕）で、極度に日常的でもある（雑談、食事）</td>
+<td>約40–70%</td>
+<td>ピーターズは半ば伝説化された人物のようであり、写実小説の人物に完全には属していない</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_16">偽の手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかり</th>
+<th>出現位置（百分比）</th>
+<th>誤導の方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>本書前半は実在する船名、実在の事件、実在の航路を大量に引用する</td>
+<td>全篇前半</td>
+<td>虚構の事件を実在の座標の中に置くことで、読者に無意識のうちに本物だと信じ込ませる</td>
+</tr>
+<tr>
+<td>2</td>
+<td>脚注には他の「類似の記録」が引用される（例えばブリッグ船ポリー号の難破）</td>
+<td>約58%</td>
+<td>他者の実在の記録によって本書の擬似記録感を強化する</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_17">推論過程の再構築</h2>
+<h3 id="whydunit_1">第一の経路：ツァラル白色恐怖の謎（whydunit）</h3>
+<p>一般の読者は75%でツァラル島に入ったあたりから、「ここではすべてが黒い」という異常感を蓄積し始めるべきである。トゥーウィットが船上の白い板張りを見た時の生理的反応（約78%）は最初の警告である。ヌー・ヌーの白い布への極端な反応（約93%）は、「白色への恐怖」がツァラル人全員の集団的反射であることを確認させる。しかしこの恐怖の<strong>意味</strong>を理解するためには、99%の「編者注」まで読み進め、三つの地理—言語—生物の手がかり（ツァラルの歯擦音＝黒鷺の鳴き声＝島王の名）と古代の語根（影／白／南方）を一つの宇宙論的構図へと連結しなければならない。</p>
+<p><strong>読者ができる最遠の推理</strong>：白と黒はツァラル文化における禁忌の二元対立であり、失われた古代の信仰体系を指し示している可能性がある。しかしなぜなのか、いつ始まったのか、どの神や出来事に関わっているのか？<strong>作者は答えを与えていない。</strong></p>
+<h3 id="howdunit_1">第二の経路：ツァラル屠殺の手法（howdunit）</h3>
+<p>これは本書で唯一の「古典的な推理」型の謎である。トゥーウィットが狭い経路を選ぶ（約83%）こと、島民が山頂に集まりながら動こうとしない（約84%）こと、そしてピムが遅れて裂け目に潜り込んだ瞬間に山崩れが発生する（約85%）こと——すべての手がかりが半章のうちに急速に収束する。注意深い読者はトゥーウィットが自ら案内すると固執した時点で警戒すべきであり、岩の緩みの痕跡が目視で確認された時点（約86%）で推理を完了することができる。</p>
+<h3 id="whatdunit_1">第三の経路：白き巨人と南極の謎（whatdunit）</h3>
+<p>この推理の経路は<strong>作者の設計において終点が存在しない</strong>。95%から始まり、すべての自然法則（氷層の消失、海水の温暖化、海水の白色化、空からの灰の降下）が読者に告げている：これは既に現実的意味における地理探検ではなく、何らかの宇宙論的あるいは形而上的な境界に入っている、と。読者ができる最大限の推理は：<strong>この光景は物理法則で説明することができない</strong>ということである。しかし巨人は誰なのか？南極には何があるのか？ポーは叙述の中断と「編者」の擬似的代筆によって答えの代わりとする。これはポーが推理小説史全体においてなした最も大胆な反推理操作である——<strong>彼は謎そのものを謎たらしめた</strong>のである。</p>
+<h3 id="meta-mystery_1">第四の経路：叙述の信頼性（meta-mystery）</h3>
+<p>この経路は巻頭の一ページ目の序文から既に仕掛けられている——ポーは「ポー」を登場人物の身分として登場させ（約1%）、語り手を実在の人物の身分として署名させる（約1.2%）——しかしこの叙述の詐術を見抜くためには、読者は全編を読み終えた後、序文と編者注の間の落差を改めて噛み締めねばならない。<strong>この詐術に気づくことこそが、ポーが真に真剣な読者のために用意した最後の「真相」</strong>なのである。</p>
+<hr>
+<h2 id="_18">補足</h2>
+<h3 id="_19">これは推理小説なのか？</h3>
+<p>厳密には違う。しかしこれは<strong>推理の論理を解体する長編</strong>である。ポーが本書を書いたのは、現代推理小説の発明（『モルグ街の殺人』1841年）まであと三年という時期で、彼はこのときすべての合理的推理体系を限界まで押し進めた後、意図的にそれを機能不全に陥らせていた。本書は「解ける謎の宇宙」という推理小説の前提に対する反逆と見なすことができる：もし世界そのものが理性によって完全に推論できる体系でないならば、探偵の仕事はどこまでなのか？</p>
+<h3 id="_20">極端な霧の設計</h3>
+<p>本書の霧の濃度が極めて高いのは、単に偽の手がかりが多く、語り手が信頼できないからだけではなく、ポーが同時に三層の欺瞞を発動させているからである：</p>
+<ol>
+<li><strong>擬似記録的序文</strong>：読者にこれが実在の回想録だと誤らせる</li>
+<li><strong>信頼できない語り手</strong>：ピムは自ら記憶が曖昧で、日付が混乱していると認める</li>
+<li><strong>擬似的な編者後記</strong>：「客観的学術」の口調で本文を分解し、語り手の誤判を暗示する</li>
+</ol>
+<p>この三層が共同で一つの<strong>レイモンド・スマリヤン式の論理パズル</strong>を構成する——どの声もすべて嘘をついており、読者はどの声が少なくとも「真相に近い」かを判断しなければならない。そしてこの判断そのものこそ、ポーが設計した究極の推理なのである。</p>
+<h3 id="_21">同作者の他作品との比較</h3>
+<ul>
+<li>『アモンティリャードの樽』の密室的予謀（推理難易度⭐⭐⭐⭐）、および『赤死病の仮面』の寓話的閉鎖体系（推理難易度⭐⭐⭐⭐）と比較して、本書は推理難易度を⭐⭐⭐⭐⭐へと押し上げる——なぜなら前二者の謎の答えは隠されているとはいえ存在しているが、本書の核心の謎の答えは<strong>作者によって能動的に与えることを拒否されている</strong>からである。</li>
+<li>本書の「白き巨人」は『モルグ街の殺人』のオランウータンと対照を成す：後者は理性によって還元可能な偶発事であり、前者は理性が触れ得ぬ存在である。ポーは同じ一本の筆で、推理小説の論理全体を打ち立て、また解体したのである。</li>
+<li>本書はメルヴィルの『白鯨』、ヴェルヌの『氷上のスフィンクス』（続編として）、ラヴクラフトの『狂気の山脈にて』に直接的な影響を与えた——それぞれの作品がピムの欠落した結末を「補おう」と試みているが、どの試みも結局は原作の中断が永遠であることを証明しているに過ぎない。</li>
+</ul>
+<h3 id="_22">推理読者への助言</h3>
+<p>もしあなたが閉じた体系の推理に慣れ親しんだ読者であれば、本書はあなたを極度に不安にさせるだろう。しかしもしあなたが「読み終えても答えがない」ことを一種の合法的な推理体験として受け入れる用意があるならば——そのときピムは、ポーがあなたへと贈る最も深い一つの謎となるだろう。</p>
+    <a href="../index.html" class="back-link">← ホームに戻る</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">推理解剖室</p>
+    <p>五人の作家・八十八の作品・135年にわたる推理文学の難易度の進化。</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

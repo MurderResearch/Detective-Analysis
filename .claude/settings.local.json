@@ -30,7 +30,18 @@
       "Bash(launchctl enable:*)",
       "Read(//private/tmp/**)",
       "Bash(ln:*)",
-      "Bash(crontab -)"
+      "Bash(crontab -)",
+      "Bash(launchctl list *)",
+      "mcp__claude_ai_Google_Calendar__list_events",
+      "Bash(git -C /Users/letranger/Dropbox/Working/MurderResearch status)",
+      "Bash(git *)",
+      "Bash(mkdir -p /tmp/murder-backup-2026-04-19)",
+      "Bash(cp /Users/letranger/Dropbox/Working/MurderResearch/poe/Works_of_Poe_Vol1_analysis.md /tmp/murder-backup-2026-04-19/)",
+      "Bash(cp /Users/letranger/Dropbox/Working/MurderResearch/poe/translations/works-of-poe-vol1.*.md /tmp/murder-backup-2026-04-19/)",
+      "Read(//tmp/**)",
+      "Read(//Users/letranger/**)",
+      "Bash(gh auth *)",
+      "Bash(rsync -a --exclude='.git' --exclude='node_modules' --exclude='.DS_Store' /Users/letranger/Dropbox/Working/MurderResearch/ /Users/letranger/Code/MurderResearch/)"
     ]
   }
 }

@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>에드거 앨런 포 작품집 제1권(The Works of Edgar Allan Poe — Volume 1) — 추리 분석 — 추리해부실</title>
+<meta name="description" content=" 『황금 벌레』(The Gold-Bug, 1843) 파산한 귀족 Legrand는 사우스캐롤라이나주 Sullivan's Island에 은거하며, 흑인 늙은 하인 Jupiter와 뉴펀들랜드 개 한 마리를 벗 삼아 지낸다. 어느 날 그는 해변에서 황금빛 벌레 한 마리와 낡은 양피지 한 장을 ">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/works-of-poe-vol1.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/works-of-poe-vol1.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/works-of-poe-vol1.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/works-of-poe-vol1.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/works-of-poe-vol1.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/works-of-poe-vol1.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/works-of-poe-vol1.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/works-of-poe-vol1.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif KR', serif;
+  --font-sans: 'Noto Sans KR', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">추리해부실</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">홈</a>
+        <a href="../index.html#latest">최신</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="언어" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 한국어</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/works-of-poe-vol1.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/works-of-poe-vol1.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/works-of-poe-vol1.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/works-of-poe-vol1.html">日本語</a>
+      <a class="lang-item active" data-lang="ko" href="/Detective-Analysis/ko/articles/works-of-poe-vol1.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/works-of-poe-vol1.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/works-of-poe-vol1.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/works-of-poe-vol1.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">에드거 앨런 포 · </div>
+    <h1>에드거 앨런 포 작품집 제1권(The Works of Edgar Allan Poe — Volume 1) — 추리 분석</h1>
+    <div class="subtitle">에드거 앨런 포(Edgar Allan Poe) · 단편집(본 분석은 그중 두 편의 추리 작품에 초점을 맞춤)</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">추리 난이도</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">안개 등급</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="1the-works-of-edgar-allan-poe-volume-1">에드거 앨런 포 작품집 제1권(The Works of Edgar Allan Poe — Volume 1) — 추리 분석</h1>
+<h2 id="_1">기본 정보</h2>
+<ul>
+<li>저자: 에드거 앨런 포(Edgar Allan Poe)</li>
+<li>출판년도: 1903년(Raven Edition 판본); 수록 작품들은 원래 1842–1843년에 발표됨</li>
+<li>장르: 단편집(본 분석은 그중 두 편의 추리 작품에 초점을 맞춤)</li>
+<li>탐정: Chevalier C. Auguste Dupin(『마리 로제의 수수께끼』), William Legrand(『황금 벌레』의 아마추어 해독자)</li>
+<li>핵심 수수께끼 유형: 암호 해독(『황금 벌레』) + 안락의자 추리 / 언론 매체 분석(『마리 로제의 수수께끼』)</li>
+</ul>
+<hr>
+<h2 id="_2">추리 난이도 총평</h2>
+<p>본 권에는 여러 편의 작품이 수록되어 있으며, 본 분석에서는 그중 명확한 추리 구조를 지닌 두 작품 — <strong>『황금 벌레』</strong>(The Gold-Bug)와 <strong>『마리 로제의 수수께끼』</strong>(The Mystery of Marie Rogêt) — 를 한 편씩 분석하고, 마지막에 본 권 추리 수록작 전반에 대한 총평을 제시한다. 『모르그 가의 살인』 역시 본 권에 수록되어 있으나 이미 D1에서 단독으로 분석되었으므로 여기서는 반복하지 않는다.</p>
+<table>
+<thead>
+<tr>
+<th>지표</th>
+<th>별점</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>추리 난이도(Deducibility)</td>
+<td>⭐⭐⭐⭐</td>
+<td>평균 수렴점 약 78% — 두 작품 모두 핵심 해답 단서를 마지막 단락에 이르러서야 온전히 드러낸다</td>
+</tr>
+<tr>
+<td>안개 등급(Fog Rating)</td>
+<td>⭐⭐⭐</td>
+<td>『황금 벌레』는 Legrand가 미친 척하여 독자를 오도하고, 『마리 로제』는 다량의 언론 보도에서 비롯된 모순된 정보로 중간 정도의 안개를 형성한다</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_3">줄거리</h2>
+<h3 id="the-gold-bug-1843">『황금 벌레』(The Gold-Bug, 1843)</h3>
+<p>파산한 귀족 Legrand는 사우스캐롤라이나주 Sullivan's Island에 은거하며, 흑인 늙은 하인 Jupiter와 뉴펀들랜드 개 한 마리를 벗 삼아 지낸다. 어느 날 그는 해변에서 황금빛 벌레 한 마리와 낡은 양피지 한 장을 주운다. 수 주가 지난 뒤 그의 행동이 이상해지더니, 화자 '나'와 Jupiter에게 자신과 함께 대륙의 산속으로 보물을 찾으러 가자고 고집한다. 일행은 거대한 튤립나무에 올라가 가지에 박혀 있는 해골을 발견하고, 해골 눈구멍으로 황금 벌레를 늘어뜨려 지점을 잡은 뒤, 황금과 보석이 가득 든 상자를 파낸다 — 17세기 해적 Captain Kidd의 잃어버린 보물이다. 사후 Legrand는 화자에게 설명한다. 양피지에는 열을 가해야 나타나는 은현 잉크로 쓰인 암호가 있었고, 그는 빈도 분석법으로 해독하여 "Bishop's Hostel", "Devil's Seat", "주 가지 일곱 번째 가지 동쪽", "해골의 왼쪽 눈" 등의 단서를 얻어 보물의 위치를 단계적으로 특정했다.</p>
+<h3 id="the-mystery-of-marie-roget-18421843">『마리 로제의 수수께끼』(The Mystery of Marie Rogêt, 1842–1843)</h3>
+<p>『모르그 가』의 속편. 파리 향수 가게의 여점원 Marie Rogêt(실제 사건인 1841년 뉴욕 시가 가게 여점원 Mary Rogers 사건을 투사)가 실종된 지 사흘 후, 시신이 센 강 수면에 떠오른다. 목에 교흔이 있고 옷이 찢겨 있으며 구타당한 뒤 유기된 상태. 경찰이 속수무책이자 뒤팽(Dupin)에게 도움을 청한다. 뒤팽은 사건 내내 아파트에서 단 한 발자국도 나가지 않고, 오로지 각 신문의 스크랩을 증거로 삼아 <strong>언론 텍스트 분석으로 추론</strong>한다. 시신은 틀림없이 Marie이고, 범인은 갱단이 아닌 단독범이며, 범인은 피부가 검은 해군 장교(그녀가 첫 번째 실종 당시 동행했던 '해군 부사관'으로 추정)이고, 사건 현장은 Mme Deluc 여관 근처의 수풀이며, 시신은 배로 운반되었다는 것. 포는 말미의 각주에서 자신이 소설 형식으로 실제 미해결 사건을 해석한 것임을 밝히고 있으며, 훗날 두 관련자의 자백이 뒤팽의 추론을 대체로 뒷받침했다.</p>
+<hr>
+<h2 id="_4">진상 분해</h2>
+<h3 id="1">편 1: 『황금 벌레』</h3>
+<h4 id="1-howdunit">진상 ①: 양피지 암호의 의미(howdunit)</h4>
+<ul>
+<li><strong>단서 수렴점: 약 82%</strong></li>
+<li>답: 암호는 단순 알파벳 치환법을 채택하고 있으며, 해독하면 "A good glass in the bishop's hostel in the devil's seat forty-one degrees and thirteen minutes northeast and by north main branch seventh limb east side shoot from the left eye of the death's-head a bee line from the tree through the shot fifty feet out"가 된다 — Bessop 가문의 옛 성을 기점으로, 망원경으로 '악마의 의자' 움푹 팬 곳에서 나무 위 해골을 포착하고, 해골의 왼쪽 눈에서 줄을 50피트 늘어뜨린 곳이 보물이 묻힌 지점이다.</li>
+</ul>
+<h5 id="_5">핵심 단서</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서</th>
+<th>위치（%）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Legrand가 그린 '벌레'가 실은 해골 문양이었음(양피지 뒷면이 불에 구워져 드러남)</td>
+<td>약 15%</td>
+<td>작품 최초의 이상 신호 — 해골은 해적의 고전적 상징</td>
+</tr>
+<tr>
+<td>2</td>
+<td>주운 것은 양피지(parchment)이지 보통 종이(paper)가 아니다 — 장기 보존을 의미</td>
+<td>약 42%</td>
+<td>이 물건이 중요한 기록을 담고 있음을 암시</td>
+</tr>
+<tr>
+<td>3</td>
+<td>양피지에 열감응 잉크로 은현된 암호가 드러남</td>
+<td>약 48%</td>
+<td>수수께끼가 본격적으로 등장</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Legrand가 알파벳 빈도 분석법(8이 가장 많이 출현 → e)으로 암호를 해독</td>
+<td>약 55–70%</td>
+<td>추리 방법의 구체적 시연 — 작품에서 가장 중요한 교시적 단락</td>
+</tr>
+<tr>
+<td>5</td>
+<td>'Captain Kidd'의 중의성 — 양피지 위의 'kid(새끼 염소)' 도안이 서명 역할</td>
+<td>약 60%</td>
+<td>암호 언어가 영어이고 작성자가 Kidd임을 확정</td>
+</tr>
+<tr>
+<td>6</td>
+<td>'Bishop's Hostel'은 Bessop 가문의 암석군에 대응하고, 'Devil's Seat'은 암석의 천연 움푹 팬 부분</td>
+<td>약 78%</td>
+<td>문자 암호를 실제 좌표로 번역하는 마지막 단계</td>
+</tr>
+<tr>
+<td>7</td>
+<td>주피터(Jupiter)가 황금 벌레를 해골의 '오른쪽 눈'(그는 좌우를 구분하지 못함)에서 늘어뜨려 2.5인치 어긋남이 생기고 → 50피트 거리에서 오차가 확대됨</td>
+<td>약 82%</td>
+<td>추리의 궁극적 검증 지점 — 수정 후에야 보물을 찾아냄</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_6">보조 단서</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서</th>
+<th>위치（%）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>습득 지점 부근에 오래된 난파선 잔해가 있음</td>
+<td>약 44%</td>
+<td>해적 테마와 호응</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Kidd의 보물 전설은 오랫동안 전해져 왔으나 발견된 적이 없음</td>
+<td>약 52%</td>
+<td>이것이 실제 매장물이라는 추론을 강화</td>
+</tr>
+<tr>
+<td>3</td>
+<td>튤립나무의 특정 높이(일곱 번째 가지)에 해골이 박혀 있음</td>
+<td>약 75%</td>
+<td>암호가 지시한 실체가 검증 가능함을 확인</td>
+</tr>
+<tr>
+<td>4</td>
+<td>파낸 쇠고리(쇠 상자 손잡이 중 하나)가 화자를 걸려 넘어지게 함</td>
+<td>약 80%</td>
+<td>장소가 정확함을 검증</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_7">미끼 단서(레드 헤링)</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서</th>
+<th>위치（%）</th>
+<th>오도 방향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Legrand가 돌연 이상하게 행동하고 안색이 창백해지며, 주피터가 "황금 벌레에 물리면 미친다"며 의심함</td>
+<td>약 15–30%</td>
+<td>독자(및 화자 '나')가 주인공이 정신 이상이라 오판하도록 유도</td>
+</tr>
+<tr>
+<td>2</td>
+<td>주피터가 벌레의 무게와 금속성 광택을 고집하는 태도</td>
+<td>약 5–20%</td>
+<td>독자를 "황금 벌레가 진짜 금이다"라는 표면적 수수께끼가 핵심이라고 오인시킴</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Legrand가 나무 아래에서 주술사처럼 벌레를 휘두르는 기이한 거동</td>
+<td>약 72%</td>
+<td>Legrand가 후에 이는 일부러 화자에게 보이려 한 "냉담한 조롱"이었다고 자백한다 — 한 단락 전체가 행위 예술적 레드 헤링</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="2-legrand-whydunit">진상 ②: Legrand는 왜 미친 척했는가(whydunit)</h4>
+<ul>
+<li><strong>단서 수렴점: 약 95%</strong></li>
+<li>답: Legrand는 처음부터 끝까지 머리가 맑았다. 그가 화자에게 자신이 미친 것으로 보이게 하고, 주피터에게 (총알 같은 더 합리적인 대체물이 아닌) 해골 눈구멍으로 벌레를 굳이 늘어뜨리게 한 것은, 화자가 자신의 정신 상태를 의심한다는 것을 알아차리고 "자그마한 신비화 장난"을 통해 은밀한 앙갚음을 하기로 결심했기 때문이다.</li>
+</ul>
+<h5 id="_8">핵심 단서</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서</th>
+<th>위치（%）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Legrand는 보물을 파내기 전에 이미 혼자 산속에서 "주교의 여관 바위"와 튤립나무를 현지 답사해 두었음</td>
+<td>약 88%</td>
+<td>그의 모든 행동이 계획된 것이었음을 증명 — 미치광이의 무작위 행동이 아님</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Legrand가 훗날 스스로 고백: "당신의 의심에 보답하고자, 조용히 당신을 좀 놀려 먹기로 했다"</td>
+<td>약 95%</td>
+<td>최종 자백 — 작품의 감정적 층위에서의 반전</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_9">보조 단서</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서</th>
+<th>위치（%）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Legrand의 정밀한 측정, 말뚝 박기, 원형 구역 정리 동작이 질서 정연함</td>
+<td>약 70–78%</td>
+<td>이러한 작업은 "미치광이" 이미지와 모순됨</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Legrand가 화자의 "내 이성을 의심하는" 어조에 특별히 민감함</td>
+<td>약 30%</td>
+<td>말미 폭로를 위한 복선</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="2">편 2: 『마리 로제의 수수께끼』</h3>
+<h4 id="1-whoisit-marie">진상 ①: 사자의 신원 확인(whoisit — 시신이 Marie 본인인가)</h4>
+<ul>
+<li><strong>단서 수렴점: 약 25%</strong></li>
+<li>답: 떠오른 시신은 틀림없이 Marie Rogêt이다. 뒤팽은 L'Etoile 신문이 제기한 "시신이 물속에 너무 짧게 있었으므로 Marie가 아니다"라는 논증을 반박하며, 확률론과 인체 밀도 원리로 그 논거의 논리적 결함을 지적한다.</li>
+</ul>
+<h5 id="_10">핵심 단서</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서</th>
+<th>위치（%）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>시신에 매단 양말 대님(garter)이 있고, 그 고리가 길이를 줄이려 "되돌려 매어져" 있다 — 이는 Marie의 알려진 습관</td>
+<td>약 22%</td>
+<td>단일 물품만으로는 결정적이지 않으나, 여러 물증이 누적되면 확률이 기하급수적으로 증가</td>
+</tr>
+<tr>
+<td>2</td>
+<td>장갑, 작은 모자의 꽃장식, 신발, 키, 체형 등 여러 항목이 Marie와 완전히 일치</td>
+<td>약 22%</td>
+<td>뒤팽의 논증: 각 항목 하나하나는 결정적이지 않을 수 있으나, 전부 동시에 일치하면 "거의 확실"해진다</td>
+</tr>
+<tr>
+<td>3</td>
+<td>뒤팽이 시신의 부상 시간이 반드시 '6–10일'일 필요가 없으며, 폭행으로 사망한 뒤 익사하지 않았다면 아예 가라앉지 않을 수도 있음을 증명</td>
+<td>약 24%</td>
+<td>L'Etoile의 주장을 뒤집는 유일한 과학적 근거</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_11">미끼 단서(레드 헤링)</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서</th>
+<th>위치（%）</th>
+<th>오도 방향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>L'Etoile의 보도 "Marie는 여전히 살아 있을 수 있으며, 시신은 타인이다"</td>
+<td>약 18%</td>
+<td>선정적 주장으로 대중을 오도한다 — 뒤팽은 그 논증이 검증되지 않은 가정 위에 세워져 있음을 비판</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Beauvais에 대한 혐의(열쇠 구멍의 장미, 문 옆에 "Marie"라고 적힌 석판)</td>
+<td>약 19%</td>
+<td>독자로 하여금 Beauvais가 사건에 연루되어 있을 가능성을 오인하게 함 — 뒤팽은 이것들이 "다정한 부산 떨기"의 산물에 불과함을 지적</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="2_1">진상 ②: 범행 양태(갱단인가 단독범인가?)</h4>
+<ul>
+<li><strong>단서 수렴점: 약 65%</strong></li>
+<li>답: 단독범이며 갱단이 아니다. 뒤팽은 3만 프랑의 현상금이 걸렸음에도 아무도 밀고하지 않은 점에서 다음과 같이 추론한다. 만약 갱단이었다면 상금이나 사면을 노려 동료를 배신할 구성원이 반드시 있어야 한다 — 오직 사건의 내막을 단 한 사람만이 알고 있을 때에야 비밀이 이토록 굳게 지켜질 수 있다.</li>
+</ul>
+<h5 id="_12">핵심 단서</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서</th>
+<th>위치（%）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>모자의 끈이 '선원 매듭'(sailor's knot, 여성 매듭이 아님)으로 묶여 있음</td>
+<td>약 30%</td>
+<td>범인이 선원/해군임을 가리킴</td>
+</tr>
+<tr>
+<td>2</td>
+<td>찢겨진 옷감이 허리에 감겨 '시신 운반 손잡이'로 만들어져 있음 — 수풀에서 사건 발생 후 범인이 혼자 시신을 운반했다면 이 설계는 합리적이며, 갱단이 들어 옮겼다면 이런 설계가 필요 없음</td>
+<td>약 58%</td>
+<td>설계 의도가 단독으로 시신을 옮긴 범인의 존재를 드러냄</td>
+</tr>
+<tr>
+<td>3</td>
+<td>시신 등과 어깻죽지의 마모와 눌린 자국 — 배 바닥의 늑재(rib of boat)와 일치, 시신이 배 위에서 던져졌음을 시사</td>
+<td>약 62%</td>
+<td>범인이 배를 사용했음을 가리킴</td>
+</tr>
+<tr>
+<td>4</td>
+<td>3만 프랑의 현상금에 공범에 대한 사면까지 약속되었음에도 수 주가 지나도록 아무도 밀고하지 않음</td>
+<td>약 65%</td>
+<td>뒤팽의 가장 위력적인 확률론적 논증 — 침묵 그 자체가 단독 범행의 증거</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_13">보조 단서</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서</th>
+<th>위치（%）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Deluc 부인이 당일 한 남자와 한 여자가 먼저 여관에 도착했고, 남자의 피부색이 검었음을 목격</td>
+<td>약 32%</td>
+<td>선원의 특징과 일치</td>
+</tr>
+<tr>
+<td>2</td>
+<td>황혼 무렵 한 무리의 거친 사내들이 여관을 떠남(신문은 이들을 범인으로 잘못 지목) — 그러나 이들은 밤이 '된 뒤' 들린 비명 소리의 시간 순서와 맞지 않음</td>
+<td>약 60%</td>
+<td>뒤팽은 언론이 시간차를 간과했음을 지적</td>
+</tr>
+<tr>
+<td>3</td>
+<td>버스 운전사 Valence가 Marie가 한 검은 피부의 남자와 같은 배로 강을 건너는 모습을 직접 목격</td>
+<td>약 35%</td>
+<td>직접 증인으로서 범인의 신원 유형을 확정</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_14">미끼 단서(레드 헤링)</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서</th>
+<th>위치（%）</th>
+<th>오도 방향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>신문이 광범위하게 보도한 '갱단 습격설'</td>
+<td>약 40%</td>
+<td>당시 여론이 보편적으로 수용한 내러티브 — 뒤팽은 논리로 하나하나 반박</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Marie의 약혼자 St. Eustache가 음독 자살, 범죄를 두려워한 것으로 의심됨</td>
+<td>약 38%</td>
+<td>실제로는 연인을 잃은 슬픔 때문 — 죽기 전 유서를 남김</td>
+</tr>
+<tr>
+<td>3</td>
+<td>수풀에서 발견된 옷에 '수 주간의 곰팡이 흔적'이 있음</td>
+<td>약 45%</td>
+<td>Le Soleil 신문은 옷이 수풀에 수 주간 방치되어 있었다고 주장 — 뒤팽은 만약 그러했다면 두 소년이 진작 발견했을 것이며, 곰팡이는 3–4일의 습기만으로도 생길 수 있다고 이의를 제기</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="3-whodunit">진상 ③: 범인의 신원(whodunit)</h4>
+<ul>
+<li><strong>단서 수렴점: 약 95%</strong>(포가 일부러 명기하지 않은 데 따른 제한)</li>
+<li>답: Marie가 첫 번째로 잠시 실종되었을 때 동행했던 '해군 장교'를 가리킨다 — 피부가 검고, 해군 경력이 있으며, 바지선 정박 정보를 알고 있었다(신문에 습득 공고가 나기 전에 키 없는 배를 되찾을 수 있었다). 포는 소설 말미에 편집자 각주로 "이미 알려진 명백한 이유로 추적 과정은 여기서 생략한다"고 끝맺으나, 뒤팽이 사건을 해결했음을 명시한다.</li>
+</ul>
+<h5 id="_15">핵심 단서</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서</th>
+<th>위치（%）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Marie의 첫 번째 실종(일주일 뒤 스스로 귀가)이 '해군 장교'와의 사랑의 도피라는 소문으로 지목됨</td>
+<td>약 12%</td>
+<td>가장 중요한 복선 — 범인이 구면의 인물일 수 있음</td>
+</tr>
+<tr>
+<td>2</td>
+<td>범인이 배로 시신을 운반 → 이튿날 새벽 배가 바지선 인부에게 발견됨 → 당일 즉시 누군가 배(그러나 키는 아님)를 가져감 → 이 사람은 신문에 공고하지 않고도 배의 행방을 알고 있었음</td>
+<td>약 88%</td>
+<td>이 연쇄 추론은 해운 업무와 일상적 연계가 있는 해군 인원만을 지목할 수 있다</td>
+</tr>
+<tr>
+<td>3</td>
+<td>검은 피부 + 선원 매듭 + 보통 선원보다 높은 사회적 지위(Marie 같은 하층이 아닌 여성과 동행할 수 있는 수준)</td>
+<td>약 65–88%</td>
+<td>세 단서가 교차된 뒤 용의자 범위가 극도로 좁혀짐</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_16">추리 경로 재구성</h2>
+<h3 id="_17">『황금 벌레』</h3>
+<p>첫 번째 추리(암호 자체)는 에드거 앨런 포가 독자에게 건네는 <strong>암호학 교시</strong>다 — 독자는 빈도 분석, 자주 쓰이는 이중 문자(ee), 자주 쓰이는 세 글자 조합(the)으로부터 모든 문자를 차례차례 도출할 수 있다. 영어를 아는 독자라면 이론상 누구나 Legrand의 단계를 따라 스스로 풀 수 있다. 단서는 82% 부근에서 수렴한다 — 모든 해독된 좌표가 실제 장소로 번역되고, '좌우 눈 수정'을 거쳐 철저히 검증된 지점이다.</p>
+<p>두 번째 추리(Legrand가 정말 미쳤는가)는 전형적인 포식 심리 실험이다. 작가는 독자가 화자 '나'의 시점에 이입하여 주인공의 이성을 의심할 것임을 알면서도, Legrand의 정밀한 측정을 통해 은밀히 반증을 제공한다. 진정한 수렴점은 말미의 자백(95%)이지만 — 예민한 독자라면 70%의 측정 세부에서 이미 "미치광이가 어떻게 이리 체계적일 수 있는가"를 의심하기 시작했을 것이다.</p>
+<h3 id="_18">『마리 로제의 수수께끼』</h3>
+<p>이것은 추리문학 최초의 <strong>순수 언론 매체 분석 추리</strong>다 — 뒤팽은 단 한 번도 아파트를 떠나지 않고, 단 한 명의 증인도 방문하지 않으며, 시신을 검시하지도 않는다. 처음부터 끝까지 오로지 각 신문의 스크랩을 읽고 논리적 배제법으로 진상을 복원한다. 독자의 추리 경로는 뒤팽의 세 단계 점진을 따라야 한다.
+1. 시신 신원 확인(약 25% 수렴) — L'Etoile의 확률 오용을 비판
+2. 갱단 범행의 배제(약 65% 수렴) — 현상금에도 미해결인 확률론, 선원 매듭, 시신 운반 설계의 삼중 교차
+3. 범인 유형의 확정(약 88% 수렴) — 배의 키가 은밀히 가져가진 비정상 행동으로부터, 범인이 해운 업무와 일상적 연계가 있음을 역추론</p>
+<p><strong>독서 문턱</strong>: 본 편은 『황금 벌레』보다 어렵다. 핵심 단서가 모두 허구의 신문 기사 안에 숨어 있기 때문이며, 독자는 뒤팽처럼 언론의 선정적 내러티브에 저항하면서 스스로 확률 평가를 수행해야 한다.</p>
+<hr>
+<h2 id="_19">보충 설명</h2>
+<h3 id="_20">『황금 벌레』의 추리문학사적 위상</h3>
+<p>『황금 벌레』는 <strong>추리문학에서 가장 이른 시기, 암호학을 핵심에 둔 작품</strong>이다. 포는 이 단편에서 거의 논문적 방식으로 고전적 알파벳 치환 암호의 해독 방법론(빈도 분석, 빈출 조합, 중의적 기호)을 시연한다. 이 작품은 후세의 수많은 암호 추리물에 영감을 주었으며, 도일의 「춤추는 인형」(The Adventure of the Dancing Men, 1903)에서부터 댄 브라운의 전 생애에 이르기까지 이어진다.</p>
+<p>흥미롭게도 Legrand의 캐릭터는 '탐정'이 아니라 '해독자 겸 보물 사냥꾼'이다 — 그는 사건을 해결하는 것이 아니라 수수께끼를 푸는 것이다. 이로써 『황금 벌레』는 <strong>'순수 지적 추리'</strong>의 원형이 된다 — 범인도 없고, 피해자도 없으며(Kidd와 그의 매장 조력자는 100년 전에 이미 모두 죽었다), 오직 한 장의 암호화된 종이와 풀어야 할 좌표만이 있을 뿐이다.</p>
+<h3 id="_21">『마리 로제의 수수께끼』의 문학사적 실험성</h3>
+<p>이것은 아마도 문학사상 <strong>가장 대담한 혼합 장르 실험</strong>일 것이다 — 포는 실제 미해결 살인 사건(1841년 뉴욕의 Mary Rogers 사건)을 파리로 옮겨 이름을 바꾸고 강 이름을 바꿔, 자신의 허구 탐정인 뒤팽으로 하여금 언론 스크랩에서 '사건을 해결'하도록 했다. 이는 단순한 소설이 아니라, 소설 형식으로 발표된 <strong>수사 평론</strong>이기도 하다.</p>
+<p>포의 야심은 여기에 그치지 않는다 — 그는 말미의 각주에서 자신이 실제 사건을 해석한 것임을 직접 선언한다. 훗날 Madame Deluc(실제 사건의 동일 인물)의 임종 자백과 또 다른 관련자의 고백이 뒤팽의 추론을 대체로 뒷받침했다(단독 범행, 여관 근처 수풀에서의 사건 발생, Marie와 구면인 자가 범인). 이로써 『마리 로제의 수수께끼』는 <strong>'추리소설이 실제 수사에 영향을 미친'</strong> 최초의 사례가 되었다 — 셜록 홈스 관련 실제 사건들보다 반세기나 이르다.</p>
+<h3 id="3">뒤팽 3부작의 추리 철학적 차이</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>모르그 가의 살인</th>
+<th>마리 로제의 수수께끼</th>
+<th>도둑맞은 편지</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>핵심 난제</td>
+<td>물리적 불가능성</td>
+<td>정보의 모호성</td>
+<td>심리적 맹점</td>
+</tr>
+<tr>
+<td>범인 유형</td>
+<td>비인간(오랑우탄)</td>
+<td>인간(해군 장교)</td>
+<td>인간(D—— 대신)</td>
+</tr>
+<tr>
+<td>증거 출처</td>
+<td>현장 물증</td>
+<td>신문 텍스트</td>
+<td>심리적 추리</td>
+</tr>
+<tr>
+<td>추리 방법</td>
+<td>관찰 + 상상력</td>
+<td>확률론 + 논리</td>
+<td>인간 파악 + 게임 이론</td>
+</tr>
+</tbody>
+</table>
+<p>『모르그 가』는 '관찰'을, 『마리 로제』는 '텍스트 분석'을, 『도둑맞은 편지』는 '인간 파악'을 시연한다 — 포의 3부작은 고전 추리의 세 가지 인식론적 기반을 온전히 아우른다.</p>
+<h3 id="_22">본 권에 수록된 기타 비추리 작품 개요</h3>
+<p>본 권에는 그 밖에도 『한스 팔의 비길 데 없는 모험』(SF), 『네 마리 짐승이 하나 된 자』(정치 풍자), 『기구 사기극』(과학 풍자), 『병 속의 수기』(고딕 해양), 『타원형 초상화』(고딕 예술 우화) 등이 수록되어 있다 — 모두 포의 여타 장르 대표작이지만 추리 구조를 다루지 않으므로 본 분석에는 포함하지 않았다.</p>
+<h3 id="_23">한국(대만) 독자를 위한 보충</h3>
+<p>포는 『황금 벌레』에서 흑인 늙은 하인 주피터의 묘사에 19세기 미국 남부의 흑인 방언(dialect)을 대량으로 사용했으며, 현대 독자로서는 받아들이기 어려운 고정관념(예: 주피터가 좌우를 구분하지 못하는 것을 '어리석음'으로 간주)을 포함하고 있다. 이는 1843년 미국 남부의 사회 현실을 반영하며, 『황금 벌레』는 오늘날의 문학 교육에서 '추리소설의 인종 문제'를 논의하는 표준 사례가 되었다. 독서 시 주피터의 방언은 역사적 기록으로 받아들이되, 주피터의 충성심, 세심함, 섬세한 감정이야말로 실은 이 작품 전체에서 가장 입체적인 인물상임을 기억할 필요가 있다 — 포의 필치는 결코 그를 순수한 익살꾼으로만 그리지 않았다.</p>
+    <a href="../index.html" class="back-link">← 홈으로</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">추리해부실</p>
+    <p>다섯 작가 · 여든여덟 작품 · 135년에 걸친 추리문학 난이도의 진화.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
