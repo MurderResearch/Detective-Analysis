@@ -48,84 +48,79 @@ Analysis files follow a strict structure defined in `ANALYSIS_FRAMEWORK.md`: 基
 ## Important Notes
 
 - All content is in Traditional Chinese (繁體中文)
-- `.gitignore` excludes `.txt` source files — only `.md` analysis files are tracked
+- Source novel `.txt` files ARE tracked in the repo (committed 2026-04-19 to support remote scheduled runs)
 - `docs/` is the deploy target (GitHub Pages serves from this directory)
 - Project schedule and author ordering are in `PROJECT.md`
+- Working directory is `~/Code/MurderResearch` (moved off Dropbox 2026-04-19 due to loose-object corruption)
 
 ---
 
-## 每日自動化 SOP（Cowork 排程任務會觸發此流程）
+## 每日自動化架構（2026-04-19 起）
 
-這個 repo 由 Cowork 排程任務 `daily-murder-analysis` 每天清晨 05:06（Taiwan time）觸發一個 Claude session 來執行。那個 session 的 Claude（= 你，如果你正在讀這段）請**完整依序執行以下步驟**：
+每天清晨 05:06（Taipei）全自動發布，流程完全在雲端跑，本機不需要開著。
 
-### Step 1：判斷今天該分析哪本書
+**執行順序：**
 
-1. 讀 `docs/published.json` 看哪些 slug 已經發布。
-2. 讀 `docs/fb-summaries/fb-posted.json` 看 `date` 欄位 — 若 **等於今日（Taiwan time）**，代表今天所有事都做完了，**直接結束 session**，不要重複做。
-3. 對照 `PROJECT.md` 的排程表，找出**下一本該分析但還沒寫 `_analysis.md` 的書**。
-   - 例：若 published.json 最後一筆是 Cask of Amontillado（D2），今天就要分析 D3 `The_Fall_of_the_House_of_Usher`。
-   - 原始文本 .txt 檔在各作者資料夾底下（例：`poe/The_Fall_of_the_House_of_Usher.txt`），**這些檔案 gitignored 但本機存在**。
+1. **05:06 Taipei** — Claude Code RemoteTrigger `trig_01Q39kqQ8n7oJ5JEigK73ZR6` 觸發遠端 agent（Sonnet 4.6）
+2. Agent clone repo → 判斷下一本書 → 寫 `_analysis.md` + 7 語翻譯 → `python3 build.py` → `git push`
+3. Push 觸發兩條 GitHub Actions：
+   - `.github/workflows/deploy.yml` → 部署 `docs/` 到 GitHub Pages
+   - `.github/workflows/post-to-fb.yml` → 讀 repo secrets 發 FB + 發 Telegram「✅ 已發布」到「謀殺研究室」群組
+4. **07:00 Taipei** — `.github/workflows/daily-check.yml` 守衛檢查 fb-posted.json 的 date 是否 = 今日；若否，發 Telegram「⚠️ 今日尚未發布」
 
-### Step 2：撰寫分析稿
+**排程管理頁：** https://claude.ai/code/scheduled/trig_01Q39kqQ8n7oJ5JEigK73ZR6
 
-1. 讀 `ANALYSIS_FRAMEWORK.md` 了解格式規範。
-2. 讀原始 .txt 檔（使用 Read tool；大檔案用 offset/limit 分段）。
-3. 依框架寫出 `{作者}/{書名}_analysis.md`，**檔名必須與 .txt 原始檔一致、後加 `_analysis`**（例：`The_Fall_of_the_House_of_Usher_analysis.md`）。
-4. 品質底線：必須包含「基本資訊 / 推理難度總評 / 故事大綱 / 真相拆解（含關鍵線索、輔助線索、假線索三表）/ 推理路徑重建 / 補充說明」六大段。可參考 `poe/The_Cask_of_Amontillado_analysis.md` 作為文風與深度範本。
+### 給 Claude（如果你是被觸發的那隻 agent）
 
-### Step 2.5：翻譯分析稿為其他語系
+你跑在 Anthropic CCR 雲端，網路 allowlist **只允許 GitHub / 套件下載等有限 endpoint**。**不要** curl Telegram / Slack / 任何第三方 API——會被擋。所有外部通知由 GitHub Actions 接手，你只需專心做內容、git push。
 
-分析稿寫完後，必須為該篇產生 7 個語系的翻譯檔，放入 `{作者}/translations/` 目錄：
+**主流程步驟：**
 
-1. 翻譯檔命名規則：`{slug}.{lang}.md`（slug 是 kebab-case，例：`the-fall-of-the-house-of-usher.en.md`）
-2. 需要產生的語系：`en`、`zh-CN`、`ja`、`ko`、`de`、`es`、`fr`
-3. 每個翻譯檔必須是**完整、忠實**的翻譯——不可摘要或省略任何段落、表格、線索
-4. metadata 標籤必須使用該語系的對應詞（見 `build.py` 的 `META_LABELS` 字典），以便 build 時正確解析
-5. ⭐ 星等保持原樣不翻譯
-6. 可參考 `poe/translations/the-cask-of-amontillado.en.md` 作為英文翻譯範本
-7. `zh-CN` 版本需將繁體中文全部轉為簡體中文
+1. 讀 `CLAUDE.md`、`ANALYSIS_FRAMEWORK.md`、`PROJECT.md`
+2. 讀 `docs/published.json` 看已發布 slug；讀 `docs/fb-summaries/fb-posted.json`。若 date = 今日（Taipei），**直接結束 session**，不用通知
+3. 對照 `PROJECT.md` 找下一本要分析但還沒寫 `_analysis.md` 的書
+   - 例：若最後一筆是 D7 Vol1，今天就是 D8 `Works_of_Poe_Vol2`
+4. 讀原始 `.txt`（已 commit 進 repo，檔案在各作者資料夾下；大檔案用 `Read` 的 offset/limit 分段）
+5. 依 `ANALYSIS_FRAMEWORK.md` 寫 `{作者}/{書名}_analysis.md`（檔名與 .txt 一致後綴 `_analysis`）
+6. 產 7 語翻譯到 `{作者}/translations/{slug}.{lang}.md`（`en, zh-CN, ja, ko, de, es, fr`），**完整忠實翻譯、不摘要**。metadata 標籤用該語系對應詞（見 `build.py` 的 `META_LABELS`）。可並行啟動 Agent 加速
+7. `python3 build.py` 生成 HTML + FB 摘要
+8. `git add -A` → `git commit -m "$(date '+%Y-%m-%d') 每日更新"` → `git push`
+9. FB 與成功 Telegram 通知由 GH Actions 接手，你不用也不能直接發
 
-**提示：** 可同時啟動多個 Agent 並行翻譯以加速。
+**品質底線：** 分析稿必含「基本資訊 / 推理難度總評 / 故事大綱 / 真相拆解（含關鍵線索、輔助線索、假線索三表）/ 推理路徑重建 / 補充說明」六大段。文風深度參考 `poe/The_Cask_of_Amontillado_analysis.md`。
 
-### Step 3：建置 + Push + 發 FB（一條龍）
+**套件缺失：** `pip3 install markdown`（雲端不用 `--break-system-packages`）。
 
-```bash
-bash publish.sh
-```
+### FB 發文機制（自動化用）
 
-這個腳本會：
-1. 清 git lock（若有）
-2. 跑 `python3 build.py` 生成 HTML、首頁卡片、FB 摘要（寫入 `docs/fb-summaries/latest.{json,txt}`）
-3. `git add -A` → commit → push（觸發 GitHub Actions 部署到 GitHub Pages）
-4. 呼叫 `python3 scripts/post-to-fb.py` 發文到粉專
-5. 若 `fb-posted.json` 有更新，再 commit & push 一次
-
-### Step 4：驗證
-
-- `docs/published.json` 是否多了今日這筆
-- `docs/fb-summaries/fb-posted.json` 的 `date` 是否為今日
-- 若兩者皆有，**session 任務完成**
-
-### FB 發文機制（給你想了解細節用）
-
-- Credentials 在 `fb-reply-bot/.env`（gitignored）：`FB_PAGE_ACCESS_TOKEN`、`FB_PAGE_ID`、`FB_GRAPH_VERSION`
-- 發文工具：`scripts/post-to-fb.py`（純 Python、僅用 stdlib）
-- 冪等：`fb-posted.json` 若今日已有紀錄，自動跳過，不會重複發
+- 憑證走 GitHub Repo Secrets：`FB_PAGE_ACCESS_TOKEN`、`FB_PAGE_ID`、`FB_GRAPH_VERSION`
+- GH Actions workflow：`.github/workflows/post-to-fb.yml`，`push` 到 `docs/fb-summaries/latest.json` 時觸發
+- 發文工具：`scripts/post-to-fb.py`（純 Python stdlib，讀 env var 或 `fb-reply-bot/.env`）
+- 冪等：`fb-posted.json` 已有今日紀錄則 skip
 - 手動測試：`python3 scripts/post-to-fb.py --dry-run`
-- 強制重發（罕用）：`python3 scripts/post-to-fb.py --force`
 
-### 常見失敗處理
+### Telegram 通知機制
 
-- **Git lock 卡住** → `publish.sh` 已經會自動清 `.git/index.lock` 等，不需手動處理
-- **FB token 過期** → `post-to-fb.py` 會拋出 HTTP 190；需請使用者跑 `bash fb-reply-bot/scripts/refresh-token.sh` 更新 token
-- **build 失敗缺 markdown 套件** → `pip3 install markdown --break-system-packages`
-- **今天已發過** → `post-to-fb.py` 自動 skip，非錯誤
+- 憑證走 GitHub Repo Secrets：`TELEGRAM_BOT_TOKEN`（@MurderResearchBot）、`TELEGRAM_CHAT_ID`（`-5160768597` = 謀殺研究室群組）
+- 成功通知在 `post-to-fb.yml` 的 `Notify Telegram (success)` step
+- 失敗通知：`post-to-fb.yml` 的 `Notify Telegram (failure)` step + `daily-check.yml` 守衛（07:00 Taipei）
+- 重要：**agent 本身無法發 Telegram**（CCR 網路 allowlist），所有通知必經 GH Actions
 
 ### 給人類使用者（Letranger）
 
-若你在非排程時段想手動補發，流程：
+若想手動補發：
 ```bash
-cd ~/Library/CloudStorage/Dropbox/Working/MurderResearch
+cd ~/Code/MurderResearch
 bash publish.sh
 ```
-全流程自動。
+
+`publish.sh` 會 build + push；push 後 GH Actions 會自動發 FB + Telegram。如果本機沒有 `fb-reply-bot/.env`（新機器），手動發也沒關係——git push 進來 GH Actions 照樣會用 repo secrets 發。
+
+### 常見失敗與除錯
+
+- **Agent 雲端失敗（整個 session crashed）** → 07:00 Taipei 守衛發 ⚠️ 告警
+- **Agent 跑了但 git push 失敗** → 同上，守衛抓得到
+- **GH Actions FB 發文失敗（token 過期等）** → `post-to-fb.yml` failure branch 發 ❌ + run 連結
+- **FB token 過期** → `python3 scripts/post-to-fb.py` 會拋 HTTP 190；需 rotate token 後更新 repo secret `FB_PAGE_ACCESS_TOKEN`
+- **build 缺 markdown 套件（本機）** → `pip3 install markdown --break-system-packages`
+- **今天已發過** → `post-to-fb.py` 自動 skip，無通知，正常
