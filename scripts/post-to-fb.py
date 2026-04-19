@@ -135,11 +135,11 @@ def main():
         print(f"   若要強制重發：python3 {sys.argv[0]} --force")
         return 0
 
-    # ── 讀 credentials ──
+    # ── 讀 credentials（優先環境變數，fallback 到 .env 檔）──
     env = load_env(ENV_PATH)
-    token = env.get("FB_PAGE_ACCESS_TOKEN")
-    page_id = env.get("FB_PAGE_ID")
-    graph_ver = env.get("FB_GRAPH_VERSION", "v20.0")
+    token = os.environ.get("FB_PAGE_ACCESS_TOKEN") or env.get("FB_PAGE_ACCESS_TOKEN")
+    page_id = os.environ.get("FB_PAGE_ID") or env.get("FB_PAGE_ID")
+    graph_ver = os.environ.get("FB_GRAPH_VERSION") or env.get("FB_GRAPH_VERSION", "v20.0")
 
     if not token or not page_id:
         print(f"❌ 缺少 FB 憑證。請確認 {ENV_PATH} 內有：")
