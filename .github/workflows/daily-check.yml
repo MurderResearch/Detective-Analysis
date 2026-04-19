@@ -1,0 +1,33 @@
+name: Daily publish watchdog
+
+on:
+  schedule:
+    # 07:00 Taipei = 23:00 UTC （前一天的 23:00 UTC）
+    # agent 於 05:06 Taipei 觸發，給 ~2 小時 buffer
+    - cron: '0 23 * * *'
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check whether today's article was published
+        id: check
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          TODAY=$(TZ='Asia/Taipei' date '+%Y-%m-%d')
+          POSTED_DATE=$(python3 -c "import json; print(json.load(open('docs/fb-summaries/fb-posted.json')).get('date',''))" 2>/dev/null || echo "")
+          echo "today=$TODAY posted=$POSTED_DATE"
+          if [ "$POSTED_DATE" = "$TODAY" ]; then
+            echo "✅ Today ($TODAY) already published."
+          else
+            MSG=$(printf '⚠️ %s 每日發布守衛偵測：今日尚未發布\n上一篇發布日期：%s\n請檢查 https://claude.ai/code/scheduled/trig_01Q39kqQ8n7oJ5JEigK73ZR6' "$TODAY" "$POSTED_DATE")
+            curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" --data-urlencode "text=${MSG}" > /dev/null
+            echo "::error::Today's article not yet published (last=$POSTED_DATE, today=$TODAY)"
+            exit 1
+          fi
