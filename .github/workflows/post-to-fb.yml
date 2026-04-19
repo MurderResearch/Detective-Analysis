@@ -1,0 +1,44 @@
+  name: Post daily article to Facebook
+
+  on:
+    push:
+      branches: [ main ]
+      paths:
+        - 'docs/fb-summaries/latest.json'
+    workflow_dispatch:
+
+  permissions:
+    contents: write
+
+  jobs:
+    post-fb:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+
+        - name: Setup Python
+          uses: actions/setup-python@v5
+          with:
+            python-version: '3.12'
+
+        - name: Post to Facebook
+          env:
+            FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+            FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+            FB_GRAPH_VERSION: ${{ secrets.FB_GRAPH_VERSION }}
+          run: python3 scripts/post-to-fb.py
+
+        - name: Commit FB post record if updated
+          run: |
+            if git diff --quiet docs/fb-summaries/fb-posted.json; then
+              echo "No change to fb-posted.json."
+            else
+              git config user.name "github-actions[bot]"
+              git config user.email
+  "41898282+github-actions[bot]@users.noreply.github.com"
+              git add docs/fb-summaries/fb-posted.json
+              git commit -m "$(TZ='Asia/Taipei' date '+%Y-%m-%d') FB 發文紀錄
+  (via GH Actions)"
+              git push
+            fi
