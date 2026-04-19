@@ -11,9 +11,5 @@ __pycache__/
 .vscode/
 .idea/
 
-# 原始小說文本不需要進 repo（太大）
-poe/*.txt
-doyle/*.txt
-leblanc/*.txt
-chesterton/*.txt
-christie/*.txt
+# 排除首頁輸出的 latest.txt（避免 tracking 每日變動）
+docs/fb-summaries/latest.txt
