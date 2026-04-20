@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Las Obras de Edgar Allan Poe — Volumen 2 — Sala de Disección Detectivesca</title>
+<meta name="description" content=" «La carta robada» (The Purloined Letter, 1844) El prefecto G—— regresa a visitar a Dupin con un caso espinoso: el ministro D—— ha robado en los aposentos reale">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/works-of-poe-vol2.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/works-of-poe-vol2.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/works-of-poe-vol2.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/works-of-poe-vol2.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/works-of-poe-vol2.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/works-of-poe-vol2.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/works-of-poe-vol2.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/works-of-poe-vol2.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Sala de Disección Detectivesca</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Inicio</a>
+        <a href="../index.html#latest">Recientes</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Idioma" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 Español</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/works-of-poe-vol2.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/works-of-poe-vol2.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/works-of-poe-vol2.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/works-of-poe-vol2.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/works-of-poe-vol2.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/works-of-poe-vol2.html">Deutsch</a>
+      <a class="lang-item active" data-lang="es" href="/Detective-Analysis/es/articles/works-of-poe-vol2.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/works-of-poe-vol2.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">Edgar Allan Poe · </div>
+    <h1>Las Obras de Edgar Allan Poe — Volumen 2</h1>
+    <div class="subtitle">Edgar Allan Poe · Colección de cuentos (este análisis se centra en los relatos con estructura detectivesca o criminal psicológica clara)</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Deducibilidad</div>
+        <div class="rating-badge-stars">⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Nivel de niebla</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="las-obras-de-edgar-allan-poe-volumen-2-analisis-de-deducibilidad">Las Obras de Edgar Allan Poe — Volumen 2 — Análisis de Deducibilidad</h1>
+<h2 id="informacion-basica">Información Básica</h2>
+<ul>
+<li>Autor: Edgar Allan Poe</li>
+<li>Año: 1903 (edición Raven); los relatos incluidos fueron publicados originalmente entre 1841 y 1846</li>
+<li>Género: Colección de cuentos (este análisis se centra en los relatos con estructura detectivesca o criminal psicológica clara)</li>
+<li>Detective: Chevalier C. Auguste Dupin («La carta robada»); «El gato negro», «El corazón delator» y «El demonio de la perversidad» no tienen detective — la narración gira en torno a la confesión del propio criminal en primera persona</li>
+<li>Tipo de enigma central: Razonamiento epistemológico («La carta robada») + confesión criminal psicológica («El gato negro», «El corazón delator») + razonamiento de supervivencia física («Un descenso al Maelstrom»)</li>
+</ul>
+<hr>
+<h2 id="evaluacion-general-de-deducibilidad">Evaluación General de Deducibilidad</h2>
+<p>Este volumen contiene numerosas obras. El presente análisis selecciona cuatro textos con estructura detectivesca o criminal claramente definida: <strong>«La carta robada»</strong> (The Purloined Letter), <strong>«El gato negro»</strong> (The Black Cat), <strong>«El corazón delator»</strong> (The Tell-Tale Heart) y <strong>«Un descenso al Maelstrom»</strong> (A Descent into the Maelstrom). «La carta robada» es la obra detectivesca más importante del volumen y constituye el capítulo final de la trilogía de Dupin.</p>
+<table>
+<thead>
+<tr>
+<th>Indicador</th>
+<th>Estrellas</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deducibilidad (Deducibility)</td>
+<td>⭐⭐</td>
+<td>Punto de convergencia promedio: aprox. 45 % — en «La carta robada», la solución está a la vista; una vez comprendido el principio epistemológico de Dupin, todo se aclara; en los relatos de confesión criminal, la solución suele revelarse pronto</td>
+</tr>
+<tr>
+<td>Nivel de niebla (Fog Rating)</td>
+<td>⭐⭐⭐</td>
+<td>«La carta robada» genera niebla moderada mediante la «obviedad excesiva» como máxima forma de camuflaje; los relatos de confesión generan niebla mediante las contradicciones del narrador no fiable</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="sinopsis">Sinopsis</h2>
+<h3 id="la-carta-robada-the-purloined-letter-1844">«La carta robada» (The Purloined Letter, 1844)</h3>
+<p>El prefecto G—— regresa a visitar a Dupin con un caso espinoso: el ministro D—— ha robado en los aposentos reales una carta que compromete el honor de una distinguida dama. La policía ha registrado a fondo la residencia del ministro durante tres meses, con microscopios y sondas, revisando cada mueble y cada tabla del suelo — sin resultado. Dupin sonríe levemente y promete entregar la carta en el próximo encuentro. Un mes después, el prefecto aparece con un cheque de cincuenta mil francos; Dupin abre un cajón y le entrega la carta. Luego explica al narrador: visitó al ministro con gafas verdes protectoras y, de reojo, descubrió en un tarjetero sobre la chimenea una carta vieja llamativa — sucia, arrugada, con lacre negro (el original tenía rojo) y dirección diferente (la letra, fina, en lugar del trazo vigoroso del original), pero de tamaño y forma idénticos. D—— había disfrazado la carta a propósito como un viejo papel sin importancia, incluso deliberadamente atractivo a la vista, colocándola en el lugar más visible para aprovechar el «pensamiento habitual de lo oculto» de la policía y volverla invisible. Al día siguiente, Dupin provocó un alboroto en la calle para distraer al ministro, intercambió la carta y dejó una copia de sustitución con unos versos provocadores en su interior.</p>
+<h3 id="el-gato-negro-the-black-cat-1843">«El gato negro» (The Black Cat, 1843)</h3>
+<p>El narrador será ejecutado mañana y decide revelar la verdad antes de morir. Fue en su día un hombre dulce y amante de los animales que, corrompido por el alcohol, primero le sacó un ojo a su querido gato Pluto y luego lo ahorcó. Pronto apareció un gato negro casi idéntico, también tuerto, con una mancha blanca en el pecho cuya forma fue adquiriendo poco a poco la de una horca. Él sentía temor y repulsión por este gato. Un día, queriendo matarlo con un hacha en el sótano, su esposa lo contuvo; él, en un arrebato de ira, la mató a ella de un hachazo y emparedó el cadáver en la pared del sótano. La policía registró varias veces la casa hasta que, en el último registro, el narrador golpeó la pared con su bastón alardeando de su solidez — de la pared surgió un largo aullido, la policía la derribó y apareció el cadáver de la esposa junto al gato negro. Este nunca había abandonado el lugar: él lo había emparedado vivo.</p>
+<h3 id="el-corazon-delator-the-tell-tale-heart-1843">«El corazón delator» (The Tell-Tale Heart, 1843)</h3>
+<p>El narrador insiste en que no está loco — solo tiene los nervios tan agudizados que puede escuchar el murmullo de todas las cosas del cielo y de la tierra. Vive con un anciano a quien odia profundamente por su «ojo de buitre» (una opacidad blanca en la córnea), aunque no le guarda ningún rencor personal. Durante siete noches abre sigilosamente la puerta del dormitorio del anciano, levanta la linterna — y se contiene porque el anciano está despierto. En la octava noche el anciano se despierta en la oscuridad; el narrador se arroja sobre él, lo asfixia con un colchón, levanta las tablas del suelo, esconde el cadáver, limpia todo y espera tranquilamente a la policía (un vecino había denunciado un ruido). Mientras los agentes inspeccionan la casa, el narrador los invita a sentarse con aparente calma; sin embargo, empieza a escuchar un sordo latido que cree que es el corazón del muerto palpitando bajo el suelo. Finalmente, incapaz de soportarlo, arranca las tablas y confiesa.</p>
+<h3 id="un-descenso-al-maelstrom-a-descent-into-the-maelstrom-1841">«Un descenso al Maelstrom» (A Descent into the Maelstrom, 1841)</h3>
+<p>Un viejo pescador con el cabello blanqueado por el terror lleva a un viajero hasta lo alto de un acantilado de la costa noruega desde donde se contempla el legendario remolino y le relata su experiencia de tres años atrás: él y dos hermanos navegaron hasta los caladeros cercanos al Maelstrom y, de regreso, fueron sorprendidos por un huracán que los arrastró al abismo del remolino. Uno de los hermanos cayó al agua; el otro se aferró al anillo del barco sin poder moverse. Él, en la desesperación, conservó la lucidez, observó las leyes físicas del remolino y descubrió que distintos objetos se hundían a distintas velocidades según su forma: los cilindros (barriles) se hundían más despacio que las esferas, y los objetos ligeros más despacio que los pesados. Se aferró a un barril, saltó al agua y fue arrojado hacia afuera por la corriente en lugar de ser tragado hacia abajo — y sobrevivió. Sus hermanos y el barco se hundieron en el fondo.</p>
+<hr>
+<h2 id="analisis-de-la-verdad">Análisis de la Verdad</h2>
+<h3 id="parte-uno-la-carta-robada">Parte uno: «La carta robada»</h3>
+<h4 id="verdad-1-donde-esta-escondida-la-carta-wheresit">Verdad 1: ¿Dónde está escondida la carta? (wheresit)</h4>
+<ul>
+<li><strong>Punto de convergencia: aprox. 48 %</strong></li>
+<li>Respuesta: El ministro D—— ha hecho exactamente lo contrario: ha colocado la carta abiertamente en el lugar más visible del tarjetero sobre la chimenea, disfrazada con signos de antigüedad y con la cara vuelta (la dirección hacia fuera, pero diferente del original), para que parezca un viejo papel sin importancia.</li>
+</ul>
+<h5 id="pistas-clave">🔑 Pistas clave</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Ubicación (sección/porcentaje)</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El prefecto admite: el ministro debía de saber que su residencia sería registrada (pues es un político astuto)</td>
+<td>aprox. 12 %</td>
+<td>Dupin insinúa: quien sabe que se acerca un registro no esconderá nada de un modo «hallable»</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Dupin lleva gafas verdes protectoras en su primera visita y «escanea» toda la habitación</td>
+<td>aprox. 45 %</td>
+<td>La operación de exploración encubierta de Dupin — no está charlando de verdad, sino buscando la carta</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Una carta vieja llamativa en el tarjetero sobre la chimenea: sucia, arrugada, lacre negro (el original era rojo), letra de dirección fina (el original era vigorosa) — pero «tamaño y forma» coinciden exactamente</td>
+<td>aprox. 48 %</td>
+<td>Este es el núcleo del contracamuflaje — «todo es diferente, solo la forma coincide»</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Dupin razona: para una persona de extraordinaria inteligencia, el mejor escondite es «no esconder en absoluto» — exponer el objeto a plena vista para que la «obviedadexcesiva» lo vuelva invisible</td>
+<td>aprox. 55 %</td>
+<td>El argumento epistemológico central — el pasaje de razonamiento más importante de todo el texto</td>
+</tr>
+</tbody>
+</table>
+<h5 id="pistas-auxiliares">🔍 Pistas auxiliares</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Ubicación (sección/porcentaje)</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El registro de tres meses del prefecto fue extremadamente minucioso: barrenas, microscopios, patas de sillas desmontadas, tablas del suelo levantadas, paredes medidas centímetro a centímetro</td>
+<td>aprox. 15–25 %</td>
+<td>Confirmación por exclusión: si la carta estuviese en cualquier «lugar oculto», ya la habrían encontrado — por tanto, no está oculta</td>
+</tr>
+<tr>
+<td>2</td>
+<td>El ministro es conocido como «poeta y matemático» a la vez</td>
+<td>aprox. 32 %</td>
+<td>Dupin explica: un matemático puro está sujeto al sistema simbólico; un poeta-matemático puede «cambiar de perspectiva» e imitar el marco perceptivo del adversario</td>
+</tr>
+<tr>
+<td>3</td>
+<td>El ministro se ausentó deliberadamente varias veces para dar a la policía más tiempo para registrar</td>
+<td>aprox. 35 %</td>
+<td>Retirada estratégica — permitir que la policía registre a fondo y se rinda es parte del plan</td>
+</tr>
+</tbody>
+</table>
+<h5 id="pistas-falsas">🐟 Pistas falsas</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Ubicación (sección/porcentaje)</th>
+<th>Dirección de la desorientación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El informe detallado del minucioso registro de tres meses del prefecto</td>
+<td>aprox. 10–30 %</td>
+<td>Hace que el lector, junto con el narrador, crea: la carta o no está en la casa o está en un escondite aún más ingenioso — Dupin demuestra que ambas opciones son falsas</td>
+</tr>
+<tr>
+<td>2</td>
+<td>El «exterior» de la carta (lacre negro, dirección diferente, sucia y arrugada) difiere completamente de la descripción del original por parte del prefecto</td>
+<td>aprox. 48 %</td>
+<td>Hace que el lector (y el prefecto) crea que es una carta diferente; Dupin, sin embargo, deduce por el tamaño y la ubicación que es la misma</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="verdad-2-como-toma-dupin-la-carta-sin-que-el-ministro-se-de-cuenta-howdunit">Verdad 2: ¿Cómo toma Dupin la carta sin que el ministro se dé cuenta? (howdunit)</h4>
+<ul>
+<li><strong>Punto de convergencia: aprox. 90 %</strong></li>
+<li>Respuesta: Dupin memoriza la posición de la carta en su primera visita, regresa al día siguiente con una carta de sustitución de aspecto similar preparada de antemano, organiza simultáneamente que un ayudante provoque un disparo en la calle, y en el momento en que el ministro se asoma a la ventana intercambia rápidamente las cartas, se lleva la auténtica al marcharse y deja la falsificación — que contiene en su interior unos versos provocadores de un poeta francés que anuncian el éxito de la contraofensiva.</li>
+</ul>
+<h5 id="pistas-clave_1">🔑 Pistas clave</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Ubicación (sección/porcentaje)</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>En la primera visita, Dupin ya ha localizado la carta y «olvida» deliberadamente su tabaquera como pretexto para volver al día siguiente</td>
+<td>aprox. 85 %</td>
+<td>El intervalo entre ambas visitas sirve para preparar la carta de sustitución y organizar al ayudante</td>
+</tr>
+<tr>
+<td>2</td>
+<td>En la segunda visita, se escucha un disparo en la calle; el ministro se dirige a la ventana</td>
+<td>aprox. 88 %</td>
+<td>Un ayudante contratado por Dupin ha provocado la distracción</td>
+</tr>
+<tr>
+<td>3</td>
+<td>En el instante en que el ministro se da la vuelta, Dupin completa el intercambio de cartas</td>
+<td>aprox. 90 %</td>
+<td>El método es simple y directo — depende completamente de la planificación previa y del momento preciso</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="parte-dos-el-gato-negro">Parte dos: «El gato negro»</h3>
+<h4 id="verdad-1-la-muerte-de-la-esposa-y-el-ocultamiento-del-cadaver-whodunit-howdunit">Verdad 1: La muerte de la esposa y el ocultamiento del cadáver (whodunit + howdunit)</h4>
+<ul>
+<li><strong>Punto de convergencia: aprox. 5 %</strong> (estilo confesional — se revela desde el principio)</li>
+<li>Respuesta: El narrador mata a su esposa personalmente con un hacha, emparedea el cadáver en la pared del sótano y, sin saberlo, emparedea también al gato negro.</li>
+</ul>
+<h5 id="pistas-clave_2">🔑 Pistas clave</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Ubicación (sección/porcentaje)</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El narrador declara desde el principio: «Mañana moriré», y escribe una confesión a modo de testamento</td>
+<td>aprox. 2 %</td>
+<td>Ya sabemos que ha cometido un crimen y será ejecutado — el misterio no es el «quién» sino el «cómo» y el «cómo fue descubierto»</td>
+</tr>
+<tr>
+<td>2</td>
+<td>El narrador descubre en el sótano una pared recién encalada y reconoce que es el escondite del cadáver</td>
+<td>aprox. 70 %</td>
+<td>Pista técnica — solo en este momento comprenden la policía y el lector el método de ocultamiento</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Cuando el narrador golpea la pared con su bastón, de ella surge un aullido — el gato emparedado vivo</td>
+<td>aprox. 90 %</td>
+<td>La autorrevelación final: el crimen es delatado por el gato que él creía haber matado</td>
+</tr>
+</tbody>
+</table>
+<h5 id="pistas-auxiliares_1">🔍 Pistas auxiliares</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Ubicación (sección/porcentaje)</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>La mancha blanca en el pecho del segundo gato negro va adquiriendo cada vez más la forma de una horca</td>
+<td>aprox. 40 %</td>
+<td>Presagio psicológico — la culpa del narrador irrumpe en su conciencia en forma de imagen exterior</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Tras ahorcar a Pluto, el narrador siente brevemente alivio pero luego es atormentado por los remordimientos</td>
+<td>aprox. 25 %</td>
+<td>El patrón del criminal psicológico: matar — alivio — dolor — matar de nuevo</td>
+</tr>
+</tbody>
+</table>
+<h5 id="pistas-falsas_1">🐟 Pistas falsas</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Ubicación (sección/porcentaje)</th>
+<th>Dirección de la desorientación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>¿Es el segundo gato negro realmente un fenómeno sobrenatural? (La esposa alude al folclore popular de que los gatos negros son brujas encarnadas)</td>
+<td>aprox. 38 %</td>
+<td>Hace dudar al lector: ¿es una enfermedad mental, o hay realmente una fuerza sobrenatural castigándolo? Poe deliberadamente no da respuesta</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Los sucesivos registros de la policía no revelan nada anormal</td>
+<td>aprox. 75–85 %</td>
+<td>Crea una falsa sensación de seguridad («quizá no lo descubran»), que intensifica el impacto dramático de la autorrevelación final</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="parte-tres-el-corazon-delator">Parte tres: «El corazón delator»</h3>
+<h4 id="verdad-1-sera-descubierto-el-crimen-willitout">Verdad 1: ¿Será descubierto el crimen? (willitout)</h4>
+<ul>
+<li><strong>Punto de convergencia: aprox. 10 %</strong> (estilo confesional — el motivo y el proceso del crimen se revelan pronto)</li>
+<li>Respuesta: El crimen es descubierto — pero no por pruebas físicas, sino por el colapso nervioso del propio narrador. El «corazón delator» es en realidad una voz generada por su propia conciencia y su miedo.</li>
+</ul>
+<h5 id="pistas-clave_3">🔑 Pistas clave</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Ubicación (sección/porcentaje)</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El narrador insiste en que su oído es extraordinariamente agudo — «puede escuchar las voces del infierno»</td>
+<td>aprox. 3 %</td>
+<td>Establece la premisa del narrador no fiable — el lector debería desconfiar de inmediato: ¿es real lo que él «escucha»?</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Odia el «ojo de buitre» del anciano, pero no le guarda ningún rencor personal</td>
+<td>aprox. 10 %</td>
+<td>El motivo del crimen es un miedo delirante irracional, no ningún rencor real</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ante la policía, empieza a escuchar un latido cada vez más fuerte</td>
+<td>aprox. 85 %</td>
+<td>El sonido es generado psicológicamente — cuando los policías no reaccionan, el lector puede concluir: solo él lo escucha</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Incapaz de soportarlo, él mismo arranca las tablas y confiesa</td>
+<td>aprox. 95 %</td>
+<td>El crimen es revelado por el propio criminal, no por fuerzas externas — una inversión del principio detectivesco: el «detective» es su propia conciencia</td>
+</tr>
+</tbody>
+</table>
+<h5 id="pistas-falsas_2">🐟 Pistas falsas</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Ubicación (sección/porcentaje)</th>
+<th>Dirección de la desorientación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El narrador relata el asesinato con el tono de quien dice «soy perfectamente normal y todo esto tiene su lógica»</td>
+<td>todo el texto</td>
+<td>Hace que el lector acepte momentáneamente su marco de «normalidad», para luego darse cuenta de que eso mismo es la expresión del desequilibrio mental</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Los policías se sientan, toman té, conversan — aparentemente sin haber notado nada</td>
+<td>aprox. 80 %</td>
+<td>Hace creer al lector que está «a salvo», lo que hace la confesión más impactante</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="parte-cuatro-un-descenso-al-maelstrom">Parte cuatro: «Un descenso al Maelstrom»</h3>
+<h4 id="verdad-1-como-sobrevivir-en-el-remolino-howsurvive">Verdad 1: ¿Cómo sobrevivir en el remolino? (howsurvive)</h4>
+<ul>
+<li><strong>Punto de convergencia: aprox. 62 %</strong></li>
+<li>Respuesta: El viejo pescador, en medio del terror extremo, mantiene la lucidez, observa y descubre que la atracción del remolino varía según la forma y el tamaño de los objetos — los cuerpos cilíndricos (barriles) se hunden más despacio que los esféricos o cúbicos, y los objetos ligeros más despacio que los pesados. Abandona el pesado barco, se aferra a un barril, salta al agua y es arrojado hacia afuera por la corriente en lugar de ser succionado hacia abajo — y sobrevive.</li>
+</ul>
+<h5 id="pistas-clave_4">🔑 Pistas clave</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Ubicación (sección/porcentaje)</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El viejo pescador observa que los diferentes fragmentos a la deriva se hunden a distintas velocidades, siendo los barriles los más lentos</td>
+<td>aprox. 55 %</td>
+<td>Primera observación clave — comienza a hacer inducciones físicas conscientes</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Recuerda un artículo de revista sobre remolinos que mencionaba la influencia de la forma en la velocidad de hundimiento</td>
+<td>aprox. 60 %</td>
+<td>Recurso al conocimiento científico — transición del miedo al análisis racional</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Se da cuenta de que quedarse en el barco significa muerte segura, y que la forma cilíndrica del barril ofrece las mejores posibilidades de supervivencia</td>
+<td>aprox. 62 %</td>
+<td>Punto de convergencia del razonamiento — la base lógica de su decisión vital</td>
+</tr>
+</tbody>
+</table>
+<h5 id="pistas-falsas_3">🐟 Pistas falsas</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Ubicación (sección/porcentaje)</th>
+<th>Dirección de la desorientación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El hermano que se aferra al anillo del barco se niega a soltarse y a saltar hacia el barril</td>
+<td>aprox. 65 %</td>
+<td>El lector cree que aferrarse al barco (mayor soporte) es más seguro; el relato invierte esta intuición</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="reconstruccion-del-razonamiento">Reconstrucción del Razonamiento</h2>
+<h3 id="la-carta-robada">«La carta robada»</h3>
+<p>Este relato es <strong>el de mayor densidad filosófica</strong> de la trilogía de Poe. El enigma central no es «dónde está la carta», sino «cómo pensar correctamente para encontrar la carta».</p>
+<p>El razonamiento se desarrolla en tres niveles epistemológicos:</p>
+<p><strong>Primer nivel (0–30 %): Comprender los límites del problema</strong>
+El prefecto describe detalladamente el proceso de registro. En este punto cualquier lector perspicaz puede ya deducir: un registro tan exhaustivo sin resultado significa que la carta no está en ningún lugar «imaginable como escondite». Pero la mayoría de los lectores solo sentirá confusión, no será capaz de derivar la respuesta.</p>
+<p><strong>Segundo nivel (30–55 %): El razonamiento humano de Dupin</strong>
+Dupin explica al narrador: el fracaso del prefecto se debe a que «juzga al adversario desde su propio marco perceptivo» — cree que una persona inteligente esconderá mejor que él, no más obviamente. D—— es poeta y matemático, y puede hacer lo que el prefecto no puede: <strong>cambiar de perspectiva</strong>. D—— habrá predicho los patrones de búsqueda de la policía y habrá actuado según el «patrón contrario a la búsqueda».</p>
+<p><strong>Tercer nivel (48 %: la contradicción en el aspecto de la carta)</strong>
+Dupin describe el aspecto de la carta: «todo no concuerda — solo la forma encaja» — un lector perspicaz puede en este punto deducir por sí mismo la respuesta: esta es exactamente la carta disfrazada al revés.</p>
+<p><strong>La ventana de razonamiento para el lector perspicaz</strong>: En torno al 48 % (cuando Dupin describe el aspecto de la carta), un lector que haya interiorizado el principio de Dupin de «esconder en lo obvio» puede resolver el caso por sí mismo. La dificultad general es baja porque Poe hace que Dupin exponga el principio de la solución durante el propio relato — enseña el método al mismo tiempo que lo aplica.</p>
+<hr>
+<h3 id="el-gato-negro">«El gato negro»</h3>
+<p>La estructura confesional deja escaso margen para el «razonamiento» — el lector sabe desde la primera línea que el narrador es el asesino y que será ejecutado. El verdadero enigma es: <strong>¿cómo es descubierto?</strong></p>
+<p>Solo hay un camino de razonamiento: observar si el gato sigue vivo. El narrador escribe: «Creo que lo había matado» (sin confirmar el cadáver) — este detalle basta para que un lector atento deduzca en el 70 %: el gato podría seguir vivo. Cuando empared la pared, el lector atento debería ya intuir que el gato «hablará» en el momento final.</p>
+<p><strong>El horror más profundo de este relato</strong> no reside en el razonamiento, sino en la psicología del personaje: Poe hace que el lector observe a un hombre pasar de la dulzura al asesinato, todo en confesión de primera persona, sin permitirle mantenerse al margen.</p>
+<hr>
+<h3 id="el-corazon-delator">«El corazón delator»</h3>
+<p>Como «El gato negro», la identidad del asesino nunca es el misterio. El misterio es: <strong>¿de quién es ese latido?</strong></p>
+<p>Poe ha escondido la respuesta en un lugar bien visible desde la primera frase — «Estaba muy, muy nervioso, pero ¿por qué me llamarían loco?» Esta primera frase es una señal: se trata de un narrador perturbado mentalmente; lo que él «escucha» es una alucinación.</p>
+<p>Los lectores atentos pueden confirmarlo en el pasaje en que la policía «no escucha nada» (aprox. 85 %): el latido solo existe en la mente del narrador.</p>
+<p><strong>Este relato es epistemológicamente el más complejo de las tres confesiones criminales de Poe</strong>: la revelación en «El gato negro» es sobrenatural vs. psicológico; la de «El corazón delator» es realidad vs. alucinación — Poe mantiene al lector en la incertidumbre sobre si el latido es real hasta el final.</p>
+<hr>
+<h2 id="notas-complementarias">Notas Complementarias</h2>
+<h3 id="la-carta-robada-el-manifiesto-epistemologico-de-la-literatura-detectivesca">«La carta robada»: El manifiesto epistemológico de la literatura detectivesca</h3>
+<p>La importancia de «La carta robada» en la historia de la literatura detectivesca es comparable a la de «Los crímenes de la calle Morgue» — pero en dirección opuesta.</p>
+<p>«Los crímenes de la calle Morgue» afirma: el detective debe <strong>observar con más atención</strong> que la policía.
+«La carta robada» afirma: el detective debe ser <strong>más capaz de cambiar de perspectiva</strong> que la policía.</p>
+<p>En el largo monólogo filosófico de Dupin (el pasaje más filosófico de toda la obra), Poe plantea formalmente una tesis: <strong>el mejor método detectivesco no consiste en agudizar los sentidos, sino en comprender a las personas</strong> — entender la estructura mental del adversario y deducir sus acciones a partir de ella. Esta tesis se convirtió en la piedra angular teórica del género detectivesco psicológico, influyendo directamente en el Padre Brown de Chesterton (que sustituye la recopilación de pruebas físicas por la comprensión del alma del delincuente).</p>
+<p>El truco central — «esconder la carta en el lugar más visible» — ha generado incontables variantes en la literatura detectivesca del siglo XX: cualquier truco de «esconder en lo obvio» puede rastrearse hasta este texto.</p>
+<h3 id="el-mapa-filosofico-completo-de-la-trilogia-de-dupin">El mapa filosófico completo de la trilogía de Dupin</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Los crímenes de la calle Morgue (D1)</th>
+<th>El misterio de Marie Rogêt (Vol. 1)</th>
+<th>La carta robada (Vol. 2)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Problema central</td>
+<td>Imposibilidad física (cuarto cerrado)</td>
+<td>Caos informativo (análisis mediático)</td>
+<td>Punto ciego psicológico (epistemología)</td>
+</tr>
+<tr>
+<td>Criminal/adversario</td>
+<td>No humano (orangután)</td>
+<td>Humano (oficial de marina)</td>
+<td>Humano (político y poeta)</td>
+</tr>
+<tr>
+<td>Método de razonamiento</td>
+<td>Observación + imaginación</td>
+<td>Teoría de probabilidades + análisis de textos mediáticos</td>
+<td>Cambio de perspectiva + conocimiento humano</td>
+</tr>
+<tr>
+<td>Tesis filosófica</td>
+<td>Posibilidades extraordinarias en lugar de suposiciones existentes</td>
+<td>Teoría de probabilidades en lugar de emoción mediática</td>
+<td>Pensar el problema desde el marco perceptivo del adversario</td>
+</tr>
+<tr>
+<td>Deducibilidad</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐</td>
+</tr>
+</tbody>
+</table>
+<p>Los tres volúmenes juntos describen de manera completa las tres dimensiones de la epistemología clásica de la literatura detectivesca: percepción, análisis, conocimiento humano. Este fundamento fue desarrollado en profundidad más tarde por el Sherlock Holmes de Conan Doyle — pero Poe lo había establecido en menos de diez años y con solo tres relatos cortos.</p>
+<h3 id="las-tres-confesiones-criminales-el-gato-negro-el-corazon-delator-el-demonio-de-la-perversidad">Las tres confesiones criminales: «El gato negro», «El corazón delator», «El demonio de la perversidad»</h3>
+<p>Este volumen contiene — junto con el tercero — las tres obras más importantes de Poe en las que el «criminal confiesa en primera persona» (la tercera, «El demonio de la perversidad», aparece en el índice de este volumen pero, por un corte en la versión del documento, no está transcrita). Los tres relatos forman un sistema complementario de criminalidad psicológica:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>«El gato negro»</th>
+<th>«El corazón delator»</th>
+<th>«El demonio de la perversidad»</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Narrador</td>
+<td>Alcohólico</td>
+<td>Nerviosamente hipersensible</td>
+<td>Criminal perfecto</td>
+</tr>
+<tr>
+<td>Motivo del crimen</td>
+<td>Odio y miedo distorsionados</td>
+<td>Delirio irracional</td>
+<td>Impulso perverso (deseo de autodestrucción)</td>
+</tr>
+<tr>
+<td>Modo de revelación</td>
+<td>El gato vivo lo delata</td>
+<td>Se derrumba al escuchar el latido alucinado</td>
+<td>Cuenta su crimen a desconocidos en la calle</td>
+</tr>
+<tr>
+<td>Tesis central</td>
+<td>El crimen produce consecuencias físicas</td>
+<td>El crimen produce alucinaciones perceptivas</td>
+<td>El crimen produce impulsos autodestructivos</td>
+</tr>
+</tbody>
+</table>
+<p>Estos tres relatos, en el marco de la psicología criminal moderna, corresponden a tres mecanismos de proyección de la culpa: externalización (el aullido del gato), sensorización (la alucinación del latido), verbalización (el impulso incontrolable de confesar). Poe no disponía de vocabulario psicológico, pero describió con precisión literaria fenómenos que la psiquiatría posterior no nombraría hasta mucho después.</p>
+<h3 id="el-significado-de-un-descenso-al-maelstrom-como-relato-de-razonamiento">El significado de «Un descenso al Maelstrom» como relato de razonamiento</h3>
+<p>Este relato parece una historia de aventuras, pero en realidad es la demostración más depurada de Poe del «razonamiento científico como salvavidas». La supervivencia del viejo pescador es, en esencia, la versión en tiempo real de un experimento controlado:</p>
+<ol>
+<li>Observar datos (distintos objetos se hunden a distintas velocidades)</li>
+<li>Recurrir a la teoría (un artículo leído)</li>
+<li>Formular una hipótesis (el barril es más seguro que el barco)</li>
+<li>Ejecutar el experimento (saltar al agua)</li>
+<li>Verificar el resultado (sobrevivir)</li>
+</ol>
+<p>En la trilogía de Dupin, el razonamiento sirve para reconstruir la verdad a posteriori; en este relato, el razonamiento salva la vida de forma inmediata en las circunstancias más extremas. Poe muestra con ello que el «análisis racional» no es solo la herramienta del detective, sino el arma más poderosa de cualquiera que se enfrente a una amenaza desconocida.</p>
+    <a href="../index.html" class="back-link">← Volver al inicio</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Sala de Disección Detectivesca</p>
+    <p>Cinco autores · ochenta y ocho obras · 135 años de evolución de la dificultad en la narrativa policíaca.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

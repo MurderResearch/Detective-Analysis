@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Les Œuvres d'Edgar Allan Poe — Volume 2 — Salle de Dissection Policière</title>
+<meta name="description" content=" «La Lettre volée» (The Purloined Letter, 1844) Le préfet G—— revient chez Dupin avec une affaire délicate : le ministre D—— a dérobé dans les appartements roya">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/works-of-poe-vol2.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/works-of-poe-vol2.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/works-of-poe-vol2.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/works-of-poe-vol2.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/works-of-poe-vol2.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/works-of-poe-vol2.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/works-of-poe-vol2.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/works-of-poe-vol2.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Salle de Dissection Policière</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Accueil</a>
+        <a href="../index.html#latest">Récents</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Langue" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 Français</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/works-of-poe-vol2.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/works-of-poe-vol2.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/works-of-poe-vol2.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/works-of-poe-vol2.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/works-of-poe-vol2.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/works-of-poe-vol2.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/works-of-poe-vol2.html">Español</a>
+      <a class="lang-item active" data-lang="fr" href="/Detective-Analysis/fr/articles/works-of-poe-vol2.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">Edgar Allan Poe · </div>
+    <h1>Les Œuvres d'Edgar Allan Poe — Volume 2</h1>
+    <div class="subtitle">Edgar Allan Poe · Recueil de nouvelles (cette analyse se concentre sur les œuvres à structure policière ou criminelle psychologique clairement définie)</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Déductibilité</div>
+        <div class="rating-badge-stars">⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Indice de brume</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="les-uvres-dedgar-allan-poe-volume-2-analyse-de-deductibilite">Les Œuvres d'Edgar Allan Poe — Volume 2 — Analyse de Déductibilité</h1>
+<h2 id="informations-de-base">Informations de base</h2>
+<ul>
+<li>Auteur: Edgar Allan Poe</li>
+<li>Année: 1903 (édition Raven) ; les textes inclus ont été publiés originellement entre 1841 et 1846</li>
+<li>Genre: Recueil de nouvelles (cette analyse se concentre sur les œuvres à structure policière ou criminelle psychologique clairement définie)</li>
+<li>Détective: Chevalier C. Auguste Dupin («La Lettre volée») ; «Le Chat noir», «Le Cœur révélateur» et «L'Imp de la perversité» n'ont pas de détective — la narration est centrée sur la confession du criminel lui-même à la première personne</li>
+<li>Type d'énigme centrale: Raisonnement épistémologique («La Lettre volée») + confession criminelle psychologique («Le Chat noir», «Le Cœur révélateur») + raisonnement de survie physique («Une descente dans le Maelstrom»)</li>
+</ul>
+<hr>
+<h2 id="evaluation-generale-de-la-deductibilite">Évaluation générale de la déductibilité</h2>
+<p>Ce volume contient de nombreuses œuvres. La présente analyse sélectionne quatre textes dotés d'une structure policière ou criminelle clairement définie : <strong>«La Lettre volée»</strong> (The Purloined Letter), <strong>«Le Chat noir»</strong> (The Black Cat), <strong>«Le Cœur révélateur»</strong> (The Tell-Tale Heart) et <strong>«Une descente dans le Maelstrom»</strong> (A Descent into the Maelstrom). «La Lettre volée» est l'œuvre policière la plus importante du volume et constitue le dernier volet de la trilogie Dupin.</p>
+<table>
+<thead>
+<tr>
+<th>Indicateur</th>
+<th>Étoiles</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Déductibilité (Deducibility)</td>
+<td>⭐⭐</td>
+<td>Point de convergence moyen : environ 45 % — dans «La Lettre volée», la solution se trouve en surface ; dès que l'on comprend le principe épistémologique de Dupin, tout s'éclaire ; dans les textes de confession criminelle, la solution est généralement révélée tôt</td>
+</tr>
+<tr>
+<td>Indice de brume (Fog Rating)</td>
+<td>⭐⭐⭐</td>
+<td>«La Lettre volée» crée un brouillard modéré par l'«évidence excessive» comme forme suprême de camouflage ; les textes de confession créent un brouillard par les contradictions du narrateur peu fiable</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="resume">Résumé</h2>
+<h3 id="la-lettre-volee-the-purloined-letter-1844">«La Lettre volée» (The Purloined Letter, 1844)</h3>
+<p>Le préfet G—— revient chez Dupin avec une affaire délicate : le ministre D—— a dérobé dans les appartements royaux une lettre susceptible de compromettre l'honneur d'une haute personnalité. La police a fouillé minutieusement sa résidence pendant trois mois, armée de microscopes et de sondes, passant en revue chaque meuble et chaque lame de parquet — sans résultat. Dupin sourit légèrement et promet de remettre la lettre lors de la prochaine rencontre. Un mois plus tard, le préfet revient avec un chèque de cinquante mille francs ; Dupin ouvre un tiroir et lui tend la lettre. Il explique ensuite au narrateur : il avait rendu visite au ministre portant des lunettes vertes protectrices et avait aperçu du coin de l'œil, dans un porte-cartes sur la cheminée, une vieille lettre voyante — souillée, froissée, avec un cachet de cire noire (l'original avait un cachet rouge) et une adresse différente (l'écriture fine, alors que l'original présentait un tracé vigoureux), mais de taille et de forme parfaitement identiques. D—— avait délibérément déguisé la lettre en un vieux papier sans importance, voire ostensiblement attrayant pour le regard, en la plaçant à l'endroit le plus visible afin d'exploiter la «pensée habituelle de la dissimulation» de la police et de la rendre aveugle. Le lendemain, Dupin provoqua un tapage dans la rue pour distraire le ministre, échangea la lettre et laissa à sa place une copie de substitution contenant des vers provocateurs.</p>
+<h3 id="le-chat-noir-the-black-cat-1843">«Le Chat noir» (The Black Cat, 1843)</h3>
+<p>Le narrateur sera exécuté le lendemain et décide de révéler la vérité avant de mourir. Il fut autrefois un homme doux, aimant les animaux, que l'alcool fit sombrer progressivement : il creva d'abord l'œil de son chat bien-aimé Pluto, puis le pendit. Bientôt apparut un chat noir presque identique, borgne lui aussi, avec une tache blanche sur la poitrine dont la forme prit peu à peu celle d'une potence. Il éprouvait pour ce chat à la fois terreur et répulsion. Un jour, voulant le tuer à coups de hache dans la cave, sa femme l'en empêcha ; dans un accès de fureur, il lui asséna un coup de hache et emmura le cadavre dans la paroi de la cave. La police fouilla la maison à plusieurs reprises, jusqu'à ce que, lors de la dernière visite, le narrateur frappât la paroi de sa canne en vantant la solidité de la maçonnerie — un long hurlement s'éleva de la muraille, la police l'ouvrit et le cadavre de la femme apparut en compagnie du chat noir. Celui-ci n'avait jamais quitté les lieux : il l'avait emmuré vivant.</p>
+<h3 id="le-cur-revelateur-the-tell-tale-heart-1843">«Le Cœur révélateur» (The Tell-Tale Heart, 1843)</h3>
+<p>Le narrateur affirme avec véhémence qu'il n'est pas fou — simplement que ses nerfs sont si aiguisés qu'il perçoit le murmure de toutes choses au ciel et sur la terre. Il vit avec un vieillard qu'il hait profondément pour son «œil de vautour» (une opacité blanche sur la cornée), sans lui garder rancune par ailleurs. Pendant sept nuits, il entrouvre silencieusement la porte de la chambre du vieillard, lève sa lanterne — et se retient parce que le vieillard est éveillé. La huitième nuit, le vieillard se réveille dans l'obscurité ; le narrateur bondit sur lui, l'étouffe sous un matelas, soulève les lames du parquet, cache le cadavre dessous, nettoie tout et attend tranquillement la police (un voisin avait signalé du bruit). Tandis que les agents inspectent la maison, le narrateur les invite à s'asseoir avec une apparente sérénité ; mais il commence à entendre un sourd battement qu'il croit être le cœur du mort pulsant sous le plancher. Finalement incapable de le supporter, il arrache les lames et avoue.</p>
+<h3 id="une-descente-dans-le-maelstrom-a-descent-into-the-maelstrom-1841">«Une descente dans le Maelstrom» (A Descent into the Maelstrom, 1841)</h3>
+<p>Un vieux pêcheur aux cheveux blanchis par la terreur emmène un voyageur au sommet d'une falaise de la côte norvégienne d'où l'on contemple le légendaire tourbillon, et lui raconte son expérience d'il y a trois ans : lui et deux frères naviguèrent vers les lieux de pêche près du Maelstrom et, sur le chemin du retour, furent surpris par un ouragan qui les aspira dans l'abîme du tourbillon. Un frère tomba à l'eau ; l'autre se cramponna à l'anneau du bateau sans pouvoir se mouvoir. Lui, dans le désespoir, conserva sa lucidité, observa les lois physiques du tourbillon et découvrit que différents objets s'enfonçaient à des vitesses différentes selon leur forme : les corps cylindriques (tonneaux) s'enfonçaient plus lentement que les sphériques, et les objets légers plus lentement que les lourds. Il s'agrippa à un tonneau, sauta à l'eau et fut projeté vers l'extérieur par le courant plutôt qu'aspiré vers le fond — et survécut. Ses frères et le bateau coulèrent.</p>
+<hr>
+<h2 id="analyse-de-la-verite">Analyse de la vérité</h2>
+<h3 id="premiere-partie-la-lettre-volee">Première partie : «La Lettre volée»</h3>
+<h4 id="verite-1-ou-est-cachee-la-lettre-wheresit">Vérité 1 : Où est cachée la lettre ? (wheresit)</h4>
+<ul>
+<li><strong>Point de convergence : environ 48 %</strong></li>
+<li>Réponse : Le ministre D—— a fait exactement l'inverse : il a placé la lettre ouvertement à l'endroit le plus visible du porte-cartes sur la cheminée, déguisée par des signes de vieillissement et retournée face visible (l'adresse vers l'extérieur, mais différente de l'original), pour qu'elle paraisse un vieux papier sans intérêt.</li>
+</ul>
+<h5 id="indices-cles">🔑 Indices clés</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement (section/pourcentage)</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Le préfet avoue : le ministre devait savoir que sa résidence serait fouillée (car c'est un politicien astucieux)</td>
+<td>environ 12 %</td>
+<td>Dupin sous-entend : celui qui sait qu'une fouille est imminente ne cachera rien d'une façon «trouvable»</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Dupin porte des lunettes vertes protectrices lors de sa première visite et «scanne» toute la pièce</td>
+<td>environ 45 %</td>
+<td>L'opération d'exploration déguisée de Dupin — il ne bavarde pas vraiment, il cherche la lettre</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Une vieille lettre voyante dans le porte-cartes sur la cheminée : souillée, froissée, cachet de cire noire (l'original était rouge), écriture d'adresse fine (l'original était vigoureux) — mais «taille et forme» correspondent exactement</td>
+<td>environ 48 %</td>
+<td>C'est le cœur du contre-camouflage — «tout est différent, seule la forme correspond»</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Dupin raisonne : pour une personne d'une intelligence extrême, la meilleure cachette est de «ne pas cacher du tout» — exposer l'objet à la vue de tous, pour que l'«évidence excessive» le rende invisible</td>
+<td>environ 55 %</td>
+<td>L'argument épistémologique central — le passage de raisonnement le plus important du texte entier</td>
+</tr>
+</tbody>
+</table>
+<h5 id="indices-auxiliaires">🔍 Indices auxiliaires</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement (section/pourcentage)</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>La fouille de trois mois du préfet fut extrêmement minutieuse : vrilles, microscopes, pieds de chaises démontés, lames de parquet soulevées, murs mesurés centimètre par centimètre</td>
+<td>environ 15–25 %</td>
+<td>Confirmation par exclusion : si la lettre se trouvait en un endroit «caché» quelconque, on l'aurait trouvée — donc elle n'est pas cachée</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Le ministre est connu comme «poète et mathématicien» à la fois</td>
+<td>environ 32 %</td>
+<td>Dupin explique : un pur mathématicien est assujetti au système symbolique ; un poète-mathématicien peut «changer de perspective» et imiter le cadre perceptif de l'adversaire</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Le ministre s'est absenté délibérément plusieurs fois pour laisser à la police davantage de temps pour fouiller</td>
+<td>environ 35 %</td>
+<td>Retrait stratégique — laisser la police fouiller à fond et se décourager fait partie du plan</td>
+</tr>
+</tbody>
+</table>
+<h5 id="faux-indices">🐟 Faux indices</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement (section/pourcentage)</th>
+<th>Direction de la méprise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Le rapport détaillé de la fouille minutieuse de trois mois du préfet</td>
+<td>environ 10–30 %</td>
+<td>Amène le lecteur, avec le narrateur, à croire : la lettre n'est soit pas dans la maison, soit dans une cachette encore plus ingénieuse — Dupin prouve que les deux hypothèses sont fausses</td>
+</tr>
+<tr>
+<td>2</td>
+<td>L'«apparence extérieure» de la lettre (cachet noir, adresse différente, souillée et froissée) diffère totalement de la description de l'original par le préfet</td>
+<td>environ 48 %</td>
+<td>Amène le lecteur (et le préfet) à croire qu'il s'agit d'une autre lettre ; Dupin déduit pourtant, d'après la taille et l'emplacement, qu'il s'agit de la même</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="verite-2-comment-dupin-prend-il-la-lettre-sans-que-le-ministre-sen-apercoive-howdunit">Vérité 2 : Comment Dupin prend-il la lettre sans que le ministre s'en aperçoive ? (howdunit)</h4>
+<ul>
+<li><strong>Point de convergence : environ 90 %</strong></li>
+<li>Réponse : Dupin mémorise la position de la lettre lors de sa première visite, revient le lendemain avec une lettre de substitution d'aspect similaire préparée à l'avance, fait simultanément tirer un coup de feu dans la rue par un complice, et profite du moment où le ministre se dirige vers la fenêtre pour échanger rapidement les lettres, emportant la vraie et laissant la fausse — qui contient à l'intérieur des vers provocateurs d'un poète français annonçant le succès de la contre-offensive.</li>
+</ul>
+<h5 id="indices-cles_1">🔑 Indices clés</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement (section/pourcentage)</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Lors de la première visite, Dupin a déjà repéré la position de la lettre et «oublie» délibérément sa tabatière comme prétexte pour revenir le lendemain</td>
+<td>environ 85 %</td>
+<td>L'intervalle entre les deux visites sert à préparer la lettre de substitution et à organiser le complice</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Lors de la seconde visite, un coup de feu retentit dans la rue ; le ministre se dirige vers la fenêtre</td>
+<td>environ 88 %</td>
+<td>Un complice engagé par Dupin a provoqué la distraction</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Au moment où le ministre se retourne, Dupin effectue l'échange de lettres</td>
+<td>environ 90 %</td>
+<td>Le procédé est simple et net — il repose entièrement sur la préparation préalable et le moment précis</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="deuxieme-partie-le-chat-noir">Deuxième partie : «Le Chat noir»</h3>
+<h4 id="verite-1-la-mort-de-la-femme-et-la-dissimulation-du-cadavre-whodunit-howdunit">Vérité 1 : La mort de la femme et la dissimulation du cadavre (whodunit + howdunit)</h4>
+<ul>
+<li><strong>Point de convergence : environ 5 %</strong> (style confessionnel — révélé dès le début)</li>
+<li>Réponse : Le narrateur tue sa femme de ses propres mains à coups de hache, emmure le cadavre dans la paroi de la cave et emmure involontairement le chat noir en même temps.</li>
+</ul>
+<h5 id="indices-cles_2">🔑 Indices clés</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement (section/pourcentage)</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Le narrateur déclare dès le début : «Demain je mourrai», et écrit une confession testamentaire</td>
+<td>environ 2 %</td>
+<td>Nous savons déjà qu'il a commis un crime et sera exécuté — le mystère ne réside pas dans le «qui» mais dans le «comment» et le «comment fut-il découvert»</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Le narrateur découvre dans la cave un mur fraîchement crépi et reconnaît en lui la cachette du cadavre</td>
+<td>environ 70 %</td>
+<td>Indice technique — c'est seulement à ce moment que la police et le lecteur comprennent le procédé de dissimulation</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Quand le narrateur frappe la paroi de sa canne, un hurlement s'en échappe — le chat emmuré vivant</td>
+<td>environ 90 %</td>
+<td>La révélation finale : le crime est trahi par le chat qu'il croyait avoir tué</td>
+</tr>
+</tbody>
+</table>
+<h5 id="indices-auxiliaires_1">🔍 Indices auxiliaires</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement (section/pourcentage)</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>La tache blanche sur la poitrine du second chat noir prend de plus en plus la forme d'une potence</td>
+<td>environ 40 %</td>
+<td>Présage psychologique — la culpabilité du narrateur fait irruption dans sa conscience sous forme d'image extérieure</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Après avoir pendu Pluto, le narrateur ressent brièvement un soulagement mais est ensuite torturé par les remords</td>
+<td>environ 25 %</td>
+<td>Le schéma du criminel psychologique : tuer — soulagement — douleur — tuer de nouveau</td>
+</tr>
+</tbody>
+</table>
+<h5 id="faux-indices_1">🐟 Faux indices</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement (section/pourcentage)</th>
+<th>Direction de la méprise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Le second chat noir est-il vraiment un phénomène surnaturel ? (La femme évoque la croyance populaire selon laquelle les chats noirs sont des sorcières incarnées)</td>
+<td>environ 38 %</td>
+<td>Amène le lecteur à hésiter : est-ce une maladie mentale, ou une vraie force surnaturelle qui le punit ? Poe laisse délibérément la question sans réponse</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Les fouilles successives de la police ne révèlent rien d'anormal</td>
+<td>environ 75–85 %</td>
+<td>Crée un faux sentiment de sécurité («il ne sera peut-être pas découvert»), qui renforce l'impact dramatique de la révélation finale</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="troisieme-partie-le-cur-revelateur">Troisième partie : «Le Cœur révélateur»</h3>
+<h4 id="verite-1-le-crime-sera-t-il-decouvert-willitout">Vérité 1 : Le crime sera-t-il découvert ? (willitout)</h4>
+<ul>
+<li><strong>Point de convergence : environ 10 %</strong> (style confessionnel — le motif et le déroulement du meurtre sont révélés tôt)</li>
+<li>Réponse : Le crime est découvert — non par des preuves matérielles, mais par l'effondrement nerveux du narrateur lui-même. Le «cœur révélateur» est en réalité une voix engendrée par sa propre conscience et sa peur.</li>
+</ul>
+<h5 id="indices-cles_3">🔑 Indices clés</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement (section/pourcentage)</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Le narrateur insiste que son ouïe est extraordinairement aiguisée — il «entend les voix de l'enfer»</td>
+<td>environ 3 %</td>
+<td>Établit la prémisse du narrateur peu fiable — le lecteur devrait immédiatement se méfier : ce qu'il «entend» est-il réel ?</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Il hait l'«œil de vautour» du vieillard, mais ne lui garde aucun rancune personnelle</td>
+<td>environ 10 %</td>
+<td>Le motif du meurtre est une peur délirante irrationnelle, non un vrai ressentiment</td>
+</tr>
+<tr>
+<td>3</td>
+<td>En présence de la police, il commence à entendre un battement de plus en plus fort</td>
+<td>environ 85 %</td>
+<td>Le son est d'origine psychologique — quand les policiers ne réagissent pas, le lecteur peut conclure : lui seul l'entend</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Incapable de le supporter, il arrache lui-même les lames du parquet et avoue</td>
+<td>environ 95 %</td>
+<td>Le crime est révélé par le criminel lui-même, non par des forces extérieures — un renversement du principe policier : le «détective» est sa propre conscience</td>
+</tr>
+</tbody>
+</table>
+<h5 id="faux-indices_2">🐟 Faux indices</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement (section/pourcentage)</th>
+<th>Direction de la méprise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Le narrateur raconte le meurtre sur le ton de quelqu'un qui dit «je suis parfaitement normal et tout cela a sa logique»</td>
+<td>tout le texte</td>
+<td>Amène le lecteur à accepter momentanément son cadre de «normalité», avant de réaliser que cela même est l'expression du déséquilibre mental</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Les policiers s'assoient, boivent du thé, bavardent — apparemment sans avoir rien remarqué</td>
+<td>environ 80 %</td>
+<td>Fait croire au lecteur qu'il est «en sécurité», ce qui rend l'aveu encore plus saisissant</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="quatrieme-partie-une-descente-dans-le-maelstrom">Quatrième partie : «Une descente dans le Maelstrom»</h3>
+<h4 id="verite-1-comment-survivre-dans-le-tourbillon-howsurvive">Vérité 1 : Comment survivre dans le tourbillon ? (howsurvive)</h4>
+<ul>
+<li><strong>Point de convergence : environ 62 %</strong></li>
+<li>Réponse : Le vieux pêcheur, dans une terreur extrême, garde sa lucidité, observe et découvre que l'attraction du tourbillon varie selon la forme et la taille des objets — les corps cylindriques (tonneaux) s'enfoncent plus lentement que les sphériques ou cubiques, et les objets légers plus lentement que les lourds. Il abandonne le lourd navire, s'agrippe à un tonneau, saute à l'eau et est projeté vers l'extérieur par le courant plutôt qu'aspiré vers le fond — et survit.</li>
+</ul>
+<h5 id="indices-cles_4">🔑 Indices clés</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement (section/pourcentage)</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Le vieux pêcheur observe que les différents débris à la dérive s'enfoncent à des vitesses différentes, les tonneaux étant les plus lents</td>
+<td>environ 55 %</td>
+<td>Première observation clé — il commence à effectuer des inductions physiques conscientes</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Il se souvient d'un article de revue sur les tourbillons qui mentionnait l'influence de la forme sur la vitesse d'enfoncement</td>
+<td>environ 60 %</td>
+<td>Recours au savoir scientifique — passage de la peur à l'analyse rationnelle</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Il comprend que rester sur le navire signifie une mort certaine, et que la forme cylindrique du tonneau offre les meilleures chances de survie</td>
+<td>environ 62 %</td>
+<td>Point de convergence du raisonnement — la base logique de sa décision vitale</td>
+</tr>
+</tbody>
+</table>
+<h5 id="faux-indices_3">🐟 Faux indices</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement (section/pourcentage)</th>
+<th>Direction de la méprise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Le frère qui s'agrippe à l'anneau du navire refuse de lâcher et de sauter vers le tonneau</td>
+<td>environ 65 %</td>
+<td>Le lecteur pense que s'accrocher au navire (soutien plus grand) est plus sûr ; le récit renverse cette intuition</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="reconstruction-du-raisonnement">Reconstruction du raisonnement</h2>
+<h3 id="la-lettre-volee">«La Lettre volée»</h3>
+<p>Ce texte est <strong>le plus dense philosophiquement</strong> de la trilogie de Poe. L'énigme centrale n'est pas «où est la lettre», mais «comment penser correctement pour trouver la lettre».</p>
+<p>Le raisonnement se déroule sur trois niveaux épistémologiques :</p>
+<p><strong>Premier niveau (0–30 %) : Comprendre les limites du problème</strong>
+Le préfet décrit en détail le processus de fouille. Tout lecteur perspicace peut à ce stade déjà déduire : une fouille aussi minutieuse sans résultat signifie que la lettre ne se trouve en aucun endroit «imaginable comme cachette». Mais la plupart des lecteurs ne ressentiront que de la confusion, sans pouvoir dériver la réponse.</p>
+<p><strong>Deuxième niveau (30–55 %) : Le raisonnement humain de Dupin</strong>
+Dupin explique au narrateur : l'échec du préfet tient à ce qu'il «évalue l'adversaire depuis son propre cadre perceptif» — il croit qu'une personne intelligente cachera mieux que lui, non plus ostensiblement. D—— est poète et mathématicien, et peut faire ce que le préfet ne peut pas : <strong>changer de perspective</strong>. D—— a nécessairement prévu les schémas de recherche de la police et a agi selon le «schéma inverse».</p>
+<p><strong>Troisième niveau (48 % : la contradiction dans l'apparence de la lettre)</strong>
+Dupin décrit l'apparence de la lettre : «tout ne correspond pas — seule la forme convient» — un lecteur perspicace peut à ce stade déduire lui-même la réponse : c'est précisément la lettre déguisée à l'envers.</p>
+<p><strong>La fenêtre de raisonnement pour le lecteur perspicace</strong> : Aux alentours de 48 % (quand Dupin décrit l'apparence de la lettre), un lecteur qui a intériorisé le principe de Dupin «cacher dans l'évidence» peut résoudre le cas par lui-même. La difficulté globale est faible, car Poe fait exposer à Dupin le principe de la solution au cours même du récit — méthode et solution sont enseignées simultanément.</p>
+<hr>
+<h3 id="le-chat-noir">«Le Chat noir»</h3>
+<p>La structure confessionnelle laisse peu de marge au «raisonnement» — le lecteur sait dès la première ligne que le narrateur est le meurtrier et sera exécuté. Le vrai mystère est : <strong>comment est-il découvert ?</strong></p>
+<p>Il n'existe qu'un seul chemin de raisonnement : observer si le chat est encore en vie. Le narrateur écrit : «Je croyais l'avoir tué» (sans confirmer le cadavre) — ce détail suffit pour qu'un lecteur attentif déduise à 70 % : le chat est peut-être encore vivant. Lorsqu'il emmure la paroi, le lecteur attentif devrait déjà pressentir que le chat «parlera» au moment final.</p>
+<p><strong>L'horreur la plus profonde de ce texte</strong> ne réside pas dans le raisonnement, mais dans la psychologie du personnage : Poe fait assister le lecteur au glissement d'un homme de la douceur vers le meurtre, entièrement en confession à la première personne, sans lui permettre de rester à distance.</p>
+<hr>
+<h3 id="le-cur-revelateur">«Le Cœur révélateur»</h3>
+<p>Comme «Le Chat noir», l'identité du meurtrier n'est jamais le mystère. Le mystère est : <strong>à qui appartient ce battement de cœur ?</strong></p>
+<p>Poe a caché la réponse en évidence dès la première phrase — «J'étais très, très nerveux, mais pourquoi me dirait-on fou ?» Cette première phrase est un signal : il s'agit d'un narrateur mentalement déséquilibré ; ce qu'il «entend» est une hallucination.</p>
+<p>Les lecteurs attentifs peuvent le confirmer au passage où les policiers «n'entendent rien» (environ 85 %) : le battement n'existe que dans l'esprit du narrateur.</p>
+<p><strong>Ce texte est le plus complexe épistémologiquement des trois confessions criminelles de Poe</strong> : la révélation dans «Le Chat noir» est surnaturel vs. psychologique ; celle du «Cœur révélateur» est réalité vs. hallucination — Poe maintient le lecteur dans l'incertitude quant à la réalité du battement jusqu'à la fin.</p>
+<hr>
+<h2 id="notes-complementaires">Notes complémentaires</h2>
+<h3 id="la-lettre-volee-le-manifeste-epistemologique-de-la-litterature-policiere">«La Lettre volée» : Le manifeste épistémologique de la littérature policière</h3>
+<p>L'importance de «La Lettre volée» dans l'histoire de la littérature policière est comparable à celle des «Meurtres de la rue Morgue» — mais dans une direction opposée.</p>
+<p>«Les Meurtres de la rue Morgue» affirme : le détective doit <strong>observer plus attentivement</strong> que la police.
+«La Lettre volée» affirme : le détective doit être <strong>plus capable de changer de perspective</strong> que la police.</p>
+<p>Dans le long monologue philosophique de Dupin (le passage le plus philosophique de l'œuvre entière), Poe pose formellement une thèse : <strong>la meilleure méthode du détective ne consiste pas à aiguiser les sens, mais à comprendre les hommes</strong> — saisir la structure mentale de l'adversaire et en déduire ses actions. Cette thèse devint la pierre angulaire théorique du genre policier psychologique, influençant directement le Père Brown de Chesterton (qui substitue la compréhension de l'âme du coupable à la collecte de preuves matérielles).</p>
+<p>Le truc central — «cacher la lettre à l'endroit le plus visible» — a engendré d'innombrables variantes dans la littérature policière du XX^e siècle : tout truc de «cacher dans l'évidence» peut être retracé jusqu'à ce texte.</p>
+<h3 id="la-carte-philosophique-complete-de-la-trilogie-dupin">La carte philosophique complète de la trilogie Dupin</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Les Meurtres de la rue Morgue (D1)</th>
+<th>Le Mystère de Marie Rogêt (Vol. 1)</th>
+<th>La Lettre volée (Vol. 2)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Problème central</td>
+<td>Impossibilité physique (chambre close)</td>
+<td>Chaos informationnel (analyse médiatique)</td>
+<td>Point aveugle psychologique (épistémologie)</td>
+</tr>
+<tr>
+<td>Criminel/adversaire</td>
+<td>Non humain (orang-outan)</td>
+<td>Humain (officier de marine)</td>
+<td>Humain (politicien et poète)</td>
+</tr>
+<tr>
+<td>Méthode de raisonnement</td>
+<td>Observation + imagination</td>
+<td>Théorie des probabilités + analyse de textes médiatiques</td>
+<td>Changement de perspective + connaissance des hommes</td>
+</tr>
+<tr>
+<td>Thèse philosophique</td>
+<td>Possibilités extraordinaires à la place des hypothèses existantes</td>
+<td>Théorie des probabilités à la place de l'émotion médiatique</td>
+<td>Penser le problème depuis le cadre perceptif de l'adversaire</td>
+</tr>
+<tr>
+<td>Déductibilité</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐</td>
+</tr>
+</tbody>
+</table>
+<p>Les trois volumes ensemble décrivent de façon complète les trois dimensions de l'épistémologie classique de la littérature policière : perception, analyse, connaissance des hommes. Ce fondement fut plus tard développé en profondeur par le Sherlock Holmes de Conan Doyle — mais Poe l'avait posé en moins de dix ans et avec seulement trois nouvelles.</p>
+<h3 id="les-trois-confessions-criminelles-le-chat-noir-le-cur-revelateur-limp-de-la-perversite">Les trois confessions criminelles : «Le Chat noir», «Le Cœur révélateur», «L'Imp de la perversité»</h3>
+<p>Ce volume contient — avec le troisième — les trois œuvres les plus importantes de Poe où «le criminel confesse à la première personne» (la troisième, «L'Imp de la perversité», figure dans la table des matières du volume mais, en raison d'une coupure dans la version du document, n'y est pas transcrite). Les trois textes forment un système complémentaire de criminalité psychologique :</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>«Le Chat noir»</th>
+<th>«Le Cœur révélateur»</th>
+<th>«L'Imp de la perversité»</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Narrateur</td>
+<td>Alcoolique</td>
+<td>Hypersensible nerveux</td>
+<td>Criminel parfait</td>
+</tr>
+<tr>
+<td>Motif du crime</td>
+<td>Haine et peur déformées</td>
+<td>Délire irrationnel</td>
+<td>Impulsion perverse (désir d'autodestruction)</td>
+</tr>
+<tr>
+<td>Mode de révélation</td>
+<td>Le chat vivant le trahit</td>
+<td>S'effondre en entendant le battement halluciné</td>
+<td>Raconte son crime à des inconnus dans la rue</td>
+</tr>
+<tr>
+<td>Thèse centrale</td>
+<td>Le crime produit des conséquences physiques</td>
+<td>Le crime produit des hallucinations perceptives</td>
+<td>Le crime produit des impulsions autodestructrices</td>
+</tr>
+</tbody>
+</table>
+<p>Ces trois textes, dans le cadre de la psychologie criminelle moderne, correspondent à trois mécanismes de projection de la culpabilité : externalisation (le hurlement du chat), sensorisation (l'hallucination du battement de cœur), verbalisation (l'impulsion irrépressible d'avouer). Poe ne disposait pas d'un vocabulaire psychologique — et décrivit pourtant avec précision littéraire des phénomènes que la psychiatrie ultérieure ne nommerait que bien plus tard.</p>
+<h3 id="la-signification-dune-descente-dans-le-maelstrom-comme-recit-de-raisonnement">La signification d'«Une descente dans le Maelstrom» comme récit de raisonnement</h3>
+<p>Ce texte ressemble à un récit d'aventures, mais est en réalité la démonstration la plus épurée de Poe du «raisonnement scientifique comme sauveteur». La survie du vieux pêcheur est, dans son essence, la version en temps réel d'une expérience contrôlée :</p>
+<ol>
+<li>Observer des données (différents objets s'enfoncent à des vitesses différentes)</li>
+<li>Recourir à la théorie (un article lu)</li>
+<li>Former une hypothèse (le tonneau est plus sûr que le bateau)</li>
+<li>Exécuter l'expérience (sauter à l'eau)</li>
+<li>Vérifier le résultat (survivre)</li>
+</ol>
+<p>Dans la trilogie Dupin, le raisonnement sert à reconstituer la vérité après coup ; dans ce texte, le raisonnement sauve la vie de façon immédiate dans les circonstances les plus extrêmes. Poe montre ainsi que l'«analyse rationnelle» n'est pas seulement l'outil du détective, mais l'arme la plus puissante de quiconque fait face à une menace inconnue.</p>
+    <a href="../index.html" class="back-link">← Retour à l'accueil</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Salle de Dissection Policière</p>
+    <p>Cinq auteurs · quatre-vingt-huit œuvres · 135 ans d'évolution de la difficulté du roman policier.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

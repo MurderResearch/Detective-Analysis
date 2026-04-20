@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Die Werke Edgar Allan Poes — Band 2 — Deduzierbarkeitsanalyse — Detektivanalyse</title>
+<meta name="description" content=" «Der entwendete Brief» (The Purloined Letter, 1844) Präfekt G—— erscheint erneut bei Dupin mit einem heiklen Fall: Minister D—— hat in den königlichen Gemächer">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/works-of-poe-vol2.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/works-of-poe-vol2.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/works-of-poe-vol2.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/works-of-poe-vol2.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/works-of-poe-vol2.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/works-of-poe-vol2.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/works-of-poe-vol2.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/works-of-poe-vol2.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Detektivanalyse</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Start</a>
+        <a href="../index.html#latest">Neueste</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Sprache" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 Deutsch</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/works-of-poe-vol2.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/works-of-poe-vol2.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/works-of-poe-vol2.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/works-of-poe-vol2.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/works-of-poe-vol2.html">한국어</a>
+      <a class="lang-item active" data-lang="de" href="/Detective-Analysis/de/articles/works-of-poe-vol2.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/works-of-poe-vol2.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/works-of-poe-vol2.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">Edgar Allan Poe · </div>
+    <h1>Die Werke Edgar Allan Poes — Band 2 — Deduzierbarkeitsanalyse</h1>
+    <div class="subtitle">Edgar Allan Poe · Kurzgeschichtensammlung (diese Analyse konzentriert sich auf Werke mit klarer Detektiv- oder psychologischer Kriminalstruktur)</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Deduzierbarkeit</div>
+        <div class="rating-badge-stars">⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Nebelgrad</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="die-werke-edgar-allan-poes-band-2-deduzierbarkeitsanalyse">Die Werke Edgar Allan Poes — Band 2 — Deduzierbarkeitsanalyse</h1>
+<h2 id="grundinformationen">Grundinformationen</h2>
+<ul>
+<li>Autor: Edgar Allan Poe</li>
+<li>Erscheinungsjahr: 1903 (Raven Edition); die enthaltenen Einzelwerke wurden ursprünglich 1841–1846 veröffentlicht</li>
+<li>Typ: Kurzgeschichtensammlung (diese Analyse konzentriert sich auf Werke mit klarer Detektiv- oder psychologischer Kriminalstruktur)</li>
+<li>Detektiv: Chevalier C. Auguste Dupin («Der entwendete Brief»); «Die schwarze Katze», «Das verräterische Herz» und «Der Imp der Perversität» haben keinen Detektiv — die Erzählung wird vom Täter selbst in Ich-Form geführt</li>
+<li>Art der zentralen Rätsel: Erkenntnistheoretisches Schlussfolgern («Der entwendete Brief») + psychologische Verbrechensbeichte («Die schwarze Katze», «Das verräterische Herz») + physikalisches Überlebensrätseln («Ein Hinabsteigen in den Maelstrom»)</li>
+</ul>
+<hr>
+<h2 id="gesamtbewertung-der-deduzierbarkeit">Gesamtbewertung der Deduzierbarkeit</h2>
+<p>Dieser Band enthält zahlreiche Werke. Die vorliegende Analyse wählt vier Texte mit klar erkennbarer Detektiv- oder Kriminalstruktur aus: <strong>«Der entwendete Brief»</strong> (The Purloined Letter), <strong>«Die schwarze Katze»</strong> (The Black Cat), <strong>«Das verräterische Herz»</strong> (The Tell-Tale Heart) und <strong>«Ein Hinabsteigen in den Maelstrom»</strong> (A Descent into the Maelstrom). «Der entwendete Brief» ist das bedeutendste Detektivwerk dieses Bandes und zugleich der Abschluss der Dupin-Trilogie.</p>
+<table>
+<thead>
+<tr>
+<th>Indikator</th>
+<th>Sterne</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deduzierbarkeit (Deducibility)</td>
+<td>⭐⭐</td>
+<td>Durchschnittlicher Konvergenzpunkt ca. 45 % — in «Der entwendete Brief» liegt die Lösung offen zutage; sobald man Dupins erkenntnistheoretisches Prinzip versteht, erschließt sich alles; bei den Verbrechensbeicht-Texten wird die Lösung meist früh enthüllt</td>
+</tr>
+<tr>
+<td>Nebelgrad (Fog Rating)</td>
+<td>⭐⭐⭐</td>
+<td>«Der entwendete Brief» erzeugt mittleren Nebel durch «übermäßige Offensichtlichkeit» als höchste Form der Tarnung; die Verbrechensbeicht-Texte erzeugen Nebel durch die Selbstwidersprüche des unzuverlässigen Erzählers</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="zusammenfassung">Zusammenfassung</h2>
+<h3 id="der-entwendete-brief-the-purloined-letter-1844">«Der entwendete Brief» (The Purloined Letter, 1844)</h3>
+<p>Präfekt G—— erscheint erneut bei Dupin mit einem heiklen Fall: Minister D—— hat in den königlichen Gemächern einen Brief entwendet, der die Ehre einer hochgestellten Person zu bedrohen vermag. Die Polizei hat drei Monate lang die Residenz des Ministers mit Mikroskop und Sonden durchsucht, jedes Möbelstück und jeden Bodenbelag untersucht — ohne Ergebnis. Dupin lächelt leise und verspricht, den Brief beim nächsten Treffen auszuhändigen. Einen Monat später erscheint der Präfekt mit einem Scheck über fünfzigtausend Francs; Dupin öffnet eine Schublade und reicht ihm den Brief. Anschließend erklärt er dem Ich-Erzähler: Er hatte den Minister in grünen Augengläsern besucht und dabei aus dem Augenwinkel in einem Kartenständer über dem Kamin einen auffälligen alten Brief entdeckt — abgenutzt, zerknittert, mit schwarzem Siegellack und anderer Adresse als in der Beschreibung des Präfekten, aber in Größe und Form perfekt übereinstimmend. D—— hatte den Brief absichtlich als einen unscheinbaren, ja geradezu augenfälligen alten Brief getarnt und ihn an der sichtbarsten Stelle platziert, um die «habituelle Verborgenheitsdenkweise» der Polizei auszunutzen und sie blind zu machen. Am nächsten Tag ließ Dupin einen Straßenlärm inszenieren, um den Minister abzulenken, tauschte den Brief aus und hinterließ ein Ersatzschreiben mit einem provokanten Vers.</p>
+<h3 id="die-schwarze-katze-the-black-cat-1843">«Die schwarze Katze» (The Black Cat, 1843)</h3>
+<p>Der Erzähler soll morgen hingerichtet werden und beschließt, kurz vor seinem Tod die Wahrheit zu enthüllen. Er war einst ein sanfter Tierliebhaber, der durch Alkohol immer tiefer sank: Er schnitt seiner geliebten Katze Pluto ein Auge aus und erhängte sie schließlich. Bald erschien eine nahezu identische schwarze Katze mit demselben fehlenden Auge und einem weißen Fleck auf der Brust — der mit der Zeit die Form eines Galgens annahm. Er fürchtete und verabscheute diese Katze. Als er sie eines Tages im Keller mit einem Beil erschlagen wollte und seine Frau ihn aufhielt, erschlug er sie im Zorn und mauerte die Leiche in die Kellerwand ein. Die Polizei durchsuchte das Haus mehrmals, bis er beim letzten Besuch aus unbekanntem Grund mit seinem Stock gegen die Wand schlug und die Festigkeit des Mauerwerks rühmte — aus der Wand drang ein langes Heulen, die Polizei brach die Wand auf, und die Leiche der Frau erschien mitsamt der schwarzen Katze. Diese hatte das Gebäude nie verlassen: Er hatte sie lebendig eingemauert.</p>
+<h3 id="das-verraterische-herz-the-tell-tale-heart-1843">«Das verräterische Herz» (The Tell-Tale Heart, 1843)</h3>
+<p>Der Erzähler beteuert, kein Wahnsinniger zu sein — nur nervös überempfindlich, sodass er das leiseste Raunen von Himmel und Erde vernehme. Er lebt mit einem alten Mann zusammen, den er wegen dessen «Geierauges» (einer trüben weißen Hornhaut) zutiefst hasst, obwohl er dem Mann selbst nichts übelnimmt. Sieben Nächte lang öffnet er lautlos die Tür zum Zimmer des Alten, hebt die Laterne — und unterdrückt den Impuls, weil der Alte wach ist. In der achten Nacht erwacht der Alte im Dunkeln; der Erzähler springt auf ihn, drückt ihn mit einer Matratze zu Tode, reißt die Dielen auf, verbirgt die Leiche darunter, reinigt alles und wartet gelassen auf die Polizei (ein Nachbar hatte Lärm gemeldet). Während die Beamten das Haus durchsuchen, lädt der Erzähler sie mit gespielter Gleichmut zum Sitzen ein — doch er beginnt ein dumpfes Pochen zu hören, das er für den fortdauernden Herzschlag des Toten unter den Dielen hält. Schließlich erträgt er es nicht mehr, reißt die Dielen auf und gesteht.</p>
+<h3 id="ein-hinabsteigen-in-den-maelstrom-a-descent-into-the-maelstrom-1841">«Ein Hinabsteigen in den Maelstrom» (A Descent into the Maelstrom, 1841)</h3>
+<p>Ein alter Fischer mit vor Schreck erweißten Haaren führt einen Reisenden auf einen Felsvorsprung der norwegischen Küste, von dem aus man den legendären Strudel überblickt, und erzählt von seinem Erlebnis vor drei Jahren: Er und zwei Brüder fuhren mit dem Boot zu den Fanggründen nahe dem Maelstrom und gerieten auf dem Rückweg in einen Orkan, der sie in den Strudel riss. Ein Bruder fiel ins Wasser, der andere klammerte sich ans Schiff und konnte sich nicht losreißen. In seiner Verzweiflung behielt der Erzähler die Ruhe, beobachtete die physikalischen Gesetze des Strudels und erkannte: Zylindrische Körper sinken langsamer als kugelförmige, leichte Fässer langsamer als schwere Schiffe. Er klammerte sich an ein Fass, sprang ins Wasser und wurde von der Strömung nach außen geschleudert statt in die Tiefe gesogen — und überlebte. Die Brüder und das Schiff sanken auf den Grund.</p>
+<hr>
+<h2 id="wahrheitsanalyse">Wahrheitsanalyse</h2>
+<h3 id="teil-eins-der-entwendete-brief">Teil eins: «Der entwendete Brief»</h3>
+<h4 id="wahrheit-1-wo-versteckt-sich-der-brief-wheresit">Wahrheit 1: Wo versteckt sich der Brief? (wheresit)</h4>
+<ul>
+<li><strong>Linienzusammenführungspunkt: ca. 48 %</strong></li>
+<li>Antwort: Minister D—— hat den Brief umgekehrt und an der sichtbarsten Stelle im Kartenständer über dem Kamin offen ausgelegt, durch Abnutzung getarnt und mit der Vorderseite nach außen gedreht (die Adresse nach außen, aber anders als das Original), sodass man ihn für einen unbedeotenden alten Brief hält.</li>
+</ul>
+<h5 id="schlusselhinweise">🔑 Schlüsselhinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweisinhalt</th>
+<th>Fundstelle (Abschnitt/Prozentsatz)</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Der Präfekt gesteht: Der Minister musste wissen, dass seine Wohnung durchsucht werden würde (denn er ist ein kluger Politiker)</td>
+<td>ca. 12 %</td>
+<td>Dupin impliziert: Wer weiß, dass eine Durchsuchung bevorsteht, versteckt nichts auf eine «auffindbare» Weise</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Dupin trägt beim ersten Besuch grüne Schutzbrillen und «scannt» den Raum</td>
+<td>ca. 45 %</td>
+<td>Dupins verdeckte Erkundungsaktion — er unterhält sich nicht wirklich, sondern sucht den Brief</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ein auffälliger alter Brief im Kartenständer über dem Kamin: abgenutzt, zerknittert, schwarzes Siegel (das Original hatte rotes), feine Adressschrift (das Original hatte kräftige) — aber «Größe und Form» stimmen genau überein</td>
+<td>ca. 48 %</td>
+<td>Dies ist der Kern der Gegentarnung — «alles ist anders, nur die Form stimmt»</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Dupin schlussfolgert: Für einen hochintelligenten Menschen ist das beste Versteck «gar kein Versteck» — das Exponieren des Gegenstands in aller Öffentlichkeit, sodass «übermäßige Offensichtlichkeit» ihn unsichtbar macht</td>
+<td>ca. 55 %</td>
+<td>Das erkenntnistheoretische Kernargument — der wichtigste Schlussfolgerungsabschnitt des gesamten Textes</td>
+</tr>
+</tbody>
+</table>
+<h5 id="hilfshinweise">🔍 Hilfshinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweisinhalt</th>
+<th>Fundstelle (Abschnitt/Prozentsatz)</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Die dreimonatige Durchsuchung des Präfekten war äußerst gründlich: Spiralbohrer, Mikroskop, demontierte Stuhlbeine, aufgehobene Dielen, zentimetergenaue Wandvermessung</td>
+<td>ca. 15–25 %</td>
+<td>Durch Ausschlussprinzip bestätigt: Wäre der Brief an irgendeinem «verborgenen» Ort, hätte man ihn gefunden — also ist er nicht verborgen</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Der Minister ist bekannt als «Dichter und Mathematiker» zugleich</td>
+<td>ca. 32 %</td>
+<td>Dupin erklärt: Ein reiner Mathematiker ist dem Zeichensystem verhaftet; ein Dichter-Mathematiker kann «die Perspektive wechseln» und den Wahrnehmungsrahmen des Gegners imitieren</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Der Minister ließ die Polizei absichtlich mehrfach ungestört in seiner Abwesenheit durchsuchen</td>
+<td>ca. 35 %</td>
+<td>Strategischer Rückzug — die Polizei vollständig durchsuchen und aufgeben zu lassen ist Teil des Plans</td>
+</tr>
+</tbody>
+</table>
+<h5 id="tauschungshinweise">🐟 Täuschungshinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweisinhalt</th>
+<th>Fundstelle (Abschnitt/Prozentsatz)</th>
+<th>Irreführungsrichtung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Der ausführliche Bericht über die dreimonatige gründliche Durchsuchung des Präfekten</td>
+<td>ca. 10–30 %</td>
+<td>Lässt Leser zusammen mit dem Ich-Erzähler glauben: Der Brief sei entweder nicht im Haus oder an einem noch raffinierteren Versteck — Dupin beweist, dass beides falsch ist</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Das «Äußere» des Briefes (schwarzes Siegel, andere Adresse, abgenutzt und zerknittert) unterscheidet sich völlig von der Beschreibung des Originalbriefs durch den Präfekten</td>
+<td>ca. 48 %</td>
+<td>Lässt Leser (einschließlich den Präfekten) glauben, es sei ein anderer Brief; Dupin erkennt an Größe und Fundort, dass es derselbe ist</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="wahrheit-2-wie-nimmt-dupin-den-brief-ohne-dass-der-minister-es-bemerkt-howdunit">Wahrheit 2: Wie nimmt Dupin den Brief, ohne dass der Minister es bemerkt? (howdunit)</h4>
+<ul>
+<li><strong>Linienzusammenführungspunkt: ca. 90 %</strong></li>
+<li>Antwort: Dupin merkt sich beim ersten Besuch die Position des Briefes, erscheint am nächsten Tag mit einem vorbereiteten, äußerlich ähnlichen Ersatzbrief erneut, lässt gleichzeitig einen Straßenhelfer einen Schuss-Lärm inszenieren, tauscht während der Minister zum Fenster schaut schnell die Briefe aus, nimmt beim Abgang den echten Brief mit und lässt die Fälschung zurück — darin ein provokanter Vers eines französischen Dichters, der den erfolgreichen Gegenzug ankündigt.</li>
+</ul>
+<h5 id="schlusselhinweise_1">🔑 Schlüsselhinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweisinhalt</th>
+<th>Fundstelle (Abschnitt/Prozentsatz)</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Beim ersten Besuch hat Dupin die Position des Briefes bereits bestimmt und «vergisst» absichtlich seine Schnupftabakdose als Vorwand für einen zweiten Besuch</td>
+<td>ca. 85 %</td>
+<td>Das Intervall zwischen beiden Besuchen dient der Vorbereitung des Ersatzbriefs und der Beauftragung des Helfers</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Beim zweiten Besuch ertönen Schüsse auf der Straße; der Minister wendet sich dem Fenster zu</td>
+<td>ca. 88 %</td>
+<td>Ein von Dupin beauftragter Helfer hat die Ablenkung herbeigeführt</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Im Augenblick, in dem der Minister sich umdreht, vollzieht Dupin den Briefwechsel</td>
+<td>ca. 90 %</td>
+<td>Die Methode ist schlicht und effektiv — sie beruht vollständig auf Vorbereitung und präzisem Timing</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="teil-zwei-die-schwarze-katze">Teil zwei: «Die schwarze Katze»</h3>
+<h4 id="wahrheit-1-tod-der-frau-und-verbergung-der-leiche-whodunit-howdunit">Wahrheit 1: Tod der Frau und Verbergung der Leiche (whodunit + howdunit)</h4>
+<ul>
+<li><strong>Linienzusammenführungspunkt: ca. 5 %</strong> (Beichtstil — wird von Anfang an enthüllt)</li>
+<li>Antwort: Der Erzähler erschlägt seine Frau eigenhändig mit einem Beil, mauert die Leiche in die Kellerwand ein und mauert dabei unwissentlich die schwarze Katze mit ein.</li>
+</ul>
+<h5 id="schlusselhinweise_2">🔑 Schlüsselhinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweisinhalt</th>
+<th>Fundstelle (Abschnitt/Prozentsatz)</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Der Erzähler erklärt gleich zu Beginn: «Morgen sterbe ich», und schreibt ein testamentartiges Geständnis</td>
+<td>ca. 2 %</td>
+<td>Wir wissen bereits, dass er ein Verbrechen begangen hat und hingerichtet wird — das Rätsel liegt nicht im «Wer», sondern im «Wie» und «Wie wurde er entdeckt»</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Der Erzähler entdeckt im Keller eine frisch verputzte Wand und erkennt sie als Versteck der Leiche</td>
+<td>ca. 70 %</td>
+<td>Technischer Hinweis — erst jetzt verstehen Polizei und Leser die Verbergungsmethode</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Als der Erzähler mit dem Stock gegen die Wand klopft, dringt ein Heulen heraus — die lebendig eingemauerte Katze</td>
+<td>ca. 90 %</td>
+<td>Die endgültige Selbstenthüllung: Das Verbrechen wird von der Katze verraten, die er für tot gehalten hatte</td>
+</tr>
+</tbody>
+</table>
+<h5 id="hilfshinweise_1">🔍 Hilfshinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweisinhalt</th>
+<th>Fundstelle (Abschnitt/Prozentsatz)</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Der weiße Fleck auf der Brust der zweiten schwarzen Katze nimmt zunehmend die Form eines Galgens an</td>
+<td>ca. 40 %</td>
+<td>Psychologisches Vorzeichen — die Schuld des Erzählers dringt als äußeres Bild in sein Bewusstsein</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Nach der Erhängung von Pluto empfindet der Erzähler kurz Erleichterung, wird dann aber von Gewissensbissen gequält</td>
+<td>ca. 25 %</td>
+<td>Muster des psychologischen Kriminellen: Töten — Erleichterung — Schmerz — erneutes Töten</td>
+</tr>
+</tbody>
+</table>
+<h5 id="tauschungshinweise_1">🐟 Täuschungshinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweisinhalt</th>
+<th>Fundstelle (Abschnitt/Prozentsatz)</th>
+<th>Irreführungsrichtung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Ist die zweite schwarze Katze wirklich ein übernatürliches Phänomen? (Die Frau deutet auf den Volksglauben, Katzen seien Hexenverkörperungen)</td>
+<td>ca. 38 %</td>
+<td>Lässt den Leser zweifeln: Ist es eine psychische Erkrankung — oder wirklich eine übernatürliche Kraft, die ihn bestraft? Poe lässt die Frage bewusst offen</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Die mehrmaligen Durchsuchungen durch die Polizei verlaufen ohne Befund</td>
+<td>ca. 75–85 %</td>
+<td>Erzeugt ein falsches Sicherheitsgefühl («er wird wohl nicht entdeckt»), das die Wirkung der abschließenden Selbstenthüllung verstärkt</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="teil-drei-das-verraterische-herz">Teil drei: «Das verräterische Herz»</h3>
+<h4 id="wahrheit-1-wird-der-mord-aufgedeckt-willitout">Wahrheit 1: Wird der Mord aufgedeckt? (willitout)</h4>
+<ul>
+<li><strong>Linienzusammenführungspunkt: ca. 10 %</strong> (Beichtstil — Motiv und Hergang des Mordes werden früh enthüllt)</li>
+<li>Antwort: Der Mord wird aufgedeckt — aber nicht durch physische Beweise, sondern durch den Nervenzusammenbruch des Erzählers selbst. Das «verräterische Herz» ist in Wirklichkeit eine Stimme, die sein eigenes Gewissen und seine Angst erzeugen.</li>
+</ul>
+<h5 id="schlusselhinweise_3">🔑 Schlüsselhinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweisinhalt</th>
+<th>Fundstelle (Abschnitt/Prozentsatz)</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Der Erzähler beharrt darauf, sein Gehör sei übernatürlich scharf — er «höre die Stimmen der Hölle»</td>
+<td>ca. 3 %</td>
+<td>Etabliert die Prämisse des unzuverlässigen Erzählers — der Leser sollte sofort misstrauisch werden: Ist das, was er «hört», real?</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Er hasst das «Geierauge» des alten Mannes, hegt ihm gegenüber aber sonst keinen Groll</td>
+<td>ca. 10 %</td>
+<td>Das Mordmotiv ist ein irrationaler, wahnhafter Schrecken, kein tatsächlicher Hass</td>
+</tr>
+<tr>
+<td>3</td>
+<td>In Anwesenheit der Polizei hört er einen immer lauter werdenden Herzschlag</td>
+<td>ca. 85 %</td>
+<td>Der Klang ist psychisch erzeugt — als die Polizisten keine Reaktion zeigen, kann der Leser schlussfolgern: Nur er allein hört es</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Er erträgt es nicht länger, reißt selbst die Dielen auf und gesteht</td>
+<td>ca. 95 %</td>
+<td>Das Verbrechen wird vom Täter selbst enthüllt, nicht durch äußere Kräfte — eine Umkehrung des Detektivprinzips: Der «Detektiv» ist sein eigenes Gewissen</td>
+</tr>
+</tbody>
+</table>
+<h5 id="tauschungshinweise_2">🐟 Täuschungshinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweisinhalt</th>
+<th>Fundstelle (Abschnitt/Prozentsatz)</th>
+<th>Irreführungsrichtung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Der Erzähler schildert den Mord in einem Ton, als sei alles normal und folgerichtig</td>
+<td>ganzer Text</td>
+<td>Lässt den Leser vorübergehend seinen «normalen» Rahmen akzeptieren, bevor er erkennt, dass genau dies selbst der Ausdruck des Wahnsinns ist</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Die Polizisten setzen sich hin, trinken Tee und plaudern — sie scheinen nichts bemerkt zu haben</td>
+<td>ca. 80 %</td>
+<td>Lässt den Leser glauben, er sei «in Sicherheit», was das Geständnis umso schockierender macht</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="teil-vier-ein-hinabsteigen-in-den-maelstrom">Teil vier: «Ein Hinabsteigen in den Maelstrom»</h3>
+<h4 id="wahrheit-1-wie-uberlebt-man-im-maelstrom-howsurvive">Wahrheit 1: Wie überlebt man im Maelstrom? (howsurvive)</h4>
+<ul>
+<li><strong>Linienzusammenführungspunkt: ca. 62 %</strong></li>
+<li>Antwort: Der alte Fischer bewahrt in extremster Angst die Ruhe, beobachtet und erkennt, dass der Sog des Strudels auf Körper unterschiedlicher Form und Größe verschieden stark wirkt — zylindrische Körper (Fässer) sinken langsamer als kugelförmige oder eckige, leichte Gegenstände langsamer als schwere. Er lässt das schwere Schiff fahren, klammert sich an ein Fass, springt in den Strudel und wird von der Strömung nach außen geschleudert statt in die Tiefe gesogen — und überlebt.</li>
+</ul>
+<h5 id="schlusselhinweise_4">🔑 Schlüsselhinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweisinhalt</th>
+<th>Fundstelle (Abschnitt/Prozentsatz)</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Der alte Fischer beobachtet: Die verschiedenen treibenden Trümmer sinken mit unterschiedlicher Geschwindigkeit, Fässer am langsamsten</td>
+<td>ca. 55 %</td>
+<td>Erste Schlüsselbeobachtung — er beginnt bewusste physikalische Schlussfolgerungen zu ziehen</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Er erinnert sich an einen Zeitschriftenartikel über Strudel, der die Auswirkung der Form auf die Sinkgeschwindigkeit erwähnte</td>
+<td>ca. 60 %</td>
+<td>Heranziehung wissenschaftlichen Wissens — Wechsel von Angst zu rationaler Analyse</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Er erkennt: Auf dem Schiff zu bleiben bedeutet sicheren Tod; die Form des zylindrischen Fasses bietet die besten Überlebenschancen</td>
+<td>ca. 62 %</td>
+<td>Konvergenzpunkt — die logische Grundlage seiner Lebensentscheidung</td>
+</tr>
+</tbody>
+</table>
+<h5 id="tauschungshinweise_3">🐟 Täuschungshinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweisinhalt</th>
+<th>Fundstelle (Abschnitt/Prozentsatz)</th>
+<th>Irreführungsrichtung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Der Bruder, der sich ans Schiff klammert, weigert sich loszulassen und mitzuspringen</td>
+<td>ca. 65 %</td>
+<td>Der Leser denkt, beim Schiff zu bleiben (größere Stütze) sei sicherer — die Geschichte widerlegt diese Intuition</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="rekonstruktion-des-schlussfolgerungsweges">Rekonstruktion des Schlussfolgerungsweges</h2>
+<h3 id="der-entwendete-brief">«Der entwendete Brief»</h3>
+<p>Dieser Text ist <strong>der philosophisch dichteste</strong> der Poe-Trilogie. Das eigentliche Rätsel ist nicht «wo ist der Brief», sondern «wie muss man richtig denken, um den Brief zu finden».</p>
+<p>Der Schlussfolgerungsweg verläuft auf drei erkenntnistheoretischen Ebenen:</p>
+<p><strong>Erste Ebene (0–30 %): Den Rahmen des Problems verstehen</strong>
+Der Präfekt schildert ausführlich den Durchsuchungsprozess. Jeder aufmerksame Leser kann zu diesem Zeitpunkt bereits schlussfolgern: Eine so gründliche Durchsuchung ohne Ergebnis bedeutet, dass sich der Brief an keinem «vorstellbaren Versteck» befindet. Doch die meisten Leser werden jetzt nur verwirrt sein, nicht in der Lage, die Antwort abzuleiten.</p>
+<p><strong>Zweite Ebene (30–55 %): Dupins Menschenkenntnis als Schlussfolgerung</strong>
+Dupin erklärt dem Ich-Erzähler: Das Versagen des Präfekten beruht darauf, dass er «den Gegner durch den eigenen Wahrnehmungsrahmen bewertet» — er glaubt, ein kluger Mensch würde besser verstecken als er, nicht offensichtlicher. D—— ist Dichter und Mathematiker und kann, was der Präfekt nicht kann: <strong>die Perspektive wechseln</strong>. D—— hat die Suchmuster der Polizei vorausgesagt und nach dem «Gegen-Suchmuster» gehandelt.</p>
+<p><strong>Dritte Ebene (48 %: Der Widerspruch im Erscheinungsbild des Briefes)</strong>
+Dupin beschreibt das Erscheinungsbild des Briefes: «Alles stimmt nicht — nur die Form passt» — ein aufmerksamer Leser kann zu diesem Zeitpunkt die Antwort selbst ableiten: Dies ist genau der umgekehrt getarnte Brief.</p>
+<p><strong>Das Schlussfolgerungsfenster für aufmerksame Leser</strong>: Etwa bei 48 % (wenn Dupin das Erscheinungsbild des Briefes beschreibt) kann ein Leser, der Dupins Prinzip «Verstecken durch Offensichtlichkeit» verinnerlicht hat, den Fall selbst lösen. Der Schwierigkeitsgrad ist insgesamt gering, weil Poe Dupin das Lösungsprinzip bereits während der Geschichte darlegen lässt — Methode und Lösung werden gleichzeitig vermittelt.</p>
+<hr>
+<h3 id="die-schwarze-katze">«Die schwarze Katze»</h3>
+<p>Die Beichtstruktur lässt kaum «Schlussfolgerungs»-Spielraum — der Leser weiß von der ersten Zeile an, dass der Erzähler Mörder und Todgeweihter ist. Das eigentliche Rätsel lautet: <strong>Wie wird er entdeckt?</strong></p>
+<p>Es gibt nur einen Schlussfolgerungsweg: Beobachten, ob die Katze noch am Leben ist. Der Erzähler schreibt: «Ich glaubte, ich hatte sie getötet» (ohne die Leiche zu bestätigen) — dieses Detail reicht für einen aufmerksamen Leser aus, um bei 70 % zu schlussfolgern: Die Katze könnte noch leben. Als er die Wand zugemauert hat, sollte ein aufmerksamer Leser bereits erahnen, dass die Katze am Ende «sprechen» wird.</p>
+<p><strong>Der eigentliche Horror dieses Textes</strong> liegt nicht in der Schlussfolgerung, sondern in der Psyche der Figur: Poe lässt den Leser zusehen, wie ein Mensch von Sanftheit zu Mord übergeht, alles in Ich-Form bekennend — ohne dem Leser zu erlauben, auf Abstand zu bleiben.</p>
+<hr>
+<h3 id="das-verraterische-herz">«Das verräterische Herz»</h3>
+<p>Wie «Die schwarze Katze» ist die Identität des Mörders nie das Rätsel. Das Rätsel ist: <strong>Wessen Herzschlag ist das?</strong></p>
+<p>Poe hat die Antwort bereits im ersten Satz an offensichtlicher Stelle versteckt — «Ich war sehr, sehr nervös, aber warum sollte man mich verrückt nennen?» Dieser erste Satz ist ein Signal: Es handelt sich um einen wahnsinnigen Erzähler; sein «Herzschlag hören» ist eine Halluzination.</p>
+<p>Aufmerksame Leser können bei der Stelle, an der die Polizisten «nichts hören» (ca. 85 %), bestätigen: Der Herzschlag existiert nur im Kopf des Erzählers.</p>
+<p><strong>Dieser Text ist erkenntnistheoretisch der komplexeste der drei Poe-Bekenntnisverbrechen</strong>: Die Offenbarung in «Die schwarze Katze» ist übernatürlich vs. psychologisch; die in «Das verräterische Herz» ist Realität vs. Halluzination — Poe lässt den Leser bis zum Schluss im Ungewissen, ob der Herzschlag real ist.</p>
+<hr>
+<h2 id="erganzende-anmerkungen">Ergänzende Anmerkungen</h2>
+<h3 id="der-entwendete-brief-das-erkenntnistheoretische-manifest-der-detektivliteratur">«Der entwendete Brief»: Das erkenntnistheoretische Manifest der Detektivliteratur</h3>
+<p>Die Bedeutung von «Der entwendete Brief» in der Geschichte der Detektivliteratur ist vergleichbar mit «The Murders in the Rue Morgue» — aber in entgegengesetzter Richtung.</p>
+<p>«The Murders in the Rue Morgue» besagt: Der Detektiv muss <strong>genauer beobachten</strong> als die Polizei.
+«Der entwendete Brief» besagt: Der Detektiv muss <strong>besser die Perspektive wechseln</strong> können als die Polizei.</p>
+<p>In Dupins langer philosophischer Rede (der philosophischsten Passage des gesamten Werkes) stellt Poe formal eine These auf: <strong>Die beste Detektivmethode besteht nicht darin, die Sinne zu schärfen, sondern Menschen zu verstehen</strong> — die mentale Struktur des Gegners zu begreifen und daraus seine Handlungen abzuleiten. Diese These wurde zum theoretischen Grundstein der psychologischen Detektivliteratur und beeinflusste direkt Chestertons Pater Brown (der das Verstehen der Seele des Täters an die Stelle des Sammelns von Beweisen setzt).</p>
+<p>Der Kerntrick — «den Brief am offensichtlichsten Ort zu verstecken» — hat im Detektivroman des 20. Jahrhunderts unzählige Variationen hervorgebracht: Jeder Trick des «Versteckens durch Offensichtlichkeit» lässt sich auf diesen Text zurückführen.</p>
+<h3 id="die-vollstandige-philosophische-karte-der-dupin-trilogie">Die vollständige philosophische Karte der Dupin-Trilogie</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>The Murders in the Rue Morgue (D1)</th>
+<th>The Mystery of Marie Rogêt (Bd. 1)</th>
+<th>Der entwendete Brief (Bd. 2)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kernproblem</td>
+<td>Physische Unmöglichkeit (verschlossener Raum)</td>
+<td>Informationschaos (Medienanalyse)</td>
+<td>Psychologischer blinder Fleck (Erkenntnistheorie)</td>
+</tr>
+<tr>
+<td>Täter/Gegner</td>
+<td>Nicht-menschlich (Orang-Utan)</td>
+<td>Mensch (Marineoffizier)</td>
+<td>Mensch (Politiker und Dichter)</td>
+</tr>
+<tr>
+<td>Schlussfolgerungsmethode</td>
+<td>Beobachtung + Vorstellungskraft</td>
+<td>Wahrscheinlichkeitstheorie + Medientextanalyse</td>
+<td>Perspektivwechsel + Menschenkenntnis</td>
+</tr>
+<tr>
+<td>Philosophische These</td>
+<td>Außergewöhnliche Möglichkeiten statt bestehender Annahmen</td>
+<td>Wahrscheinlichkeitstheorie statt Medienemotionen</td>
+<td>Das Problem durch den Wahrnehmungsrahmen des Gegners denken</td>
+</tr>
+<tr>
+<td>Deduzierbarkeit</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐</td>
+</tr>
+</tbody>
+</table>
+<p>Zusammen beschreiben die drei Bände die drei Dimensionen der erkenntnistheoretischen Grundlagen der klassischen Detektivliteratur vollständig: Wahrnehmung, Analyse, Menschenkenntnis. Dieses Fundament wurde später von Conan Doyles Sherlock Holmes vollständig ausgebaut — aber Poe hatte das gesamte System in weniger als zehn Jahren und mit nur drei Kurzgeschichten gelegt.</p>
+<h3 id="die-drei-verbrechensbekenntnisse-die-schwarze-katze-das-verraterische-herz-der-imp-der-perversitat">Die drei Verbrechensbekenntnisse: «Die schwarze Katze», «Das verräterische Herz», «Der Imp der Perversität»</h3>
+<p>Dieser Band enthält — zusammen mit dem dritten Band — Poes drei bedeutendste «Ich-Bekenntnisse eines Verbrechers» (das dritte, «Der Imp der Perversität», erscheint im Inhaltsverzeichnis dieses Bandes, ist aber aufgrund eines Textabbruchs nicht enthalten). Die drei Texte bilden ein sich ergänzendes System psychologischer Kriminalität:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>«Die schwarze Katze»</th>
+<th>«Das verräterische Herz»</th>
+<th>«Der Imp der Perversität»</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Erzähler</td>
+<td>Alkoholiker</td>
+<td>Nervlich Überempfindlicher</td>
+<td>Perfekter Verbrecher</td>
+</tr>
+<tr>
+<td>Verbrechensmotiv</td>
+<td>Verzerrter Hass und Angst</td>
+<td>Irrationale Wahnvorstellung</td>
+<td>Perverser Impuls (Selbstzerstörungswille)</td>
+</tr>
+<tr>
+<td>Enthüllungsart</td>
+<td>Lebende Katze verrät ihn</td>
+<td>Bricht unter halluziniertem Herzschlag zusammen</td>
+<td>Erzählt Fremden auf der Straße von seiner Tat</td>
+</tr>
+<tr>
+<td>Kernthese</td>
+<td>Schuld erzeugt physische Konsequenzen</td>
+<td>Schuld erzeugt Wahrnehmungshalluzinationen</td>
+<td>Schuld erzeugt Selbstzerstörungsimpulse</td>
+</tr>
+</tbody>
+</table>
+<p>Diese drei Texte entsprechen im Rahmen moderner Kriminalpsychologie drei verschiedenen Projektionsmechanismen der Schuld: Externalisierung (Heulen der Katze), Sensorialisierung (Herzschlags-Halluzination), Verbalisierung (unkontrollierbarer Geständnisimpuls). Poe hatte keine psychologischen Fachbegriffe — und beschrieb dennoch mit literarischer Präzision Phänomene, die die spätere Psychiatrie erst benennen sollte.</p>
+<h3 id="die-bedeutung-des-maelstroms-als-schlussfolgerungsgeschichte">Die Bedeutung des Maelstroms als Schlussfolgerungsgeschichte</h3>
+<p>Diese Geschichte wirkt wie ein Abenteuerroman, ist aber in Wirklichkeit Poes prägnanteste Demonstration von «wissenschaftlicher Schlussfolgerung als Lebensrettung». Das Überleben des alten Fischers ist im Kern eine Echtzeit-Version eines kontrollierten Experiments:</p>
+<ol>
+<li>Daten beobachten (verschiedene Objekte sinken mit unterschiedlicher Geschwindigkeit)</li>
+<li>Theorie heranziehen (ein gelesener Artikel)</li>
+<li>Hypothese bilden (das Fass ist sicherer als das Schiff)</li>
+<li>Experiment durchführen (ins Wasser springen)</li>
+<li>Ergebnis verifizieren (überleben)</li>
+</ol>
+<p>In der Dupin-Trilogie dient das Schlussfolgern dazu, im Nachhinein die Wahrheit zu rekonstruieren; in diesem Text rettet das Schlussfolgern im extremsten Moment unmittelbar das Leben. Poe verdeutlicht damit: «Rationale Analyse» ist nicht nur das Werkzeug des Detektivs, sondern die wirksamste Waffe für jeden, der einer unbekannten Bedrohung gegenübersteht.</p>
+    <a href="../index.html" class="back-link">← Zur Startseite</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Detektivanalyse</p>
+    <p>Fünf Autoren · achtundachtzig Werke · 135 Jahre Entwicklung der Schwierigkeit im Kriminalroman.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
