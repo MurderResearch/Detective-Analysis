@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>愛倫·坡作品集 第三卷（The Works of Edgar Allan Poe — Volume 3） — 추리해부실</title>
+<meta name="description" content=" 《麗嘉》（Ligeia，1838） 一位始終未被賦予姓名的敘述者，深愛著神秘的妻子麗嘉——一個博學、美麗、意志力超乎常人的女子。麗嘉深信人的意志能戰勝死亡，常引用一首詩作為人生哲學，將人比喻成被俯瞰天使操控的木偶，並提問：「蟲難道真的要征服人嗎？」她不敵疾病，在一陣絕望的掙扎後含恨而死。 敘述者陷入深重哀傷，以鴉片麻">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/works-of-poe-vol3.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/works-of-poe-vol3.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/works-of-poe-vol3.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/works-of-poe-vol3.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/works-of-poe-vol3.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/works-of-poe-vol3.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/works-of-poe-vol3.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/works-of-poe-vol3.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif KR', serif;
+  --font-sans: 'Noto Sans KR', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">추리해부실</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">홈</a>
+        <a href="../index.html#latest">최신</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="언어" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 한국어</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/works-of-poe-vol3.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/works-of-poe-vol3.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/works-of-poe-vol3.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/works-of-poe-vol3.html">日本語</a>
+      <a class="lang-item active" data-lang="ko" href="/Detective-Analysis/ko/articles/works-of-poe-vol3.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/works-of-poe-vol3.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/works-of-poe-vol3.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/works-of-poe-vol3.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">에드거 앨런 포 · </div>
+    <h1>愛倫·坡作品集 第三卷（The Works of Edgar Allan Poe — Volume 3）</h1>
+    <div class="subtitle">愛倫·坡（Edgar Allan Poe） · 短篇集（本分析聚焦靈異犯罪與邏輯謎題篇目）</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">추리 난이도</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">안개 등급</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    <div style="background:#2a2a35;border:1px solid #d4a853;color:#d4a853;padding:14px 20px;border-radius:8px;margin:20px 0;font-size:0.9rem;">ℹ️ 이 언어판은 아직 번역 준비 중입니다. 현재 번체 중국어 원문이 표시됩니다.</div>
+    <h1 id="the-works-of-edgar-allan-poe-volume-3">愛倫·坡作品集 第三卷（The Works of Edgar Allan Poe — Volume 3）— 推理分析</h1>
+<h2 id="_1">基本資訊</h2>
+<ul>
+<li>作者：愛倫·坡（Edgar Allan Poe）</li>
+<li>出版年：1903年（Raven Edition 版本）；收錄篇目原發表於 1835–1844 年</li>
+<li>類型：短篇集（本分析聚焦靈異犯罪與邏輯謎題篇目）</li>
+<li>偵探角色：無傳統偵探；各篇以不可靠敘述者或邏輯解謎為核心</li>
+<li>核心謎團類型：超自然懸案（《麗嘉》《莫瑞拉》）＋ 靈魂轉世謎團（《崎嶇山脈的故事》）＋ 曆法邏輯謎題（《一週三個星期天》）</li>
+</ul>
+<hr>
+<h2 id="_2">推理難度總評</h2>
+<p>本卷主體為《阿瑟·戈登·皮姆的故事》（已於 D6 單獨分析），餘下短篇為愛倫·坡哥德恐怖與幻奇喜劇類作品。本分析選取四篇具備謎題結構的作品：<strong>《麗嘉》</strong>（Ligeia）、<strong>《莫瑞拉》</strong>（Morella）、<strong>《崎嶇山脈的故事》</strong>（A Tale of the Ragged Mountains）、<strong>《一週三個星期天》</strong>（Three Sundays in a Week），以推理解剖框架逐篇審視。</p>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星等</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難度（Deducibility）</td>
+<td>⭐⭐⭐</td>
+<td>平均收斂點約 62% — 超自然謎題的「真相」本身具有雙重詮釋性，邏輯謎題（三個星期天）則難度偏低</td>
+</tr>
+<tr>
+<td>迷霧等級（Fog Rating）</td>
+<td>⭐⭐⭐⭐</td>
+<td>《麗嘉》《莫瑞拉》以鴉片依賴和不可靠敘述者製造高度迷霧；《崎嶇山脈》以時間錯亂的夢境混淆真實與幻覺</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_3">故事大綱</h2>
+<h3 id="ligeia1838">《麗嘉》（Ligeia，1838）</h3>
+<p>一位始終未被賦予姓名的敘述者，深愛著神秘的妻子麗嘉——一個博學、美麗、意志力超乎常人的女子。麗嘉深信人的意志能戰勝死亡，常引用一首詩作為人生哲學，將人比喻成被俯瞰天使操控的木偶，並提問：「蟲難道真的要征服人嗎？」她不敵疾病，在一陣絕望的掙扎後含恨而死。</p>
+<p>敘述者陷入深重哀傷，以鴉片麻醉自己，在英格蘭購置一棟陰鬱的古老修道院，並娶了金髮的羅薇娜（Rowena）為妻——他厭惡她，卻不知為何。羅薇娜亦快速病倒。一個深夜，敘述者在鴉片幻覺中守著垂死的羅薇娜，目睹不可思議的事：她的呼吸幾度斷絕又復甦，頭髮逐漸由金色轉為烏黑，眼睛從藍色變為麗嘉那雙獨特的烏黑眼眸，最終「羅薇娜」完全消失——那具屍體站了起來，凝視著他的，正是麗嘉。</p>
+<h3 id="morella1835">《莫瑞拉》（Morella，1835）</h3>
+<p>敘述者與妻子莫瑞拉結婚，她博覽德國神秘哲學，尤其深研靈魂同一性與轉世論。他逐漸對她產生摻雜愛憎的複雜情感。莫瑞拉懷孕後病重，臨終前告訴他：「我要離開，但我不會真的消亡——我將活在孩子之中，然後你會記起我的。」</p>
+<p>女兒誕生，莫瑞拉隨即死去。他從未給女兒取名，默默看著她長大，日漸像極了她的母親——不只外貌，連言行、口吻、對某些古老哲學的直覺知識都驚人相似。直到一場洗禮，他突然在神父發問時脫口而出一個名字：「莫瑞拉。」就在那一刻，孩子倒下，死去。他將她葬入母親的墓中——打開棺木，卻發現裡面什麼也沒有。</p>
+<h3 id="a-tale-of-the-ragged-mountains1844">《崎嶇山脈的故事》（A Tale of the Ragged Mountains，1844）</h3>
+<p>貝德洛（Bedloe）是一個神秘的年輕人，服用鴉片後喜歡在維吉尼亞州夏洛茨維爾附近的崎嶇山脈散步。某個秋天早晨，他在霧中迷路，突然體驗到強烈的幻境：他置身於一座印度城市，穿著十八世紀裝束，捲入一場激烈的街頭暴亂，被一支塗有毒藥的箭刺入太陽穴，死去。</p>
+<p>他清醒後向醫生坦普頓（Dr. Templeton）描述整個過程。坦普頓大為震驚：他隨即取出舊日記，那場暴亂正是他四十年前親眼目睹的真實事件——1780年，他的密友奧爾德布（Oldeb）在加爾各答就是以同樣的方式死去。幾天後，貝德洛真的死亡——原因是醫生的助手誤將有毒的蛭吸附在他太陽穴的同一位置。</p>
+<p>敘述者最後注意到一件事：「Bedloe」與「Oldeb」倒過來拼，幾乎完全相同。</p>
+<h3 id="three-sundays-in-a-week1841">《一週三個星期天》（Three Sundays in a Week，1841）</h3>
+<p>鮑比（Bobby）想迎娶凱特（Kate），但凱特的叔公朗姆格傑恩（Rumgudgeon）以刁鑽條件阻攔：「等到一週出現三個星期天的那天再說。」</p>
+<p>事情的轉機出現在一次晚宴，兩位船長同桌而坐：布朗（Brown）船長剛完成向東環航地球一圈的航程，因此今天對他而言是「<strong>明天</strong>的星期天」（他多走了一天，即今天在他的計算中還是昨天，故明天才是他的星期天）；史提爾（Stell）船長則剛完成向西環航，因此今天對他而言是「<strong>昨天</strong>的星期天」（他少走了一天）。</p>
+<p>因此：
+- 史提爾的昨天 = <strong>星期天</strong>
+- 現在的今天 = <strong>星期天</strong>
+- 布朗的明天 = <strong>星期天</strong></p>
+<p>三個星期天在同一週相遇。朗姆格傑恩啞口無言，被迫同意婚事。</p>
+<hr>
+<h2 id="_4">真相拆解</h2>
+<h3 id="_5">篇一：《麗嘉》</h3>
+<h4 id="supernatural-vs-hallucination">真相一：羅薇娜的屍體變成麗嘉——靈魂轉移或鴉片幻覺？（supernatural vs. hallucination）</h4>
+<ul>
+<li><strong>線索收斂點：約 70%</strong></li>
+<li>答案：坡刻意保留雙重詮釋。文本中兩條線索指向截然相反的方向，且坡從未明確裁決。最終讀者面臨的謎題不是「誰做了什麼」，而是「我們能相信敘述者的感知嗎」。</li>
+</ul>
+<h5 id="_6">關鍵線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（章節/百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>敘述者坦承：他重度依賴鴉片，且自知感知已不可靠</td>
+<td>約 30%</td>
+<td>建立不可靠敘述者的明確基礎——任何「他所見到的」都應受到懷疑</td>
+</tr>
+<tr>
+<td>2</td>
+<td>麗嘉生前反覆強調她的意志力可以對抗死亡，引用「蟲難道真的要征服人？」詩句</td>
+<td>約 20–35%</td>
+<td>建立「靈魂轉移」的哲學前提，使後來的事件具備動機與可能性</td>
+</tr>
+<tr>
+<td>3</td>
+<td>敘述者在守靈夜數度看見房間角落有奇異陰影飄動，並目睹一滴液體落入酒杯（暗示有人在毒害羅薇娜）</td>
+<td>約 65–70%</td>
+<td>若為真實，意味著某個存在（麗嘉的靈魂？）主動介入；若為幻覺，則毒害從未發生</td>
+</tr>
+<tr>
+<td>4</td>
+<td>羅薇娜臨死前頭髮由金色轉為烏黑、眼睛由藍轉為黑色，完成外貌蛻變</td>
+<td>約 90–95%</td>
+<td>物理性質的最終變化——這是敘述者（不管是清醒還是在幻覺中）觀察到的最後線索</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_7">輔助線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（章節/百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>敘述者購置的修道院臥室以黑色靈柩布和薩拉森黃金掛毯裝飾，人物造型在燈光下如幻如真</td>
+<td>約 45%</td>
+<td>環境本身即為心理投射的舞台——強化「幻覺」詮釋</td>
+</tr>
+<tr>
+<td>2</td>
+<td>麗嘉的眼睛在整篇故事中被反覆描述為核心意象：「有某種東西在那雙眼睛裡」，令他著迷多年</td>
+<td>約 10–40%</td>
+<td>累積性暗示：敘述者對麗嘉的執念已達病態，使最後的「看見麗嘉」更可能是心理投射</td>
+</tr>
+<tr>
+<td>3</td>
+<td>他在修道院期間幾乎只靠鴉片維持日常生活，且用量不斷增加</td>
+<td>約 48–55%</td>
+<td>量化式升級——進一步削弱守靈夜所有感知的可信度</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_8">假線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（章節/百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>麗嘉博覽群書的超凡學識和深邃智慧被反覆強調</td>
+<td>全篇前半</td>
+<td>暗示麗嘉「真的可以辦到某些常人做不到的事」，引導讀者傾向「靈魂轉移為真」的詮釋</td>
+</tr>
+<tr>
+<td>2</td>
+<td>麗嘉的姓氏從未出現、出身地從未提及、沒有任何社會關係</td>
+<td>全篇</td>
+<td>使麗嘉本人顯得超自然——一個「沒有過去」的人本身就是謎，但這也可能是敘述者記憶混亂的側寫</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_9">篇二：《莫瑞拉》</h3>
+<h4 id="whodunit-of-the-soul">真相一：女兒是否真的是莫瑞拉的靈魂轉世？（whodunit of the soul）</h4>
+<ul>
+<li><strong>線索收斂點：約 80%</strong></li>
+<li>答案：同樣保留雙重詮釋。坡以「空棺木」作為最終線索——莫瑞拉的屍骨從未在棺材中出現，而女兒的外貌、知識、氣質與母親驚人相似。但敘述者的情緒本身高度可疑。</li>
+</ul>
+<h5 id="_10">關鍵線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（章節/百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>莫瑞拉臨終宣言：「我不會真的消亡，當你最終喊出那個名字，你就會明白了。」</td>
+<td>約 40%</td>
+<td>預言性伏筆——為最後的洗禮場景設置機關</td>
+</tr>
+<tr>
+<td>2</td>
+<td>女兒不經教導便熟悉母親深研的古老哲學文本</td>
+<td>約 60%</td>
+<td>最強烈的「轉世」證據，因為知識本身無從遺傳</td>
+</tr>
+<tr>
+<td>3</td>
+<td>洗禮時名字「莫瑞拉」被脫口喊出，女兒應聲倒地死去</td>
+<td>約 80%</td>
+<td>以「名字」作為觸發機制，名字在古代文化中即為靈魂的載體——坡借此完成儀式性收尾</td>
+</tr>
+<tr>
+<td>4</td>
+<td>開棺時莫瑞拉的遺體無從尋覓——棺木是空的</td>
+<td>約 90%</td>
+<td>最後一把鑰匙，確認靈魂的「移動」留下了物理性的缺失</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_11">假線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（章節/百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>敘述者對莫瑞拉的愛恨交織情感</td>
+<td>全篇</td>
+<td>讓讀者將重心放在情感關係上，而非注意那些知識傳遞線索</td>
+</tr>
+<tr>
+<td>2</td>
+<td>孩子的外貌相似可歸因於遺傳</td>
+<td>約 55%</td>
+<td>外觀相似可以有自然解釋，但知識和氣質的相似則不能——坡以此拉開兩條詮釋路線</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_12">篇三：《崎嶇山脈的故事》</h3>
+<h4 id="howknow">真相一：貝德洛所見是前世記憶、透視夢境或鴉片幻覺？（howknow）</h4>
+<ul>
+<li><strong>線索收斂點：約 75%</strong></li>
+<li>答案：坡同樣不給明確答案，但安排了兩條線索讓讀者必須面對「某種超乎自然的知識傳遞機制」。</li>
+</ul>
+<h5 id="_13">關鍵線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（章節/百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>貝德洛對那座印度城市的地形、街道、人物服裝的描述極為精準，與坦普頓的日記完全吻合</td>
+<td>約 65%</td>
+<td>細節的吻合度排除了「湊巧」的可能；若為幻覺，不可能如此精確</td>
+</tr>
+<tr>
+<td>2</td>
+<td>他描述的「奧爾德布」死亡方式（毒箭刺入太陽穴）與他後來的死亡方式（毒蛭咬傷太陽穴）高度對稱</td>
+<td>約 80%</td>
+<td>死亡方式的對稱性暗示命運的輪迴——同一個靈魂以同一種方式離開</td>
+</tr>
+<tr>
+<td>3</td>
+<td>名字的對稱性：「Bedloe」←→「Oldeb」（字母順序顛倒）</td>
+<td>約 95%</td>
+<td>坡親自在結尾揭示——這是他安排的最後一個謎題，告訴讀者「這不是巧合，這是設計」</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_14">輔助線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（章節/百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>坦普頓曾以某種「催眠磁學」（mesmeric) 方法治療貝德洛；那個時代的「催眠術」被認為能打開無意識記憶</td>
+<td>約 20%</td>
+<td>暗示另一種可能：坦普頓的治療方式本身將奧爾德布的記憶「植入」了貝德洛的潛意識</td>
+</tr>
+<tr>
+<td>2</td>
+<td>貝德洛的外貌被描述為與坦普頓年輕時的一張肖像「令人不安地相似」</td>
+<td>約 25%</td>
+<td>進一步的人身連結——奧爾德布就是那張肖像的主人</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_15">假線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（章節/百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>貝德洛服用大量鴉片才出門散步</td>
+<td>約 10%</td>
+<td>最顯眼的「幻覺」解釋入口——讀者容易停留在此，認為一切不過是藥物幻想，而忽視後來的對照線索</td>
+</tr>
+<tr>
+<td>2</td>
+<td>散步的崎嶇山脈在霧中有強烈的致幻視覺效果（霧氣、光線扭曲）</td>
+<td>約 35%</td>
+<td>強化自然解釋的可能性，遮掩超自然線索</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_16">篇四：《一週三個星期天》</h3>
+<h4 id="logical-puzzle">真相一：如何在一週中同時出現三個星期天？（logical puzzle）</h4>
+<ul>
+<li><strong>線索收斂點：約 60%</strong></li>
+<li>答案：地球是圓的，環航方向決定了旅人的日曆偏差。向東環航一圈者多出一天，向西環航一圈者少掉一天。三個不同地點的觀察者（向東旅行者、靜止者、向西旅行者）因此對「今天是星期幾」有三種不同的正確答案——全都在同一個禮拜之內。</li>
+</ul>
+<h5 id="_17">關鍵線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（章節/百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>布朗船長說：「昨天是我的星期天。」（他剛完成向東環航）</td>
+<td>約 50%</td>
+<td>日曆偏移的第一個例子——方向決定時間感知</td>
+</tr>
+<tr>
+<td>2</td>
+<td>史提爾船長說：「明天是我的星期天。」（他剛完成向西環航）</td>
+<td>約 55%</td>
+<td>日曆偏移的第二個例子，方向相反，偏移亦相反</td>
+</tr>
+<tr>
+<td>3</td>
+<td>今天本來就是真實的星期天</td>
+<td>約 60%</td>
+<td>三個「星期天」同時成立：昨天（布朗的）、今天（眾人的）、明天（史提爾的）</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_18">輔助線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（章節/百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>朗姆格傑恩提出「三個星期天同一週」這個條件時，全場哄笑，以為是不可能的玩笑</td>
+<td>約 20%</td>
+<td>讀者與角色同步陷入「這是不可能的」先入之見</td>
+</tr>
+<tr>
+<td>2</td>
+<td>兩位船長談及各自的航行方向時，細節精確（向東 vs 向西）</td>
+<td>約 45%</td>
+<td>為謎底的物理前提奠基，敏銳讀者此時可能已開始推算</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_19">推理路徑重建</h2>
+<h3 id="_20">《麗嘉》</h3>
+<p>這篇是坡所有作品中<strong>認識論迷霧最深</strong>的一篇。謎題不是「誰做了什麼」，而是「我們可以相信什麼」。</p>
+<p>推理路徑分兩條，讀者必須選邊站：</p>
+<p><strong>路徑一：靈魂轉移為真</strong>
+麗嘉的意志力本就超乎常人（佐證：她的博學、她的眼神、她面對死亡的絕望抵抗）。她的意志在羅薇娜垂死時趁虛而入，借助已衰敗的肉體回返。那滴落入酒杯的液體是她的靈魂以某種方式干預，先削弱羅薇娜、再重新佔據。</p>
+<p><strong>路徑二：鴉片幻覺</strong>
+敘述者長期重度使用鴉片，對麗嘉有病態性的執念。他將對麗嘉的愛投射到每一任後來者身上。修道院的幻異裝潢本身是他心理狀態的外顯。守靈夜的「奇異變化」是漸進性的幻覺——他看到的是自己最渴望看到的。</p>
+<p><strong>坡的設計天才</strong>在於：他讓兩條路徑都成立、都有文本佐證、都無法被對方完全否定。這不是「謎而未解」，而是「謎本身就是答案」——他讓讀者意識到，人類對愛的記憶本身就是一種改寫現實的力量。</p>
+<hr>
+<h3 id="_21">《莫瑞拉》</h3>
+<p>比《麗嘉》更加精煉。謎題有個標準解謎結構：</p>
+<ol>
+<li><strong>預言</strong>（莫瑞拉臨終）→ 2. <strong>積累證據</strong>（女兒的異常相似）→ 3. <strong>觸發事件</strong>（名字被叫出）→ 4. <strong>確認</strong>（空棺木）</li>
+</ol>
+<p>每一步都有文本支撐，但坡在最後才補上「空棺木」，使整個轉世論在物理層面成立。這是坡在超自然故事中少見的「有物理佐證的靈魂謎題」。</p>
+<p>仔細閱讀的讀者在「女兒知道未曾被教導過的古老文本」（約 60%）時已可形成假說；「名字的力量」（約 80%）時可確認；「空棺木」（約 90%）是最終的不可辯駁的結論。</p>
+<hr>
+<h3 id="_22">《崎嶇山脈的故事》</h3>
+<p>這篇以三個層次設置謎題：</p>
+<p><strong>第一層（0–35%）</strong>：鴉片散步的神秘氛圍，讀者以為這又是一篇幻覺故事。</p>
+<p><strong>第二層（65–75%）</strong>：坦普頓日記的出現使謎題從「主觀感知」升格為「客觀對照」。此時仔細閱讀的讀者應已推論：貝德洛確實「知道」他不可能知道的事情。</p>
+<p><strong>第三層（95%）</strong>：名字謎題（Bedloe = Oldeb 倒寫）揭示這是刻意設計的轉世結構，而非偶然。坡在此以元敘事的方式介入，告訴讀者：謎題是真實的，只是答案本身是形而上的。</p>
+<hr>
+<h3 id="_23">《一週三個星期天》</h3>
+<p>這篇是坡少見的輕喜劇謎題，邏輯結構完全透明：</p>
+<p><strong>解謎節點在 60%</strong>：兩位船長的對話清楚揭示了地球自轉與日曆偏移的邏輯。任何對地理學有基本認識的讀者（包括 1841 年的一般讀者）都能在此時自行破解謎題，甚至早於朗姆格傑恩意識到自己已被繞進去。</p>
+<p>難度最低的原因：坡從一開始就把謎底的所有前提放在讀者面前——只需要把它們組合起來。這篇的趣味不在「猜謎」，而在「看著那個傲慢的老人被一個精確的邏輯玩笑打臉」。</p>
+<hr>
+<h2 id="_24">補充說明</h2>
+<h3 id="_25">本卷的核心命題：「意志能對抗死亡嗎？」</h3>
+<p>《麗嘉》、《莫瑞拉》、《崎嶇山脈》三篇，表面上是超自然故事，骨子裡問的是同一個問題：<strong>意識（或靈魂）是否能超越肉體的消亡而延續？</strong></p>
+<p>坡在三篇中給出了三種不同的結構性回答：
+- 《麗嘉》：<strong>也許可以——但你永遠無法確定</strong>（不可靠敘述者）
+- 《莫瑞拉》：<strong>也許可以——而且留下了物理性的痕跡</strong>（空棺木）
+- 《崎嶇山脈》：<strong>也許可以——記憶能跨越時間</strong>（前世記憶的精準對照）</p>
+<p>這三篇合在一起，是坡對人類最古老的恐懼（死亡）與最古老的願望（死後仍存在）所做的三種文學實驗。</p>
+<h3 id="_26">《麗嘉》作為推理文學的另類里程碑</h3>
+<p>《麗嘉》在推理文學史上的地位常被低估，因為它沒有偵探、沒有案件、沒有嫌疑人。然而它引入了一個後來極其重要的敘事裝置：<strong>使用鴉片的不可靠敘述者</strong>。</p>
+<p>這個裝置後來在犯罪小說中成為核心工具——「精神狀態不穩定的敘述者所看到的一切，讀者都不能照單全收」。Wilkie Collins 在《白衣女人》（1859）、《月亮寶石》（1868）中廣泛運用多視角不可靠敘述，而後阿嘉莎·克莉絲蒂在《羅傑·艾克洛命案》（1926）中將不可靠敘述者推向極致。這條線索可溯源至坡 1838 年的《麗嘉》。</p>
+<h3 id="_27">《一週三個星期天》的科學先見性</h3>
+<p>此篇發表於 1841 年。國際換日線的正式劃定要等到 1884 年的華盛頓子午線會議。坡在那之前四十三年便以喜劇形式提出了這個問題的邏輯核心，並且給出了正確的物理解釋。從這個角度看，這篇短篇也是科學推理文學的早期範本——以嚴謹的物理邏輯解決看似荒謬的難題。</p>
+<h3 id="_28">第三卷在坡全集中的位置</h3>
+<p>本卷短篇（尤其《麗嘉》《莫瑞拉》）代表了愛倫·坡寫作生涯的一個特殊切面：<strong>哥德恐怖與認識論哲學的交匯</strong>。前者是哥德文學的傳統遺產（拜倫、雪萊、「黑色浪漫主義」），後者是坡個人對「感知的可靠性」的哲學執念——這個執念後來在 Dupin 故事中以理性推理的形式出現，在《垮掉的屋》中以建築隱喻出現，在本卷則以靈魂謎題的形式出現。</p>
+<p>坡的整個創作系譜，從某種意義上說，都是在問同一個問題：<strong>我們能相信我們所看到和理解的現實嗎？</strong> 而這個問題，也是一切推理小說的根本前提。</p>
+    <a href="../index.html" class="back-link">← 홈으로</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">추리해부실</p>
+    <p>다섯 작가 · 여든여덟 작품 · 135년에 걸친 추리문학 난이도의 진화.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
