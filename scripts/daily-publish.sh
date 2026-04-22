@@ -10,14 +10,29 @@ REPO_DIR="$HOME/Code/MurderResearch"
 LOG_DIR="$HOME/.murder-research/logs"
 LOG_FILE="$LOG_DIR/daily-$(TZ=Asia/Taipei date '+%Y-%m-%d').log"
 CLAUDE="/opt/homebrew/bin/claude"
-PHASE1_TIMEOUT=90m   # 分析稿最多 90 分鐘
-PHASE2_TIMEOUT=90m   # 翻譯最多 90 分鐘
+PHASE1_TIMEOUT=5400   # 分析稿最多 90 分鐘（秒）
+PHASE2_TIMEOUT=5400   # 翻譯最多 90 分鐘（秒）
 LANGS="en zh-CN ja ko de es fr"
 
 mkdir -p "$LOG_DIR"
 exec > >(tee -a "$LOG_FILE") 2>&1
 
 log() { echo "[$(TZ=Asia/Taipei date '+%Y-%m-%d %H:%M:%S')] $*"; }
+
+# macOS 沒有 timeout 指令，用 bash 原生實作
+run_with_timeout() {
+    local secs=$1; shift
+    "$@" &
+    local cmd_pid=$!
+    ( sleep "$secs" && kill -TERM "$cmd_pid" 2>/dev/null && log "TIMEOUT: 超過 ${secs}s，已終止 PID $cmd_pid" ) &
+    local watcher_pid=$!
+    wait "$cmd_pid" 2>/dev/null
+    local exit_code=$?
+    kill "$watcher_pid" 2>/dev/null 2>&1; wait "$watcher_pid" 2>/dev/null 2>&1
+    # 消除 bash 的 "Terminated" 訊息
+    jobs >/dev/null 2>&1
+    return $exit_code
+}
 
 log "=== 開始每日發布 ==="
 cd "$REPO_DIR"
@@ -104,7 +119,7 @@ if [ -f "$ANALYSIS_PATH" ]; then
     log "Phase 1 跳過：分析稿已存在"
 else
     log "Phase 1: 寫分析稿..."
-    timeout "$PHASE1_TIMEOUT" $CLAUDE -p "你是推理解剖室的分析 agent。
+    run_with_timeout "$PHASE1_TIMEOUT" $CLAUDE -p "你是推理解剖室的分析 agent。
 
 任務：為 ${TXT_PATH} 寫分析稿，存為 ${ANALYSIS_PATH}。
 
@@ -149,7 +164,7 @@ if [ -z "$MISSING_LANGS" ]; then
     log "Phase 2 跳過：7 語翻譯皆已存在"
 else
     log "Phase 2: 翻譯缺少的語系: ${MISSING_LANGS}"
-    timeout "$PHASE2_TIMEOUT" $CLAUDE -p "你是推理解剖室的翻譯 agent。
+    run_with_timeout "$PHASE2_TIMEOUT" $CLAUDE -p "你是推理解剖室的翻譯 agent。
 
 任務：將 ${ANALYSIS_PATH} 翻譯成以下語系：${MISSING_LANGS}
 輸出路徑：${TRANS_DIR}/${SLUG}.{lang}.md
