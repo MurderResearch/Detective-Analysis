@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edgar Allan Poes gesammelte Werke, Band 4（The Works of Edgar Allan Poe — Volume 4）— Detektivische Analyse — Detektivanalyse</title>
+<meta name="description" content=" »Die längliche Kiste« (The Oblong Box, 1844) Der Erzähler — »ich« — steht kurz davor, mit dem Segelschiff »Independence« von Charleston nach New York zu fahren">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/works-of-poe-vol4.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/works-of-poe-vol4.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/works-of-poe-vol4.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/works-of-poe-vol4.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/works-of-poe-vol4.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/works-of-poe-vol4.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/works-of-poe-vol4.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/works-of-poe-vol4.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Detektivanalyse</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Start</a>
+        <a href="../index.html#latest">Neueste</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Sprache" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 Deutsch</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/works-of-poe-vol4.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/works-of-poe-vol4.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/works-of-poe-vol4.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/works-of-poe-vol4.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/works-of-poe-vol4.html">한국어</a>
+      <a class="lang-item active" data-lang="de" href="/Detective-Analysis/de/articles/works-of-poe-vol4.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/works-of-poe-vol4.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/works-of-poe-vol4.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">Edgar Allan Poe · </div>
+    <h1>Edgar Allan Poes gesammelte Werke, Band 4（The Works of Edgar Allan Poe — Volume 4）— Detektivische Analyse</h1>
+    <div class="subtitle">Edgar Allan Poe · Kurzgeschichtensammlung (diese Analyse konzentriert sich auf Erzählungen mit Spannungsrätseln und rational lösbaren Geheimnissen)</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Deduzierbarkeit</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Nebelgrad</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="edgar-allan-poes-gesammelte-werke-band-4the-works-of-edgar-allan-poe-volume-4-detektivische-analyse">Edgar Allan Poes gesammelte Werke, Band 4（The Works of Edgar Allan Poe — Volume 4）— Detektivische Analyse</h1>
+<h2 id="grundinformationen">Grundinformationen</h2>
+<ul>
+<li>Autor：Edgar Allan Poe</li>
+<li>Erscheinungsjahr：1903 (Raven Edition); enthaltene Einzelwerke ursprünglich veröffentlicht 1836–1845</li>
+<li>Typ：Kurzgeschichtensammlung (diese Analyse konzentriert sich auf Erzählungen mit Spannungsrätseln und rational lösbaren Geheimnissen)</li>
+<li>Detektiv：Kein fester Detektiv; die einzelnen Erzählungen drehen sich um unzuverlässige Erzähler, überhebliche Beobachter oder rein analytisch argumentierende Figuren</li>
+<li>Rätseltyp：Identitätsrätsel eines Gegenstands (»Die längliche Kiste«) + Identitätsvertauschungs-Rätsel (»Teer und Federn«) + mechanische List (»Mäzels Schachspieler«) + körperliches Rätsel (»Der vollständig abgenutzte Mann«)</li>
+</ul>
+<hr>
+<h2 id="deduzierbarkeitdeducibility-gesamtbewertung">Deduzierbarkeit（Deducibility）— Gesamtbewertung</h2>
+<p>Die dreiundzwanzig Erzählungen dieses Bandes sind überwiegend komödiantische Satire, philosophischer Dialog und gotesker Nonsens — rein deduktive Strukturen sind vergleichsweise selten. Diese Analyse wählt vier Erzählungen mit Rätselstruktur aus: <strong>»Die längliche Kiste«</strong> (The Oblong Box), <strong>»Das System des Doktor Teer und des Professors Fether«</strong> (The System of Doctor Tarr and Professor Fether), <strong>»Mäzels Schachspieler«</strong> (Maelzel's Chess-Player) und <strong>»Der vollständig abgenutzte Mann«</strong> (The Man That Was Used Up), und untersucht sie einzeln im detektivisch-analytischen Rahmen.</p>
+<table>
+<thead>
+<tr>
+<th>Indikator</th>
+<th>Sterne</th>
+<th>Erklärung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deduzierbarkeit（Deducibility）</td>
+<td>⭐⭐⭐</td>
+<td>Durchschnittlicher Konvergenzpunkt bei ca. 63 % — In »Die längliche Kiste« verdeckt die Selbstgefälligkeit des Erzählers die Hinweise; das Identitätsvertauschungs-Rätsel in »Teer und Federn« enthält frühe Warnzeichen im absurden Verhalten beim Bankett; »Der vollständig abgenutzte Mann« deutet die Antwort durch wiederholt unterbrochene Gespräche an; »Mäzels Schachspieler« ist ein analytischer Essay, der die Wahrheit von Beginn an verkündet</td>
+</tr>
+<tr>
+<td>Nebelgrad（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>»Die längliche Kiste« erzeugt den dichtesten Nebel durch das selbstsichere Missverständnis des Erzählers; »Teer und Federn« tarnt die Wahrheit hinter Absurdität; »Der vollständig abgenutzte Mann« erzeugt mittleren Nebel durch die Ausweichmanöver gesellschaftlicher Etikette</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="zusammenfassung">Zusammenfassung</h2>
+<h3 id="die-langliche-kiste-the-oblong-box-1844">»Die längliche Kiste« (The Oblong Box, 1844)</h3>
+<p>Der Erzähler — »ich« — steht kurz davor, mit dem Segelschiff »Independence« von Charleston nach New York zu fahren. Auf der Passagierliste entdeckt er den Namen seines alten Freundes Cornelius Wyatt — ein begabter Künstler — der drei Kabinen für sich, seine Frau und zwei Schwestern gebucht hat. Das dritte Kabinett verwundert ihn, denn eigentlich sollten vier Personen mit zwei Kabinen auskommen. Beim Ablegen wird eine eigenartige längliche Kiefernholzkiste an Bord gebracht, etwa sechs Fuß lang und zweieinhalb Fuß breit, beschriftet mit: »Adelaide Curtis, Albany, New York, zu Händen von Herrn Wyatt, bitte sorgfältig behandeln.« Der Erzähler schließt selbstsicher, die Kiste enthalte eine Kopie von Leonardos »Letztem Abendmahl«, die Wyatt vom italienischen Kunsthändler Nicolino erworben habe.</p>
+<p>Während der Überfahrt verhält sich »Mrs. Wyatt« derb und gewöhnlich — ein krasser Gegensatz zu der schönen und gebildeten Frau, die Wyatt beschrieben hatte — und zieht sich jeden Abend geheimnisvoll in die dritte Kabine zurück. Wyatt führt unterdessen nächtlich rätselhafte Operationen an der Kiste durch; der Erzähler hört in schlaflosen Nächten, wie die Kiste geöffnet wird, gefolgt von einem tiefen Schluchzen — doch er erklärt sich dies als Wyatts Bewunderung für das Gemälde. Nach sieben Tagen wird das Schiff von einem Hurrikan schwer beschädigt. Als alle Passagiere in die Rettungsboote gezwungen werden, springt Wyatt zurück auf das sinkende Schiff, bindet die längliche Kiste mit einem Seil an sich und versinkt gemeinsam mit ihr im Meer.</p>
+<p>Einen Monat später trifft der Erzähler auf den Kapitän auf dem Broadway und erfährt die Wahrheit: Wyatts wahre Frau war am Vorabend der Abfahrt plötzlich gestorben. Um die Leiche nach New York zur Schwiegermutter zu überführen, hatte er heimlich mit dem Kapitän vereinbart, den Körper in Salz einzupökeln und in dem sargförmigen Behälter zu verstecken, während das Dienstmädchen die Frau spielen sollte. Das seltsame Schluchzen war Wyatts nächtliche Totenklage, wenn er den Sargdeckel öffnete, um bei seiner toten Frau zu trauern. »Die Dinge sinken zunächst, aber wenn das Salz sich auflöst, steigen sie wieder auf«, sagt der Kapitän — was in der Kiste lag, war Wyatts unvergängliche Liebe zu seiner Frau, mit ihr gemeinsam im Meeresgrund begraben.</p>
+<h3 id="das-system-des-doktor-teer-und-des-professors-fether-the-system-of-doctor-tarr-and-professor-fether-1845">»Das System des Doktor Teer und des Professors Fether« (The System of Doctor Tarr and Professor Fether, 1845)</h3>
+<p>Der Erzähler ist ein junger Reisender, der auf einer Fahrt durch Südfrankreich eine berühmte private Irrenanstalt besucht — ein schlossartiges Anwesen, das von Herrn Maillard verwaltet wird. Im Salon begegnet er dem distinguierten Herrn Maillard und erfährt, dass die alte »Soothing-Methode« (Beschwichtigungssystem) abgeschafft und durch eine von Maillard selbst entwickelte neue Behandlungsmethode ersetzt worden sei.</p>
+<p>Das Bankett versetzt den Erzähler in tiefes Unbehagen: Die »Pfleger und Besucher« am Tisch benehmen sich äußerst merkwürdig — einer springt ununterbrochen und versucht, auf den Tisch zu klettern, einer ahmt das Quaken von Fröschen nach, einer dreht sich unaufhörlich im Kreis, einer schreit wie ein Hahn. Maillard erklärt gelassen, dies sei eine »Immersionstherapie«, die das Personal zur Erforschung psychischer Erkrankungen anwende. In diesem Moment ertönen Schreie von draußen, und eine Gruppe »affenartiger« Gestalten bricht durch die Fenster herein und bringt das Bankett in vollständiges Chaos.</p>
+<p>Hinterher erfährt der Erzähler die Wahrheit: Maillard selbst ist der ehemalige Direktor der Anstalt, der vor drei Jahren geisteskrank wurde. Er hatte eine Gruppe von Patienten angeführt, die Wärter zu überwältigen, sie in Teer getaucht, mit Federn bedeckt (»tar and feather« — Teer und Federn) und einen Monat lang im Keller eingesperrt. Die »affenartigen« Eindringlinge waren die entkommenen echten Wärter. Die vermeintlichen »Pfleger und Besucher« beim Bankett waren allesamt befreite Geisteskranke.</p>
+<h3 id="mazels-schachspieler-maelzels-chess-player-1836">»Mäzels Schachspieler« (Maelzel's Chess-Player, 1836)</h3>
+<p>Dies ist keine fiktive Geschichte, sondern Poes rationaler Versuch, das berühmteste »künstliche Intelligenzdenkmal« des 19. Jahrhunderts zu entlarven — Mäzels türkischen Schachspielerautomaten. Poe erklärt, das Gerät werde von menschlicher Intelligenz und nicht von reiner Mechanik gesteuert, und führt siebzehn Beobachtungen als Beweis an, um schließlich den Schluss zu ziehen, dass im Inneren der Kiste ein menschlicher Schachspieler verborgen sein müsse. Diese These wurde später durch die Geschichte bestätigt (unter anderem durch den Schachspieler William Schlumberger).</p>
+<h3 id="der-vollstandig-abgenutzte-mann-the-man-that-was-used-up-1839">»Der vollständig abgenutzte Mann« (The Man That Was Used Up, 1839)</h3>
+<p>Der Erzähler ist fasziniert von dem »unaussprechlich seltsamen Gefühl«, das ihm General John A. B. C. Smith einflößt — jedes Mal, wenn er jemanden nach dem Geheimnis fragt, wird er unterbrochen. Nach einem Hausbesuch entdeckt er auf dem Boden etwas Zappelndes und gibt ihm einen Tritt — woraufhin das Ding zu sprechen beginnt. Es ist Smith selbst: Am ganzen Körper mit Prothesen und künstlichen Organen ausgestattet — Korkbein, Prothesenarm, künstliche Schulter, Kunstbrust, Perücke, Kunstzähne, Glasauge, künstlicher Kiefer, alles unentbehrlich. Die »vollkommene« Erscheinung ist schlicht die Summe erstklassiger Industrieprodukte.</p>
+<hr>
+<h2 id="wahrheitsanalyse">Wahrheitsanalyse</h2>
+<h3 id="erzahlung-i-die-langliche-kiste">Erzählung I: »Die längliche Kiste«</h3>
+<h4 id="wahrheit-i-was-befindet-sich-in-der-kiste-whatdunit">Wahrheit I: Was befindet sich in der Kiste? (Whatdunit)</h4>
+<ul>
+<li><strong>Hinweis-Konvergenzpunkt: ca. 68 %</strong></li>
+<li>Antwort: Die Kiste ist ein Sarg, der die Leiche von Wyatts Frau enthält, die am Vorabend der Abfahrt plötzlich gestorben war und mit großen Mengen Salz haltbar gemacht wurde.</li>
+</ul>
+<h5 id="schlusselhinweise">Schlüsselhinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Stelle (Abschnitt/Prozentsatz)</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Maße der Kiste: ca. sechs Fuß lang, zweieinhalb Fuß breit</td>
+<td>ca. 20 %</td>
+<td>Dies entspricht dem Standardmaß eines menschlichen Sarges — aufmerksame Leser sollten hier bereits Verdacht schöpfen</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Der Geruch der Teerfarbe ist »besonders unangenehm«, den Erzähler sogar »zum Übelkeit reizend«</td>
+<td>ca. 22 %</td>
+<td>Große Mengen Teer wurden zum Abdichten von Särgen verwendet, um Auslaufen zu verhindern</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Die Kiste wird in Wyatts eigener Kabine untergebracht, nicht im Frachtraum</td>
+<td>ca. 25 %</td>
+<td>Kunstwerke kommen gewöhnlich in den Frachtraum; eng bei sich behalten kann man auf diese Weise nur einen Menschen</td>
+</tr>
+<tr>
+<td>4</td>
+<td>In der Nacht hört der Erzähler, wie Wyatt mit einem in Tuch gewickelten Hammer die Kiste aufbricht</td>
+<td>ca. 65 %</td>
+<td>Wozu die Geräuschunterdrückung, wenn es sich um ein Gemälde handelt? Dies ist ein Trauerakt</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Unmittelbar nach dem Öffnen der Kiste dringt »ein leises Schluchzen oder Seufzen« aus der Kabine</td>
+<td>ca. 66 %</td>
+<td>Konvergenzpunkt — bei einem Gemälde wäre Weinen sinnlos</td>
+</tr>
+</tbody>
+</table>
+<h5 id="hilfshinweise">Hilfshinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Stelle (Abschnitt/Prozentsatz)</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>»Mrs. Wyatt« verhält sich grob und gewöhnlich, steht in krassem Widerspruch zu der »schönen und begabten Frau«, die Wyatt beschrieben hatte</td>
+<td>ca. 35 %</td>
+<td>Deutet an, dass diese Frau nicht Wyatts wahre Ehefrau ist</td>
+</tr>
+<tr>
+<td>2</td>
+<td>»Mrs. Wyatt« verlässt jede Nacht Wyatts Kabine und schläft allein in der dritten Kabine</td>
+<td>ca. 60 %</td>
+<td>Die falsche Ehefrau kehrt in ihre eigentliche Kabine zurück</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Als das Schiff zu sinken droht, verweigert Wyatt das Verlassen des Schiffs, bindet die Kiste mit einem Seil an sich und springt in den Ozean</td>
+<td>ca. 85 %</td>
+<td>Kein Mensch opfert sich für ein Gemälde</td>
+</tr>
+</tbody>
+</table>
+<h5 id="falsche-fahrten">Falsche Fährten</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Stelle (Abschnitt/Prozentsatz)</th>
+<th>Irreführungsrichtung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Wyatt hatte in den Wochen vor der Abreise ständig mit dem italienischen Kunsthändler Nicolino verhandelt</td>
+<td>ca. 15 %</td>
+<td>Lenkt den Leser auf die Annahme, die Kiste enthalte ein gekauftes Gemälde</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Auf der Außenverpackung steht »Adelaide Curtis, Albany«</td>
+<td>ca. 22 %</td>
+<td>Bestärkt den Erzähler in seiner Überzeugung, ein wertvolles Kunstwerk zu schützen</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Der Erzähler überredet sich selbst: »Das Schluchzen muss ich mir eingebildet haben«</td>
+<td>ca. 66 %</td>
+<td>Der Hinweis wird rationalisiert und damit eliminiert</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="erzahlung-ii-das-system-des-doktor-teer-und-des-professors-fether">Erzählung II: »Das System des Doktor Teer und des Professors Fether«</h3>
+<h4 id="wahrheit-i-wer-ist-wirklich-direktor-und-wer-pfleger-whodunit-der-identitat">Wahrheit I: Wer ist wirklich Direktor und wer Pfleger? (Whodunit der Identität)</h4>
+<ul>
+<li><strong>Hinweis-Konvergenzpunkt: ca. 45 %</strong></li>
+<li>Antwort: Maillard selbst ist ein Geisteskranker und der ehemalige Direktor, der vor drei Jahren selbst den Verstand verlor. Er organisierte die Patienten, die wahren Wärter zu überwältigen, tauchte sie in Teer und bestäubte sie mit Federn, sperrte sie im Keller ein und gibt sich selbst als Direktor aus, um Besucher zu empfangen.</li>
+</ul>
+<h5 id="schlusselhinweise_1">Schlüsselhinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Stelle (Abschnitt/Prozentsatz)</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Die »Pfleger und Assistenten« beim Bankett verhalten sich äußerst abnormal: einer spielt Frosch, einer dreht sich ununterbrochen, einer versucht auf den Tisch zu klettern</td>
+<td>ca. 40–50 %</td>
+<td>Dieses Verhalten entspricht exakt den Symptomen der Patienten, die Maillard zuvor beschrieben hatte</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Maillard erzählt die Geschichte »eines Patienten, der andere Patienten aufwiegelte«, um die Wärter zu stürzen — mit einer für seinen Detailreichtum ungewöhnlichen Lebendigkeit</td>
+<td>ca. 55–60 %</td>
+<td>Die Dichte der Details eines Augenzeugen — Maillard ist selbst der Protagonist dieser Geschichte</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Die »neue Behandlungsmethode« trägt den Namen »Doktor Teer und Professor Fether«</td>
+<td>ca. 65 %</td>
+<td>»Tar and Feather« ist das, was er den Wärtern angetan hat</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Draußen ertönen Schreie, Maillard wirft Stühle und versucht, den Weg zu blockieren</td>
+<td>ca. 85–90 %</td>
+<td>Die eingesperrten echten Wärter sind entkommen</td>
+</tr>
+</tbody>
+</table>
+<h5 id="hilfshinweise_1">Hilfshinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Stelle (Abschnitt/Prozentsatz)</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Alle Fenster und Türen der Anstalt sind mit schweren Eisenplatten verbarrikadiert</td>
+<td>ca. 25 %</td>
+<td>Wozu eine so lückenlose Sicherung?</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Während des gesamten Banketts hat kein Besucher Kontakt zu anderen Personen als dem »Anstaltspersonal«</td>
+<td>ca. 40 %</td>
+<td>Alle »Mitarbeiter« sind Patienten — kein Außenstehender kann dies überprüfen</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Maillard strahlt hin und wieder ein »übermäßig angestrengtes Vernünftigsein« aus</td>
+<td>durchgängig</td>
+<td>Normale Menschen müssen nicht ständig beweisen, dass sie nicht verrückt sind</td>
+</tr>
+</tbody>
+</table>
+<h5 id="falsche-fahrten_1">Falsche Fährten</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Stelle (Abschnitt/Prozentsatz)</th>
+<th>Irreführungsrichtung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Maillard erklärt das »Beschwichtigungssystem« in hochgradig akademischer Sprache und mit großem Detailreichtum</td>
+<td>ca. 20–35 %</td>
+<td>Lässt den Besucher glauben, er sei ein echter Medizinfachmann</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Maillard erklärt ausdrücklich, die anwesenden Personen seien Anstaltspersonal und keine Patienten</td>
+<td>ca. 30 %</td>
+<td>Die direkte Aussage lenkt den Leser davon ab, weiter zu zweifeln</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="erzahlung-iii-mazels-schachspieler">Erzählung III: »Mäzels Schachspieler«</h3>
+<h4 id="wahrheit-i-wie-funktioniert-der-automatische-schachspieler-tatsachlich-howdunit">Wahrheit I: Wie funktioniert der automatische Schachspieler tatsächlich? (Howdunit)</h4>
+<ul>
+<li><strong>Hinweis-Konvergenzpunkt: ca. 15 % (Poe verkündet die Schlussfolgerung nahezu von Beginn an)</strong></li>
+<li>Antwort: Im Inneren der Maschine verbirgt sich ein echter menschlicher Schachspieler, der sich durch ein raffinertes Raumdesign flexibel umpositionieren kann.</li>
+</ul>
+<h5 id="schlusselhinweise_2">Schlüsselhinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Stelle (Abschnitt/Prozentsatz)</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Der Schachspieler reagiert auf jeden »unkonventionellen Zug« des Gegners sofort mit entsprechenden Anpassungen</td>
+<td>ca. 15 %</td>
+<td>Ein rein mechanisches Gerät kann nicht auf unendlich viele Schachvariationen reagieren</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Mäzel öffnet und schließt bei der Vorführung der Maschineninnereien stets die Türen in einer festen Reihenfolge</td>
+<td>ca. 40 %</td>
+<td>Das Publikum sieht jeweils nur die Hälfte, in der sich kein Mensch befindet</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Mitten im Spiel zögert der Schachspieler bei einem Fehler kurz und überlegt neu</td>
+<td>ca. 55 %</td>
+<td>Zögern und Selbstkorrektur beim Denken sind Merkmale menschlicher Kognition</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Vor jeder Partie wird der Automat aufgezogen, wobei Dauer und Kraft jedes Mal variieren</td>
+<td>ca. 60 %</td>
+<td>Ein mechanisches Gerät müsste einen präzisen, gleichbleibenden Ablauf haben</td>
+</tr>
+</tbody>
+</table>
+<h5 id="hilfshinweise_2">Hilfshinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Stelle (Abschnitt/Prozentsatz)</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Das Spielniveau des Schachspielers ist außerordentlich hoch — historische Aufzeichnungen zeigen, dass er nahezu jede Partie gewann</td>
+<td>durchgängig</td>
+<td>Ein mechanischer Ablauf kann nicht »gut Schach spielen«</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Poe vergleicht den Schachspieler mit Babbages Rechenmaschine</td>
+<td>ca. 10 %</td>
+<td>Ein strenger Beweis, dass es sich nicht um reine Mechanik handeln kann</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="erzahlung-iv-der-vollstandig-abgenutzte-mann">Erzählung IV: »Der vollständig abgenutzte Mann«</h3>
+<h4 id="wahrheit-i-worin-besteht-das-geheimnis-von-general-smith-whatishim">Wahrheit I: Worin besteht das »Geheimnis« von General Smith? (Whatishim)</h4>
+<ul>
+<li><strong>Hinweis-Konvergenzpunkt: ca. 70 %</strong></li>
+<li>Antwort: General Smith hat nahezu jeden Körperteil durch Verletzung verloren und durch Prothesen und künstliche Organe ersetzt: Korkbein, Prothesenarm, künstliche Schulter, Kunstbrust, Perücke, Kunstzähne, Glasauge, künstlicher Kiefer — keines davon ist entbehrlich.</li>
+</ul>
+<h5 id="schlusselhinweise_3">Schlüsselhinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Stelle (Abschnitt/Prozentsatz)</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Smith zeigt eine ungewöhnlich leidenschaftliche Begeisterung für »Fortschritte in der Mechanik«, wobei das Gespräch immer wieder auf »mechanische Gliedmaßen« und »künstliche Organe« zurückkommt</td>
+<td>ca. 30 %</td>
+<td>Nur persönliche Betroffenheit erzeugt eine so starke Obsession</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Jede Person, die nach »Smiths Besonderheit« gefragt wird, wird mitten im Satz unterbrochen — mehr als fünfmal</td>
+<td>ca. 30–70 %</td>
+<td>Dieses »Geheimnis« ist etwas, das alle wissen, aus gesellschaftlichem Anstand aber nicht offen ansprechen</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Der Erzähler entdeckt auf dem Schlafzimmerboden »eine seltsame Sache«, gibt ihr einen Tritt, und das Ding beginnt zu sprechen</td>
+<td>ca. 88 %</td>
+<td>Konvergenzpunkt — Smiths wahrer Zustand ohne seine Ausrüstung</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Der schwarze Diener Pompey setzt Smith nacheinander alle Prothesen und künstlichen Körperteile an</td>
+<td>ca. 90–95 %</td>
+<td>Schrittweise Enthüllung: Ein »perfekter« General wird aus industriellen Einzelteilen zusammengebaut</td>
+</tr>
+</tbody>
+</table>
+<h5 id="falsche-fahrten_2">Falsche Fährten</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Stelle (Abschnitt/Prozentsatz)</th>
+<th>Irreführungsrichtung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Der Erzähler betont immer wieder, Smiths äußeres Erscheinungsbild sei »makellos« — Haare, Bart, Zähne, Augen, Schultern</td>
+<td>erste Hälfte durchgängig</td>
+<td>Der Leser wird dazu verleitet, an ein »charakterliches Rätsel« oder »Kriegsgeheimnisse« zu denken</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Alle Befragten erwähnen »die Feldzüge von Bugaboo und Kickapoo«</td>
+<td>durchgängig</td>
+<td>Irreführt in Richtung »Kriegsheldentaten«</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="rekonstruktion-des-ermittlungsweges">Rekonstruktion des Ermittlungsweges</h2>
+<h3 id="die-langliche-kiste">»Die längliche Kiste«</h3>
+<p><strong>Erste Schicht (0–20 %)</strong>: Der Erzähler stellt seine eigene Schlussfolgerungsfähigkeit unter Beweis — er ist selbstgefällig stolz auf seinen »Scharfsinn«. Poe stellt hier eine Falle: Je selbstsicherer der Ermittler, desto tiefer seine blinden Flecken.</p>
+<p><strong>Zweite Schicht (22–64 %)</strong>: Die Hinweise häufen sich — Sargmaße, Teergeruch, falsche Ehefrau, nächtliches Geheimritual — doch die Selbstsicherheit des Erzählers rationalisiert jeden einzelnen Hinweis erfolgreich weg.</p>
+<p><strong>Dritte Schicht (65–66 %)</strong>: Das Schluchzen. Keine Erklärung der Welt lässt einen Menschen vor einem Gemälde weinen.</p>
+<p><strong>Vierte Schicht (100 %)</strong>: Die nachträgliche Erklärung des Kapitäns lüftet alles.</p>
+<p><strong>Die Essenz</strong>: Das eigentliche Rätsel dieser Erzählung lautet: »Wie weit kann man einen Menschen lieben?« — Wyatt entscheidet sich am Ende, gemeinsam mit seiner Frau im Meer begraben zu werden. Poe nutzt die Form eines Rätsels, um eine Tragödie zu erzählen, die sich in Worte kaum fassen lässt.</p>
+<hr>
+<h3 id="das-system-des-doktor-teer-und-des-professors-fether">»Das System des Doktor Teer und des Professors Fether«</h3>
+<p><strong>Knotenpunkt I (ca. 40 %)</strong>: Das seltsame Verhalten der »Pfleger und Besucher« beim Bankett stimmt exakt mit den Patientensymptomen überein, die Maillard kurz zuvor beschrieben hatte.</p>
+<p><strong>Knotenpunkt II (ca. 55–60 %)</strong>: Maillards Geschichte vom »Patienten, der andere aufwiegelte« — die Details klingen zu sehr wie der Bericht eines unmittelbaren Beteiligten.</p>
+<p><strong>Knotenpunkt III (ca. 85 %)</strong>: Der Lärm von draußen eskaliert, die eingesperrten Wärter brechen durch, und die Geschichte bestätigt schließlich das Rätsel.</p>
+<p>Poes Kunstgriff besteht darin, das absurde Bankett so selbstverständlich ablaufen zu lassen, dass der Leser sich ebenso wie der Erzähler daran gewöhnt — bis die echten Wärter durchs Fenster einbrechen und man erkennt, dass man die ganze Zeit mit offenen Augen auf die Hinweise gestarrt und sie nicht gesehen hat.</p>
+<hr>
+<h3 id="mazels-schachspieler">»Mäzels Schachspieler«</h3>
+<p>Poes Vorgehen ist hier vollständig umgekehrt — er verkündet zuerst die Schlussfolgerung (im Gerät steckt ein Mensch), widerlegt dann Schritt für Schritt alle Gegenargumente und beschreibt schließlich, wie »dieser Mensch« operiert. Dies ist eine Demonstration der Deduktionsmethode.</p>
+<p><strong>Die Stellung dieses Essays in der Geschichte der Detektivliteratur</strong>: »Eliminiere das Unmögliche — was auch immer übrig bleibt, so unglaublich es erscheinen mag, muss die Wahrheit sein« — dieser Grundsatz wird in diesem Text streng angewendet.</p>
+<hr>
+<h3 id="der-vollstandig-abgenutzte-mann">»Der vollständig abgenutzte Mann«</h3>
+<p><strong>Knotenpunkt (ca. 30–70 %)</strong>: Das wiederkehrende »Unterbrechungsmuster« ist selbst der zentrale Schlüsselhinweis des Rätsels. Die Antwort ist »eine Tatsache, die man nicht aussprechen kann«.</p>
+<p><strong>Auflösung (ca. 90 %)</strong>: Die abschließende Schlafzimmerszene enthüllt die Lösung als groteske Komödie — ein Fetzen Stoff beginnt zu sprechen, wird dann Stück für Stück »zusammengesetzt« zu einem Menschen. Der Mensch des Industriezeitalters kann vollständig »ausgetauscht« werden.</p>
+<hr>
+<h2 id="erganzende-anmerkungen">Ergänzende Anmerkungen</h2>
+<h3 id="das-kernthema-dieses-bandes-der-ubermaig-selbstsichere-beobachter-ist-der-schlechteste-zeuge">Das Kernthema dieses Bandes: »Der übermäßig selbstsichere Beobachter ist der schlechteste Zeuge«</h3>
+<p><strong>Selbstsichere Beobachter sind häufig die schlechtesten Ermittler</strong>:</p>
+<ul>
+<li>Der Erzähler in »Die längliche Kiste«: Weil er zu früh die Hypothese »wertvolles Gemälde« etablierte, wurden alle nachfolgenden Hinweise zurechtgebogen, um die falsche Prämisse zu stützen.</li>
+<li>Der Besucher in »Teer und Federn«: Weil er von der gesellschaftlichen Prämisse ausging, »ein Direktor ist zweifellos bei Verstand«, bemerkte er das eklatant abnormale Verhalten vor seinen Augen nicht.</li>
+<li>Der Erzähler in »Der vollständig abgenutzte Mann«: Weil er von der äußeren »Perfektion« so geblendet war, kam er nie auf den Gedanken, dass diese »Perfektion« selbst eine Fälschung sein könnte.</li>
+</ul>
+<p><strong>Vorurteile sind die Wurzel aller Ermittlungsfehler</strong>. Dupins Erfolge in Band 1 und Band 2 beruhen gerade darauf, dass er alle Vorurteile aufzuschieben vermag; die Erzähler des vierten Bandes hingegen sind ausnahmslos Gefangene ihrer eigenen Vorannahmen.</p>
+<h3 id="die-beziehung-zwischen-mazels-schachspieler-und-dupins-methodik">Die Beziehung zwischen »Mäzels Schachspieler« und Dupins Methodik</h3>
+<p>»Mäzels Schachspieler« (1836) erschien fünf Jahre vor der ersten Dupin-Geschichte »Der Doppelmord in der Rue Morgue« (1841). Der Weg von diesem Essay zur Entstehung Dupins macht deutlich, wie Poes analytisches Denken sich von der nicht-fiktionalen Analysepraxis hin zur Gestalt des fiktiven Detektivs entwickelte.</p>
+<p>Wenn die Dupin-Trilogie Poes kanonisches Werk der Detektivliteratur darstellt, ist »Mäzels Schachspieler« das »Notizbuch«, aus dem dieser Kanon hervorging.</p>
+<h3 id="der-einfluss-von-das-system-des-doktor-teer-und-des-professors-fether-auf-die-nachwelt">Der Einfluss von »Das System des Doktor Teer und des Professors Fether« auf die Nachwelt</h3>
+<p>Das Motiv »Verrückte beaufsichtigen Vernünftige« taucht in der späteren Kriminalliteratur und in psychologischen Thrillern immer wieder auf. Von »Einer flog über das Kuckucksnest« (1962) bis zu zahlreichen psychologischen Kammerspielen an abgeschlossenen Orten.</p>
+<p>Poes raffiniertstes Konstruktionsmittel in dieser Erzählung ist, dass er den Leser selbst zum Betrogenen macht — wir sitzen gemeinsam mit dem Erzähler beim Bankett und sehen das Absurde vor unseren Augen, ohne es zu erkennen. Erst am Schluss realisieren wir, dass wir die ganze Zeit an einem Tisch mit Verrückten gesessen und mit ihnen getrunken haben.</p>
+<h3 id="die-stellung-dieses-bandes-im-gesamtwerk-poes">Die Stellung dieses Bandes im Gesamtwerk Poes</h3>
+<p>Band 4 repräsentiert Poes »unkanonischstes« Gesicht: Posse und schwarzer Humor (»Der vollständig abgenutzte Mann«), Gotik des Grauens (»Metzengerstein«) und analytische Essays (»Mäzel«) vermischen sich.</p>
+<p>Wenn Band 1 (Dupin) die positive Aussage verkörpert — »Logik kann Rätsel lösen« —, dann ist Band 4 die negative Ergänzung: »Die menschliche Wahrnehmung selbst ist das größte Rätsel und Hindernis.« Erst beide Bände zusammen ergeben den vollständigen Poe.</p>
+    <a href="../index.html" class="back-link">← Zur Startseite</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Detektivanalyse</p>
+    <p>Fünf Autoren · achtundachtzig Werke · 135 Jahre Entwicklung der Schwierigkeit im Kriminalroman.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

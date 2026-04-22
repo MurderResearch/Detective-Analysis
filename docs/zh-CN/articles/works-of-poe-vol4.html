@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>爱伦·坡作品集 第四卷（The Works of Edgar Allan Poe — Volume 4） — 推理解剖室</title>
+<meta name="description" content=" 《长方形箱子》（The Oblong Box，1844） 叙述者「我」即将搭乘「独立号」帆船从查尔斯顿前往纽约。他在乘客名单上看到老友柯内流斯‧怀亚特（Cornelius Wyatt）——一位才华洋溢的艺术家——为自己、妻子和两个妹妹订了三个船舱。「我」对第三个舱室感到好奇，因为明明四人理应用两间。启航时，一只奇特的">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/works-of-poe-vol4.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/works-of-poe-vol4.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/works-of-poe-vol4.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/works-of-poe-vol4.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/works-of-poe-vol4.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/works-of-poe-vol4.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/works-of-poe-vol4.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/works-of-poe-vol4.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif SC', serif;
+  --font-sans: 'Noto Sans SC', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">推理解剖室</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">首页</a>
+        <a href="../index.html#latest">最新分析</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="语言" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 简体中文</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/works-of-poe-vol4.html">繁體中文</a>
+      <a class="lang-item active" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/works-of-poe-vol4.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/works-of-poe-vol4.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/works-of-poe-vol4.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/works-of-poe-vol4.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/works-of-poe-vol4.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/works-of-poe-vol4.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/works-of-poe-vol4.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">爱伦·坡 · </div>
+    <h1>爱伦·坡作品集 第四卷（The Works of Edgar Allan Poe — Volume 4）</h1>
+    <div class="subtitle">爱伦·坡（Edgar Allan Poe） · 短篇集（本分析聚焦悬念谜题与理性解谜相关篇目）</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">推理难度</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">迷雾等级</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="the-works-of-edgar-allan-poe-volume-4">爱伦·坡作品集 第四卷（The Works of Edgar Allan Poe — Volume 4）— 推理分析</h1>
+<h2 id="_1">基本资讯</h2>
+<ul>
+<li>作者：爱伦·坡（Edgar Allan Poe）</li>
+<li>出版年：1903年（Raven Edition 版本）；收录篇目原发表于 1836–1845 年</li>
+<li>类型：短篇集（本分析聚焦悬念谜题与理性解谜相关篇目）</li>
+<li>侦探角色：无固定侦探；各篇以不可靠叙述者、过度自信的旁观者或纯粹分析性论者为核心</li>
+<li>核心谜团类型：物件身分谜题（《长方形箱子》）＋ 身分颠倒谜题（《塔尔与费瑟》）＋ 机械诡计（《梅泽尔的棋手》）＋ 肉体谜题（《被用尽的人》）</li>
+</ul>
+<hr>
+<h2 id="_2">推理难度总评</h2>
+<p>本卷二十三篇作品以喜剧讽刺、哲学对话、哥德荒诞为主，纯粹推理结构相对稀少。本分析选取四篇具备谜题结构的作品：<strong>《长方形箱子》</strong>（The Oblong Box）、<strong>《塔尔博士与费瑟教授的系统》</strong>（The System of Doctor Tarr and Professor Fether）、<strong>《梅泽尔的棋手》</strong>（Maelzel's Chess-Player）、<strong>《被用尽的人》</strong>（The Man That Was Used Up），以推理解剖框架逐篇审视。</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>星等</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理难度（Deducibility）</td>
+<td>⭐⭐⭐</td>
+<td>平均收敛点约 63% — 《长方形箱子》以叙述者的过度自信遮蔽线索；《塔尔与费瑟》的身分颠倒谜题在荒诞宴席行为中留有早期预警；《被用尽的人》以重复的打断对话暗示答案；《梅泽尔的棋手》则是从开篇就论断真相的分析性文章</td>
+</tr>
+<tr>
+<td>迷雾等级（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>《长方形箱子》以自信的误解制造最强迷雾；《塔尔与费瑟》以荒诞掩盖真相；《被用尽的人》以社交礼仪的回避制造中度迷雾</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_3">故事梗概</h2>
+<h3 id="the-oblong-box1844">《长方形箱子》（The Oblong Box，1844）</h3>
+<p>叙述者「我」即将搭乘「独立号」帆船从查尔斯顿前往纽约。他在乘客名单上看到老友柯内流斯‧怀亚特（Cornelius Wyatt）——一位才华洋溢的艺术家——为自己、妻子和两个妹妹订了三个船舱。「我」对第三个舱室感到好奇，因为明明四人理应用两间。启航时，一只奇特的长方形松木箱随行上船，约六英尺长、二点五英尺宽，写着「Adelaide Curtis，Albany，New York，寄交怀亚特先生转送，请妥善保管」。「我」自信地断定：箱子里装的是怀亚特从义大利画商尼科利诺那里买来的达文西《最后的晚餐》临摹画。</p>
+<p>航行中，「怀亚特太太」表现粗俗平庸、与艺术家描述的绝色佳人落差极大，每晚却神秘地移居第三舱室。怀亚特则整夜对箱子进行某种隐秘的操作，「我」在失眠时听到开箱声、继而是低沉的哭泣声——他仍自以为是怀亚特在欣赏画作。七日后，船只遭飓风重创。全体乘客被迫登上救生艇撤离时，怀亚特却跳回沉船，用绳子将长方形箱子捆绑在自己身上，与之一同沉入海底。</p>
+<p>一个月后，叙述者在百老汇遇见船长，才知道真相：怀亚特的真妻在启航前夕猝死，为了将遗体运回纽约交给岳母，他与船长秘密安排：以盐腌尸、装入棺材形状的箱子，同时让女仆假扮妻子。那奇特的哭泣声，是怀亚特每夜打开棺盖，对着亡妻悲恸默哀。「那些东西会沉下去，但等盐溶了就会浮起来，」船长说——箱子里装的是他对妻子无法割舍的爱，与她一同葬于海底。</p>
+<h3 id="the-system-of-doctor-tarr-and-professor-fether1845">《塔尔博士与费瑟教授的系统》（The System of Doctor Tarr and Professor Fether，1845）</h3>
+<p>叙述者是一名年轻游客，途经法国南部时前往参观一间知名的私立精神疗养院——梅拉尔（Maillard）先生管理的城堡式庄园。他在客厅见到优雅的梅拉尔先生，听说这里已废除旧有的「镇静系统」（soothing system），改用梅拉尔先生「自行研发的新疗法」。</p>
+<p>晚宴场面让叙述者大感不安：餐桌上的「病患」（梅拉尔说是护工和访客）行为举止极为怪异——有人不断跳跃试图爬上桌子，有人模仿青蛙呱呱叫，有人不停旋转，有人持续嘶嚎像雄鸡。梅拉尔泰然解释，这是院方为了研究精神病症而采用的「沉浸疗法」。就在此时，窗外传来阵阵喊叫，一群「猩猩」模样的生物破窗而入，将宴席打得大乱。</p>
+<p>事后叙述者才知真相：梅拉尔本身就是疗养院三年前精神失常的前任院长，他带领一群病人趁机推翻护工，将所有护工浇上焦油、粘上羽毛（即「tar and feather」——塔尔与费瑟）关入地下室长达一个月。那些破窗而入的「猩猩」，正是逃脱的护工们。整场晚宴的所谓「护工和访客」，全是获得解放的精神病患。</p>
+<h3 id="maelzels-chess-player1836">《梅泽尔的棋手》（Maelzel's Chess-Player，1836）</h3>
+<p>这篇并非虚构故事，而是坡以理性分析拆解19世纪欧美最著名的「人工智慧奇观」——梅泽尔（Maelzel）的土耳其棋手自动机。这个机械棋手身着土耳其装束、盘膝坐在大箱子上，自1769年发明后在欧洲和美国巡回展出，号称可以击败任何人类棋手。</p>
+<p>坡在文章开篇就明确宣告：「这个装置的运作由人类智慧而非纯机械机关主导，这一点可以用数学方法加以证明。」他随后列举十七条观察，包括：箱子在对弈前后的开闭方式、烛光在箱内的移动轨迹、左臂与右臂的不对称运动、棋手在对手犯规时反应的灵活度……最终坡得出结论：箱子内部必然藏有一名人类棋手，空间设计精巧地让他在梅泽尔展示箱子内部时能够灵活转移藏身位置。坡的推断后来被历史印证——棋手内确实长期有人藏身（包括西洋棋大师 William Schlumberger）。</p>
+<h3 id="the-man-that-was-used-up1839">《被用尽的人》（The Man That Was Used Up，1839）</h3>
+<p>叙述者对近卫旅准将约翰‧A‧B‧C‧史密斯（John A. B. C. Smith）的「说不出的奇特感」深深着迷：这位男子拥有令人叹为观止的黝黑头发、无与伦比的胡须、极其完美的肩膀、无懈可击的小腿曲线、悦耳非凡的嗓音。那是一种「过度完美」的不自然感，却又叫人无从指摘。</p>
+<p>他到处打听史密斯的「神秘之处」——每次询问都是众人滔滔不绝夸赞史密斯的英雄事迹，话到一半却突然被打岔打断，永远说不完。最后他直接登门拜访，却在卧室地板上看见一个蠕动的无形怪物——他踢了一脚，那怪物开口说话了：「嗯！这也太失礼了！」</p>
+<p>原来那是史密斯将军本人。在黑脚印第安人战役中，他全身上下几乎全数伤损：软木义腿（Thomas 牌）、义臂（Bishop 牌）、人工肩膀（Pettitt 牌）、假胸（Ducrow 牌）、假发（De L'Orme 牌）、假牙（Parmly 牌）、玻璃义眼（Williams 牌）、人工颚（Bonfanti 牌）——缺一不可。没有这些零件，他只是地板上一个小小的、发出奇怪声音的黑色碎布堆。那个让叙述者着迷的「过度完美」，正是顶级工业产品的完美结合。</p>
+<hr>
+<h2 id="_4">真相拆解</h2>
+<h3 id="_5">篇一：《长方形箱子》</h3>
+<h4 id="whatdunit">真相一：箱子里装的是什么？（whatdunit）</h4>
+<ul>
+<li><strong>线索收敛点：约 68%</strong></li>
+<li>答案：箱子是一口棺材，里面装着怀亚特在启航前夕猝死的妻子遗体，以大量食盐腌制保存。</li>
+</ul>
+<h5 id="_6">关键线索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>箱子尺寸：约六英尺长、二点五英尺宽</td>
+<td>约 20%</td>
+<td>这是人类棺材的标准尺寸——仔细阅读的读者应在此产生怀疑，而非接受叙述者的「画作」假设</td>
+</tr>
+<tr>
+<td>2</td>
+<td>焦油漆料的气味「特别令人不快」，叙述者说那味道「令人作呕」</td>
+<td>约 22%</td>
+<td>大量焦油用于密封棺材以防渗漏；油画包装通常不需要如此大量的焦油</td>
+</tr>
+<tr>
+<td>3</td>
+<td>箱子被放在怀亚特自己的船舱，而非货舱</td>
+<td>约 25%</td>
+<td>艺术品通常放入货舱，能让亲人贴身保护的，往往只有人</td>
+</tr>
+<tr>
+<td>4</td>
+<td>深夜，「我」听见怀亚特用凿子和锤子撬开箱子，锤头以布料包裹消音</td>
+<td>约 65%</td>
+<td>若是油画，何需消音？这是哀悼行为，不是鉴赏艺术</td>
+</tr>
+<tr>
+<td>5</td>
+<td>紧接着撬开箱子后，有「低沉的哭泣声或叹息声」从舱室传出</td>
+<td>约 66%</td>
+<td>线索收敛点——若为油画，哭泣毫无意义；此时仔细的读者已可确认箱内装的是挚爱之人的遗体</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_7">辅助线索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>「Mrs. Wyatt」举止粗俗平庸，与怀亚特描述的「美丽有才的妻子」南辕北辙</td>
+<td>约 35%</td>
+<td>暗示这个女人并非怀亚特的真妻，而是某种顶替者</td>
+</tr>
+<tr>
+<td>2</td>
+<td>「Mrs. Wyatt」每晚离开怀亚特的舱室，去第三个空舱室独睡</td>
+<td>约 60%</td>
+<td>叙述者以为是婚姻不睦，实则是假妻子回到她原本的舱室</td>
+</tr>
+<tr>
+<td>3</td>
+<td>怀亚特在船即将沉没时，拒绝弃船，最后亲手用绳索将箱子捆绑在自己身上跳入大海</td>
+<td>约 85%</td>
+<td>人不会为了一幅画捐躯——确认了箱子里装的是他视比生命更重要的人</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_8">假线索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>误导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>怀亚特在出发前数周一直与义大利画商尼科利诺谈判</td>
+<td>约 15%</td>
+<td>引导读者认为箱子是买来的名画</td>
+</tr>
+<tr>
+<td>2</td>
+<td>箱子外包装标示「Adelaide Curtis，Albany」</td>
+<td>约 22%</td>
+<td>真正的收件地址，但让叙述者更加确信是在保护珍贵画作</td>
+</tr>
+<tr>
+<td>3</td>
+<td>叙述者以「哭泣声一定是我自己幻听」自我说服</td>
+<td>约 66%</td>
+<td>线索被合理化消除</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_9">篇二：《塔尔博士与费瑟教授的系统》</h3>
+<h4 id="whodunit-of-identity">真相一：谁才是真正的院长与护工？（whodunit of identity）</h4>
+<ul>
+<li><strong>线索收敛点：约 45%</strong></li>
+<li>答案：梅拉尔先生本人是精神病患，三年前精神失常的前任院长，组织病人推翻护工并关入地下室，自己冒充院长。</li>
+</ul>
+<h5 id="_10">关键线索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>宴席上的「护工」表现极度反常：扮青蛙呱呱叫、不停旋转、试图爬上餐桌、模仿母鸡咯咯叫</td>
+<td>约 40–50%</td>
+<td>这些正是梅拉尔描述的病患症状</td>
+</tr>
+<tr>
+<td>2</td>
+<td>梅拉尔讲述「某个病人鼓动其他病人」推翻护工的故事，细节过于生动详尽</td>
+<td>约 55–60%</td>
+<td>线索收敛点，梅拉尔就是那个病人</td>
+</tr>
+<tr>
+<td>3</td>
+<td>「新疗法」以「塔尔博士和费瑟教授」命名</td>
+<td>约 65%</td>
+<td>「Tar and Feather」是他对护工所做的事</td>
+</tr>
+<tr>
+<td>4</td>
+<td>窗外传来怪叫声，梅拉尔扔椅子试图阻挡</td>
+<td>约 85–90%</td>
+<td>被囚禁的真正护工已逃脱</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_11">辅助线索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>所有门窗都有严密铁锁封闭</td>
+<td>约 25%</td>
+<td>病人怕被外面援救而设置</td>
+</tr>
+<tr>
+<td>2</td>
+<td>访客完全无法接触院方人员以外的人</td>
+<td>约 40%</td>
+<td>所有「人员」都是病患</td>
+</tr>
+<tr>
+<td>3</td>
+<td>梅拉尔偶有「过度用力的理性感」，像是刻意在证明清醒</td>
+<td>全篇</td>
+<td>正常人不需不断证明自己没疯</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_12">假线索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>误导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>梅拉尔以学术化语言解释「镇静系统」</td>
+<td>约 20–35%</td>
+<td>让人认定他是真正的医学专业人士</td>
+</tr>
+<tr>
+<td>2</td>
+<td>梅拉尔明确声明目前见到的都是院方人员</td>
+<td>约 30%</td>
+<td>正面声明引导读者不再怀疑</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_13">篇三：《梅泽尔的棋手》（分析性非虚构）</h3>
+<h4 id="howdunit">真相一：自动棋手是如何运作的？（howdunit）</h4>
+<ul>
+<li><strong>线索收敛点：约 15%</strong></li>
+<li>答案：机器内部藏有真实人类棋手，透过精巧设计在展示时转移位置。</li>
+</ul>
+<h5 id="_14">关键线索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>棋手能即时应对每个非常规走法</td>
+<td>约 15%</td>
+<td>纯机械无法应对无限变化的棋局</td>
+</tr>
+<tr>
+<td>2</td>
+<td>展示箱子内部时永远按固定程序，手持蜡烛穿行</td>
+<td>约 40%</td>
+<td>正是为了让观众只看到没有人的那一半</td>
+</tr>
+<tr>
+<td>3</td>
+<td>棋手在失误时会停顿重新考量</td>
+<td>约 55%</td>
+<td>决策犹豫是人类特征</td>
+</tr>
+<tr>
+<td>4</td>
+<td>每场前「上链」的时间和力度每次不同</td>
+<td>约 60%</td>
+<td>像是在与箱内的人沟通</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_15">辅助线索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>棋艺水准极高，几乎每局必胜</td>
+<td>全文</td>
+<td>高水准棋艺暗示人类介入</td>
+</tr>
+<tr>
+<td>2</td>
+<td>坡比较棋手与巴贝奇计算机的差异</td>
+<td>约 10%</td>
+<td>计算机处理确定性，棋手面对不确定性</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_16">篇四：《被用尽的人》</h3>
+<h4 id="whatishim">真相一：史密斯将军的「神秘」是什么？（whatishim）</h4>
+<ul>
+<li><strong>线索收敛点：约 70%</strong></li>
+<li>答案：史密斯将军全身几乎以义肢和人工器官替代：义腿、义臂、人工肩膀、假胸、假发、假牙、玻璃义眼、人工颚。</li>
+</ul>
+<h5 id="_17">关键线索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>史密斯对「机械发明进步」有超乎寻常的热情</td>
+<td>约 30%</td>
+<td>切身的关联造就强烈执念</td>
+</tr>
+<tr>
+<td>2</td>
+<td>每个被问及之人都在句子说完前被打断——五次以上</td>
+<td>约 30–70%</td>
+<td>答案是大家知道但不便明说的事</td>
+</tr>
+<tr>
+<td>3</td>
+<td>卧室地板上看到「奇怪的东西」，踢了一脚，那东西开口说话</td>
+<td>约 88%</td>
+<td>线索收敛点</td>
+</tr>
+<tr>
+<td>4</td>
+<td>仆人庞贝依序为史密斯装上所有义肢器官</td>
+<td>约 90–95%</td>
+<td>逐一揭示「完美将军」由工业零件组成</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_18">假线索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>误导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>史密斯外观「无懈可击」</td>
+<td>全篇前半</td>
+<td>引导读者往性格谜或战争秘闻方向想</td>
+</tr>
+<tr>
+<td>2</td>
+<td>众人都提到布格布和克克普的战役</td>
+<td>全篇</td>
+<td>以「战争英雄事迹」误导，非「义肢」方向</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_19">推理路径重建</h2>
+<h3 id="_20">《长方形箱子》</h3>
+<p><strong>第一层（0–20%）</strong>：叙述者确立自己的推理能力——他确信箱子里是名画，为自己的「洞察力」自鸣得意。越是自信的推理者，盲点越深。</p>
+<p><strong>第二层（22–64%）</strong>：线索接二连三出现——棺材尺寸、焦油气味、假妻子、神秘仪式——但叙述者的自我确信每次都把线索「合理化」掉。</p>
+<p><strong>第三层（65–66%）</strong>：哭泣声。没有任何解释能让一个人对着一幅油画哭泣。</p>
+<p><strong>第四层（100%）</strong>：船长的事后解说全部交代清楚。精髓：这篇故事的真正谜题不是「箱子里装的是什么」，而是「爱一个人，可以到什么程度」。</p>
+<h3 id="_21">《塔尔博士与费瑟教授的系统》</h3>
+<p><strong>节点一（约 40%）</strong>：晚宴上的「护工」开始做出奇怪举动，与梅拉尔描述的病患症状完全一致。</p>
+<p><strong>节点二（约 55–60%）</strong>：梅拉尔描述病人推翻护工的故事，细节太具体，太像当事人的叙述。</p>
+<p><strong>节点三（约 85%）</strong>：窗外噪音升级，故事确认了谜底。</p>
+<h3 id="_22">《梅泽尔的棋手》</h3>
+<p>坡先宣告结论（机器里有人），再逐一排除反驳论点，最后描述操作机制。这是演绎法的展示，也是杜宾方法论的「草稿本」。</p>
+<h3 id="_23">《被用尽的人》</h3>
+<p><strong>节点（约 30–70%）</strong>：重复的「打断模式」本身就是核心线索。</p>
+<p><strong>解谜（约 90%）</strong>：卧室场景以荒诞喜剧形式揭示——一块破布开口说话，接着被一片一片「组装」成一个人。</p>
+<hr>
+<h2 id="_24">补充说明</h2>
+<h3 id="_25">本卷的核心主题：「过度自信的观察者是最差的见证人」</h3>
+<p>第四卷以多种形式探索同一命题——<strong>自信的观察者往往是最糟糕的推理者</strong>：
+- 《长方形箱子》：过早确立「名画」假设，线索全被扭曲支持错误前提
+- 《塔尔与费瑟》：因「院长应是清醒的人」这个假设，对反常行为视而不见
+- 《被用尽的人》：被表面的「完美」迷惑，没想到完美本身可以是假的</p>
+<p>核心警告：<strong>先入之见是所有推理错误的根源</strong>。</p>
+<h3 id="_26">《梅泽尔的棋手》与杜宾方法论的关系</h3>
+<p>《梅泽尔的棋手》（1836）比第一篇杜宾故事（1841）早五年。同样的排除法、同样的「从观察细节到唯一可能的结论」。如果说杜宾三部曲是坡推理文学的正典，《梅泽尔的棋手》就是其「草稿本」。</p>
+<h3 id="_27">《塔尔博士与费瑟教授的系统》对后世的影响</h3>
+<p>「疯子管理理性人」的设定在后世反复出现——从《飞越杜鹃窝》（1962）到大量封闭场所密室心理惊悚。坡最精妙的设计是：让读者自己也成为被骗的受害者，直到结局才意识到一直和疯子同桌共饮。</p>
+<h3 id="_28">本卷在坡全集中的位置</h3>
+<p>第四卷代表坡创作中最「非正典」的一面：笑闹、黑色幽默、哥德恐怖与分析性论文的混杂。如果说第一卷（杜宾）是「推理可以解决谜题」的正面宣言，第四卷则是「人类的认知本身就是最大的谜题和阻碍」的反面补充。两者合在一起，才是完整的坡。</p>
+    <a href="../index.html" class="back-link">← 回到首页</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">推理解剖室</p>
+    <p>五位作者 · 八十八部作品 · 一百三十五年推理文学的难度演化</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

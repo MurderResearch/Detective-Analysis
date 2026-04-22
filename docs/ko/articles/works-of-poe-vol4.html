@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>에드거 앨런 포 작품집 제4권（The Works of Edgar Allan Poe — Volume 4）— 추리 분석 — 추리해부실</title>
+<meta name="description" content=" 《직사각형 상자》（The Oblong Box，1844） 서술자 '나'는 범선 '인디펜던트호'를 타고 찰스턴에서 뉴욕으로 향할 예정이다. 그는 승객 명단에서 오랜 친구 코닐리어스 와이어트（Cornelius Wyatt）——재능 넘치는 화가——가 자신과 아내, 그리고 두 여동생을 위해 세 ">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/works-of-poe-vol4.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/works-of-poe-vol4.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/works-of-poe-vol4.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/works-of-poe-vol4.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/works-of-poe-vol4.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/works-of-poe-vol4.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/works-of-poe-vol4.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/works-of-poe-vol4.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif KR', serif;
+  --font-sans: 'Noto Sans KR', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">추리해부실</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">홈</a>
+        <a href="../index.html#latest">최신</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="언어" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 한국어</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/works-of-poe-vol4.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/works-of-poe-vol4.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/works-of-poe-vol4.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/works-of-poe-vol4.html">日本語</a>
+      <a class="lang-item active" data-lang="ko" href="/Detective-Analysis/ko/articles/works-of-poe-vol4.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/works-of-poe-vol4.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/works-of-poe-vol4.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/works-of-poe-vol4.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">에드거 앨런 포 · </div>
+    <h1>에드거 앨런 포 작품집 제4권（The Works of Edgar Allan Poe — Volume 4）— 추리 분석</h1>
+    <div class="subtitle">에드거 앨런 포（Edgar Allan Poe） · 단편집（본 분석은 서스펜스 수수께끼 및 이성적 추리 관련 작품에 초점）</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">추리 난이도</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">안개 등급</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="4the-works-of-edgar-allan-poe-volume-4">에드거 앨런 포 작품집 제4권（The Works of Edgar Allan Poe — Volume 4）— 추리 분석</h1>
+<h2 id="_1">기본 정보</h2>
+<ul>
+<li>저자：에드거 앨런 포（Edgar Allan Poe）</li>
+<li>출판년도：1903년（Raven Edition 판본）；수록 작품 원발표는 1836–1845년</li>
+<li>장르：단편집（본 분석은 서스펜스 수수께끼 및 이성적 추리 관련 작품에 초점）</li>
+<li>탐정：고정 탐정 없음；각 편마다 신뢰할 수 없는 서술자, 지나치게 자신만만한 방관자, 또는 순수 분석적 논증자를 중심으로 삼음</li>
+<li>핵심 수수께끼 유형：물건 정체 수수께끼（《직사각형 상자》）＋ 신분 전도 수수께끼（《타르와 페더》）＋ 기계 트릭（《멜젤의 체스 선수》）＋ 육체 수수께끼（《다 써버린 사람》）</li>
+</ul>
+<hr>
+<h2 id="_2">추리 난이도 총평</h2>
+<p>본 권 스물세 편의 작품은 희극적 풍자, 철학적 대화, 고딕 황당함이 주를 이루며, 순수 추리 구조는 상대적으로 드물다. 본 분석은 수수께끼 구조를 갖춘 네 편을 선별한다：<strong>《직사각형 상자》</strong>（The Oblong Box）、<strong>《타르 박사와 페더 교수의 시스템》</strong>（The System of Doctor Tarr and Professor Fether）、<strong>《멜젤의 체스 선수》</strong>（Maelzel's Chess-Player）、<strong>《다 써버린 사람》</strong>（The Man That Was Used Up）。추리 해부 프레임으로 각 편을 순차적으로 검토한다.</p>
+<table>
+<thead>
+<tr>
+<th>지표</th>
+<th>등급</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>추리 난이도（Deducibility）</td>
+<td>⭐⭐⭐</td>
+<td>평균 수렴점 약 63% — 《직사각형 상자》는 서술자의 지나친 자신감이 단서를 가리고；《타르와 페더》의 신분 전도 수수께끼는 황당한 만찬 행동 속에 초기 경고 신호를 남기며；《다 써버린 사람》은 반복적으로 끊기는 대화로 답을 암시하고；《멜젤의 체스 선수》는 첫 문장부터 진실을 단언하는 분석적 논문</td>
+</tr>
+<tr>
+<td>안개 등급（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>《직사각형 상자》는 자신 있는 오해로 가장 짙은 안개를 만들어내고；《타르와 페더》는 황당함으로 진실을 가리며；《다 써버린 사람》은 사교적 예의 바름 속 회피로 중간 정도의 안개를 만들어냄</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_3">줄거리</h2>
+<h3 id="the-oblong-box1844">《직사각형 상자》（The Oblong Box，1844）</h3>
+<p>서술자 '나'는 범선 '인디펜던트호'를 타고 찰스턴에서 뉴욕으로 향할 예정이다. 그는 승객 명단에서 오랜 친구 코닐리어스 와이어트（Cornelius Wyatt）——재능 넘치는 화가——가 자신과 아내, 그리고 두 여동생을 위해 세 개의 선실을 예약한 것을 발견한다. '나'는 세 번째 선실에 대해 의아함을 느끼는데, 네 명이라면 두 개면 충분할 것이기 때문이다. 출항 시, 기묘한 직사각형 소나무 상자 하나가 함께 배에 오른다. 약 6피트 길이에 2.5피트 너비로, 「Adelaide Curtis, Albany, New York, 와이어트 씨 전달 요망, 취급 주의」라고 적혀 있다. '나'는 자신 있게 단언한다：상자 안에는 와이어트가 이탈리아 화상 니콜리노에게서 구입한 다빈치의 《최후의 만찬》 모사화가 들어 있다고.</p>
+<p>항해 중, '와이어트 부인'은 행동이 천박하고 평범하여 화가가 묘사했던 '아름다운 재녀'와 극명한 차이를 보이지만, 매일 밤 신비롭게도 세 번째 선실로 옮겨가 잠을 잔다. 와이어트는 밤새 상자에 어떤 은밀한 작업을 하는데, '나'는 잠을 이루지 못하다 상자 뚜껑을 여는 소리와 이어지는 낮고 깊은 울음소리를 듣는다——그는 여전히 와이어트가 그림을 감상하는 것이라 자위한다. 칠 일 후, 배는 허리케인에 심하게 손상된다. 모든 승객이 구명보트로 대피하는 상황에서 와이어트는 침몰하는 배로 다시 뛰어들어, 밧줄로 직사각형 상자를 자신의 몸에 묶고 함께 바다 속으로 가라앉는다.</p>
+<p>한 달 후, 서술자는 브로드웨이에서 선장을 만나 비로소 진실을 알게 된다：와이어트의 진짜 아내는 출항 전날 밤 갑자기 세상을 떠났고, 유해를 뉴욕으로 운반해 장모에게 돌려주기 위해 선장과 비밀리에 합의하여 소금에 절여 관 모양의 상자에 넣고, 하녀가 아내 행세를 하게 했던 것이다. 그 기묘한 울음소리는 와이어트가 매밤 관 뚜껑을 열어 망자가 된 아내 곁에서 조용히 통곡하던 소리였다. "그것들은 가라앉겠지만, 소금이 녹으면 떠오를 겁니다," 선장이 말했다——상자 안에는 그가 아내에게 품은 놓을 수 없는 사랑이 담겨 있었고, 그녀와 함께 바다 밑에 안장된 것이다.</p>
+<h3 id="the-system-of-doctor-tarr-and-professor-fether1845">《타르 박사와 페더 교수의 시스템》（The System of Doctor Tarr and Professor Fether，1845）</h3>
+<p>서술자는 젊은 여행객으로, 프랑스 남부를 여행하다 유명한 사립 정신요양원——메이야르（Maillard）라는 사람이 관리하는 성채식 저택——을 방문한다. 응접실에서 우아한 메이야르 씨를 만나, 이 곳은 예전의 '진정 시스템'（soothing system）을 폐지하고 메이야르 씨가 '자체 개발한 새 치료법'으로 바꾸었다는 이야기를 듣는다.</p>
+<p>만찬 장면은 서술자를 크게 불안하게 만든다：식탁에 앉은 '환자들'（메이야르는 간호인과 방문객이라고 말한다）의 행동거지가 매우 기이하다——어떤 이는 끊임없이 뛰어오르며 탁자 위로 올라가려 하고, 어떤 이는 개구리 흉내를 내며 울어대고, 어떤 이는 쉬지 않고 빙빙 돌고, 어떤 이는 수탉처럼 쉴 새 없이 꼬끼오 운다. 메이야르는 태연히 설명한다, 이는 정신 질환 연구를 위해 원내에서 채택한 '몰입 치료법'이라고. 바로 그때, 창밖에서 함성이 들려오고 '오랑우탄' 같은 생물들이 창문을 깨고 뛰어들어 만찬장을 아수라장으로 만든다.</p>
+<p>사건 후 서술자는 비로소 진실을 알게 된다：메이야르 자신이 3년 전 정신이상을 일으킨 이 요양원의 전직 원장으로, 환자들을 이끌고 간호인들을 전복시켜 모든 간호인에게 타르를 붓고 깃털을 붙여（즉 'tar and feather'——타르와 페더）지하실에 한 달간 가두었던 것이다. 창문을 깨고 뛰어들어온 '오랑우탄들'은 바로 탈출한 간호인들이었다. 만찬에서 소위 '간호인과 방문객'이라 했던 사람들은 전부 해방된 정신병 환자들이었다.</p>
+<h3 id="maelzels-chess-player1836">《멜젤의 체스 선수》（Maelzel's Chess-Player，1836）</h3>
+<p>이 편은 허구 이야기가 아니라, 포가 이성적 분석으로 19세기 유럽과 미국에서 가장 유명한 '인공지능 기관'——멜젤（Maelzel）의 터키인 체스 자동기계를 해부하는 논문이다. 이 기계 체스 선수는 터키 복장을 하고 큰 상자 위에 책상다리를 하고 앉아, 1769년 발명된 이래 유럽과 미국을 순회하며 어떤 인간 체스 선수도 꺾을 수 있다고 자칭했다.</p>
+<p>포는 논문 서두에서 명확히 선언한다："이 장치의 작동은 순수 기계 장치가 아닌 인간 지능에 의해 지배된다는 것을, 수학적 방법으로 증명할 수 있다." 그는 이어서 열일곱 가지 관찰을 열거한다：상자가 대국 전후에 열리고 닫히는 방식, 상자 내부에서 촛불이 이동하는 궤적, 왼팔과 오른팔의 비대칭 동작, 상대방이 반칙을 했을 때 체스 선수의 유연한 대응……마침내 포는 결론을 내린다：상자 내부에 반드시 인간 체스 선수가 숨어 있으며, 공간 설계가 교묘하게 그가 멜젤이 상자 내부를 '비어 있다'고 보여줄 때 숨을 위치를 영리하게 이동할 수 있도록 되어 있다. 포의 추론은 이후 역사적으로 입증되었다——체스 선수 안에는 오랫동안 실제 인물이 숨어 있었다（체스 마스터 William Schlumberger 포함）.</p>
+<h3 id="the-man-that-was-used-up1839">《다 써버린 사람》（The Man That Was Used Up，1839）</h3>
+<p>서술자는 근위여단 준장 존 A. B. C. 스미스（John A. B. C. Smith）에 대한 '말로 표현할 수 없는 기묘한 느낌'에 깊이 매료된다：이 남자는 경탄스러운 검은 머리카락, 비할 데 없는 수염, 지극히 완벽한 어깨, 흠잡을 데 없는 종아리 곡선, 귀에 거슬리지 않는 감미로운 목소리를 갖고 있다. 그것은 '지나친 완벽함'이 주는 어딘가 부자연스러운 느낌이지만, 딱히 흠을 잡을 수도 없는 것이다.</p>
+<p>그는 곳곳에서 스미스의 '신비로움'에 대해 물어본다——매번 사람들이 스미스의 영웅 행적을 끊임없이 칭송하다가 중간에 갑자기 끊겨버리고, 끝까지 말을 마치는 사람이 없다. 결국 그는 직접 스미스를 방문하는데, 침실 바닥에서 꿈틀거리는 형체 없는 괴물을 발견한다——발로 한 번 차자 그 괴물이 입을 열어 말했다："흠！참으로 무례하군요！"</p>
+<p>알고 보니 그것이 스미스 장군 본인이었다. 흑발 인디언（Bugaboo and Kickapoo）과의 전투에서 그는 몸 전체가 거의 다 손상되었다：코르크 의족（Thomas 제）, 의수（Bishop 제）, 인공 어깨（Pettitt 제）, 가짜 가슴（Ducrow 제）, 가발（De L'Orme 제）, 틀니（Parmly 제）, 유리 의안（Williams 제）, 인공 턱（Bonfanti 제）——하나도 빠질 수 없다. 이 부품들이 없으면 그는 바닥 위의 작고 이상한 소리를 내는 검은 천 조각 더미에 불과하다. 서술자를 매료시켰던 그 '지나친 완벽함'은 바로 최고급 공업 제품들의 완벽한 결합이었던 것이다.</p>
+<hr>
+<h2 id="_4">진실 분석</h2>
+<h3 id="_5">첫 번째 작품：《직사각형 상자》</h3>
+<h4 id="whatdunit">진실 하나：상자 안에는 무엇이 있는가？（whatdunit）</h4>
+<ul>
+<li><strong>선索 수렴점：약 68%</strong></li>
+<li>답：상자는 관棺으로, 와이어트가 출항 전날 밤 갑자기 세상을 떠난 아내의 유해를 다량의 소금으로 염장하여 보관한 것이다. 상자의 외부 포장 문구와 크기는 모두 의도적으로 위장한 것으로, 다른 승객들이 꺼려서 관과 같은 배에 타기를 거부하지 않도록 하기 위해서였다.</li>
+</ul>
+<h5 id="_6">핵심 단서</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/백분율）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>상자 크기：약 6피트 길이, 2.5피트 너비</td>
+<td>약 20%</td>
+<td>이는 인간 관棺의 표준 크기이다——주의 깊게 읽는 독자는 여기서 의심을 품어야 하며, 서술자의 '그림'이라는 가정을 받아들이지 말아야 한다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>타르 도료의 냄새가 '특히 불쾌하다', 서술자는 그 냄새가 '역겹다'고 말한다</td>
+<td>약 22%</td>
+<td>다량의 타르는 관棺의 누출 방지를 위한 밀봉에 쓰인다；유화 포장에는 이렇게 많은 양의 타르가 필요하지 않다</td>
+</tr>
+<tr>
+<td>3</td>
+<td>상자가 화물칸이 아닌 와이어트 자신의 선실에 보관된다</td>
+<td>약 25%</td>
+<td>미술품은 보통 화물칸에 넣는다；몸에 바짝 붙여 보호할 수 있는 것은, 대개 사람뿐이다</td>
+</tr>
+<tr>
+<td>4</td>
+<td>한밤중, '나'는 와이어트가 천으로 소리를 죽인 망치와 정으로 상자를 여는 소리를 듣는다</td>
+<td>약 65%</td>
+<td>유화라면 왜 소리를 죽여야 하는가？이는 추모 행위이지, 예술 감상이 아니다</td>
+</tr>
+<tr>
+<td>5</td>
+<td>상자를 연 직후, '낮고 깊은 울음소리 혹은 한숨 소리'가 선실에서 흘러나온다</td>
+<td>약 66%</td>
+<td>단서 수렴점——유화라면 울음이 전혀 의미가 없다；이 시점에서 주의 깊은 독자는 상자 안에 사랑하는 사람의 유해가 담겨 있음을 확인할 수 있다</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_7">보조 단서</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/백분율）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>'와이어트 부인'의 행동이 천박하고 평범하여, 와이어트가 묘사했던 '아름답고 재능 있는 아내'와 완전히 딴판이다</td>
+<td>약 35%</td>
+<td>이 여자가 와이어트의 진짜 아내가 아니라 어떤 대역임을 암시한다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>'와이어트 부인'은 매밤 와이어트의 선실을 떠나 세 번째 빈 선실에서 혼자 잔다</td>
+<td>약 60%</td>
+<td>"그들은 사실상 별거 중이다"——서술자는 부부 불화라고 생각하지만, 실은 가짜 아내가 자신의 원래 선실로 돌아가는 것이다</td>
+</tr>
+<tr>
+<td>3</td>
+<td>배가 침몰하려 할 때, 와이어트는 배를 포기하지 않고 미친 듯이 상자를 가져가겠다고 요구하다가, 결국 손수 밧줄로 상자를 자신의 몸에 묶고 바다로 뛰어든다</td>
+<td>약 85%</td>
+<td>사람은 그림 한 점을 위해 목숨을 바치지 않는다——이 행동은 상자 안에 그가 목숨보다 소중히 여기는 사람이 담겨 있음을 확인시켜 준다</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_8">거짓 단서</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/백분율）</th>
+<th>오도 방향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>와이어트는 출발 몇 주 전부터 이탈리아 화상 니콜리노와 계속 협상을 벌이고 있었다</td>
+<td>약 15%</td>
+<td>독자（와 서술자）를 상자 안에 구입한 명화가 있다고 생각하게 유도한다；이는 포가 교묘하게 설치한 서술자의 합리화 함정이다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>상자 외부 포장에 'Adelaide Curtis, Albany'（와이어트의 장모）라고 표시되어 있다</td>
+<td>약 22%</td>
+<td>실제 수령 주소이지만, '수상해 보인다'는 느낌으로 인해 서술자는 오히려 귀중한 그림의 도난을 막기 위한 것이라고 더욱 확신한다</td>
+</tr>
+<tr>
+<td>3</td>
+<td>서술자가 '울음소리는 틀림없이 내가 환청한 것'이라고 스스로를 설득한다</td>
+<td>약 66%</td>
+<td>포는 독자로 하여금 단서가 합리화되어 소거되는 과정을 목격하게 하면서, 서술자의 인지적 맹점을 강조한다</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_9">두 번째 작품：《타르 박사와 페더 교수의 시스템》</h3>
+<h4 id="whodunit-of-identity">진실 하나：진짜 원장과 간호인은 누구인가？（whodunit of identity）</h4>
+<ul>
+<li><strong>선索 수렴점：약 45%</strong></li>
+<li>답：메이야르 씨 본인이 정신병 환자로, 3년 전 이 요양원의 전직 원장이었다가 스스로 발병하여 환자가 되었다. 그는 환자들을 조직하여 권력을 탈취하고, 진짜 간호인들에게 타르를 붓고 깃털을 붙여 지하실에 가두었으며, 자신이 원장 행세를 하며 방문객을 접대한 것이다.</li>
+</ul>
+<h5 id="_10">핵심 단서</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/백분율）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>만찬에서 '간호인과 조수들'이 극도로 비정상적인 행동을 보인다：어떤 이는 개구리 흉내를 내며 울어대고, 어떤 이는 쉬지 않고 빙빙 돌고, 어떤 이는 식탁 위로 올라가려 하고, 어떤 이는 암탉 흉내를 내며 꼬꼬댁 운다</td>
+<td>약 40–50%</td>
+<td>이 행동들은 바로 메이야르가 앞서 묘사한 환자 증상과 완전히 일치한다——그는 자신의 부하가 아니라 자신의 동료를 묘사한 것이다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>메이야르가 '어떤 환자가 다른 환자들을 선동하여 간호인들을 전복시켰다'는 이야기를 들려주는데, 표정이 지나치게 생생하고 상세하다</td>
+<td>약 55–60%</td>
+<td>직접 경험한 사람의 서술과 방관자의 서술은 세부 묘사의 밀도가 완전히 다르다——단서 수렴점, 메이야르가 바로 이야기의 주인공이다</td>
+</tr>
+<tr>
+<td>3</td>
+<td>'원장' 메이야르의 이른바 '새 치료법'이 '타르 박사와 페더 교수'의 이름을 따 명명되었는데, 이름이 황당무계하게 들린다</td>
+<td>약 65%</td>
+<td>'Tar and Feather'（타르와 깃털）는 미국 사적 형벌의 대명사이다——원장이 말하는 것은 바로 그가 간호인들에게 가한 행위다</td>
+</tr>
+<tr>
+<td>4</td>
+<td>밖에서 소란한 소리가 들려오자, 만찬장의 '간호인들'이 행동을 통제하지 못하기 시작하고, 메이야르는 의자를 던지며 막으려 한다</td>
+<td>약 85–90%</td>
+<td>지하실에 갇혀 있던 진짜 간호인들이 탈출하여 본관을 향해 달려오고 있다</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_11">보조 단서</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/백분율）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>원내의 모든 문과 창문에 철문 잠금장치와 철판이 빈틈없이 덮여 있으며, 외부와 완전히 차단되어 있다</td>
+<td>약 25%</td>
+<td>일반 요양원이라면 왜 이렇게 물샐틈없는 군사적 방어가 필요하겠는가？이는 환자들이 외부 사람의 구조를 두려워하여 설치한 것이다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>만찬 내내 어떤 방문객도 원방 직원 이외의 사람과 접촉할 수 없다</td>
+<td>약 40%</td>
+<td>정상적인 요양원이라면 방문객을 완전히 고립시킬 리 없다；이는 원내의 모든 '직원'이 실은 환자이기 때문으로, 외부인이 말을 걸어 확인할 수 없게 하기 위해서다</td>
+</tr>
+<tr>
+<td>3</td>
+<td>메이야르의 말투와 태도는 고상하지만, 이따금 '지나치게 애쓰는 이성감'이 느껴지며, 마치 자신이 제정신임을 의도적으로 증명하려는 것 같다</td>
+<td>전편</td>
+<td>정상인은 자신이 미치지 않았음을 계속 증명할 필요가 없다</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_12">거짓 단서</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/백분율）</th>
+<th>오도 방향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>메이야르가 고도로 학술적인 언어로 '진정 시스템'의 원리와 폐기 이유를 상세하게 설명한다</td>
+<td>약 20–35%</td>
+<td>방문객（과 독자）으로 하여금 그가 진정한 의학 전문가이지 환자가 아니라고 인식하게 만든다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>메이야르가 '나'에게 알린다, 현재 보이는 사람들은 원내 직원이지 환자가 아니며, 원내는 이미 환자들이 자유롭게 행동하는 제도를 폐지했다고</td>
+<td>약 30%</td>
+<td>명확한 긍정적 발언이 독자로 하여금 더 이상 의심하지 않게 유도한다——포는 당사자의 명확한 발언으로 표면에서 이미 충분히 뚜렷한 이상 행동을 가린다</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_13">세 번째 작품：《멜젤의 체스 선수》（분석적 논픽션）</h3>
+<h4 id="howdunit">진실 하나：자동 체스 선수는 도대체 어떻게 작동하는가？（howdunit）</h4>
+<ul>
+<li><strong>선索 수렴점：약 15%（포는 거의 서두에서 결론을 선언한다）</strong></li>
+<li>답：기계 내부에 실제 인간 체스 선수가 숨어 있으며, 교묘한 공간 설계를 통해 멜젤이 상자 내부를 '비어 있음'으로 보여줄 때, 관객의 시선을 피해 영리하게 숨을 위치를 이동할 수 있다.</li>
+</ul>
+<h5 id="_14">핵심 단서</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/백분율）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>체스 선수는 상대방의 모든 '비정규 수'에 즉각적으로 대응하여 조정할 수 있다</td>
+<td>약 15%</td>
+<td>순수 기계 장치는 고정된 절차대로만 작동할 수 있고, 무한히 변화하는 체스 판세에 대응할 수 없다；이 자체가 인간 지능의 증거이다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>멜젤이 기계의 '내부 공간'을 보여줄 때, 항상 고정된 절차로 순서대로 다른 상자 문을 열고 닫으며, 손에 양초를 들고 상자 내부를 오간다</td>
+<td>약 40%</td>
+<td>전시 절차가 매우 의도적이다——관객이 매번 사람이 없는 쪽만 볼 수 있도록 하고, 인간 체스 선수는 마침 반대쪽으로 이동해 있도록 하기 위해서다</td>
+</tr>
+<tr>
+<td>3</td>
+<td>체스 선수가 대국 중 실수를 했을 때, 잠시 멈추고 재고한다——순수 기계 장치는 '재고'하지 않는다</td>
+<td>약 55%</td>
+<td>결정의 망설임과 수정은 인간 인지의 특징이지, 기계 논리가 아니다</td>
+</tr>
+<tr>
+<td>4</td>
+<td>매 대국 전, 기계 상자는 멜젤이 직접 '태엽을 감아야' 하는데, 태엽을 감는 시간과 강도가 매번 다르다</td>
+<td>약 60%</td>
+<td>기계 장치라면 매번 태엽 감기는 정확한 고정 절차가 있어야 한다；다른 정도의 태엽 감기는 오히려 상자 안 사람과 어떤 방식으로 소통하는 것 같다</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_15">보조 단서</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/백분율）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>체스 선수의 체스 실력이 매우 높아, 역사 기록에 따르면 거의 매 대국에서 반드시 이긴다</td>
+<td>전문</td>
+<td>기계 절차가 '체스를 잘 두는 것'은 불가능한데, 체스 판세의 변화가 무궁무진하기 때문이다；높은 수준의 체스 실력 자체가 인간의 개입을 암시한다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>포가 체스 선수와 배비지 계산기의 차이를 비교한다：계산기는 확정적 문제를 처리하고, 체스 선수는 불확실성에 직면한다</td>
+<td>약 10%</td>
+<td>이 논증 자체가 '순수 기계일 수 없다'는 엄밀한 증명이다</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_16">네 번째 작품：《다 써버린 사람》</h3>
+<h4 id="whatishim">진실 하나：스미스 장군의 그 '말로 표현할 수 없는 신비'는 무엇인가？（whatishim）</h4>
+<ul>
+<li><strong>선索 수렴점：약 70%</strong></li>
+<li>답：스미스 장군은 버가부와 킥카푸족 인디언과의 전투에서 몸 전체가 거의 모든 부위를 손상당하여, 당시 가장 발전된 의족과 인공 기관으로 교체했다：코르크 의족, 의수, 인공 어깨, 가짜 가슴, 가발, 틀니, 유리 의안, 인공 턱. 이 부품들이 없으면 그는 아무것도 아니다.</li>
+</ul>
+<h5 id="_17">핵심 단서</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/백분율）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>스미스는 '기계 발명의 진보'에 대해 유별난 열정을 보이며, 화제가 항상 '기계 의족'과 '인공 기관'으로 돌아온다</td>
+<td>약 30%</td>
+<td>개인적으로 절실하게 관련된 것만이 이렇게 강렬한 집착을 만들 수 있다；그의 열정은 자신의 절실한 경험에서 비롯된 것이다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>'스미스가 특별한 이유'를 묻는 모든 사람이 문장이 끝나기 전에 말이 끊겨버린다——다섯 번 이상</td>
+<td>약 30–70%</td>
+<td>포는 희극적 반복으로 암시한다：이 '비밀'은 모두가 알고 있지만 어떤 사교적 예의 때문에 말하기 불편한 사실이라는 것을, 독자의 호기심을 쌓이게 만든다</td>
+</tr>
+<tr>
+<td>3</td>
+<td>서술자가 스미스의 침실 바닥에서 '이상한 것'을 발견하고 발로 차자, 그것이 말을 한다</td>
+<td>약 88%</td>
+<td>단서 수렴점——장비 없이는 스미스의 진짜 상태가 바로 바닥에서 꿈틀거리는 형체 없는 살덩이이다</td>
+</tr>
+<tr>
+<td>4</td>
+<td>흑인 하인 폼페이가 순서대로 스미스에게 의족, 의수, 어깨, 가짜 가슴, 가발, 틀니, 의안, 인공 턱을 장착한다</td>
+<td>약 90–95%</td>
+<td>하나씩 밝혀진다：'완벽한' 장군 한 명이 공업 부품으로 조립되어 있다는 것이</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_18">거짓 단서</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/백분율）</th>
+<th>오도 방향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>서술자가 스미스의 외모가 '흠잡을 데 없다'고 반복적으로 강조한다——머리카락, 수염, 치아, 눈, 어깨, 종아리 곡선</td>
+<td>전편 전반부</td>
+<td>독자는 '성격상의 수수께끼'나 '전쟁 비화의 수수께끼'를 생각하도록 유도되며, '몸이 가짜다'는 방향으로는 생각하지 않게 된다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>질문을 받은 모든 사람이 '버가부와 킥카푸의 전투'를 언급하며, 수수께끼의 답이 전쟁과 관련 있음을 암시한다</td>
+<td>전편</td>
+<td>실제로 관련이 있지만, '전쟁 영웅 이야기'의 방향으로 오도하며, '전쟁 후유증—의족'의 방향으로는 이끌지 않는다</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_19">추리 경로 재구성</h2>
+<h3 id="_20">《직사각형 상자》</h3>
+<p>이 편은 포의 '지나치게 자신만만한 서술자'에 대한 정교한 범례이다. 수수께끼의 구조는 다음과 같다：</p>
+<p><strong>첫 번째 층위（0–20%）</strong>：서술자가 자신의 추리 능력을 확립한다——그는 와이어트가 자신에게 무언가를 숨기고 있다는 것을（명화！）간파하고, 자신의 '통찰력'에 우쭐해한다. 포는 여기서 함정을 설치한다：자신감이 넘칠수록 맹점은 더 깊어진다.</p>
+<p><strong>두 번째 층위（22–64%）</strong>：단서들이 잇따라 등장한다——관棺의 크기, 타르 냄새, 가짜 아내, 매밤의 신비로운 의식——하지만 서술자의 자기 확신이 매번 단서를 '합리화'하는 데 성공한다："이것은 와이어트가 명화를 감상하는 것일 뿐이야." 독자는 이 시점에서 이미 서술자의 인식과 거리를 두어야 한다.</p>
+<p><strong>세 번째 층위（65–66%）</strong>：울음소리. 이것이 주의 깊은 독자가 수수께끼를 '스스로 풀어낼' 수 있는 마지막 단서이다——어떤 설명으로도 한 사람이 유화를 보며 울 수는 없기 때문이다.</p>
+<p><strong>네 번째 층위（100%）</strong>：선장의 사후 해설로 모든 것이 명확히 밝혀진다. 포는 의도적으로 폭로가 수수께끼가 '사라진'（침몰）이후에 이루어지도록 하여, 가장 똑똑한 독자조차도 작가가 말해줄 때까지 완전한 동기를 파악할 수 없도록 한다.</p>
+<p><strong>핵심</strong>：이 이야기의 진정한 수수께끼는 '상자 안에 무엇이 있는가'가 아니라 '사람을 사랑하는 것은 어디까지 이를 수 있는가'이다——와이어트는 뉴욕에서 공개적으로 망자가 된 아내를 애도할 수 없어, 결국 그녀와 함께 바다에 안장되는 것을 선택한다. 포는 수수께끼의 형식으로, 말로 다 할 수 없는 비극을 이야기했다.</p>
+<hr>
+<h3 id="_21">《타르 박사와 페더 교수의 시스템》</h3>
+<p>이 편의 추리 경로는 '이상 행동의 누적' 위에 세워진다：</p>
+<p><strong>절점 하나（약 40%）</strong>：만찬에서 '간호인과 방문객들'이 이상한 행동을 하기 시작한다. 일반 독자의 첫 번째 반응은 "요양원 분위기가 원래 이상한 건 아닐까？"일 것이다. 주의 깊은 독자는 여기서 멈추고 생각해야 한다：이 행동들이, 메이야르가 방금 묘사한 환자 증상과 완전히 일치한다.</p>
+<p><strong>절점 둘（약 55–60%）</strong>：메이야르가 '어떤 환자가 모두를 선동하여 간호인들을 전복시켰다'는 이야기를 묘사한다——세부가 너무 구체적이고, 너무 당사자의 서술 같다. 독자는 여기서 가설을 형성해야 한다：메이야르 본인이 바로 그 환자이다.</p>
+<p><strong>절점 셋（약 85%）</strong>：창밖의 소음이 격화되고, 만찬은 완전히 혼란에 빠진다——갇혀 있던 간호인들이 포위를 돌파하여 오고, 이야기는 마침내 수수께끼를 확인한다.</p>
+<p>포의 기술은 이것이다：황당한 만찬 행동들이 이야기 전체에서 '너무나 당연하게' 진행되어, 독자도 서술자처럼 습관적으로 받아들이게 한 다음, 현실의 충격（진짜 간호인들이 창문을 깨고 들어오는 순간）이 올 때서야 자신이 줄곧 눈을 뜨고 단서를 보면서도 알아채지 못했음을 깨닫게 만든다.</p>
+<hr>
+<h3 id="_22">《멜젤의 체스 선수》</h3>
+<p>이 편은 전통적인 수수께끼 서사가 아니라, 포가 직접 'Dupin처럼 생각하는 방법'을 시범 보이는 논증 논문이다：</p>
+<p>포의 경로는 완전히 거꾸로 되어 있다——그는 먼저 결론을 선언하고（기계 안에 사람이 있다）, 그런 다음 반박 논점들을 하나씩 배제하고, 마지막으로 관찰을 보충하여 '그 사람'이 어떻게 작동하는지를 묘사한다. 이는 연역법의 전시이다：순수 기계 지능이 존재할 수 없다는 것에서, 반드시 인간 대리인이 존재한다는 것을 추론하고, 다시 대리인의 작동 메커니즘을 묘사한다.</p>
+<p><strong>이 논문이 추리 소설사에서 갖는 위치</strong>：이것은 포가 허구 밖에서, 진정으로 Dupin의 방법론을 전시하는 곳이다. "불가능한 것을 배제하고 나서 남은 것은, 아무리 믿기 어렵더라도 진실이다"——이 원칙이 이 편에서 엄격하게 실행된다.</p>
+<hr>
+<h3 id="_23">《다 써버린 사람》</h3>
+<p>이 편은 포에게서 드문 순수 희극 수수께끼이지만, 추리 구조는 완전하다：</p>
+<p><strong>절점（약 30–70%）</strong>：반복되는 '중단 패턴' 자체가 수수께끼의 핵심 단서이다. 어떤 질문에 반복적으로 누군가 대답하려다 끊겨버린다면, 독자는 깨달아야 한다：답은 '말하기 불편한 사실'이다. 스미스의 기계 의족에 대한 집착（약 30%）도 초기 단서이지만, 그냥 개성인 줄 알기 쉽다.</p>
+<p><strong>수수께끼 풀기（약 90%）</strong>：최종의 침실 장면이 황당한 희극의 형식으로 밝혀진다——천 조각 하나가 말을 하고, 이어서 하나씩 '조립되어' 사람이 된다. 포는 풍자의 신랄함이 수수께끼 자체를 넘어서도록 한다：산업 시대의 사람은, 완전히 '대체'될 수 있다.</p>
+<hr>
+<h2 id="_24">보충 설명</h2>
+<h3 id="_25">본 권의 핵심 주제：「지나치게 자신만만한 관찰자는 최악의 증인이다」</h3>
+<p>제4권의 가장 중요한 추리적 기여는, 포가 다양한 형식으로 같은 명제를 탐구한다는 것이다——<strong>자신 있는 관찰자는 종종 최악의 추리자이다</strong>：</p>
+<ul>
+<li>《직사각형 상자》의 서술자：너무 일찍 '명화'라는 가설을 확립했기 때문에, 이후의 모든 단서가 잘못된 전제를 지지하도록 왜곡된다.</li>
+<li>《타르와 페더》의 방문객：'원장은 응당 제정신인 사람이어야 한다'는 사회적 가정 때문에, 눈앞의 천지를 뒤흔드는 이상 행동에 눈을 감는다.</li>
+<li>《다 써버린 사람》의 서술자：표면적인 '완벽함'에 지나치게 매료되어, '완벽함' 자체가 가짜일 수도 있다는 생각을 하지 못한다.</li>
+</ul>
+<p>이 세 편은 공통적으로 추리학의 핵심 경고를 가리킨다：<strong>선입견이 모든 추리 오류의 근원이다</strong>. Dupin이 1권과 2권에서 성공할 수 있었던 것은 바로 그가 모든 선입견을 보류할 수 있었기 때문이다；반면 제4권의 이 서술자들은, 예외 없이 선입견에 사로잡혀 있다.</p>
+<h3 id="dupin">《멜젤의 체스 선수》와 Dupin 방법론의 관계</h3>
+<p>《멜젤의 체스 선수》（1836）는 첫 번째 Dupin 이야기 《모르그가의 살인》（1841）보다 5년 앞서 발표되었다. 이 논문에서 Dupin의 등장까지, 포의 추리적 사고가 논픽션 분석 실천에서 허구 탐정의 형상으로 어떻게 진화했는지 분명히 볼 수 있다：같은 '배제법', 같은 '관찰 세부에서 유일하게 가능한 결론으로', 같은 '보통 사람이 포기하는 곳에서 계속 질문하기'.</p>
+<p>Dupin 3부작이 포의 추리 문학의 정전이라면, 《멜젤의 체스 선수》는 이 정전의 '초고'이다.</p>
+<h3 id="_26">《타르 박사와 페더 교수의 시스템》이 후세에 미친 영향</h3>
+<p>이 소설에서 '미치광이가 제정신인 사람을 관리하는' 설정은 후세 범죄 문학과 심리 스릴러에서 반복적으로 등장한다. 가장 직접적인 후계자는 플로베르의 《보바리 부인》（1856）의 '사회 집단 망상'에 대한 풍자이다；더 광범위한 영향은 모든 '도대체 누가 진짜 미치광이인가？' 유형의 서사로 이어진다——《뻐꾸기 둥지 위로 날아간 새》（1962）에서 수많은 밀폐 공간 밀실 심리 스릴러에 이르기까지.</p>
+<p>포가 이 편에서 가장 정교하게 설계한 것은：독자 자신도 속는 피해자가 되게 한다는 것이다——우리는 서술자와 함께 만찬에 앉아, 눈앞의 황당함에 익숙해진 채 보고도 못 본 척한다. 결말에 이르러서야, 우리가 줄곧 미치광이와 같은 식탁에서 함께 술을 마셨음을 깨닫는다.</p>
+<h3 id="_27">본 권이 포 전집에서 차지하는 위치</h3>
+<p>제4권은 Raven Edition 5권 전체에서, 포의 창작 중 가장 '비정전적인' 면을 대표한다：소극（《멜젤》 외의 다수 문학 풍자）, 블랙 유머（《다 써버린 사람》）, 고딕 괴이（《메첸거르슈타인》）와 분석적 논문（《멜젤》）의 혼합.</p>
+<p>그러나 바로 이처럼 느슨해 보이는 선집 속에서, 포는 추리 문학에 대한 가장 깊은 사유를 묻어두었다：1권（Dupin）이 '추리는 수수께끼를 풀 수 있다'는 긍정적 선언이라면, 제4권은 '인간의 인지 자체가 가장 큰 수수께끼이자 장애물'이라는 반면 보충이다. 두 권이 합쳐져야 비로소 완전한 포이다.</p>
+    <a href="../index.html" class="back-link">← 홈으로</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">추리해부실</p>
+    <p>다섯 작가 · 여든여덟 작품 · 135년에 걸친 추리문학 난이도의 진화.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
