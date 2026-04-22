@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Works of Edgar Allan Poe, Volume 5 — Detective Analysis</title>
+<meta name="description" content="Barnabas Shuttleworthy, a wealthy resident of Rattleborough, rides out one morning and never returns; his horse comes back alone, injured. The whole town search">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/works-of-poe-vol5.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/works-of-poe-vol5.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/works-of-poe-vol5.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/works-of-poe-vol5.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/works-of-poe-vol5.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/works-of-poe-vol5.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/works-of-poe-vol5.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/works-of-poe-vol5.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Detective Analysis</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#latest">Latest</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Language" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 English</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/works-of-poe-vol5.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/works-of-poe-vol5.html">简体中文</a>
+      <a class="lang-item active" data-lang="en" href="/Detective-Analysis/en/articles/works-of-poe-vol5.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/works-of-poe-vol5.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/works-of-poe-vol5.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/works-of-poe-vol5.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/works-of-poe-vol5.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/works-of-poe-vol5.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">Edgar Allan Poe · 1844</div>
+    <h1>The Works of Edgar Allan Poe, Volume 5</h1>
+    <div class="subtitle">Edgar Allan Poe · Short story collection (including prose, poetry, and short fiction)</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Deducibility</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Fog Rating</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="the-works-of-edgar-allan-poe-volume-5-deducibility-analysis">The Works of Edgar Allan Poe, Volume 5 — Deducibility Analysis</h1>
+<h2 id="basic-information">Basic Information</h2>
+<ul>
+<li>Author: Edgar Allan Poe</li>
+<li>Year: 1844–1850 (individual stories published at different dates; this edition compiled by Gutenberg in 1900)</li>
+<li>Type: Short story collection (including prose, poetry, and short fiction)</li>
+<li>Detective: The unnamed narrator in "Thou Art the Man" (amateur detective); no formal detective figure in the remaining stories</li>
+<li>Core mystery types: whodunit ("Thou Art the Man") / perception puzzle ("The Sphinx") / howdunit + whydunit ("Hop-Frog") / anti-detective ("The Man of the Crowd")</li>
+</ul>
+<blockquote>
+<p><strong>Analytical Approach for This Volume:</strong> Volume 5 is primarily composed of prose and poetry; four stories are relevant to detective fiction. This analysis focuses on the following four, each analyzed independently, with an overall volume assessment at the end.</p>
+<ul>
+<li><strong>"Thou Art the Man"</strong></li>
+<li><strong>"The Sphinx"</strong></li>
+<li><strong>"Hop-Frog"</strong></li>
+<li><strong>"The Man of the Crowd"</strong></li>
+</ul>
+</blockquote>
+<hr>
+<h2 id="overall-deducibility-rating-entire-volume">Overall Deducibility Rating (Entire Volume)</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Rating</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deducibility</td>
+<td>⭐⭐⭐</td>
+<td>Average convergence point across all four stories ~58% — "Thou Art the Man" can be deduced before the midpoint, "The Sphinx" very early, "Hop-Frog" in the latter half, "The Man of the Crowd" deliberately unsolvable</td>
+</tr>
+<tr>
+<td>Fog Rating</td>
+<td>⭐⭐⭐⭐</td>
+<td>The volume's most distinctive techniques are "misdirection through excessive enthusiasm" (Goodfellow) and "illusion through scale distortion" (The Sphinx); Hop-Frog plants early signals that foreshadow the final reversal</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<hr>
+<h1 id="story-one-thou-art-the-man-1844">Story One: "Thou Art the Man" (1844)</h1>
+<h2 id="basic-information_1">Basic Information</h2>
+<ul>
+<li>Year: 1844</li>
+<li>Type: Short story</li>
+<li>Detective: Unnamed narrator (amateur detective who solves the case through ventriloquism)</li>
+<li>Core mystery type: whodunit + howdunit (Who killed Shuttleworthy? Where are the murder weapon and the body hidden?)</li>
+</ul>
+<hr>
+<h2 id="overall-deducibility-rating">Overall Deducibility Rating</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Rating</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deducibility</td>
+<td>⭐⭐⭐</td>
+<td>Average convergence point ~60% — enough clues to identify the killer are present before 55%, but the method of the crime does not fully emerge until ~80%</td>
+</tr>
+<tr>
+<td>Fog Rating</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>Through the narrator's voice, the author lavishes praise on Goodfellow's apparent goodness, drawing readers into the same mistaken judgment that grips the entire town; the false clues are manufactured by the killer himself — deception operating at a meta level</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="synopsis">Synopsis</h2>
+<p>Barnabas Shuttleworthy, a wealthy resident of Rattleborough, rides out one morning and never returns; his horse comes back alone, injured. The whole town searches, but the body is never found. Shuttleworthy's closest friend, Charles Goodfellow ("Old Charley"), takes an energetic lead in the search — and keeps turning up "discoveries" that incriminate Shuttleworthy's nephew Pennifeather: a bloodstained waistcoat, a knife engraved with his initials, the victim's wallet, bloodied clothing, and a bullet that "could only have come from Pennifeather's gun." Pennifeather is convicted and sentenced to death.</p>
+<p>At this moment, a case of Bordeaux wine that Goodfellow had long ago requested from Shuttleworthy suddenly arrives. When the crate is opened, Shuttleworthy's corpse springs upright and addresses Goodfellow: "Thou art the man!" Goodfellow collapses, confesses, and dies on the spot.</p>
+<p>Only at the end is it revealed that the unnamed narrator is the true detective who saw through everything — he had long suspected Goodfellow, found the body himself, propped it into the wine crate with whalebone, and used ventriloquism to make the corpse "speak."</p>
+<hr>
+<h2 id="truth-analysis">Truth Analysis</h2>
+<h3 id="truth-one-the-killers-identity-whodunit">Truth One: The Killer's Identity (Whodunit)</h3>
+<ul>
+<li><strong>Clue convergence point: ~55%</strong></li>
+<li>Answer: Charles Goodfellow ("Old Charley"), Shuttleworthy's closest friend — his motive was to seize the victim's assets and take revenge on Pennifeather, who had once publicly humiliated him.</li>
+</ul>
+<h4 id="key-clues">Key Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Goodfellow's "generous defense" of Pennifeather consistently deepens suspicion against him with every word</td>
+<td>~32%</td>
+<td>A genuine friend's defense would not land so precisely on every landmine. Through the narrator's voice, Poe writes: "The most enthusiastic man is most likely to help badly" — irony disguised as admiration</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Every "discovery" that incriminates Pennifeather is made either first or solely by Goodfellow</td>
+<td>Throughout 28–50%</td>
+<td>Finding the waistcoat in the pond, picking up the knife, extracting the bullet from the horse — every "discovery" happens when Goodfellow is leading the search or present on the scene</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The "bullet" was "found" inside the horse, but the horse's wound was a through-and-through (with both an entry and an exit wound)</td>
+<td>~50%</td>
+<td><strong>Decisive clue:</strong> if the bullet had already passed through the horse's body, it cannot also be inside the horse — the bullet was planted afterward by Goodfellow</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Goodfellow lived frugally before the crime but suddenly became lavishly generous in entertaining others afterward</td>
+<td>~60%</td>
+<td>He was spending Shuttleworthy's money (taken from the victim's wallet). The sudden financial change signals that his motive has already been fulfilled</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Goodfellow leads the search parties and "exhausts every corner," yet the body is never found</td>
+<td>~35–45%</td>
+<td>The narrator later reveals that Goodfellow deliberately avoided the hiding place — steering the search parties in the wrong direction</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supporting-clues">Supporting Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Goodfellow has only lived in town for six months; no one knows his background, yet he quickly becomes the most trusted person in town</td>
+<td>~8%</td>
+<td>The entire town knows nothing about him but trusts him blindly — this itself is an anomaly</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Pennifeather once publicly beat Goodfellow, who then showed "absolutely no resentment"</td>
+<td>~30%</td>
+<td>A normal person publicly humiliated in this way would show some emotional reaction; an absence of any reaction is itself suspicious</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The narrator says that Goodfellow's "excessive frankness caused me, from the very beginning, to feel a distaste and suspicion"</td>
+<td>~86% (retrospective)</td>
+<td>Poe withholds the narrator's inner state until the ending, but this line retrospectively gives all the earlier details renewed meaning</td>
+</tr>
+<tr>
+<td>4</td>
+<td>The "bloodstains" on the discovered shirt and handkerchief are found on examination to be fine Bordeaux claret, not blood</td>
+<td>~82%</td>
+<td>This proves the "evidence" was carefully fabricated by Goodfellow</td>
+</tr>
+</tbody>
+</table>
+<h4 id="red-herrings">Red Herrings</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Misleading Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>A heavily bloodstained waistcoat bearing Pennifeather's initials, found at the bottom of the pond</td>
+<td>~28%</td>
+<td>Instantly convinces readers (and the whole town) that Pennifeather is the killer</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Goodfellow "almost" tries to pocket the knife surreptitiously, is stopped by bystanders, and thus displays it</td>
+<td>~42%</td>
+<td>Disguised as an "accidental discovery" — in fact a deliberate act of staging for all to see</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The victim's wallet and bloodied clothing are found in Pennifeather's bedroom during a search</td>
+<td>~48%</td>
+<td>All of these objects were planted by Goodfellow</td>
+</tr>
+<tr>
+<td>4</td>
+<td>The "bullet" matches perfectly in size and markings to Pennifeather's gun barrel and mold</td>
+<td>~52%</td>
+<td>As above — the bullet is fabricated evidence</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Goodfellow's name itself — "Good Fellow"</td>
+<td>Throughout</td>
+<td>A deliberate authorial irony: a single name conditions the entire town (and the reader) to adopt a favorable prejudgment</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="truth-two-the-method-of-the-crime-howdunit">Truth Two: The Method of the Crime (Howdunit)</h3>
+<ul>
+<li><strong>Clue convergence point: ~80%</strong></li>
+<li>Answer: Goodfellow follows Shuttleworthy to the area near the pond, shoots his horse, kills the man with the gun stock, steals his wallet, then conceals the body in a dry well some distance away. On the return journey he begins to plant evidence, fabricating physical clues one by one.</li>
+</ul>
+<h4 id="key-clues_1">Key Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The horse was shot once but "not completely killed," and the wound is a through-and-through</td>
+<td>~15%</td>
+<td>If this were Pennifeather's large-caliber bullet, why didn't it kill the horse instantly? The shooting distance and angle are suspicious</td>
+</tr>
+<tr>
+<td>2</td>
+<td>There are "drag marks from a large heavy object" near the pond, but nothing is in the pond</td>
+<td>~25%</td>
+<td>The body was not in the water — Goodfellow dragged the body away and dragged the dead horse toward the pond, creating the impression that "the body is in the water" before hiding it elsewhere</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The narrator says he found the body "in a location completely opposite to the direction Goodfellow had led the search"</td>
+<td>~85%</td>
+<td>Confirms that Goodfellow deliberately diverted the search parties</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Goodfellow confesses: "followed him to the pond → shot the horse → killed the man with the gun stock → stole the wallet → moved the body to a distant dry well"</td>
+<td>~88%</td>
+<td>The complete method is laid out all at once in the confession</td>
+</tr>
+</tbody>
+</table>
+<h4 id="red-herrings_1">Red Herrings</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Misleading Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The pond is "thoroughly" drained; only the waistcoat is at the bottom, no body</td>
+<td>~28%</td>
+<td>Makes readers think the body's absence here is because it was removed — and Goodfellow is indeed the one who removed it, but on the surface this looks like Pennifeather's crime</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="reasoning-path-reconstruction">Reasoning Path Reconstruction</h2>
+<p><strong>The reading path from clues to truth:</strong></p>
+<p>At around 8%, a careful reader can notice that although Goodfellow has only lived in town for six months, his background unknown, he enjoys the unconditional trust of the entire town — a potential red flag, though easy to overlook in the story's magnetic field.</p>
+<p>The critical turning point comes at around 50%: "the bullet was found inside the horse." Any reader who remembers that "the horse was struck by a through-and-through wound" should at this moment feel a sudden jolt — how can a bullet that already passed through the horse's body still be inside it? This is the most technically precise flaw in the entire scheme, and it is the key recognition the narrator later cites as what "convinced me of Goodfellow's guilt."</p>
+<p>If the reader grasps at this node that the bullet is fabricated, working back they will find that every "discovery" incriminating Pennifeather happened with Goodfellow present. The direction of the searches was always under his control. The sudden financial generosity is the overflow of a motive already fulfilled.</p>
+<p>By the 80% mark — "the bloodstains are claret" — the last piece of the puzzle falls into place. The truth can technically be deduced at around the 55% mark, but the reader must actively resist the "name effect" (Goodfellow = a good man) and the hypnotic pressure of the entire town's collective opinion.</p>
+<hr>
+<h2 id="additional-notes">Additional Notes</h2>
+<p><strong>The Place of "Thou Art the Man" in the History of Detective Fiction</strong></p>
+<p>This story was published in 1844, forty years before Conan Doyle's Sherlock Holmes, yet it already presents, with striking maturity, several core techniques that would define detective fiction for generations:</p>
+<ol>
+<li><strong>The "Least-Likely Suspect":</strong> The killer is the person most actively participating in the investigation — a pattern that would become Agatha Christie's most beloved device.</li>
+<li><strong>Ventriloquism as a Solving Tool:</strong> The narrator uses whalebone to prop the corpse into a springing-upright posture and ventriloquism to create the visual shock of "the dead man speaking," causing the true killer's psychological collapse and confession — a precursor to the "dramatic presentation of physical evidence" technique.</li>
+<li><strong>The "Naming Fallacy":</strong> Goodfellow's name is itself a red herring. Poe deliberately allows the entire town (and the reader) to be hypnotized by a name — a meta-manipulation of genre conventions.</li>
+<li><strong>Inverted Formal Revelation: The Narrator as Detective:</strong> The story's ending reveals that the narrator has been a secret detective all along, pulling the reader back to reinterpret the entire text.</li>
+</ol>
+<p><strong>Comparison with Other Poe Detective Stories</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>The Murders in the Rue Morgue</th>
+<th>The Mystery of Marie Rogêt</th>
+<th>Thou Art the Man</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lead Detective</td>
+<td>Dupin (explicit)</td>
+<td>Dupin (explicit)</td>
+<td>Unnamed narrator (revealed only at end)</td>
+</tr>
+<tr>
+<td>Nature of Mystery</td>
+<td>Impossible crime</td>
+<td>Reconstruction of a real case</td>
+<td>Collective misjudgment of an entire town</td>
+</tr>
+<tr>
+<td>Greatest Innovation</td>
+<td>Birth of the reasoning detective figure</td>
+<td>Newspaper reports as clue material</td>
+<td>"Name hypnosis" and an inverted structure of withheld knowledge</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<hr>
+<h1 id="story-two-the-sphinx-1846">Story Two: "The Sphinx" (1846)</h1>
+<h2 id="basic-information_2">Basic Information</h2>
+<ul>
+<li>Year: 1846</li>
+<li>Type: Short story</li>
+<li>Detective: The host (landlord, a figure of rational-analytical temperament)</li>
+<li>Core mystery type: Perception Puzzle / Explanation Mystery</li>
+</ul>
+<hr>
+<h2 id="overall-deducibility-rating_1">Overall Deducibility Rating</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Rating</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deducibility</td>
+<td>⭐⭐</td>
+<td>Average convergence point ~35% — clues are clearly presented in the first half of the story; readers with a basic knowledge of natural history can deduce the answer well before the reveal</td>
+</tr>
+<tr>
+<td>Fog Rating</td>
+<td>⭐⭐⭐</td>
+<td>The narrator's subjective description of terror creates a powerful illusion of a "real monster"; but through precise descriptive details, the author enables calm readers to decode the truth</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="synopsis_1">Synopsis</h2>
+<p>During a cholera epidemic, the narrator flees to a relative's country house on the Hudson River to escape the plague. Immersed all day in news of death from the city, his mind sinks into a state of hypersensitivity.</p>
+<p>One afternoon, sitting by a window gazing at a distant hillside stripped bare by a landslide, a "monstrous creature" suddenly glides from the summit to the base: it has a body the size of a warship, a trunk-like proboscis, crystal-prism antennae, two pairs of wings with a combined span of nearly a hundred yards, and a vivid "death's-head" emblem on its thorax. The narrator faints from fright.</p>
+<p>Several days later, he sees the creature again and cries out to the landlord. The landlord produces a book of natural history, finds the entry for the "Death's-Head Sphinx" moth, then takes the narrator's seat at the same window, adopting the same vantage point, and points out the truth: it is not a monstrous creature on the distant hillside at all, but a small moth crawling on a strand of spider-silk on the window frame — no more than one-sixteenth of an inch in size, and at a distance of only one-sixteenth of an inch from the narrator's eye.</p>
+<hr>
+<h2 id="truth-analysis_1">Truth Analysis</h2>
+<h3 id="truth-one-the-true-identity-of-the-monster">Truth One: The True Identity of the "Monster"</h3>
+<ul>
+<li><strong>Clue convergence point: ~35%</strong></li>
+<li>Answer: A Death's-Head Sphinx moth (<em>Acherontia atropos</em>), perceived at extremely close range, producing a visual illusion of "gigantism."</li>
+</ul>
+<h4 id="key-clues_2">Key Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The creature's appearance is described with great precision: "proboscis like an elephant's trunk," "antennae like crystal prisms," "death's-head emblem on the thorax," "metallic-scaled wings"</td>
+<td>~25–30%</td>
+<td>These features are standard anatomical characteristics of the hawkmoth family (Sphingidae). Poe deliberately makes the narrator's description precise enough for scholarly verification</td>
+</tr>
+<tr>
+<td>2</td>
+<td>"The two pairs of wings connected by a rigid hair"</td>
+<td>~28%</td>
+<td>This is a physiological feature of Sphinx moths (the frenulum), appearing within the narrator's "monster description" — pointing directly to the identity of the real insect</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The landlord "has the narrator yield his seat, sits at the same window, and maintains the same angle of view" before he can see the creature</td>
+<td>~75%</td>
+<td>Emphasizes the uniqueness of the observation position — the "monster" is a relative perceptual artifact, visible only from that specific angle</td>
+</tr>
+<tr>
+<td>4</td>
+<td>The natural history book entry: "The Death's-Head Sphinx … known for its doleful cry and the death's-head figure upon its thorax, often causing extreme terror to the ignorant"</td>
+<td>~80%</td>
+<td>Confirms the species identity while pointing out that the narrator's "ignorance" is the condition for the illusion</td>
+</tr>
+<tr>
+<td>5</td>
+<td>The landlord: "It was crawling upon this thread of spider-silk, at a distance of about one-sixteenth of an inch from my pupil, and its own diameter being about one-sixteenth of an inch"</td>
+<td>~90%</td>
+<td><strong>Final revelation:</strong> the physical cause of the visual illusion — an extremely small object at very close range masquerading as an extremely large object at a great distance</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supporting-clues_1">Supporting Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The narrator has been in a state of "hypersensitivity," reading books of superstition about omens</td>
+<td>~8–12%</td>
+<td>Explains why he did not rationally question his own perception</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The landlord's character as a man of "rational philosophical temperament," contrasted with the narrator's "nervousness"</td>
+<td>Throughout</td>
+<td>From the beginning, the reader is implicitly guided to regard the landlord's cognitive mode as the correct one</td>
+</tr>
+<tr>
+<td>3</td>
+<td>When the narrator says the creature "appears again," the landlord is seated nearby and cannot see it</td>
+<td>~65%</td>
+<td>Only someone in a specific position can see it — already hinting that the "monster" is bound to the observer's position</td>
+</tr>
+</tbody>
+</table>
+<h4 id="red-herrings_2">Red Herrings</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Misleading Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The repeated emphasis that "the creature is the size of a warship"</td>
+<td>~25%</td>
+<td>Leads readers to accept the narrator's scale of perception and abandon any doubt about whether it is truly enormous</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The atmosphere of cholera deaths and the theme of "ill omens"</td>
+<td>Throughout the first half</td>
+<td>Creates the reading expectation that the creature is a symbol of cholera or a genuine supernatural warning</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The narrator says he "observed the entire process clearly and calmly"</td>
+<td>~22%</td>
+<td>Makes readers mistakenly assume the narrator's perception is reliable</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="reasoning-path-reconstruction_1">Reasoning Path Reconstruction</h2>
+<p>The reasoning path of this story carries a distinctly "inverse" quality: the clues are hidden within the "monster description" itself, and readers must possess a certain knowledge of natural history to see through the truth before encountering the naturalist's entry.</p>
+<p>For readers versed in entomology: at around 25–30%, when they read "death's-head emblem + coiled proboscis + wings connected by a hair," they can confirm the creature is a Sphinx moth. The question then shifts from "what is it?" to "why does it appear so enormous?" — and the answer involving visual distance suggests itself.</p>
+<p>For general readers: the key moment comes at 75%, when the landlord takes the same seat, sees the same "creature," and calmly reads out the natural history entry — the act of "matching species features" makes the answer framework explicit. The complete revelation comes only at 90%.</p>
+<hr>
+<h2 id="additional-notes_1">Additional Notes</h2>
+<p><strong>Poe's Tradition of "Epistemological Puzzles"</strong></p>
+<p>"The Sphinx" belongs to the rare subset of Poe's work in which reason definitively triumphs over feeling — strikingly bright against the backdrop of his Gothic horror reputation. The story's inferential structure is:</p>
+<blockquote>
+<p>Perception → Fear → Rational Analysis → Physical Truth</p>
+</blockquote>
+<p>This structure was developed a century later by Agatha Christie in her "locked-room perception puzzles" (such as the timing-of-the-poison problem in <em>The Mysterious Affair at Styles</em>) — readers are deceived by their own perceptual habits, while the truth is a physical fact "already right there in front of them."</p>
+<p>Poe here draws on Pascal's notion of "errors of cognition" — the misjudgment of distance is one of the most fundamental cognitive weaknesses of the human mind. This philosophical observation (at around 65–70%) almost directly indicates the direction of the puzzle's answer, yet it is wrapped in abstract language and easily skipped by readers rushing through the story.</p>
+<hr>
+<hr>
+<h1 id="story-three-hop-frog-1849">Story Three: "Hop-Frog" (1849)</h1>
+<h2 id="basic-information_3">Basic Information</h2>
+<ul>
+<li>Year: 1849</li>
+<li>Type: Short story</li>
+<li>Detective: None (the reader is an observer)</li>
+<li>Core mystery type: howdunit + whydunit (How is the revenge scheme executed? How do the psychological motives accumulate layer by layer?)</li>
+</ul>
+<hr>
+<h2 id="overall-deducibility-rating_2">Overall Deducibility Rating</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Rating</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deducibility</td>
+<td>⭐⭐⭐</td>
+<td>Average convergence point ~55% — the final method of revenge (death by fire) does not become fully clear until around 70%, but attentive readers can perceive the scheming nature of Hop-Frog's plan after 40%</td>
+</tr>
+<tr>
+<td>Fog Rating</td>
+<td>⭐⭐⭐</td>
+<td>Moderate misdirection: Hop-Frog's performance of "submission" is highly deceptive, but Poe deliberately plants early psychological signals (the teeth-grinding) so that careful readers have advance warning</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="synopsis_2">Synopsis</h2>
+<p>Hop-Frog is a disabled dwarf forced to serve as a court jester, brought to court along with his companion Trippetta from a distant land to serve the royal household. The king delights in cruel jokes and especially in forcing Hop-Frog to drink wine — for Hop-Frog, even a small amount renders him wild. At a banquet organized to plan a masquerade ball, the king brutally throws wine in Trippetta's face — the final straw that breaks Hop-Frog.</p>
+<p>Hop-Frog immediately proposes "a brilliant masquerade idea": the king and his seven ministers will dress as chained orangutans, their bodies coated in tar and flax. During the masquerade, amid the confusion, he hooks the chandelier's iron chain to the chain linking the "orangutans," hoists all eight of them into the air, then ignites the tar with a torch. All eight burn to death. Hop-Frog climbs through a skylight window and disappears, escaping with Trippetta back to their homeland.</p>
+<hr>
+<h2 id="truth-analysis_2">Truth Analysis</h2>
+<h3 id="truth-one-the-triggering-point-and-psychological-roots-of-the-revenge-plot-whydunit">Truth One: The Triggering Point and Psychological Roots of the Revenge Plot (Whydunit)</h3>
+<ul>
+<li><strong>Clue convergence point: ~30%</strong></li>
+<li>Answer: Hop-Frog's revenge plot crystallizes the moment wine is thrown in Trippetta's face — not from impulse, but because that instant ignites the rage he has long suppressed. The teeth-grinding is the external signal that the scheme has been set in motion.</li>
+</ul>
+<h4 id="key-clues_3">Key Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>After drinking, Hop-Frog "recovers to nearly complete sobriety" and says quietly, "This idea just came to me at this moment"</td>
+<td>~30%</td>
+<td>His "sobriety" is not accidental: the scheme was designed after coming to his senses, not in a drunken impulse</td>
+</tr>
+<tr>
+<td>2</td>
+<td>"A harsh grinding of teeth came from every corner of the room — no one knew the source" — occurring just after wine is thrown at Trippetta, with Hop-Frog denying it came from him</td>
+<td>~28%</td>
+<td><strong>The key signal of psychological turning point:</strong> the teeth-grinding is the outer expression of Hop-Frog's fury compressed to its limit; he grinds his teeth again just before the burning, creating a structural echo</td>
+</tr>
+<tr>
+<td>3</td>
+<td>"Leave them to me — I think I know who they are." Said by Hop-Frog as he climbs onto the king's head and approaches the chain</td>
+<td>~80%</td>
+<td>On the surface this is identifying disguised identities; in fact it is the final confirmation of targets and positions — the technical completion of the revenge plan</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supporting-clues_2">Supporting Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Hop-Frog suggests removing the chandelier (ostensible reason: wax dripping on guests) and replacing it with wall sconces</td>
+<td>~40%</td>
+<td>This "reasonable" suggestion simultaneously clears the central space of the ballroom and allows the chandelier's iron chain to descend freely — functional spatial pre-planning</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Hop-Frog emphasizes that he keeps the key (after the king locks the doors)</td>
+<td>~52%</td>
+<td>Establishing his escape route in advance: he is the only one who can determine whether people can leave</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The suggestion to use tar and flax was proactively put forward by Hop-Frog</td>
+<td>~38%</td>
+<td>Tar and flax are an extremely flammable combination. This choice is anything but coincidental</td>
+</tr>
+<tr>
+<td>4</td>
+<td>The chandelier chain's descent "very slowly, barely noticed"</td>
+<td>~60%</td>
+<td>Trippetta is on the roof assisting — the scheme has an external accomplice, meaning premeditation was completed well in advance</td>
+</tr>
+</tbody>
+</table>
+<h4 id="red-herrings_3">Red Herrings</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Misleading Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Hop-Frog demonstrates his reaction of losing his mind when he drinks</td>
+<td>~22%</td>
+<td>Makes readers (and the king) assume Hop-Frog is incapable of scheming after drinking — this is in fact his protective camouflage</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Hop-Frog acts the part of "loyally carrying out orders," grinning and cooperating throughout the scheme's execution</td>
+<td>Throughout</td>
+<td>Makes the king believe he is safe and fully in control</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The teeth-grinding is attributed to "a parrot outside the window"</td>
+<td>~29%</td>
+<td>A convenient explanation that allows the king to dismiss his unease; readers who go along with this explanation miss the most important psychological signal</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="truth-two-the-technical-design-of-the-burning-plot-howdunit">Truth Two: The Technical Design of the Burning Plot (Howdunit)</h3>
+<ul>
+<li><strong>Clue convergence point: ~70%</strong></li>
+<li>Answer: Hop-Frog prearranges for Trippetta to control the chandelier's iron chain from the roof; amid the confusion, he hooks the chain onto the connecting chain of the "orangutans," uses a whistle signal, and hoists all eight simultaneously into the air; he then ignites the tar with a candle.</li>
+</ul>
+<h4 id="key-clues_4">Key Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Hop-Frog "silently follows behind the king's party, stirring up chaos"</td>
+<td>~60%</td>
+<td>Shows he maintains freedom of movement throughout, consciously executing the plan</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The hook on the chain "is in just the right position" — the chandelier chain descends to three feet above the floor</td>
+<td>~62%</td>
+<td>The dimensions have been precisely calculated — this is not accidental</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Hop-Frog climbs onto the king's head, "inserts the hook," and then the chain is raised "by some invisible force"</td>
+<td>~70%</td>
+<td>The "invisible force" is Trippetta on the roof, who pulls the chain up upon receiving the signal</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="reasoning-path-reconstruction_2">Reasoning Path Reconstruction</h2>
+<p>The reasoning path for reading "Hop-Frog" splits into two tracks:</p>
+<p><strong>Track One: "When was the revenge scheme designed?"</strong></p>
+<p>The key nodes are at 28% (teeth-grinding) + 30% (Hop-Frog immediately proposes his "idea" after coming to his senses). Careful readers should at this moment be able to detect that behind Hop-Frog's "spontaneous idea" lies a fully formed premeditation, and that the teeth-grinding is the psychological trigger. If the reader also remembers the early description of Hop-Frog's "great arm strength and climbing ability," they can calculate how he operated at the top of the ballroom.</p>
+<p><strong>Track Two: "The Technical Logic of the Burning"</strong></p>
+<p>The most conspicuous clues are "removing the chandelier" (40%) and the material choice of "tar + flax" (38%). Adding these together, a perceptive reader can deduce at around the 40% mark that "fire" will be the element of the climax. But how the chain is controlled, and who is on the roof, does not become clear until 70%.</p>
+<hr>
+<h2 id="additional-notes_2">Additional Notes</h2>
+<p><strong>The Unusual Nature of "Hop-Frog": A Crime Story That Is Morally Permissible</strong></p>
+<p>Among Poe's works, "Hop-Frog" is one of the very few stories where "the reader sides with the perpetrator of the crime" and is "morally permitted" to do so. The king is a genuine tyrant; Hop-Frog's revenge is fully justified — Poe arranges for the reader to identify with Hop-Frog from the very start, making "figuring out how the scheme was executed" a delightful puzzle-solving process rather than an exercise in dread.</p>
+<p>This forms an interesting inversion of "The Cask of Amontillado": that story places the reader in the position of an obsessive murderer (uncomfortable); this story places the reader in the position of an oppressed person taking just revenge (satisfying). Yet structurally, both employ the same framework: "we know from the start who did what; the question is how they did it."</p>
+<p><strong>The Literary Status of the Teeth-Grinding</strong></p>
+<p>"A harsh grinding of teeth came from every corner of the room" — this line is the most precision-engineered inferential lens in the entire story. It appears at the exact moment the scheme is born, symbolizing rage briefly escaping from rational control. Poe allows a sound effect to stand in for psychological analysis, offering almost no explanation, yet at the burning scene near the end it is echoed by "Hop-Frog grinding his teeth, foaming at the mouth, his wild eyes staring downward." Readers who know to pause and think at the first teeth-grinding can deduce the ending more than a third of the way ahead of time.</p>
+<hr>
+<hr>
+<h1 id="story-four-the-man-of-the-crowd-1840">Story Four: "The Man of the Crowd" (1840)</h1>
+<h2 id="basic-information_4">Basic Information</h2>
+<ul>
+<li>Year: 1840</li>
+<li>Type: Short story</li>
+<li>Detective: The narrator (a self-appointed follower, amateur observer)</li>
+<li>Core mystery type: Anti-Detective / Psychological Portrait Mystery</li>
+</ul>
+<hr>
+<h2 id="overall-deducibility-rating_3">Overall Deducibility Rating</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Rating</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deducibility</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>Clue convergence point: 100% — because the author deliberately makes the mystery unsolvable. This is not a reader's failure; it is the story's designed purpose</td>
+</tr>
+<tr>
+<td>Fog Rating</td>
+<td>⭐⭐⭐</td>
+<td>Moderate misdirection: the description of the old man's appearance provides ample inferential material, enough for readers to construct multiple hypotheses — but all of them are provisional</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="synopsis_3">Synopsis</h2>
+<p>The narrator, recently recovered from illness and full of energy, sits by a window in a London coffee house observing the street crowds, reading passersby through their appearance, clothing, and gait to determine their social position and inner state — a Dupinesque technique of observation.</p>
+<p>As night falls, a face appears in the crowd that he cannot read: an old man of sixty or seventy, shabbily dressed yet with fine linen next to his skin, the gaps in his coat revealing a glimpse of diamonds and a dagger. His face mingles "vast mental power, caution, penuriousness, coolness, malice, blood-thirstiness, triumph, merriment, excessive terror, and intense despair."</p>
+<p>The narrator decides to follow him. The old man moves through London's busiest streets; the moment he turns toward a less crowded area he immediately doubles back, repeating this pattern throughout an entire day and night — from the flow of theatergoers, to vast bazaars, to London's most wretched slums and all-night gin-shops — wherever the crowds thin, he falls into extreme agitation.</p>
+<p>After twenty-four hours of surveillance, the narrator gives up and concludes: "This old man is the type and the genius of deep crime. He refuses to be alone. He is the man of the crowd."</p>
+<hr>
+<h2 id="truth-analysis_3">Truth Analysis</h2>
+<h3 id="truth-one-the-old-mans-identity-and-secret-who-is-he-what-is-he-hiding">Truth One: The Old Man's Identity and Secret (Who is he? What is he hiding?)</h3>
+<ul>
+<li><strong>Clue convergence point: 100% (deliberately unsolvable by design)</strong></li>
+<li>Answer: The author explicitly withholds any answer. The old man's identity remains forever a mystery — but Poe provides enough material for readers to form multiple hypotheses.</li>
+</ul>
+<p><strong>Possible Reasoning Paths:</strong>
+- <strong>Hypothesis One: A Fugitive Criminal:</strong> The diamonds and dagger indicate he carries both wealth and a weapon, while the shabby exterior is a disguise. His dependence on crowds is a counterintuitive criminal strategy — "not being noticed while among many."
+- <strong>Hypothesis Two: A Prisoner of Conscience:</strong> "Refusing to be alone" implies that solitude would force him to confront some memory or guilt too overwhelming to bear. In crowds, he seeks oblivion, not concealment.
+- <strong>Hypothesis Three: A Personification of Psychological Disorder:</strong> The old man is not a real person but a symbol of "the unanalyzable human dimension within the city."</p>
+<h4 id="key-clues_5">Key Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The old man's clothing is shabby, but the garment against his skin is fine linen; through gaps in his coat, diamonds and a dagger are glimpsed</td>
+<td>~45%</td>
+<td>The contrast of wealth and weapons: he disguises himself as poor, but conceals status or financial resources</td>
+</tr>
+<tr>
+<td>2</td>
+<td>His face simultaneously displays "intellect, caution, bloodthirstiness, exultation, and despair" — the narrator says this is a face he has never seen before</td>
+<td>~42%</td>
+<td>A psychological state too complex to categorize: no normal character type is sufficient to explain him</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The thinner the crowd, the more his agitation and panic intensify; once he enters a crowd, he "resumes his original manner"</td>
+<td>Throughout 50–85%</td>
+<td>His "dependence" on crowds is his most essential characteristic — it is a driving force, not a disguise</td>
+</tr>
+<tr>
+<td>4</td>
+<td>He finds equal comfort in the filthiest slums and the most squalid taverns — demonstrating that what he seeks is not "socializing" but "not being left alone"</td>
+<td>~75–80%</td>
+<td>Distinguishes "seeking a crowd" from "seeking a specific crowd" — he has no selectivity whatsoever</td>
+</tr>
+<tr>
+<td>5</td>
+<td>The opening epigraph: "Ce grand malheur, de ne pouvoir être seul" ("This great misfortune, not to be able to be alone") — La Bruyère</td>
+<td>~1%</td>
+<td>The author directly provides the key to the puzzle: the old man's problem is not "who is he" but "what is the nature of the inability to be alone"</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supporting-clues_3">Supporting Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>"There are some secrets which do not permit themselves to be told" — opening statement</td>
+<td>~3%</td>
+<td>Foreshadows the story's inconclusiveness: Poe designs this mystery not to be solved, but to let the mystery itself speak</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The old man "never notices that he has been followed for a full twenty-four hours"</td>
+<td>Throughout</td>
+<td>He is not fleeing — he is purely seeking crowds, completely insensible to external threats</td>
+</tr>
+</tbody>
+</table>
+<h4 id="red-herrings_4">Red Herrings</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Misleading Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The details of the dagger and diamonds</td>
+<td>~45%</td>
+<td>Leads readers along the "fugitive criminal" reasoning path — but this path has no destination</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The old man repeatedly visits "places of iniquity" (cheap taverns, slums)</td>
+<td>~70–80%</td>
+<td>Makes readers think he is seeking criminal companions, but once inside he wanders about with no discernible purpose</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="reasoning-path-reconstruction_3">Reasoning Path Reconstruction</h2>
+<p>The reasoning path of "The Man of the Crowd" is, by design, a path that cannot be completed. Poe deliberately sets up all the equipment of detective fiction — a careful observer, precise descriptions, ample time for surveillance — and then lets the entire machinery spin in a void.</p>
+<p>When readers enter the story, they are persuaded by the narrator's observational technique: in the first half, he accurately reads the occupation and character of passersby, establishing a sense of trust — "this person can read anyone." When the old man appears, readers naturally expect the same decoding process.</p>
+<p>But Poe at this moment reverses everything: the old man's face "cannot be read," and twenty-four hours of surveillance yields "no new information whatsoever." The narrator eventually gives up; the conclusion he offers is philosophical, not detective-like.</p>
+<p>The meaning of this structure lies in this: Poe demonstrates the proposition that "some truths exist, but cannot be spoken or known." This stands in sharp contrast to his Dupin — Dupin can read all truths from every detail; the old man in the crowd represents the "unreadable" that genuinely exists in the world.</p>
+<hr>
+<h2 id="additional-notes_3">Additional Notes</h2>
+<p><strong>"The Man of the Crowd": One of the Earliest "Anti-Detective" Texts in the History of Detective Fiction</strong></p>
+<p>Baudelaire called this story "one of the greatest works ever written describing urban solitude"; his French translation directly influenced the subsequent construction of the "flâneur" figure in French Symbolism. Walter Benjamin, in his analysis of Baudelaire's poetry, identified the old man in "The Man of the Crowd" as the prototype of the "unidentifiable criminal personality" in the capitalist city.</p>
+<p>From the perspective of detective fiction history, this story is a paradox: it employs all the tools of detective fiction (observation, surveillance, typological analysis) yet deliberately refuses to provide answers. By contrast, the Dupin trilogy that Poe was completing in roughly the same period (the early 1840s) ends each time with the triumph of reason. "The Man of the Crowd" reads as Poe's implicit challenge to the "detective omniscience" framework he himself had constructed: <strong>If there exists a mystery that no amount of observation can solve, what then?</strong></p>
+<p><strong>Comparison with "The Cask of Amontillado"</strong></p>
+<p>Both stories explore "the person who cannot be read": Montresor's motive is not entirely transparent to the reader; the old man in the crowd's secret is opaque to everyone. But the former is still a mystery with an "answer space" (unreliable narrator), while the latter is an absolute void.</p>
+<hr>
+<hr>
+<h1 id="overall-volume-assessment">Overall Volume Assessment</h1>
+<h2 id="the-deducibility-spectrum-of-volume-5">The Deducibility Spectrum of Volume 5</h2>
+<table>
+<thead>
+<tr>
+<th>Story</th>
+<th>Mystery Type</th>
+<th>Deducibility</th>
+<th>Fog Rating</th>
+<th>Special Techniques</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Thou Art the Man</td>
+<td>whodunit + howdunit</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>Inverted detective (narrator = detective), naming fallacy, ventriloquism</td>
+</tr>
+<tr>
+<td>The Sphinx</td>
+<td>Perception puzzle</td>
+<td>⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>Scale illusion, precise natural history knowledge as the solution</td>
+</tr>
+<tr>
+<td>Hop-Frog</td>
+<td>howdunit + whydunit</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>Psychological leakage signal (teeth-grinding), premeditated structure of the weak taking revenge</td>
+</tr>
+<tr>
+<td>The Man of the Crowd</td>
+<td>Anti-detective / Unsolvable mystery</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>Deliberate refusal of answers, nullification of detective tools</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-place-of-volume-5-in-poes-overall-oeuvre">The Place of Volume 5 in Poe's Overall Oeuvre</h2>
+<p>Volume 5 is Poe's most diverse collection. Unlike earlier volumes with their unified "Gothic horror" or "pure reasoning" style, it sketches Poe's intellectual terrain from four directions, through four distinct forms of mystery:</p>
+<ol>
+<li><strong>Poe as a Mechanical Engineer of Reasoning</strong> ("Thou Art the Man"): The plot scheme is as precise as clockwork; every detail can be traced back, every misdirection has a designed purpose.</li>
+<li><strong>Poe as an Epistemological Philosopher</strong> ("The Sphinx"): Perception is meaning, and meaning is truth — when perception goes wrong, the world collapses into a monster.</li>
+<li><strong>Poe as a Psychological Analyst</strong> ("Hop-Frog"): Human anger has structure. Suppression, leakage, scheming, execution — each step is an observable psychological process.</li>
+<li><strong>Poe as a Nihilist</strong> ("The Man of the Crowd"): Some truths exist, but are not permitted to be known. Detective tools, confronted with such mysteries, can only fall silent.</li>
+</ol>
+<p>The overall Deducibility rating for Volume 5 is approximately ⭐⭐⭐ (average convergence point ~60%), and the Fog Rating of ⭐⭐⭐⭐ is somewhat higher than the Deducibility rating — because what Poe has always excelled at is not hiding clues, but making readers misjudge the weight of the clues in front of them.</p>
+    <a href="../index.html" class="back-link">← Back to home</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Detective Analysis</p>
+    <p>Five authors · eighty-eight works · 135 years of evolving detective difficulty.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

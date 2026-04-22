@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>エドガー・アラン・ポー作品集 第5巻 — 推理解剖室</title>
+<meta name="description" content="裕福なRattleboroughの住民Barnabas Shuttleworthyはある朝馬に乗って出かけ、その後行方不明となる。傷を負った馬だけが一人で戻ってきた。町全体が捜索に当たるが、遺体は見つからない。Shuttleworthyの親友Charles Goodfellow（「善人チャーリー」）は積極的に捜索を主導">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/works-of-poe-vol5.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/works-of-poe-vol5.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/works-of-poe-vol5.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/works-of-poe-vol5.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/works-of-poe-vol5.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/works-of-poe-vol5.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/works-of-poe-vol5.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/works-of-poe-vol5.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif JP', serif;
+  --font-sans: 'Noto Sans JP', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">推理解剖室</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">ホーム</a>
+        <a href="../index.html#latest">最新</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="言語" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 日本語</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/works-of-poe-vol5.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/works-of-poe-vol5.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/works-of-poe-vol5.html">English</a>
+      <a class="lang-item active" data-lang="ja" href="/Detective-Analysis/ja/articles/works-of-poe-vol5.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/works-of-poe-vol5.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/works-of-poe-vol5.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/works-of-poe-vol5.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/works-of-poe-vol5.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">エドガー・アラン・ポー · </div>
+    <h1>エドガー・アラン・ポー作品集 第5巻</h1>
+    <div class="subtitle">エドガー・アラン・ポー（Edgar Allan Poe） · 短篇集（散文・詩・短篇小説を含む）</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">推理難易度</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">霧の濃度</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="5">エドガー・アラン・ポー作品集 第5巻 — 推理分析</h1>
+<h2 id="_1">基本情報</h2>
+<ul>
+<li>著者：エドガー・アラン・ポー（Edgar Allan Poe）</li>
+<li>発表年：1844–1850年（各篇初出は異なる。本版は1900年Gutenberg収録）</li>
+<li>ジャンル：短篇集（散文・詩・短篇小説を含む）</li>
+<li>探偵：〈お前が殺したのだ〉の無名語り手（素人探偵）；その他の篇には正式な探偵役なし</li>
+<li>核心の謎の種類：whodunit（お前が殺したのだ）/ 知覚謎（スフィンクス）/ howdunit + whydunit（ホップ＝フロッグ）/ 反探偵（群衆の中の男）</li>
+</ul>
+<blockquote>
+<p><strong>本集の分析方針：</strong> 第5巻は散文・詩が中心で、推理に関連する篇は4篇。本分析は以下の4篇に焦点を当て、各篇を独立して分析し、末尾に全集の総合評価を付す。</p>
+<ul>
+<li><strong>〈お前が殺したのだ〉</strong>（Thou Art the Man）</li>
+<li><strong>〈スフィンクス〉</strong>（The Sphinx）</li>
+<li><strong>〈ホップ＝フロッグ〉</strong>（Hop-Frog）</li>
+<li><strong>〈群衆の中の男〉</strong>（The Man of the Crowd）</li>
+</ul>
+</blockquote>
+<hr>
+<h2 id="_2">推理難易度総評（全集）</h2>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星評価</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難易度（Deducibility）</td>
+<td>⭐⭐⭐</td>
+<td>4篇の平均収束点は約58%——〈お前が殺したのだ〉は中盤前に推導可能、〈スフィンクス〉は非常に早い、〈ホップ＝フロッグ〉は中後半、〈群衆の中の男〉は意図的に解なし</td>
+</tr>
+<tr>
+<td>霧の濃度（Fog Rating）</td>
+<td>⭐⭐⭐⭐</td>
+<td>全集で最も際立つ手法は「過度な親切心による誤誘導」（Goodfellow）と「スケール錯覚による幻象」（スフィンクス）；ホップ＝フロッグは早期のシグナルで末尾の逆転を予告</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<hr>
+<h1 id="thou-art-the-man1844">作品一：〈お前が殺したのだ〉（Thou Art the Man，1844）</h1>
+<h2 id="_3">基本情報</h2>
+<ul>
+<li>発表年：1844年</li>
+<li>ジャンル：短篇</li>
+<li>探偵：無名語り手（素人探偵、腹話術で事件を解決）</li>
+<li>核心の謎の種類：whodunit + howdunit（誰がShuttleworthyを殺したのか？凶器と遺体はどこに隠されているのか？）</li>
+</ul>
+<hr>
+<h2 id="_4">推理難易度総評</h2>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星評価</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難易度（Deducibility）</td>
+<td>⭐⭐⭐</td>
+<td>平均収束点は約60%——犯人の身元を示す手がかりは55%前に十分揃い、犯行手口は80%まで読まないと完全には浮かび上がらない</td>
+</tr>
+<tr>
+<td>霧の濃度（Fog Rating）</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>作者は語り手の口を借りてGoodfellowの善良さを称え、読者を町全体の誤った判断の罠に引き込む；偽の手がかりは真犯人自身の手によって作られた、メタ的な欺瞞</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_5">あらすじ</h2>
+<p>裕福なRattleboroughの住民Barnabas Shuttleworthyはある朝馬に乗って出かけ、その後行方不明となる。傷を負った馬だけが一人で戻ってきた。町全体が捜索に当たるが、遺体は見つからない。Shuttleworthyの親友Charles Goodfellow（「善人チャーリー」）は積極的に捜索を主導し、甥のPennifeatherに不利な「発見」を次々と持ち込む——血塗れのベスト、イニシャルの刻まれたナイフ、被害者の財布、血のついた衣類、そして「Pennifeatherの銃からしか発射できない」弾丸。Pennifeatherは有罪とされ、死刑判決を受ける。</p>
+<p>そのとき、Goodfellowが何年も前からShuttleworthyに求めていたボルドーワインの箱が突然届く。箱を開けると、Shuttleworthyの遺体が跳ね起き正座し、Goodfellowに向かって「お前が殺したのだ！」（Thou art the man!）と叫ぶ。Goodfellowはその場で崩れ落ち、自白し、即死する。</p>
+<p>末尾になって初めて明かされる：無名の語り手こそがすべてを見抜いていた人物であり、彼はとうにGoodfellowを疑い、自ら遺体を発見し、鯨骨で遺体をワイン箱に押し込み、腹話術で遺体に「語らせた」のだった。</p>
+<hr>
+<h2 id="_6">真相解析</h2>
+<h3 id="whodunit">真相一：犯人の身元（Whodunit）</h3>
+<ul>
+<li><strong>手がかりの収束点：約55%</strong></li>
+<li>答え：Charles Goodfellow（「善人チャーリー」）、ShuttleworthyのもっともQ親しい友人で、動機は相手の財産を横領することとPennifeatherへの復讐（後者はかつて公衆の面前でGoodfellowを辱めた）。</li>
+</ul>
+<h4 id="_7">重要な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>PennifeatherへのGoodfellowの「寛大な弁護」は、発言のたびに相手の嫌疑を深めている</td>
+<td>約32%</td>
+<td>普通の友人の弁護がこれほど的確に地雷を踏むはずがない。ポーは語り手の口を借りて「熱心な人ほど裏目に出る」と述べており、これは掩護の裏に隠された皮肉</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Pennifeatherに不利な「発見」はすべて、Goodfellowが最初か唯一の発見者</td>
+<td>28–50%を通じて</td>
+<td>池でベストを発見、ナイフを拾う、馬の体内から弾丸を取り出す——「発見」はGoodfellowが主導または立ち会っているときに起きている</td>
+</tr>
+<tr>
+<td>3</td>
+<td>その「弾丸」は馬の体内から「発見された」が、馬の傷は貫通傷（入り口と出口がある）</td>
+<td>約50%</td>
+<td><strong>決定的な手がかり</strong>：弾丸がすでに馬体を貫通して出ているなら、馬体内にあるはずがない——この弾丸はGoodfellowが後から仕込んだことを示す</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Goodfellowは事件前は質素な生活をしていたが、事件後は急に太っ腹になり宴を催している</td>
+<td>約60%</td>
+<td>彼が使っているのはShuttleworthyの金（被害者の財布から抜き取った）。財政状況の急変は動機が実現した後の兆候</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Goodfellowが捜索隊を率いて「あらゆる場所を」探したが、遺体は見つからなかった</td>
+<td>約35–45%</td>
+<td>語り手が後で述べるように、彼は故意に遺体の隠し場所を避け、隊を反対方向へ誘導した</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_8">補助的な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Goodfellowは町に六か月しか住んでいなく、素性を知る者がいないが、瞬く間に最も信頼される人物になった</td>
+<td>約8%</td>
+<td>町全体が彼について何も知らないまま盲目的に信頼した——それ自体が異常</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Pennifeatherはかつて公衆の面前でGoodfellowを激しく殴り、後者は「まったく恨んでいない」という様子を見せた</td>
+<td>約30%</td>
+<td>公衆の面前で辱められた人間が感情的な反応を何ら示さないのは、むしろ怪しい</td>
+</tr>
+<tr>
+<td>3</td>
+<td>語り手が「Goodfellowの過度な率直さが、最初から私を嫌悪させ疑わせた」と述べている</td>
+<td>約86%（回想的説明）</td>
+<td>ポーは結末で初めて語り手の内心を明かすが、この一言が遡及的にすべての初期の細節に新たな意味を与える</td>
+</tr>
+<tr>
+<td>4</td>
+<td>発見されたシャツとハンカチの「血痕」は、化学的に調べると血液ではなく上質のボルドーワイン（claret）だった</td>
+<td>約82%</td>
+<td>これらの「証拠品」がGoodfellowによって精巧に偽造されたものであることを示す</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_9">フェイクの手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>誤誘導の方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>血に塗れ、Pennifeatherのイニシャルが刻まれたベストが池の底で発見された</td>
+<td>約28%</td>
+<td>読者（と町全体）にPennifeatherが犯人だと即座に思わせる</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Goodfellowが「ほとんど」半ば隠すようにナイフをポケットにしまおうとして、傍らの者に止められ展示された</td>
+<td>約42%</td>
+<td>「偶然見つかった」を装った偽装で、実際は故意に衆人に見せた</td>
+</tr>
+<tr>
+<td>3</td>
+<td>被害者の財布と血のついた衣類がPennifeatherの寝室から押収された</td>
+<td>約48%</td>
+<td>これらはすべてGoodfellowが仕込んだ証拠品</td>
+</tr>
+<tr>
+<td>4</td>
+<td>その「弾丸」の大きさと刻み目がPennifeatherの銃身と型枠に完全に一致している</td>
+<td>約52%</td>
+<td>同上、弾丸は偽造証拠品</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Goodfellowという名前そのもの——「Good Fellow」（良い仲間）</td>
+<td>全篇</td>
+<td>作者の意図的な皮肉：「名前」が町全体（および読者）を先入観の罠にはめる</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="howdunit">真相二：犯行手口（Howdunit）</h3>
+<ul>
+<li><strong>手がかりの収束点：約80%</strong></li>
+<li>答え：GoodfellowはShuttleworthyを池の近くまで尾行し、馬を撃ち、銃床で本人を撲殺して財布を奪い、遺体を遠くの枯れ井戸に隠した。�帰り道に証拠の偽造を始め、次々と物証を捏造した。</li>
+</ul>
+<h4 id="_10">重要な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>馬は一発撃たれたが「完全には死んでいなかった」、傷は貫通傷</td>
+<td>約15%</td>
+<td>Pennifeatherの大口径弾ならなぜ即死しないのか？射距離や角度に疑問があることを暗示</td>
+</tr>
+<tr>
+<td>2</td>
+<td>池のほとりに「大きな重い物を引きずった」跡があるが、池の中には何もない</td>
+<td>約25%</td>
+<td>遺体は水中にない——Goodfellowは遺体を引きずって去り、死んだ馬を池の方へ引きずって「遺体が水中にある」という幻象を作り出してから隠した</td>
+</tr>
+<tr>
+<td>3</td>
+<td>語り手が「Goodfellowの捜索方向とまったく逆の場所で」遺体を発見したと述べている</td>
+<td>約85%</td>
+<td>Goodfellowが故意に捜索隊を誘導したことを確認</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Goodfellowの自白：「池まで尾行→馬を撃つ→銃床で撲殺→財布を奪う→遺体を遠くの枯れ井戸に移す」</td>
+<td>約88%</td>
+<td>犯行手口の全容が自白の中で一度に明かされる</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_11">フェイクの手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>誤誘導の方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>池が「真剣に」水抜きされたが、底にはベストだけあり、遺体はなかった</td>
+<td>約28%</td>
+<td>遺体がここにないのは誰かに移されたからだと読者に思わせる——しかしその誰かはGoodfellowであり、表向きはPennifeatherの犯行に見せかけている</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_12">推理経路の再構成</h2>
+<p><strong>手がかりから真相への読書経路：</strong></p>
+<p>約8%を読んだ時点で、注意深い読者はGoodfellowが町に六か月しか住んでいない身元不明の人物でありながら、町全体の無条件の信頼を得ていることに気づける——潜在的な警戒信号だが、物語の磁場の中では見逃しやすい。</p>
+<p>重要な転換点は約50%に現れる：「馬の体内で弾丸が発見された」。「馬は貫通傷を負っていた」という事実を覚えている読者なら、この時点で突如おかしいと感じるはずだ——弾丸がすでに馬体を通り抜けているのに、なぜ馬体内にあるのか？これはこの謀略全体のもっとも技術的な瑕疵であり、語り手が後に「Goodfellowの有罪を確信させた」と述べる鍵となる認識でもある。</p>
+<p>この節点で弾丸が偽造だと気づいた読者が振り返ると、Pennifeatherに不利な「発見」がすべてGoodfellowの立ち会い時に起きていることがわかる。捜索の方向も常に彼によって制御されていた。財政状況の突然の余裕も、動機が実現した後の余波だ。</p>
+<p>80%の「血痕は赤ワイン」の段階で、最後のピースが揃う。技術的には55%前後で真相を推導できるが、読者は「名前効果」（Goodfellow = 良い人）と町全体の世論による催眠圧力に積極的に抵抗しなければならない。</p>
+<hr>
+<h2 id="_13">補足説明</h2>
+<p><strong>〈お前が殺したのだ〉の探偵小説史における位置づけ</strong></p>
+<p>この物語は1844年に発表され、コナン・ドイルのホームズより四十年早いが、後世の探偵小説の核心的手法をすでに高度に成熟した形で示している：</p>
+<ol>
+<li><strong>「最も疑わしくない容疑者」（Least-Likely Suspect）</strong>：犯人は最も熱心に捜査に参加している人物——このパターンはのちにアガサ・クリスティが最も愛用する手法となった。</li>
+<li><strong>腹話術を謎解きの道具として</strong>：語り手は鯨骨で遺体を跳ね起きる姿勢に固定し、腹話術で「死者が口を開く」という視覚的衝撃を演出して真犯人を心理的に崩壊させ自白させた——「劇的な物証提示」手法の先駆け。</li>
+<li><strong>「名前による誤誘導」（Naming Fallacy）</strong>：Goodfellowという名前そのものが偽の手がかりだ。ポーは故意に町全体（および読者）を名前で催眠にかけ、これは「ジャンルの慣例」に対するメタ的操作だ。</li>
+<li><strong>反転する正式な暴露：語り手が探偵</strong>：物語の末尾で初めて語り手がずっと秘密の探偵だったと明かされ、読者を引き戻して全篇を再解釈させる。</li>
+</ol>
+<p><strong>他のポーの探偵物語との比較</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>モルグ街の殺人</th>
+<th>マリー・ロジェの謎</th>
+<th>お前が殺したのだ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主探偵</td>
+<td>デュパン（明示）</td>
+<td>デュパン（明示）</td>
+<td>無名語り手（末尾で初めて判明）</td>
+</tr>
+<tr>
+<td>謎の性質</td>
+<td>不可能な犯罪</td>
+<td>実際の事件の再構成</td>
+<td>町全体の世論による集団的誤判</td>
+</tr>
+<tr>
+<td>最大の革新</td>
+<td>推理型探偵キャラクターの誕生</td>
+<td>新聞報道を手がかり材料として</td>
+<td>「名前による催眠」と逆転した知情構造</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<hr>
+<h1 id="the-sphinx1846">作品二：〈スフィンクス〉（The Sphinx，1846）</h1>
+<h2 id="_14">基本情報</h2>
+<ul>
+<li>発表年：1846年</li>
+<li>ジャンル：短篇</li>
+<li>探偵：主人（家主、理性的分析の気質を持つ）</li>
+<li>核心の謎の種類：知覚謎（Perception Puzzle）/ 説明の謎（Explanation Mystery）</li>
+</ul>
+<hr>
+<h2 id="_15">推理難易度総評</h2>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星評価</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難易度（Deducibility）</td>
+<td>⭐⭐</td>
+<td>平均収束点は約35%——手がかりは物語の前半に明確に提示されており、自然史の基礎知識がある読者なら早い段階で答えを推導できる</td>
+</tr>
+<tr>
+<td>霧の濃度（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>語り手の恐怖の主観的描写が強い「本物の怪物」という幻象を作り出すが、作者は精確な細節描写を通じて冷静な読者が解読できるようにしている</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_16">あらすじ</h2>
+<p>コレラが流行する中、語り手はハドソン川沿いの親戚の農家に疫禍を逃れた。都市から届く死の知らせに終日浸り、精神は過度に敏感な状態に陥っていた。</p>
+<p>ある午後、窓辺に座って遠くの土砂崩れで植物が剥ぎ取られた山の斜面を眺めていると、突然「巨獣」が山頂から山麓へ滑り降りてきた：戦艦ほどの大きさの体躯、象の鼻のような太く長い口吻、水晶の角柱のような触角、翼の広がりが百ヤード近い二対の翅、胸部には明確な「死の頭」の模様。語り手は気を失った。</p>
+<p>数日後、彼は再びこの怪物を見て、その場で家主に叫んだ。家主は博物学書を取り出し「死頭天蛾」（Death's-Head Sphinx）の項目を引き、それから語り手がいたばかりの窓辺の同じ位置に座って真実を指し示した：それは遠い山にいる巨獣ではなく、窓枠のクモの糸の上を這っていた小さな蛾だった——その大きさは十六分の一インチ、目からの距離も十六分の一インチに過ぎなかった。</p>
+<hr>
+<h2 id="_17">真相解析</h2>
+<h3 id="what-is-the-monster">真相一：怪物の正体（What is the "monster"?）</h3>
+<ul>
+<li><strong>手がかりの収束点：約35%</strong></li>
+<li>答え：「死頭天蛾」（Sphinx moth / Acherontia atropos）で、極めて近距離で目に感知されたため、視覚的に「巨大化」する錯覚が生じた。</li>
+</ul>
+<h4 id="_18">重要な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>怪物の外見の描写が非常に精確：「口吻は象の鼻のよう」「触角は水晶の角柱のよう」「胸部に死の頭の模様」「翅に金属質の鱗片」</td>
+<td>約25–30%</td>
+<td>これらの特徴はまさに鱗翅目スズメガ科の標準的な解剖学的特徴だ。ポーは意図的に語り手の描写を学術的に検証可能なほど精確にしている</td>
+</tr>
+<tr>
+<td>2</td>
+<td>「上下二対の翅が一本の硬い毛で連結されている」</td>
+<td>約28%</td>
+<td>これはスズメガ（Sphinx moth）の生理的特徴（frenulum）で、語り手の「怪物の描写」の中に現れ、実在する生物の正体を示している</td>
+</tr>
+<tr>
+<td>3</td>
+<td>家主が「語り手を席から移動させ、同じ窓辺の同じ視点に座った」ときだけ怪物が見える</td>
+<td>約75%</td>
+<td>観察位置の唯一性を強調——「怪物」は相対的な知覚の産物であり、その特定の角度からしか「見えない」</td>
+</tr>
+<tr>
+<td>4</td>
+<td>博物学書の引用：「死頭天蛾……その悲鳴と胸部の死の図案で知られ、無知な人々をしばしば大いに驚かせる」</td>
+<td>約80%</td>
+<td>種の同定を確認するとともに、語り手の「無知」が錯覚を生む条件だったことを示す</td>
+</tr>
+<tr>
+<td>5</td>
+<td>家主：「それはこのクモの糸の上を這っており、私の瞳孔から約十六分の一インチの距離、自身の大きさも十六分の一インチだ」</td>
+<td>約90%</td>
+<td><strong>最終的な暴露</strong>：視覚錯覚の物理的原因——近距離の極小の物体が遠くの極大の物体に見えた</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_19">補助的な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>語り手は「過度に敏感な」精神状態にあり、前兆に関する迷信的な本を読んでいた</td>
+<td>約8–12%</td>
+<td>彼がなぜ自分の知覚を理性的に疑わなかったかを説明する</td>
+</tr>
+<tr>
+<td>2</td>
+<td>家主の「理性的哲学の気質」というキャラクター設定が語り手の「神経質」と対比されている</td>
+<td>全篇を通じて</td>
+<td>読者は最初から家主の認知様式が正しいと暗示されている</td>
+</tr>
+<tr>
+<td>3</td>
+<td>語り手が怪物が「再び現れた」というとき、家主はそばにいるのに見えない</td>
+<td>約65%</td>
+<td>特定の位置に座っている者だけに見える——すでに「怪物」が観察者の位置に依存していることを暗示</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_20">フェイクの手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>誤誘導の方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>「怪物は戦艦ほどの大きさ」という強調</td>
+<td>約25%</td>
+<td>読者に語り手の知覚スケールを受け入れさせ、「本当に巨大かどうか」への疑問を放棄させる</td>
+</tr>
+<tr>
+<td>2</td>
+<td>コレラによる死の雰囲気と「不吉な前兆」というテーマ</td>
+<td>全篇前半</td>
+<td>「怪物はコレラの象徴」または「実在する超自然的な警告」という読書期待を生み出す</td>
+</tr>
+<tr>
+<td>3</td>
+<td>語り手が「覚醒し冷静に一部始終を観察した」と述べている</td>
+<td>約22%</td>
+<td>読者に語り手の知覚が信頼できると誤解させる</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_21">推理経路の再構成</h2>
+<p>この篇の推理経路は明確な「逆向き推理」の特性を持つ：手がかりはすべて「怪物の描写」の中に隠されており、読者は博物学の項目を読む前に真相を見破るためには自然史の一定の知識が必要だ。</p>
+<p>昆虫学を知る読者にとって：約25–30%で「死の頭の模様＋巻き口吻＋毛で連結された翅」を読んだ時点でスズメガだと確認できる。そして問題は「何か」から「なぜこれほど巨大か」に移行し——視覚距離の答えが自ずと浮かび上がる。</p>
+<p>一般読者にとって：重要な節点は75%で、家主が同じ位置に替わり、同じ「怪物」を見て、すぐに冷静に博物学の項目を読み上げる——この時点で「種の特徴を比較する」動作が答えの枠組みを明示している。最終的に90%で完全に明かされる。</p>
+<hr>
+<h2 id="_22">補足説明</h2>
+<p><strong>エドガー・アラン・ポーの「認識論的謎」の伝統</strong></p>
+<p>〈スフィンクス〉はポーの作品の中で少数の「理性が感性に完勝する」物語に属し、ゴシック的恐怖で知られる彼の作品群の中で異様なほど明るく見える。物語の推理構造は：</p>
+<blockquote>
+<p>知覚 → 恐怖 → 理性分析 → 物理的真相</p>
+</blockquote>
+<p>この構造は百年後にアガサ・クリスティの「密室知覚謎」（例えば『スタイルズ荘の怪事件』の毒薬の時系列問題）によって発展された——読者は自らの知覚習慣に欺かれ、真相は「もとからそこにあった」物理的事実だった。</p>
+<p>ポーはここでパスカルが提唱した「認識誤差」の思想を援用している——距離の誤推定は人間の最も根本的な認知的弱点の一つだ。この哲学的な説明（約65–70%）は謎の答えの方向をほぼ直接示しているが、抽象的な言語で包まれているため、物語を急いで読む読者には見過ごされやすい。</p>
+<hr>
+<hr>
+<h1 id="hop-frog1849">作品三：〈ホップ＝フロッグ〉（Hop-Frog，1849）</h1>
+<h2 id="_23">基本情報</h2>
+<ul>
+<li>発表年：1849年</li>
+<li>ジャンル：短篇</li>
+<li>探偵：なし（読者は傍観者）</li>
+<li>核心の謎の種類：howdunit + whydunit（復讐の計略はどのように実現されるのか？心理的動機はどのように層を重ねていくのか？）</li>
+</ul>
+<hr>
+<h2 id="_24">推理難易度総評</h2>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星評価</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難易度（Deducibility）</td>
+<td>⭐⭐⭐</td>
+<td>平均収束点は約55%——復讐の最終手段（放火・焼殺）は70%前後で完全に明らかになるが、注意深い読者は40%以降にホップ＝フロッグの計略の性質を察知できる</td>
+</tr>
+<tr>
+<td>霧の濃度（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>中程度の誤誘導：ホップ＝フロッグの「服従」の演技は非常に欺瞞的だが、ポーは意図的に早期から心理的な手がかり（歯ぎしり）を埋め込み、注意深い読者が早めに気づけるようにしている</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_25">あらすじ</h2>
+<p>ホップ＝フロッグは宮廷道化師として働かされている障碍を持つ小人で、女友達のトリペッタとともに遠い異郷から連れてこられて王室に仕えていた。国王は残酷な冗談を好み、特にホップ＝フロッグに酒を強制した——後者は酒を飲むと正気を失う。仮面舞踏会の準備をする宴の席で、国王はトリペッタの顔に乱暴に酒を浴びせかけ、これがホップ＝フロッグの最後の一線だった。</p>
+<p>ホップ＝フロッグはその場で「絶妙な仮面舞踏会のアイデア」を提案する：国王と七人の大臣が鎖で繋がれたオランウータンに扮し、全身にタールと亜麻くずを塗るというものだ。舞踏会が進む中、彼は混乱に乗じて吊り燈籠の鎖をオランウータンたちを繋ぐ鎖に引っかけ、八人全員を一斉に吊り上げ、続いて松明でタールに火をつけ、八人は炎の中で焼け死ぬ。ホップ＝フロッグは天窓から脱出し、トリペッタとともに故郷へ逃げ帰る。</p>
+<hr>
+<h2 id="_26">真相解析</h2>
+<h3 id="whydunit">真相一：復讐の計略の引き金と心理的根源（Whydunit）</h3>
+<ul>
+<li><strong>手がかりの収束点：約30%</strong></li>
+<li>答え：ホップ＝フロッグの復讐計略はトリペッタに酒が浴びせられた瞬間に形成された——衝動からではなく、その瞬間が長く抑圧されてきた怒りを呼び覚ましたのだ。歯ぎしりは計略始動の外部的シグナル。</li>
+</ul>
+<h4 id="_27">重要な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>ホップ＝フロッグが飲酒後「ほぼ完全に素面に戻り」、ひそかに「このアイデアはまさにその時浮かんだ」と言う</td>
+<td>約30%</td>
+<td>彼の「素面」は偶然ではない：計略は素面に戻ってから設計されたのであり、酔っての衝動ではない</td>
+</tr>
+<tr>
+<td>2</td>
+<td>「しわがれた歯ぎしりの音が部屋の四方から聞こえてきたが、誰もその出所を知らなかった」——これはトリペッタに酒が浴びせられた後に起き、ホップ＝フロッグは否定した</td>
+<td>約28%</td>
+<td><strong>心理的転換の重要なシグナル</strong>：歯ぎしりはホップ＝フロッグの極限まで抑圧された怒りが外に漏れたもの；後に焼殺前に再び歯ぎしりし、首尾が照応する</td>
+</tr>
+<tr>
+<td>3</td>
+<td>「私が彼らを処理しましょう——彼らが誰なのか分かりそうです。」ホップ＝フロッグが国王の頭によじ登り、鎖に近づいたときに言った言葉</td>
+<td>約80%</td>
+<td>表向きは変装を見分けるためだが、実際には標的と位置を最後に確認する——復讐計略の技術的完成</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_28">補助的な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>ホップ＝フロッグが吊り燈籠を撤去することを提案した（理由：蝋燭のワックスが客に垂れる）し、壁際の燭台に替えることを勧めた</td>
+<td>約40%</td>
+<td>この「合理的な」提案は同時に舞踏場中央の空間を空にし、吊り燈籠の鎖を自由に垂らせるようにした——機能的な配置の事前計画</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ホップ＝フロッグが鍵を自分で保管することを強調した（国王が扉に鍵をかけた後）</td>
+<td>約52%</td>
+<td>事前の逃げ道の確保：人々が出られるかどうかを決定できる唯一の人物は彼だった</td>
+</tr>
+<tr>
+<td>3</td>
+<td>タールと亜麻くずを使う提案はホップ＝フロッグが自発的に出した</td>
+<td>約38%</td>
+<td>タールと亜麻くずは非常に燃えやすい組み合わせだ。この選択は決して偶然ではない</td>
+</tr>
+<tr>
+<td>4</td>
+<td>吊り燈籠の鎖が降りてくる動作は「非常にゆっくりで、ほぼ誰も気づかなかった」</td>
+<td>約60%</td>
+<td>トリペッタが屋根で協力している——計略には外部の共謀者がいて、事前計画はずっと早くに完成されていた</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_29">フェイクの手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>誤誘導の方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>ホップ＝フロッグが酒を飲むと正気を失うという反応を見せた</td>
+<td>約22%</td>
+<td>読者（と国王）に、ホップ＝フロッグは酔った後では謀略を立てる能力がないと思わせる——実際にはこれが彼の保護用偽装</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ホップ＝フロッグが「忠実に命令を実行している」様子を演じ、終始笑顔で計略に協力している</td>
+<td>全篇</td>
+<td>国王に自分が安全で一切をコントロールしていると誤解させる</td>
+</tr>
+<tr>
+<td>3</td>
+<td>歯ぎしりの音が「窓の外のオウム」のせいだとされた</td>
+<td>約29%</td>
+<td>都合のよい説明によって国王に疑念を晴らさせる；読者がそれを信じてしまうと最も重要な心理的シグナルを見逃す</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="howdunit_1">真相二：焼殺計略の技術的設計（Howdunit）</h3>
+<ul>
+<li><strong>手がかりの収束点：約70%</strong></li>
+<li>答え：ホップ＝フロッグは事前にトリペッタを屋根に配置して吊り燈籠の鎖を制御させ、混乱に乗じて鎖をオランウータンたちを繋ぐ鎖に引っかけ、口笛で合図を送り、一瞬で八人全員を吊り上げた；続いて蝋燭でタールに火をつけた。</li>
+</ul>
+<h4 id="_30">重要な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>ホップ＝フロッグが「静かに国王一行の後について混乱を煽った」</td>
+<td>約60%</td>
+<td>彼が終始行動の自由を保ち、意識的に計略を実行していたことを示す</td>
+</tr>
+<tr>
+<td>2</td>
+<td>鎖の先端のフックが「適切な位置に」あった——吊り燈籠の鎖が床から三フィートの高さまで垂れた</td>
+<td>約62%</td>
+<td>スケールはすでに精密に計算されており、偶然ではないことを示す</td>
+</tr>
+<tr>
+<td>3</td>
+<td>ホップ＝フロッグが国王の頭によじ登り「フックを差し込み」、続いて「何か見えない力によって」鎖が引き上げられた</td>
+<td>約70%</td>
+<td>「見えない力」とは屋根のトリペッタで、合図を受けて鎖を引き上げた</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_31">推理経路の再構成</h2>
+<p>〈ホップ＝フロッグ〉を読む推理経路は二つに分かれる：</p>
+<p><strong>経路一：「復讐計略はいつ設計されたか？」</strong></p>
+<p>重要な節点は28%（歯ぎしり）＋30%（ホップ＝フロッグが「素面」に戻った直後にアイデアを提案）。注意深い読者はここで察知できるはずだ：ホップ＝フロッグの「即興のアイデア」の背後には完全な事前計画があり、歯ぎしりが心理的なスイッチだと。読者が同時に「ホップ＝フロッグには強い腕力と攀登能力がある」という早期の描写を覚えていれば、彼が舞踏場の天井でどのように操作したかも推算できる。</p>
+<p><strong>経路二：「焼殺の技術的論理」</strong></p>
+<p>もっとも顕著な手がかりは「吊り燈籠の撤去」（40%）と「タール＋亜麻くず」という材料の選択（38%）だ。二つを合わせると、聡明な読者は40%前後で「火」が結末の要素になると推算できる。しかし鎖がどのように制御されるか、誰が屋根にいるかは、70%になるまで明らかにならない。</p>
+<hr>
+<h2 id="_32">補足説明</h2>
+<p><strong>〈ホップ＝フロッグ〉の異色な点：正当な「犯罪物語」</strong></p>
+<p>ポーの作品の中で、〈ホップ＝フロッグ〉は「読者が犯罪者の側に立つ」ことが「道徳的に許容される」ごく少数の物語だ。国王は真の暴君であり、ホップ＝フロッグの復讐には十分な正当性がある——ポーは読者を最初からホップ＝フロッグに共感させ、「計略がどのように実行されるか」を喜びに満ちた謎解きの過程にし、恐怖ではなくした。</p>
+<p>これは〈アモンティリャードの樽〉と興味深い逆転をなす：あの篇は読者を偏執的な犯人の立場に立たせ（不快感）；この篇は読者を被抑圧者の復讐の立場に立たせる（爽快感）。しかし推理構造上、両者は同じく「最初から誰が何をしたか知っており、問題はどのようにしたかだ」という枠組みを用いている。</p>
+<p><strong>歯ぎしりの文学的地位</strong></p>
+<p>「しわがれた歯ぎしりの音が部屋の四方から聞こえてきた」——この一文は全篇でもっとも精密な推理的場面だ。計略が生まれた正確な瞬間に現れ、怒りが理性的制御から瞬間的に外に漏れたことを象徴する。ポーは一つの音響効果で心理分析の代わりとし、ほぼ何の説明もなかったが、末尾の焼殺場面での「ホップ＝フロッグが歯を軋らせ、口から泡を吹き、狂ったような目で下を凝視した」という描写に呼応させた。最初の歯ぎしりが現れた時点で立ち止まって考えた読者は、結末を三分の一以上早く推導できる。</p>
+<hr>
+<hr>
+<h1 id="the-man-of-the-crowd1840">作品四：〈群衆の中の男〉（The Man of the Crowd，1840）</h1>
+<h2 id="_33">基本情報</h2>
+<ul>
+<li>発表年：1840年</li>
+<li>ジャンル：短篇</li>
+<li>探偵：語り手（自発的な尾行者、素人観察者）</li>
+<li>核心の謎の種類：反探偵（Anti-Detective）/ 心理肖像の謎</li>
+</ul>
+<hr>
+<h2 id="_34">推理難易度総評</h2>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星評価</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難易度（Deducibility）</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>手がかりの収束点：100%——作者が意図的に謎を解なしにしているから。これは読者の失敗ではなく、物語の設計目的</td>
+</tr>
+<tr>
+<td>霧の濃度（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>中程度の誤誘導：老人の外見の描写は十分な推理材料を提供し、読者が複数の解釈を引き出せるが、すべては暫定的な仮説に過ぎない</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_35">あらすじ</h2>
+<p>語り手は大病から回復したばかりで活力に満ちており、ロンドンのあるコーヒーハウスの窓際に座って往来の人群れを観察し、顔つき・服装・歩き方で通行人の社会的地位と内面状態を読み取っていた——これはデュパン式の観察技術だ。</p>
+<p>日が暮れると、人群れの中に読み取れない顔が現れた：六七十代の老人で、ぼろぼろの服を着ているが体に密着しているのは上質のリネン素材で、外套の破れ目からは一瞬ダイヤモンドと短剣がちらっと見える。その顔には「巨大な知的力・慎重さ・吝嗇・冷酷さ・悪意・血への渇望・勝利・陶酔・極度の恐怖と絶望」が混在していた。</p>
+<p>語り手は彼の尾行を決意する。老人はロンドンでもっとも繁華な通りを歩き回り、人の少ない場所へ向かうとすぐに引き返し、それを丸一日一晩繰り返した——劇場の出口の人波、大きな市場、ロンドンでもっとも貧しいスラム、夜通し開いているジンの酒場まで、人波が散ると彼は極度の不安に陥った。</p>
+<p>二十四時間の尾行の後、語り手は諦め、結論を出す：「この老人は深重な罪悪の縮図と天才だ。彼は一人でいることを拒否する。彼こそが群衆の中の男だ。」</p>
+<hr>
+<h2 id="_36">真相解析</h2>
+<h3 id="who-is-he-what-is-he-hiding">真相一：老人の身元と秘密（Who is he? What is he hiding?）</h3>
+<ul>
+<li><strong>手がかりの収束点：100%（設計的に解なし）</strong></li>
+<li>答え：作者は明確に答えを与えない。老人の身元は永遠に謎だ——しかしポーは読者が複数の仮説を形成するための十分な材料を提供している。</li>
+</ul>
+<p><strong>可能性のある推理経路：</strong>
+- <strong>仮説一：逃亡中の犯罪者</strong>：ダイヤモンドと短剣は財富と武器を身に隠していることを示し、みすぼらしい外見は偽装だ。人群れへの依存は「群衆の中に紛れて目立たない」という逆説的な犯罪戦略だ。
+- <strong>仮説二：良心の囚人</strong>：「一人でいることを拒否する」とは、独処すると耐えられない記憶や罪の意識に直面しなければならないことを意味する。彼が群衆の中に求めているのは隠匿ではなく忘却だ。
+- <strong>仮説三：心理的病症の具象化</strong>：老人は実在の人物ではなく、「都市の中で分析できない人間的側面」の象徴だ。</p>
+<h4 id="_37">重要な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>老人の服はぼろぼろだが、体に密着しているのは上質のリネン；外套の破れからダイヤモンドと短剣がちらっと見える</td>
+<td>約45%</td>
+<td>財富と武器の対比：彼は貧者に偽装しているが、地位か財力を隠している</td>
+</tr>
+<tr>
+<td>2</td>
+<td>彼の顔には同時に「知性・慎重さ・血への渇望・陶酔と絶望」が共存している——語り手は一度も見たことのない顔だと言う</td>
+<td>約42%</td>
+<td>分類不可能なほど複雑な心理状態：通常の人物類型では説明できない</td>
+</tr>
+<tr>
+<td>3</td>
+<td>人群れが少なくなるほど、彼の不安と恐慌は激しくなる；人群れに入ると「元の様子に戻る」</td>
+<td>50–85%を通じて</td>
+<td>人群れへの「依存性」が彼の最も核心的な特徴——それは駆動力であり、偽装ではない</td>
+</tr>
+<tr>
+<td>4</td>
+<td>彼はもっとも汚いスラムともっとも低俗な酒場でも同じように落ち着きを感じる——彼が求めているのは「社交」ではなく「一人にされないこと」だとわかる</td>
+<td>約75–80%</td>
+<td>「人群れを求めること」と「特定の人群れを求めること」を区別した——彼には選択性がない</td>
+</tr>
+<tr>
+<td>5</td>
+<td>物語冒頭の引用文：「この大いなる不幸、一人でいられないこと」（Ce grand malheur, de ne pouvoir être seul）——ラ・ブリュイエール</td>
+<td>約1%</td>
+<td>作者が直接謎解きの鍵を与えている：老人の問題は「誰であるか」ではなく「一人でいられないという本質は何か」だ</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_38">補助的な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>「秘密の中には自ら語ることを許さないものがある」——冒頭の説明</td>
+<td>約3%</td>
+<td>結末の解なしを予告する：ポーはこの謎を謎解きのために設計したのではなく、謎そのものに語らせるために設計した</td>
+</tr>
+<tr>
+<td>2</td>
+<td>老人が「丸二十四時間尾行されていることに気づかなかった」</td>
+<td>全篇を通じて</td>
+<td>彼は逃げているのではない——ひたすら人群れを求めており、外部の脅威にまったく無感覚だ</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_39">フェイクの手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>誤誘導の方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>短剣とダイヤモンドの細節</td>
+<td>約45%</td>
+<td>読者に「逃亡中の犯罪者」という経路で推理させるが、この道には終点がない</td>
+</tr>
+<tr>
+<td>2</td>
+<td>老人が「罪悪の集まる場所」（安酒場、スラム）に何度も赴く</td>
+<td>約70–80%</td>
+<td>読者に彼が同類の犯罪者を探していると思わせるが、彼はそこに入って何の目的もなくうろつくだけ</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_40">推理経路の再構成</h2>
+<p>〈群衆の中の男〉の推理経路は設計上「完遂できない経路」だ。ポーは完全な探偵装備を整えた——注意深い観察者、精確な描写、十分な尾行時間——そして装置全体を空回りさせた。</p>
+<p>読者は物語に入るとき、語り手の観察技術に説得される：前半では彼は通行人の職業と性格を正確に読み取り、「この人物は誰でも読み解ける」という信頼感を確立する。老人が現れると、読者は自然と同じ解読プロセスを期待する。</p>
+<p>しかしポーはここですべてを逆転させる：老人の顔は「読み解けない」、二十四時間尾行しても「何も新しい情報が得られない」。語り手はついに諦め、出した結論は哲学的なものであり、探偵的なものではない。</p>
+<p>この構造の意味は：ポーが「真相は存在するが、語られることも知られることも許されない」という命題を示したことにある。これは彼のデュパンと強烈な反面をなす——デュパンはすべての細節からすべての真相を読み解ける；群衆の中の老人は世界に確かに存在する「読み解けないもの」を表している。</p>
+<hr>
+<h2 id="_41">補足説明</h2>
+<p><strong>〈群衆の中の男〉：探偵小説史上もっとも早い「反探偵」テキストの一つ</strong></p>
+<p>ボードレールはこの物語を「都市の孤独を描いた最も偉大な作品の一つ」と称し、彼が翻訳したフランス語版は後世のフランス象徴主義の「漫遊者」（flâneur）イメージの構築に直接影響を与えた。ベンヤミン（Walter Benjamin）はボードレールの詩を分析する際に、〈群衆の中の男〉の老人を資本主義都市における「識別不可能な罪悪の人格」の原型と見なした。</p>
+<p>探偵小説史の観点から見ると、この物語は一つの逆説だ：探偵小説のすべての道具（観察、尾行、類型化分析）を用いながら、意図的に答えを拒否している。対照的に、ポーが同時期（1840年代初頭）に完成させたデュパン三部作はすべて理性の勝利で終わる。〈群衆の中の男〉は、ポーが自ら構築した「探偵の全知」という枠組みに対して提出した暗黙の問いかけのようだ：<strong>もし、どれだけ観察しても解けない謎があったら、どうするのか？</strong></p>
+<p><strong>〈アモンティリャードの樽〉との比較</strong></p>
+<p>両篇は同じく「読み解けない人間」を探求している：Montresorの動機は読者に完全には透明でない；群衆の中の老人の秘密はどんな人物にも透明ではない。しかし前者はなお「答えの空間」を持つ謎（信頼できない語り手）であり、後者は徹底した空無だ。</p>
+<hr>
+<hr>
+<h1 id="_42">全体考察</h1>
+<h2 id="5_1">第5巻の推理スペクトル</h2>
+<table>
+<thead>
+<tr>
+<th>作品</th>
+<th>謎の種類</th>
+<th>推理難易度</th>
+<th>霧の濃度</th>
+<th>特殊な手法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>お前が殺したのだ</td>
+<td>whodunit + howdunit</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>逆転する探偵（語り手が探偵）、名前による誤誘導、腹話術</td>
+</tr>
+<tr>
+<td>スフィンクス</td>
+<td>知覚謎</td>
+<td>⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>スケール錯覚、精確な自然史知識が謎の答え</td>
+</tr>
+<tr>
+<td>ホップ＝フロッグ</td>
+<td>howdunit + whydunit</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>心理漏洩シグナル（歯ぎしり）、弱者の復讐の事前計画構造</td>
+</tr>
+<tr>
+<td>群衆の中の男</td>
+<td>反探偵 / 解なしの謎</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>意図的な答えの拒否、探偵ツールの無効化</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5_2">第5巻のポーの全創作における位置づけ</h2>
+<p>第5巻はポーのもっとも多様なアンソロジーだ。前の巻のような統一された「ゴシック的恐怖」や「純粋な推理」のスタイルはなく、四種類の異なる謎の形態によって四つの方向からエドガー・アラン・ポーの思想的版図を描き出している：</p>
+<ol>
+<li><strong>推理の機械師として</strong>（お前が殺したのだ）：謀略は時計仕掛けのように精密で、すべての細節を逆算でき、すべての誤誘導に設計目的がある。</li>
+<li><strong>認識論的哲学者として</strong>（スフィンクス）：知覚が意味であり、意味が真相だ——知覚が誤りを犯した瞬間、世界は怪物へと崩れ落ちる。</li>
+<li><strong>心理分析家として</strong>（ホップ＝フロッグ）：人間の怒りは構造を持つ。抑圧・漏洩・計略・実行——すべてのステップが観察できる心理的手順だ。</li>
+<li><strong>虚無主義者として</strong>（群衆の中の男）：真相は存在するが、知ることを許されない。探偵ツールはこの種の謎の前では沈黙するしかない。</li>
+</ol>
+<p>第5巻の全体的な推理難易度は約⭐⭐⭐（60%の平均収束点）、霧の濃度⭐⭐⭐⭐は難易度よりやや高い——ポーが最も得意としてきたのは、手がかりを隠すことではなく、読者に手がかりの重みを誤判断させることだからだ。</p>
+    <a href="../index.html" class="back-link">← ホームに戻る</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">推理解剖室</p>
+    <p>五人の作家・八十八の作品・135年にわたる推理文学の難易度の進化。</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
