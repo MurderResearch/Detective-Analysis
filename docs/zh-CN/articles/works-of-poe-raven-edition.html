@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>爱伦·坡作品集（渡鸦版） — 推理解剖室</title>
+<meta name="description" content=" 篇一：黄金甲虫（The Gold-Bug，约 3292–4879 行） 勒格朗是落魄到苏利文岛定居的古老胡格诺家族后裔，某日在海岸拾得一只浑身金光的甲虫，同时无意间捡到一张后来证明是羊皮纸的残片。友人造访时勒格朗用这张纸画甲虫素描，却只画出一个骷髅图案——因为羊皮纸上早有隐形墨水书写的骷髅头，靠近炉火的热度使之显影。">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/works-of-poe-raven-edition.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/works-of-poe-raven-edition.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/works-of-poe-raven-edition.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/works-of-poe-raven-edition.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/works-of-poe-raven-edition.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/works-of-poe-raven-edition.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/works-of-poe-raven-edition.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/works-of-poe-raven-edition.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif SC', serif;
+  --font-sans: 'Noto Sans SC', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">推理解剖室</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">首页</a>
+        <a href="../index.html#latest">最新分析</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="语言" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 简体中文</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/works-of-poe-raven-edition.html">繁體中文</a>
+      <a class="lang-item active" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/works-of-poe-raven-edition.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/works-of-poe-raven-edition.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/works-of-poe-raven-edition.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/works-of-poe-raven-edition.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/works-of-poe-raven-edition.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/works-of-poe-raven-edition.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/works-of-poe-raven-edition.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">爱伦·坡 · </div>
+    <h1>爱伦·坡作品集（渡鸦版）</h1>
+    <div class="subtitle">爱伦·坡（Edgar Allan Poe） · 短篇选集（五册，本分析聚焦推理相关篇目）</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">推理难度</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">迷雾等级</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="_1">爱伦·坡作品集（渡鸦版）— 推理分析</h1>
+<p><em>The Works of Edgar Allan Poe, The Raven Edition</em></p>
+<h2 id="_2">基本信息</h2>
+<ul>
+<li>作者：爱伦·坡（Edgar Allan Poe）</li>
+<li>出版年：1845–1850（各篇初刊），渡鸦版选集 1903年</li>
+<li>类型：短篇选集（五册，本分析聚焦推理相关篇目）</li>
+<li>侦探角色：C. Auguste Dupin（杜邦）、William Legrand（勒格朗）</li>
+<li>核心谜团类型：whodunit / howdunit / wheredunit（藏宝地点）</li>
+</ul>
+<hr>
+<h2 id="_3">推理难度总评（选集整体）</h2>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>星等</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理难度（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>各篇平均收敛点约 76%，线索藏得深，推理过程不易在侦探揭晓前自行完成</td>
+</tr>
+<tr>
+<td>迷雾等级（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>中度误导——假线索主要靠表象制造，而非叙述结构欺骗；但部分篇目例外</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>选集说明：</strong> 本版收录五册共四十余篇，推理性质最强的篇目为：《黄金甲虫》（The Gold-Bug）、《莫尔格街兇杀案》（The Murders in the Rue Morgue）、《玛丽·罗杰谜案》（The Mystery of Marie Roget）。三篇分别代表坡三种不同的推理设计路线，下文逐篇深析。</p>
+</blockquote>
+<hr>
+<h2 id="_4">故事梗概（按篇）</h2>
+<h3 id="the-gold-bug-32924879">篇一：黄金甲虫（The Gold-Bug，约 3292–4879 行）</h3>
+<p>勒格朗是落魄到苏利文岛定居的古老胡格诺家族后裔，某日在海岸拾得一只浑身金光的甲虫，同时无意间捡到一张后来证明是羊皮纸的残片。友人造访时勒格朗用这张纸画甲虫素描，却只画出一个骷髅图案——因为羊皮纸上早有隐形墨水书写的骷髅头，靠近炉火的热度使之显影。此后勒格朗发疯似的执着于「黄金甲虫」，带着仆人朱庇特和友人夜闯荒山，按照甲虫与古树头骨的几何关系挖掘，最终出土海盗基德船长（Captain Kidd）埋藏的巨额宝藏。解谜过程中，勒格朗事后详述了他如何用频率分析法破解羊皮纸上的密码。</p>
+<p><strong>特殊性：</strong> 本篇几乎没有犯罪，核心谜题是「宝藏在哪里」（wheredunit），推理工具是密码学与几何学。</p>
+<hr>
+<h3 id="the-murders-in-the-rue-morgue-52216666">篇二：莫尔格街兇杀案（The Murders in the Rue Morgue，约 5221–6666 行）</h3>
+<p>巴黎嘉年华夜晚，一幢公寓四楼传出恐怖惨叫，邻居破门而入，发现两具遗体：年轻女儿被活塞进壁炉烟囱、老妇人的头几乎被割下，并从窗口坠落后院。现场所有出入口都从内锁死。警方完全束手无策，唯一线索是楼梯间听到的「两个声音」——一个粗嗓法语，一个刺耳怪音，各国目击者对后者语言的判断完全相反。侦探杜邦受仆人 Le Bon 被无辜入狱所刺激，自行前往调查。他先从「那把声音不可能是任何人类语言」的逻辑推断凶手非人，再发现窗户边断裂的铁钉、窗框隐藏的弹簧机关、以及被死者揪住的非人毛发，最终确认凶手是一只从波罗洲来的橘毛猩猩，其主人是一名法国水手。</p>
+<p><strong>特殊性：</strong> 史上第一篇现代侦探小说。核心是「不可能犯罪」（impossible crime）的 howdunit。</p>
+<hr>
+<h3 id="the-mystery-of-marie-roget-66677743">篇三：玛丽·罗杰谜案（The Mystery of Marie Roget，约 6667–7743 行）</h3>
+<p>两年后，巴黎香水店女孩玛丽·罗杰（Marie Rogêt）失踪，四天后浮尸塞纳河。遗体显示遭暴力侵害后谋杀，颈上有勒痕与一块复杂打结的蕾丝。杜邦不离开家门，只靠分析各大报刊已发表的证词与评论，逐步排除以下嫌疑：「尸体非本人」说（报纸 L'Etoile 的误判）、「黑帮集体作案」说（过度合理化的假设）、订婚者圣尤斯塔旭（St. Eustache）的嫌疑——最后收束到一个结论：凶手是曾与玛丽短暂私奔的秘密情人，是单人作案，地点是塞纳河边的某个偏僻灌木丛。</p>
+<p><strong>特殊性：</strong> 这篇几乎是伪装成小说的犯罪学论文，直接套用真实的 Mary Rogers 命案（1841年纽约），所有「巴黎报纸」均为真实美国报导的改编版本。</p>
+<hr>
+<h2 id="_5">真相拆解</h2>
+<hr>
+<h3 id="the-gold-bug">篇一真相：黄金甲虫（The Gold-Bug）</h3>
+<hr>
+<h4 id="wheredunit">真相一：宝藏的位置（wheredunit）</h4>
+<ul>
+<li><strong>线索收敛点：约 75%</strong></li>
+<li>答案：基德船长的宝藏埋在大陆荒山上一棵高大白杨树下方 50 英尺，定位方式是从骷髅头（钉在树上）的左眼孔垂下甲虫，再沿直线延伸 50 英尺挖掘。</li>
+</ul>
+<h5 id="_6">关键线索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>羊皮纸（非纸张）上有隐形骷髅图案，靠近火而显现</td>
+<td>约 8–10%</td>
+<td>羊皮纸是海盗秘密文件的载体，骷髅是海盗旗象征，两者都指向宝藏</td>
+</tr>
+<tr>
+<td>2</td>
+<td>羊皮纸另一角加热后显现「小山羊」图形</td>
+<td>约 58%</td>
+<td>山羊（kid）是 Captain Kidd 的文字双关签名，确认宝藏主人身分</td>
+</tr>
+<tr>
+<td>3</td>
+<td>密码文字以频率分析解出完整指引：「主干第七枝东侧，射死人头左眼，树与弹孔连线 50 英尺」</td>
+<td>约 60–65%</td>
+<td><strong>核心线索</strong>——所有物理座标藏在密码之中</td>
+</tr>
+<tr>
+<td>4</td>
+<td>「Bishop's Hostel」指旧地名 Bessop's Castle，为高岩，上有天然座位（Devil's Seat）</td>
+<td>约 67%</td>
+<td>座位视角决定了望远镜的仰角与方向，是定位骷髅树的唯一可行方法</td>
+</tr>
+<tr>
+<td>5</td>
+<td>朱庇特错把甲虫从右眼孔而非左眼孔穿过，导致第一次挖掘位移</td>
+<td>约 72%（挖掘失败后）</td>
+<td><strong>最后一个关键线索</strong>——确认了整个方法的精确性与对称性，也解释了为何偏差</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_7">辅助线索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>发现甲虫的地点在海岸，附近有古旧船骸残迹</td>
+<td>约 12%</td>
+<td>古代船难地点，暗示此地或附近曾有海盗活动</td>
+</tr>
+<tr>
+<td>2</td>
+<td>勒格朗听说基德的藏金传说从未有人找到</td>
+<td>约 65%</td>
+<td>呼应「宝藏仍在地底」的推论</td>
+</tr>
+<tr>
+<td>3</td>
+<td>在坑底找到两具完整人骨与散落金币</td>
+<td>约 75%</td>
+<td>确认了坑洞的历史真实性——基德在埋藏后杀死了助手</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_8">假线索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>误导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>勒格朗疯狂执着于「黄金甲虫」，全程口口声声说甲虫是「财富的指引」</td>
+<td>全篇</td>
+<td>诱使读者以为甲虫本身（作为天然黄金）是宝藏之钥，忽略羊皮纸才是真正的地图</td>
+</tr>
+<tr>
+<td>2</td>
+<td>勒格朗把真正的甲虫（重重的金色甲虫）用绳子吊挂，像把它丢进骷髅眼孔</td>
+<td>约 70%</td>
+<td>读者与友人都以为这是一种象征仪式，实为实际测量工具（代替铅锤）</td>
+</tr>
+<tr>
+<td>3</td>
+<td>第一次挖掘完全落空</td>
+<td>约 72%</td>
+<td>让读者（以及友人）以为计划本身就是幻觉，实际上只是左右眼之差引起的微小偏移</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="howdunit">真相二：密码的破译原理（howdunit）</h4>
+<ul>
+<li><strong>线索收敛点：约 65%</strong></li>
+<li>答案：采用单字母替换密码（monoalphabetic substitution cipher），以英文字母频率分析为基础，从最常见符号「8」对应「e」出发，逐步推导所有字母。</li>
+</ul>
+<h5 id="_9">关键线索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>勒格朗在羊皮纸上数出各符号出现次数，发现「8」出现 33 次</td>
+<td>约 62%</td>
+<td>频率分析的起点，英文最常见字母 e 的出现频率指向「8」即 e</td>
+</tr>
+<tr>
+<td>2</td>
+<td>识别三字组「;48」出现 7 次，判断为「the」</td>
+<td>约 63%</td>
+<td>「the」是英文最常见三字组，此步骤确立三个核心字母</td>
+</tr>
+<tr>
+<td>3</td>
+<td>从「t ee」推导出「tree」，获得字母 r</td>
+<td>约 64%</td>
+<td>由已知字母与语意填空相互验证，推导新字母</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="the-murders-in-the-rue-morgue">篇二真相：莫尔格街兇杀案（The Murders in the Rue Morgue）</h3>
+<hr>
+<h4 id="whodunit">真相一：凶手身分（whodunit）</h4>
+<ul>
+<li><strong>线索收敛点：约 80%</strong></li>
+<li>答案：凶手是一只橘毛婆罗洲猩猩（Ourang-Outang），其主人是一名法国水手。猩猩非故意杀人，是在模仿主人剃胡须时因受到惊吓而失控。</li>
+</ul>
+<h5 id="_10">关键线索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>各国目击者对「尖细怪声」的语言判断完全矛盾——义大利人说是俄语、法国人说是西班牙语、西班牙人说是英语……</td>
+<td>约 50%</td>
+<td><strong>最核心的线索</strong>——声音无法被任何人类语言识别，唯一解释是非人类发声</td>
+</tr>
+<tr>
+<td>2</td>
+<td>粗声音用法语喊「Mon Dieu!」（我的天啊），语气是恐惧而非怒喊</td>
+<td>约 52%</td>
+<td>说明粗声音是目睹一切的人类旁观者，而非施害者</td>
+</tr>
+<tr>
+<td>3</td>
+<td>绞杀痕迹——手指印的握距远超任何人类手掌的生理极限</td>
+<td>约 75%</td>
+<td>解剖学上的直接否定：此力量非人类可及</td>
+</tr>
+<tr>
+<td>4</td>
+<td>死者老妇人手中抓住的毛发是非人类毛发——杜邦展示给友人看</td>
+<td>约 76%</td>
+<td>最具冲击性的物证——毛发不属于任何人种</td>
+</tr>
+<tr>
+<td>5</td>
+<td>杜邦引用 Cuvier 的猩猩解剖描述，精确吻合绞痕</td>
+<td>约 78%</td>
+<td><strong>线索收敛点</strong>——至此凶手非人已可确认</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_11">辅助线索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>尖细怪声被形容为「harsh rather than shrill」（粗砺而非刺耳）和「quick and unequal」（急促而不均匀）</td>
+<td>约 51%</td>
+<td>这不是人类嗓音的特征，而是动物叫声的特征</td>
+</tr>
+<tr>
+<td>2</td>
+<td>杜邦在闪电避雷针底部找到一条马尾式绳结的缎带，是水手特有的马耳他结</td>
+<td>约 82%</td>
+<td>确认了「法国水手」的身分，呼应广告策略</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_12">假线索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>误导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>四千法郎黄金在案发三天前刚刚取出，且被留在现场未被拿走</td>
+<td>约 48%</td>
+<td>让读者（和警察）以为这是财务纠纷引发的抢劫谋杀，金钱动机完全错误</td>
+</tr>
+<tr>
+<td>2</td>
+<td>现场极端混乱的情况（家具翻倒、尸体被强行塞进烟囱）</td>
+<td>约 45%</td>
+<td>让人以为犯人是体型庞大的狂暴人类，或多人共谋</td>
+</tr>
+<tr>
+<td>3</td>
+<td>门窗全都从内部锁死</td>
+<td>约 47%</td>
+<td>「密室」效果让警察陷入死胡同，忽略了窗框弹簧机关与破裂铁钉的可能性</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="howdunit_1">真相二：出入方式（howdunit / 不可能犯罪的解法）</h4>
+<ul>
+<li><strong>线索收敛点：约 75%</strong></li>
+<li>答案：猩猩从闪电避雷针攀爬，借助特殊的铁格窗板（ferrades）摆荡进入四楼窗口；离开时窗户因弹簧而自动扣上，铁钉头完好如初（实际上已事先断裂）。</li>
+</ul>
+<h5 id="_13">关键线索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>杜邦在勘查时特别检视后方窗户的铁格窗板（ferrades）——这种古式窗板因其特殊结构，与闪电针之间的距离可形成摆荡路径</td>
+<td>约 68%</td>
+<td>这是爬入路线的起点，警察从未注意窗板的宽度</td>
+</tr>
+<tr>
+<td>2</td>
+<td>第一扇窗的铁钉是好的，杜邦打开后发现隐藏弹簧——窗户自动扣合</td>
+<td>约 70%</td>
+<td>确认「弹簧机关」的存在，说明铁钉状态不代表窗户无法通行</td>
+</tr>
+<tr>
+<td>3</td>
+<td>第二扇窗的铁钉头可以拔下——铁钉早已在某次冲击中断裂，只剩头部</td>
+<td>约 73%</td>
+<td><strong>线索收敛点</strong>——此处是真正的出入口，离开时弹簧自动扣合，断钉头完美伪装成完整铁钉</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="the-mystery-of-marie-roget">篇三真相：玛丽·罗杰谜案（The Mystery of Marie Roget）</h3>
+<hr>
+<h4 id="whodunit_1">真相一：凶手身分（whodunit）</h4>
+<ul>
+<li><strong>线索收敛点：约 90%</strong></li>
+<li>答案：杜邦最终指向一个未具名的「秘密情人」——玛丽过去曾与某个海军军官私奔（对应真实的 Mary Rogers 案中的 Payne 或 Crommelin），此人单独行动，在河边的一个偏僻地点杀害了她。</li>
+</ul>
+<blockquote>
+<p><strong>重要说明：</strong> 本篇是坡所有推理故事中谜底最「不确定」的一篇。坡在撰写时现实命案尚未告破，他的推论是基于现有报导作出的机率判断，而非确凿推导——他自己也在篇末脚注中承认部分推论后来被事实修正。这是本篇与其他两篇最根本的差异。</p>
+</blockquote>
+<h5 id="_14">关键线索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>遗体颈上缠绕的丝带打的是「水手结」或「滑结」，而非女性习惯打的蝴蝶结</td>
+<td>约 55%</td>
+<td>暗示凶手可能与海洋相关（水手、军官），或至少曾学过特殊绳结</td>
+</tr>
+<tr>
+<td>2</td>
+<td>遗体外裙被撕成条带绕腰三圈、内裙撕下一条绕颈——撕法「整齐而谨慎」，非激情失控状态</td>
+<td>约 56%</td>
+<td>排除群众暴行的可能，指向单一有计划的犯人</td>
+</tr>
+<tr>
+<td>3</td>
+<td>玛丽一年前曾无故失踪一周后返回，理由含糊——暗指当时已有秘密情人</td>
+<td>约 40%</td>
+<td>此秘密情人身分与案件直接相关，是动机的源头</td>
+</tr>
+<tr>
+<td>4</td>
+<td>杜邦推论：遗体附近的河岸灌木丛才是真正的案发地点，而非传说中的「Barrière du Roule」</td>
+<td>约 85%</td>
+<td><strong>最后一个定位推论</strong>——灌木丛中发现女用手帕、手帕垫、阳伞及遗留的衣物残迹</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_15">辅助线索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>尸体在塞纳河中浮起的时间早于正常腐化时程（三天而非六至十天）——L'Etoile 的论点被杜邦反驳</td>
+<td>约 42%</td>
+<td>确认遗体确实是玛丽本人，排除「尸体是他人」的假说</td>
+</tr>
+<tr>
+<td>2</td>
+<td>遗体无泡沫（排除单纯溺死），颈部有手掐勒痕而非绳索勒痕（主要伤害是窒息）</td>
+<td>约 37%</td>
+<td>确认为预谋谋杀，而非意外死亡或自杀</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_16">假线索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>误导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Barrière du Roule 附近发现「草丛踩踏痕迹」，报纸认为是黑帮聚众施暴的犯罪现场</td>
+<td>约 50%</td>
+<td>杜邦认为这些痕迹在案发后数天才被发现，时间与玛丽之死不符，可能是后来无关人士所留</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Beauvais 在办公室钥匙孔插了一朵玫瑰，石板上写有「玛丽」的名字</td>
+<td>约 47%</td>
+<td>被报纸利用以暗示 Beauvais 是秘密情人或共犯，实际上不过是私下倾慕者的浪漫举动</td>
+</tr>
+<tr>
+<td>3</td>
+<td>St. Eustache（订婚者）最初无法解释案发日的行踪</td>
+<td>约 48%</td>
+<td>让所有人最先怀疑至亲，后来他提交了完整的时间表自证清白</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_17">推理路径重建</h2>
+<h3 id="_18">黄金甲虫的推理路径</h3>
+<p>读者面对的最大障碍是「视角偏差」——整篇故事由友人（叙述者）讲述，他从头到尾都认为勒格朗精神失常，因此所有的线索都被包裹在一层怀疑的雾气中。</p>
+<p><strong>第一个可以怀疑的节点（约 10%）：</strong> 羊皮纸登场。细心的读者在友人评论画作看起来像骷髅时，就应注意到纸上「已有」一个图案——因为勒格朗特别强调他画的是甲虫，且外形完全不同。羊皮纸，而非纸张，是坡最大的暗示：重要文件才用羊皮纸。</p>
+<p><strong>第二个节点（约 58%）：</strong> 山羊图形出现，勒格朗提到「Captain Kidd」的双关谐音。此时读者已可确定这是藏宝图的密码。</p>
+<p><strong>线索收敛点（约 65–75%）：</strong> 密码解出完整指引，「Devil's Seat」定位成功，猩猩攀树后骷髅头出现。至此读者理论上可以自行完成最后的计算——但前提是读者必须知道如何进行几何测量。坡其实假设读者无法自行完成这一步，等待勒格朗的解释。</p>
+<hr>
+<h3 id="_19">莫尔格街兇杀案的推理路径</h3>
+<p><strong>第一个可以怀疑的节点（约 50%）：</strong> 杜邦指出「那个声音被义大利人、法国人、西班牙人、荷兰人、英国人各自认定为不同国家的语言，但每人都确定不是自己能辨识的语言」。这个逻辑跳跃是本篇最精彩的谜题设计：一个每个人都听到却没有人能识别的「语言」，只有一个可能——它根本不是人类语言。</p>
+<p>仔细的读者在这里应该已能作出正确假设，但几乎没有人能做到，因为「凶手是动物」这个结论突破了 1841 年读者（乃至今日读者）对谋杀案的根本预设。</p>
+<p><strong>确认节点（约 76–78%）：</strong> 非人毛发 + Cuvier 的猩猩解剖资料。这是本篇的双重确认机制——先给出物证，再提供生物学依据，形成无法反驳的闭环。</p>
+<p><strong>推理难度评估：</strong> 这篇故事的核心难点不在线索数量，而在于读者的<strong>认知框架</strong>——我们无法想到动物作案，因此即使所有线索已齐全，多数读者仍无法在杜邦点破之前自行推论。这是坡最聪明的设计。</p>
+<hr>
+<h3 id="_20">玛丽·罗杰谜案的推理路径</h3>
+<p>这篇的推理路径与前两篇根本不同：它不是「从线索推向答案」，而是「从各种错误假说中逐步剔除，缩窄到唯一可能」——也就是排除法。</p>
+<p><strong>杜邦的三步排除法：</strong>
+1. 先排除「尸体非本人」说（L'Etoile 的报导论证站不住脚）
+2. 再排除「黑帮多人共谋」说（衣物撕裂方式太整齐，显示单人且冷静）
+3. 最后排除「订婚者作案」说（时间表清晰可验）</p>
+<p>剩下的就只有「秘密情人单独作案」这个假说。</p>
+<p>对读者而言，这篇的可推理空间几乎为零——所有的「关键线索」都是报纸报导，读者和杜邦同时获得信息，但没有杜邦的法医与统计学训练，几乎不可能自行完成排除。这是本篇推理难度最高（⭐⭐⭐⭐⭐）的根本原因。</p>
+<hr>
+<h2 id="_21">补充说明</h2>
+<h3 id="_22">坡的三种推理模式，与文学史意义</h3>
+<p>这本选集之所以在推理文学史上无可取代，在于坡在一个十年内同时发明了三种根本不同的推理小说模式，且每种模式至今仍是流行类型的基础：</p>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>代表篇目</th>
+<th>后继传统</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>侦探推理</strong>（理性分析型侦探）</td>
+<td>莫尔格街兇杀案、玛丽·罗杰谜案</td>
+<td>柯南·道尔的福尔摩斯、克里斯蒂的白罗</td>
+</tr>
+<tr>
+<td><strong>解谜寻宝</strong>（密码学＋几何学）</td>
+<td>黄金甲虫</td>
+<td>大仲马《基督山恩仇记》的藏宝情节、达·芬奇密码系列</td>
+</tr>
+<tr>
+<td><strong>凶手视角</strong>（不可靠叙述者）</td>
+<td>一桶阿蒙提拉多、告密的心</td>
+<td>克里斯蒂《罗杰·艾克罗命案》的叙述者翻转</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dupin">Dupin 的推理哲学——为何他永远比警察更聪明</h3>
+<p>坡在《莫尔格街兇杀案》的开篇花费大量篇幅讨论「分析力」（analytical ability）与「聪明」（ingenuity）的差异，这不是废话，而是理解杜邦能力的钥匙：</p>
+<blockquote>
+<p><em>The analytical power should not be confounded with ample ingenuity; for while the analyst is necessarily ingenious, the ingenious man is often remarkably incapable of analysis.</em></p>
+</blockquote>
+<p>警察（以及维多克等传奇侦探）代表的是「聪明」——用直觉、经验、表面观察来追捕罪犯。杜邦代表的是「分析力」——从根本规则出发，不被眼前表象束缚。这个区分直接影响了后世所有推理小说的「侦探vs.警察」动态：福尔摩斯之于苏格兰场、白罗之于黑斯廷斯，无不如此。</p>
+<h3 id="_23">《玛丽·罗杰谜案》的特殊地位：推理文学史上第一个「真实案件改编」</h3>
+<p>坡在此篇大胆将虚构与现实混搭——所谓的「巴黎报纸 L'Etoile、Le Commerciel」实际上分别对应纽约的 New York Sun 和 Brother Jonathan；「玛丽·罗杰」即 Mary Cecilia Rogers，1841 年死于哈德逊河的真实女子。这种手法预示了一整个类型的诞生：<strong>真实犯罪分析文学</strong>（True Crime Narrative），从 Truman Capote 的《冷血》到今日的 True Crime Podcast，都是这条线索的继承者。</p>
+<p>但坡的大胆也为他制造了困境：他在案件仍未定论之时就把自己的推理公开发表，后来现实发展（有传言指向意外死亡而非谋杀）让他必须在脚注中悄悄修改结论。这使《玛丽·罗杰谜案》成为一个独一无二的文本——一个侦探小说家试图用虚构推理解开真实谋杀，并留下修改痕迹的标本。</p>
+<h3 id="_24">各篇推理难度分项评分</h3>
+<table>
+<thead>
+<tr>
+<th>篇目</th>
+<th>推理难度</th>
+<th>迷雾等级</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>黄金甲虫</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐</td>
+<td>密码解谜逻辑清晰，线索在故事前半段已完整给出，但需要几何知识才能完成最后步骤</td>
+</tr>
+<tr>
+<td>莫尔格街兇杀案</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>线索齐全但认知框架的突破才是真正难关；密室机关设计优雅</td>
+</tr>
+<tr>
+<td>玛丽·罗杰谜案</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>无法自行验证的开放式谜底；大量报纸「假线索」混淆视听；坡自己也没能完全解开</td>
+</tr>
+<tr>
+<td><strong>选集平均</strong></td>
+<td><strong>⭐⭐⭐⭐</strong></td>
+<td><strong>⭐⭐⭐</strong></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_25">对读者的补充</h3>
+<p><strong>Captain Kidd（基德船长）</strong> 是英美文化中最著名的传说海盗之一，17世纪末以「私掠船长」身份在大西洋活动，后被英国政府以海盗罪绞死（1701年）。关于他是否埋有巨额宝藏，至今仍是考古界与寻宝爱好者的话题，从缅因州到加勒比海都有宣称是「基德藏宝地」的地点。坡的《黄金甲虫》正是利用了这个广为人知的传说，让读者在不需要背景解说的情况下立刻理解故事的历史语境。</p>
+<p><strong>婆罗洲猩猩（Ourang-Outang of the Borneo species）</strong> 在 1841 年的欧洲属于珍稀异兽。Darwin 的《物种起源》要到 1859 年才出版，当时人类对灵长类动物的了解非常有限，猩猩被视为野蛮、神秘且危险的生物。坡选择猩猩作为「凶手」，不只是为了不可能犯罪的解谜效果，更利用了时代性的对灵长类的恐惧与未知感——对 1841 年读者而言，这个答案比今日读者感受到的更具冲击性。</p>
+    <a href="../index.html" class="back-link">← 回到首页</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">推理解剖室</p>
+    <p>五位作者 · 八十八部作品 · 一百三十五年推理文学的难度演化</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

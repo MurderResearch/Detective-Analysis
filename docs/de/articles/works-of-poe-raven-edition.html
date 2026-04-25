@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Die Werke von Edgar Allan Poe (Raben-Edition) — Deduzierbarkeitsanalyse — Detektivanalyse</title>
+<meta name="description" content="">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/works-of-poe-raven-edition.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/works-of-poe-raven-edition.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/works-of-poe-raven-edition.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/works-of-poe-raven-edition.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/works-of-poe-raven-edition.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/works-of-poe-raven-edition.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/works-of-poe-raven-edition.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/works-of-poe-raven-edition.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Detektivanalyse</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Start</a>
+        <a href="../index.html#latest">Neueste</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Sprache" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 Deutsch</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/works-of-poe-raven-edition.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/works-of-poe-raven-edition.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/works-of-poe-raven-edition.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/works-of-poe-raven-edition.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/works-of-poe-raven-edition.html">한국어</a>
+      <a class="lang-item active" data-lang="de" href="/Detective-Analysis/de/articles/works-of-poe-raven-edition.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/works-of-poe-raven-edition.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/works-of-poe-raven-edition.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">Edgar Allan Poe · </div>
+    <h1>Die Werke von Edgar Allan Poe (Raben-Edition) — Deduzierbarkeitsanalyse</h1>
+    <div class="subtitle">Edgar Allan Poe · Kurzgeschichtensammlung (fünf Bände; diese Analyse konzentriert sich auf die detektivischen Werke)</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Deduzierbarkeit</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Nebelgrad</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="die-werke-von-edgar-allan-poe-raben-edition-deduzierbarkeitsanalyse">Die Werke von Edgar Allan Poe (Raben-Edition) — Deduzierbarkeitsanalyse</h1>
+<p><em>The Works of Edgar Allan Poe, The Raven Edition</em></p>
+<h2 id="grundlegende-informationen">Grundlegende Informationen</h2>
+<ul>
+<li>Autor: Edgar Allan Poe</li>
+<li>Erscheinungsjahr: 1845–1850 (Erstveröffentlichung der Einzelwerke), Raben-Edition 1903</li>
+<li>Typ: Kurzgeschichtensammlung (fünf Bände; diese Analyse konzentriert sich auf die detektivischen Werke)</li>
+<li>Detektiv: C. Auguste Dupin, William Legrand</li>
+<li>Kern-Rätseltyp: whodunit / howdunit / wheredunit (Ort des versteckten Schatzes)</li>
+</ul>
+<hr>
+<h2 id="gesamtbewertung-der-deduzierbarkeit-sammlung-als-ganzes">Gesamtbewertung der Deduzierbarkeit (Sammlung als Ganzes)</h2>
+<table>
+<thead>
+<tr>
+<th>Indikator</th>
+<th>Sterne</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deduzierbarkeit</td>
+<td>⭐⭐⭐⭐</td>
+<td>Durchschnittlicher Konvergenzpunkt über alle Werke ca. 76%; Hinweise sind tief verborgen, die Schlussfolgerungen sind schwer zu vollenden, bevor der Detektiv die Lösung enthüllt</td>
+</tr>
+<tr>
+<td>Nebelgrad</td>
+<td>⭐⭐⭐</td>
+<td>Mäßige Irreführung — falsche Hinweise entstehen hauptsächlich durch Oberflächenerscheinungen, nicht durch strukturelle Erzähltäuschung; bei einigen Werken gibt es Ausnahmen</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Sammlungshinweis:</strong> Diese Ausgabe umfasst fünf Bände mit über vierzig Werken. Die drei mit dem stärksten detektivischen Charakter sind: <em>Der Goldkäfer</em> (The Gold-Bug), <em>Der Doppelmord in der Rue Morgue</em> (The Murders in the Rue Morgue), <em>Das Geheimnis der Marie Rogêt</em> (The Mystery of Marie Roget). Diese drei Geschichten repräsentieren jeweils eine andere Methode des Detektivdesigns bei Poe und werden unten einzeln eingehend analysiert.</p>
+</blockquote>
+<hr>
+<h2 id="handlungszusammenfassungen-nach-geschichte">Handlungszusammenfassungen (nach Geschichte)</h2>
+<h3 id="geschichte-eins-der-goldkafer-the-gold-bug-ca-zeilen-32924879">Geschichte Eins: Der Goldkäfer (The Gold-Bug, ca. Zeilen 3292–4879)</h3>
+<p>Legrand ist der verarmte Abkömmling einer alten Hugenottenfamilie, der sich auf Sullivan's Island niedergelassen hat. Eines Tages findet er am Strand einen golden schimmernden Käfer und gleichzeitig einen Fetzen, der sich später als Pergament herausstellt. Bei einem Freundesbesuch zeichnet Legrand mit dem Pergament ein Käfer-Skizze, zeichnet dabei aber nur einen Totenkopf — denn auf dem Pergament war bereits mit unsichtbarer Tinte ein Totenkopf eingeschrieben, der durch die Wärme des nahen Kaminfeuers sichtbar wurde. Von da an wird Legrand besessen vom „Goldkäfer", führt seinen Diener Jupiter und seinen Freund auf eine nächtliche Expedition in abgelegene Hügel, gräbt an einem durch die geometrische Beziehung zwischen Käfer und Schädel in einem alten Baum bestimmten Punkt und entdeckt schließlich einen gewaltigen Schatz des Piraten Kapitän Kidd. Im Prozess der Lösung erklärt Legrand später im Detail, wie er durch Frequenzanalyse den Geheimcode auf dem Pergament geknackt hat.</p>
+<p><strong>Besonderheit:</strong> Diese Geschichte hat fast kein Verbrechen; das zentrale Rätsel ist „Wo ist der Schatz?" (wheredunit), und die Werkzeuge der Schlussfolgerung sind Kryptographie und Geometrie.</p>
+<hr>
+<h3 id="geschichte-zwei-der-doppelmord-in-der-rue-morgue-the-murders-in-the-rue-morgue-ca-zeilen-52216666">Geschichte Zwei: Der Doppelmord in der Rue Morgue (The Murders in the Rue Morgue, ca. Zeilen 5221–6666)</h3>
+<p>In einer Pariser Karnevalsnacht hört man entsetzliche Schreie aus dem vierten Stock eines Wohnhauses. Nachbarn brechen die Tür auf und finden zwei Leichen vor: Eine junge Tochter wurde lebendig in den Kaminschacht gesteckt, einer alten Frau wurde beinahe der Kopf abgetrennt und ihr Körper aus dem Fenster in den Hinterhof geworfen. Alle Zugänge zur Wohnung sind von innen verriegelt. Die Polizei steht völlig ratlos da. Die einzigen Hinweise sind zwei Stimmen, die im Treppenhaus gehört wurden — eine tiefe französische Stimme und ein fremdartig schriller Laut, über dessen Sprache Zeugen aus verschiedenen Ländern völlig widersprüchliche Angaben machen. Detektiv Dupin wird durch die unschuldige Inhaftierung seines Dieners Le Bon angespornt, eigenständig zu ermitteln. Er schlussfolgert zunächst aus der Logik, dass „diese Stimme keiner menschlichen Sprache angehören kann", dass der Täter nicht menschlich sein muss, entdeckt dann einen gebrochenen Eisennagel an einem Fenster, einen verborgenen Federme­chanismus im Fensterrahmen sowie nicht-menschliche Haare in den Händen der toten Frau, und bestätigt schließlich, dass der Mörder ein Orang-Utan aus Borneo ist, dessen Besitzer ein französischer Matrose ist.</p>
+<p><strong>Besonderheit:</strong> Dies ist die erste moderne Detektivgeschichte der Literaturgeschichte. Ihr Kern ist das Howdunit — die Lösung eines unmöglichen Verbrechens.</p>
+<hr>
+<h3 id="geschichte-drei-das-geheimnis-der-marie-roget-the-mystery-of-marie-roget-ca-zeilen-66677743">Geschichte Drei: Das Geheimnis der Marie Rogêt (The Mystery of Marie Roget, ca. Zeilen 6667–7743)</h3>
+<p>Zwei Jahre später verschwindet Marie Rogêt, ein Mädchen aus einem Pariser Parfümgeschäft; vier Tage später taucht ihre Leiche in der Seine auf. Der Körper zeigt Anzeichen gewaltsamer Übergriffe gefolgt von Mord, am Hals befinden sich Würgemale und ein kunstvoll geknotetes Stück Spitze. Dupin verlässt nicht sein Zuhause, sondern stützt sich allein auf die Analyse von Zeugenaussagen und Kommentaren in verschiedenen Zeitungen, und schließt sukzessive folgende Verdächtige aus: die Behauptung „die Leiche sei nicht die ihre" (Fehlurteil der Zeitung L'Etoile), die Theorie „Bandenmordtat" (übermäßig rationalisierte Annahme), den Verdacht gegen ihren Verlobten St. Eustache — und gelangt schließlich zu dem Schluss, dass der Mörder ein geheimer Liebhaber war, mit dem Marie kurz durchgebrannt war, und der allein an einer abgelegenen Stelle am Seineufer handelte.</p>
+<p><strong>Besonderheit:</strong> Diese Geschichte ist fast ein als Roman verkleidetes kriminologisches Traktat und übernimmt direkt den echten Fall von Mary Rogers (New York, 1841). Alle „Pariser Zeitungen" sind adaptierte Versionen echter amerikanischer Berichte.</p>
+<hr>
+<h2 id="wahrheitsanalyse">Wahrheitsanalyse</h2>
+<hr>
+<h3 id="wahrheit-geschichte-eins-der-goldkafer">Wahrheit Geschichte Eins: Der Goldkäfer</h3>
+<hr>
+<h4 id="wahrheit-eins-der-ort-des-schatzes-wheredunit">Wahrheit Eins: Der Ort des Schatzes (wheredunit)</h4>
+<ul>
+<li><strong>Hinweis-Konvergenzpunkt: ca. 75%</strong></li>
+<li>Antwort: Kapitän Kidds Schatz ist 50 Fuß unter einer großen Tulpenpappel auf einem abgelegenen Hügel des Festlandes vergraben. Die Positionsbestimmung erfolgte durch Herunterlassen des Käfers durch das linke Augenloch eines am Baum befestigten Schädels und Ausdehnung einer geraden Linie um 50 Fuß.</li>
+</ul>
+<h5 id="schlusselhinweise">Schlüsselhinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position (%)</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Das Pergament (kein Papier) trägt ein unsichtbares Totenkopfmuster, das beim Erwärmen erscheint</td>
+<td>ca. 8–10%</td>
+<td>Pergament ist der Träger von Piraten-Geheimdokumenten; der Totenkopf ist das Piratensymbol — beide deuten auf Schatz hin</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Eine „Zicklein"-Figur erscheint auf einer anderen Ecke des Pergaments beim Erwärmen</td>
+<td>ca. 58%</td>
+<td>„Kid" ist der Wortspiel-Signatur von Kapitän Kidd, bestätigt die Identität des Schatzbesitzers</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Der Geheimtext ergibt durch Frequenzanalyse vollständige Anweisungen: „siebter Ast, Ostseite des Hauptstammes, schieß durch das linke Auge des Totenkopfes, verbinde Baum und Einschussloch, geh 50 Fuß"</td>
+<td>ca. 60–65%</td>
+<td><strong>Kernhinweis</strong> — alle physischen Koordinaten sind im Code verschlüsselt</td>
+</tr>
+<tr>
+<td>4</td>
+<td>„Bishop's Hostel" bezeichnet den alten Ortsnamen Bessop's Castle — ein hoher Felsen mit einem natürlichen Sitz (Devil's Seat)</td>
+<td>ca. 67%</td>
+<td>Der Blickwinkel vom Sitz bestimmt den Elevationswinkel und die Richtung des Teleskops, die einzig praktikable Methode zur Lokalisierung des Schädelbaums</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Jupiter lässt den Käfer durch das rechte statt das linke Augenloch fallen, was die erste Ausgrabung zum Scheitern bringt</td>
+<td>ca. 72% (nach fehlgeschlagener Ausgrabung)</td>
+<td><strong>Der letzte Schlüsselhinweis</strong> — bestätigt die Präzision und Symmetrie der gesamten Methode und erklärt den Fehler</td>
+</tr>
+</tbody>
+</table>
+<h5 id="unterstutzende-hinweise">Unterstützende Hinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position (%)</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Der Käfer wurde am Strand gefunden, in der Nähe der Überreste eines alten Schiffswracks</td>
+<td>ca. 12%</td>
+<td>Alte Schiffswrack-Stätte, deutet auf Piratenaktivität in der Gegend hin</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Legrand hat gehört, dass Kidds verstecktes Gold noch nie jemand gefunden hat</td>
+<td>ca. 65%</td>
+<td>Bekräftigt den Schluss, dass der Schatz noch unter der Erde liegt</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Am Boden der Grube werden zwei vollständige menschliche Skelette und verstreute Goldmünzen gefunden</td>
+<td>ca. 75%</td>
+<td>Bestätigt die historische Realität der Grube — Kidd tötete seine Helfer nach dem Vergraben</td>
+</tr>
+</tbody>
+</table>
+<h5 id="falsche-hinweise">Falsche Hinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position (%)</th>
+<th>Irreführende Richtung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Legrands manische Obsession für den „Goldkäfer", seine ständige Behauptung, der Käfer sei „der Führer zum Reichtum"</td>
+<td>Gesamte Geschichte</td>
+<td>Verleitet den Leser zu glauben, der Käfer selbst (als natürliches Gold) sei der Schlüssel zum Schatz, und lässt das Pergament als echte Karte außer Acht</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Legrand hängt den echten Käfer (einen schweren goldenen Skarabäus) an einem Faden auf, als würde er ihn ins Augenloch des Schädels fallen lassen</td>
+<td>ca. 70%</td>
+<td>Leser und Freund meinen, es handele sich um ein symbolisches Ritual; tatsächlich ist es ein praktisches Messinstrument (Ersatz für ein Lot)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Die erste Ausgrabung bringt gar nichts</td>
+<td>ca. 72%</td>
+<td>Lässt den Leser (und den Freund) glauben, der gesamte Plan sei Illusion; tatsächlich war es nur eine kleine Abweichung durch den Unterschied zwischen linkem und rechtem Auge</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="wahrheit-zwei-das-prinzip-der-chiffrenentschlusselung-howdunit">Wahrheit Zwei: Das Prinzip der Chiffrenentschlüsselung (howdunit)</h4>
+<ul>
+<li><strong>Hinweis-Konvergenzpunkt: ca. 65%</strong></li>
+<li>Antwort: Eine monoalphabetische Substitutionschiffre wird verwendet, entschlüsselt durch englische Buchstabenfrequenzanalyse, beginnend mit dem häufigsten Symbol „8", das „e" entspricht, und schrittweise alle Buchstaben ableitend.</li>
+</ul>
+<h5 id="schlusselhinweise_1">Schlüsselhinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position (%)</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Legrand zählt die Häufigkeit jedes Symbols auf dem Pergament und stellt fest, dass „8" 33 Mal vorkommt</td>
+<td>ca. 62%</td>
+<td>Ausgangspunkt der Frequenzanalyse — die hohe Häufigkeit von „e" im Englischen weist auf „8" = „e" hin</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Die Dreiergruppe „;48" erscheint 7 Mal und wird als „the" identifiziert</td>
+<td>ca. 63%</td>
+<td>„The" ist die häufigste Dreierfolge im Englischen — dieser Schritt etabliert drei Kernbuchstaben</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Aus „t ee" wird „tree" abgeleitet, was den Buchstaben „r" ergibt</td>
+<td>ca. 64%</td>
+<td>Bekannte Buchstaben und semantisches Ausfüllen überprüfen sich gegenseitig und leiten neue Buchstaben ab</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="wahrheit-geschichte-zwei-der-doppelmord-in-der-rue-morgue">Wahrheit Geschichte Zwei: Der Doppelmord in der Rue Morgue</h3>
+<hr>
+<h4 id="wahrheit-eins-die-identitat-des-morders-whodunit">Wahrheit Eins: Die Identität des Mörders (whodunit)</h4>
+<ul>
+<li><strong>Hinweis-Konvergenzpunkt: ca. 80%</strong></li>
+<li>Antwort: Der Mörder ist ein Borneanischer Orang-Utan (Ourang-Outang), dessen Besitzer ein französischer Matrose ist. Der Orang-Utan hat nicht absichtlich getötet; er verlor die Kontrolle, während er seinen Herrn beim Rasieren nachahmte, nachdem er erschreckt worden war.</li>
+</ul>
+<h5 id="schlusselhinweise_2">Schlüsselhinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position (%)</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Zeugen aus verschiedenen Ländern machen völlig widersprüchliche Angaben über die Sprache des „schrillen Fremdgeräuschs" — der Italiener sagt Russisch, der Franzose sagt Spanisch, der Spanier sagt Englisch…</td>
+<td>ca. 50%</td>
+<td><strong>Der zentralste Hinweis</strong> — eine Stimme, die niemand als irgendeine menschliche Sprache identifizieren kann, hat nur eine Erklärung: nicht-menschliche Lautgebung</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Die rauhe Stimme ruft auf Französisch „Mon Dieu!" (Mein Gott!), mit einem Ton von Angst, nicht von Wut</td>
+<td>ca. 52%</td>
+<td>Zeigt, dass die rauhe Stimme einem menschlichen Beobachter gehört, der alles gesehen hat, nicht dem Täter</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Würgemale — der Griff der Fingerabdrücke übersteigt bei weitem die physiologische Grenze jeder menschlichen Hand</td>
+<td>ca. 75%</td>
+<td>Anatomische Direktverneinung: Diese Kraft liegt jenseits menschlicher Fähigkeiten</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Das Haar, das die tote alte Frau in der Hand hält, ist nicht-menschliches Haar — Dupin zeigt es seinem Freund</td>
+<td>ca. 76%</td>
+<td>Der schlagendste physische Beweis — das Haar gehört zu keiner menschlichen Rasse</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Dupin zitiert Cuviers anatomische Beschreibung eines Orang-Utans, die exakt mit den Würgemalen übereinstimmt</td>
+<td>ca. 78%</td>
+<td><strong>Konvergenzpunkt</strong> — an diesem Punkt ist die nicht-menschliche Identität des Mörders bestätigt</td>
+</tr>
+</tbody>
+</table>
+<h5 id="unterstutzende-hinweise_1">Unterstützende Hinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position (%)</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Das schrille Fremdgeräusch wird als „harsh rather than shrill" (rau statt schrill) und „quick and unequal" (schnell und ungleichmäßig) beschrieben</td>
+<td>ca. 51%</td>
+<td>Keine Eigenschaften einer menschlichen Stimme, sondern Tierlautgebung</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Am Fuß des Blitzableiters findet Dupin ein Band mit einem Matrosenknoten — einem maltesischen Knoten, der für Matrosen typisch ist</td>
+<td>ca. 82%</td>
+<td>Bestätigt die Identität des „französischen Matrosen" und ergänzt die Anzeigenstrategie</td>
+</tr>
+</tbody>
+</table>
+<h5 id="falsche-hinweise_1">Falsche Hinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position (%)</th>
+<th>Irreführende Richtung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Viertausend Goldfranken, drei Tage vor dem Verbrechen abgehoben, liegen unberührt am Tatort</td>
+<td>ca. 48%</td>
+<td>Lässt den Leser (und die Polizei) glauben, es handele sich um einen Raubmord aus finanziellem Konflikt — das monetäre Motiv ist völlig falsch</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Der extrem chaotische Zustand des Tatorts (umgeworfene Möbel, in den Schornstein gezwängte Leiche)</td>
+<td>ca. 45%</td>
+<td>Lässt vermuten, der Täter sei ein großer, rasender Mensch oder mehrere Verschwörer</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Alle Türen und Fenster sind von innen verriegelt</td>
+<td>ca. 47%</td>
+<td>Der „abgeschlossene Raum"-Effekt führt die Polizei in eine Sackgasse und lässt die Möglichkeit des Federmechanismus im Fensterrahmen und des abgebrochenen Nagels außer Acht</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="wahrheit-zwei-die-einstiegs-und-ausstiegsmethode-howdunit-losung-des-unmoglichen-verbrechens">Wahrheit Zwei: Die Einstiegs- und Ausstiegsmethode (howdunit / Lösung des unmöglichen Verbrechens)</h4>
+<ul>
+<li><strong>Hinweis-Konvergenzpunkt: ca. 75%</strong></li>
+<li>Antwort: Der Orang-Utan klettert den Blitzableiter hinauf und schwingt sich mithilfe der speziellen eisernen Fensterläden (ferrades) in das Fenster im vierten Stock; beim Verlassen schnappt das Fenster durch eine Feder automatisch zu, der Nagelkopf sieht intakt aus (obwohl er zuvor abgebrochen war).</li>
+</ul>
+<h5 id="schlusselhinweise_3">Schlüsselhinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position (%)</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Bei seiner Inspektion achtet Dupin besonders auf die eisernen Fensterläden (ferrades) des hinteren Fensters — diese alten Fensterläden können aufgrund ihrer speziellen Struktur zusammen mit dem Blitzableiter einen Schaukelpfad bilden</td>
+<td>ca. 68%</td>
+<td>Dies ist der Ausgangspunkt des Einstiegswegs; die Polizei hat die Breite der Läden nie bemerkt</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Der Nagel am ersten Fenster ist intakt; Dupin öffnet es und entdeckt eine verborgene Feder — das Fenster schnappt automatisch zu</td>
+<td>ca. 70%</td>
+<td>Bestätigt die Existenz des „Federmechanismus" und zeigt, dass der Nagelzustand nicht bedeutet, das Fenster sei unpassierbar</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Der Nagelkopf am zweiten Fenster kann herausgezogen werden — der Nagel war bei einem früheren Aufprall bereits abgebrochen, nur der Kopf ist verblieben</td>
+<td>ca. 73%</td>
+<td><strong>Konvergenzpunkt</strong> — dies ist der echte Ein- und Ausstiegspunkt; beim Verlassen schnappt die Feder zu, und der abgebrochene Nagelkopf imitiert perfekt einen intakten Nagel</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="wahrheit-geschichte-drei-das-geheimnis-der-marie-roget">Wahrheit Geschichte Drei: Das Geheimnis der Marie Rogêt</h3>
+<hr>
+<h4 id="wahrheit-eins-die-identitat-des-morders-whodunit_1">Wahrheit Eins: Die Identität des Mörders (whodunit)</h4>
+<ul>
+<li><strong>Hinweis-Konvergenzpunkt: ca. 90%</strong></li>
+<li>Antwort: Dupin verweist schließlich auf einen namentlich nicht genannten „geheimen Liebhaber" — einen Marineoffizier, mit dem Marie kurz davongelaufen war (entsprechend Payne oder Crommelin im echten Mary-Rogers-Fall), der allein handelte und sie an einer abgelegenen Stelle am Flussufer umbrachte.</li>
+</ul>
+<blockquote>
+<p><strong>Wichtiger Hinweis:</strong> Dies ist die Geschichte mit der „ungewissesten" Lösung unter allen Detektivgeschichten Poes. Als Poe schrieb, war der echte Mordfall noch nicht gelöst; seine Schlussfolgerungen waren probabilistische Urteile auf der Grundlage vorhandener Berichte, keine unumstößlichen Ableitungen — und er selbst gibt in einer Fußnote am Ende zu, dass einige seiner Schlüsse später durch die Tatsachen korrigiert wurden. Dies ist der grundlegendste Unterschied zwischen dieser Geschichte und den anderen beiden.</p>
+</blockquote>
+<h5 id="schlusselhinweise_4">Schlüsselhinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position (%)</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Das Band um den Hals der Leiche ist mit einem „Matrosenknoten" oder „Schiebeknoten" gebunden, nicht mit einer Schleife, die Frauen gewöhnlich binden</td>
+<td>ca. 55%</td>
+<td>Deutet darauf hin, dass der Mörder mit dem Meer verbunden sein könnte (Matrose, Offizier) oder zumindest spezielle Knotentechnik gelernt hat</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Der äußere Rock der Leiche ist in Streifen gerissen und dreimal um die Taille gewickelt; ein Streifen des Unterrocks wurde herausgerissen und um den Hals gewickelt — das Reißen ist „ordentlich und sorgfältig", kein Kontrollverlust im Affekt</td>
+<td>ca. 56%</td>
+<td>Schließt Mob-Gewalt aus; weist auf einen einzigen, planvollen Täter hin</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Marie war ein Jahr zuvor ohne Erklärung eine Woche lang verschwunden und dann zurückgekehrt, mit einer vagen Entschuldigung — was andeutet, dass sie damals bereits einen geheimen Liebhaber hatte</td>
+<td>ca. 40%</td>
+<td>Die Identität dieses geheimen Liebhabers steht in direktem Zusammenhang mit dem Fall und ist der Ursprung des Motivs</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Dupins Schlussfolgerung: Das Dickicht am Flussufer in der Nähe der Leiche ist der eigentliche Tatort, nicht das gerüchtete „Barrière du Roule"</td>
+<td>ca. 85%</td>
+<td><strong>Die letzte Positionsschlussfolgerung</strong> — im Dickicht werden ein Frauentaschentuch, ein Taschentuchpolster, ein Sonnenschirm und Kleidungsreste gefunden</td>
+</tr>
+</tbody>
+</table>
+<h5 id="unterstutzende-hinweise_2">Unterstützende Hinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position (%)</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Die Leiche taucht früher als der normale Verwesungszeitplan in der Seine auf (drei Tage statt sechs bis zehn) — L'Etoiles Argument wird von Dupin widerlegt</td>
+<td>ca. 42%</td>
+<td>Bestätigt, dass die Leiche tatsächlich Marie ist, und schließt die Hypothese aus, dass „die Leiche jemand anderem gehört"</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Keine Schaum auf der Leiche (schließt einfaches Ertrinken aus); am Hals Würgemale durch Hände, nicht durch ein Seil (Haupttodesursache ist Erstickung)</td>
+<td>ca. 37%</td>
+<td>Bestätigt einen vorsätzlichen Mord, keinen Unfall oder Selbstmord</td>
+</tr>
+</tbody>
+</table>
+<h5 id="falsche-hinweise_2">Falsche Hinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position (%)</th>
+<th>Irreführende Richtung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Zertrampeltes Gras in der Nähe von Barrière du Roule, das die Zeitungen als Szene einer Bandenmassenschlägerei deklarieren</td>
+<td>ca. 50%</td>
+<td>Dupin argumentiert, diese Spuren wurden Tage nach dem Verbrechen entdeckt, stimmen zeitlich nicht mit Maries Tod überein und könnten von späteren, unverbundenen Personen hinterlassen worden sein</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Beauvais steckte eine Rose in sein Büroschlüsselloch und schrieb den Namen „Marie" auf eine Schiefertafel</td>
+<td>ca. 47%</td>
+<td>Von Zeitungen genutzt, um Beauvais als geheimen Liebhaber oder Komplizen anzudeuten; tatsächlich war es nur die romantische Geste eines stillen Verehrers</td>
+</tr>
+<tr>
+<td>3</td>
+<td>St. Eustache (der Verlobte) kann anfangs seinen Aufenthaltsort am Tag des Verbrechens nicht erklären</td>
+<td>ca. 48%</td>
+<td>Lässt jeden zuerst den Nächststehenden verdächtigen; später reichte er eine vollständige Zeitleiste ein, die seine Unschuld bewies</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="rekonstruktion-der-schlussfolgerungspfade">Rekonstruktion der Schlussfolgerungspfade</h2>
+<h3 id="der-schlussfolgerungspfad-des-goldkafers">Der Schlussfolgerungspfad des Goldkäfers</h3>
+<p>Das größte Hindernis für den Leser ist die „Perspektivverzerrung" — die gesamte Geschichte wird vom Freund (dem Erzähler) erzählt, der von Anfang bis Ende glaubt, Legrand sei geisteskrank, weshalb alle Hinweise in einen Nebel des Zweifels gehüllt sind.</p>
+<p><strong>Der erste Punkt, an dem Zweifel möglich ist (ca. 10%):</strong> Das Pergament erscheint. Ein aufmerksamer Leser sollte bemerken, wenn der Freund sagt, die Zeichnung sehe wie ein Totenkopf aus, dass auf dem Papier „bereits" ein Muster vorhanden ist — weil Legrand ausdrücklich betont, er habe einen Käfer gezeichnet, der völlig anders aussieht. Pergament, nicht Papier, ist Poes größter Hinweis: Wichtige Dokumente verwenden Pergament.</p>
+<p><strong>Der zweite Punkt (ca. 58%):</strong> Die Zicklein-Figur erscheint und Legrand erwähnt das Wortspiel mit „Captain Kidd". Zu diesem Zeitpunkt kann der Leser bestätigen, dass dies ein Codes einer Schatzkarte ist.</p>
+<p><strong>Hinweis-Konvergenzpunkt (ca. 65–75%):</strong> Der Code ergibt vollständige Anweisungen; die Positionsbestimmung „Devil's Seat" gelingt; der Totenkopf erscheint nach dem Klettern des Affen auf den Baum. An diesem Punkt kann der Leser theoretisch die abschließende Berechnung selbst durchführen — aber nur, wenn der Leser weiß, wie man geometrische Messungen vornimmt. Poe nahm an, dass Leser diesen Schritt nicht selbst abschließen können, und wartet auf Legrands Erklärung.</p>
+<hr>
+<h3 id="der-schlussfolgerungspfad-des-doppelmords-in-der-rue-morgue">Der Schlussfolgerungspfad des Doppelmords in der Rue Morgue</h3>
+<p><strong>Der erste Punkt, an dem Zweifel möglich ist (ca. 50%):</strong> Dupin weist darauf hin, dass „die Stimme von einem Italiener, Franzosen, Spanier, Niederländer und Engländer jeweils als verschiedene Landessprachen identifiziert wurde, aber jeder war sicher, es sei keine Sprache, die er erkennen konnte." Dieser logische Sprung ist das brillanteste Rätsel-Design dieser Geschichte: Eine „Sprache", die jeder hört, aber niemand identifizieren kann, hat nur eine Möglichkeit — sie ist überhaupt keine menschliche Sprache.</p>
+<p>Ein sorgfältiger Leser sollte an dieser Stelle die richtige Hypothese aufstellen können, aber fast niemand schafft es, weil die Schlussfolgerung „der Mörder ist ein Tier" die grundlegende Annahme über Mordfälle durchbricht, die Leser von 1841 (und auch heutige Leser) hegen.</p>
+<p><strong>Bestätigungspunkt (ca. 76–78%):</strong> Nicht-menschliche Haare + Cuviers Orang-Utan-Anatomiebeschreibung. Dies ist der doppelte Bestätigungsmechanismus der Geschichte — zuerst physischer Beweis, dann biologische Begründung, was einen unwiderlegbaren geschlossenen Kreis bildet.</p>
+<p><strong>Bewertung der Deduzierbarkeit:</strong> Der zentrale Schwierigkeitspunkt dieser Geschichte liegt nicht in der Anzahl der Hinweise, sondern im <strong>kognitiven Rahmen</strong> des Lesers — wir können uns nicht vorstellen, dass ein Tier das Verbrechen begeht, weshalb selbst wenn alle Hinweise vorhanden sind, die meisten Leser nicht schlussfolgern können, bevor Dupin es enthüllt. Dies ist Poes klügstes Design.</p>
+<hr>
+<h3 id="der-schlussfolgerungspfad-des-geheimnisses-der-marie-roget">Der Schlussfolgerungspfad des Geheimnisses der Marie Rogêt</h3>
+<p>Der Schlussfolgerungspfad dieser Geschichte ist grundlegend anders als bei den beiden anderen: Es geht nicht um „Schlussfolgerung von Hinweisen zu Antworten", sondern um „schrittweise Eliminierung verschiedener falscher Hypothesen, um die einzige Möglichkeit einzugrenzen" — also Eliminationsverfahren.</p>
+<p><strong>Dupins dreistufige Elimination:</strong>
+1. Zuerst Eliminierung von „die Leiche ist nicht ihre" (L'Etoiles Berichterstattungs-Argumentation ist nicht stichhaltig)
+2. Dann Eliminierung von „Bandenkomplott mehrerer Personen" (die Art des Zerreiß-ens der Kleidung ist zu ordentlich, was auf einen einzigen, ruhigen Täter hindeutet)
+3. Schließlich Eliminierung von „der Verlobte als Mörder" (die Zeitleiste ist klar überprüfbar)</p>
+<p>Was übrig bleibt, ist nur die Hypothese „geheimer Liebhaber als Einzeltäter".</p>
+<p>Für den Leser ist der Raum für unabhängige Schlussfolgerungen in dieser Geschichte fast null — alle „Schlüsselhinweise" sind Zeitungsberichte, der Leser erhält die Informationen gleichzeitig mit Dupin, aber ohne Dupins forensische und statistische Ausbildung ist es nahezu unmöglich, die Elimination selbst zu vervollständigen. Dies ist der grundlegende Grund, warum diese Geschichte den höchsten Schwierigkeitsgrad (⭐⭐⭐⭐⭐) hat.</p>
+<hr>
+<h2 id="erganzende-anmerkungen">Ergänzende Anmerkungen</h2>
+<h3 id="poes-drei-schlussfolgerungsmodelle-und-ihre-literaturhistorische-bedeutung">Poes drei Schlussfolgerungsmodelle und ihre literaturhistorische Bedeutung</h3>
+<p>Der Grund, warum diese Sammlung in der Geschichte der Kriminalliteratur unersetzlich ist, liegt darin, dass Poe innerhalb eines Jahrzehnts gleichzeitig drei grundlegend verschiedene Kriminalroman-Modelle erfand, und jedes Modell bildet bis heute die Grundlage eines populären Genres:</p>
+<table>
+<thead>
+<tr>
+<th>Modell</th>
+<th>Repräsentatives Werk</th>
+<th>Nachfolgende Tradition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Detektivisches Schlussfolgern</strong> (rational-analytischer Detektiv)</td>
+<td>Der Doppelmord in der Rue Morgue, Das Geheimnis der Marie Rogêt</td>
+<td>Conan Doyles Sherlock Holmes, Christies Poirot</td>
+</tr>
+<tr>
+<td><strong>Rätsel-Schatzsuche</strong> (Kryptographie + Geometrie)</td>
+<td>Der Goldkäfer</td>
+<td>Dumas' Schatzsuche in <em>Der Graf von Monte Christo</em>, Da-Vinci-Code-Serie</td>
+</tr>
+<tr>
+<td><strong>Mörder-Perspektive</strong> (unzuverlässiger Erzähler)</td>
+<td>Das Fass Amontillado, Das verräterische Herz</td>
+<td>Christies Erzählerumkehrung in <em>Alibi</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="dupins-schlussfolgerungsphilosophie-warum-er-immer-kluger-ist-als-die-polizei">Dupins Schlussfolgerungsphilosophie — Warum er immer klüger ist als die Polizei</h3>
+<p>Poe widmet zu Beginn von <em>Der Doppelmord in der Rue Morgue</em> viel Platz der Diskussion des Unterschieds zwischen „analytischer Fähigkeit" und „Scharfsinn" — dies ist keine Weitschweifigkeit, sondern der Schlüssel zum Verständnis von Dupins Fähigkeiten:</p>
+<blockquote>
+<p><em>The analytical power should not be confounded with ample ingenuity; for while the analyst is necessarily ingenious, the ingenious man is often remarkably incapable of analysis.</em></p>
+</blockquote>
+<p>Die Polizei (und legendäre Detektive wie Vidocq) repräsentieren „Scharfsinn" — Kriminelle durch Intuition, Erfahrung und Oberflächenbeobachtung zu jagen. Dupin repräsentiert „analytische Fähigkeit" — von grundlegenden Regeln auszugehen, nicht durch Oberflächenerscheinungen gebunden. Diese Unterscheidung beeinflusste direkt die „Detektiv vs. Polizei"-Dynamik aller späteren Kriminalromane: Holmes versus Scotland Yard, Poirot versus Hastings — alles folgt diesem Muster.</p>
+<h3 id="der-besondere-status-von-das-geheimnis-der-marie-roget-die-erste-echte-fall-adaptation-in-der-geschichte-der-kriminalliteratur">Der besondere Status von <em>Das Geheimnis der Marie Rogêt</em>: Die erste „echte Fall-Adaptation" in der Geschichte der Kriminalliteratur</h3>
+<p>Poe vermischte kühn Fiktion und Realität in dieser Geschichte — die sogenannten „Pariser Zeitungen <em>L'Etoile</em> und <em>Le Commerciel</em>" entsprechen tatsächlich der New Yorker <em>Sun</em> und <em>Brother Jonathan</em>; „Marie Rogêt" ist Mary Cecilia Rogers, eine echte Frau, die 1841 im Hudson River ums Leben kam. Diese Methode antizipierte die Geburt eines ganzen Genres: <strong>True Crime Narrative Literature</strong> — von Truman Capotes <em>Kaltblütig</em> bis zu heutigen True-Crime-Podcasts — alle sind Erben dieser Linie.</p>
+<p>Aber Poes Kühnheit brachte ihm auch Schwierigkeiten: Er veröffentlichte seine Schlussfolgerungen öffentlich, während der echte Fall noch ungelöst war; spätere Entwicklungen (Gerüchte, die auf einen Unfall statt auf Mord hindeuteten) zwangen ihn, seine Schlussfolgerungen in Fußnoten still zu korrigieren. Dies macht <em>Das Geheimnis der Marie Rogêt</em> zu einem einzigartigen Text — ein Kriminalromanautor, der versucht, einen echten Mord durch fiktive Schlussfolgerung zu lösen, mit sichtbaren Spuren von Revisionen.</p>
+<h3 id="individuelle-deduzierbarkeits-bewertungen">Individuelle Deduzierbarkeits-Bewertungen</h3>
+<table>
+<thead>
+<tr>
+<th>Geschichte</th>
+<th>Deduzierbarkeit</th>
+<th>Nebelgrad</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Der Goldkäfer</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐</td>
+<td>Die Kryptologik ist klar; Hinweise werden in der ersten Hälfte vollständig gegeben, aber geometrisches Wissen ist nötig, um den letzten Schritt abzuschließen</td>
+</tr>
+<tr>
+<td>Der Doppelmord in der Rue Morgue</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>Hinweise sind vollständig, aber den kognitiven Rahmen zu durchbrechen ist die eigentliche Herausforderung; das Design des gesperrten Raums ist elegant</td>
+</tr>
+<tr>
+<td>Das Geheimnis der Marie Rogêt</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>Eine offene Antwort, die nicht unabhängig überprüft werden kann; massive Zeitungs-„Falschhinweise" verwirren; Poe selbst konnte es nicht vollständig lösen</td>
+</tr>
+<tr>
+<td><strong>Sammlungsdurchschnitt</strong></td>
+<td><strong>⭐⭐⭐⭐</strong></td>
+<td><strong>⭐⭐⭐</strong></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="erganzende-hinweise-fur-leser">Ergänzende Hinweise für Leser</h3>
+<p><strong>Kapitän Kidd (Captain Kidd)</strong> ist einer der berühmtesten legendären Piraten in der anglo-amerikanischen Kultur. Im späten 17. Jahrhundert als „Freibeuter" auf dem Atlantik tätig, wurde er 1701 von der britischen Regierung wegen Piraterie gehängt. Ob er tatsächlich einen riesigen Schatz begraben hat, ist bis heute ein Thema für Archäologen und Schatzsucher, von Maine bis zur Karibik gibt es Orte, die behaupten, Kidds Schatzgrabstätte zu sein. Poes <em>Der Goldkäfer</em> nutzt diese weithin bekannte Legende, damit Leser den historischen Kontext der Geschichte sofort verstehen, ohne Hintergrundinformationen zu benötigen.</p>
+<p><strong>Der Borneanische Orang-Utan (Ourang-Outang of the Borneo species)</strong> war 1841 in Europa ein seltenes Tier. Darwins <em>Über die Entstehung der Arten</em> sollte erst 1859 erscheinen; das menschliche Verständnis von Primaten war damals sehr begrenzt, und Orang-Utans galten als wilde, geheimnisvolle und gefährliche Tiere. Poes Wahl eines Orang-Utans als „Mörder" war nicht nur für den Unmöglichkeitsverbrechens-Effekt — sie nutzte auch die zeittypische Angst vor und Unkenntnis von Primaten. Für Leser von 1841 war diese Antwort weitaus schockierender als für heutige Leser.</p>
+    <a href="../index.html" class="back-link">← Zur Startseite</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Detektivanalyse</p>
+    <p>Fünf Autoren · achtundachtzig Werke · 135 Jahre Entwicklung der Schwierigkeit im Kriminalroman.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

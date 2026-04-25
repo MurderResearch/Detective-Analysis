@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Works of Edgar Allan Poe (Raven Edition) — Detective Analysis</title>
+<meta name="description" content=" Story One: The Gold-Bug (approx. lines 3292–4879) Legrand is a descendant of an old Huguenot family who has fallen on hard times and settled on Sullivan's Isla">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/works-of-poe-raven-edition.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/works-of-poe-raven-edition.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/works-of-poe-raven-edition.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/works-of-poe-raven-edition.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/works-of-poe-raven-edition.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/works-of-poe-raven-edition.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/works-of-poe-raven-edition.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/works-of-poe-raven-edition.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Detective Analysis</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#latest">Latest</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Language" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 English</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/works-of-poe-raven-edition.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/works-of-poe-raven-edition.html">简体中文</a>
+      <a class="lang-item active" data-lang="en" href="/Detective-Analysis/en/articles/works-of-poe-raven-edition.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/works-of-poe-raven-edition.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/works-of-poe-raven-edition.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/works-of-poe-raven-edition.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/works-of-poe-raven-edition.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/works-of-poe-raven-edition.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">Edgar Allan Poe · </div>
+    <h1>The Works of Edgar Allan Poe (Raven Edition)</h1>
+    <div class="subtitle">Edgar Allan Poe · Short story collection (five volumes; this analysis focuses on the detective-related works)</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Deducibility</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Fog Rating</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="the-works-of-edgar-allan-poe-raven-edition-deducibility-analysis">The Works of Edgar Allan Poe (Raven Edition) — Deducibility Analysis</h1>
+<p><em>The Works of Edgar Allan Poe, The Raven Edition</em></p>
+<h2 id="metadata">Metadata</h2>
+<ul>
+<li>Author: Edgar Allan Poe</li>
+<li>Year: 1845–1850 (original publications of individual works); Raven Edition anthology 1903</li>
+<li>Type: Short story collection (five volumes; this analysis focuses on the detective-related works)</li>
+<li>Detective: C. Auguste Dupin, William Legrand</li>
+<li>Core mystery type: whodunit / howdunit / wheredunit (location of hidden treasure)</li>
+</ul>
+<hr>
+<h2 id="overall-deducibility-rating-collection-as-a-whole">Overall Deducibility Rating (Collection as a Whole)</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Stars</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deducibility</td>
+<td>⭐⭐⭐⭐</td>
+<td>Average convergence point across works is approximately 76%; clues are deeply hidden and the reasoning process is difficult to complete independently before the detective reveals the solution</td>
+</tr>
+<tr>
+<td>Fog Rating</td>
+<td>⭐⭐⭐</td>
+<td>Moderate misdirection — false clues are generated primarily through surface appearances rather than structural narrative deception; some works are exceptions</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Collection Note:</strong> This edition collects five volumes comprising over forty works. The three with the strongest detective reasoning are: <em>The Gold-Bug</em>, <em>The Murders in the Rue Morgue</em>, and <em>The Mystery of Marie Rogêt</em>. These three stories each represent a different detective design strategy employed by Poe, and each is analyzed in depth below.</p>
+</blockquote>
+<hr>
+<h2 id="synopsis-by-story">Synopsis (by Story)</h2>
+<h3 id="story-one-the-gold-bug-approx-lines-32924879">Story One: The Gold-Bug (approx. lines 3292–4879)</h3>
+<p>Legrand is a descendant of an old Huguenot family who has fallen on hard times and settled on Sullivan's Island. One day he finds a brilliantly golden beetle on the shore, and at the same time picks up a scrap of what later proves to be parchment. When a friend visits, Legrand uses the parchment to sketch the beetle, but draws only a skull — because invisible ink had already been written on the parchment in the form of a skull, which heat from a nearby fire causes to appear. From this point on, Legrand becomes obsessively fixated on the "Gold-Bug," and leads his servant Jupiter and his friend on a night expedition into a remote hill, digging at a spot determined by the geometric relationship between the beetle and a skull in an old tree, ultimately unearthing an enormous treasure buried by the pirate Captain Kidd. In the process of solving the mystery, Legrand later explains in detail how he used frequency analysis to crack the cipher on the parchment.</p>
+<p><strong>Distinctive Feature:</strong> This story involves almost no crime; its central puzzle is "where is the treasure?" (wheredunit), and the tools of deduction are cryptography and geometry.</p>
+<hr>
+<h3 id="story-two-the-murders-in-the-rue-morgue-approx-lines-52216666">Story Two: The Murders in the Rue Morgue (approx. lines 5221–6666)</h3>
+<p>On a Parisian carnival night, terrifying screams come from the fourth floor of an apartment building. Neighbors break down the door to find two bodies: a young daughter has been forced up into the chimney flue while still alive, and an old woman's head has nearly been severed, her body hurled from a window into the courtyard below. Every entrance to the apartment is locked from the inside. The police are completely baffled. The only clues are two voices heard on the staircase — one a coarse French voice, the other a strange, shrill sound whose language witnesses from different countries each identify differently. Detective Dupin is spurred to investigate independently when his servant Le Bon is unjustly imprisoned. He first deduces from the logic that "that voice cannot belong to any human language" that the killer must be non-human, then discovers a broken iron nail near a window, a hidden spring mechanism in the window frame, and inhuman hair clutched in the dead woman's hand, ultimately determining that the killer is an orangutan from Borneo, owned by a French sailor.</p>
+<p><strong>Distinctive Feature:</strong> This is the first modern detective story in literary history. Its core is a howdunit — the solution to an impossible crime.</p>
+<hr>
+<h3 id="story-three-the-mystery-of-marie-roget-approx-lines-66677743">Story Three: The Mystery of Marie Rogêt (approx. lines 6667–7743)</h3>
+<p>Two years later, Marie Rogêt, a Parisian perfumery shopgirl, disappears; four days later her body surfaces in the Seine. The corpse shows signs of violent assault followed by murder, with a strangulation mark and a piece of intricately knotted lace around her neck. Dupin never leaves home; relying solely on analysis of testimony and commentary published in various newspapers, he progressively eliminates the following suspects: the claim that "the body is not hers" (a misjudgment by the newspaper <em>L'Etoile</em>), the theory of "gang violence" (an over-rationalized assumption), and the suspicion of her fiancé St. Eustache — ultimately converging on the conclusion that the murderer was a secret lover with whom Marie had briefly eloped, acting alone, at some remote thicket along the banks of the Seine.</p>
+<p><strong>Distinctive Feature:</strong> This story is almost a criminology paper disguised as fiction, directly adapted from the real Mary Rogers murder case (New York, 1841). All "Parisian newspapers" are adapted versions of actual American reports.</p>
+<hr>
+<h2 id="truth-dissection">Truth Dissection</h2>
+<hr>
+<h3 id="story-one-truth-the-gold-bug">Story One Truth: The Gold-Bug</h3>
+<hr>
+<h4 id="truth-one-the-location-of-the-treasure-wheredunit">Truth One: The Location of the Treasure (wheredunit)</h4>
+<ul>
+<li><strong>Clue Convergence Point: approximately 75%</strong></li>
+<li>Answer: Captain Kidd's treasure is buried 50 feet beneath a large tulip tree on a remote mainland hill. The positioning method was to lower the beetle through the left eye socket of a skull nailed to the tree, then extend a straight line 50 feet and dig.</li>
+</ul>
+<h5 id="key-clues">Key Clues</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>A parchment (not paper) bears an invisible skull pattern that appears when held near fire</td>
+<td>~8–10%</td>
+<td>Parchment is the vehicle of pirate secret documents; the skull is a pirate flag symbol — both point to treasure</td>
+</tr>
+<tr>
+<td>2</td>
+<td>A "kid" figure appears on another corner of the parchment when heated</td>
+<td>~58%</td>
+<td>"Kid" is Captain Kidd's wordplay signature, confirming the identity of the treasure's owner</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The cipher text, decoded by frequency analysis, yields complete directions: "seventh limb, east side of main trunk, shoot through the left eye of the dead man's skull, connect tree and bullet-hole, go 50 feet"</td>
+<td>~60–65%</td>
+<td><strong>Core clue</strong> — all physical coordinates are encoded in the cipher</td>
+</tr>
+<tr>
+<td>4</td>
+<td>"Bishop's Hostel" refers to the old place name Bessop's Castle — a high rock with a natural seat (Devil's Seat)</td>
+<td>~67%</td>
+<td>The viewing angle from the seat determines the elevation and direction of the telescope, the only viable method for locating the skull tree</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Jupiter drops the beetle through the right eye socket rather than the left, causing the first excavation to miss the mark</td>
+<td>~72% (after failed dig)</td>
+<td><strong>The final key clue</strong> — confirms the precision and symmetry of the entire method, and explains why the first attempt was off</td>
+</tr>
+</tbody>
+</table>
+<h5 id="supporting-clues">Supporting Clues</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The beetle is found on the shore, near the ruins of an old wreck</td>
+<td>~12%</td>
+<td>An old shipwreck site, suggesting pirate activity in or near the area</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Legrand has heard that Kidd's buried gold has never been found by anyone</td>
+<td>~65%</td>
+<td>Reinforces the inference that the treasure still lies underground</td>
+</tr>
+<tr>
+<td>3</td>
+<td>At the bottom of the pit, two complete human skeletons and scattered gold coins are found</td>
+<td>~75%</td>
+<td>Confirms the historical reality of the pit — Kidd killed his assistants after burying the treasure</td>
+</tr>
+</tbody>
+</table>
+<h5 id="false-clues">False Clues</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Misleading Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Legrand's maniacal obsession with the "Gold-Bug," constantly insisting the beetle is "the guide to fortune"</td>
+<td>Throughout</td>
+<td>Tempts the reader to think the beetle itself (as natural gold) is the key to the treasure, distracting from the parchment as the real map</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Legrand hangs the actual beetle (a heavy, golden scarab) by a string, as if dropping it through the skull's eye socket</td>
+<td>~70%</td>
+<td>Both the reader and the friend assume this is a symbolic ritual; in fact it is a practical measuring instrument (a plumb substitute)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The first excavation turns up nothing</td>
+<td>~72%</td>
+<td>Leads the reader (and the friend) to believe the whole plan is delusion; in fact only a minor left/right eye discrepancy caused the miss</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="truth-two-the-principle-behind-the-cipher-howdunit">Truth Two: The Principle Behind the Cipher (howdunit)</h4>
+<ul>
+<li><strong>Clue Convergence Point: approximately 65%</strong></li>
+<li>Answer: A monoalphabetic substitution cipher, decoded using English letter frequency analysis, beginning from the most frequent symbol "8" corresponding to "e," and progressively deriving all letters.</li>
+</ul>
+<h5 id="key-clues_1">Key Clues</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Legrand counts the occurrences of each symbol on the parchment and finds "8" appears 33 times</td>
+<td>~62%</td>
+<td>The starting point of frequency analysis; the high frequency of "e" in English points to "8" as "e"</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The three-character group ";48" appears 7 times and is judged to represent "the"</td>
+<td>~63%</td>
+<td>"The" is the most common three-letter sequence in English; this step establishes three core letters</td>
+</tr>
+<tr>
+<td>3</td>
+<td>From "t ee" the word "tree" is inferred, yielding the letter "r"</td>
+<td>~64%</td>
+<td>Known letters and semantic inference mutually verify and derive new letters</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="story-two-truth-the-murders-in-the-rue-morgue">Story Two Truth: The Murders in the Rue Morgue</h3>
+<hr>
+<h4 id="truth-one-the-identity-of-the-killer-whodunit">Truth One: The Identity of the Killer (whodunit)</h4>
+<ul>
+<li><strong>Clue Convergence Point: approximately 80%</strong></li>
+<li>Answer: The killer is a Bornean orangutan (Ourang-Outang) whose owner is a French sailor. The orangutan did not intend to kill; it lost control while imitating its owner shaving after being startled.</li>
+</ul>
+<h5 id="key-clues_2">Key Clues</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Witnesses from different countries give completely contradictory identifications of the "shrill strange voice's" language — the Italian says it was Russian, the Frenchman says Spanish, the Spaniard says English…</td>
+<td>~50%</td>
+<td><strong>The most central clue</strong> — a voice that no one can identify as any human language has only one explanation: non-human vocalization</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The coarse voice shouts "Mon Dieu!" (My God!) in French with a tone of fear rather than rage</td>
+<td>~52%</td>
+<td>Shows that the coarse voice belongs to a human bystander who witnessed everything, not the perpetrator</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Strangulation marks — the grip width of the finger impressions far exceeds the physiological limit of any human hand</td>
+<td>~75%</td>
+<td>Direct anatomical negation: this force is beyond human capability</td>
+</tr>
+<tr>
+<td>4</td>
+<td>The hair clutched in the dead woman's hand is not human — Dupin shows it to his friend</td>
+<td>~76%</td>
+<td>The most striking physical evidence — the hair belongs to no human race</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Dupin cites Cuvier's anatomical description of an orangutan, which precisely matches the strangulation marks</td>
+<td>~78%</td>
+<td><strong>The convergence point</strong> — at this point the non-human identity of the killer is confirmed</td>
+</tr>
+</tbody>
+</table>
+<h5 id="supporting-clues_1">Supporting Clues</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The shrill strange voice is described as "harsh rather than shrill" and "quick and unequal"</td>
+<td>~51%</td>
+<td>Not characteristics of a human voice, but of an animal cry</td>
+</tr>
+<tr>
+<td>2</td>
+<td>At the base of the lightning rod, Dupin finds a ribbon tied in a sailor's knot — specifically a Maltese knot used by sailors</td>
+<td>~82%</td>
+<td>Confirms the identity of "the French sailor," complementing the newspaper advertisement strategy</td>
+</tr>
+</tbody>
+</table>
+<h5 id="false-clues_1">False Clues</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Misleading Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Four thousand gold francs, withdrawn three days before the crime, are left at the scene untouched</td>
+<td>~48%</td>
+<td>Leads the reader (and the police) to assume this is a financial dispute turned robbery-murder; the monetary motive is entirely wrong</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The extremely chaotic state of the scene (furniture overturned, body forced into chimney)</td>
+<td>~45%</td>
+<td>Suggests the perpetrator is a large, violently frenzied human being, or multiple conspirators</td>
+</tr>
+<tr>
+<td>3</td>
+<td>All doors and windows are locked from the inside</td>
+<td>~47%</td>
+<td>The "locked room" effect leads the police into a dead end, causing them to overlook the possibility of the window spring mechanism and the broken nail</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="truth-two-the-method-of-entry-and-exit-howdunit-solution-to-the-impossible-crime">Truth Two: The Method of Entry and Exit (howdunit / solution to the impossible crime)</h4>
+<ul>
+<li><strong>Clue Convergence Point: approximately 75%</strong></li>
+<li>Answer: The orangutan climbs the lightning rod and swings into the fourth-floor window using the special iron shutter frames (ferrades); upon leaving, the window snaps shut automatically via a spring, the nail head appearing intact (though it had broken off earlier).</li>
+</ul>
+<h5 id="key-clues_3">Key Clues</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>During his inspection, Dupin pays particular attention to the iron shutter frames (ferrades) of the rear window — these old-style shutters, due to their special structure, can form a swinging path from the lightning rod</td>
+<td>~68%</td>
+<td>This is the starting point of the entry route; the police never noticed the width of the shutters</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The first window's nail is intact; Dupin opens it and discovers a hidden spring — the window snaps shut automatically</td>
+<td>~70%</td>
+<td>Confirms the existence of the "spring mechanism," showing that the nail's appearance does not mean the window is impassable</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The second window's nail head can be pulled out — the nail had already broken during some earlier impact, leaving only the head</td>
+<td>~73%</td>
+<td><strong>The convergence point</strong> — this is the true point of entry and exit; upon leaving, the spring snaps it shut, and the broken nail head perfectly mimics an intact nail</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="story-three-truth-the-mystery-of-marie-roget">Story Three Truth: The Mystery of Marie Rogêt</h3>
+<hr>
+<h4 id="truth-one-the-identity-of-the-killer-whodunit_1">Truth One: The Identity of the Killer (whodunit)</h4>
+<ul>
+<li><strong>Clue Convergence Point: approximately 90%</strong></li>
+<li>Answer: Dupin ultimately points to an unnamed "secret lover" — someone with whom Marie had previously eloped secretly (corresponding in the real Mary Rogers case to Payne or Crommelin), who acted alone and murdered her at a remote spot along the riverbank.</li>
+</ul>
+<blockquote>
+<p><strong>Important Note:</strong> This is the most "uncertain" solution of all Poe's detective stories. When Poe was writing, the real murder case had not yet been solved; his reasoning was a probabilistic judgment based on available reports, not a definitive deduction — and in a footnote at the end he himself acknowledges that some of his inferences were later corrected by the facts. This is the most fundamental difference between this story and the other two.</p>
+</blockquote>
+<h5 id="key-clues_4">Key Clues</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The ribbon around the corpse's neck is tied in a "sailor's knot" or "slip knot," not the bow knot that women habitually tie</td>
+<td>~55%</td>
+<td>Suggests the killer may be connected to the sea (sailor, naval officer), or at least trained in special knotting</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The outer skirt is torn into strips and wound three times around the waist; a strip torn from the inner skirt is wound around the neck — the tearing is "neat and deliberate," not the result of a loss of control</td>
+<td>~56%</td>
+<td>Eliminates the possibility of mob violence; points to a single, premeditated perpetrator</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Marie had previously disappeared for a week without explanation and then returned, with a vague excuse — implying she already had a secret lover at that time</td>
+<td>~40%</td>
+<td>The identity of this secret lover is directly related to the case; it is the source of the motive</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Dupin argues that the true crime scene is the thicket along the riverbank near the scene, not the rumored "Barrière du Roule"</td>
+<td>~85%</td>
+<td><strong>The final locating inference</strong> — a women's handkerchief, a handkerchief pad, a parasol, and clothing remnants are found in the thicket</td>
+</tr>
+</tbody>
+</table>
+<h5 id="supporting-clues_2">Supporting Clues</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The body surfaces in the Seine sooner than normal decomposition timelines (three days rather than six to ten days) — L'Etoile's argument is refuted by Dupin</td>
+<td>~42%</td>
+<td>Confirms the body is indeed Marie, eliminating the theory that "the body belongs to someone else"</td>
+</tr>
+<tr>
+<td>2</td>
+<td>No foam on the body (ruling out simple drowning); neck shows manual strangulation marks rather than rope marks (primary cause of death is asphyxiation)</td>
+<td>~37%</td>
+<td>Confirms premeditated murder, not accidental death or suicide</td>
+</tr>
+</tbody>
+</table>
+<h5 id="false-clues_2">False Clues</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Misleading Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Flattened grass and trampled vegetation found near Barrière du Roule; newspapers declare it a gang crime scene</td>
+<td>~50%</td>
+<td>Dupin argues that these traces were found days after the murder and are inconsistent in timing with Marie's death — they may have been left by unrelated parties afterward</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Beauvais placed a rose in his office keyhole and wrote the name "Marie" on a slate</td>
+<td>~47%</td>
+<td>Exploited by newspapers to imply Beauvais was a secret lover or accomplice; in fact it was nothing more than the romantic gesture of a private admirer</td>
+</tr>
+<tr>
+<td>3</td>
+<td>St. Eustache (the fiancé) initially cannot account for his whereabouts on the day of the crime</td>
+<td>~48%</td>
+<td>Leads everyone to first suspect the closest person; he later submits a complete timeline clearing himself</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="reconstruction-of-reasoning-paths">Reconstruction of Reasoning Paths</h2>
+<h3 id="the-gold-bugs-reasoning-path">The Gold-Bug's Reasoning Path</h3>
+<p>The greatest obstacle facing the reader is "perspective bias" — the entire story is narrated by the friend, who believes from beginning to end that Legrand has lost his mind, so all the clues are wrapped in a fog of suspicion.</p>
+<p><strong>The first point at which doubt is possible (~10%):</strong> The parchment appears. An attentive reader, when the friend comments that the drawing looks like a skull, should notice that a pattern "already exists" on the paper — because Legrand specifically emphasizes that he drew a beetle, with a completely different shape. Parchment, not paper, is Poe's biggest hint: important documents use parchment.</p>
+<p><strong>The second node (~58%):</strong> The "kid" figure appears and Legrand mentions the pun on "Captain Kidd." At this point the reader can confirm that this is a coded treasure map.</p>
+<p><strong>Clue convergence point (~65–75%):</strong> The cipher yields complete directions; "Devil's Seat" positioning succeeds; the skull appears after the orangutan climbs the tree. At this point the reader theoretically could complete the final calculation independently — but only if the reader knows how to perform geometric measurement. Poe effectively assumed that readers could not complete this step on their own and waits for Legrand's explanation.</p>
+<hr>
+<h3 id="the-murders-in-the-rue-morgues-reasoning-path">The Murders in the Rue Morgue's Reasoning Path</h3>
+<p><strong>The first point at which doubt is possible (~50%):</strong> Dupin points out that "the voice was identified as different national languages by an Italian, a Frenchman, a Spaniard, a Dutchman, and an Englishman — but each was certain it was not a language they could recognize." This logical leap is the most brilliant puzzle design of the story: a "language" that everyone hears but no one can identify has only one possibility — it is not a human language at all.</p>
+<p>A careful reader should be able to form the correct hypothesis at this point, but almost no one does, because "the killer is an animal" breaks the fundamental assumption about murder cases that readers in 1841 (and even today) hold.</p>
+<p><strong>Confirmation node (~76–78%):</strong> Non-human hair + Cuvier's orangutan anatomical data. This is the story's double-confirmation mechanism — first providing physical evidence, then supplying biological justification, forming an irrefutable closed loop.</p>
+<p><strong>Assessment of deducibility:</strong> The central difficulty of this story lies not in the number of clues but in the reader's <strong>cognitive framework</strong> — we cannot imagine an animal committing the crime, so even when all the clues are present, most readers cannot reason to the conclusion before Dupin reveals it. This is Poe's most brilliant design.</p>
+<hr>
+<h3 id="the-mystery-of-marie-rogets-reasoning-path">The Mystery of Marie Rogêt's Reasoning Path</h3>
+<p>This story's reasoning path is fundamentally different from the other two: it is not "reasoning from clues toward an answer," but rather "progressively eliminating various mistaken hypotheses to narrow down to the only possibility" — that is, elimination.</p>
+<p><strong>Dupin's three-step elimination:</strong>
+1. First eliminating "the body is not hers" (L'Etoile's reporting argument does not hold up)
+2. Then eliminating "gang conspiracy of multiple persons" (the tearing of clothing is too neat, indicating a single, calm perpetrator)
+3. Finally eliminating "the fiancé as killer" (his timeline is clearly verifiable)</p>
+<p>What remains is only the hypothesis of "the secret lover acting alone."</p>
+<p>For the reader, the space for independent reasoning is almost nonexistent — all the "key clues" are newspaper reports, the reader receives the information simultaneously with Dupin, but without Dupin's forensic and statistical training, independently completing the elimination is virtually impossible. This is the fundamental reason why this story has the highest deducibility difficulty (⭐⭐⭐⭐⭐).</p>
+<hr>
+<h2 id="supplementary-notes">Supplementary Notes</h2>
+<h3 id="poes-three-modes-of-detection-and-their-literary-historical-significance">Poe's Three Modes of Detection, and Their Literary-Historical Significance</h3>
+<p>The reason this anthology is irreplaceable in the history of detective literature is that Poe simultaneously invented three fundamentally different modes of detective fiction within a single decade, and each mode remains the foundation of a popular genre to this day:</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Representative Work</th>
+<th>Successor Tradition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Detective Reasoning</strong> (rational analytical detective)</td>
+<td>The Murders in the Rue Morgue, The Mystery of Marie Rogêt</td>
+<td>Conan Doyle's Sherlock Holmes, Christie's Poirot</td>
+</tr>
+<tr>
+<td><strong>Puzzle-Solving Treasure Hunt</strong> (cryptography + geometry)</td>
+<td>The Gold-Bug</td>
+<td>Dumas's treasure plot in <em>The Count of Monte Cristo</em>, the Da Vinci Code series</td>
+</tr>
+<tr>
+<td><strong>Killer's Perspective</strong> (unreliable narrator)</td>
+<td>The Cask of Amontillado, The Tell-Tale Heart</td>
+<td>Christie's narrator reversal in <em>The Murder of Roger Ackroyd</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="dupins-philosophy-of-reasoning-why-he-is-always-smarter-than-the-police">Dupin's Philosophy of Reasoning — Why He Is Always Smarter Than the Police</h3>
+<p>At the opening of <em>The Murders in the Rue Morgue</em>, Poe spends considerable space discussing the difference between "analytical ability" and "ingenuity" — this is not padding, but the key to understanding Dupin's capabilities:</p>
+<blockquote>
+<p><em>The analytical power should not be confounded with ample ingenuity; for while the analyst is necessarily ingenious, the ingenious man is often remarkably incapable of analysis.</em></p>
+</blockquote>
+<p>The police (and legendary detectives like Vidocq) represent "ingenuity" — pursuing criminals using intuition, experience, and surface observation. Dupin represents "analytical ability" — starting from fundamental principles, not bound by surface appearances. This distinction directly influenced the "detective vs. police" dynamic in all subsequent detective fiction: Holmes versus Scotland Yard, Poirot versus Hastings — all follow this pattern.</p>
+<h3 id="the-mystery-of-marie-rogets-special-status-the-first-real-case-adaptation-in-detective-literary-history"><em>The Mystery of Marie Rogêt</em>'s Special Status: The First "Real Case Adaptation" in Detective Literary History</h3>
+<p>Poe boldly mixed fiction and reality in this story — the so-called "Parisian newspapers <em>L'Etoile</em> and <em>Le Commerciel</em>" correspond respectively to the New York <em>Sun</em> and <em>Brother Jonathan</em>; "Marie Rogêt" is Mary Cecilia Rogers, a real woman who died in the Hudson River in 1841. This technique foreshadowed the birth of an entire genre: <strong>True Crime Narrative Literature</strong>, from Truman Capote's <em>In Cold Blood</em> to today's True Crime Podcasts — all are heirs to this lineage.</p>
+<p>But Poe's boldness also created difficulties for him: he publicly published his reasoning while the real case was still unresolved; later developments (rumors pointing to accidental death rather than murder) forced him to quietly revise his conclusions in footnotes. This makes <em>The Mystery of Marie Rogêt</em> a uniquely singular text — a specimen of a detective fiction writer attempting to solve a real murder through fictional reasoning, leaving visible traces of revision.</p>
+<h3 id="individual-deducibility-ratings">Individual Deducibility Ratings</h3>
+<table>
+<thead>
+<tr>
+<th>Story</th>
+<th>Deducibility</th>
+<th>Fog Rating</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The Gold-Bug</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐</td>
+<td>The cryptographic logic is clear; clues are fully given in the first half of the story, but geometric knowledge is required to complete the final step</td>
+</tr>
+<tr>
+<td>The Murders in the Rue Morgue</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>Clues are complete but breaking through the cognitive framework is the real challenge; the locked room mechanism is elegantly designed</td>
+</tr>
+<tr>
+<td>The Mystery of Marie Rogêt</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>An open-ended answer that cannot be independently verified; vast newspaper "false clues" cloud judgment; Poe himself could not fully solve it</td>
+</tr>
+<tr>
+<td><strong>Collection Average</strong></td>
+<td><strong>⭐⭐⭐⭐</strong></td>
+<td><strong>⭐⭐⭐</strong></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="a-note-for-international-readers">A Note for International Readers</h3>
+<p><strong>Captain Kidd</strong> is one of the most famous legendary pirates in Anglo-American culture. Active in the Atlantic in the late 17th century as a privateer captain, he was hanged by the British government for piracy in 1701. Whether he buried an enormous treasure remains a topic for archaeologists and treasure hunters to this day, with locations from Maine to the Caribbean all claiming to be "Kidd's burial site." Poe's <em>The Gold-Bug</em> capitalizes on this widely known legend, allowing readers to immediately grasp the story's historical context without needing background explanation.</p>
+<p><strong>The Bornean Orangutan (Ourang-Outang of the Borneo species)</strong> was a rare and exotic creature in 1841 Europe. Darwin's <em>On the Origin of Species</em> would not be published until 1859; human understanding of primates was very limited at the time, and orangutans were regarded as savage, mysterious, and dangerous animals. Poe's choice of an orangutan as the "killer" was not only for the impossible-crime puzzle effect — it also exploited the era's fear of and ignorance about primates. For readers in 1841, this answer carried a far greater shock than today's readers experience.</p>
+    <a href="../index.html" class="back-link">← Back to home</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Detective Analysis</p>
+    <p>Five authors · eighty-eight works · 135 years of evolving detective difficulty.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
