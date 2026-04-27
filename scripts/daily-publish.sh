@@ -3,8 +3,10 @@
 # crontab: 6 5 * * * /Users/letranger/Code/MurderResearch/scripts/daily-publish.sh
 set -euo pipefail
 
-# cron 不會自動 source shell config，手動載入 API key
+# cron 不會自動 source shell config，手動載入 PATH 等設定
 [ -f "$HOME/.zshenv" ] && source "$HOME/.zshenv"
+# 移除 API key，改走 claude.ai 訂閱認證（避免 API credit 計費）
+unset ANTHROPIC_API_KEY
 
 REPO_DIR="$HOME/Code/MurderResearch"
 LOG_DIR="$HOME/.murder-research/logs"
