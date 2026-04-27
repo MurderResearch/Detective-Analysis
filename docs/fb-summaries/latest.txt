@@ -1,10 +1,10 @@
-📖 【推理解剖室】血字的研究（A Study in Scarlet）
+📖 【推理解剖室】四簽名（The Sign of the Four）
 ✍️ 柯南·道爾（Arthur Conan Doyle） · 
 
-推理難度 ★★★★☆ | 迷霧等級 ★★★☆☆
+推理難度 ★★★☆☆ | 迷霧等級 ★★★☆☆
 
-故事分成截然不同的兩部分。 第一部分（英格蘭，1881年）：退伍軍醫華生（John H. Watson）在倫敦結識福爾摩斯，兩人合租貝克街221B。一個霧夜，白廳偵探格雷格森（Gregson）請求協助，在空屋發現美國公民德雷伯（Enoch Drebber）的屍體——無傷口，無搶劫，牆上用血寫著德文字「RACHE」，地板上有大量不屬於死者的血跡，現場還有一枚婚戒。福爾摩斯在現場蒐集線索後，迅速得出結論：兇手是高個子男性、乘四輪馬車而來、煙斗煙品為特里奇諾波里（Trichinopoly）雪茄、案件源自私怨而非政治。不久，死者秘書斯坦格森（Joseph Stangerson）也在旅館遇刺。福爾摩斯藉…
+1878年，印度駐軍軍官 Arthur Morstan 上尉從孟買返回倫敦，當夜拜訪舊識 Sholto 少校，兩人因一批源自印度的巨額珠寶——「Agra 寶藏」——的分配問題激烈爭吵。Morstan 在盛怒中心臟病突發猝死。Sholto 恐懼遭人指控謀殺，藏匿屍體，私吞寶藏。Morstan 之女 Mary 此後再未見過父親。 六年後，Sholto 少校臨死前向雙胞胎兒子 Thaddeus 與 Bartholomew 坦白一切。就在他揭露寶藏藏身之處的瞬間，窗外出現一張猙獰的鬍鬚臉——那是從安達曼群島監獄逃脫、追尋寶藏多年的 Jonathan Small——Sholto 因受驚嚇而氣絕，帶走了秘…
 
-🔗 完整分析 → https://murderresearch.github.io/Detective-Analysis/articles/a-study-in-scarlet.html
+🔗 完整分析 → https://murderresearch.github.io/Detective-Analysis/articles/the-sign-of-the-four.html
 
 #推理小說 #推理解剖室 #柯南道爾

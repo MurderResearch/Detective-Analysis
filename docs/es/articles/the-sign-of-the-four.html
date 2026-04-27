@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El signo de los cuatro（The Sign of the Four） — Sala de Disección Detectivesca</title>
+<meta name="description" content="En 1878, el Capitán Arthur Morstan, oficial estacionado en India, regresó de Bombay a Londres y esa misma noche visitó a su viejo conocido el Mayor Sholto. Los ">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-sign-of-the-four.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-sign-of-the-four.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-sign-of-the-four.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-sign-of-the-four.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-sign-of-the-four.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-sign-of-the-four.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-sign-of-the-four.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-sign-of-the-four.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Sala de Disección Detectivesca</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Inicio</a>
+        <a href="../index.html#latest">Recientes</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Idioma" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 Español</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-sign-of-the-four.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-sign-of-the-four.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-sign-of-the-four.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/the-sign-of-the-four.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/the-sign-of-the-four.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/the-sign-of-the-four.html">Deutsch</a>
+      <a class="lang-item active" data-lang="es" href="/Detective-Analysis/es/articles/the-sign-of-the-four.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/the-sign-of-the-four.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">Arthur Conan Doyle · 1890</div>
+    <h1>El signo de los cuatro（The Sign of the Four）</h1>
+    <div class="subtitle">Arthur Conan Doyle · Novela</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Deducibilidad</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Nivel de niebla</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="el-signo-de-los-cuatrothe-sign-of-the-four-analisis-de-deducibilidad">El signo de los cuatro（The Sign of the Four）— Análisis de deducibilidad</h1>
+<h2 id="informacion-basica">Información básica</h2>
+<ul>
+<li>Autor：Arthur Conan Doyle</li>
+<li>Año：1890</li>
+<li>Género：Novela</li>
+<li>Detective：Sherlock Holmes, Dr. John Watson (asistente)</li>
+<li>Tipo de misterio central：whodunit + howdunit + enredo histórico imperial（búsqueda del tesoro）</li>
+</ul>
+<hr>
+<h2 id="evaluacion-global-de-deducibilidad">Evaluación global de deducibilidad</h2>
+<table>
+<thead>
+<tr>
+<th>Indicador</th>
+<th>Estrellas</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deducibilidad（Deducibility）</td>
+<td>⭐⭐⭐</td>
+<td>Punto de convergencia promedio 62% — el método del crimen y la identidad del principal sospechoso pueden deducirse en la primera mitad, pero el giro clave de que "el asesino real no es el cerebro" no emerge completamente hasta después del 83%</td>
+</tr>
+<tr>
+<td>Nivel de niebla（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>Engaño moderado: la falsa línea de detención creada por el detective oficial, la imagen sospechosa de Thaddeus Sholto, y la suposición instintiva de que "el cerebro = el asesino" forman juntos tres capas de engaño planificado</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="sinopsis">Sinopsis</h2>
+<p>En 1878, el Capitán Arthur Morstan, oficial estacionado en India, regresó de Bombay a Londres y esa misma noche visitó a su viejo conocido el Mayor Sholto. Los dos discutieron acaloradamente sobre la distribución de un enorme tesoro de joyas procedente de India — el "Tesoro de Agra". Morstan sufrió un ataque cardíaco fatal en plena furia. Sholto, temeroso de ser acusado de asesinato, ocultó el cadáver y se apropió del tesoro. La hija de Morstan, Mary, nunca volvió a ver a su padre.</p>
+<p>Seis años después, el Mayor Sholto, en su lecho de muerte, confesó todo a sus hijos gemelos Thaddeus y Bartholomew. En el preciso momento en que revelaba el paradero del tesoro, apareció ante la ventana un feroz rostro barbudo — era Jonathan Small, escapado de la prisión de las Islas Andamán, quien llevaba años buscando el tesoro — Sholto murió de susto, llevándose consigo la última palabra del secreto.</p>
+<p>En 1888, Mary Morstan recibió un misterioso mensaje anónimo y fue invitada a la puerta del Teatro Lyceum. Holmes y Watson la acompañaron y conocieron al nervioso Thaddeus Sholto. Este les informó que su hermano Bartholomew acababa de descubrir el tesoro en el desván.</p>
+<p>Sin embargo, cuando el grupo llegó a Pondicherry Lodge, Bartholomew Sholto ya estaba muerto — con una horrible mueca en el rostro, una pequeña espina venenosa clavada en el cuero cabelludo, el tesoro desaparecido sin rastro, y sobre la mesa quedaba una nota: <strong>"El signo de los cuatro"</strong>.</p>
+<p>Holmes analizó rápidamente la escena: marcas de pata de palo, diminutas huellas de pie descalzo, una cerbatana venenosa de procedencia exótica, y marcas de cuerda desde el techo. Identificó a dos criminales: el unipersonal Jonathan Small y un compañero nativo de las Islas Andamán. Los informantes callejeros de los "Irregulares de Baker Street", un mestizo de agudo olfato llamado Toby, y una persecución sin dormir los llevaron al barco de vapor Aurora en el Támesis.</p>
+<p>La persecución nocturna por el río terminó en tragedia: cuando el isleño Tonga levantó su cerbatana, Holmes y Watson dispararon simultáneamente; cayó al Támesis y nunca volvió a emerger. Jonathan Small fue capturado, pero en el momento de ser alcanzado ya había arrojado silenciosamente el tesoro al fondo del río. El pesado cofre de hierro, al abrirse, estaba vacío.</p>
+<p>Watson, en el momento en que el tesoro desapareció, pronunció su frase más sincera: "¡Gracias a Dios!" — la barrera de riqueza que se interponía entre él y Mary Morstan había desaparecido por fin.</p>
+<hr>
+<h2 id="analisis-de-la-verdad">Análisis de la verdad</h2>
+<h3 id="verdad-uno-como-murio-bartholomew-sholtohowdunit">Verdad Uno: ¿Cómo murió Bartholomew Sholto?（howdunit）</h3>
+<ul>
+<li><strong>Punto de convergencia de pistas: aprox. 50%</strong></li>
+<li>Respuesta: Tonga usó una dardos de cerbatana (blow-pipe dart) de los nativos de las Islas Andamán, disparados hacia abajo a través de la abertura del techo hacia la cabeza de Bartholomew Sholto. Los dardos estaban envenenados con un potente alcaloide vegetal de efectos similares a la estricnina (strychnine), causando contractura muscular rígida (tétanos) y la contorsión facial del "sonrisa de Satanás" (risus sardonicus) seguida de muerte rápida. Jonathan Small entró por el tejado y bajó al cuarto con una soga — era el cerebro del robo del tesoro, pero no el asesino directo.</li>
+</ul>
+<h4 id="pistas-clave">Pistas clave</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Pista</th>
+<th>Ubicación (Capítulo/Porcentaje)</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>La mueca fija (risus sardonicus) y los músculos extremadamente contraídos en el rostro del cadáver</td>
+<td>Cap. 5-6 / aprox. 42-50%</td>
+<td>Watson señala inmediatamente "muerte por potente alcaloide vegetal", coherente con los efectos de la estricnina — el lector puede confirmar el método de envenenamiento</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Una larga espina negra en el cuero cabelludo, con goma seca en la punta (residuo de veneno), el extremo redondeado con cuchillo</td>
+<td>Cap. 5 / aprox. 42%</td>
+<td>Holmes señala "es una aguja venenosa" y pide a Watson que la extraiga con cuidado; de origen no inglés, apunta a una fuente exótica</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Orificio en el techo, escalera, soga — "otra persona entró desde el tejado"</td>
+<td>Cap. 6 / aprox. 48-50%</td>
+<td>Holmes descarta todas las demás entradas e indica que un hombre pequeño de pies descalzos entró por arriba y bajó al cuarto con la soga — el método queda completamente expuesto</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Marca de pata de palo (marca de estaca en el alféizar) y huella de bota junto a ella</td>
+<td>Cap. 6 / aprox. 48%</td>
+<td>Confirma cooperación: el de pata de palo sostiene la soga desde afuera, el de pies descalzos baja y dispara</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-de-apoyo">Pistas de apoyo</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Pista</th>
+<th>Ubicación (Capítulo/Porcentaje)</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Olor a creosota de un recipiente ácido roto en el laboratorio químico (creasote)</td>
+<td>Cap. 6 / aprox. 50%</td>
+<td>Holmes encuentra huellas del descalzo en la creosota, que sirven de base para el rastreo posterior de Toby</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Bolsa de espinas venenosas abandonada en el tejado (small pouch with dark wooden spines)</td>
+<td>Cap. 7 / aprox. 58%</td>
+<td>Confirma que el descalzo llevaba dardos de cerbatana y que la bolsa fue abandonada en la huida precipitada</td>
+</tr>
+<tr>
+<td>3</td>
+<td>La maza de piedra de Tonga (stone-headed wooden mace)</td>
+<td>Cap. 5 / aprox. 42%</td>
+<td>Arma característica de los nativos andamaneses, junto con la cerbatana apunta a la misma persona</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Huellas de pies descalzos con los dedos completamente separados en el desván (cada dedo claramente separado, no es alguien que lleve zapatos)</td>
+<td>Cap. 6 / aprox. 50%</td>
+<td>Holmes señala especialmente este detalle, sugiriendo que es alguien que nunca ha vivido con zapatos</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-falsas">Pistas falsas</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Pista</th>
+<th>Ubicación (Capítulo/Porcentaje)</th>
+<th>Dirección del engaño</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El extraño comportamiento de Thaddeus Sholto: encuentros misteriosos, fuerte rechazo a la policía, primero en aparecer en la escena del crimen</td>
+<td>Cap. 3-5 / aprox. 25-42%</td>
+<td>Hace que los lectores lo sospechen naturalmente como el cerebro; Athelney Jones también lo arresta de inmediato, dando a esta pista falsa "respaldo oficial"</td>
+</tr>
+<tr>
+<td>2</td>
+<td>La puerta de Bartholomew Sholto cerrada con llave desde dentro — sugiere "asesinato en habitación cerrada"</td>
+<td>Cap. 5 / aprox. 42%</td>
+<td>Los lectores pueden pensar que Thaddeus cerró la puerta con algún método tras el crimen; la verdad es que el descalzo, al marcharse, ayudó a cerrarla desde la ventana</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="verdad-dos-quien-es-jonathan-smallwho-is-the-criminal">Verdad Dos: ¿Quién es Jonathan Small?（who is the criminal）</h3>
+<ul>
+<li><strong>Punto de convergencia de pistas: aprox. 50%</strong></li>
+<li>Respuesta: Jonathan Small es inglés y cumplió muchos años de trabajos forzados en las Islas Andamán por haber conspirado para robar al mensajero Achmet y apoderarse del Tesoro de Agra durante el levantamiento indio. Creía que la mitad del tesoro era su propiedad legítima (basándose en el juramento del "signo de los cuatro"), y guardaba un profundo rencor por la traición de Morstan y Sholto. Tras aliarse con el nativo Tonga en las Islas Andamán, escapó y siguió el rastro hasta Inglaterra. Su pierna derecha fue amputada por un cocodrilo en India y reemplazada por una pata de palo.</li>
+</ul>
+<h4 id="pistas-clave_1">Pistas clave</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Pista</th>
+<th>Ubicación (Capítulo/Porcentaje)</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El documento de Morstan dice "The sign of the four—Jonathan Small, Mahomet Singh, Abdullah Khan, Dost Akbar"</td>
+<td>Cap. 3 / aprox. 25%</td>
+<td>El nombre de Small y "el signo de los cuatro" aparecen por primera vez; es la evidencia más temprana de su existencia</td>
+</tr>
+<tr>
+<td>2</td>
+<td>El intenso miedo del Mayor Sholto a un hombre blanco de una pierna, hasta el punto de disparar a un comerciante inocente</td>
+<td>Cap. 4 / aprox. 33%</td>
+<td>Thaddeus narra la obsesión de su padre — sugiere que el hombre de pata de palo era una amenaza real para Sholto, no una alucinación</td>
+</tr>
+<tr>
+<td>3</td>
+<td>La cadena lógica completa de Holmes: Morstan muere → Sholto obtiene el tesoro → Small está en Andamán → Sholto muere tras recibir la carta → Small escapa de Andamán</td>
+<td>Cap. 7 / aprox. 58%</td>
+<td>Holmes explica a Watson paso a paso durante la persecución; en este punto los lectores pueden reconstruir completamente la identidad y los motivos de Small</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Registros de las Islas Andamán (raza pequeña, descalzos, cerbatanas, mazas de piedra) que identifican el origen étnico del descalzo y confirman que Small cumplió condena allí y conoció a Tonga</td>
+<td>Cap. 8 / aprox. 67%</td>
+<td>Holmes consulta un diccionario geográfico y confirma que "raza más pequeña, descalzos, cerbatanas" apunta a nativos andamaneses, confirmando el trasfondo de Small</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-de-apoyo_1">Pistas de apoyo</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Pista</th>
+<th>Ubicación (Capítulo/Porcentaje)</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Abrasión sangrante en la soga — "un hombre blanco no acostumbrado a trepar cuerdas, sin callos en las palmas"</td>
+<td>Cap. 6 / aprox. 50%</td>
+<td>Muestra que el de pata de palo trepó la soga con dificultad — no es marinero profesional, pero sí robusto — concuerda con el trasfondo de Small</td>
+</tr>
+<tr>
+<td>2</td>
+<td>La esposa de Mordecai Smith describe a un "hombre moreno de cara de mono" (Tonga) y la voz grave del de pata de palo</td>
+<td>Cap. 8 / aprox. 63%</td>
+<td>Confirma el dúo Small y Tonga; la descripción física de ambos se vuelve más concreta</td>
+</tr>
+<tr>
+<td>3</td>
+<td>El razonamiento para encontrar el Aurora en el astillero Jacobson — Small tiene astucia básica (low cunning) y sabe cómo ocultar un barco</td>
+<td>Cap. 9-10 / aprox. 75-83%</td>
+<td>Da a los lectores una evaluación precisa del nivel de inteligencia de Small, coherente con la impresión de su confesión posterior</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-falsas_1">Pistas falsas</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Pista</th>
+<th>Ubicación (Capítulo/Porcentaje)</th>
+<th>Dirección del engaño</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>La existencia de "una persona" (el misterioso y pequeño compañero) cuya verdadera identidad étnica se ocultó deliberadamente durante mucho tiempo</td>
+<td>Cap. 6-8 / aprox. 50-67%</td>
+<td>Los lectores (incluido Watson) primero sospechan que es indio, luego sudamericano; finalmente Holmes revela que es un nativo andamanés — Doyle retrasa deliberadamente la convergencia de esta pista</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="verdad-tres-quien-mato-realmenteel-giro-central-del-whodunit">Verdad Tres: ¿Quién mató realmente?（El giro central del whodunit）</h3>
+<ul>
+<li><strong>Punto de convergencia de pistas: aprox. 85%</strong></li>
+<li>Respuesta: No Jonathan Small, sino Tonga. El objetivo de Small era recuperar el tesoro; esperaba que Bartholomew no estuviera en el cuarto. Pero Tonga entró primero por la apertura del techo y mató a Bartholomew con el dardo venenoso. Small después "golpeó al pequeño diablo con el extremo de la soga" y estaba consternado por el suceso.</li>
+</ul>
+<h4 id="pistas-clave_2">Pistas clave</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Pista</th>
+<th>Ubicación (Capítulo/Porcentaje)</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Holmes ya dijo en el cap. 6: "fue el crimen del compañero; Small preferiría atar antes que matar" — pero los lectores suelen ignorar este detalle</td>
+<td>Cap. 7 / aprox. 55-58%</td>
+<td>Holmes dice "la ira de Jonathan se debe a que no tenía intención de matar a Bartholomew" — un presagio temprano del giro</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Small muestra más interés por el tesoro que por las vidas humanas durante la persecución (siempre intenta escapar, no contraatacar)</td>
+<td>Cap. 10 / aprox. 83%</td>
+<td>Apoya indirectamente la caracterización de "no quería matar"</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Las primeras palabras de Small tras ser capturado: "Nunca puse la mano encima al Sr. Sholto. Fue ese pequeño perro del infierno Tonga. Lo lamento tanto como si fuera de mi propia sangre."</td>
+<td>Cap. 10-11 / aprox. 85-88%</td>
+<td><strong>Pista de confirmación final</strong>: Small niega explícitamente el asesinato y confirma que Tonga es el asesino directo</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-de-apoyo_2">Pistas de apoyo</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Pista</th>
+<th>Ubicación (Capítulo/Porcentaje)</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Tonga saca su cerbatana durante la persecución y la apunta hacia Holmes y Watson (no hacia Small)</td>
+<td>Cap. 10 / aprox. 83%</td>
+<td>Muestra que Tonga es altamente agresivo y ataca por iniciativa propia, no por instrucción de Small</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-falsas_2">Pistas falsas</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Pista</th>
+<th>Ubicación (Capítulo/Porcentaje)</th>
+<th>Dirección del engaño</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Durante todo el proceso de investigación, el marco "el de pata de palo = criminal principal" se refuerza constantemente</td>
+<td>Cap. 5-9 / aprox. 42-75%</td>
+<td>Los lectores asumen naturalmente que el cerebro es el asesino; Doyle revierte esta suposición solo después de que Small sea capturado</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Athelney Jones arresta y encarcela a Thaddeus y su familia, haciendo creer a los lectores que el sospechoso aún está siendo investigado</td>
+<td>Cap. 6-9 / aprox. 50-75%</td>
+<td>La dirección oficial equivocada consume constantemente la atención del lector hasta que Holmes anuncia la identidad de Small</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="verdad-cuatro-el-destino-final-del-tesoro-de-agrawhere-did-it-go">Verdad Cuatro: El destino final del Tesoro de Agra（where did it go）</h3>
+<ul>
+<li><strong>Punto de convergencia de pistas: aprox. 92%</strong></li>
+<li>Respuesta: Small arrojó el tesoro pieza a pieza al Támesis antes de ser alcanzado. Prefería que la riqueza se hundiera en el fondo del río antes que beneficiar a los herederos de Sholto o Morstan. El juramento del "signo de los cuatro" era sagrado para él — el tesoro pertenecía a cuatro personas en común, a nadie más.</li>
+</ul>
+<h4 id="pistas-clave_3">Pistas clave</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Pista</th>
+<th>Ubicación (Capítulo/Porcentaje)</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Durante la persecución, Small en el vapor Aurora está "encorvado y ocupado, mirando hacia atrás para medir la distancia"</td>
+<td>Cap. 10 / aprox. 83%</td>
+<td>Los lectores quizás piensan que está preparando armas; en retrospectiva estaba arrojando el tesoro al río</td>
+</tr>
+<tr>
+<td>2</td>
+<td>El cofre de hierro está vacío al abrirse — "el tesoro ha desaparecido"</td>
+<td>Cap. 11 / aprox. 92%</td>
+<td>Gran giro: meses de persecución terminan con la evaporación de la riqueza, que también elimina la "barrera de riqueza" entre Watson y Mary</td>
+</tr>
+<tr>
+<td>3</td>
+<td>La confesión de Small: "Lo encontrarán donde está la llave, donde está el pequeño Tonga. Está esparcido en el lecho del río a lo largo de cinco millas."</td>
+<td>Cap. 12 / aprox. 96%</td>
+<td>Revela su plan completamente: hundir el tesoro permanentemente</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="reconstruccion-del-camino-de-razonamiento">Reconstrucción del camino de razonamiento</h2>
+<p><strong>Primera vía: Deducción del método criminal（howdunit）</strong></p>
+<p>El lector se enfrenta en el capítulo 5 (aprox. 42%) a la escena del crimen: un cuarto cerrado, una mueca contorsionada, una fina espina en el cuero cabelludo. Un lector cuidadoso con conocimientos médicos básicos puede deducir junto a Watson el método del "veneno alcaloide vegetal" y, tras la extracción de la espina por Holmes y la verificación de que no es de origen inglés, completar la deducción del "asesinato con dardo de cerbatana venenosa".</p>
+<p>El capítulo 6 (aprox. 50%) es el punto de convergencia completo de este camino: la combinación de marca de pata de palo y huella de pie descalzo, la ruta de entrada por el tejado, el uso de soga y gancho — el método del crimen queda completamente expuesto. Para los lectores atentos, la escena puede reconstruirse completamente en este punto.</p>
+<p><strong>Segunda vía: Deducción de la identidad del principal sospechoso（whodunit — Jonathan Small）</strong></p>
+<p>El documento del capítulo 3 (25%) es la primera pieza del rompecabezas: "el signo de los cuatro", cuatro nombres, de los cuales Jonathan Small es el único inglés. En el capítulo 4 (33%) Thaddeus relata el miedo de su padre a un hombre blanco de una pierna, coherente con el documento. En los capítulos 6-7 (48-58%) Holmes realiza un "espectáculo de deducción" público, guiando al lector por toda su cadena lógica; en este punto todas las pistas clave están reunidas y los lectores atentos pueden llegar a la respuesta simultáneamente con Holmes.</p>
+<p><strong>Tercera vía: Deducción del verdadero asesino（whodunit — Tonga, no Small）</strong></p>
+<p>Este es el giro más profundo e inesperado. Durante los dos tercios del texto, Holmes y el lector concentran su atención en el "Jonathan Small de pata de palo"; el misterioso compañero de pies descalzos existe durante mucho tiempo como "enigma", deliberadamente mantenido borroso.</p>
+<p>El primer presagio sutil aparece en el capítulo 7 (55%): Holmes dice "el asesinato se parece más a la acción independiente del compañero y contrariaba a Small" — pero la mayoría de los lectores, en la emoción de la persecución, pasan por alto esta frase. Hasta el capítulo 10 (83%), cuando Tonga levanta la cerbatana y es abatido, y el capítulo 11 (88%), cuando Small confiesa tras ser capturado, los lectores se dan cuenta: ese pequeño hombre que existió casi como un "accesorio" a lo largo del libro era el verdadero asesino.</p>
+<p>Este es un desajuste cognitivo cuidadosamente diseñado por Doyle: la mirada del lector siempre sigue al de pata de palo y pasa por alto la sombra más peligrosa que acecha junto a él.</p>
+<p><strong>Cuarta vía: El destino del tesoro</strong></p>
+<p>Casi ningún lector puede adivinar durante la persecución del capítulo 10 que el tesoro ya ha desaparecido — el enfoque visual de esa escena está completamente en la tensión de la persecución. La revelación del cofre vacío es un giro puro, sin ningún presagio, pero que trae una liberación emocional inesperada.</p>
+<hr>
+<h2 id="notas-adicionales">Notas adicionales</h2>
+<p><strong>La posición de "El signo de los cuatro" en la obra de Conan Doyle</strong></p>
+<p>"El signo de los cuatro" es la segunda novela de Holmes, escrita tras "Estudio en escarlata" (A Study in Scarlet, 1887), y desde el principio hace referencia deliberada a "ese pequeño libro que llamé 'Estudio en escarlata'", completando la autorreferencia del universo de la serie.</p>
+<p>Sin embargo, en términos de diseño detectivesco, esta obra es más madura que "Estudio en escarlata": este sigue la estructura dicotómica de "detective resuelve el misterio + memorias del criminal", mientras que "El signo de los cuatro" incorpora completamente el trasfondo histórico (levantamiento indio, Islas Andamán) en la línea principal de investigación, de modo que el proceso de encontrar al asesino es en sí mismo una lectura del lado oscuro de la historia imperial.</p>
+<p><strong>"El signo de los cuatro" — la complejidad moral del juramento</strong></p>
+<p>El peso moral del libro no reside en el asesinato en sí, sino en el "juramento del signo de los cuatro" de Jonathan Small. Este es un criminal difícil de condenar simplemente: cometió una injusticia en el caos del levantamiento indio (conspiración para robar), pero fue traicionado de manera más profunda por Morstan y Sholto; cumplió veinte años de trabajos forzados y fue despojado nuevamente ante el tesoro malayo.</p>
+<p>Doyle permite que Small narre su propia historia en el capítulo 12 — un diseño poco habitual: el criminal declara en primera persona, permitiendo al lector sentir su lógica en lugar de aceptar solo el resumen del detective. Este cambio de perspectiva convierte al "signo de los cuatro" en una obra de zona moral gris.</p>
+<p><strong>"El método de tres pasos": la demostración detectivesca de Doyle</strong></p>
+<p>Holmes demuestra varias veces su método de razonamiento en "El signo de los cuatro", siendo la más representativa la declaración del "método de eliminación":</p>
+<blockquote>
+<p>"Cuando eliminas lo imposible, lo que queda, por muy improbable que parezca, debe ser la verdad." ("When you have eliminated the impossible, whatever remains, however improbable, must be the truth.")</p>
+</blockquote>
+<p>Esta frase aparece en el capítulo 6 y es la declaración central de la filosofía de Holmes. Desde el punto de vista de la lógica deductiva, es un "argumento por eliminación" (argument by elimination) — una de las frases más citadas en la historia de la novela detectivesca y el legado más duradero que Doyle le otorgó a esta obra.</p>
+<p><strong>La sombra del imperialismo</strong></p>
+<p>"El signo de los cuatro" no puede ignorar su tratamiento de la historia colonial — o más bien, su tratamiento en sí mismo es digno de análisis. Tonga es descrito repetidamente en el texto como "salvaje", "bestial" y "pequeño diablo"; es el único personaje de toda la historia que nunca habla, que no recibe ninguna descripción de personalidad más allá de su nombre, que tras su muerte se hunde en el Támesis sin ningún reconocimiento.</p>
+<p>Esto contrasta fuertemente con el trato a Jonathan Small — Small recibió un capítulo entero para declarar por sí mismo, y Holmes incluso lo defendió y mostró simpatía. La visión imperial de Doyle se manifiesta claramente en este contraste desigual.</p>
+<p><strong>Comparación con "Estudio en escarlata"</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Estudio en escarlata</th>
+<th>El signo de los cuatro</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Misterio central</td>
+<td>Venganza silenciosa（whydunit）</td>
+<td>Tesoro robado（where + whodunit）</td>
+</tr>
+<tr>
+<td>Trasfondo histórico</td>
+<td>Mormones americanos</td>
+<td>Levantamiento indio e Islas Andamán</td>
+</tr>
+<tr>
+<td>Imagen del criminal</td>
+<td>Héroe trágico（Jefferson Hope）</td>
+<td>Víctima moralmente ambigua（Jonathan Small）</td>
+</tr>
+<tr>
+<td>Hilo emocional</td>
+<td>Ninguno</td>
+<td>El amor de Watson por Mary Morstan</td>
+</tr>
+<tr>
+<td>Demostración detectivesca</td>
+<td>Relativamente dispersa</td>
+<td>Sistemática（declaración clara del "método de eliminación"）</td>
+</tr>
+<tr>
+<td>Técnica de niebla</td>
+<td>Engaño leve</td>
+<td>Moderado: el giro de "cerebro ≠ asesino"</td>
+</tr>
+</tbody>
+</table>
+<p>"El signo de los cuatro" fue en la carrera de Doyle una actualización consciente: no solo resolver misterios, sino contar historias en un espacio histórico y moral mucho más amplio.</p>
+    <a href="../index.html" class="back-link">← Volver al inicio</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Sala de Disección Detectivesca</p>
+    <p>Cinco autores · ochenta y ocho obras · 135 años de evolución de la dificultad en la narrativa policíaca.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
