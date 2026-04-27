@@ -1,10 +1,10 @@
-📖 【推理解剖室】四簽名（The Sign of the Four）
+📖 【推理解剖室】福爾摩斯探案集（The Adventures of Sherlock Holmes）
 ✍️ 柯南·道爾（Arthur Conan Doyle） · 
 
 推理難度 ★★★☆☆ | 迷霧等級 ★★★☆☆
 
-1878年，印度駐軍軍官 Arthur Morstan 上尉從孟買返回倫敦，當夜拜訪舊識 Sholto 少校，兩人因一批源自印度的巨額珠寶——「Agra 寶藏」——的分配問題激烈爭吵。Morstan 在盛怒中心臟病突發猝死。Sholto 恐懼遭人指控謀殺，藏匿屍體，私吞寶藏。Morstan 之女 Mary 此後再未見過父親。 六年後，Sholto 少校臨死前向雙胞胎兒子 Thaddeus 與 Bartholomew 坦白一切。就在他揭露寶藏藏身之處的瞬間，窗外出現一張猙獰的鬍鬚臉——那是從安達曼群島監獄逃脫、追尋寶藏多年的 Jonathan Small——Sholto 因受驚嚇而氣絕，帶走了秘…
+ 一、波希米亞醜聞 波希米亞國王秘密造訪福爾摩斯，委託他取回一張與歌劇女伶艾琳·艾德勒（Irene Adler）的合影——若照片外流，即將與斯堪地那維亞公主聯姻的計畫將毀於一旦。福爾摩斯喬裝多次，設計「火災警報」讓艾琳本能地奔向藏照處，自以為已掌握藏匿地點。然而翌日清晨，兩人卻發現艾琳早已出走，只留下一封揶揄信：她不僅早就識破福爾摩斯的身分，還反過來跟蹤他至貝克街確認。這是全集中福爾摩斯唯一正面落敗的案例。  二、紅髮聯盟 當鋪老闆威爾遜（Jabez Wilson）受助理史波丁（Spaulding）慫恿，加入「紅髮聯盟」，每天上午在事務所謄寫大英百科全書，領取豐厚薪酬。八週後聯盟突然解散。福爾…
 
-🔗 完整分析 → https://murderresearch.github.io/Detective-Analysis/articles/the-sign-of-the-four.html
+🔗 完整分析 → https://murderresearch.github.io/Detective-Analysis/articles/the-adventures-of-sherlock-holmes.html
 
 #推理小說 #推理解剖室 #柯南道爾

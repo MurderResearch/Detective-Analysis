@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Die Abenteuer des Sherlock Holmes（The Adventures of Sherlock Holmes）— Deduktionsanalyse — Detektivanalyse</title>
+<meta name="description" content=" I. Ein Skandal in Böhmen Der König von Böhmen besucht Holmes heimlich und beauftragt ihn, ein gemeinsames Foto mit der Opernsängerin Irene Adler zurückzuerlang">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-adventures-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-adventures-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-adventures-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-adventures-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-adventures-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-adventures-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-adventures-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-adventures-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Detektivanalyse</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Start</a>
+        <a href="../index.html#latest">Neueste</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Sprache" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 Deutsch</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-adventures-of-sherlock-holmes.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-adventures-of-sherlock-holmes.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-adventures-of-sherlock-holmes.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/the-adventures-of-sherlock-holmes.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/the-adventures-of-sherlock-holmes.html">한국어</a>
+      <a class="lang-item active" data-lang="de" href="/Detective-Analysis/de/articles/the-adventures-of-sherlock-holmes.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/the-adventures-of-sherlock-holmes.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/the-adventures-of-sherlock-holmes.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">Arthur Conan Doyle · </div>
+    <h1>Die Abenteuer des Sherlock Holmes（The Adventures of Sherlock Holmes）— Deduktionsanalyse</h1>
+    <div class="subtitle">Arthur Conan Doyle（柯南·道爾） · Kurzgeschichtensammlung（diese Analyse behandelt vier repräsentative Werke）</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Deduzierbarkeit</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Nebelgrad</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="die-abenteuer-des-sherlock-holmesthe-adventures-of-sherlock-holmes-deduktionsanalyse">Die Abenteuer des Sherlock Holmes（The Adventures of Sherlock Holmes）— Deduktionsanalyse</h1>
+<h2 id="grundlegende-informationen">Grundlegende Informationen</h2>
+<ul>
+<li>Autor: Arthur Conan Doyle（柯南·道爾）</li>
+<li>Erscheinungsjahr: 1892（Einzelgeschichten erstmals im Strand Magazine 1891–1892）</li>
+<li>Typ: Kurzgeschichtensammlung（diese Analyse behandelt vier repräsentative Werke）</li>
+<li>Detektiv: Sherlock Holmes（夏洛克·福爾摩斯）</li>
+<li>Kernrätseltyp: whodunit / howdunit / inverse Deduktion（der Detektiv wird besiegt）</li>
+</ul>
+<blockquote>
+<p>Die Sammlung umfasst zwölf Geschichten. Dieser Text analysiert vertieft vier Werke mit dem reichsten Deduktionsniveau:
+1. <strong>Ein Skandal in Böhmen</strong>（A Scandal in Bohemia）
+2. <strong>Die Liga der Rotschöpfe</strong>（The Red-Headed League）
+3. <strong>Das Abenteuer des blauen Karbunkels</strong>（The Adventure of the Blue Carbuncle）
+4. <strong>Das Abenteuer der gefleckten Binde</strong>（The Adventure of the Speckled Band）</p>
+</blockquote>
+<hr>
+<h2 id="deduzierbarkeit-und-nebelgradgesamtbewertung-der-sammlung">Deduzierbarkeit und Nebelgrad（Gesamtbewertung der Sammlung）</h2>
+<table>
+<thead>
+<tr>
+<th>Kriterium</th>
+<th>Bewertung</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deduzierbarkeit（Deducibility）</td>
+<td>⭐⭐⭐</td>
+<td>Der durchschnittliche Konvergenzpunkt der vier Geschichten liegt bei etwa 68% — der Täter lässt sich meist früh eingrenzen, doch „wie es gemacht wurde" fügt sich erst bei sieben bis acht Zehnteln des Textes zusammen</td>
+</tr>
+<tr>
+<td>Nebelgrad（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>Doyle versteht es meisterhaft, durch „oberflächlich unmöglich wirkende" Szenen Nebel zu erzeugen, verstärkt durch plausible Falschspuren; der Grad der absichtlichen Irreführung bleibt jedoch mittelmäßig — aufmerksame Leser können in fast jeder Geschichte einen Schritt früher als Watson durchschauen</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="zusammenfassungvier-geschichten">Zusammenfassung（vier Geschichten）</h2>
+<h3 id="i-ein-skandal-in-bohmen">I. Ein Skandal in Böhmen</h3>
+<p>Der König von Böhmen besucht Holmes heimlich und beauftragt ihn, ein gemeinsames Foto mit der Opernsängerin Irene Adler zurückzuerlangen — sollte das Foto an die Öffentlichkeit gelangen, wären seine bevorstehenden Heiratspläne mit einer skandinavischen Prinzessin ruiniert. Holmes verkleidet sich mehrfach und inszeniert einen „Feueralarm", damit Irene instinktiv zu ihrem Versteck eilt — er glaubt, den Aufbewahrungsort ausgemacht zu haben. Doch am nächsten Morgen stellen beide fest, dass Irene längst geflohen ist und nur einen spöttischen Brief hinterlassen hat: Sie hatte Holmes' Identität längst erkannt und war ihm sogar bis zur Baker Street gefolgt, um sich zu vergewissern. <strong>Dies ist der einzige Fall in der gesamten Sammlung, in dem Holmes eine klare Niederlage einsteckt.</strong></p>
+<h3 id="ii-die-liga-der-rotschopfe">II. Die Liga der Rotschöpfe</h3>
+<p>Der Pfandleiher Jabez Wilson wird von seinem Gehilfen Spaulding überredet, der „Liga der Rotschöpfe" beizutreten, und schreibt jeden Morgen im Büro der Liga die Encyclopaedia Britannica ab — für eine üppige Entlohnung. Nach acht Wochen löst sich die Liga plötzlich auf. Holmes erkennt die dahintersteckende Verschwörung: Der einzige Zweck der „Liga" war es, Wilson täglich aus dem Pfandleihgeschäft fernzuhalten, damit Spaulding ungestört im Keller einen Tunnel zum Tresorraum der benachbarten Bank graben konnte. Spauldings wahrer Name ist John Clay, Londons gefährlichster Verbrecher.</p>
+<h3 id="iii-das-abenteuer-des-blauen-karbunkels">III. Das Abenteuer des blauen Karbunkels</h3>
+<p>Am Tag nach Weihnachten schließt Holmes aus einem abgelegten Hut auf Identität und Lebensumstände des Besitzers und entdeckt dabei in einem Gänsebauch den „blauen Karbunkel der Gräfin von Morcar" — einen gestohlenen Diamanten ersten Ranges. Holmes verfolgt die Herkunft der Gans: vom Hutbesitzer Henry Baker über die Alpha-Taverne und den Covent-Garden-Markt bis er schließlich den wahren Dieb auf frischer Tat ertappt — den Hotelangestellten James Ryder. Ryder gesteht, mit einer gefälschten Perle den unschuldigen Arbeiter Horner reingelegt zu haben, verwechselte beim Transfer des Edelsteins jedoch die Gans, sodass die gesamte Diebesaffäre öffentlich wurde.</p>
+<h3 id="iv-das-abenteuer-der-gefleckten-binde">IV. Das Abenteuer der gefleckten Binde</h3>
+<p>Helen Stoner erschrickt tief in der Nacht, als sie im selben Bett wie ihre verstorbene Schwester liegt und denselben dumpfen Pfeifton hört, den ihre Schwester kurz vor dem Tod vernommen hatte. In ihrer Panik sucht sie Holmes in der Baker Street auf. Ihr Stiefvater, Dr. Grimesby Roylott, ein jähzorniger ehemaliger Kolonialmediziner, hatte in Indien eine Reihe exotischer Tiere gehalten und hatte aus finanziellen Gründen starke Motive, seine Stieftöchter an der Heirat zu hindern. Holmes und Watson lauern eine Nacht im verschlossenen Zimmer und lüften das Geheimnis: Roylott hatte eine indische Sumpfviper abgerichtet, die durch eine vorgetäuschte Lüftungsöffnung und ein als Klingelzug verkleidetes Seil ins Schlafzimmer gelangte und durch Pfeifton zurückgerufen wurde — falsche Wand, falsche Tür, falscher Klingelzug: ein präziser Mord unter dem Deckmantel des „unmöglichen Verbrechens".</p>
+<hr>
+<h2 id="wahrheitsanalyse">Wahrheitsanalyse</h2>
+<hr>
+<h3 id="geschichte-i-ein-skandal-in-bohmen">Geschichte I: Ein Skandal in Böhmen</h3>
+<h4 id="wahrheit-1-wo-ist-das-foto-versteckthowdunit">Wahrheit 1: Wo ist das Foto versteckt（howdunit）</h4>
+<ul>
+<li><strong>Konvergenzpunkt: ca. 65%</strong></li>
+<li>Antwort: Es ist in einer verborgenen Wandnische hinter einer Schiebeplatte versteckt, die sich direkt über dem rechten Klingelzug im Wohnzimmer befindet（a recess behind a sliding panel just above the right bell-pull）.</li>
+</ul>
+<h5 id="schlusselhinweise">Schlüsselhinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Irene ist Schauspielerin, besitzt scharfen Verstand und ist in der Stadt für ihr unabhängiges Leben bekannt</td>
+<td>ca. 15%</td>
+<td>Zeigt, dass sie in der Lage ist, Geheimnisse selbst zu verbergen, ohne Dritte einzuweihen</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Das Foto ist „großformatig"（cabinet size）und kann unmöglich mitgetragen werden</td>
+<td>ca. 30%</td>
+<td>Schränkt den Versteckbereich ein: Es muss sich an einem festen Ort im Haus befinden</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Zwei Hausdurchsuchungen und zwei Straßenüberfälle blieben ergebnislos</td>
+<td>ca. 30%</td>
+<td>Offensichtliche Verstecke sind ausgeschlossen; die Verbergungsmethode ist ungewöhnlich</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Holmes erkennt die psychologische Gesetzmäßigkeit: „Eine Frau greift in der Not zuerst nach dem, was ihr am wertvollsten ist"</td>
+<td>ca. 55%</td>
+<td><strong>Kern des Schlussfolgerns</strong>: Der Feueralarm ist eine Technik, die sie zwingt, selbst den Weg zu weisen</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Nach dem Rauchbomben-Chaos eilt Irene zur rechten Wandplatte und öffnet sie kurz</td>
+<td>ca. 65%</td>
+<td>Konvergenzpunkt: Der Versteckort ist damit bestätigt</td>
+</tr>
+</tbody>
+</table>
+<h5 id="hilfshinweise">Hilfshinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Die Aufteilung des Wohnzimmers ist vom Straßenfenster aus einsehbar</td>
+<td>ca. 40%</td>
+<td>Erklärt, warum Holmes die „Schauspieler-Menge" auf der Straße arrangieren konnte</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Irene steht kurz vor der Heirat mit Godfrey Norton</td>
+<td>ca. 50%</td>
+<td>Die Ehe verändert die bedrohliche Natur des Fotos, erklärt aber auch, warum sie es nicht leichtfertig herausgibt</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Holmes verkleidet sich als Geistlicher und wird zur Behandlung ins Wohnzimmer gebracht</td>
+<td>ca. 58%</td>
+<td>Ermöglicht ihm, das Raumlayout direkt zu beobachten</td>
+</tr>
+</tbody>
+</table>
+<h5 id="falschspuren">Falschspuren</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Irreführungsrichtung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Notons häufige Besuche bei Irene als Anwalt</td>
+<td>ca. 40%</td>
+<td>Lässt Leser（und Holmes）vermuten, das Foto sei bereits ins Anwaltsbüro transferiert worden</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Die Möglichkeit, dass Irene die Bank aufgesucht hat oder ein Schließfach besitzt</td>
+<td>ca. 42%</td>
+<td>Holmes selbst bringt diese Überlegung auf und verwirft sie sofort, doch das Gespräch lenkt kurzzeitig die Aufmerksamkeit ab</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="wahrheit-2-irene-hat-holmes-langst-durchschaut-und-kontertinverse-deduktion">Wahrheit 2: Irene hat Holmes längst durchschaut und kontert（inverse Deduktion）</h4>
+<ul>
+<li><strong>Konvergenzpunkt: ca. 90%</strong></li>
+<li>Antwort: Irene schöpfte bereits beim Rauchbomben-Einsatz Verdacht, verkleidete sich sofort als Mann, folgte Holmes bis zur Baker Street, bestätigte seine Identität, floh noch in der Nacht mit ihrem Ehemann auf den Kontinent und hinterließ einen Brief, der ihre Handlungen erläutert.</li>
+</ul>
+<h5 id="schlusselhinweise_1">Schlüsselhinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Irene wurde vorab informiert: „Sollte der König einen Detektiv schicken, wird es Holmes sein" — sie hatte sogar seine Adresse</td>
+<td>ca. 90%（im Brief enthüllt）</td>
+<td>Sie war bereits mit Gegenmaßnahmen vorbereitet, hatte diese aber vor der Rauchbombe noch nicht aktiviert</td>
+</tr>
+<tr>
+<td>2</td>
+<td>„Good-night, Mister Sherlock Holmes" — ein „junger Mann" grüßt an der Ecke Baker Street</td>
+<td>ca. 80%</td>
+<td><strong>Der wichtigste Vorwarnhinweis</strong>: Aufmerksame Leser sollten hier aufhorchen; doch der Ruf verhallt schnell und wird leicht übersehen</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Irene ist im Umgang mit Verkleidungen erfahren; Männerkleidung ist ihr nicht fremd</td>
+<td>ca. 90%（im Brief enthüllt）</td>
+<td>Sie besitzt die praktische Fähigkeit, den Verfolgungsplan umzusetzen</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Am nächsten Morgen steht die Haustür offen, die Haushälterin wartet mit spöttischer Miene</td>
+<td>ca. 88%</td>
+<td>Alles ist für den Abzug gerichtet und vorbereitet</td>
+</tr>
+</tbody>
+</table>
+<h5 id="falschspuren_1">Falschspuren</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Irreführungsrichtung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Holmes ist überzeugt, sein Plan sei makellos — am nächsten Morgen könne er das Foto holen</td>
+<td>ca. 70%</td>
+<td>Verleitet Leser, aus Holmes' Perspektive zu glauben, die Mission sei abgeschlossen</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Die Vermutung, Irenes Gefühle hätten sich nach der Heirat „verlagert"</td>
+<td>ca. 70%</td>
+<td>Holmes und der König schlussfolgern, sie stelle nach der Heirat keine Bedrohung mehr dar — eine zutreffende Beobachtung, die jedoch die Wachsamkeit gegenüber „sie ist immer noch sehr gefährlich" trübt</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="geschichte-ii-die-liga-der-rotschopfe">Geschichte II: Die Liga der Rotschöpfe</h3>
+<h4 id="wahrheit-1-der-wahre-zweck-der-ligawhydunit-howdunit">Wahrheit 1: Der wahre Zweck der Liga（whydunit + howdunit）</h4>
+<ul>
+<li><strong>Konvergenzpunkt: ca. 68%</strong></li>
+<li>Antwort: Wilson jeden Morgen aus dem Geschäft fernzuhalten, damit sein Gehilfe Spaulding（bürgerlicher Name John Clay）im Keller des Pfandleihgeschäfts ungestört einen Tunnel zum Tresorraum der City and Suburban Bank graben konnte.</li>
+</ul>
+<h5 id="schlusselhinweise_2">Schlüsselhinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Spaulding ließ sich für halben Lohn anstellen — wer freiwillig seinen Preis drückt, verfolgt damit einen Plan</td>
+<td>ca. 15%</td>
+<td>Holmes' erster Verdacht: Niemand senkt freiwillig seinen Lohn, ohne einen Hintergedanken zu haben</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Spauldings Vorliebe für „Fotografie" — er taucht häufig in den Keller ab, um angeblich „Fotos zu entwickeln"</td>
+<td>ca. 25%</td>
+<td><strong>Schlüsselmetapher</strong>: Der Keller ist das eigentliche Aktionszentrum; „Fotografie" ist die Tarnung</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Die Liga verlangt, dass Wilson täglich im Büro bleibt und es keinen Moment verlässt</td>
+<td>ca. 35%</td>
+<td>Sicherstellt, dass das Pfandleihgeschäft jeden Morgen „ohne Besitzer, nur mit dem Gehilfen" läuft</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Holmes klopft mit seinem Stock auf das Pflaster und beurteilt die Lage des unterirdischen Hohlraums</td>
+<td>ca. 63%</td>
+<td>Bestätigt vor Ort, dass sich der Keller nicht nach vorne erstreckt（nicht direkt unter Wilsons Laden）; er führt nach hinten</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Holmes beobachtet gezielt Spauldings „Knie" — abgenutzt, zerknittert, schmutzig</td>
+<td>ca. 65%</td>
+<td><strong>Konvergenzpunkt</strong>: Direkter physischer Beweis für langes Graben auf den Knien</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Die City and Suburban Bank grenzt direkt an den Rücken des Pfandleihgeschäfts</td>
+<td>ca. 68%</td>
+<td>Das letzte Puzzlestück: Das Tunnelziel ist bestätigt</td>
+</tr>
+</tbody>
+</table>
+<h5 id="hilfshinweise_1">Hilfshinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Spauldings Stirn trägt eine Säureverbrennung</td>
+<td>ca. 20%</td>
+<td>Für Holmes bestätigt dies, dass es sich um John Clay（einen bekannten Verbrecher）handelt; Leser können aus diesem Hinweis allein jedoch kaum dieselbe Schlussfolgerung ziehen</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Die Liga verlangt das „Abschreiben der Enzyklopädie" — absurde, sinnlose Arbeit</td>
+<td>ca. 30%</td>
+<td>Verstärkt die Vermutung „das Ganze ist ein Schwindel", doch Leser müssen noch fragen: Was ist der Zweck des Schwindels?</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Die Liga löst sich am Samstag plötzlich auf</td>
+<td>ca. 50%</td>
+<td>Sobald der Tunnel fertig ist, wird der Köder überflüssig; Samstagseinsatz gibt zwei Tage Vorsprung zur Flucht</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Merryweather ist Bankdirektor</td>
+<td>ca. 75%</td>
+<td>Bestätigt, dass Holmes das Ziel bereits kennt und die Verteidigung vorbereitet hat</td>
+</tr>
+</tbody>
+</table>
+<h5 id="falschspuren_2">Falschspuren</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Irreführungsrichtung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Der absurde Anschein der „Liga der Rotschöpfe"</td>
+<td>durchgehend in der ersten Hälfte</td>
+<td>Lässt Leser（und Wilson）glauben, das Ganze sei ein Scherz oder Betrug, keine Tarnung für ein ernstes Verbrechen</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Ungeklärter Grund für die Auflösung der Liga</td>
+<td>ca. 50%</td>
+<td>Lässt Leser kurzzeitig glauben, die Verbrecher hätten „aufgegeben"</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="geschichte-iii-das-abenteuer-des-blauen-karbunkels">Geschichte III: Das Abenteuer des blauen Karbunkels</h3>
+<h4 id="wahrheit-1-wer-ist-der-wahre-diebwhodunit">Wahrheit 1: Wer ist der wahre Dieb（whodunit）</h4>
+<ul>
+<li><strong>Konvergenzpunkt: ca. 70%</strong></li>
+<li>Antwort: Der wahre Dieb ist der Hotelangestellte James Ryder, der gemeinsam mit dem Zimmermädchen Cusack den unschuldigen Arbeiter Horner hereinlegte.</li>
+</ul>
+<h5 id="schlusselhinweise_3">Schlüsselhinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Berichten zufolge brachte Ryder Horner zum Rostgitter-Reparieren, verließ danach den Raum und kehrte zurück, um die aufgebrochene Schmuckschatulle vorzufinden</td>
+<td>ca. 25%</td>
+<td>Ryder war als einziger Dritter anwesend und hatte Gelegenheit — wurde aber von der Polizei nicht als Verdächtiger gelistet</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Horner hat Vorstrafen wegen Diebstahls — perfekte Bedingungen für einen Sündenbock, was Leser aufhorchen lassen sollte: Jemand könnte absichtlich eine Falle gestellt haben</td>
+<td>ca. 25%</td>
+<td>Die Vorstrafe ist ein zur Ausnutzung geeignetes Opfermerkmal, kein echter Beweis für die aktuelle Tat</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Baker（Henry Baker）zeigt keinerlei Interesse an den „Gänseresten" und lacht darüber</td>
+<td>ca. 55%</td>
+<td>Bestätigt, dass Baker völlig unwissend war, dass sich der Edelstein im Gänsebauch befand</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Breckinridge reagiert auf Fragen nach „der Herkunft jener Gänse" ungewöhnlich gereizt und aufbrausend — offenbar wurde er wiederholt danach gefragt</td>
+<td>ca. 67%</td>
+<td>Eine andere Person verfolgt denselben Gänsepfad</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Ein „kleiner, rattengesichtiger" Mann drängt sich am Stand auf und wirkt nervös</td>
+<td>ca. 70%</td>
+<td><strong>Konvergenzpunkt</strong>: Wer aktiv nachforscht, ist der Überträger des Edelsteins — Identität weitgehend bestätigt</td>
+</tr>
+</tbody>
+</table>
+<h5 id="hilfshinweise_2">Hilfshinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Der Edelstein befand sich im Gänsebauch, nicht bei Horner oder in seiner Unterkunft</td>
+<td>ca. 20%</td>
+<td>Das erfolglose Durchsuchen bedeutet nicht „gut versteckt", sondern dass er schlicht nicht bei Horner war</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Die vollständige Verfolgungskette der Gans: Baker → Alpha-Taverne → Breckinridge → Mrs. Oakshott（Brixton Road）</td>
+<td>ca. 65%</td>
+<td>Der geografische Pfad konvergiert auf eine Person mit Verwandten in der Brixton Road, die Gänse hält</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ryder gibt zu, selbst auf dem Markt nach dem Verbleib der Gans gefragt zu haben — er verrät damit seinen eigenen Untergang</td>
+<td>ca. 73%</td>
+<td>Schuldbewusstes Verhalten ist der Grund, warum er auffliegt</td>
+</tr>
+</tbody>
+</table>
+<h5 id="falschspuren_3">Falschspuren</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Irreführungsrichtung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Horner wird offiziell angeklagt und verliert vor Gericht die Beherrschung</td>
+<td>ca. 22%</td>
+<td>Lässt Leser glauben, er könnte tatsächlich etwas getan haben</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Der rätselhafte Verlierer Henry Baker und der mysteriöse Denkprozess rund um den Hut</td>
+<td>ca. 15–50%</td>
+<td>Holmes' ausführliche Hutanalyse nimmt viel Raum ein und verleitet Leser leicht zu der Annahme, „Baker sei der zentrale Verdächtige"</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="wahrheit-2-wie-gelangte-der-edelstein-in-den-gansebauchhowdunit">Wahrheit 2: Wie gelangte der Edelstein in den Gänsebauch（howdunit）</h4>
+<ul>
+<li><strong>Konvergenzpunkt: ca. 85%</strong></li>
+<li>Antwort: Ryder zwang im Hinterhof von Mrs. Oakshott den Edelstein einer Gans in den Schlund. Als er aber zurückkam, um die Gans zu holen, verwechselte er sie — im Hof gab es zufällig zwei Gänse mit gestreiftem Schwanz. Er nahm die falsche, und der Edelstein saß in der anderen.</li>
+</ul>
+<h5 id="schlusselhinweise_4">Schlüsselhinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Ryder gesteht, seine Schwester habe einen Mann geheiratet, der in der Brixton Road Gänse hält</td>
+<td>ca. 80%</td>
+<td>Stellt die familiäre Verbindung zwischen ihm und den Gänsen her</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Ryders Geständnis: Edelstein in die Gans gestopft → Gans entkommt und mischt sich unter die anderen → falsche Gans mitgenommen</td>
+<td>ca. 85%</td>
+<td><strong>Letzter Konvergenzpunkt</strong>: Erklärt vollständig alle Zufälle des Fluchtwegs des Edelsteins</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="geschichte-iv-das-abenteuer-der-gefleckten-binde">Geschichte IV: Das Abenteuer der gefleckten Binde</h3>
+<h4 id="wahrheit-1-wer-ist-der-morderwhodunit">Wahrheit 1: Wer ist der Mörder（whodunit）</h4>
+<ul>
+<li><strong>Konvergenzpunkt: ca. 25%</strong></li>
+<li>Antwort: Dr. Grimesby Roylott, Helens und Julias Stiefvater.</li>
+</ul>
+<h5 id="schlusselhinweise_5">Schlüsselhinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Das Testament der Mutter: Wenn eine der Töchter heiratet, erhält sie jährlich 250 Pfund — genug, um Roylott in ernsthafte finanzielle Not zu stürzen</td>
+<td>ca. 40%</td>
+<td>Das Motiv ist klar: Die Heirat der Stieftöchter zu verhindern, ist eine finanzielle Notwendigkeit</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Julia war zwei Wochen vor ihrem Tod erst verlobt worden</td>
+<td>ca. 20%</td>
+<td>Die Verlobung löste den Mordplan aus — kein Zufall</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Roylott persönlich erscheint in der Baker Street, um Holmes einzuschüchtern, und biegt demonstrativ einen eisernen Schürhaken um</td>
+<td>ca. 35%</td>
+<td>Ein Unschuldiger muss keinen Detektiv bedrohen; dieses Verhalten verrät seine Angst vor der Untersuchung</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Vorgebliche Baumaßnahmen veranlassen Helen, ins Zimmer der verstorbenen Schwester umzuziehen — genau nach ihrer Verlobung</td>
+<td>ca. 30%</td>
+<td>Dies ist direkter Beweis für Vorsatz: Das Ziel ist, Helen in dasselbe „Falle-Bett" zu legen</td>
+</tr>
+</tbody>
+</table>
+<h5 id="hilfshinweise_3">Hilfshinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Roylott tötete in Indien in einem Wutanfall einen einheimischen Diener und hat damit eine Vorgeschichte der Gewalt</td>
+<td>ca. 18%</td>
+<td>Charakter und Verbrechensgeschichte weisen gleichermaßen auf ihn hin</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Roylott hält auf dem Gut exotische indische Tiere und pflegt engen Umgang mit Zigeunern</td>
+<td>ca. 22%</td>
+<td>Zeigt, dass er über Zugang zu und Wissen über Giftschlangen verfügt</td>
+</tr>
+</tbody>
+</table>
+<h5 id="falschspuren_4">Falschspuren</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Irreführungsrichtung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Die Zigeuner auf dem Gut</td>
+<td>ca. 20%</td>
+<td>Selbst Holmes deutete „speckled band" zunächst als geflecktes Zigeunertuch — Leser werden verleitet, Vagabunden zu verdächtigen</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Leopard und Pavian</td>
+<td>ca. 22%</td>
+<td>Die Präsenz exotischer gefährlicher Tiere erzeugt Schrecken und lenkt Leser in die Irre, die Mordwaffe unter Säugetieren zu suchen</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="wahrheit-2-die-mordmethodehowdunit">Wahrheit 2: Die Mordmethode（howdunit）</h4>
+<ul>
+<li><strong>Konvergenzpunkt: ca. 73%</strong></li>
+<li>Antwort: Roylott ließ eine abgerichtete indische Sumpfviper（swamp adder）durch einen Lüftungsschacht ins Schlafzimmer; die Schlange kletterte an einem als Klingelzug verkleideten Seil herab und landete auf dem am Boden festgenagelten Bett; mit Milch als Lockmittel abgerichtet zu gehorchen, durch Pfeifen zurückgerufen.</li>
+</ul>
+<h5 id="schlusselhinweise_6">Schlüsselhinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Julia konnte Roylotts Zigarrenrauch riechen — zwischen den beiden Zimmern besteht irgendein Luftaustauschweg</td>
+<td>ca. 35%</td>
+<td>Holmes schlussfolgert daraus, dass ein Lüftungskanal existieren muss, der von Zimmer zu Zimmer, nicht nach außen führt</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Der Klingelzug ist eine Fälschung — er ist überhaupt nicht mit einer Leitung verbunden</td>
+<td>ca. 65%</td>
+<td><strong>Wendepunkt</strong>: Ein funktionsloser Klingelzug muss einem anderen Zweck dienen — als Abstiegspfad für ein kriechendes Wesen</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Der Lüftungskanal befindet sich direkt über dem Haken des Klingelzugs und führt nur in Roylotts Schlafzimmer</td>
+<td>ca. 65%</td>
+<td>Lüftungskanal + Seil bilden zusammen ein vollständiges Transportsystem</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Das Bett ist am Boden festgenagelt und kann nicht verschoben werden</td>
+<td>ca. 67%</td>
+<td>Stellt sicher, dass das Opfer immer direkt unter dem Ende des Seils liegt — das physische Fundament der gesamten Vorrichtung</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Auf Roylotts eisernem Safe steht ein Milchnapf, obwohl im Zimmer keine Katze ist</td>
+<td>ca. 68%</td>
+<td>Die Milch dient der Schlange als Getränk; sie wird damit auf Gehorsam konditioniert</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Eine zur Schlinge aufgerollte Hundepeitsche</td>
+<td>ca. 70%</td>
+<td>Werkzeug zum Umfassen des Schlangenkopfes und zur sicheren Kontrolle der Giftschlange</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Abnutzungsspuren auf dem Holzstuhlsitz — Roylott pflegte darauf zu stehen</td>
+<td>ca. 72%</td>
+<td><strong>Konvergenzpunkt</strong>: Er stand auf dem Stuhl, um die Schlange durch den Lüftungskanal ins Nachbarzimmer zu schieben</td>
+</tr>
+</tbody>
+</table>
+<h5 id="hilfshinweise_4">Hilfshinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Julia sprach im Sterben von der „gefleckten Binde" und zeigte in Richtung von Roylotts Zimmer</td>
+<td>ca. 20%</td>
+<td>Sie beschrieb mit „gefleckt" das im Streichholzlicht kurz aufblitzende Schuppenmuster der Schlange — der wichtigste Hinweis, den die Tote hinterließ</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Die Bedingungen des verschlossenen Zimmers: Tür von innen verriegelt, Fenster mit Eisenriegeln gesichert, Kamin vergittert — alle konventionellen Zugangswege versperrt</td>
+<td>ca. 22%</td>
+<td>Zeigt, dass die Mordwaffe ein Wesen sein muss, das sich eigenständig hinein- und hinausbewegen kann, kein Mensch</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Julia hörte in den Nächten vor ihrem Tod ein dumpfes Pfeifgeräusch</td>
+<td>ca. 20%</td>
+<td>Roylott rief die Schlange nachts mit Pfeifen zurück; der Ton drang durch den Lüftungskanal zu Julia</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Der Safetresor steht leicht offen, im Inneren befindet sich ein verborgenes Fach</td>
+<td>ca. 68%</td>
+<td>Die Schlange wird normalerweise im Safe gehalten und erst beim Freilassen geöffnet</td>
+</tr>
+</tbody>
+</table>
+<h5 id="falschspuren_5">Falschspuren</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Irreführungsrichtung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>„Die gefleckte Binde"（speckled band）— das gefleckte Kopftuch der Zigeuner</td>
+<td>ca. 20%</td>
+<td>Selbst Holmes dachte zeitweise in die Richtung „koordiniertes Handeln der Zigeuner"</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Das Rätsel des verschlossenen Zimmers（Türen und Fenster von innen verriegelt, kein Zugangsweg）</td>
+<td>ca. 22%</td>
+<td>Erzeugt den falschen Schein: „Menschen konnten nicht hinein, also war der Tod kein Mord"</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Leopard und Pavian streifen über das Gut</td>
+<td>ca. 22%</td>
+<td>Verstärkt weiter die Fehlannahme, die Mordwaffe sei ein großes Säugetier</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="rekonstruktion-des-denkwegs">Rekonstruktion des Denkwegs</h2>
+<h3 id="ein-skandal-in-bohmen-zwei-parallele-pfade">Ein Skandal in Böhmen: Zwei parallele Pfade</h3>
+<p><strong>Pfad 1（howdunit — Wo ist das Foto）</strong></p>
+<p>Leser sollten spätestens bei etwa 30% den Widerspruch bemerken: „Das Foto muss im Haus sein, aber konventionelle Suchverfahren greifen nicht" — und beginnen, über unkonventionelle Suchmethoden nachzudenken. Bei 55%, als Holmes die Theorie des „Feuerinstinkts" aufstellt, sollten aufmerksame Leser den bevorstehenden Plan vorhersehen können. Die Beobachtung bei 65% bestätigt den Versteckort.</p>
+<p><strong>Pfad 2（inverse whodunit — Wer rechnet mit wem）</strong></p>
+<p>Dieser Pfad ist das tiefste Rätsel der Geschichte. Das „Good-night, Mister Sherlock Holmes" bei 80% ist ein in den Text eingepflanztes Signal für Leser — jemand hat Holmes in der Dunkelheit erkannt und ihn aktiv gegrüßt, was bedeutet: Jemand hat ihn verfolgt. Wer an dieser Stelle innehält und nachdenkt, sollte vor dem 90%-Punkt auf Irenes Gegenmaßnahmen schließen können.</p>
+<p><strong>Die Kernumkehr dieser Geschichte:</strong>
+Holmes gewann taktisch（er kannte den Versteckort des Fotos）, verlor aber strategisch（Irene hatte die Stellung längst aufgegeben）. Der Autor lässt Leser gemeinsam mit Holmes glauben, der Plan sei vollendet, um dann alles in der Schlussszene zu kippen. Dies ist kein konventionelles „Leser erraten die Wahrheit"-Spiel, sondern: „Leser und Detektiv werden gemeinsam von der klugen Untersuchungsperson überlistet".</p>
+<hr>
+<h3 id="die-liga-der-rotschopfe-ein-trick-im-industriemastab">Die Liga der Rotschöpfe: Ein Trick im Industriemaßstab</h3>
+<p>Der Schlüssel liegt in der Frage: „Warum so viel Aufwand, um einen rothaarigen Dickwanst anzuheuern?" Leser sollten spätestens bei 25% Spauldings Bereitschaft, für halben Lohn zu arbeiten, als Anomalie bemerken — dieses Detail ist das wichtigste Frühsignal der Geschichte. Niemand akzeptiert ohne Weiteres niedrigen Lohn, es sei denn, er verfolgt ein größeres Vorhaben.</p>
+<p>Das „Kellerfotos-Entwickeln" bei 35% ist das zweite Signal: Die einzig vernünftige Erklärung für die Anziehungskraft des Kellers ist, dass er irgendwohin führt. Die „Knie" bei 65% sind der Bestätigungshinweis — Doyles direktes visuelles Signal an Leser, lediglich durch Holmes' Augen präsentiert. Nachdem bei 68% die benachbarte Bank sichtbar wird, fügt sich die gesamte Logikkette zusammen.</p>
+<p>Aufmerksame Leser sollten vor dem 65–68%-Punkt eigenständig auf die Schlussfolgerung „Tunnel graben, Bank ausrauben" kommen — weit früher als die Intuition der meisten Leser es vermuten lässt.</p>
+<hr>
+<h3 id="das-abenteuer-des-blauen-karbunkels-objekt-verfolgungslogik">Das Abenteuer des blauen Karbunkels: Objekt-Verfolgungslogik</h3>
+<p>Bei dieser Geschichte geht es nicht ums „Finden des Täters", sondern ums „Verfolgen eines Objekts". Leser sollten spätestens bei 25% die seltsame Lücke im Bericht bemerken: Der Edelstein wurde nicht bei Horner gefunden, und Ryder als erster Rückkehrer ins Zimmer stand nie unter Verdacht.</p>
+<p>Die „zweite Person, die ebenfalls die Gans verfolgt" bei 67–70% ist die entscheidende Wendung — ein Unschuldiger hat keinen Grund, verzweifelt nach einer bereits verkauften Gans zu fragen; nur wer den Edelstein darin versteckt hat, kann so dringend sein. Als Ryders Identität enthüllt wird（ca. 73%），fügt sich die gesamte Kette klar zusammen.</p>
+<p>Das Schönste an dieser Geschichte ist: Die vollständige Enthüllung der Wahrheit（der Stein landete in der falschen Gans）ist selbst ein komischer „Zufall", der die Spannung des versuchten Diebstahls augenblicklich ins Absurde kippt — mit Holmes' Entscheidung zur Begnadigung als Abschluss: moralisch umstritten, menschlich untadelig.</p>
+<hr>
+<h3 id="das-abenteuer-der-gefleckten-binde-ruckwartsdecodierung-des-verschlossenen-zimmers">Das Abenteuer der gefleckten Binde: Rückwärtsdecodierung des verschlossenen Zimmers</h3>
+<p>Das Klügste an dieser Geschichte: Leser können sehr früh（ca. 25%）den Täter bestimmen, doch der Kern des Rätsels ist „wie es geschah". Dies verwandelt ein whodunit in ein reines howdunit-Rätsel.</p>
+<p>Der Denkweg sollte wie folgt verlaufen:</p>
+<ol>
+<li><strong>ca. 20%</strong>: „Gefleckte Binde" und „Finger zeigt in Richtung des Stiefvater-Schlafzimmers" → Julia versuchte jemanden anzuklagen, doch ihre Beschreibung ist vage</li>
+<li><strong>ca. 35%</strong>: „Zigarrenrauch kann durch die Wand dringen" → Es muss einen Luftkanal geben, und dieser führt von Zimmer zu Zimmer</li>
+<li><strong>ca. 65%</strong>: „Falscher Klingelzug + Lüftungskanal auf derselben Achse" → Das Seil ist ein Durchgang für ein kriechendes Wesen</li>
+<li><strong>ca. 68%</strong>: „Milchnapf auf dem Safe, aber keine Katze" → Im Safe befindet sich ein Tier; die Milch dient der Konditionierung</li>
+<li><strong>ca. 72%</strong>: „Abgenutzte Stuhlsitzfläche + aufgerollte Hundepeitsche" → Roylott stand auf dem Stuhl, um die Schlange einzusetzen, und holte sie mit der Peitsche zurück</li>
+</ol>
+<p>Bei 72% sollten Leser in der Lage sein, noch bevor Holmes die Antwort ausspricht, selbst den vollständigen Mechanismus herzuleiten: „Eine abgerichtete Giftschlange wird durch den Lüftungskanal eingeschleust, klettert das Seil herab zum festgenagelten Bett und begeht dort den Mord."</p>
+<hr>
+<h2 id="erganzende-bemerkungen">Ergänzende Bemerkungen</h2>
+<h3 id="doyles-philosophie-des-deduktionsdesigns">Doyles Philosophie des Deduktionsdesigns</h3>
+<p>Die „Abenteuer" sind Doyles repräsentativste Werke seiner reifen Schaffensphase. Verglichen mit den Romanen „Eine Studie in Scharlachrot" und „Das Zeichen der Vier" sind diese Kurzgeschichten strukturell geschliffener, die Hinweise konzentrierter und die „Tricks" literarisch anspruchsvoller. Doyle etablierte eine bis heute weit verbreitete Vorlage für „vorgeführtes Schlussfolgern":</p>
+<ol>
+<li><strong>Die einleitende Spontandeduktion</strong>（reading the client）: Fast jede Geschichte beginnt damit, dass Holmes einen Besucher oder ein Objekt am Tatort „spontan liest" — das weckt intellektuelle Erwartungen und pflanzt Beobachtungsgewohnheiten ein, die für die spätere Lösung des Falls benötigt werden</li>
+<li><strong>Die umgekehrte Informationsasymmetrie</strong>: Leser und Watson sind synchron — und beide hinken Holmes hinterher. Doyle lässt Holmes absichtlich „schon wissen, aber zunächst schweigen" und erzeugt so eine sanfte narrative Spannung</li>
+<li><strong>Objekte als Vermittler</strong>: Fast jeder Fall hat ein Kernobjekt（Hut, Foto, Gans, Seil）; das Schlussfolgern beginnt beim Objekt, folgt dem Objekt und endet beim Objekt</li>
+</ol>
+<h3 id="vergleich-und-einordnung-der-vier-geschichten">Vergleich und Einordnung der vier Geschichten</h3>
+<table>
+<thead>
+<tr>
+<th>Titel</th>
+<th>Deduzierbarkeit</th>
+<th>Nebelgrad</th>
+<th>Kerninnovation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ein Skandal in Böhmen</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>Der Detektiv verliert; intellektuelle Gegenwehr der Untersuchten</td>
+</tr>
+<tr>
+<td>Die Liga der Rotschöpfe</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>Ein genialer Betrug als kriminelles Werkzeug; „absurde Prämisse, rigorose Deduktion"</td>
+</tr>
+<tr>
+<td>Der blaue Karbunkel</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>Objekt-Verfolgungslogik; komisches Zufallsverbrechen; moralische Begnadigung</td>
+</tr>
+<tr>
+<td>Die gefleckte Binde</td>
+<td>⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>Zimmer-geschlossenes Kunststück; Giftschlange als Waffe; Dekonstruktion des „Unmöglichen"</td>
+</tr>
+</tbody>
+</table>
+<h3 id="der-literarische-stellenwert-von-ein-skandal-in-bohmen">Der literarische Stellenwert von „Ein Skandal in Böhmen"</h3>
+<p>„Die Frau"（the woman）— Irene Adler ist die berühmteste Nebenfigur der Detektivliteraturgeschichte, gerade weil sie die Einzige ist, die Holmes auf intellektueller Ebene vollständig geschlagen hat. Doyle gewöhnte Leser durch Watsons bewundernden Erzählton an die Erwartung „Holmes gewinnt immer" — und zertrümmerte diese Erwartung dann in der allerersten Geschichte. Diese Eröffnungskonstellation ist äußerst klug: Sie legt fest, dass Holmes „außerordentlich stark, aber nicht unbesiegbar" ist.</p>
+<h3 id="die-logischen-schwachen-von-die-gefleckte-binde">Die logischen Schwächen von „Die gefleckte Binde"</h3>
+<p>Diese Geschichte ist in der Geschichte der Detektivliteratur ein berühmter Streitfall. Das Problem: In der Realität gibt es keine Schlange, die durch Pfeiftöne abgerichtet werden kann, in der Dunkelheit durch Lüftungskanäle kriecht und dann an einem Seil auf eine bestimmte Bettstelle absteigt — zumal Schlangen keine Milch trinken und Pfeiftöne nicht als Hörstimulus wahrnehmen（Schlangen sind nahezu taub und orientieren sich hauptsächlich durch Vibrationen）. Die Auflösung ist logisch fesselnd, biologisch jedoch gänzlich fiktiv. Doyle selbst gestand später ein, dass dies ein Wissensfehler seinerseits war — doch das hindert die Geschichte nicht daran, einer der berühmtesten verschlossenen Zimmer-Morde der Kriminalliteraturgeschichte zu sein: Die Erzählpacte, die Horroratmosphäre und die Schlange, die am Ende ihren Herrn tötet, machen sie in ihrer literarischen Wirkung makellos.</p>
+<h3 id="beitrag-zur-detektivtradition">Beitrag zur Detektivtradition</h3>
+<p>Diese Kurzgeschichten begründeten die moderne Form der Detektivkurzgeschichte: fester Detektiv, fester Partner（zugleich Erzähler）, Fälle werden von Klienten gebracht, der Denkprozess wird transparent（wenn auch leicht verzögert）präsentiert, nach der Enthüllung der Wahrheit folgt eine methodologische Erläuterung. Diese Struktur beeinflusste direkt Agatha Christie（ihre Poirot-Reihe ist strukturell fast eine verfeinerte Ausführung dieser Vorlage）und wurde zum Skelett des Kriminalromans des zwanzigsten Jahrhunderts.</p>
+    <a href="../index.html" class="back-link">← Zur Startseite</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Detektivanalyse</p>
+    <p>Fünf Autoren · achtundachtzig Werke · 135 Jahre Entwicklung der Schwierigkeit im Kriminalroman.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
