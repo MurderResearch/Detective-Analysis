@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>셜록 홈즈의 회고록（The Memoirs of Sherlock Holmes）— 추리 분석 — 추리해부실</title>
+<meta name="description" content="《셜록 홈즈의 회고록》은 두 번째 정전 단편집으로, 12편의 이야기를 수록하여 홈즈의 가장 빛나는 중기 활동 시절을 기록합니다. 전집은 다양한 수수께끼 유형을 포함합니다：경마장에서의 말 실종과 조련사 살인（〈실버 블레이즈〉）, 소포 안의 두 개의 인간 귀（〈판지 상자〉）, 가문의 오래된">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-memoirs-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-memoirs-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-memoirs-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-memoirs-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-memoirs-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-memoirs-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-memoirs-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-memoirs-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif KR', serif;
+  --font-sans: 'Noto Sans KR', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">추리해부실</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">홈</a>
+        <a href="../index.html#latest">최신</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="언어" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 한국어</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-memoirs-of-sherlock-holmes.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-memoirs-of-sherlock-holmes.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-memoirs-of-sherlock-holmes.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/the-memoirs-of-sherlock-holmes.html">日本語</a>
+      <a class="lang-item active" data-lang="ko" href="/Detective-Analysis/ko/articles/the-memoirs-of-sherlock-holmes.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/the-memoirs-of-sherlock-holmes.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/the-memoirs-of-sherlock-holmes.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/the-memoirs-of-sherlock-holmes.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">아서 코난 도일 · </div>
+    <h1>셜록 홈즈의 회고록（The Memoirs of Sherlock Holmes）— 추리 분석</h1>
+    <div class="subtitle">코난 도일（Arthur Conan Doyle） · 단편집（12편）</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">추리 난이도</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">안개 등급</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="the-memoirs-of-sherlock-holmes">셜록 홈즈의 회고록（The Memoirs of Sherlock Holmes）— 추리 분석</h1>
+<h2 id="_1">기본 정보</h2>
+<ul>
+<li>저자：코난 도일（Arthur Conan Doyle）</li>
+<li>출판년도：1894년（각 편은 《스트랜드 매거진》 1892–1893년에 연재）</li>
+<li>장르：단편집（12편）</li>
+<li>탐정：셜록 홈즈（Sherlock Holmes）</li>
+<li>핵심 수수께끼 유형：whodunit / howdunit / 암호 해독 / 보물찾기 수수께끼</li>
+</ul>
+<hr>
+<h2 id="_2">추리 난이도 총평（전집 평균）</h2>
+<table>
+<thead>
+<tr>
+<th>지표</th>
+<th>별점</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>추리 난이도（Deducibility）</td>
+<td>⭐⭐⭐</td>
+<td>평균 수렴점 약 67% — 네 편의 대표작이 각기 다름：〈실버 블레이즈〉가 난이도 최고, 〈판지 상자〉가 가장 쉽게 추리 가능, 대부분의 수수께끼는 6~70%를 읽어야 전체 윤곽을 파악할 수 있음</td>
+</tr>
+<tr>
+<td>안개 등급（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>도일은 완벽해 보이는 대체 용의자（청어 미끼）를 만들어 내는 데 능하지만, 단서 배치는 대체로 공정하며 꼼꼼히 읽는 독자는 점차 오도를 간파할 수 있음</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>본 전집에서 가장 대표적인 네 편의 추리 이야기를 선택하여 심층 분석합니다：<strong>〈실버 블레이즈〉〈판지 상자〉〈머스그레이브 의식〉〈라이게이트 수수께끼〉</strong>. 마지막 편 〈마지막 사건〉은 모리아티 교수의 등장과 라이헨바흐 폭포의 수수께끼를 다루며, 결론으로 부록 논의합니다.</p>
+</blockquote>
+<hr>
+<h2 id="_3">줄거리</h2>
+<p>《셜록 홈즈의 회고록》은 두 번째 정전 단편집으로, 12편의 이야기를 수록하여 홈즈의 가장 빛나는 중기 활동 시절을 기록합니다. 전집은 다양한 수수께끼 유형을 포함합니다：경마장에서의 말 실종과 조련사 살인（〈실버 블레이즈〉）, 소포 안의 두 개의 인간 귀（〈판지 상자〉）, 가문의 오래된 의식 뒤에 숨겨진 왕관의 비밀과 살인（〈머스그레이브 의식〉）, 절도 사건을 위장하여 진범의 신분을 숨기는 것（〈라이게이트 수수께끼〉）, 그리고 마지막 편에서 홈즈와 범죄계의 대가 모리아티 교수가 함께 폭포 아래로 떨어지는 것으로 끝맺습니다——도일이 이 캐릭터를 영구히 끝내려 한 가장 극적인 출구였습니다.</p>
+<p>이 이야기들은 도일의 추리 기법이 성숙한 시기를 대표합니다：단서 배치가 더욱 정교하고, 반전이 더욱 강렬하며, 도일이 주창한 「연역 논리」는 이미 각 이야기의 핵심 동력이 되어 있고, 장식에 불과한 것이 아닙니다.</p>
+<hr>
+<h2 id="silver-blaze">선편 일：실버 블레이즈（Silver Blaze）</h2>
+<h3 id="_4">기본 정보</h3>
+<ul>
+<li>핵심 수수께끼 유형：whodunit（누가 조련사를 죽였는가）+ howdunit（말이 어떻게 사건에 연루되었는가）+ whereabouts（말은 어디에 있는가）</li>
+</ul>
+<h3 id="_5">추리 난이도 총평</h3>
+<table>
+<thead>
+<tr>
+<th>지표</th>
+<th>별점</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>추리 난이도（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>평균 수렴점 약 72% — 카레 양고기 단서는 일찍 등장하지만, 말의 위치와 죽음의 진실은 후반부에야 완전히 확인 가능</td>
+</tr>
+<tr>
+<td>안개 등급（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>피츠로이 심프슨이 완벽한 용의자로 정교하게 설정되어 청어 미끼 효과가 탁월함；그러나 「밤에 개가 짖지 않았다」는 역방향 단서는 꼼꼼한 독자가 진실을 간파하기에 충분함</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_6">줄거리</h3>
+<p>웨섹스 챔피언십의 최고 유력 경주마 「실버 블레이즈」가 실종되고, 그 조련사 존 스트레이커가 늪지대에서 시신으로 발견됩니다. 현장은 외부 도박사 심프슨을 가리킵니다——그는 거액의 역방향 베팅을 하고, 당일 밤 마구간 근처에 나타났으며, 그의 검은 넥타이가 시신의 손에서 발견됩니다. 모든 것이 심프슨을 가리키지만, 홈즈가 현장에 도착한 후 카레 냄새에서 시작하여 완전히 다른 진실을 역으로 재구성합니다：조련사 본인이 진범이었고, 그를 죽인 것은 바로 그 말이었습니다.</p>
+<h3 id="_7">진실 해부</h3>
+<h4 id="whydunit">진실 일：스트레이커의 동기와 계획（whydunit）</h4>
+<ul>
+<li><strong>단서 수렴점：약 55%</strong></li>
+<li>답：스트레이커는 외도로 인한 빚을 지고 있었고（본드 스트리트에 비용이 많이 드는 정부를 두고 있었음）, 실버 블레이즈의 다리 힘줄에 눈에 보이지 않는 절개를 만들어 가볍게 절름발이로 만든 뒤, 자신의 말에 지는 쪽에 비밀리에 거액을 걸어 큰돈을 챙기려 했습니다.</li>
+</ul>
+<h4 id="_8">핵심 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（백분율）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>마구간 소년의 저녁 식사는 아편 가루가 든 카레 양고기였는데, 집 안의 다른 사람들은 같은 음식을 먹고도 아무 이상이 없었음</td>
+<td>약 20%</td>
+<td>핵심 추리：카레의 강렬한 맛만이 아편을 가릴 수 있는데, 그날 밤 카레를 만들기로 결정한 것은 누구인가? 외부인인 심프슨은 절대 사전에 부엌에서 카레를 준비하도록 꾀할 수 없었다——약물은 스트레이커나 그의 아내가 넣은 것임이 틀림없음</td>
+</tr>
+<tr>
+<td>2</td>
+<td>밤에 파수견이 짖지 않았다（The curious incident of the dog in the night-time）</td>
+<td>약 60%</td>
+<td>역방향 단서：낯선 사람（심프슨）이 말을 데려갔다면 개가 반드시 맹렬히 짖었을 것；그러나 개가 반응하지 않았다는 것은 한밤중의 방문자가 개에게 친숙한 사람임을 의미——스트레이커 본인뿐</td>
+</tr>
+<tr>
+<td>3</td>
+<td>시신이 정밀한 안과용 칼（cataract knife）을 들고 있었고, 일반 무기가 아니었음</td>
+<td>약 55%</td>
+<td>왓슨이 이것이 외과용 수술 칼로, 극도로 정밀한 작업을 위해 설계된 것임을 확인；스트레이커가 이 칼을 지닌 것은 자기 방어가 아니라 말의 다리 힘줄에 미세한 절개를 만들기 위한 것</td>
+</tr>
+<tr>
+<td>4</td>
+<td>스트레이커의 주머니에 「윌리엄 더비셔 씨」 앞으로 된 모자 가게 청구서（22기니 수 파운드）가 있었음</td>
+<td>약 55%</td>
+<td>청구서는 스트레이커가 가명으로 사치스러운 정부를 부양했음을 보여주며, 이것이 그가 사기 행각에 나선 재정적 동기</td>
+</tr>
+<tr>
+<td>5</td>
+<td>홈즈가 스트레이커 부인에게 비둘기색 실크 드레스가 있었는지 물었고, 그녀는 단호히 부인</td>
+<td>약 56%</td>
+<td>청구서의 드레스가 합법적인 아내에게 전달된 적이 없음을 확인——「더비셔 씨」는 스트레이커였으며, 청구서가 그의 이중생활을 폭로</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_9">보조 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（백분율）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>마구간 근처 양 떼 중 세 마리가 절름발이</td>
+<td>약 65%</td>
+<td>장거리 단서：스트레이커가 양에게 힘줄 절개 기술을 연습해 왔음</td>
+</tr>
+<tr>
+<td>2</td>
+<td>스트레이커가 심야에 외출하며 아내에게 진짜 이유를 알리지 않음</td>
+<td>약 18%</td>
+<td>그가 치밀하게 계획하고 사전 모의했음을 강조</td>
+</tr>
+<tr>
+<td>3</td>
+<td>스트레이커가 양초를 소지</td>
+<td>약 65%</td>
+<td>어두운 광야에서 정밀 수술을 집도하기 위해 빛이 필요했음을 의미</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_10">가짜 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（백분율）</th>
+<th>오도 방향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>심프슨의 검은 넥타이가 시신의 손에서 발견</td>
+<td>약 10%</td>
+<td>심프슨이 스트레이커와 격투하여 그를 죽인 것으로 생각하게 만듦——그러나 이것은 심프슨이 도망치면서 떨어뜨린 것으로, 스트레이커가 말의 다리를 묶는 데 쓰려고 집어 든 것</td>
+</tr>
+<tr>
+<td>2</td>
+<td>심프슨은 5천 파운드의 역방향 베팅을 했고, 무게를 더한 지팡이를 소지</td>
+<td>약 12%</td>
+<td>재정적 동기＋흉기 겸비, 완벽한 용의자 프레임이지만 직접적인 물증 없음</td>
+</tr>
+<tr>
+<td>3</td>
+<td>마플턴 마구간의 사일러스 브라운도 실버 블레이즈를 실종시킬 이익 동기가 있음</td>
+<td>약 20%</td>
+<td>또 다른 대체 용의자이지만, 그는 기회를 보아 말을 숨겼을 뿐 살인범은 아님</td>
+</tr>
+<tr>
+<td>4</td>
+<td>집시 무리가 사건 현장 근처에 야영하다 즉시 떠남</td>
+<td>약 12%</td>
+<td>「집시가 말을 납치했다」는 가능성 조성</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="whereabouts">진실 이：실버 블레이즈의 위치（whereabouts）</h4>
+<ul>
+<li><strong>단서 수렴점：약 70%</strong></li>
+<li>답：실버 블레이즈는 그날 밤 놀라 혼자 탈출하였고, 마플턴 마구간의 조련사 사일러스 브라운에게 발견되었습니다；브라운은 처음에 이를 이용해 말을 억류하려 했으나, 홈즈가 확실한 증거를 쥐고 있다고 위협하자 포기했습니다.</li>
+</ul>
+<h4 id="_11">핵심 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（백분율）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>말은 무리를 짓는 동물로, 자유롭게 움직이면 반드시 가장 가까운 마구간으로 돌아감</td>
+<td>약 65%</td>
+<td>홈즈의 연역적 추론：실버 블레이즈가 킹스 파이런드에 없다면, 마플턴에 있을 수밖에 없음</td>
+</tr>
+<tr>
+<td>2</td>
+<td>늪지 진흙에서 발견된 발굽 자국이 마플턴 방향으로 향함</td>
+<td>약 68%</td>
+<td>현지 추적：마플턴에 가까워질수록 말의 발자국 옆에 사람의 발자국이 나타남</td>
+</tr>
+<tr>
+<td>3</td>
+<td>사일러스 브라운은 홈즈가 귀에 대고 몇 마디를 한 뒤 안색이 창백해지고 온몸이 떨림</td>
+<td>약 70%</td>
+<td>간접 확인：홈즈가 그가 본 발자국이 브라운의 장화와 완전히 일치한다고 말한 것</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="howdunit">진실 삼：스트레이커 사망의 진짜 원인（howdunit）</h4>
+<ul>
+<li><strong>단서 수렴점：약 90%</strong></li>
+<li>답：스트레이커는 실버 블레이즈를 광야로 데려가 수술을 집도하려 했고, 양초에 불을 붙이다가 말을 놀라게 했으며, 실버 블레이즈가 발길질을 하여 편자가 스트레이커의 이마를 정통으로 가격해 즉사했습니다. 수술 칼은 이후 쓰러진 스트레이커의 허벅지에 상처를 냈습니다. 말은 자기 방어를 한 것이었습니다.</li>
+</ul>
+<h4 id="_12">핵심 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（백분율）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>스트레이커의 안과용 칼과 양에게 연습해 온 습관</td>
+<td>약 55%、65%</td>
+<td>수술 계획의 본질을 확립</td>
+</tr>
+<tr>
+<td>2</td>
+<td>시신의 이마 상처 윤곽이 경주마의 편자 모양과 일치</td>
+<td>약 90%</td>
+<td>홈즈가 해설 시 밝힘：상처의 윤곽이 지팡이가 아닌 편자에 부합</td>
+</tr>
+<tr>
+<td>3</td>
+<td>심프슨이 떨어뜨린 넥타이를 스트레이커가 집어 들었음</td>
+<td>약 92%</td>
+<td>홈즈가 이 세부 사항을 설명：스트레이커는 원래 넥타이로 말의 다리를 묶어 발버둥 치지 못하게 하려 했음</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_13">추리 경로 재구성</h3>
+<p><strong>첫 번째 관문：심프슨 배제</strong></p>
+<p>약 20% 지점에서 「카레 양고기 속 아편」은 이 사건 전체의 핵심 퍼즐 조각입니다——도일은 여기서 겉보기에 평범한 세부 사항을 활용했습니다. 꼼꼼한 독자라면 「그날 밤 카레를 준비하기로 한 결정은 집 안에서 이루어졌고, 심프슨은 집 밖에 있었다」는 점에 주목하여 심프슨이 이 음식을 사전에 준비하도록 꾀할 수 없었음을 간파할 수 있어야 합니다. 이것은 전편에서 내부인을 진범으로 가리키는 첫 번째 진정한 신호이지만, 심프슨을 의심하는 대량의 정보 물결 속에 숨겨져 있어 일반 독자는 쉽게 간과하게 됩니다.</p>
+<p><strong>두 번째 관문：스트레이커의 동기 확인</strong></p>
+<p>55% 부근（스트레이커의 소지품 조사）은 이 사건에서 단서가 가장 밀집된 장면——안과용 칼＋모자 청구서＋아내의 드레스 부인, 세 가지 단서가 같은 장면에서 거의 동시에 등장합니다. 이 시점에 세 가지를 연결하여 「스트레이커가 외도를 하고 있었으며, 수술 방식으로 자신의 말을 불구로 만들어 돈을 챙기려 했다」는 결론을 도출할 수 있는 독자라면 사건을 이미 해결한 것이나 다름없습니다.</p>
+<p><strong>세 번째 관문：실버 블레이즈 위치 파악</strong></p>
+<p>홈즈가 「말이 자유롭게 움직이면 반드시 가장 가까운 마구간으로 가게 된다——킹스 파이런드가 아니면 마플턴」이라고 말하는 시점（약 65%）부터, 그의 추론 경로는 독자에게 공개됩니다. 이 추론 단락은 본 전집에서 「사고 과정을 보여주는」 가장 뛰어난 단락 중 하나입니다.</p>
+<p><strong>네 번째 관문：말이 사람을 죽인 최종 진실</strong></p>
+<p>이 층위는 90%에 이르러서야 완전히 드러납니다. 앞의 세 층위를 모두 추론했더라도, 「도대체 누가 스트레이커를 죽였는가」라는 질문은 여전히 본문 속에 잠복해 있어, 독자들이 스트레이커가 격투 중에 쓰러진 것으로 생각하게 만듭니다. 홈즈가 「범인이 바로 눈앞에 있다」고 말하며 경주마의 목을 두드릴 때, 그 완전히 예상치 못한 반전은 여전히 강렬합니다——이미 7~80%를 맞춘 독자들에게도.</p>
+<h3 id="_14">보충 설명</h3>
+<p>〈실버 블레이즈〉는 홈즈 사건 중 가장 유명한 「역방향 수수께끼」 중 하나입니다：범인은 표면적인 용의자도 아니고, 인간도 아니며, 피해자가 스스로 해치려 했던 동물입니다. 도일은 여기서 완전히 공정한 수수께끼를 만들었습니다——모든 단서가 문자 속에 명확하게 제시되어 있으면서도, 일반 독자를 잘못된 길로 이끌기에 충분한 오도를 설계했습니다.</p>
+<p>「밤에 개가 짖지 않았다」는 이 역방향 단서는 추리 문학사에서 가장 유명한 단서 중 하나가 되었으며, 후대 무수한 작가들이 인용하고 경의를 표했습니다. 그 절묘함은 독자들에게 「일어난 일」이 아닌 「일어나지 않은 일」에 주목하도록 요구한다는 데 있습니다——이것이 도일이 추리 설계에서 동시대 작가들을 능가하는 핵심 능력입니다.</p>
+<hr>
+<h2 id="the-adventure-of-the-cardboard-box">선편 이：판지 상자（The Adventure of the Cardboard Box）</h2>
+<h3 id="_15">기본 정보</h3>
+<ul>
+<li>핵심 수수께끼 유형：whodunit + whydunit</li>
+</ul>
+<h3 id="_16">추리 난이도 총평</h3>
+<table>
+<thead>
+<tr>
+<th>지표</th>
+<th>별점</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>추리 난이도（Deducibility）</td>
+<td>⭐⭐⭐</td>
+<td>평균 수렴점 약 50% — 선원 신분 단서는 일찍 등장하고, 가족 관계는 중반부에 이미 상당히 명확；범인 신분은 절반을 읽었을 때 합리적으로 추론 가능</td>
+</tr>
+<tr>
+<td>안개 등급（Fog Rating）</td>
+<td>⭐⭐</td>
+<td>의대생 장난 이론이 초기 오도를 제공하지만 홈즈가 빨리 해소；주요 단서는 비교적 선형적으로 제시되며, 도일이 여러 방향의 가짜 단서를 크게 배치하지 않음</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_17">줄거리</h3>
+<p>크로이던의 수잔 쿠싱 양에게 소포 하나가 배달되고, 열어 보니 안에는 굵은 소금에 보존된 두 개의 인간 귀——남자 것 하나, 여자 것 하나——가 들어 있습니다. 경찰은 이것이 전 세입자 의대생의 장난이라고 생각하는 경향이 있지만, 홈즈는 귀 하나의 해부학적 특징만으로 그것이 가리키는 살인의 비극을 간파합니다：질투심 많은 선원이 아내와 그녀의 정부를 죽이고, 처제에게 귀를 보냈습니다——그는 그렇게 하겠다고 협박한 적이 있었습니다.</p>
+<h3 id="_18">진실 해부</h3>
+<h4 id="whodunit">진실 일：소포를 보낸 것은 누구인가（whodunit）</h4>
+<ul>
+<li><strong>단서 수렴점：약 50%</strong></li>
+<li>답：짐 브라우너（Jim Browner）, 리버풀 항로의 선실 승무원으로, 질투심으로 아내 메리와 그녀의 정부 페어번을 죽이고, 두 사람의 귀를 처제 사라에게 보냈습니다——그는 사라에게 「페어번이 다시 나타나면 그의 귀를 기념으로 보내겠다」고 명확히 협박한 적이 있었습니다.</li>
+</ul>
+<h4 id="_19">핵심 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（백분율）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>소포의 끈이 역청을 입힌 범선 밧줄이고, 매듭이 선원이 즐겨 쓰는 방식</td>
+<td>약 28%</td>
+<td>범인이 선원 배경을 지님을 확립</td>
+</tr>
+<tr>
+<td>2</td>
+<td>남자 귀에 선원이 흔히 하는 귀걸이 구멍이 있고, 피부가 눈에 띄게 햇볕에 탐</td>
+<td>약 30%</td>
+<td>선원 특징을 이중으로 뒷받침</td>
+</tr>
+<tr>
+<td>3</td>
+<td>여자 귀의 해부학적 형태（귓바퀴 단축, 상부 곡선）가 수잔 쿠싱 본인의 귀와 거의 일치</td>
+<td>약 35%</td>
+<td><strong>핵심 도약</strong>：피해자는 낯선 사람이 아니라 쿠싱 양의 혈육</td>
+</tr>
+<tr>
+<td>4</td>
+<td>소포 발송지는 벨파스트（쿠싱 양은 여동생 사라가 예전에 리버풀에 살았고, 매제 짐이 선원이라고 말함）</td>
+<td>약 38%</td>
+<td>리버풀 항로가 벨파스트를 경유하며, 범인이 소포를 보낸 시점이 들어맞음</td>
+</tr>
+<tr>
+<td>5</td>
+<td>사라 쿠싱은 소포 소식을 듣고 당일 뇌열로 쓰러짐</td>
+<td>약 45%</td>
+<td>그녀는 소포의 진정한 의미를 알고 있으며, 유죄를 아는 공범——그리고 그녀가 진짜 소포 수신인</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_20">보조 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（백분율）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>소포 주소에 「Miss S. Cushing」이라고 쓰여 있는데, 수잔과 사라 모두 쿠싱이라는 성에 이니셜이 같음</td>
+<td>약 20%</td>
+<td>소포가 사정을 모르는 언니에게 전달된 이유를 설명</td>
+</tr>
+<tr>
+<td>2</td>
+<td>브라우너는 처제 사라의 개입으로 결혼이 파탄 나고 다시 술을 마시기 시작</td>
+<td>약 55%</td>
+<td>동기의 배경 연결 고리</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_21">가짜 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（백분율）</th>
+<th>오도 방향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>쿠싱 양에게는 의대생 세입자 세 명이 있었고, 그 중 한 명이 북아일랜드 출신（마찬가지로 벨파스트와 연관）</td>
+<td>약 15%</td>
+<td>경찰과 언론 모두 장난으로 추정하며, 독자들이 이 단서를 믿을 가능성 있음</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="whodunit-victims">진실 이：피해자 신원（whodunit victims）</h4>
+<ul>
+<li><strong>단서 수렴점：약 45%</strong></li>
+<li>답：남자 귀는 페어번（아내의 정부）의 것이고, 여자 귀는 메리 브라우너（짐의 아내）의 것입니다.</li>
+</ul>
+<h3 id="_22">추리 경로 재구성</h3>
+<p>이 사건의 추리 경로는 상당히 선형적이어서, 거의 연역 시범 교습으로 볼 수 있습니다.</p>
+<p>핵심 전환점은 35% 부근입니다：홈즈가 쿠싱 양의 측면을 바라보며 잠시 침묵한 뒤, 외부인이 보기에 불가사의한 도약을 합니다——귀의 해부학적 형태가 피해자는 쿠싱의 혈육임을 그에게 알려 준 것입니다. 여기서 「리버풀 해운 업계에 그녀의 친족이 있는가?」라고 묻기만 해도 답은 거의 저절로 떠오릅니다.</p>
+<p>이 사건에서 가장 빛나는 부분은 짐 브라우너의 1인칭 고백으로, 폭력적이면서도 슬픈 선원의 목소리로, 질투심이 어떻게 한 정직한 남자를 파멸시켰는지를 역순으로 서술합니다. 도일은 여기서 이후 대량으로 모방된 「범죄자 고백식 고백」 기법을 창시했습니다：독자들은 범인의 자술을 읽고 나서 오히려 그의 비극적 운명에 무거운 동정심을 느끼게 됩니다.</p>
+<h3 id="_23">보충 설명</h3>
+<p>〈판지 상자〉는 영미 초기 판본에서 삭제된 적이 있는데, 부분적으로는 소재의 잔혹성 때문이었지만, 더 중요한 것은 이야기 첫머리에서 홈즈가 「텔레파시식 독심」을 보여줬기 때문입니다——그는 왓슨의 머릿속에서 무슨 생각을 하고 있는지 추론해 냈습니다——이 장면은 《해군 조약》으로 옮겨졌고, 원래 판본의 〈판지 상자〉는 그로 인해 여러 선집에서 한동안 사라졌습니다. 이것이 이 작품을 정전 중 유통이 가장 혼란스러운 편으로 만들었고, 독특한 문헌적 가치를 더해 주었습니다.</p>
+<p>이야기 결말의 침묵 어린 마무리는 가슴을 울립니다：홈즈가 짐의 고백서를 내려놓고 창밖을 바라보며 말합니다：「이 모든 고통, 폭력, 공포의 순환에 도대체 무슨 의미가 있단 말인가, 왓슨? 우주가 우연에 의해 지배된다면 그 생각은 견딜 수 없고；하지만 이 모든 것이 목적이 있다면……그 목적은 무엇인가?」이것은 도일이 탐정 소설의 외피 안에서, 잠시 실존주의의 심연을 건드린 것입니다.</p>
+<hr>
+<h2 id="the-adventure-of-the-musgrave-ritual">선편 삼：머스그레이브 의식（The Adventure of the Musgrave Ritual）</h2>
+<h3 id="_24">기본 정보</h3>
+<ul>
+<li>핵심 수수께끼 유형：암호 해독（cryptographic puzzle）+ whodunit + howdunit</li>
+</ul>
+<h3 id="_25">추리 난이도 총평</h3>
+<table>
+<thead>
+<tr>
+<th>지표</th>
+<th>별점</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>추리 난이도（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>평균 수렴점 약 75% — 의식의 해독 경로는 65% 전에 추론 가능하지만, 브런턴의 사망에 대한 완전한 재구성은 80%에, 레이첼의 진정한 죄행은 85%에야 명확해짐</td>
+</tr>
+<tr>
+<td>안개 등급（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>세 층위의 수수께끼（의식의 의미, 브런턴의 실종, 레이첼의 실종）가 서로를 가리며, 독자들이 외곽에 집중하다가 핵심을 놓치기 쉬움；「우연히 지하실로 추락」과 「의도적 살인」 사이의 모호성은 정교하게 설계된 회색 지대</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_26">줄거리</h3>
+<p>머스그레이브 가문의 집사 브런턴이 한밤중에 주인에게 서재에서 가문의 오래된 문서 「머스그레이브 의식」을 연구하는 것을 들켜 해고됩니다. 사흘 후 브런턴이 실종되고；다시 사흘 후, 감정적으로 상처 입은 웨일스 출신 하녀 레이첼 하울스도 사라지며, 그녀의 발자국은 장원 옆 호수가에서 끊깁니다. 호수 바닥을 수색하니 낡은 금속 조각이 든 마대만 발견될 뿐——어떤 시신도 없었습니다. 홈즈는 그 기묘한 문답 의식 텍스트를 출발점으로 삼아 300년에 걸친 비밀을 풀기 시작합니다.</p>
+<h3 id="_27">진실 해부</h3>
+<h4 id="_28">진실 일：머스그레이브 의식이 가리키는 것（해독 수수께끼）</h4>
+<ul>
+<li><strong>단서 수렴점：약 65%</strong></li>
+<li>답：의식은 천문학과 보폭 측량을 암호화한 위치 지시문으로, 장원 구관 지하실 깊숙이 있는 돌판 아래를 가리킵니다；거기에는 오래된 나무 상자가 있었고, 상자 안에는 원래 찰스 1세가 처형된 후 왕실에 충성스러운 머스그레이브 선조가 왕실을 위해 보관한 스튜어트 왕조의 고대 왕관이 봉인되어 있었습니다.</li>
+</ul>
+<h4 id="_29">핵심 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（백분율）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>브런턴이 한밤중에 서재에서 의식을 연구하면서 동시에 지도와 대조</td>
+<td>약 20%</td>
+<td>그는 이미 의식이 실용적 의미를 지닌다는 것을 발견했으며, 단순한 의식이 아님</td>
+</tr>
+<tr>
+<td>2</td>
+<td>브런턴이 장원의 느릅나무 높이를 물어본 적 있음</td>
+<td>약 60%</td>
+<td>소급 단서：의식 중 「느릅나무 그림자의 길이」를 계산하는 데 필요한 수학적 데이터</td>
+</tr>
+<tr>
+<td>3</td>
+<td>의식의 좌표 체계：「참나무 위의 햇빛」→「느릅나무 그림자 끝」→보폭 방향과 거리</td>
+<td>약 40%</td>
+<td>홈즈가 해독 과정을 공개적으로 보여주며, 꼼꼼한 독자는 동시에 계산 가능</td>
+</tr>
+<tr>
+<td>4</td>
+<td>의식의 문답 「그것은 누구의 것인가? 떠나간 자의 것. 누가 갖게 되는가? 올 자」——찰스 1세 처형 후 왕위 계승과 연결</td>
+<td>약 65%</td>
+<td>역사적 암호：「떠나간 자」=찰스 1세,「올 자」=찰스 2세</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_30">보조 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（백분율）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>지하실의 나무 상자 옆에 찰스 1세 시대의 고전 동전 몇 개가 흩어져 있음</td>
+<td>약 75%</td>
+<td>상자의 연대와 왕실 연원을 확립</td>
+</tr>
+<tr>
+<td>2</td>
+<td>호수에서 건져 낸 금속 조각을 문지르니 빛이 나고, 구부러지고 변형된 금속 원형물임</td>
+<td>약 85%</td>
+<td>즉 건져 낸 고대 왕관으로, 레이첼이 흔적을 없애기 위해 호수에 던진 것</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="whodunit-howdunit">진실 이：브런턴의 죽음（whodunit + howdunit）</h4>
+<ul>
+<li><strong>단서 수렴점：약 80%</strong></li>
+<li>답：브런턴과 레이첼이 공모하여 지하실에 들어가 돌판을 들어 올렸고（혼자서는 움직일 수 없었으므로）, 상자 속 왕관을 얻은 뒤, 레이첼은 오랫동안 쌓인 원한（브런턴이 그녀를 버리고 다른 여자와 교제했음）으로 복수를 결심하여——의도적으로 돌판을 받치고 있던 나무 기둥을 쓰러뜨리거나, 자연스럽게 미끄러지도록 내버려 두어——돌판이 다시 덮여 브런턴을 지하실에 산 채로 매장했습니다.</li>
+</ul>
+<h4 id="_31">핵심 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（백분율）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>지하실 바닥에 흩어진 나무 조각 중 끝부분에 뚜렷한 압흔이 있는 것과 측면이 눌린 것 여러 개</td>
+<td>약 78%</td>
+<td>물리적 재구성：그들은 나무로 돌판을 받쳐 브런턴이 기어 들어가 상자를 꺼낼 수 있게 했음</td>
+</tr>
+<tr>
+<td>2</td>
+<td>브런턴의 시신이 상자 옆에 웅크려 있고, 얼굴이 뒤틀려 있으며, 질식 자세를 취하고 있고, 외상 없음</td>
+<td>약 76%</td>
+<td>사인은 생매장이며, 폭력적 가격이 아님</td>
+</tr>
+<tr>
+<td>3</td>
+<td>레이첼은 브런턴이 실종된 직후 히스테리 증상（웃음, 비명）을 보이다가 정신이 혼미해짐</td>
+<td>약 35%</td>
+<td>초기 심리적 단서：사정을 아는 자의 죄책감 반응이며, 단순히 연인의 실종에 대한 슬픔이 아님</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_32">가짜 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（백분율）</th>
+<th>오도 방향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>레이첼의 발자국이 호수가에서 끊겨, 그녀가 익사했을 가능성을 시사</td>
+<td>약 55%</td>
+<td>그녀가 자살한 피해자라고 생각하게 만들고, 도망친 가해자가 아님</td>
+</tr>
+<tr>
+<td>2</td>
+<td>호수 바닥 수색에서 마대만 발견되고 시신은 없음</td>
+<td>약 60%</td>
+<td>레이첼의 실종이 또 다른 살인이라고 생각하게 만들고, 그녀가 자발적으로 도망친 것이 아님</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="_33">진실 삼：상자 속의 것（역사적 수수께끼）</h4>
+<ul>
+<li><strong>단서 수렴점：약 85%</strong></li>
+<li>답：나무 상자 안에는 원래 스튜어트 왕조의 왕관이 봉인되어 있었는데, 「떠나간 자」는 찰스 1세를, 「올 자」는 찰스 2세를 가리키며, 왕실에 충성하는 머스그레이브 선조가 비밀리에 보관했습니다. 그러나 보관을 맡은 그 세대의 머스그레이브는 찰스 2세가 왕위를 회복하기 전에 세상을 떠나, 비밀을 전달하는 설명을 남기지 못했고, 왕관은 300년 동안 지하실에서 잠들어 있다가 브런턴이 잃어버린 왕실 유물로 이어지는 이 단서를 발견하기까지 그대로였습니다.</li>
+</ul>
+<h3 id="_34">추리 경로 재구성</h3>
+<p>〈머스그레이브 의식〉의 해독 경로는 《회고록》 중 가장 「참여성」이 높은 수수께끼 설계입니다：도일은 이야기 속에 의식 텍스트 전문을 완전히 제시하여, 독자들이 홈즈와 동시에 해독을 시도할 수 있습니다. 꼼꼼한 독자라면 「참나무 위의 햇빛」「느릅나무의 그림자」와 일련의 방향 및 보폭을 읽을 때, 기본적인 지도와 해시계 추론 능력이 있다면 40~50%에서 의식이 좌표 체계임을 판단할 수 있습니다.</p>
+<p>레이첼의 죄행은 이 사건에서 가장 어두운 지대입니다. 도일은 의도적으로 이 문제를 모호하게 남겨 놓습니다：그녀가 의도적으로 돌판이 브런턴을 압사하도록 했는지, 아니면 나무 기둥이 단지 「우연히」 미끄러진 것인지? 홈즈 본인도 회상하면서 말합니다：「사고였는지, 아니면 그녀가 손으로 그 기둥을 밀었는지?」 이 답은 본문에서 결코 확인되지 않으며, 이 불확실성이야말로 도일이 윤리적 차원에서 독자들에게 남겨 둔 사고의 공간입니다.</p>
+<h3 id="_35">보충 설명</h3>
+<p>〈머스그레이브 의식〉은 홈즈의 초기 활동 시절에 대한 회상으로, 그가 왓슨과 알게 되기 전——어떤 의미에서 이것은 「기원 이야기」이며, 홈즈의 「세 번째 사건」이자 업계에서 그의 명성을 확립한 사건입니다.</p>
+<p>이 편의 수수께끼 설계는 일반 추리 소설과 다릅니다：「누가 피해자를 죽였는가」가 아니라 「300년 된 고대 문자가 무엇을 가리키는가」입니다. 이런 역사 해독형 추리는 현대 모험 소설에서 매우 흔하고（다빈치 코드 등）, 도일은 이미 1893년에 단편의 정교한 구조로 이 장르의 실험을 완성했습니다.</p>
+<hr>
+<h2 id="the-adventure-of-the-reigate-squires">선편 사：라이게이트 수수께끼（The Adventure of the Reigate Squires）</h2>
+<h3 id="_36">기본 정보</h3>
+<ul>
+<li>핵심 수수께끼 유형：whodunit（누가 마부를 죽였는가）+ 동기 해독</li>
+</ul>
+<h3 id="_37">추리 난이도 총평</h3>
+<table>
+<thead>
+<tr>
+<th>지표</th>
+<th>별점</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>추리 난이도（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>평균 수렴점 약 68% — 필적 분석이 핵심 돌파구이지만, 「쪽지는 두 사람이 번갈아 쓴 것」이라는 추론은 텍스트 중반에야 등장；범인 신분은 70% 이후에야 확인 가능</td>
+</tr>
+<tr>
+<td>안개 등급（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>「도둑 침입」의 표면적 이야기가 상당히 설득력 있음；두 건의 침입 절도가 동일 범인에 의한 것으로 제시되어 독자의 주의를 분산；캐닝엄 부자가 피해자 자세로 전 과정에 수사에 참여하며, 신분 위장이 효과적</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_38">줄거리</h3>
+<p>홈즈가 병 후 요양 중에 왓슨을 따라 라이게이트 시골로 요양을 가다가 두 건의 연속 침입 절도와 한 건의 살인에 휘말립니다. 전날 밤 캐닝엄 장원에서 마부 윌리엄이 「침입 도둑」에게 사살되고, 현장에는 시신의 손에 꼭 쥐어진 쪽지 조각만 남아 있습니다. 경찰은 쪽지가 시신과 도둑의 비밀 연락 암호라고 생각하지만, 홈즈는 한 번 보고서는 쪽지가 두 사람이 번갈아 쓴 것임을 단정합니다——그 두 사람은 바로 캐닝엄 부자 본인이었습니다.</p>
+<h3 id="_39">진실 해부</h3>
+<h4 id="whodunit_1">진실 일：범인 신원（whodunit）</h4>
+<ul>
+<li><strong>단서 수렴점：약 70%</strong></li>
+<li>답：캐닝엄 노인과 그의 아들 알렉 캐닝엄이 공모하여, 먼저 이웃 액턴의 집에 침입하고（목적은 토지 소송에서 상대방의 핵심 문서를 절취하는 것）, 마부 윌리엄이 그들의 범행 증거를 파악하고 협박하자, 약속 약속으로 유인하는 방식으로 윌리엄을 살해했습니다.</li>
+</ul>
+<h4 id="_40">핵심 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（백분율）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>쪽지 조각의 글자가 두 사람이 번갈아 한 글자씩 쓴 것</td>
+<td>약 55%</td>
+<td><strong>핵심 발견</strong>：두 가지 필압의 강약이 번갈아 나타나고, 빈칸 채우기 구조가 명확하여 단독으로 쓴 것이 불가능；도일은 홈즈의 필적 분석을 통해 추리 고증의 절묘함을 보여줌</td>
+</tr>
+<tr>
+<td>2</td>
+<td>두 가지 필적이 나이 차이를 보이고, 가족 유전적 특징이 있음（그리스 문자 e 쓰는 방식이 유사）</td>
+<td>약 58%</td>
+<td>두 명의 필자가 혈육이며, 한 명은 연장자 한 명은 연소자임을 확인——캐닝엄 부자에 부합</td>
+</tr>
+<tr>
+<td>3</td>
+<td>알렉 캐닝엄의 진술에 따르면, 총잡이가 윌리엄을 사살한 뒤 「즉시 도망쳤다」——하지만 범인이 즉시 도망쳤다면, 시신의 손에서 쪽지를 빼앗을 시간이 없었을 것</td>
+<td>약 60%</td>
+<td><strong>논리적 역방향 추론</strong>：쪽지 조각은 누군가가 시신의 손에서 쪽지 대부분을 찢어 간 것을 의미；이것을 할 수 있는 사람은 현장에 있던 알렉 캐닝엄이지, 도망친 외부 용의자가 아님</td>
+</tr>
+<tr>
+<td>4</td>
+<td>사건 현장에 낯선 사람의 장화 자국이 없고, 옆 도랑에도 건넌 흔적이 없음</td>
+<td>약 62%</td>
+<td>「외부 도둑」은 전혀 존재하지 않으며, 현장 전체가 날조된 것임을 확인</td>
+</tr>
+<tr>
+<td>5</td>
+<td>홈즈가 캐닝엄 서재에서 필적 측량을 하는 척하면서 캐닝엄 노인이 직접 「twelve」라는 단어를 쓰게 하고, 쪽지의 필적과 완전히 일치</td>
+<td>약 78%</td>
+<td>직접 물증 확인：캐닝엄 노인이 강압적 필자 중 한 명</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_41">보조 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（백분율）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>액턴과 캐닝엄 가문은 토지 소송으로 오랫동안 대립</td>
+<td>약 20%</td>
+<td>액턴 서재를 털 동기 전달：상대방의 핵심 법률 문서를 절취하기 위한 것</td>
+</tr>
+<tr>
+<td>2</td>
+<td>액턴 가에서 도난당한 물품 목록이 묘하게 뒤섞여 있음（책 한 권, 촛대, 저울추, 밧줄 한 다발……）</td>
+<td>약 22%</td>
+<td>이 잡동사니는 사건이 「평범한 도둑의 탐욕스러운 난취」처럼 보이게 하여, 그들이 진짜로 찾던 소송 문서를 숨기기 위한 것</td>
+</tr>
+<tr>
+<td>3</td>
+<td>마부 윌리엄이 평소에는 마당에 있을 리 없는 시간에 갑자기 나타남</td>
+<td>약 48%</td>
+<td>그는 분명 쪽지로 특정 장소로 유인된 것——쪽지는 그를 함정으로 끌어들인 미끼이며, 외부 도둑의 연락 암호가 아님</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_42">가짜 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（백분율）</th>
+<th>오도 방향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>두 건의 연속 절도（먼저 액턴, 후 캐닝엄）로, 군 안에 유랑하는 동일 도둑이 있는 것으로 생각하게 만듦</td>
+<td>약 10–25%</td>
+<td>피해자로 위장하여, 두 번째 「절도」가 자작극임을 숨김</td>
+</tr>
+<tr>
+<td>2</td>
+<td>쪽지가 「윌리엄과 도둑의 비밀 약속일 가능성」으로 제시</td>
+<td>약 40%</td>
+<td>경찰 자체의 가정으로, 독자들이 윌리엄이 「공범」일 수도 있다고 믿게 만듦</td>
+</tr>
+<tr>
+<td>3</td>
+<td>홈즈가 일부러 발작을 위장하여 쓰러지고, 정신이 혼미한 척——캐닝엄 부자（와 독자）에게 그가 추리 능력을 잃었다고 생각하게 만듦</td>
+<td>약 65%</td>
+<td>도일이 탐정의 위장을 이용해 용의자 신원을 다시 한번 흐림</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_43">추리 경로 재구성</h3>
+<p>이 사건 해결의 핵심은 극도로 단순하지만 정확한 관찰입니다：<strong>쪽지는 두 사람이 번갈아 쓴 것입니다</strong>. 이 단서는 이야기 약 55% 지점에서 제시되며, 홈즈가 상세히 논증합니다（강한 t와 약한 t의 대비, 빈칸 채울 때의 촉박함）. 꼼꼼한 독자라면 기본적인 필기 습관 인식이 있다면 이 시점에 동시에 결론을 도출할 수 있습니다.</p>
+<p>더 절묘한 논리 연결은 약간 앞선 60%에 있습니다：「알렉은 범인이 즉시 도망쳤다고 했지만, 쪽지는 시신의 손에서 찢겨 나간 것——만약 범인이 즉시 도망쳤다면, 이 행동을 할 수 없었을 것이다. 시신의 손에서 쪽지를 찢을 수 있는 유일한 사람은 현장에 남아 있던 알렉이다」. 이 추론은 독자가 이야기 속 「누가 어느 시점에 무엇을 했는가」에 대해 명확한 타임라인 기억을 요구하며, 이 전집 중 가장 분석적 독서가 필요한 수수께끼 중 하나입니다.</p>
+<p>홈즈가 「병 발작을 위장한」 연기는 이 사건에서 가장 극적인 장면이자, 그가 사건 해결 과정에서 언어적 추리가 아닌 신체 연기를 드물게 사용한 사례입니다. 이런 「속임수로 진실을 밝히는 탐정 책략」은 나중에 많은 작가들에 의해 계승되었으며, 특히 크리스티 작품의 포와로가 여러 이야기에서 유사한 전략을 채택합니다.</p>
+<h3 id="_44">보충 설명</h3>
+<p>〈라이게이트 수수께끼〉는 《회고록》 중 기술적으로 가장 요구 수준이 높은 수수께끼 중 하나이지만, 그렇기 때문에 일부 독자들은 충분히 「직관적이지 않다」고 생각합니다——필적 분석의 세부 사항은 관련 지식이 없는 독자에게는 하나의 장벽입니다. 그러나 도일의 노력은 다음에 있습니다：홈즈가 단계별로 추리 과정을 설명하게 하여, 「필적을 간파하는 순간」이 독자에게 마법이 아니라 검증 가능한 논리가 되게 만들었습니다.</p>
+<p>부자 공모 범행 설계는 이 편에서 주목할 만한 또 다른 서사적 선택입니다：도일이 「가해자」를 신사 가문으로서 전체 수사 과정에 참여하게 하고, 표면적으로는 피해자, 탐정에게 열심히 협조하는 척 연기하게 했는데, 이런 「현장의 무고자」 프레임은 나중에 크리스티가 핵심 기법 중 하나로 발전시켰습니다.</p>
+<hr>
+<h2 id="the-final-problem">결론：마지막 사건（The Final Problem）——죽음이라는 추리의 수수께끼</h2>
+<h3 id="_45">저자 주：본 편은 현재 텍스트 파일에 수록되어 있지 않으며, 정전 텍스트에 근거하여 보충 분석합니다</h3>
+<p>〈마지막 사건〉（1893년 12월 연재）은 형식상으로는 추격과 도피의 이야기이지, 전통적인 수수께끼가 아닙니다. 그러나 추리 문학사에서 독특한 위치를 점합니다：도일이 자신의 주인공을 「살해」하려 했던 문서이며——바로 그 「실패」가 탐정 소설의 본질을 드러냅니다.</p>
+<p><strong>모리아티 교수</strong>는 이 편에서 처음 등장하는 순간부터 「범죄계의 나폴레옹」, 「거미줄 중심의 거미」로 정의됩니다——이것은 추리 문학사에서 가장 영향력 있는 악당 원형 구축입니다. 도일은 두 페이지도 채 안 되는 분량으로 홈즈의 거울 속 그림자가 될 수 있는 상대를 탄생시켰습니다：두 사람 모두 탁월한 지성을 지니고 있지만, 한 명은 그 천재성을 질서를 위해, 다른 한 명은 혼돈을 위해 사용합니다.</p>
+<p><strong>라이헨바흐 폭포의 수수께끼</strong>는 답이 없는 whodunit입니다：목격자（왓슨）는 현장에 없고, 현장에는 두 조의 발자국이 절벽 끝까지 깊이 파여 있을 뿐, 어느 쪽도 돌아오지 않았습니다. 이 설계는 「부재하는 증거」를 절묘하게 활용합니다：바로 돌아오지 않은 그 발자국이 독자（와 독자 내면의 탐정）로 하여금 받아들이기 어려운 결론——홈즈가 죽었다는 것——을 받아들이도록 강요합니다.</p>
+<p>그러나 도일이 예상하지 못한 것은, 독자들이 이 추리 결론을 거부했다는 것입니다. 〈마지막 사건〉이 발표된 후 독자들의 대규모 항의가 있었고, 전설에 따르면 런던 거리에서 사람들이 검은 상장을 달고 애도를 표했다고 합니다. 10년 후, 도일은 독자들의 압력과 풍성한 원고료의 이중 동력에 의해 〈빈집 모험〉을 써, 홈즈가 어떻게 유도 기술（「바리쓰술」）에서 살아남았는지 설명했습니다.</p>
+<p>이 「죽었다가 살아 돌아온」 서사는 추리 문학사에서 가장 유명한 「작가가 캐릭터에게 반격당한」 사례이자, 독자들의 집단적 추리 압력이 가상 세계의 역사적 방향을 바꾼 유일한 경우입니다.</p>
+<hr>
+<h2 id="_46">전집 보충 설명</h2>
+<h3 id="_47">《회고록》의 기술적 성취</h3>
+<p>《회고록》은 도일의 단편 추리 기법의 절정을 대표합니다：각 이야기가 정확하게 설계된 수수께끼 핵심을 중심으로 구성되어 있고, 단서 배치가 촘촘하지만 혼잡하지 않으며, 해답 설명 시 독자들이 무릎을 치게 만들면서도 「확실히 모두 거기에 있었다」는 것을 돌아가 검증하게 합니다. 이런 「사후 검증 가능성」이 우수한 고전 추리의 근본 기준이며, 도일은 이 전집에서 달성률이 상당히 높습니다.</p>
+<h3 id="_48">도일의 세 가지 단서 전략</h3>
+<table>
+<thead>
+<tr>
+<th>전략</th>
+<th>대표 사례</th>
+<th>효과</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>역방향 단서（무슨 일이 일어나지 않았는가）</strong></td>
+<td>밤에 개의 침묵（〈실버 블레이즈〉）</td>
+<td>독자들이 부재에 주목하게 요구하며, 직관에 반하지만 논리적으로 완벽</td>
+</tr>
+<tr>
+<td><strong>신체적 특징 해독</strong></td>
+<td>여성 귓바퀴의 해부학적 유사성（〈판지 상자〉）, 필기 습관이 가족 유전을 드러냄（〈라이게이트 수수께끼〉）</td>
+<td>도일의 상징적 기법으로, 당시 신흥 인류학과 필적학 지식에 기반</td>
+</tr>
+<tr>
+<td><strong>고대 텍스트 해독</strong></td>
+<td>머스그레이브 의식의 좌표 해독（〈머스그레이브 의식〉）</td>
+<td>「수수께끼」를 범죄 현장에서 역사 텍스트로 확장하여, 수수께끼에 더 큰 시간적 종심을 부여</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_49">첫 번째 단편집 《모험》과의 비교</h3>
+<p>《모험（Adventures, 1892）》은 단일한 번쩍이는 단서나 사회적 관찰에 더 많이 의존하는 반면, 《회고록》은 체계적으로 수수께끼의 복잡성을 높였습니다——복수의 진실, 위장한 피해자, 역사적 수수께끼——첫 번째 전집의 성공 후 도일이 자신에게 더 높은 도전을 제시했음을 반영합니다. 〈황면인〉은 이 전집에서 유일하게 홈즈가 오판한 이야기입니다（그는 황색 가면 아래에 협박자가 숨어 있다고 오판했지만, 실제로는 아내가 숨긴 혼혈 딸이었음）. 도일은 이 이야기로 독자들에게 일깨워 줍니다：연역 논리 자체가 정확성을 보장하는 것은 아니며, 관찰자의 선입견이야말로 진정한 적이라는 것을. 이 솔직함이 전체 정전 중에서 이 전집이 가장 소중히 여겨야 할 성찰의 순간입니다.</p>
+    <a href="../index.html" class="back-link">← 홈으로</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">추리해부실</p>
+    <p>다섯 작가 · 여든여덟 작품 · 135년에 걸친 추리문학 난이도의 진화.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

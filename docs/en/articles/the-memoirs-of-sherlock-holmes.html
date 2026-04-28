@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Memoirs of Sherlock Holmes — Detective Analysis</title>
+<meta name="description" content="The Memoirs of Sherlock Holmes is the second canonical short story collection, containing twelve stories that chronicle the most brilliant episodes of Holmes's ">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-memoirs-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-memoirs-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-memoirs-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-memoirs-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-memoirs-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-memoirs-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-memoirs-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-memoirs-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Detective Analysis</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#latest">Latest</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Language" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 English</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-memoirs-of-sherlock-holmes.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-memoirs-of-sherlock-holmes.html">简体中文</a>
+      <a class="lang-item active" data-lang="en" href="/Detective-Analysis/en/articles/the-memoirs-of-sherlock-holmes.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/the-memoirs-of-sherlock-holmes.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/the-memoirs-of-sherlock-holmes.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/the-memoirs-of-sherlock-holmes.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/the-memoirs-of-sherlock-holmes.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/the-memoirs-of-sherlock-holmes.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">Arthur Conan Doyle · </div>
+    <h1>The Memoirs of Sherlock Holmes</h1>
+    <div class="subtitle">Arthur Conan Doyle · Short story collection (12 stories)</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Deducibility</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Fog Rating</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="the-memoirs-of-sherlock-holmes-deducibility-analysis">The Memoirs of Sherlock Holmes — Deducibility Analysis</h1>
+<h2 id="basic-information">Basic Information</h2>
+<ul>
+<li>Author: Arthur Conan Doyle</li>
+<li>Year: 1894 (individual stories serialised in The Strand Magazine, 1892–1893)</li>
+<li>Type: Short story collection (12 stories)</li>
+<li>Detective: Sherlock Holmes</li>
+<li>Core mystery types: whodunit / howdunit / cryptographic puzzle / treasure puzzle</li>
+</ul>
+<hr>
+<h2 id="overall-ratings-collection-wide">Overall Ratings (Collection-Wide)</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Rating</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deducibility</td>
+<td>⭐⭐⭐</td>
+<td>Average convergence point approximately 67% — the four representative stories each differ: "Silver Blaze" has the highest difficulty, "The Cardboard Box" is the most readily solved, and most puzzles require the reader to reach sixty to seventy percent before the full picture can be assembled</td>
+</tr>
+<tr>
+<td>Fog Rating</td>
+<td>⭐⭐⭐</td>
+<td>Doyle excels at constructing seemingly perfect alternative suspects (red herrings), but clue distribution is generally fair; attentive readers can progressively unmask the misdirection</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>This collection selects four of the most representative detective stories for in-depth analysis: <strong>"Silver Blaze," "The Adventure of the Cardboard Box," "The Adventure of the Musgrave Ritual," and "The Adventure of the Reigate Squires."</strong> The final story, "The Final Problem," which features the debut of Professor Moriarty and the mystery of the Reichenbach Falls, is treated as a closing postscript.</p>
+</blockquote>
+<hr>
+<h2 id="synopsis">Synopsis</h2>
+<p><em>The Memoirs of Sherlock Holmes</em> is the second canonical short story collection, containing twelve stories that chronicle the most brilliant episodes of Holmes's mid-career. The collection spans multiple mystery types: the disappearance of a racehorse and the murder of a trainer on the racing circuit ("Silver Blaze"); two human ears preserved in coarse salt inside a parcel ("The Adventure of the Cardboard Box"); the secret of a crown and a murder concealed behind an ancient family ritual ("The Adventure of the Musgrave Ritual"); a staged burglary used to conceal the identity of the true culprits ("The Adventure of the Reigate Squires"); and, in the final story, Holmes and criminal mastermind Professor Moriarty plunging together over a waterfall — the most dramatic exit Doyle attempted when he sought to end the character permanently.</p>
+<p>These stories represent the maturity of Doyle's craft as a mystery writer: clue placement is more precise, reversals more powerful, and the "deductive logic" Doyle championed has become the central driving force of each story rather than mere decoration.</p>
+<hr>
+<h2 id="story-one-silver-blaze">Story One: Silver Blaze</h2>
+<h3 id="basic-information_1">Basic Information</h3>
+<ul>
+<li>Core mystery types: whodunit (who killed the trainer) + howdunit (how the horse was involved) + whereabouts (where is the horse)</li>
+</ul>
+<h3 id="overall-ratings">Overall Ratings</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Rating</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deducibility</td>
+<td>⭐⭐⭐⭐</td>
+<td>Average convergence point approximately 72% — the curried mutton clue appears early, but the horse's location and the true cause of death can only be fully confirmed in the latter portion</td>
+</tr>
+<tr>
+<td>Fog Rating</td>
+<td>⭐⭐⭐</td>
+<td>Fitzroy Simpson is carefully constructed as the perfect suspect, and the red herring works excellently; however, the negative clue — "the dog did nothing in the night-time" — is sufficient for an attentive reader to see through the misdirection</td>
+</tr>
+</tbody>
+</table>
+<h3 id="synopsis_1">Synopsis</h3>
+<p>The odds-on favourite for the Wessex Cup, the racehorse Silver Blaze, goes missing, and its trainer John Straker is found dead on the moor. The scene points to an outside gambler named Simpson, who held a large counter-wager, appeared near the stables that night, and had a black cravat found clutched in the dead man's hand. Everything points to Simpson — but when Holmes arrives and begins with the scent of curry, he reconstructs a completely different truth in reverse: the trainer himself was the villain, and the horse was his killer.</p>
+<h3 id="truth-breakdown">Truth Breakdown</h3>
+<h4 id="truth-one-strakers-motive-and-plan-whydunit">Truth One: Straker's Motive and Plan (whydunit)</h4>
+<ul>
+<li><strong>Clue convergence point: approximately 55%</strong></li>
+<li>Answer: Straker was burdened by the expenses of an affair (he kept a costly mistress on Bond Street) and planned to nick a small, invisible cut in Silver Blaze's hamstring tendons, causing a slight lameness, then profit handsomely through a secret bet placed against his own horse.</li>
+</ul>
+<h4 id="key-clues">Key Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The stable boy's supper was curried mutton laced with powdered opium, yet the others in the house ate the same dish without ill effect</td>
+<td>~20%</td>
+<td>The crucial inference: only curry's powerful flavour could mask the taste of opium — but who decided that curry would be cooked that evening? An outsider like Simpson could never have pre-arranged for the kitchen to prepare curry; the drug must have been added by Straker or his wife</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The dog did not bark in the night-time ("The curious incident of the dog in the night-time")</td>
+<td>~60%</td>
+<td>A negative clue: had a stranger (Simpson) led the horse away, the dog would certainly have barked furiously; its silence means the midnight visitor was someone the dog knew — only Straker himself</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The dead man was holding a delicate cataract knife rather than a conventional weapon</td>
+<td>~55%</td>
+<td>Watson confirms this is a surgical scalpel designed for extremely precise operations; Straker carried it not for self-defence but to make a fine cut in the horse's hamstring</td>
+</tr>
+<tr>
+<td>4</td>
+<td>In Straker's pocket was a bill from a milliner's to "Mr. William Derbyshire" (some twenty-odd guineas)</td>
+<td>~55%</td>
+<td>The bill reveals that Straker was supporting a high-spending mistress under a false name — the financial motive that drove him to fraud</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Holmes asks Mrs. Straker whether she ever had a dove-grey dress; she flatly denies it</td>
+<td>~56%</td>
+<td>Confirms the dress on the bill never reached the legitimate wife; "Mr. Derbyshire" is Straker, and the bill exposes his double life</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supporting-clues">Supporting Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Three of the sheep in the flock near the stables are lame</td>
+<td>~65%</td>
+<td>A long-range clue: Straker had been practising tendon-cutting on the sheep</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Straker left the house late at night without telling his wife his true reason</td>
+<td>~18%</td>
+<td>Reinforces the impression of meticulous, premeditated planning</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Straker carried a candle with him</td>
+<td>~65%</td>
+<td>He needed light to perform a precise operation in the darkness of the open moor</td>
+</tr>
+</tbody>
+</table>
+<h4 id="false-clues-red-herrings">False Clues (Red Herrings)</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Misdirection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Simpson's black cravat found clutched in the dead man's hand</td>
+<td>~10%</td>
+<td>Suggests that Simpson struggled with Straker and killed him — in fact, Simpson merely dropped it while fleeing and Straker picked it up intending to use it to hobble the horse</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Simpson had a counter-bet of five thousand pounds and possessed a heavy loaded stick</td>
+<td>~12%</td>
+<td>Financial motive plus potential murder weapon: a perfect suspect frame, yet no direct physical evidence</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Silas Brown of Mapleton stables also had a financial interest in Silver Blaze's disappearance</td>
+<td>~20%</td>
+<td>Another alternative suspect, but he merely seized the chance to hide the horse; he was not the murderer</td>
+</tr>
+<tr>
+<td>4</td>
+<td>A band of gypsies had been camped near the scene and departed abruptly after the crime</td>
+<td>~12%</td>
+<td>Creates the suggestion of a "gypsy horse-theft" scenario</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="truth-two-the-location-of-silver-blaze-whereabouts">Truth Two: The Location of Silver Blaze (whereabouts)</h4>
+<ul>
+<li><strong>Clue convergence point: approximately 70%</strong></li>
+<li>Answer: Silver Blaze bolted in fright that night and wandered free until Silas Brown of Mapleton stables found it; Brown initially intended to keep it, but surrendered it once Holmes threatened him with incontrovertible evidence.</li>
+</ul>
+<h4 id="key-clues_1">Key Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Horses are herd animals; if free, they naturally return to the nearest stables</td>
+<td>~65%</td>
+<td>Holmes's deductive inference: Silver Blaze is not at King's Pyland, so it can only be at Mapleton</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Hoof prints in the moorland mud veer toward Mapleton</td>
+<td>~68%</td>
+<td>On-site tracking: the horse's tracks, as they approach Mapleton, are joined by human footprints</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Silas Brown turns pale and trembles after Holmes whispers a few words to him</td>
+<td>~70%</td>
+<td>Indirect confirmation: Holmes tells him that the tracks he observed match Brown's own boots exactly</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="truth-three-the-true-cause-of-strakers-death-howdunit">Truth Three: The True Cause of Straker's Death (howdunit)</h4>
+<ul>
+<li><strong>Clue convergence point: approximately 90%</strong></li>
+<li>Answer: Straker led Silver Blaze onto the open moor to perform his operation and startled the horse when he lit his candle; Silver Blaze lashed out a kick, and the iron shoe struck Straker squarely on the forehead, killing him instantly. The scalpel subsequently cut Straker's thigh as he fell. The horse acted in self-defence.</li>
+</ul>
+<h4 id="key-clues_2">Key Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Straker's cataract knife and his habit of practising on the sheep</td>
+<td>~55%, ~65%</td>
+<td>Establishes the nature of the surgical plan</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The wound on the dead man's forehead matches the shape of a racehorse's iron shoe</td>
+<td>~90%</td>
+<td>Holmes reveals in his explanation: the outline of the wound corresponds to a horseshoe, not a walking stick</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Simpson's dropped cravat was picked up by Straker</td>
+<td>~92%</td>
+<td>Holmes explains this detail: Straker had intended to use the cravat to hobble the horse's legs and prevent it from struggling</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reasoning-path-reconstruction">Reasoning Path Reconstruction</h3>
+<p><strong>Stage One: Eliminating Simpson</strong></p>
+<p>At roughly the 20% mark, "the opium in the curried mutton" is the central puzzle piece of the entire case — Doyle employs what appears to be a mundane detail. An attentive reader who notices that "the decision to cook curry that evening was made inside the house while Simpson was outside" should be able to see that Simpson could not possibly have arranged that dish in advance. This is the very first signal pointing to an insider, but it is buried beneath a tide of information implicating Simpson and is easy for the typical reader to overlook.</p>
+<p><strong>Stage Two: Confirming Straker's Motive</strong></p>
+<p>Around the 55% mark — the examination of Straker's pocket contents — the clues are densest: the cataract knife, the milliner's bill, and Mrs. Straker's denial of the dress all appear in almost the same scene. A reader who connects all three at this point and arrives at the conclusion that "Straker was keeping a mistress and planned to surgically disable his own horse for financial gain" has effectively solved the case.</p>
+<p><strong>Stage Three: Locating Silver Blaze</strong></p>
+<p>From the moment Holmes states that "a horse, if free to roam, will make for the nearest stables — either King's Pyland or Mapleton" (approximately 65%), his reasoning is laid open to the reader. This passage is one of the finest "show-the-thinking-process" sections in the entire collection.</p>
+<p><strong>Stage Four: The Final Truth — the Horse Killed the Man</strong></p>
+<p>This layer is not fully revealed until the 90% mark. Even if a reader has worked out the first three layers, the question of "exactly who killed Straker" remains concealed in the text, leading readers to assume he was struck down in a struggle. When Holmes says "the murderer is right before you" and pats the racehorse on the neck, the wholly unexpected reversal still carries force — even for readers who have already guessed most of it.</p>
+<h3 id="additional-notes">Additional Notes</h3>
+<p>"Silver Blaze" is one of the most celebrated "reverse puzzles" in the Holmes canon: the killer is neither the surface suspect nor a human being, but an animal that the victim himself was attempting to injure. Doyle created a completely fair puzzle here — every clue is explicitly given in the text — while designing sufficient misdirection to lead the typical reader astray.</p>
+<p>"The dog did nothing in the night-time" has become one of the most famous clues in the history of detective literature, cited and paid homage to by countless authors since. Its brilliance lies in the demand that the reader notice what did <em>not</em> happen rather than what did — this capacity to reason from absence is the core ability that distinguishes Doyle above his contemporaries in mystery design.</p>
+<hr>
+<h2 id="story-two-the-adventure-of-the-cardboard-box">Story Two: The Adventure of the Cardboard Box</h2>
+<h3 id="basic-information_2">Basic Information</h3>
+<ul>
+<li>Core mystery types: whodunit + whydunit</li>
+</ul>
+<h3 id="overall-ratings_1">Overall Ratings</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Rating</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deducibility</td>
+<td>⭐⭐⭐</td>
+<td>Average convergence point approximately 50% — the seafarer's identity clues appear early, the family relationships are quite clear by the midpoint, and the culprit's identity can be reasonably deduced by the halfway mark</td>
+</tr>
+<tr>
+<td>Fog Rating</td>
+<td>⭐⭐</td>
+<td>The medical-student prank theory provides early misdirection, but Holmes dispels it quickly; the main line of clues is relatively linear, and Doyle makes no great effort to lay out multiple false directions</td>
+</tr>
+</tbody>
+</table>
+<h3 id="synopsis_2">Synopsis</h3>
+<p>A cardboard box is posted to Miss Susan Cushing in Croydon; when opened, it is found to contain two human ears preserved in coarse salt — one male, one female. The police lean toward the theory that this is a prank by a former lodger who was a medical student, but Holmes, from the anatomical features of a single ear alone, sees through to the murder tragedy it signifies: a jealous sailor killed his wife and her lover and sent the ears to his sister-in-law — whom he had once threatened to do exactly this.</p>
+<h3 id="truth-breakdown_1">Truth Breakdown</h3>
+<h4 id="truth-one-who-sent-the-parcel-whodunit">Truth One: Who Sent the Parcel (whodunit)</h4>
+<ul>
+<li><strong>Clue convergence point: approximately 50%</strong></li>
+<li>Answer: Jim Browner, a steward on the Liverpool line, killed his wife Mary and her lover Fairbairn out of jealousy, then sent the ears of both to his sister-in-law Sarah — to whom he had explicitly threatened, "If I catch Fairbairn near you again, I'll send you his ears as a keepsake."</li>
+</ul>
+<h4 id="key-clues_3">Key Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The string on the parcel is tarred twine of a type used on sailing vessels, tied with a sailor's knot</td>
+<td>~28%</td>
+<td>Establishes that the sender has a seafaring background</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The male ear has a sailor's characteristic pierced lobe, and the skin is noticeably weathered</td>
+<td>~30%</td>
+<td>Double corroboration of seafaring characteristics</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The anatomical form of the female ear (shortened auricle, upper curvature) is almost identical to that of Miss Susan Cushing herself</td>
+<td>~35%</td>
+<td><strong>The critical leap</strong>: the victim is not a stranger but a blood relative of Miss Cushing</td>
+</tr>
+<tr>
+<td>4</td>
+<td>The parcel was posted from Belfast (Miss Cushing mentions that her sister Sarah formerly lived in Liverpool and that her brother-in-law Jim is a sailor)</td>
+<td>~38%</td>
+<td>The Liverpool line passes through Belfast; the timing of the posting fits the perpetrator</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Sarah Cushing takes to her bed with brain fever the very day she hears about the parcel</td>
+<td>~45%</td>
+<td>She understands the true meaning of the parcel and is a guilty party with knowledge — and she is the intended recipient</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supporting-clues_1">Supporting Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The address reads "Miss S. Cushing," and both Susan and Sarah share the same surname and initial</td>
+<td>~20%</td>
+<td>Explains why the parcel ended up with the unsuspecting elder sister</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Browner's marriage broke down through his sister-in-law Sarah's interference, and he took to drink again</td>
+<td>~55%</td>
+<td>The background chain of his motive</td>
+</tr>
+</tbody>
+</table>
+<h4 id="false-clues-red-herrings_1">False Clues (Red Herrings)</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Misdirection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Miss Cushing had three medical-student lodgers, one of whom was from Northern Ireland (also connected to Belfast)</td>
+<td>~15%</td>
+<td>Both police and press speculate this is a prank; readers may be inclined to believe this line</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="truth-two-the-identity-of-the-victims-whodunit-victims">Truth Two: The Identity of the Victims (whodunit — victims)</h4>
+<ul>
+<li><strong>Clue convergence point: approximately 45%</strong></li>
+<li>Answer: The male ear belongs to Fairbairn (the wife's lover), and the female ear belongs to Mary Browner (Jim's wife).</li>
+</ul>
+<h3 id="reasoning-path-reconstruction_1">Reasoning Path Reconstruction</h3>
+<p>The reasoning path of this case is remarkably linear and can almost be read as a tutorial in demonstration deduction.</p>
+<p>The pivotal turn comes at around the 35% mark: as Holmes studies Miss Cushing's profile and falls silent for a moment, he makes a leap that seems incomprehensible to an onlooker — the anatomical shape of the ear tells him the victim is a blood relative of Cushing's. From there, one need only ask "which of her relatives moves in Liverpool's maritime circles?" and the answer rises almost automatically.</p>
+<p>The most memorable element of the story is Jim Browner's first-person confession, narrated in the voice of a violent and mournful sailor, recounting how jealousy destroyed an honest man. Doyle here pioneered the technique of the "confessional culprit" that was subsequently imitated by many authors: after reading the killer's own account, the reader feels not triumph but a heavy sympathy for his tragic fate.</p>
+<h3 id="additional-notes_1">Additional Notes</h3>
+<p>"The Adventure of the Cardboard Box" was omitted from early British and American editions, partly because of the brutality of its subject matter, but more significantly because the story's opening — in which Holmes demonstrates "mind-reading" by deducing what Watson is thinking — was transplanted into "The Adventure of the Naval Treaty," causing the original version of "The Cardboard Box" to disappear from numerous anthologies. This makes it one of the most textually confused stories in the canon and lends it a unique documentary value.</p>
+<p>The story's ending — a silence that speaks — is deeply moving: Holmes sets down Jim's confession, gazes out the window, and says: "What is the meaning of it, Watson? What object is served by this circle of misery and violence and fear? It must tend to some end, or else our universe is ruled by chance, which is unthinkable. But what end? There is the great standing perennial problem to which human reason is as far from an answer as ever." In these lines, within the shell of a detective story, Doyle briefly touches the abyss of existentialism.</p>
+<hr>
+<h2 id="story-three-the-adventure-of-the-musgrave-ritual">Story Three: The Adventure of the Musgrave Ritual</h2>
+<h3 id="basic-information_3">Basic Information</h3>
+<ul>
+<li>Core mystery types: cryptographic puzzle + whodunit + howdunit</li>
+</ul>
+<h3 id="overall-ratings_2">Overall Ratings</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Rating</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deducibility</td>
+<td>⭐⭐⭐⭐</td>
+<td>Average convergence point approximately 75% — the solution path for the ritual can be deduced before the 65% mark, but the full reconstruction of Brunton's death requires reaching 80%, and Rachel's true culpability only becomes clear around the 85% mark</td>
+</tr>
+<tr>
+<td>Fog Rating</td>
+<td>⭐⭐⭐</td>
+<td>Three layers of puzzle (the meaning of the ritual, Brunton's disappearance, Rachel's disappearance) obscure one another; readers tend to focus on the outer layers and miss the core; the deliberate ambiguity between "accidental fall into the vault" and "premeditated murder" is a carefully designed grey area</td>
+</tr>
+</tbody>
+</table>
+<h3 id="synopsis_3">Synopsis</h3>
+<p>The Musgrave family's butler Brunton is discovered by his employer late one night in the library, studying an old family document called the Musgrave Ritual; he is dismissed. Three days later, Brunton vanishes; three days after that, Rachel Howells, a Welsh housemaid nursing a broken heart, also disappears — her trail ends at the edge of a lake on the estate grounds. Dredging the lake yields only a linen bag containing some ancient metal fragments; no body is found. Holmes begins with that strange question-and-answer ritual text and starts to unravel a secret spanning three hundred years.</p>
+<h3 id="truth-breakdown_2">Truth Breakdown</h3>
+<h4 id="truth-one-what-the-musgrave-ritual-points-to-the-cryptographic-puzzle">Truth One: What the Musgrave Ritual Points To (the cryptographic puzzle)</h4>
+<ul>
+<li><strong>Clue convergence point: approximately 65%</strong></li>
+<li>Answer: The ritual is a set of positional directions encoded in astronomical observations and pacing, pointing to a spot beneath a stone slab deep in the vaults of the old wing of the manor house; there lay an ancient oak chest that originally contained the ancient crown of the Stuart dynasty, which a loyal Musgrave ancestor had been entrusted to keep safe after King Charles I was executed.</li>
+</ul>
+<h4 id="key-clues_4">Key Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Brunton was studying the ritual late at night in the library while cross-referencing a map</td>
+<td>~20%</td>
+<td>He had already discovered that the ritual has practical meaning rather than being merely ceremonial</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Brunton had asked about the height of the elm tree on the estate</td>
+<td>~60%</td>
+<td>A retrospective clue: he needed this mathematical datum to calculate the length of the elm's shadow as called for by the ritual</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The ritual's coordinate system: "the sun upon the oak" → "the end of the elm's shadow" → paced directions and distances</td>
+<td>~40%</td>
+<td>Holmes openly demonstrates the solution process; an attentive reader can follow along and work it out simultaneously</td>
+</tr>
+<tr>
+<td>4</td>
+<td>The ritual's call-and-response: "Whose was it?" "His who is gone." "Who shall have it?" "He who will come" — connected to the question of royal succession after Charles I's execution</td>
+<td>~65%</td>
+<td>Historical cipher: "he who is gone" = Charles I; "he who will come" = Charles II</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supporting-clues_2">Supporting Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>A few coins from the reign of Charles I lie scattered beside the wooden chest in the vault</td>
+<td>~75%</td>
+<td>Establishes the chest's period and royal provenance</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The metal objects dredged from the lake, when rubbed, give off a gleam; they are bent and deformed circular metal pieces</td>
+<td>~85%</td>
+<td>The ancient crown, thrown into the lake by Rachel to destroy the evidence</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="truth-two-bruntons-death-whodunit-howdunit">Truth Two: Brunton's Death (whodunit + howdunit)</h4>
+<ul>
+<li><strong>Clue convergence point: approximately 80%</strong></li>
+<li>Answer: Brunton and Rachel conspired to enter the vault and lift the stone slab (which he could not move alone); after obtaining the crown from the chest, Rachel — driven by long-accumulated resentment (Brunton had abandoned her and taken up with another girl) — decided on revenge: either she deliberately kicked away the wooden props supporting the slab, or she simply allowed them to slide, letting the slab fall back into place and burying Brunton alive in the vault.</li>
+</ul>
+<h4 id="key-clues_5">Key Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Among the scattered timbers on the vault floor, one piece bears a clear pressure mark at one end, and several others are crushed along their sides</td>
+<td>~78%</td>
+<td>Physical reconstruction: they used the timbers to prop the slab open so that Brunton could climb in and retrieve the chest</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Brunton's body is found curled beside the chest, face contorted, in a posture of suffocation, with no external injuries</td>
+<td>~76%</td>
+<td>Cause of death is being buried alive, not a violent blow</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Rachel exhibits hysterical symptoms immediately after Brunton's disappearance — laughing, screaming — and subsequently loses her reason</td>
+<td>~35%</td>
+<td>An early psychological clue: the guilty reaction of someone with knowledge, rather than merely the grief of a lost lover</td>
+</tr>
+</tbody>
+</table>
+<h4 id="false-clues-red-herrings_2">False Clues (Red Herrings)</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Misdirection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Rachel's trail ends at the lakeside, suggesting she may have drowned</td>
+<td>~55%</td>
+<td>Makes the reader believe she is a suicide victim rather than a culprit who has fled</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Dredging the lake turns up only the linen bag; no body is found</td>
+<td>~60%</td>
+<td>Leads readers to believe Rachel's disappearance is another murder, rather than a voluntary flight</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="truth-three-the-contents-of-the-chest-the-historical-puzzle">Truth Three: The Contents of the Chest (the historical puzzle)</h4>
+<ul>
+<li><strong>Clue convergence point: approximately 85%</strong></li>
+<li>Answer: The chest originally contained the crown of the House of Stuart, described as "his who is gone" for Charles I and "he who will come" for Charles II, kept secretly by a loyal Musgrave ancestor. But the Musgrave of that generation died before Charles II's Restoration, leaving no instructions for passing on the secret; the crown thus slept in the vault for three hundred years, until Brunton discovered the thread leading to this lost piece of royal regalia.</li>
+</ul>
+<h3 id="reasoning-path-reconstruction_2">Reasoning Path Reconstruction</h3>
+<p>The solution path of "The Adventure of the Musgrave Ritual" is the most participatory puzzle design in <em>The Memoirs</em>: Doyle reproduces the complete text of the ritual within the story, allowing the reader to attempt a decoding alongside Holmes. An attentive reader who possesses basic map-reading and sun-dial reasoning ability can, upon encountering "the sun upon the oak," "the shadow of the elm," and a sequence of directions and paces, judge as early as the 40–50% mark that the ritual is a coordinate system.</p>
+<p>Rachel's culpability is the darkest region of this case. Doyle deliberately leaves the question open: did she deliberately pull away the prop and let the slab crush Brunton, or did the timber merely "happen to" slip? Holmes himself, in recounting the case, says: "Was it accident, or was it witchcraft? Did she push away the prop herself?" This answer is never confirmed in the text, and this uncertainty is the ethical space Doyle deliberately leaves for the reader's reflection.</p>
+<h3 id="additional-notes_2">Additional Notes</h3>
+<p>"The Adventure of the Musgrave Ritual" is a recollection of one of Holmes's early cases, taking place before he met Watson — in a certain sense, this is an origin story: Holmes's "third case" and the one that established his professional reputation.</p>
+<p>The puzzle design here differs from the typical detective story: the question is not "who killed the victim?" but rather "what does a three-hundred-year-old text point to?" This kind of historical-puzzle mystery is very common in contemporary adventure fiction (e.g., <em>The Da Vinci Code</em>), yet Doyle had already completed such a genre experiment with the elegant structure of a short story as early as 1893.</p>
+<hr>
+<h2 id="story-four-the-adventure-of-the-reigate-squires">Story Four: The Adventure of the Reigate Squires</h2>
+<h3 id="basic-information_4">Basic Information</h3>
+<ul>
+<li>Core mystery types: whodunit (who killed the coachman) + motive puzzle</li>
+</ul>
+<h3 id="overall-ratings_3">Overall Ratings</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Rating</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deducibility</td>
+<td>⭐⭐⭐⭐</td>
+<td>Average convergence point approximately 68% — handwriting analysis is the critical breakthrough, but the deduction that "the note was written by two people alternately" only surfaces in the middle of the text; the culprits' identities cannot be confirmed until after the 70% mark</td>
+</tr>
+<tr>
+<td>Fog Rating</td>
+<td>⭐⭐⭐</td>
+<td>The surface story of a "burglar's break-in" is quite convincing; the two burglaries are presented as the work of the same criminal, distracting the reader's attention; the Cunninghams, father and son, participate throughout the investigation while posing as victims, making their disguise effective</td>
+</tr>
+</tbody>
+</table>
+<h3 id="synopsis_4">Synopsis</h3>
+<p>Holmes is convalescing after an illness and accompanies Watson to the Surrey countryside as a house guest, whereupon he is drawn into two successive burglaries and a murder. The previous night at Cunningham Manor, the coachman William was shot dead by an "intruder"; at the scene, only a torn scrap of paper clutched in the dead man's hand was left behind. The police believe the note is a secret signal between the dead man and the burglar, but Holmes takes one glance and declares that the note was written by two people alternately — and that those two people are none other than old Mr. Cunningham and his son Alec.</p>
+<h3 id="truth-breakdown_3">Truth Breakdown</h3>
+<h4 id="truth-one-the-culprits-identity-whodunit">Truth One: The Culprits' Identity (whodunit)</h4>
+<ul>
+<li><strong>Clue convergence point: approximately 70%</strong></li>
+<li>Answer: Old Mr. Cunningham and his son Alec Cunningham conspired first to break into the home of their neighbour Acton (to steal a crucial document in a land dispute), and then — because the coachman William had discovered their crime and was blackmailing them — lured William to his death by arranging a fabricated rendezvous.</li>
+</ul>
+<h4 id="key-clues_6">Key Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The words on the torn scrap of paper were written by two people alternating word by word</td>
+<td>~55%</td>
+<td><strong>The core discovery</strong>: the two styles of writing alternate in strength and the fill-in structure is clear — impossible for a single hand; Doyle demonstrates the subtlety of reasoning from documentary evidence through Holmes's handwriting analysis</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The two styles reveal a difference in age and share a familial hereditary trait (a similar way of forming the Greek letter <em>e</em>)</td>
+<td>~58%</td>
+<td>Confirms the two writers are blood relatives, one older and one younger — matching the Cunninghams, father and son</td>
+</tr>
+<tr>
+<td>3</td>
+<td>According to Alec Cunningham's testimony, the gunman "immediately fled" after shooting William — but if the gunman fled immediately, he could not have had time to snatch the note from the dead man's hand</td>
+<td>~60%</td>
+<td><strong>Logical reverse deduction</strong>: the torn scrap implies that someone ripped most of the note from the dead man's grip; the only person who could have done this was Alec Cunningham, who was present, not an outside suspect in flight</td>
+</tr>
+<tr>
+<td>4</td>
+<td>No tracks of a stranger's boots are found at the scene, and the ditch nearby shows no sign of having been crossed</td>
+<td>~62%</td>
+<td>Confirms that the "outside burglar" never existed; the entire scene was fabricated</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Holmes pretends in the Cunningham study to be measuring the handwriting and has old Mr. Cunningham personally write the word "twelve," which matches the writing on the note exactly</td>
+<td>~78%</td>
+<td>Direct physical evidence confirms: old Mr. Cunningham is one of the dominant-style writers</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supporting-clues_3">Supporting Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The Acton and Cunningham families have been long-standing adversaries over a land dispute</td>
+<td>~20%</td>
+<td>Provides the motive for burglarising Acton's study: to steal the other party's crucial legal documents</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The list of items stolen from Acton's house is a curious jumble (a volume of a book, a candlestick, a ball of twine, a weight...)</td>
+<td>~22%</td>
+<td>These miscellaneous objects were taken to make the case look like "a common thief grabbing things at random," concealing the fact that what they were truly after was the litigation documents</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The coachman William appears at an hour when he would normally have no reason to be in the yard</td>
+<td>~48%</td>
+<td>He was clearly lured to a specific location by the note — the note was the bait that drew him into a trap, not a signal between an outside burglar and an accomplice</td>
+</tr>
+</tbody>
+</table>
+<h4 id="false-clues-red-herrings_3">False Clues (Red Herrings)</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Misdirection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Two successive burglaries (first Acton's, then Cunningham's) give the impression of the same criminal prowling the district</td>
+<td>~10–25%</td>
+<td>Disguising themselves as victims conceals that the second "burglary" was self-staged</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The note is presented as "possibly a secret arrangement between William and the burglar"</td>
+<td>~40%</td>
+<td>The police's own assumption leads readers to believe William may have been an accomplice</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Holmes deliberately feigns a nervous collapse, dropping to the floor and performing confusion — making the Cunninghams (and the reader) believe he has lost his reasoning capacity</td>
+<td>~65%</td>
+<td>Doyle uses the detective's own performance to once again cloud the suspects' identities</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reasoning-path-reconstruction_3">Reasoning Path Reconstruction</h3>
+<p>The key to cracking this case is an extremely simple yet precise observation: <strong>the note was written by two people alternately</strong>. This clue is presented at approximately the 55% mark and is argued in detail by Holmes (the contrast between the strong <em>t</em> and the weak <em>t</em>, the cramped quality when filling in). An attentive reader with basic knowledge of handwriting habits can arrive at the same conclusion simultaneously.</p>
+<p>The more elegant chain of logic appears slightly earlier, around the 60% mark: "Alec said the gunman fled immediately, yet the note was torn from the dead man's hand — if the gunman fled immediately, he could not have done this. The only person who could have torn the note from the dead man's grip was Alec, who remained at the scene." This deduction demands that the reader maintain a clear timeline in memory of "who did what and when," making it one of the puzzles in the collection that most requires analytical reading.</p>
+<p>Holmes's performance of a nervous seizure is the most theatrical scene in the case, and one of the rare instances in his career where he employs physical performance rather than verbal reasoning. This brand of "detective imposture" was subsequently adopted by many authors — most notably Poirot in several of Christie's stories, who employs a similar strategy.</p>
+<h3 id="additional-notes_3">Additional Notes</h3>
+<p>"The Adventure of the Reigate Squires" is one of the technically most demanding puzzles in <em>The Memoirs</em>, yet for that very reason some readers find it insufficiently "intuitive" — the details of the handwriting analysis are a barrier for readers lacking relevant knowledge. Doyle's care, however, lies in this: he has Holmes explain the reasoning step by step, so that "the moment of seeing through the handwriting" is not magic for the reader but verifiable logic.</p>
+<p>The design of a father-and-son conspiracy is another narrative choice worth noting: Doyle has the perpetrators participate throughout the entire investigation in the guise of a genteel family, outwardly playing the victims and cooperating eagerly with the detective. This "innocent bystander who was present all along" framework was subsequently developed by Christie into one of her core techniques.</p>
+<hr>
+<h2 id="closing-note-the-final-problem-death-as-the-mystery-of-detection">Closing Note: The Final Problem — Death as the Mystery of Detection</h2>
+<h3 id="authors-note-this-story-was-not-included-among-the-available-text-files-the-following-analysis-is-supplemented-from-the-canonical-text">Author's Note: This story was not included among the available text files; the following analysis is supplemented from the canonical text</h3>
+<p>"The Final Problem" (serialised December 1893) is formally a story of pursuit and flight rather than a traditional puzzle, yet it occupies a singular position in the history of detective literature: it is the document recording Doyle's attempt to "murder" his own protagonist — and it is precisely this "failure" that illuminates the essential nature of detective fiction.</p>
+<p><strong>Professor Moriarty</strong> makes his first appearance in this story, immediately defined as "the Napoleon of Crime," "a spider in the centre of a web" — this is the most influential construction of an arch-villain archetype in the history of detective literature. In fewer than two pages, Doyle creates an adversary who is Holmes's mirror image: both possess extraordinary intellect, but one directs his genius toward order and the other toward chaos.</p>
+<p><strong>The Reichenbach Falls mystery</strong> is a whodunit without an answer: the eyewitness (Watson) was not present; at the scene, only two sets of footprints lead to the edge of the precipice, and not one set returns. The design makes brilliant use of "evidence of absence": it is precisely those footprints that never turned back which force the reader — and the detective within every reader — to accept the conclusion that cannot be accepted: Holmes is dead.</p>
+<p>Yet what Doyle did not anticipate was that readers would refuse to accept this deductive conclusion. After the publication of "The Final Problem," readers protested in great numbers; legend has it that men wore black armbands on the streets of London in mourning. Ten years later, driven by a combination of reader pressure and handsome fees, Doyle wrote "The Adventure of the Empty House" to explain how Holmes had survived by means of a baritsu hold.</p>
+<p>This narrative of death and resurrection is the most celebrated case in the history of detective literature of "an author being overtaken by his own character," and the only instance in which the collective deductive pressure of readers altered the course of events in a fictional world.</p>
+<hr>
+<h2 id="overall-collection-notes">Overall Collection Notes</h2>
+<h3 id="the-technical-achievement-of-the-memoirs">The Technical Achievement of <em>The Memoirs</em></h3>
+<p><em>The Memoirs</em> represents the peak of Doyle's craft in short detective fiction: each story is built around a precisely designed puzzle core, the distribution of clues is dense without becoming tangled, and the explanations at the resolution both elicit a reader's admiration and allow verification that "it was all there all along." This "retrospective verifiability" is the fundamental standard of quality classical mystery, and Doyle's success rate in achieving it throughout this collection is notably high.</p>
+<h3 id="doyles-three-clue-strategies">Doyle's Three Clue Strategies</h3>
+<table>
+<thead>
+<tr>
+<th>Strategy</th>
+<th>Representative Case</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>The negative clue (what did not happen)</strong></td>
+<td>The silence of the dog in the night ("Silver Blaze")</td>
+<td>Demands that the reader notice an absence — counter-intuitive yet logically unassailable</td>
+</tr>
+<tr>
+<td><strong>The reading of physical characteristics</strong></td>
+<td>The anatomical similarity of the female auricle ("The Cardboard Box"); handwriting habits revealing hereditary family traits ("The Reigate Squires")</td>
+<td>Doyle's signature technique, grounded in the then-emerging knowledge of anthropology and graphology</td>
+</tr>
+<tr>
+<td><strong>Decipherment of ancient texts</strong></td>
+<td>The coordinate decoding of the Musgrave Ritual ("The Musgrave Ritual")</td>
+<td>Extends the "puzzle" from the crime scene into the historical record, giving the mystery a far greater temporal depth</td>
+</tr>
+</tbody>
+</table>
+<h3 id="comparison-with-the-first-collection-the-adventures-of-sherlock-holmes">Comparison with the First Collection, <em>The Adventures of Sherlock Holmes</em></h3>
+<p><em>The Adventures</em> (1892) relies more heavily on single brilliant clues or social observation; <em>The Memoirs</em> systematically raises the complexity of the puzzles — multiple layers of truth, disguised victims, historical riddles — reflecting the challenge Doyle set himself after the success of the first collection. "The Adventure of the Yellow Face" is the only story in this collection in which Holmes makes an outright error of judgement (he wrongly suspects a menacing blackmailer beneath the yellow mask; in truth, it is his client's concealed mixed-race daughter). Doyle uses this story deliberately to remind the reader: deductive logic by itself cannot guarantee a correct conclusion; the observer's preconceived biases are the true enemy. This moment of intellectual honesty is the most treasured instance of self-reflection in the entire canon.</p>
+    <a href="../index.html" class="back-link">← Back to home</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Detective Analysis</p>
+    <p>Five authors · eighty-eight works · 135 years of evolving detective difficulty.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>シャーロック・ホームズの思い出（The Memoirs of Sherlock Holmes） — 推理解剖室</title>
+<meta name="description" content="『シャーロック・ホームズの思い出』は第二の正典短編集であり、十二篇の物語を収録し、ホームズの活躍期における最も輝かしい中期の事件記録である。全集はさまざまな謎題の種類を網羅している：競馬場での馬の失踪と調教師の殺人（〈シルヴァー・ブレイズ〉）、郵便小包に入った二つの人耳（〈ボール箱〉）、一族の古い儀式の背後にある王冠の">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-memoirs-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-memoirs-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-memoirs-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-memoirs-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-memoirs-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-memoirs-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-memoirs-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-memoirs-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif JP', serif;
+  --font-sans: 'Noto Sans JP', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">推理解剖室</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">ホーム</a>
+        <a href="../index.html#latest">最新</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="言語" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 日本語</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-memoirs-of-sherlock-holmes.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-memoirs-of-sherlock-holmes.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-memoirs-of-sherlock-holmes.html">English</a>
+      <a class="lang-item active" data-lang="ja" href="/Detective-Analysis/ja/articles/the-memoirs-of-sherlock-holmes.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/the-memoirs-of-sherlock-holmes.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/the-memoirs-of-sherlock-holmes.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/the-memoirs-of-sherlock-holmes.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/the-memoirs-of-sherlock-holmes.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">アーサー・コナン・ドイル · </div>
+    <h1>シャーロック・ホームズの思い出（The Memoirs of Sherlock Holmes）</h1>
+    <div class="subtitle">アーサー・コナン・ドイル（Arthur Conan Doyle） · 短編集（12篇）</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">推理難易度</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">霧の濃度</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="the-memoirs-of-sherlock-holmes">シャーロック・ホームズの思い出（The Memoirs of Sherlock Holmes）— 推理分析</h1>
+<h2 id="_1">基本情報</h2>
+<ul>
+<li>著者：アーサー・コナン・ドイル（Arthur Conan Doyle）</li>
+<li>発表年：1894年（各篇は『ストランド・マガジン』1892–1893年に連載）</li>
+<li>ジャンル：短編集（12篇）</li>
+<li>探偵：シャーロック・ホームズ（Sherlock Holmes）</li>
+<li>核心謎題の種類：whodunit / howdunit / 暗号解読 / 宝探しの謎</li>
+</ul>
+<hr>
+<h2 id="_2">推理難易度総評（全集平均）</h2>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星評価</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難易度（Deducibility）</td>
+<td>⭐⭐⭐</td>
+<td>平均収束点は約 67% — 四篇の代表作はそれぞれ異なる：〈シルヴァー・ブレイズ〉が最も難易度が高く、〈ボール箱〉が最も推理しやすく、多くの謎題は六〜七割まで読まなければ全体像を掴めない</td>
+</tr>
+<tr>
+<td>霧の濃度（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>ドイルは一見完璧な代替容疑者（レッド・ヘリング）を作り出すのが得意だが、手がかりの配置は通常公平で、注意深い読者なら徐々に誤誘導を見破ることができる</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>本集からは最も代表的な四篇の推理物語を選んで詳細に分析する：<strong>〈シルヴァー・ブレイズ〉〈ボール箱〉〈マスグレーヴ家の儀式〉〈ライゲートの謎〉</strong>。最終篇〈最後の事件〉はモリアーティ教授の登場とライヘンバッハの滝の謎に関わるものとして、結語として付論する。</p>
+</blockquote>
+<hr>
+<h2 id="_3">あらすじ</h2>
+<p>『シャーロック・ホームズの思い出』は第二の正典短編集であり、十二篇の物語を収録し、ホームズの活躍期における最も輝かしい中期の事件記録である。全集はさまざまな謎題の種類を網羅している：競馬場での馬の失踪と調教師の殺人（〈シルヴァー・ブレイズ〉）、郵便小包に入った二つの人耳（〈ボール箱〉）、一族の古い儀式の背後にある王冠の秘密と殺人（〈マスグレーヴ家の儀式〉）、偽装盗難事件で真犯人の正体を隠す（〈ライゲートの謎〉）、そして最後の篇ではホームズと犯罪の大家モリアーティ教授が共に滝に落ちて幕を閉じる——ドイルがこの登場人物を永久に葬ろうとした最も劇的な退場方法である。</p>
+<p>これらの物語はドイルの推理技巧の成熟期を代表している：手がかりの配置はより精緻になり、逆転はより力強くなり、ドイルが提唱した「演繹的論理」はすでに各篇の物語の核心的な推進力となっており、単なる飾りではない。</p>
+<hr>
+<h2 id="silver-blaze">選篇一：シルヴァー・ブレイズ（Silver Blaze）</h2>
+<h3 id="_4">基本情報</h3>
+<ul>
+<li>核心謎題の種類：whodunit（誰が調教師を殺したか）+ howdunit（馬はどのように事件に関与したか）+ whereabouts（馬はどこにいるのか）</li>
+</ul>
+<h3 id="_5">推理難易度総評</h3>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星評価</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難易度（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>平均収束点は約 72% — カレー羊肉の手がかりは早期に登場するが、馬の位置と死の真相は後半まで完全に確認できない</td>
+</tr>
+<tr>
+<td>霧の濃度（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>フィッツロイ・シンプソンは完璧な容疑者として入念に作り上げられており、レッド・ヘリングの効果は優秀；しかし「夜に番犬が吠えなかった」という逆向きの手がかりは注意深い読者なら見破るに十分</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_6">あらすじ</h3>
+<p>ウェセックス・カップの最有力馬「シルヴァー・ブレイズ」が失踪し、その調教師ジョン・ストレイカーが沼地で死体となって発見された。状況は外来の賭博師シンプソンを指し示していた——彼は多額の逆賭けを持ち、その夜馬屋の近くに現れ、彼の黒いネクタイが死者の手の中で発見されたのである。すべてがシンプソンを指し示していたが、ホームズが現場に到着すると、カレーの匂いから逆算して全く異なる真実を再構成した：調教師本人こそが張本人であり、彼を殺したのはその馬であった。</p>
+<h3 id="_7">真相の解剖</h3>
+<h4 id="whydunit">真相一：ストレイカーの動機と謀略（whydunit）</h4>
+<ul>
+<li><strong>手がかりの収束点：約 55%</strong></li>
+<li>答え：ストレイカーは不倫の負債を抱えており（ボンド街に浪費の激しい愛人がいた）、シルヴァー・ブレイズの腱に見えない切り傷を作って軽度の跛行を引き起こし、秘密の方法で自分の馬に負ける側に賭けることで一儲けしようと企んでいた。</li>
+</ul>
+<h4 id="_8">関鍵手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>馬屋の少年の夕食はアヘン粉入りのカレー羊肉だったが、屋内の他の人々は同じ料理を食べても異常がなかった</td>
+<td>約 20%</td>
+<td>重要な推理：カレーの強烈な匂いでしかアヘンを隠せないが、その夜カレーを作ることを誰が決めたのか？外来のシンプソンが事前に厨房にカレーを用意させることは絶対に不可能——薬物はストレイカーまたはその妻が加えたに違いない</td>
+</tr>
+<tr>
+<td>2</td>
+<td>夜間に番犬が吠えなかった（The curious incident of the dog in the night-time）</td>
+<td>約 60%</td>
+<td>逆向きの手がかり：見知らぬ人（シンプソン）が馬を連れ去ったなら、犬は必ず激しく吠えるはず；しかし犬は反応しなかった、つまり真夜中の訪問者は犬が見知った人物——ストレイカー本人のみ</td>
+</tr>
+<tr>
+<td>3</td>
+<td>死者は精細な眼科用メス（cataract knife）を持っていたが、通常の武器ではなかった</td>
+<td>約 55%</td>
+<td>ワトソンがこれを外科手術用メスと確認、極めて精密な操作のために設計されたもの；ストレイカーがこのメスを携帯していたのは護身ではなく、馬の腱に微細な切り傷を入れるためであった</td>
+</tr>
+<tr>
+<td>4</td>
+<td>ストレイカーのポケットに「ウィリアム・ダービシャー氏」宛ての帽子店の請求書（22ギニー余り）があった</td>
+<td>約 55%</td>
+<td>請求書はストレイカーが偽名で贅沢な浪費をする愛人を養っていることを示しており、これがまさに彼が詐欺に走った財務的動機である</td>
+</tr>
+<tr>
+<td>5</td>
+<td>ホームズがストレイカー夫人に鳩灰色のシルクドレスを持っていたか尋ねると、彼女は断固として否定した</td>
+<td>約 56%</td>
+<td>請求書のドレスが正式な妻の手には届かなかったことを確認、「ダービシャー氏」はストレイカーであり、請求書が彼の二重生活を暴いた</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_9">補助手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>馬屋近くの羊の群れに三頭の跛行した羊がいた</td>
+<td>約 65%</td>
+<td>遠景の手がかり：ストレイカーはずっと羊で腱切り技術を練習していた</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ストレイカーが深夜に外出したが、妻に本当の理由を告げなかった</td>
+<td>約 18%</td>
+<td>彼の計画が綿密で、事前に謀られたものだという印象を強化する</td>
+</tr>
+<tr>
+<td>3</td>
+<td>ストレイカーはロウソクを持ち歩いていた</td>
+<td>約 65%</td>
+<td>暗い荒野で精密な手術を行うために光が必要だったことを示す</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_10">偽の手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>誤誘導の方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>シンプソンの黒いネクタイが死者の手の中で発見された</td>
+<td>約 10%</td>
+<td>シンプソンがストレイカーと格闘して彼を殺したと思わせる——しかしこれはシンプソンが逃げる際に落としたもので、ストレイカーが拾って馬の足を縛るために使おうとしていた</td>
+</tr>
+<tr>
+<td>2</td>
+<td>シンプソンは五千ポンドの逆賭けを持ち、加重した杖を持っていた</td>
+<td>約 12%</td>
+<td>財務的動機＋凶器の両方を備えた完璧な容疑者のフレームだが、直接的な物的証拠がない</td>
+</tr>
+<tr>
+<td>3</td>
+<td>マッパルトン馬屋のサイラス・ブラウンにもシルヴァー・ブレイズを失踪させる利益上の動機があった</td>
+<td>約 20%</td>
+<td>もう一つの代替容疑者だが、彼は単に機会を見て馬を隠しただけで、殺人犯ではない</td>
+</tr>
+<tr>
+<td>4</td>
+<td>ジプシーの一団が事件現場付近でキャンプした後、すぐに立ち去った</td>
+<td>約 12%</td>
+<td>「ジプシーによる馬の略奪」という可能性を作り出す</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="whereabouts">真相二：シルヴァー・ブレイズの所在（whereabouts）</h4>
+<ul>
+<li><strong>手がかりの収束点：約 70%</strong></li>
+<li>答え：シルヴァー・ブレイズはその夜驚いて自力で脱走し、マッパルトン馬屋の調教師サイラス・ブラウンに発見された；ブラウンは最初機会に乗じて馬を抑留しようとしたが、ホームズが確実な証拠を握っていると脅すまでそうしていた。</li>
+</ul>
+<h4 id="_11">関鍵手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>馬は群れをなす動物であり、自由に動けば必ず最も近い馬屋に戻る</td>
+<td>約 65%</td>
+<td>ホームズの演繹的推論：シルヴァー・ブレイズはキングズピランにはおらず、マッパルトンにしかいないはず</td>
+</tr>
+<tr>
+<td>2</td>
+<td>沼地の泥の中で発見された蹄の跡がマッパルトン方向へ向いていた</td>
+<td>約 68%</td>
+<td>現地追跡、馬の足跡がマッパルトンに近づくと人間の足跡が現れた</td>
+</tr>
+<tr>
+<td>3</td>
+<td>サイラス・ブラウンはホームズに小声で数語言われた後、顔色が青ざめ、全身が震えた</td>
+<td>約 70%</td>
+<td>間接的な確認：ホームズは彼が見た足跡がブラウンの靴と完全に一致すると彼に告げた</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="howdunit">真相三：ストレイカーの死の本当の原因（howdunit）</h4>
+<ul>
+<li><strong>手がかりの収束点：約 90%</strong></li>
+<li>答え：ストレイカーはシルヴァー・ブレイズを荒野に連れ出して手術を行おうとし、ロウソクに火をつけた時に馬を驚かせ、シルヴァー・ブレイズが蹄を蹴り出してストレイカーの額を直撃し、即死した。手術用メスがその後倒れたストレイカーの太ももを傷つけた。馬は自衛していたのである。</li>
+</ul>
+<h4 id="_12">関鍵手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>ストレイカーの眼科用メスと羊で練習していた習慣</td>
+<td>約 55%、65%</td>
+<td>手術計画の本質を確立する</td>
+</tr>
+<tr>
+<td>2</td>
+<td>死者の額の傷がレース馬の蹄鉄の形と一致した</td>
+<td>約 90%</td>
+<td>ホームズが解説する際に明らかにする：傷の輪郭は杖ではなく蹄鉄に一致する</td>
+</tr>
+<tr>
+<td>3</td>
+<td>シンプソンが落としたネクタイをストレイカーが拾い上げた</td>
+<td>約 92%</td>
+<td>ホームズがこの詳細を説明：ストレイカーはネクタイで馬の足を縛って暴れを防ごうとしていた</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_13">推理経路の再構成</h3>
+<p><strong>第一の関門：シンプソンの排除</strong></p>
+<p>約 20% を読んだ時点で、「カレー羊肉の中のアヘン」が本件の核心ピースとなる——ドイルはここで一見ありふれた細節を使っている。注意深い読者が「その夜カレーを準備する決定は家の中で行われたが、シンプソンは外にいた」ことに気づけば、シンプソンが事前にこの料理を手配することは不可能だと分かるはずである。これが本篇で最初に内部の犯人を指し示す真のシグナルだが、シンプソン容疑の情報の波に埋もれており、一般の読者は見落とすことが多い。</p>
+<p><strong>第二の関門：ストレイカーの動機の確認</strong></p>
+<p>55% 近く（ストレイカーのポケットの中の持ち物検査）が本件で最も手がかりが密集している場面——眼科用メス＋帽子店の請求書＋妻によるドレスの否定、三つの手がかりがほぼ同じ場面で同時に登場する。この時点でこれら三つを結びつけ、「ストレイカーは不倫相手を養っており、手術の手法で自分の馬を廃馬にして一儲けを企んでいた」という結論を引き出せた読者は、すでに謎を解いたと言える。</p>
+<p><strong>第三の関門：シルヴァー・ブレイズの位置特定</strong></p>
+<p>ホームズが「馬は自由に動けば必ず最も近い馬屋へ——キングズピランかマッパルトンのどちらかに行く」と言い始めた時点から（約 65%）、彼の推論の経路は読者に公開されている。この推理は本集で最も優れた「思考プロセスを示す」場面の一つである。</p>
+<p><strong>第四の関門：馬が人を殺した最終的な真相</strong></p>
+<p>この層は 90% になってはじめて完全に明らかになる。前の三層がすべて解けたとしても、「実際に誰がストレイカーを殺したのか」という疑問はテキストの中に潜んでいたままで、読者にはストレイカーが格闘の中で倒されたかのように思わせる。ホームズが「殺手はすぐそこにいる」と言いながらレース馬の首を叩いた時、その完全に予想外の逆転はいまだ力強い——すでに七〜八割方察していた読者に対してさえも。</p>
+<h3 id="_14">補足説明</h3>
+<p>〈シルヴァー・ブレイズ〉はホームズ事件の中で最も著名な「逆向きの謎」の一つである：犯人は表面上の容疑者でもなく、人間でもなく、被害者が傷つけようとした動物である。ドイルはここで完全に公平な謎——すべての手がかりはテキストの中に明確に与えられている——を作りつつ、一般の読者が道を踏み外すのに十分な誤誘導を設計した。</p>
+<p>「夜に番犬が吠えなかった」という逆向きの手がかりは、推理文学史上最も著名な手がかりの一つとなり、後世の無数の作家に引用・オマージュされてきた。その精妙さは、読者に「起きなかった事」ではなく「起きた事」に注目させることを要求する点にある——これがドイルの推理設計において同時代の作家を超えた核心的な能力である。</p>
+<hr>
+<h2 id="the-adventure-of-the-cardboard-box">選篇二：ボール箱（The Adventure of the Cardboard Box）</h2>
+<h3 id="_15">基本情報</h3>
+<ul>
+<li>核心謎題の種類：whodunit + whydunit</li>
+</ul>
+<h3 id="_16">推理難易度総評</h3>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星評価</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難易度（Deducibility）</td>
+<td>⭐⭐⭐</td>
+<td>平均収束点は約 50% — 船員の身元手がかりが早い段階で登場し、家族関係は中盤でかなり明確になる；犯人の身元は読書の半分の時点で合理的に推導できる</td>
+</tr>
+<tr>
+<td>霧の濃度（Fog Rating）</td>
+<td>⭐⭐</td>
+<td>医学生のいたずら説が早期の誤誘導を提供するが、ホームズはすぐにそれを解除する；主要手がかりは比較的線形に呈示されており、ドイルは多重の偽方向を強く配置してはいない</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_17">あらすじ</h3>
+<p>クロイドンのスーザン・カッシング嬢の元に小包が郵送されてきた。開けると中には粗塩で保存された二つの人耳——男性と女性のものが入っていた。警察は前の間借り人の医学生によるいたずらだと傾いていたが、ホームズは一対の耳の解剖学的特徴だけで、それが指し示す殺人の悲劇を見破った：嫉妬深い船員が妻と彼女の愛人を殺し、耳を義妹——彼はそうすると脅したことがあった——に送りつけたのである。</p>
+<h3 id="_18">真相の解剖</h3>
+<h4 id="whodunit">真相一：小包を送ったのは誰か（whodunit）</h4>
+<ul>
+<li><strong>手がかりの収束点：約 50%</strong></li>
+<li>答え：ジム・ブローナー（Jim Browner）、リヴァプール航路の船室給仕係であり、嫉妬から妻のメアリーと彼女の愛人フェアバーンを殺し、二人の耳を義妹サラに送った——彼はサラに「フェアバーンがまた現れるなら、彼の耳をお前への土産に送ってやる」と明確に脅したことがあった。</li>
+</ul>
+<h4 id="_19">関鍵手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>小包の縄はタールに浸した帆船用ロープで、結び方は船員がいつも使う結び方だった</td>
+<td>約 28%</td>
+<td>犯行者に船員の経歴があることを確立する</td>
+</tr>
+<tr>
+<td>2</td>
+<td>男性の耳に船員によく見られる耳穴があり、皮膚が明らかに日焼けしていた</td>
+<td>約 30%</td>
+<td>船員の特徴を二重に裏付ける</td>
+</tr>
+<tr>
+<td>3</td>
+<td>女性の耳の解剖形態（耳介が短く、上方のカーブ）がスーザン・カッシング本人の耳とほぼ一致する</td>
+<td>約 35%</td>
+<td><strong>決定的な飛躍</strong>：被害者は見知らぬ人ではなく、カッシング嬢の血縁者である</td>
+</tr>
+<tr>
+<td>4</td>
+<td>小包の発送地はベルファスト（カッシング嬢によれば、妹のサラはリヴァプールに住んでいて、義弟のジムは船員だという）</td>
+<td>約 38%</td>
+<td>リヴァプール航路はベルファストを経由し、犯人が小包を送った時刻と一致する</td>
+</tr>
+<tr>
+<td>5</td>
+<td>サラ・カッシングは小包の知らせを聞いた当日に脳熱で倒れた</td>
+<td>約 45%</td>
+<td>彼女は小包の本当の意味を理解しており、共犯的な知情者である——そして彼女こそが本来の小包の受取人である</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_20">補助手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>小包の宛名は「Miss S. Cushing」と書かれており、スーザンとサラはどちらもカッシング姓で頭文字が同じだった</td>
+<td>約 20%</td>
+<td>なぜ小包が事情を知らない姉の元に届いたかを説明する</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ブローナーは義妹サラの介入で婚姻が破綻し、再び飲酒するようになった</td>
+<td>約 55%</td>
+<td>動機の背景となる連鎖</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_21">偽の手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>誤誘導の方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>カッシング嬢にはかつて三人の医学生の間借り人がおり、その一人は北アイルランド出身（ベルファストとも関連がある）</td>
+<td>約 15%</td>
+<td>警察もメディアもこれをいたずらだと推測し、読者もこの手がかりを信じるかもしれない</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="whodunit-victims">真相二：被害者の身元（whodunit victims）</h4>
+<ul>
+<li><strong>手がかりの収束点：約 45%</strong></li>
+<li>答え：男性の耳はフェアバーン（妻の愛人）のもので、女性の耳はメアリー・ブローナー（ジムの妻）のものである。</li>
+</ul>
+<h3 id="_22">推理経路の再構成</h3>
+<p>本件の推理経路は非常に線形であり、ほぼ演繹の模範授業として見ることができる。</p>
+<p>重要な転換点は 35% 近く：ホームズがカッシング嬢の横顔をしばらく見つめた後、しばらく沈黙してから、外から見ると信じられないような飛躍をした——耳の解剖形態が、被害者はカッシングの血縁者だと彼に告げたのである。ここから、「彼女にはリヴァプールの海事関係の親族がいるか？」と問うだけでよく、答えはほぼ自動的に浮かび上がる。</p>
+<p>本件で最も見事なのはジム・ブローナーの一人称の告白であり、暴力的かつ哀愁に満ちた船員の声で、嫉妬がいかに誠実な男を破滅させたかを回想する。ドイルはここで後に大量に模倣される「犯人の告白式吐露」の技法を開拓した：読者は犯人の自述を読んだ後、むしろ彼の悲劇的な運命に重苦しい同情を感じる。</p>
+<h3 id="_23">補足説明</h3>
+<p>〈ボール箱〉は英米の初期版では削除されたことがあった。一部は題材の残酷さによるものだが、より重要なのは物語の冒頭でホームズが「テレパシー的な読み取り」を見せたことで——彼がワトソンの脳内の考えを推察したシーン——このシーンは『海軍条約事件』に移用され、〈ボール箱〉の原始版はそのため多くのアンソロジーから一時消えた。これが正典の中で流通が最も混乱した一篇となり、独特の文献的価値を加えることになった。</p>
+<p>物語の結末の沈黙の幕切れは心に響く：ホームズはジムの告白書を置き、窓の外を眺めながらこう言う：「この苦しみ、暴力、恐怖の連鎖には一体何の意味があるのか、ワトソン？もし宇宙が偶然によって支配されているなら、この考えは耐え難い；しかしもしこれらすべてに目的があるなら……その目的とは何なのか？」これはドイルが探偵小説の外殻の下で、ひとときだけ実存主義の深淵に触れた瞬間である。</p>
+<hr>
+<h2 id="the-adventure-of-the-musgrave-ritual">選篇三：マスグレーヴ家の儀式（The Adventure of the Musgrave Ritual）</h2>
+<h3 id="_24">基本情報</h3>
+<ul>
+<li>核心謎題の種類：暗号解読（cryptographic puzzle）+ whodunit + howdunit</li>
+</ul>
+<h3 id="_25">推理難易度総評</h3>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星評価</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難易度（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>平均収束点は約 75% — 儀式の解謎経路は 65% 前に推導できるが、ブラントンの死の完全な再構成は 80% まで、レイチェルの真の罪行は 85% になってはじめて明確になる</td>
+</tr>
+<tr>
+<td>霧の濃度（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>三層の謎（儀式の意味、ブラントンの失踪、レイチェルの失踪）が互いに遮蔽し合っており、読者は周辺に集中して核心を見落としがち；「誤って地下室に落ちた」と「故意の殺人」の間の曖昧性は精心に設計されたグレーゾーンである</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_26">あらすじ</h3>
+<p>マスグレーヴ家の執事ブラントンが深夜に主人に書斎で一族の古い文書「マスグレーヴ家の儀式」を研究しているところを発見され、そのため解雇された。三日後、ブラントンが失踪；さらに三日後、心を傷つけられたウェールズ人の女中レイチェル・ハウエルズも消え、彼女が残した足跡は屋敷の隣の湖岸で終わっていた。湖底を捜索すると、古い金属片が入った麻袋だけが見つかった——死体は一切なかった。ホームズはその奇妙な問答式儀式のテキストから着手し、三百年にわたる秘密の解明を始めた。</p>
+<h3 id="_27">真相の解剖</h3>
+<h4 id="_28">真相一：マスグレーヴ家の儀式が指し示すもの（解謎の謎）</h4>
+<ul>
+<li><strong>手がかりの収束点：約 65%</strong></li>
+<li>答え：儀式は天文学と歩測を暗号として使った位置指示であり、屋敷の旧翼の地下室深くの石板の下を指していた；そこには古い木箱が隠されており、箱には英王チャールズ一世が処刑された後、忠実なマスグレーヴ家の先祖が王室のために保管したスチュアート王朝の古い王冠がかつて封じ込められていた。</li>
+</ul>
+<h4 id="_29">関鍵手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>ブラントンが深夜に書斎で儀式を研究し、同時に一枚の地図を照合していた</td>
+<td>約 20%</td>
+<td>彼はすでに儀式が実用的な意味を持ち、単なる儀式ではないことを発見していた</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ブラントンが屋敷のニレの木の高さを尋ねたことがあった</td>
+<td>約 60%</td>
+<td>さかのぼる手がかり：これは儀式の「ニレの木の影の長さ」を計算するために必要な数学的データだった</td>
+</tr>
+<tr>
+<td>3</td>
+<td>儀式の座標体系：「オークの木の上の太陽の光」→「ニレの木の影の端」→歩測の方向と距離</td>
+<td>約 40%</td>
+<td>ホームズが解謎の過程を公開で示し、注意深い読者は同時進行で推算できる</td>
+</tr>
+<tr>
+<td>4</td>
+<td>儀式の問答「それは誰のものか？それは逝きし者のもの。誰がそれを所有するのか？来たるべき者」——チャールズ一世処刑後の王位継承と結びつく</td>
+<td>約 65%</td>
+<td>歴史的な暗号：「逝きし者」＝チャールズ一世、「来たるべき者」＝チャールズ二世</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_30">補助手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>地下室の木箱の傍らにチャールズ一世時代の古いコインが数枚散らばっていた</td>
+<td>約 75%</td>
+<td>箱の年代と王室との縁を確立する</td>
+</tr>
+<tr>
+<td>2</td>
+<td>湖から引き上げた金属片は、こすると光を放ち、曲がって変形した金属の環状のものだった</td>
+<td>約 85%</td>
+<td>すなわち引き上げられた古い王冠であり、レイチェルが証拠を消すために湖に投げ込んだもの</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="whodunit-howdunit">真相二：ブラントンの死（whodunit + howdunit）</h4>
+<ul>
+<li><strong>手がかりの収束点：約 80%</strong></li>
+<li>答え：ブラントンはレイチェルと共謀して地下室に入り石板を持ち上げた（一人では動かせなかったため）、箱の中の王冠を手に入れた後、レイチェルは長年積み重なった怨恨（ブラントンはかつて彼女を捨てて別の女性と付き合い始めた）から復讐を決意した——故意に石板を支えていた木の棒を押し倒すか、あるいはそれが自然に滑り落ちるままにし、石板が再び閉まってブラントンを地下室に生き埋めにした。</li>
+</ul>
+<h4 id="_31">関鍵手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>地下室の床に散乱した木材の中に、端に明らかな圧痕がある一本と、側面が押し潰された数本があった</td>
+<td>約 78%</td>
+<td>物理的再構成：彼らは木材で石板を支え、ブラントンが潜り込んで箱を取れるようにしていた</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ブラントンの死体は箱の傍らで丸くなっており、顔が歪み、窒息の姿勢をとっていて、外傷はなかった</td>
+<td>約 76%</td>
+<td>死因は生き埋め、暴力的な打撃ではない</td>
+</tr>
+<tr>
+<td>3</td>
+<td>レイチェルはブラントンの失踪直後にヒステリー症状（大笑い、叫び声）を呈し、その後正気を失った</td>
+<td>約 35%</td>
+<td>早期の心理的手がかり：事情を知る者の罪悪感による反応であり、単に恋人が行方不明になった悲しみではない</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_32">偽の手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>誤誘導の方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>レイチェルの足跡が湖岸で終わっており、溺死の可能性を示唆していた</td>
+<td>約 55%</td>
+<td>彼女が自殺の被害者であり、逃げ去った加害者ではないと思わせる</td>
+</tr>
+<tr>
+<td>2</td>
+<td>湖底の捜索で麻袋しか見つからず、死体が発見されなかった</td>
+<td>約 60%</td>
+<td>レイチェルの失踪がもう一件の殺人であり、彼女が自発的に逃げたのではないと思わせる</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="_33">真相三：箱の中のもの（歴史的謎）</h4>
+<ul>
+<li><strong>手がかりの収束点：約 85%</strong></li>
+<li>答え：木箱にはスチュアート王朝の王冠がかつて封じ込められており、「逝きし者」はチャールズ一世、「来たるべき者」はチャールズ二世の代称であり、王室に忠実なマスグレーヴ家の先祖が秘密裏に保管していた。しかし保管を担当したその代のマスグレーヴはチャールズ二世の王政復古前に亡くなり、秘密を伝える説明を残さなかったため、王冠は地下室で三百年眠り続け、ブラントンが失われた王室の文物へと通じる手がかりを発見するまで続いた。</li>
+</ul>
+<h3 id="_34">推理経路の再構成</h3>
+<p>〈マスグレーヴ家の儀式〉の解謎経路は『思い出』の中で最も「参加可能性の高い」謎設計である：ドイルは物語の中で儀式のテキスト全文を完全に提示しており、読者はホームズと同時進行で解読を試みることができる。注意深い読者が「オークの木の上の太陽の光」「ニレの木の影」および一連の方向と歩数を読む時、基本的な地図と日時計の推理能力があれば、40–50% の時点で儀式が一つの座標システムだと判断できる。</p>
+<p>レイチェルの罪行は本件で最も暗い領域である。ドイルは意図的にこの問題を曖昧なまま保った：彼女は故意に石板でブラントンを押しつぶしたのか、それとも木の棒が「たまたま」滑り落ちただけなのか？ホームズ自身も回想の中でこう言っている：「事故だったのか、それとも彼女が手でその棒を押しのけたのか？」この答えはテキストの中で確認されることはなく、この不確かさこそドイルが倫理的な次元で読者に残した思考の空間である。</p>
+<h3 id="_35">補足説明</h3>
+<p>〈マスグレーヴ家の儀式〉はホームズの若い頃の事件の回想であり、彼がワトソンと知り合う前に起きた——ある意味で、これは「起源物語」であり、ホームズの「三番目の事件」でもあり、業界における彼の評判を確立した事件でもある。</p>
+<p>本篇の謎設計は一般的な推理小説とは異なっており：「誰が被害者を殺したのか」ではなく、「三百年の古い文字が何を指し示しているのか」である。この種の歴史的解謎型推理は現代の冒険小説では非常に一般的であり（ダ・ヴィンチ・コードなど）、ドイルは 1893 年という早い段階で短篇の精緻な構造でこの種の実験を完成させていた。</p>
+<hr>
+<h2 id="the-adventure-of-the-reigate-squires">選篇四：ライゲートの謎（The Adventure of the Reigate Squires）</h2>
+<h3 id="_36">基本情報</h3>
+<ul>
+<li>核心謎題の種類：whodunit（誰が御者を殺したか）+ 動機の解明</li>
+</ul>
+<h3 id="_37">推理難易度総評</h3>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星評価</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難易度（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>平均収束点は約 68% — 筆跡分析が重要な突破口だが、「メモは二人が交互に書いた」という推断はテキストの中盤でしか登場しない；犯人の身元は 70% 以降でなければ確認できない</td>
+</tr>
+<tr>
+<td>霧の濃度（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>「強盗の侵入」という表面的な話は相当説得力がある；二件の住居侵入盗難事件が同一の犯人によるものとして提示されており、読者の注意を分散させる；カニンガム父子が被害者の立場で調査に全面参加しており、身分の偽装は効果的</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_38">あらすじ</h3>
+<p>ホームズは病後の静養中にワトソンとライゲートの田舎に滞在していたが、結果として二件連続の住居侵入盗難事件と一件の殺人に巻き込まれた。前夜カニンガム荘園で、御者のウィリアムが「侵入強盗」に撃殺され、現場には死者の手にしっかり握られたメモの断片だけが残っていた。警察はメモが死者と強盗の秘密の連絡暗号だと断定したが、ホームズはちらりと見ただけで、メモは二人が交互に書いたものだと断定した——そしてその二人とは、カニンガム父子本人に他ならなかった。</p>
+<h3 id="_39">真相の解剖</h3>
+<h4 id="whodunit_1">真相一：犯人の身元（whodunit）</h4>
+<ul>
+<li><strong>手がかりの収束点：約 70%</strong></li>
+<li>答え：カニンガム老人とその息子アレック・カニンガムが共謀し、まず隣人のアクトン（目的は土地訴訟の重要文書を盗むこと）に住居侵入して盗難を行い、その後御者のウィリアムが彼らの犯罪の弱みを握って脅迫してきたため、約束の場所に呼び出す方法でウィリアムを誘い殺した。</li>
+</ul>
+<h4 id="_40">関鍵手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>メモの断片の文字は二人が一字ずつ交互に書いたものだった</td>
+<td>約 55%</td>
+<td><strong>核心的な発見</strong>：二種類の筆跡の強弱が交互に現れ、穴埋め構造が明確で、一人が書いたとは考えられない；ドイルはホームズの筆跡分析を通じて推理的考証の精妙さを示した</td>
+</tr>
+<tr>
+<td>2</td>
+<td>二種類の筆跡は年齢差を示し、家族的な遺伝的特徴がある（ギリシャ文字の e の書き方が似ている）</td>
+<td>約 58%</td>
+<td>二人の書き手が血縁者であり、一方が年長で一方が年若いことを確認——カニンガム父子に一致する</td>
+</tr>
+<tr>
+<td>3</td>
+<td>アレック・カニンガムの証言によれば、銃手はウィリアムを撃殺した後「すぐに逃げた」——しかし犯人がすぐに逃げたなら、死者の手からメモを奪う時間はなかったはず</td>
+<td>約 60%</td>
+<td><strong>論理的逆推断</strong>：メモの断片は誰かが死者の手から大部分のメモを引き裂いたことを意味する；これを行えた人物は、現場に居た アレック・カニンガムに違いなく、逃げた外来の容疑者ではない</td>
+</tr>
+<tr>
+<td>4</td>
+<td>現場付近に見知らぬ人の靴跡がなく、横の溝にも横断した痕跡がなかった</td>
+<td>約 62%</td>
+<td>「外来の強盗」はそもそも存在せず、現場全体がでっち上げだったことを確認する</td>
+</tr>
+<tr>
+<td>5</td>
+<td>ホームズがカニンガムの書斎で筆跡を測定するふりをし、カニンガム老人に自ら「twelve」という言葉を書かせると、メモの筆跡と完全に一致した</td>
+<td>約 78%</td>
+<td>直接的な物的証拠の確認：カニンガム老人が強い筆跡の書き手の一人である</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_41">補助手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>アクトンとカニンガム一家は土地訴訟で長年対立していた</td>
+<td>約 20%</td>
+<td>アクトンの書斎への侵入盗難の動機を説明する：相手の重要な法律文書を盗むため</td>
+</tr>
+<tr>
+<td>2</td>
+<td>アクトン家で盗まれた物品のリストが奇妙に混在していた（一冊の本、燭台、体重計、一束の縄……）</td>
+<td>約 22%</td>
+<td>これらの雑多なものは事件が「普通の強盗が貪欲に無差別に取った」ように見せかけるためのもので、彼らが本当に探していた訴訟文書を隠すためだった</td>
+</tr>
+<tr>
+<td>3</td>
+<td>御者のウィリアムが普段ならあり得ない時間帯に突然中庭に現れた</td>
+<td>約 48%</td>
+<td>彼が明らかにメモで特定の場所に誘い出されたのだった——メモは彼を罠にかけるための餌であり、外来の強盗との連絡暗号ではなかった</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_42">偽の手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>誤誘導の方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>連続二件の盗難事件（先にアクトン、後にカニンガム）が、郡内をうろつく同一の強盗によるものだと思わせた</td>
+<td>約 10–25%</td>
+<td>被害者に偽装して、第二の「盗難」が自作自演であることを隠す</td>
+</tr>
+<tr>
+<td>2</td>
+<td>メモが「ウィリアムと強盗の秘密の約定の可能性がある」として提示された</td>
+<td>約 40%</td>
+<td>警察自身の仮説が、ウィリアムが「共犯者」かもしれないと読者に信じさせた</td>
+</tr>
+<tr>
+<td>3</td>
+<td>ホームズが意図的に発作で倒れ、神経的に錯乱したふりをした——カニンガム父子（と読者）に彼がすでに推理能力を失ったかのように思わせた</td>
+<td>約 65%</td>
+<td>ドイルが探偵の偽装を使って容疑者の身元を再び曖昧にした</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_43">推理経路の再構成</h3>
+<p>本件を解く鍵は極めてシンプルだが精確な観察である：<strong>メモは二人が交互に書いたもの</strong>。この手がかりは物語の約 55% の時点で提示され、ホームズによって詳細に論証された（強い t と弱い t の対比、穴埋め時の窮屈感）。注意深い読者が基本的な筆記習慣の知識を持っていれば、この時点で同じ結論を導き出すことができる。</p>
+<p>より精妙な論理の連鎖は少し早い 60% の時点にある：「アレックは犯人がすぐ逃げたと言ったが、メモは死者の手から引き裂かれた——犯人がすぐに逃げたなら、この動作は完成できないはず。死者の手からメモを引き裂けた唯一の人物は、現場に残っていたアレックである」。この推論は読者に物語の中で「誰がどの時点で何をしたか」という明確な時系列の記憶を要求するものであり、本集の中で最も分析的な読書を要求する謎の一つである。</p>
+<p>ホームズの「神経発作を演じる」演技は本件で最も劇的な場面であり、彼が事件解決の過程で言語的推理ではなく身体的演技を使う稀な事例でもある。この種の「偽りで真に見せる探偵の騙し術」は後に多くの作者に受け継がれ、特にクリスティ筆下のポワロが複数の物語で同様の戦略を採用している。</p>
+<h3 id="_44">補足説明</h3>
+<p>〈ライゲートの謎〉は『思い出』の中で技術的要求が最も高い謎の一つだが、そのためある読者からは十分に「直感的」ではないと見なされている——筆跡分析の詳細は関連知識を持たない読者にとって壁となる。しかしドイルの意図は：ホームズに一歩一歩推理の過程を解説させることで、「筆跡を見抜く瞬間」を読者にとって魔法ではなく、検証可能な論理にすることにあった。</p>
+<p>父子共謀による犯行の設計は本篇のもう一つの注目に値する叙事的選択である：ドイルは「加害者」を紳士一族の身分で調査過程全体に参加させ、表面上は被害者を演じ熱心に探偵に協力した。この「現場にいる無実の者」のフレームは後にクリスティの核心的技法の一つとして発展させられた。</p>
+<hr>
+<h2 id="the-final-problem">結語：最後の事件（The Final Problem）——死を推理の謎として</h2>
+<h3 id="_45">著者注：本篇は現存のテキストファイルには収録されていないが、正典テキストに基づいて補足分析する</h3>
+<p>〈最後の事件〉（1893年12月連載）は形式上は追跡と逃亡の物語であり、伝統的な謎ではないが、推理文学史において独特の地位を占めている：それはドイルが自らの笔下の主人公を「殺害」しようとした文書であり——そしてまさにこの「失敗」が探偵小説の本質を明らかにした。</p>
+<p><strong>モリアーティ教授</strong>は本篇で初めて登場するや否や「犯罪界のナポレオン」「クモの巣の中心のクモ」と定義された——これは推理文学史において最も影響力のある悪役原型の構築である。ドイルは二頁にも満たない分量でホームズの鏡の中の倒影となり得る敵を塑造した：二人はともに超凡な知識を持つが、一方はその天才を秩序のために用い、もう一方は混乱のために用いる。</p>
+<p><strong>ライヘンバッハの滝の謎</strong>は解答のない whodunit である：目撃者（ワトソン）が現場におらず、現場には二組の足跡が崖の縁に向かって深く続いているだけで、一組も戻っていない。この設計は「不在の証拠」を巧みに利用している：折り返さなかった足跡こそが、読者（と読者の心の中の探偵）に受け入れ難い結論を受け入れさせる——ホームズは死んだ。</p>
+<p>しかしドイルが予期しなかったのは、読者がこの推理的結論の受け入れを拒否したことである。『最後の事件』発表後、読者は大量に抗議し、ロンドンの街頭で黒い腕章をつけて哀悼する人々がいたという言い伝えもある。十年後、ドイルは読者の圧力と豊かな原稿料の双方に駆られて〈空き家の冒険〉を書き、ホームズが柔道技術（「バリツ」）でいかに助かったかを説明した。</p>
+<p>この「死から復活」の語りは、推理文学史上最も著名な「作者が登場人物に反噬される」事例であり、読者の集合的な推理圧力が架空の世界の歴史的方向を変えた唯一の機会でもある。</p>
+<hr>
+<h2 id="_46">全集補足説明</h2>
+<h3 id="_47">『思い出』の技術的成就</h3>
+<p>『思い出』はドイルの短篇推理技巧における頂点を代表している：各篇の物語は精確に設計された謎の核心を中心としており、手がかりの配置は密でも乱れておらず、解答時の説明は読者を膝を打って感嘆させると同時に、「確かにすべてそこにあった」と振り返って検証させることもできる。この「事後の検証可能性」は優質な古典推理の根本的な基準であり、ドイルの本集における達成率は相当高い。</p>
+<h3 id="_48">ドイルの三つの手がかり戦略</h3>
+<table>
+<thead>
+<tr>
+<th>戦略</th>
+<th>代表的事例</th>
+<th>効果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>逆向きの手がかり（何が起きなかったか）</strong></td>
+<td>夜間の番犬の沈黙（〈シルヴァー・ブレイズ〉）</td>
+<td>読者に「不在」に注目させることを要求し、直感に反するが論理的に完璧</td>
+</tr>
+<tr>
+<td><strong>身体的特徴の読み取り</strong></td>
+<td>女性の耳介の解剖学的類似性（〈ボール箱〉）、筆記習慣が家族遺伝を明かす（〈ライゲートの謎〉）</td>
+<td>ドイルの代表的な技法であり、当時新興の人類学と筆跡学の知識を基盤とする</td>
+</tr>
+<tr>
+<td><strong>古い文書の解読</strong></td>
+<td>マスグレーヴ家の儀式の座標解読（〈マスグレーヴ家の儀式〉）</td>
+<td>「謎」を犯罪現場から歴史的文書へと拡大し、謎に一層大きな時間的深度を与える</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_49">第一短篇集『冒険』との比較</h3>
+<p>『冒険』（Adventures，1892）は単一の閃光的手がかりや社会的観察に多く依拠しているが、『思い出』は謎の複雑な層次を体系的に高めた——多重の真相、偽装した被害者、歴史的謎語——これはドイルが第一集の成功後に自分自身に高い挑戦を課した反映である。〈黄顔の男〉は本集でホームズが判断を誤った唯一の物語であり（彼は黄色い仮面の下に脅迫者が潜んでいると誤判断したが、実際には妻が隠していた混血の娘だった）、ドイルは特にそれを使って読者に思い起こさせた：演繹的論理それ自体は正確さを保証できず、観察者の先入観的偏見こそが真の敵である。この誠実さは本集が正典全体の中で最も珍重すべき反省の瞬間である。</p>
+    <a href="../index.html" class="back-link">← ホームに戻る</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">推理解剖室</p>
+    <p>五人の作家・八十八の作品・135年にわたる推理文学の難易度の進化。</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>福爾摩斯回憶錄（The Memoirs of Sherlock Holmes） — 推理解剖室</title>
+<meta name="description" content="《福爾摩斯回憶錄》是第二本正典短篇集，收錄十二篇故事，記錄福爾摩斯最精彩的中期辦案生涯。全集涵蓋多種謎題類型：賽馬場上的馬匹失蹤與教練員謀殺（〈銀星〉）、郵包中的兩隻人耳（〈紙板盒〉）、家族古老儀式背後的王冠秘密與謀殺（〈馬斯格雷夫禮儀〉）、偽造盜竊案掩護真兇身分（〈雷蓋特謎案〉），直到最後一篇以福爾摩斯與犯罪大師摩里">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-memoirs-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-memoirs-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-memoirs-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-memoirs-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-memoirs-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-memoirs-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-memoirs-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-memoirs-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif TC', serif;
+  --font-sans: 'Noto Sans TC', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">推理解剖室</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">首頁</a>
+        <a href="../index.html#latest">最新分析</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="語言" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 繁體中文</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item active" data-lang="zh-TW" href="/Detective-Analysis/articles/the-memoirs-of-sherlock-holmes.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-memoirs-of-sherlock-holmes.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-memoirs-of-sherlock-holmes.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/the-memoirs-of-sherlock-holmes.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/the-memoirs-of-sherlock-holmes.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/the-memoirs-of-sherlock-holmes.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/the-memoirs-of-sherlock-holmes.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/the-memoirs-of-sherlock-holmes.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">柯南·道爾 · </div>
+    <h1>福爾摩斯回憶錄（The Memoirs of Sherlock Holmes）</h1>
+    <div class="subtitle">柯南·道爾（Arthur Conan Doyle） · 短篇集（12篇）</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">推理難度</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">迷霧等級</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="the-memoirs-of-sherlock-holmes">福爾摩斯回憶錄（The Memoirs of Sherlock Holmes）— 推理分析</h1>
+<h2 id="_1">基本資訊</h2>
+<ul>
+<li>作者：柯南·道爾（Arthur Conan Doyle）</li>
+<li>出版年：1894年（各篇連載於《海濱雜誌》1892–1893年）</li>
+<li>類型：短篇集（12篇）</li>
+<li>偵探角色：夏洛克·福爾摩斯（Sherlock Holmes）</li>
+<li>核心謎團類型：whodunit / howdunit / 密碼解謎 / 尋寶謎題</li>
+</ul>
+<hr>
+<h2 id="_2">推理難度總評（全集平均）</h2>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星等</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難度（Deducibility）</td>
+<td>⭐⭐⭐</td>
+<td>平均收斂點約 67% — 四篇代表作各異：《銀星》難度最高，《紙板盒》最易推出，多數謎題需讀完六七成才能拼齊全貌</td>
+</tr>
+<tr>
+<td>迷霧等級（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>道爾擅長製造看似完美的替代嫌疑人（紅鯡魚），但線索分布通常公平，仔細閱讀者可逐步拆穿誤導</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>本集選取四篇最具代表性的推理故事深入分析：<strong>〈銀星〉〈紙板盒〉〈馬斯格雷夫禮儀〉〈雷蓋特謎案〉</strong>。末篇〈最後一案〉涉及摩里亞蒂教授登場與瑞辛巴赫瀑布之謎，作為結語附論。</p>
+</blockquote>
+<hr>
+<h2 id="_3">故事大綱</h2>
+<p>《福爾摩斯回憶錄》是第二本正典短篇集，收錄十二篇故事，記錄福爾摩斯最精彩的中期辦案生涯。全集涵蓋多種謎題類型：賽馬場上的馬匹失蹤與教練員謀殺（〈銀星〉）、郵包中的兩隻人耳（〈紙板盒〉）、家族古老儀式背後的王冠秘密與謀殺（〈馬斯格雷夫禮儀〉）、偽造盜竊案掩護真兇身分（〈雷蓋特謎案〉），直到最後一篇以福爾摩斯與犯罪大師摩里亞蒂教授同墜瀑布告終——道爾試圖永久終結這個角色的最戲劇性出口。</p>
+<p>這批故事代表道爾推理技藝的成熟期：線索布局更精準，反轉更有力，而道爾所倡導的「演繹邏輯」已成為每篇故事的核心驅動力，而非裝飾。</p>
+<hr>
+<h2 id="silver-blaze">選篇一：銀星（Silver Blaze）</h2>
+<h3 id="_4">基本資訊</h3>
+<ul>
+<li>核心謎團類型：whodunit（誰殺了訓練師）+ howdunit（馬匹如何涉案）+ whereabouts（馬在哪裡）</li>
+</ul>
+<h3 id="_5">推理難度總評</h3>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星等</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難度（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>平均收斂點約 72% — 咖哩羊肉線索早出現，但馬匹位置與死亡真相要到後段才能完整確認</td>
+</tr>
+<tr>
+<td>迷霧等級（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>費茲羅伊·辛普森被精心塑造為完美嫌疑人，紅鯡魚效果優秀；然而「夜間狗沒有吠叫」這條反向線索足以讓細心讀者識破</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_6">故事大綱</h3>
+<p>威塞克斯錦標賽的頭號熱門賽馬「銀星」失蹤，其訓練師約翰·史卓克被發現陳屍於沼澤地帶。場景指向一名外來賭徒辛普森，他持有大額反向押注、當晚出現在馬廄附近、身上的黑色領巾更在死者手中被找到。一切指向辛普森，但福爾摩斯抵達現場後卻從一道咖哩味開始，逆向重建了一個截然不同的真相：訓練師本人才是罪魁禍首，而殺死他的，是那匹馬。</p>
+<h3 id="_7">真相拆解</h3>
+<h4 id="whydunit">真相一：史卓克的動機與謀劃（whydunit）</h4>
+<ul>
+<li><strong>線索收斂點：約 55%</strong></li>
+<li>答案：史卓克背負外遇債務（在邦德街有一位花費高昂的情婦），企圖藉由在銀星的腿腱上製造隱形切口使其輕微跛足，再透過賭賭輸在自己馬匹上的秘密方式大賺一筆。</li>
+</ul>
+<h4 id="_8">關鍵線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>馬廄男孩的晚餐是加了鴉片粉的咖哩羊肉，而屋內其他人吃同一道菜卻沒事</td>
+<td>約 20%</td>
+<td>關鍵推理：咖哩的強烈味道才能遮蓋鴉片，但咖哩是由誰決定那晚做這道菜的？外來的辛普森絕對不可能預謀讓廚房準備咖哩——藥物一定是史卓克或其妻子所加</td>
+</tr>
+<tr>
+<td>2</td>
+<td>夜間看門狗沒有吠叫（The curious incident of the dog in the night-time）</td>
+<td>約 60%</td>
+<td>反向線索：若陌生人（辛普森）帶走了馬，狗必定狂吠；但狗沒有反應，說明午夜訪客是狗熟悉的人——只有史卓克本人</td>
+</tr>
+<tr>
+<td>3</td>
+<td>死者手持一把精細的眼科刀（cataract knife）而非普通武器</td>
+<td>約 55%</td>
+<td>華生確認這是外科手術刀，設計用於極精密的操作；史卓克攜帶此刀並非自衛，而是為了在馬腿腱上切出細微切口</td>
+</tr>
+<tr>
+<td>4</td>
+<td>史卓克口袋中有一份對「威廉·德比郡先生」的女帽店帳單（22幾尼）</td>
+<td>約 55%</td>
+<td>帳單顯示史卓克以化名養活一位花費奢侈的情婦，這正是他走上詐騙之路的財務動機</td>
+</tr>
+<tr>
+<td>5</td>
+<td>福爾摩斯詢問史卓克太太是否有過一件鴿灰絲裙，她堅決否認</td>
+<td>約 56%</td>
+<td>確認帳單上的裙子從未到達合法妻子手中，「德比郡先生」就是史卓克，帳單戳破他的雙重生活</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_9">輔助線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>馬廄附近的羊群有三隻跛腳</td>
+<td>約 65%</td>
+<td>長鏡頭線索：史卓克一直在羊身上練習腱切技術</td>
+</tr>
+<tr>
+<td>2</td>
+<td>史卓克深夜出門，未告知妻子真正原因</td>
+<td>約 18%</td>
+<td>加強他計畫周密、預謀的印象</td>
+</tr>
+<tr>
+<td>3</td>
+<td>史卓克隨身帶著蠟燭</td>
+<td>約 65%</td>
+<td>說明他需要光線才能在黑暗的曠野中執行精密手術</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_10">假線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>辛普森的黑色領巾在死者手中被發現</td>
+<td>約 10%</td>
+<td>讓人以為辛普森與史卓克扭打、殺死了他——但這只是辛普森在逃跑時落下的，史卓克撿起來準備用以綁馬腳</td>
+</tr>
+<tr>
+<td>2</td>
+<td>辛普森有五千英鎊的反向賭注，且擁有一根加重手杖</td>
+<td>約 12%</td>
+<td>財務動機＋兇器兼備，完美嫌疑人框架，但缺乏直接物證</td>
+</tr>
+<tr>
+<td>3</td>
+<td>麥普爾頓馬廄的西拉斯·布朗也有利益動機讓銀星失蹤</td>
+<td>約 20%</td>
+<td>另一個替代嫌疑人，但他只是趁機藏馬，並非謀殺犯</td>
+</tr>
+<tr>
+<td>4</td>
+<td>一群吉普賽人在案發地附近紮營後立即離去</td>
+<td>約 12%</td>
+<td>製造「吉普賽人劫馬」的可能性</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="whereabouts">真相二：銀星的位置（whereabouts）</h4>
+<ul>
+<li><strong>線索收斂點：約 70%</strong></li>
+<li>答案：銀星當晚受驚後自行脫逃，被麥普爾頓馬廄的訓練師西拉斯·布朗發現；布朗起初想趁機扣留，直到福爾摩斯以掌握確鑿證據威脅之。</li>
+</ul>
+<h4 id="_11">關鍵線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>馬是群聚動物，若自由行動必定返回最近的馬廄</td>
+<td>約 65%</td>
+<td>福爾摩斯的演繹推論：銀星不在金斯派蘭，只能在麥普爾頓</td>
+</tr>
+<tr>
+<td>2</td>
+<td>沼澤泥地中發現的馬蹄印轉向麥普爾頓</td>
+<td>約 68%</td>
+<td>實地追蹤，馬的足跡在接近麥普爾頓時出現了人的腳印</td>
+</tr>
+<tr>
+<td>3</td>
+<td>西拉斯·布朗在被福爾摩斯低聲說了幾個字之後臉色蒼白、全身發抖</td>
+<td>約 70%</td>
+<td>間接確認：福爾摩斯告訴他他看見的足跡與布朗的靴子完全吻合</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="howdunit">真相三：史卓克死亡的真正原因（howdunit）</h4>
+<ul>
+<li><strong>線索收斂點：約 90%</strong></li>
+<li>答案：史卓克將銀星帶到曠野中準備行手術，點燃蠟燭時驚嚇到馬，銀星踢出一腳，蹄鐵正中史卓克額頭，當場致命。手術刀隨後割傷了倒下的史卓克大腿。馬是在自我防衛。</li>
+</ul>
+<h4 id="_12">關鍵線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>史卓克的眼科刀及在羊身上練習過的習慣</td>
+<td>約 55%、65%</td>
+<td>確立手術計畫的本質</td>
+</tr>
+<tr>
+<td>2</td>
+<td>死者額頭上的傷口與賽馬蹄鐵形狀吻合</td>
+<td>約 90%</td>
+<td>福爾摩斯在解說時揭示：傷口的輪廓符合馬蹄鐵而非手杖</td>
+</tr>
+<tr>
+<td>3</td>
+<td>辛普森落下的領巾被史卓克撿起</td>
+<td>約 92%</td>
+<td>福爾摩斯解釋這細節：史卓克原本想用領巾綁住馬腳，防止其掙扎</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_13">推理路徑重建</h3>
+<p><strong>第一關：排除辛普森</strong></p>
+<p>讀到約 20% 時，「咖哩羊肉中的鴉片」是整案的核心拼圖——道爾在這裡用了一個看似平常的細節。細心的讀者若注意到「那晚準備咖哩的決定在屋子裡，而辛普森在屋外」，應能看出辛普森不可能提前安排這道菜。這是全篇第一個真正指向內賊的訊號，但它藏在大量辛普森嫌疑的資訊浪潮中，一般讀者很容易忽略。</p>
+<p><strong>第二關：確認史卓克的動機</strong></p>
+<p>55% 附近（史卓克的口袋物品檢查）是本案最密集的線索叢——眼科刀＋女帽帳單＋太太否認那件裙子，三條線索在同一場景幾乎同步出現。能在此時將三者連結起來、得出「史卓克在養外遇、計劃以手術手法廢掉自己的馬謀財」結論的讀者，可以說已經破案了。</p>
+<p><strong>第三關：定位銀星</strong></p>
+<p>從福爾摩斯說「馬若自由行動必定前往最近的馬廄——不是金斯派蘭就是麥普爾頓」開始（約 65%），他的推論路徑對讀者是公開的。這段推理是本集最佳的「展示思維過程」段落之一。</p>
+<p><strong>第四關：馬踢死人的最終真相</strong></p>
+<p>這一層要到90%才完整揭示。縱使前三層都推出來了，「到底誰殺了史卓克」這個問題仍然暗藏在文本中，讓讀者以為史卓克是在搏鬥中被擊倒。當福爾摩斯說「殺手就在眼前」並拍了拍賽馬的頸部時，那個完全意外的反轉依然有力量——即使對已猜到七八分的讀者。</p>
+<h3 id="_14">補充說明</h3>
+<p>〈銀星〉是福爾摩斯案例中最著名的「反向謎題」之一：兇手既不是表面的嫌疑人，也不是人類，而是受害者本人試圖傷害的動物。道爾在此創造了一個完全公平的謎題——所有線索都在文字中明確給出——同時設計了足夠的誤導讓一般讀者走錯路。</p>
+<p>「夜間狗沒有吠叫」這條反向線索已成為推理文學史上最著名的線索之一，被後代無數作者引用、致敬。其精妙之處在於它要求讀者注意「沒有發生的事」，而非「發生了的事」——這是道爾在推理設計上超越同時代作家的核心能力。</p>
+<hr>
+<h2 id="the-adventure-of-the-cardboard-box">選篇二：紙板盒（The Adventure of the Cardboard Box）</h2>
+<h3 id="_15">基本資訊</h3>
+<ul>
+<li>核心謎團類型：whodunit + whydunit</li>
+</ul>
+<h3 id="_16">推理難度總評</h3>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星等</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難度（Deducibility）</td>
+<td>⭐⭐⭐</td>
+<td>平均收斂點約 50% — 海員身份線索早早出現，家庭關係在中段已相當清晰；兇手身份可在閱讀一半時合理推導</td>
+</tr>
+<tr>
+<td>迷霧等級（Fog Rating）</td>
+<td>⭐⭐</td>
+<td>醫學生惡作劇理論提供了早期誤導，但福爾摩斯很快解除；主線索呈現相對線性，道爾並未大力布置多重假方向</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_17">故事大綱</h3>
+<p>一個箱子被郵寄到克羅伊登的蘇珊·卡興小姐處，打開後發現裡頭是兩隻保存在粗鹽中的人耳——一男一女。警方傾向於認為這是前房客醫學生的惡作劇，但福爾摩斯僅憑一雙耳朵的解剖特徵，就識破了它所指向的謀殺悲劇：一個嫉妒的船員殺死了妻子和她的情人，並把耳朵寄給了妻妹——他曾威脅要這樣做。</p>
+<h3 id="_18">真相拆解</h3>
+<h4 id="whodunit">真相一：包裹是誰寄的（whodunit）</h4>
+<ul>
+<li><strong>線索收斂點：約 50%</strong></li>
+<li>答案：吉姆·布朗那（Jim Browner），利物浦航線的船艙服務員，因嫉妒殺死了妻子瑪麗和她的情人費爾班恩，並將兩人的耳朵寄給妻妹莎拉——他曾明確威脅過莎拉「若再讓費爾班恩出現，就把他的耳朵寄給你留念」。</li>
+</ul>
+<h4 id="_19">關鍵線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>包裹的繩子使用瀝青浸製的帆船繩，結是水手慣用結法</td>
+<td>約 28%</td>
+<td>確立行兇者有海員背景</td>
+</tr>
+<tr>
+<td>2</td>
+<td>男性耳朵有海員常見的耳洞，且皮膚明顯曬傷</td>
+<td>約 30%</td>
+<td>雙重佐證海員特徵</td>
+</tr>
+<tr>
+<td>3</td>
+<td>女性耳朵的解剖形態（耳廓縮短、上方曲線）與蘇珊·卡興本人的耳朵幾乎一致</td>
+<td>約 35%</td>
+<td><strong>關鍵一躍</strong>：被害人不是陌生人，而是卡興小姐的血親</td>
+</tr>
+<tr>
+<td>4</td>
+<td>包裹寄出地是貝爾法斯特（卡興小姐說妹妹莎拉以前住利物浦、妹婿吉姆是船員）</td>
+<td>約 38%</td>
+<td>利物浦航線途經貝爾法斯特，兇手寄包裹的時間點吻合</td>
+</tr>
+<tr>
+<td>5</td>
+<td>莎拉·卡興在聽到包裹消息後當天即發腦熱病倒</td>
+<td>約 45%</td>
+<td>她明白包裹的真正含義，是有罪知情者——且她是真正的包裹收件人</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_20">輔助線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>包裹地址寫「Miss S. Cushing」，而蘇珊與莎拉都姓卡興且首字母相同</td>
+<td>約 20%</td>
+<td>解釋為何包裹到了不知情的姊姊手中</td>
+</tr>
+<tr>
+<td>2</td>
+<td>布朗那因妻妹莎拉的介入婚姻破裂、又重新喝酒</td>
+<td>約 55%</td>
+<td>動機的背景鏈條</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_21">假線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>卡興小姐曾有三名醫學生房客，其中一人來自北愛爾蘭（同樣與貝爾法斯特有關聯）</td>
+<td>約 15%</td>
+<td>警察與媒體皆推測此為惡作劇，讀者可能相信這條線索</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="whodunit-victims">真相二：被害人身分（whodunit victims）</h4>
+<ul>
+<li><strong>線索收斂點：約 45%</strong></li>
+<li>答案：男性耳朵來自費爾班恩（妻子的情人），女性耳朵來自瑪麗·布朗那（吉姆的妻子）。</li>
+</ul>
+<h3 id="_22">推理路徑重建</h3>
+<p>本案的推理路徑相當線性，幾乎可以視為一場示範演繹的教程。</p>
+<p>關鍵轉折在 35% 附近：當福爾摩斯看著卡興小姐的側臉、沉默片刻後，他做出了一個在外人看來不可思議的跳躍——耳朵的解剖形態告訴他受害者是卡興的血親。從這裡，只需要問「她有哪些親人在利物浦海事圈子裡？」答案幾乎自動浮現。</p>
+<p>本案最精彩的是吉姆·布朗那的第一人稱懺悔，以一個暴力而哀愁的海員聲音，倒述了嫉妒如何把一個誠實的男人摧毀。道爾在此開創了後來被大量模仿的「犯罪者懺悔式告白」技法：讀者在看完兇手的自述後，反而對他的悲劇命運感到一種沉重的同情。</p>
+<h3 id="_23">補充說明</h3>
+<p>〈紙板盒〉在英美早期的版本中曾被刪除，部分原因是題材的殘暴性，但更重要的是故事開頭福爾摩斯展示了「心靈感應式閱讀」——他推斷出華生腦子裡正在想什麼——這個場景被挪用進了《海軍條約》，而原始版本的〈紙板盒〉因此一度消失於多種選集。這讓它成為正典中流通最混亂的一篇，也增添了其獨特的文獻價值。</p>
+<p>故事結尾的沉默收尾令人動容：福爾摩斯放下吉姆的懺悔書，望向窗外說：「這一切痛苦、暴力、恐懼的迴圈到底有什麼意義，華生？如果宇宙是由偶然統治的，這想法難以承受；但如果這一切都有目的……那目的又是什麼？」這是道爾在偵探小說的外殼下，短暫觸碰了存在主義的深淵。</p>
+<hr>
+<h2 id="the-adventure-of-the-musgrave-ritual">選篇三：馬斯格雷夫禮儀（The Adventure of the Musgrave Ritual）</h2>
+<h3 id="_24">基本資訊</h3>
+<ul>
+<li>核心謎團類型：密碼解謎（cryptographic puzzle）+ whodunit + howdunit</li>
+</ul>
+<h3 id="_25">推理難度總評</h3>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星等</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難度（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>平均收斂點約 75% — 禮儀的解謎路徑在65%前可推，但布倫頓之死的完整重建要到80%，蕾切爾的真正罪行則到85%方才清晰</td>
+</tr>
+<tr>
+<td>迷霧等級（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>三層謎題（禮儀含義、布倫頓失蹤、蕾切爾失蹤）互相遮蔽，讀者容易聚焦在外圍卻錯過核心；「意外墜入地窖」與「蓄意謀殺」之間的曖昧性是精心設計的灰色地帶</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_26">故事大綱</h3>
+<p>馬斯格雷夫家的管家布倫頓深夜被主人發現在書房研讀一份家族古老文件「馬斯格雷夫禮儀」，因此被解雇。三天後，布倫頓失蹤；再三天，感情受傷的威爾斯女傭蕾切爾·豪爾斯也消失，她留下的足跡終止於莊園旁的湖邊。打撈湖底只找到一個裝有古舊金屬碎片的麻袋——沒有任何屍體。福爾摩斯從那張奇怪的問答儀式文本入手，開始解開一個橫跨三百年的秘密。</p>
+<h3 id="_27">真相拆解</h3>
+<h4 id="_28">真相一：馬斯格雷夫禮儀指向何處（解謎謎題）</h4>
+<ul>
+<li><strong>線索收斂點：約 65%</strong></li>
+<li>答案：禮儀是一組以天文學與步測為編碼的位置指示，指向莊園舊翼地窖深處的一個石板下方；那裡藏著一個古老的木箱，箱中原本封存的是英王查理一世被處決後、忠誠的馬斯格雷夫先祖替王室保管的斯圖亞特王朝古王冠。</li>
+</ul>
+<h4 id="_29">關鍵線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>布倫頓深夜在書房研讀禮儀，同時比對一份地圖</td>
+<td>約 20%</td>
+<td>他已發現禮儀含有實用意義，而非僅是儀式</td>
+</tr>
+<tr>
+<td>2</td>
+<td>布倫頓曾詢問莊園裡那株榆樹的高度</td>
+<td>約 60%</td>
+<td>回溯線索：這是他計算儀式中「榆樹陰影長度」所需的數學資料</td>
+</tr>
+<tr>
+<td>3</td>
+<td>禮儀中的座標體系：「橡樹上方的陽光」→「榆樹陰影末端」→步測方向距離</td>
+<td>約 40%</td>
+<td>福爾摩斯公開展示解謎過程，細心讀者可同步推算</td>
+</tr>
+<tr>
+<td>4</td>
+<td>禮儀問答「它是誰的？它是逝去之人的。誰將擁有它？將到來之人」——連結查理一世被處決後的王位繼承</td>
+<td>約 65%</td>
+<td>歷史密碼：「逝去之人」=查理一世，「將到來之人」=查理二世</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_30">輔助線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>地窖中的木箱旁散落幾枚查理一世時代的古幣</td>
+<td>約 75%</td>
+<td>確立箱子的年代與王室淵源</td>
+</tr>
+<tr>
+<td>2</td>
+<td>從湖中撈出的金屬碎片、加以摩擦後發出光芒，是彎曲變形的金屬環形物</td>
+<td>約 85%</td>
+<td>即被打撈出的古王冠，被蕾切爾丟入湖中以滅跡</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="whodunit-howdunit">真相二：布倫頓的死亡（whodunit + howdunit）</h4>
+<ul>
+<li><strong>線索收斂點：約 80%</strong></li>
+<li>答案：布倫頓與蕾切爾合謀進入地窖揭開石板（因他一人無法獨力搬動），取得箱中王冠後，蕾切爾因長久積累的怨恨（布倫頓曾拋棄她、轉而與另一女孩交往）決定報復——或是故意推倒撐住石板的木樁，或是任其自然滑落，使石板重新蓋上、將布倫頓活埋在地窖。</li>
+</ul>
+<h4 id="_31">關鍵線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>地窖地板上散亂的木頭中有一根末端有明顯壓痕，數根側面被壓扁</td>
+<td>約 78%</td>
+<td>物理重建：他們用木頭撐住石板，讓布倫頓可以爬進去取箱子</td>
+</tr>
+<tr>
+<td>2</td>
+<td>布倫頓的屍體蜷縮在箱子旁，臉色扭曲，呈窒息姿態，沒有外傷</td>
+<td>約 76%</td>
+<td>死因是被活埋，非暴力打擊</td>
+</tr>
+<tr>
+<td>3</td>
+<td>蕾切爾在布倫頓失蹤後立即出現歇斯底里症狀（大笑、嘶喊），而後神智不清</td>
+<td>約 35%</td>
+<td>早期心理線索：知情者的罪疚反應，而非僅是愛人失蹤的悲傷</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_32">假線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>蕾切爾的足跡終止於湖邊，意味著她可能溺水身亡</td>
+<td>約 55%</td>
+<td>讓人以為她是自殺受害者，而非逃走的施害者</td>
+</tr>
+<tr>
+<td>2</td>
+<td>湖底打撈只找到麻袋，找不到屍體</td>
+<td>約 60%</td>
+<td>令人以為蕾切爾的失蹤是另一樁謀殺，而非她主動逃離</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="_33">真相三：箱中之物（歷史謎題）</h4>
+<ul>
+<li><strong>線索收斂點：約 85%</strong></li>
+<li>答案：木箱中原本封存的是斯圖亞特王朝的王冠，以「逝去之人」代稱查理一世、「將到來之人」代稱查理二世，由效忠王室的馬斯格雷夫先祖秘密保管。但負責保管的那一代馬斯格雷夫在查理二世復辟前死去，沒有留下傳遞秘密的說明，王冠就此沉睡在地窖三百年，直到布倫頓發現了這條通往失落王室文物的線索。</li>
+</ul>
+<h3 id="_34">推理路徑重建</h3>
+<p>〈馬斯格雷夫禮儀〉的解謎路徑是《回憶錄》中最「可參與性」的謎題設計：道爾在故事中完整呈現了整份禮儀文本，讀者可以與福爾摩斯同步嘗試解讀。細心的讀者在讀到「橡樹上的陽光」「榆樹的陰影」以及一連串方向與步數時，若具備基本的地圖和日晷推理能力，可在 40–50% 時判斷出禮儀是一組座標系統。</p>
+<p>蕾切爾的罪行則是本案最幽暗的地帶。道爾刻意讓這個問題保持曖昧：她究竟是蓄意讓石板壓死布倫頓，還是木樁只是「恰好」滑落？福爾摩斯本人也在回憶時說：「是意外，還是她用手推開了那根木柱？」這個答案從未在文本中確認，而這種不確定性正是道爾在倫理層面給讀者留下的思考空間。</p>
+<h3 id="_35">補充說明</h3>
+<p>〈馬斯格雷夫禮儀〉是福爾摩斯早年辦案的回憶，發生在他與華生相識之前——在某種意義上，這是一個「起源故事」，是福爾摩斯「第三次辦案」，也是確立他在業界聲譽的一案。</p>
+<p>本篇的謎題設計與一般推理小說不同：它不是「誰殺了受害者」，而是「一份三百年的古老文字指向什麼」。這種歷史解謎型的推理在當代冒險小說中非常常見（達文西密碼等），而道爾早在1893年就以短篇的精緻結構完成了這種類型的實驗。</p>
+<hr>
+<h2 id="the-adventure-of-the-reigate-squires">選篇四：雷蓋特謎案（The Adventure of the Reigate Squires）</h2>
+<h3 id="_36">基本資訊</h3>
+<ul>
+<li>核心謎團類型：whodunit（誰殺了車夫）+ 動機解謎</li>
+</ul>
+<h3 id="_37">推理難度總評</h3>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星等</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難度（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>平均收斂點約 68% — 字跡分析是關鍵突破口，但「紙條是兩個人交替書寫」的推斷要在文本中段才出現；兇手身份在 70% 後方可確認</td>
+</tr>
+<tr>
+<td>迷霧等級（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>「盜賊闖入」的表面故事相當具有說服力；兩起入室盜竊案被呈現為相同罪犯所為，分散讀者注意力；坎寧安父子以受害者姿態全程參與調查，身份偽裝有效</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_38">故事大綱</h3>
+<p>福爾摩斯在病後休養期間陪華生到雷蓋特鄉間作客，結果捲入兩起連續入室盜竊案與一場謀殺。前晚在坎寧安莊園，車夫威廉被「入室盜賊」射殺，現場僅留下死者手中緊握的一張字條殘片。警方認定字條是死者與盜賊的秘密聯絡暗號，但福爾摩斯只看了一眼，就斷定字條是由兩個人交替書寫的——而那兩個人，正是坎寧安父子本人。</p>
+<h3 id="_39">真相拆解</h3>
+<h4 id="whodunit_1">真相一：兇手身份（whodunit）</h4>
+<ul>
+<li><strong>線索收斂點：約 70%</strong></li>
+<li>答案：坎寧安老先生與其子亞歷克·坎寧安共謀，先入室盜竊鄰居阿克頓（目的是竊取對方在土地訴訟中的關鍵文件），再因車夫威廉掌握了他們犯罪的把柄並施以勒索，用設計約見的方式誘殺威廉。</li>
+</ul>
+<h4 id="_40">關鍵線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>字條殘片上的文字是由兩人交替逐字書寫的</td>
+<td>約 55%</td>
+<td><strong>核心發現</strong>：兩種筆跡強弱交替、填空結構清晰，不可能是單人書寫；道爾透過福爾摩斯的書寫分析展示了推理考據的精妙</td>
+</tr>
+<tr>
+<td>2</td>
+<td>兩種筆跡顯示年齡差距，且有家族性遺傳特徵（相似的希臘字母e的寫法）</td>
+<td>約 58%</td>
+<td>確認兩個書寫者是血親，一年長一年輕——吻合坎寧安父子</td>
+</tr>
+<tr>
+<td>3</td>
+<td>依照亞歷克·坎寧安的陳述，槍手在射殺威廉後「立即逃跑」——但若兇手立即逃跑，他不可能有時間從死者手中搶走字條</td>
+<td>約 60%</td>
+<td><strong>邏輯反向推斷</strong>：字條殘片意味著有人從死者手中撕走了大部分字條；能做到這件事的人，必定是在場的亞歷克·坎寧安，而非逃跑的外來嫌疑人</td>
+</tr>
+<tr>
+<td>4</td>
+<td>案發地點沒有陌生人的靴痕，旁邊的溝渠也沒有穿越痕跡</td>
+<td>約 62%</td>
+<td>確認「外來盜賊」根本不存在，整個現場是捏造的</td>
+</tr>
+<tr>
+<td>5</td>
+<td>福爾摩斯在坎寧安書房假裝量測字跡，讓老坎寧安親手寫下「twelve」一詞，與字條上的字跡完全吻合</td>
+<td>約 78%</td>
+<td>直接物證確認：坎寧安老先生就是強勢書寫者之一</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_41">輔助線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>阿克頓與坎寧安家族因土地訴訟長年對立</td>
+<td>約 20%</td>
+<td>交代盜竊阿克頓書房的動機：竊取對方的關鍵法律文件</td>
+</tr>
+<tr>
+<td>2</td>
+<td>阿克頓家被盜的物品清單奇怪地混雜（一冊書、燭台、計重器、一團繩子……）</td>
+<td>約 22%</td>
+<td>這些雜物是為了讓案件看起來像「普通盜賊貪婪亂拿」，掩蓋他們真正要找的是訴訟文件</td>
+</tr>
+<tr>
+<td>3</td>
+<td>車夫威廉在平時不可能出現在院子裡的時間點突然現身</td>
+<td>約 48%</td>
+<td>他顯然是被字條引誘到特定地點的——字條是引他入套的誘餌，而非外來盜賊的聯絡暗號</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_42">假線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>連續兩起盜竊案（先阿克頓，後坎寧安），讓人以為是同一個在郡內流竄的盜賊</td>
+<td>約 10–25%</td>
+<td>偽裝成受害者，掩蓋第二起「盜竊」是自導自演</td>
+</tr>
+<tr>
+<td>2</td>
+<td>字條被呈現為「可能是威廉與盜賊的秘密約定」</td>
+<td>約 40%</td>
+<td>警方自己的假設，使讀者跟著相信威廉可能是「從犯」</td>
+</tr>
+<tr>
+<td>3</td>
+<td>福爾摩斯故意裝病發作、摔倒、表演神志不清——讓坎寧安父子（和讀者）都以為他已失去推理能力</td>
+<td>約 65%</td>
+<td>道爾用偵探的偽裝來再次模糊嫌疑人身份</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_43">推理路徑重建</h3>
+<p>本案的破解關鍵是一個極簡卻精準的觀察：<strong>字條是兩個人交替書寫的</strong>。這條線索在故事約55%時被提出，且被福爾摩斯詳細論證（強t與弱t的對比、填空時的擠迫感）。細心的讀者若具備基本的書寫習慣認知，可在此時同步得出結論。</p>
+<p>更精妙的邏輯鏈在稍早的60%：「亞歷克說兇手立即逃跑，但字條是從死者手中被撕走的——若兇手立即逃跑，他無法完成這個動作。唯一能在死者手中撕走字條的人，是留在現場的亞歷克」。這條推論要求讀者對故事中「誰在什麼時間點做了什麼」有清晰的時間線記憶，是本集中最需要分析性閱讀的謎題之一。</p>
+<p>福爾摩斯「假裝神病發作」的演技是本案最戲劇性的場景，也是他在辦案過程中罕見使用身體表演而非語言推理的案例。這種「以假亂真的偵探騙術」後來被許多作者繼承，尤其是克莉絲蒂筆下的白羅在多篇故事中採用類似策略。</p>
+<h3 id="_44">補充說明</h3>
+<p>〈雷蓋特謎案〉是《回憶錄》中技術要求最高的謎題之一，但也因此被一些讀者認為不夠「直觀」——字跡分析的細節對缺乏相關知識的讀者而言是一堵牆。然而道爾的用心在於：他讓福爾摩斯一步步解說推理過程，使「識破字跡的時刻」對讀者而言不是魔法，而是可以驗證的邏輯。</p>
+<p>父子共謀作案的設計是本篇另一個值得關注的敘事選擇：道爾讓「加害者」以紳士家族的身份參與整個調查過程，在表面上扮演受害者、熱心配合偵探，這種「在場的無辜者」框架後來被克莉絲蒂發展成核心技法之一。</p>
+<hr>
+<h2 id="the-final-problem">結語：最後一案（The Final Problem）——死亡作為推理之謎</h2>
+<h3 id="_45">作者注：本篇在現有文字檔案中未收入，依據正典文本補充分析</h3>
+<p>〈最後一案〉（1893年12月連載）雖然形式上是一個追逐與逃亡故事，而非傳統謎題，但它在推理文學史上佔據一個獨特的位置：它是道爾試圖「謀殺」自己筆下主角的文件——而正是這種「失敗」，揭示了偵探小說的本質。</p>
+<p><strong>摩里亞蒂教授</strong>在本篇首度登場即被定義為「犯罪界的拿破崙」、「蜘蛛網中心的蜘蛛」——這是推理文學史上最具影響力的反派原型建構。道爾用了不到兩頁的篇幅塑造出一個足以成為福爾摩斯鏡中倒影的對手：兩人都擁有超凡的智識，只是一個將天才用於秩序，另一個用於混亂。</p>
+<p><strong>瑞辛巴赫瀑布的謎題</strong>則是一個沒有解答的 whodunit：目擊者（華生）不在場，現場只有兩組腳印深入懸崖邊緣，沒有任何一組返回。這設計精妙地利用了「缺席的證據」：正是那雙沒有折返的腳印，逼迫讀者（和讀者內心的偵探）接受那個令人難以接受的結論——福爾摩斯死了。</p>
+<p>然而道爾沒有想到的是，讀者拒絕接受這個推理結論。《最後一案》發表後，讀者大量抗議，傳說有人在倫敦街頭佩戴黑色袖章致哀。十年後，道爾在讀者壓力與豐厚稿酬雙重驅動下，寫出了〈空屋冒險〉，解釋福爾摩斯如何從柔道技巧（「巴里斯圖術」）中得救。</p>
+<p>這個「死而復生」的敘事，是推理文學史上最著名的「作者被角色反噬」的案例，也是唯一一次，讀者的集體推理壓力改變了一個虛構世界的歷史走向。</p>
+<hr>
+<h2 id="_46">全集補充說明</h2>
+<h3 id="_47">《回憶錄》的技術成就</h3>
+<p>《回憶錄》代表道爾在短篇推理技藝上的高峰：每篇故事都圍繞一個精確設計的謎題核心，線索布局密而不亂，解答時的說明既能讓讀者拍案叫絕，也能讓他們回頭驗證「確實都在那裡」。這種「事後可驗證性」是優質古典推理的根本標準，而道爾在本集中的達成率相當高。</p>
+<h3 id="_48">道爾的三種線索策略</h3>
+<table>
+<thead>
+<tr>
+<th>策略</th>
+<th>代表案例</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>反向線索（什麼沒有發生）</strong></td>
+<td>夜間狗的沉默（〈銀星〉）</td>
+<td>要求讀者注意缺席，反直覺但邏輯無懈可擊</td>
+</tr>
+<tr>
+<td><strong>身體特徵的解讀</strong></td>
+<td>女性耳廓的解剖類似性（〈紙板盒〉）、書寫習慣揭示家族遺傳（〈雷蓋特謎案〉）</td>
+<td>道爾的標誌性技法，建立在當時新興的人類學與筆跡學知識基礎上</td>
+</tr>
+<tr>
+<td><strong>古老文本的破譯</strong></td>
+<td>馬斯格雷夫禮儀的座標解碼（〈馬斯格雷夫禮儀〉）</td>
+<td>將「謎題」從犯罪現場延伸至歷史文本，賦予謎題更大的時間縱深</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_49">與第一本短篇集《歷險記》的比較</h3>
+<p>《冒險史》（Adventures，1892）更多依賴單一閃光線索或社會觀察，《回憶錄》則系統性地提升了謎題的複雜層次——多重真相、偽裝的受害者、歷史謎語——反映道爾在第一集成功後對自己提出了更高的挑戰。〈黃面人〉是本集唯一一篇福爾摩斯判斷錯誤的故事（他誤判黃臉面具下藏著恐嚇者，實際上是妻子隱藏的混血女兒），道爾特地用它提醒讀者：演繹邏輯本身並不能保證正確，觀察者的預設偏見才是真正的敵人。這份誠實是本集在整個正典中最值得珍視的反思時刻。</p>
+    <a href="../index.html" class="back-link">← 回到首頁</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">推理解剖室</p>
+    <p>五位作者 · 八十八部作品 · 一百三十五年推理文學的難度演化</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
