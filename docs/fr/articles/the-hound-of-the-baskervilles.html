@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le Chien des Baskerville（The Hound of the Baskervilles） — Salle de Dissection Policière</title>
+<meta name="description" content="Sur les landes désolées du Devonshire, la famille Baskerville se transmet de génération en génération une ancienne malédiction : leur ancêtre Hugo Baskerville, ">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-hound-of-the-baskervilles.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-hound-of-the-baskervilles.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-hound-of-the-baskervilles.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-hound-of-the-baskervilles.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-hound-of-the-baskervilles.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-hound-of-the-baskervilles.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-hound-of-the-baskervilles.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-hound-of-the-baskervilles.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Salle de Dissection Policière</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Accueil</a>
+        <a href="../index.html#latest">Récents</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Langue" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 Français</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-hound-of-the-baskervilles.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-hound-of-the-baskervilles.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-hound-of-the-baskervilles.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/the-hound-of-the-baskervilles.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/the-hound-of-the-baskervilles.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/the-hound-of-the-baskervilles.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/the-hound-of-the-baskervilles.html">Español</a>
+      <a class="lang-item active" data-lang="fr" href="/Detective-Analysis/fr/articles/the-hound-of-the-baskervilles.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">Arthur Conan Doyle · </div>
+    <h1>Le Chien des Baskerville（The Hound of the Baskervilles）</h1>
+    <div class="subtitle">Arthur Conan Doyle（柯南·道爾） · Roman</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Déductibilité</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Indice de brume</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="le-chien-des-baskervillethe-hound-of-the-baskervilles-analyse-de-deductibilite">Le Chien des Baskerville（The Hound of the Baskervilles）— Analyse de déductibilité</h1>
+<h2 id="informations-de-base">Informations de base</h2>
+<ul>
+<li>Auteur：Arthur Conan Doyle（柯南·道爾）</li>
+<li>Année：1902（publié en feuilleton dans The Strand Magazine, 1901–1902）</li>
+<li>Genre：Roman</li>
+<li>Détective：Sherlock Holmes（夏洛克·福爾摩斯）</li>
+<li>Type de mystère central：whodunit + howdunit + whydunit</li>
+</ul>
+<hr>
+<h2 id="evaluation-globale-de-la-deductibilite">Évaluation globale de la déductibilité</h2>
+<table>
+<thead>
+<tr>
+<th>Indicateur</th>
+<th>Étoiles</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Déductibilité（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>Point de convergence moyen : environ 82 % — l'indice décisif permettant d'identifier le meurtrier n'apparaît qu'au chapitre 13 (soit environ 82 % du livre) ; le mode opératoire n'est pleinement confirmé qu'au chapitre 14 (environ 92 %) ; la moyenne des trois fils de vérité converge autour de 82 %</td>
+</tr>
+<tr>
+<td>Indice de brume（Fog Rating）</td>
+<td>⭐⭐⭐⭐</td>
+<td>Nombreux faux-semblants : les allées et venues nocturnes de Barrymore, la menace que représente l'évadé Selden, la légende surnaturelle du chien, la feinte absence de Holmes, etc. ; l'auteur exploite systématiquement le point de vue à la première personne de Watson pour retarder et dissimuler les informations clés</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="resume">Résumé</h2>
+<p>Sur les landes désolées du Devonshire, la famille Baskerville se transmet de génération en génération une ancienne malédiction : leur ancêtre Hugo Baskerville, pour ses méfaits, aurait attiré sur lui un chien des enfers, et depuis lors tout descendant qui enfreindrait les interdits de la lande serait condamné à périr, la gorge arrachée par la bête.</p>
+<p>Sir Charles Baskerville est retrouvé mort un soir dans l'allée des ifs de son manoir : la scène est terrifiante — visage tordu d'horreur, corps sans la moindre blessure, mais les empreintes au sol révèlent qu'il a fui à toute allure avant de tomber. Le Dr Mortimer, médecin de famille, découvre près du cadavre l'empreinte gigantesque d'un chien, mais, saisi d'effroi, il la passe sous silence lors de l'enquête du coroner. Il se rend à Londres demander l'aide de Holmes, au moment même où il doit accueillir l'héritier de Charles — le jeune Sir Henry Baskerville, qui rentre du Canada.</p>
+<p>À peine arrivé à Londres, Sir Henry est assailli d'événements étranges : une lettre de menace composée de mots découpés dans un journal, la disparition d'une botte neuve dans sa chambre d'hôtel, et la filature d'un mystérieux homme à la barbe noire. Holmes dépêche Watson pour escorter Sir Henry jusqu'au manoir des Baskerville, tandis que lui-même, sous prétexte de rester à Londres pour d'autres affaires, se dissimule secrètement dans une antique hutte de pierre sur la lande pour mener son enquête.</p>
+<p>Sur la lande, les suspects se succèdent : Barrymore, le majordome loyal mais énigmatique, et son épouse s'adonnent la nuit à d'étranges signaux à la bougie ; Stapleton, naturaliste érudit et flegmatique, connaît la lande comme sa poche, mais manifeste une résistance d'une véhémence suspecte lorsque Sir Henry cherche à courtiser sa « sœur » Beryl ; le meurtrier notoire Selden erre en fugitif sur la lande ; le riche excentrique Frankland braque jour et nuit sa lunette d'approche sur l'horizon.</p>
+<p>Au fil de l'enquête, la vérité se dévoile couche après couche : Stapleton n'est pas le simple naturaliste qu'il prétend être, et Beryl n'est pas sa sœur. Il entretient un immense chien de chasse enduit de phosphore, qui flamboie dans la nuit comme un feu follet, caché au cœur du marécage de Grimpen. Il lui a fait flairer la botte volée à Sir Henry pour qu'il mémorise sa piste, et a d'abord tué Sir Charles de terreur avant de s'en prendre à Sir Henry. Holmes tend un piège au dernier moment et abat le chien de trois balles. Stapleton prend la fuite dans le Grand Marécage de Grimpen, où il disparaît — vraisemblablement englouti par les tourbières.</p>
+<hr>
+<h2 id="decryptage-de-la-verite">Décryptage de la vérité</h2>
+<h3 id="verite-1-la-veritable-identite-du-meurtrierwhodunit">Vérité 1 : La véritable identité du meurtrier（whodunit）</h3>
+<ul>
+<li><strong>Point de convergence des indices : environ 82 %</strong></li>
+<li>Réponse : La véritable identité de Stapleton est Rodger Baskerville, fils illégitime de Roger, le cadet de Sir Charles, et donc héritier caché de la famille Baskerville. Sous le pseudonyme de Stapleton, accompagné de son épouse Beryl déguisée en sœur, il s'est tapi sur la lande pendant deux ans dans le but d'éliminer tous les héritiers qui le précèdent dans l'ordre de succession, afin de s'emparer seul d'une fortune d'environ un million de livres sterling.</li>
+</ul>
+<h4 id="indices-cles">Indices clés</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement（chapitre/pourcentage）</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Stapleton affirme avoir dirigé une école dans le nord de l'Angleterre, contrainte de fermer en raison d'une épidémie, avant de s'installer sur la lande peu après le retour de Sir Charles au manoir</td>
+<td>Chapitre 7 / environ 37 %</td>
+<td>L'heure de son arrivée coïncide étroitement avec le retour de Sir Charles, laissant supposer une présence planifiée ; il sera prouvé par la suite que l'histoire de l'école est un mensonge</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Roger Baskerville, frère cadet de Sir Charles, serait mort de la fièvre jaune en 1876, selon des renseignements vagues qu'aucun témoignage ne vient confirmer</td>
+<td>Chapitre 4 / environ 28 %</td>
+<td>Cela laisse une lacune non comblée dans la chaîne successorale de la famille — lacune dans laquelle Stapleton va précisément s'engouffrer</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Alors que Stapleton prétend avoir été enseignant, Holmes remonte la trace des archives de l'école « Vandeleur » et confirme qu'il a dirigé un établissement sous un nom différent, puis a disparu avec son épouse</td>
+<td>Chapitre 12 / environ 78 %</td>
+<td>Premier indice décisif confirmant que Stapleton a fabriqué une fausse identité</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Le vieux portrait dans la grande salle — Holmes cache le chapeau et la chevelure longue de la peinture, et « le visage de Stapleton » surgit de la toile du XVIIe siècle</td>
+<td>Chapitre 13 / environ 82 %</td>
+<td><strong>L'indice clé final</strong> : Stapleton est un descendant en lignée directe du vieux Hugo Baskerville, et le portrait atteste physiquement de sa véritable identité</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Holmes présente à Mrs. Laura Lyons une photographie des « époux Vandeleur » ; elle reconnaît Stapleton et Beryl</td>
+<td>Chapitre 13 / environ 86 %</td>
+<td>Preuve externe venant confirmer le double mensonge de Stapleton — son mensonge matrimonial envers Laura, et son mensonge d'identité envers le monde entier</td>
+</tr>
+</tbody>
+</table>
+<h4 id="indices-secondaires">Indices secondaires</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement（chapitre/pourcentage）</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Stapleton connaît le Grand Marécage de Grimpen dans ses moindres recoins et se vante d'être le seul à pouvoir le traverser</td>
+<td>Chapitre 7 / environ 37 %</td>
+<td>Cela laisse entendre qu'il a de sérieuses raisons de s'aventurer dans le marécage — là même où est dissimulé le chien</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Dès leur première rencontre, Stapleton connaît la relation entre Mortimer et Watson, ce qui prouve qu'il a mené de minutieuses recherches sur les habitants de la lande</td>
+<td>Chapitre 7 / environ 36 %</td>
+<td>Un naturaliste « nouvellement arrivé » ne devrait pas être aussi au fait du réseau de relations d'autrui</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Stapleton adopte un comportement contradictoire envers Sir Henry : il fait d'abord l'entremetteur entre sa « sœur » et lui, puis éclate soudainement de colère pour mettre fin à la cour</td>
+<td>Chapitre 9 / environ 54 %</td>
+<td>Cette contradiction n'est explicable que par une relation d'époux, non de frère — il se sert de Beryl pour surveiller Henry, mais ne peut se résoudre à la laisser vraiment partir</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Pour suivre Mortimer et Sir Henry à Londres, Stapleton se déguise avec une fausse barbe noire et use du nom de Holmes pour abuser le cocher</td>
+<td>Chapitre 5 / environ 31 %</td>
+<td>Une intelligence et des techniques de contre-surveillance remarquables — un simple naturaliste ne disposerait pas de telles aptitudes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="faux-semblants">Faux-semblants</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement（chapitre/pourcentage）</th>
+<th>Direction du leurre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Barrymore veillant la nuit à la bougie devant la fenêtre, son épouse pleurant dans l'obscurité</td>
+<td>Chapitres 6–9 / environ 38–57 %</td>
+<td>Pousse le lecteur à soupçonner le couple de majordomes d'être impliqué dans le meurtre ou quelque complot ; en réalité, ils ravitaillent secrètement le fugitif Selden, frère de Mrs. Barrymore</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Le fugitif Selden — le « meurtrier de Notting Hill » errant sur la lande, au caractère violent</td>
+<td>Chapitres 6–12 / environ 33–76 %</td>
+<td>Un personnage ostensiblement menaçant qui détourne l'attention du véritable instigateur, bien plus discret ; sa présence est également exploitée par Stapleton (Selden, portant les vieux habits de Sir Henry, devient par accident la cible substitutive du chien)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>La légende surnaturelle du « chien des enfers » qui hante la lande</td>
+<td>Tout au long du livre</td>
+<td>Conan Doyle use de Mortimer, des paysans et des traditions locales pour dresser systématiquement un écran narratif qui fait hésiter le lecteur : « Et si une force surnaturelle existait vraiment ? »</td>
+</tr>
+<tr>
+<td>4</td>
+<td>La lunette du vieux Frankland — il croit surveiller le ravitailleur du fugitif</td>
+<td>Chapitre 11 / environ 70 %</td>
+<td>Il observe en réalité Cartwright, l'assistant de Holmes, et non l'enfant qui approvisionnerait Selden ; cette scène réussit à faire croire au lecteur que l'indice crucial se cache « du côté du fugitif »</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="verite-2-la-veritable-identite-de-berylcouche-interieure-du-whodunit">Vérité 2 : La véritable identité de Beryl（couche intérieure du whodunit）</h3>
+<ul>
+<li><strong>Point de convergence des indices : environ 78 %</strong></li>
+<li>Réponse : La « sœur de Stapleton », Beryl, est en réalité son épouse. Stapleton contraint sa femme à se faire passer pour sa sœur afin qu'elle puisse approcher Sir Henry en toute « liberté », comme un instrument de manipulation ; pendant ce temps, il séduit Laura Lyons en lui promettant le mariage.</li>
+</ul>
+<h4 id="indices-cles_1">Indices clés</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement（chapitre/pourcentage）</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Lors de leur première rencontre, Beryl enjoint Watson avec une insistance pressante de « repartir immédiatement à Londres » — une urgence bien trop vive pour une simple mise en garde bienveillante d'une voisine</td>
+<td>Chapitre 7 / environ 38 %</td>
+<td>Une vraie sœur ne mobiliserait pas un tel capital émotionnel dès la première rencontre ; elle sait ce que son « frère » est en train de faire et crie sa terreur d'épouse</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Lorsque Stapleton s'oppose à ce que Sir Henry courtise Beryl, la violence de sa colère laisse Henry perplexe — « Est-il un peu fou ? »</td>
+<td>Chapitre 9 / environ 55 %</td>
+<td>La protection d'un frère envers sa sœur a ses limites ; seule la jalousie incontrôlable d'un mari correspond à cette réaction</td>
+</tr>
+<tr>
+<td>3</td>
+<td>En remontant la piste de l'école Vandeleur, Holmes établit que « M. Vandeleur et son épouse » ont disparu ensemble</td>
+<td>Chapitre 12 / environ 78 %</td>
+<td><strong>Révélation décisive</strong> : Holmes dit directement à Watson que « la femme présentée comme la sœur de Stapleton est en réalité son épouse »</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Au dénouement, on découvre Beryl ligotée à un pilier dans la chambre de Stapleton, des marques de fouet dans le cou</td>
+<td>Chapitre 14 / environ 93 %</td>
+<td>C'est de la violence conjugale, non une relation fraternelle ; un mari punit son épouse de sa « trahison » (elle a refusé de continuer à participer au plan meurtrier)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="indices-secondaires_1">Indices secondaires</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement（chapitre/pourcentage）</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Stapleton entretient une relation secrète et intime avec Laura Lyons, la manipulant avec des promesses de mariage pour la pousser à écrire la lettre qui attire Sir Charles</td>
+<td>Chapitre 12 / environ 78 %</td>
+<td>Un célibataire ayant une « sœur » qui noue une quasi-relation matrimoniale avec une autre femme est à la rigueur plausible ; mais s'il est déjà marié, il mène simultanément une double escroquerie sentimentale, ce qui est bien plus cohérent avec l'étendue de son plan</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Mortimer a indiqué à Watson que Beryl est « une jeune femme séduisante » et que Stapleton l'a amenée vivre avec lui sur la lande</td>
+<td>Chapitre 3 / environ 19 %</td>
+<td>Un homme ambitieux vivant isolé en pleine lande avec une belle compagne — cet arrangement correspond bien davantage, selon les normes sociales de l'époque, à un couple marié qu'à un frère et une sœur</td>
+</tr>
+</tbody>
+</table>
+<h4 id="faux-semblants_1">Faux-semblants</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement（chapitre/pourcentage）</th>
+<th>Direction du leurre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Dès leur première rencontre, Stapleton appelle Beryl par son prénom, et Beryl l'appelle « Jack » — des appellations familières et quotidiennes</td>
+<td>Chapitre 7 / environ 38 %</td>
+<td>Ces appellations naturelles (sans « monsieur » ni « mademoiselle ») renforcent l'impression spontanée d'un lien fraternel et n'éveillent aucun soupçon</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Mortimer et plusieurs voisins les présentent invariablement comme « M. Stapleton et sa sœur », et personne dans la communauté n'en doute</td>
+<td>Plusieurs endroits / environ 19–50 %</td>
+<td>La perception collective de la communauté constitue l'obstacle épistémologique le plus puissant — le réflexe psychologique du « tout le monde les présente ainsi, c'est forcément vrai »</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="verite-3-le-mode-operatoirehowdunit">Vérité 3 : Le mode opératoire（howdunit）</h3>
+<ul>
+<li><strong>Point de convergence des indices : environ 88 %</strong></li>
+<li>Réponse : Stapleton élève un immense chien de chasse (un croisement entre un bloodhound et un mastiff), caché au cœur du Grand Marécage de Grimpen. Il dérobe une botte à Sir Henry dans son hôtel pour que le chien mémorise sa piste olfactive ; il manipule Laura Lyons pour qu'elle attire Sir Charles à attendre seul la nuit près de la porte latérale de l'allée des ifs, puis libère le chien enduit de phosphore. Sir Charles, cardiaque, meurt de terreur dans sa fuite. Plus tard, Selden, qui portait les vieux habits de Henry, devient la victime accidentelle du chien. Finalement, Sir Henry est conduit à traverser seul la lande : Holmes abat le chien au dernier instant.</li>
+</ul>
+<h4 id="indices-cles_2">Indices clés</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement（chapitre/pourcentage）</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Mortimer découvre près du cadavre de Sir Charles l'empreinte gigantesque d'un chien de chasse, mais la dissimule lors de l'enquête du coroner</td>
+<td>Chapitres 2–3 / environ 15 %</td>
+<td><strong>L'indice clé le plus précoce</strong> : confirme que l'affaire est liée à un chien réel, et non à une simple crise cardiaque</td>
+</tr>
+<tr>
+<td>2</td>
+<td>La botte neuve de Sir Henry est volée à son hôtel londonien — puis rendue, mais une vieille botte disparaît à son tour</td>
+<td>Chapitres 4–5 / environ 26–30 %</td>
+<td>Une seule botte neuve est inutilisable, car l'odeur n'y est pas assez marquée. La vieille botte a été portée par Henry et porte son odeur distincte — cela indique que le voleur a besoin d'un marqueur olfactif, c'est-à-dire d'une « cible de piste pour un chien »</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Les hurlements sur la lande — Stapleton les explique d'abord comme « le bruit des marécages » ou « le cri du butor »</td>
+<td>Chapitre 7 / environ 37 %</td>
+<td>Sa légèreté — et même son empressement à fournir des « explications rationnelles » — trahit le fait qu'il sait exactement d'où vient ce son ; un innocent se contenterait de dire « je ne sais pas », sans proposer plusieurs solutions pour dissiper l'inquiétude</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Stapleton est le seul à pouvoir traverser le Grand Marécage de Grimpen, et il possède une remise fermée à clé près de sa ferme</td>
+<td>Chapitre 7 / environ 37 % + Chapitre 14 / environ 91 %</td>
+<td>Le premier élément suggère la cachette du chien ; le second est directement observé par Watson, qui voit Stapleton entrer nuitamment dans la remise et entend s'en échapper « un étrange bruissement »</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Laura Lyons reconnaît que la lettre qui a attiré Sir Charles à ce rendez-vous lui a été « dictée » par Stapleton — c'est lui qui a organisé l'heure et le lieu de l'attente de Sir Charles</td>
+<td>Chapitre 13 / environ 85 %</td>
+<td>Confirme que Stapleton a activement mis en scène les circonstances de la mort de Sir Charles — rien d'accidentel, tout était calculé</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Après que le chien est abattu, Watson pose les doigts sur son museau : sa main luit dans l'obscurité et dégage une odeur particulière</td>
+<td>Chapitre 14 / environ 92 %</td>
+<td>Confirmation du phosphore : explication de l'apparence surnaturelle du « chien des enfers en flammes » — un déguisement chimique, rien de plus</td>
+</tr>
+</tbody>
+</table>
+<h4 id="indices-secondaires_2">Indices secondaires</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement（chapitre/pourcentage）</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Les empreintes de Sir Charles, après la porte latérale, montrent qu'il marchait sur la pointe des pieds ; Holmes en déduit à juste titre qu'il était en pleine fuite et non en simple promenade</td>
+<td>Chapitre 3 / environ 18 %</td>
+<td>Dernier acte avant la mort — un cardiaque courant à cette allure avait forcément aperçu quelque chose d'assez effroyable pour qu'il cherche à fuir de toutes ses forces</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sir Charles a attendu près de la porte latérale « plus de dix minutes » (les cendres de son cigare sont tombées deux fois) — il attendait quelqu'un, il ne s'y trouvait pas par hasard</td>
+<td>Chapitre 3 / environ 17 %</td>
+<td>Holmes en déduit que Sir Charles avait un rendez-vous, et que quelqu'un l'a délibérément attiré là</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Selden, vêtu des vieux habits de Henry, est pourchassé par le chien et meurt sur la lande — ce qui confirme que le chien suit une piste olfactive et qu'il existe bel et bien</td>
+<td>Chapitre 12 / environ 76 %</td>
+<td>Valide indirectement l'existence du chien et le fait que le vol de la botte servait à établir un lien olfactif</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Holmes demande à Sir Henry de rentrer seul par un itinéraire précis et prépare l'embuscade à l'avance — il sait parfaitement que le chien fera son apparition</td>
+<td>Chapitres 13–14 / environ 87–90 %</td>
+<td>À ce stade, Holmes maîtrise intégralement le howdunit et conçoit le piège en conséquence</td>
+</tr>
+</tbody>
+</table>
+<h4 id="faux-semblants_2">Faux-semblants</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement（chapitre/pourcentage）</th>
+<th>Direction du leurre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Le jury du coroner rend un verdict de « mort naturelle （insuffisance cardiaque） » dans l'affaire Sir Charles</td>
+<td>Chapitre 2 / environ 13 %</td>
+<td>La conclusion officielle crée l'illusion juridique qu'« il n'y a pas d'affaire », rendant difficile pour les personnages comme pour le lecteur de défendre la thèse du meurtre</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Divers témoignages de phénomènes surnaturels sur la lande（paysans, palefrenier et autres ayant aperçu le « chien des enfers lumineux »）</td>
+<td>À partir du chapitre 3 / environ 18 %</td>
+<td>Entretient l'hésitation du lecteur — surtout celui familier de la tradition gothique victorienne — entre « surnaturel » et « rationnel », retardant l'interrogation sur le mécanisme réel</td>
+</tr>
+<tr>
+<td>3</td>
+<td>La silhouette solitaire sur la lande（révélée plus tard comme étant Holmes lui-même）</td>
+<td>Chapitre 9 / environ 55 %</td>
+<td>Watson la perçoit comme une nouvelle énigme ou une menace potentielle, et le lecteur est entraîné hors de la piste principale</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="reconstruction-du-chemin-de-deduction">Reconstruction du chemin de déduction</h2>
+<p><strong>Premier fil : Qui est le meurtrier ?</strong></p>
+<p>Les premiers soupçons naissent au chapitre 4 (environ 28 %) : Mortimer mentionne que Roger Baskerville est « mort en Amérique centrale », mais avec une formulation vague, sans confirmation d'aucun témoin. Un lecteur attentif devrait dès lors noter mentalement qu'« il existe une lacune dans la chaîne successorale familiale ».</p>
+<p>Au chapitre 7 (environ 37 %), Stapleton entre en scène. Il s'est « par hasard » installé sur la lande peu après le retour de Sir Charles, connaît la lande bien au-delà de ce que deux années de résidence expliqueraient, et est au courant des détails des relations personnelles de Mortimer, Watson et des autres. Un lecteur attentif au fait qu'« il en sait décidément trop » devrait, à ce stade, commencer à nourrir des soupçons à son égard.</p>
+<p>Le chapitre 9 (environ 55 %) constitue un tournant décisif : la fureur soudaine de Stapleton envers Henry déconcerte tous les voisins. Si Beryl était vraiment sa sœur, son comportement serait anormal au-delà de toute mesure ; un lecteur qui oriente sa réflexion vers « il dissimule un type de relation privée » se rapproche alors considérablement de la vérité.</p>
+<p>Au chapitre 12 (environ 78 %), Holmes révèle à Watson depuis sa hutte de pierre : « Beryl est sa femme, non sa sœur, et il a été un temps Vandeleur. » C'est le point de convergence des indices sur l'identité de Stapleton. La scène du portrait au chapitre 13 (environ 82 %) apporte la confirmation définitive — la reconnaissance visuelle verrouille tous les fils.</p>
+<p><strong>Deuxième fil : Le mode opératoire ?</strong></p>
+<p>Le mystère des bottes volées (chapitres 4–5, environ 26–30 %) est l'indice howdunit le plus précoce et le plus important du roman, mais sa portée ne se précise que progressivement. Une seule botte n'est guère utile, mais l'odeur de deux bottes ou plus permet de suivre une piste — un lecteur qui se demande dès lors « pourquoi quelqu'un aurait besoin de l'odeur d'une chaussure » peut, au fil des hurlements sur la lande (chapitres 7–9, environ 37–55 %), assembler le tableau : <strong>quelqu'un utilise de vraies meutes pour pister une cible olfactive précise</strong>.</p>
+<p>Le bruissement dans la remise (chapitre 14, environ 91 %) est la dernière pièce du puzzle. La révélation du phosphore (environ 92 %) résout l'ultime énigme du « chien des enfers lumineux ».</p>
+<p><strong>Troisième fil : Le détail le plus difficile à percevoir</strong></p>
+<p>La fonction de Laura Lyons (chapitres 10–13) constitue le fil le mieux caché du roman. Son existence révèle que Stapleton ne manipule pas seulement son épouse : il a également promis le mariage à une autre femme. Ce dispositif où deux femmes sont simultanément trompées met en lumière la nature profonde de Stapleton — « tout est instrument, tout sentiment est mensonge » — et constitue l'un des éléments les plus glaçants de cette affaire dans l'histoire de la littérature policière.</p>
+<hr>
+<h2 id="remarques-complementaires">Remarques complémentaires</h2>
+<p><strong>La place singulière du Chien des Baskerville dans la série Sherlock Holmes</strong></p>
+<p>Conan Doyle avait « tué » Holmes dans The Final Problem (1893), déclenchant la colère des lecteurs. Ce roman est sa manière de faire revenir Holmes — sous la forme d'un récit rétrospectif se déroulant « avant les chutes de Reichenbach » — après huit années de silence (feuilleton de 1901). Choisir cette histoire pour célébrer le retour attendu par les lecteurs relevait d'un sens commercial remarquable : Le Chien des Baskerville est à la fois roman gothique d'horreur et roman policier classique, comblant les attentes de deux publics distincts.</p>
+<p><strong>La finesse de la construction narrative</strong></p>
+<p>La plus grande audace narrative du roman réside dans le recours aux <strong>lettres et journaux de Watson</strong> en lieu et place d'une narration directe — tout ce que voit le lecteur est le « récit en temps réel » de Watson, non des souvenirs recomposés après coup. Ce dispositif produit un double effet :
+1. Créer une impression de présence immédiate (le lecteur est aussi perdu que Watson)
+2. Dissimuler légitimement le fait que Holmes s'est rendu en personne sur la lande (ses actions se déroulent hors du champ de vision de Watson)</p>
+<p>L'apparition de Holmes dans la hutte de pierre de la lande (chapitre 11) est l'une des scènes les plus célèbres de l'histoire du roman policier en matière de « tromperie informationnelle de l'auteur envers le lecteur ». À strictement parler, Doyle ne « ment » pas — il laisse seulement Holmes garder le silence vis-à-vis des lettres de Watson, et Watson dans l'ignorance de la localisation de Holmes.</p>
+<p><strong>Explication détaillée de l'indice de brume</strong></p>
+<p>La raison pour laquelle la brume est à quatre étoiles plutôt que cinq : bien que les faux-semblants soient nombreux, Doyle ne recourt pas à un narrateur peu fiable ni à des structures méta-narratives pour tromper le lecteur, et tous les indices se trouvent, rétrospectivement, bel et bien dans le texte. Comparé aux œuvres à cinq étoiles d'Agatha Christie (comme Le Crime de l'Orient-Express ou Dix Petits Nègres), la désinformation de Doyle repose davantage sur « l'impact émotionnel des scènes » que sur une « tromperie fondamentale de la structure narrative ».</p>
+<p><strong>Comparaison avec d'autres œuvres de Conan Doyle</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Le Chien des Baskerville</th>
+<th>La Bande Mouchetée</th>
+<th>Un Scandale en Bohème</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mystère central</td>
+<td>whodunit + howdunit</td>
+<td>howdunit</td>
+<td>Enigme de l'objet caché</td>
+</tr>
+<tr>
+<td>Point de vue narratif</td>
+<td>Double（lettres de Watson + mémoires）</td>
+<td>Watson observateur</td>
+<td>Watson observateur</td>
+</tr>
+<tr>
+<td>Technique de dissimulation</td>
+<td>Légende surnaturelle</td>
+<td>Accident banal</td>
+<td>Mépris de l'intelligence féminine</td>
+</tr>
+<tr>
+<td>Déductibilité</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Observations approfondies sur la technique d'écriture</strong></p>
+<p>La conception de Stapleton comme antagoniste illustre un thème récurrent, mais souvent sous-estimé, du roman policier victorien : <strong>la corruption de l'éducateur</strong>. Il est directeur d'école — un homme chargé d'instruire et de façonner de jeunes esprits ; ce qu'il collectionne n'est pas des armes, mais des spécimens naturels ; son apparence est celle de la raison scientifique. Cette figure de « la barbarie sous les dehors de la civilisation » revêt, sous la plume de Doyle, une évidente portée satirique sociale — les individus les plus dangereux sont souvent ceux dont l'apparence inspire le plus grande confiance.</p>
+<p>Le rôle de la lande (Dartmoor) mérite également qu'on s'y arrête : elle n'est pas simplement un décor, mais une présence active. L'impénétrabilité du Grand Marécage de Grimpen, les vestiges des huttes préhistoriques en pierre, l'existence animalisée du fugitif — Doyle fait de la lande l'antithèse de la civilisation, et tous les secrets y sont enfouis à l'exact opposé du monde civilisé. Le sort final de Stapleton (disparaître dans le marécage sans jamais être retrouvé) tient d'une justice presque poétique : la nature dans son chaos engloutit l'homme qui avait tenté de se servir des forces naturelles pour commettre le mal.</p>
+    <a href="../index.html" class="back-link">← Retour à l'accueil</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Salle de Dissection Policière</p>
+    <p>Cinq auteurs · quatre-vingt-huit œuvres · 135 ans d'évolution de la difficulté du roman policier.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

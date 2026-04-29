@@ -1,10 +1,10 @@
-📖 【推理解剖室】福爾摩斯回憶錄（The Memoirs of Sherlock Holmes）
+📖 【推理解剖室】巴斯克維爾的獵犬（The Hound of the Baskervilles）
 ✍️ 柯南·道爾（Arthur Conan Doyle） · 
 
-推理難度 ★★★☆☆ | 迷霧等級 ★★★☆☆
+推理難度 ★★★★☆ | 迷霧等級 ★★★★☆
 
-《福爾摩斯回憶錄》是第二本正典短篇集，收錄十二篇故事，記錄福爾摩斯最精彩的中期辦案生涯。全集涵蓋多種謎題類型：賽馬場上的馬匹失蹤與教練員謀殺（〈銀星〉）、郵包中的兩隻人耳（〈紙板盒〉）、家族古老儀式背後的王冠秘密與謀殺（〈馬斯格雷夫禮儀〉）、偽造盜竊案掩護真兇身分（〈雷蓋特謎案〉），直到最後一篇以福爾摩斯與犯罪大師摩里亞蒂教授同墜瀑布告終——道爾試圖永久終結這個角色的最戲劇性出口。 這批故事代表道爾推理技藝的成熟期：線索布局更精準，反轉更有力，而道爾所倡導的「演繹邏輯」已成為每篇故事的核心驅動力，而非裝飾。 ---
+德文郡荒原上，巴斯克維爾家族世代流傳著一個古老詛咒：家族祖先雨果·巴斯克維爾（Hugo Baskerville）因惡行招來地獄惡犬，從此後代子孫凡觸犯荒原禁忌者，必遭惡犬咬喉而死。 爵士查爾斯·巴斯克維爾（Sir Charles Baskerville）某夜在莊園的紫衫小徑上暴斃，死狀駭人——表情扭曲，身上毫無傷痕，但腳印顯示他生前曾瘋狂奔逃。家庭醫生莫提默（Dr. Mortimer）在屍體附近發現一隻巨大獵犬的足印，卻因恐懼引發恐慌而隱瞞於驗屍庭前。他來到倫敦求助福爾摩斯，同時迎接查爾斯的繼承人——年輕的亨利爵士（Sir Henry Baskerville）從加拿大返英。 亨利爵士甫抵倫敦即…
 
-🔗 完整分析 → https://murderresearch.github.io/Detective-Analysis/articles/the-memoirs-of-sherlock-holmes.html
+🔗 完整分析 → https://murderresearch.github.io/Detective-Analysis/articles/the-hound-of-the-baskervilles.html
 
 #推理小說 #推理解剖室 #柯南道爾

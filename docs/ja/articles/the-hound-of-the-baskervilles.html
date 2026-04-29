@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>バスカヴィル家の犬（The Hound of the Baskervilles） — 推理解剖室</title>
+<meta name="description" content="デヴォンシャーの荒野に、バスカヴィル家には代々伝わる古い呪いがあった。一族の祖先ヒューゴー・バスカヴィル（Hugo Baskerville）が悪行の報いとして地獄の猟犬を呼び寄せ、以来、荒野の禁忌を犯した者は必ず喉を噛み切られて死ぬというものだった。 チャールズ・バスカヴィル卿（Sir Charles Baskervi">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-hound-of-the-baskervilles.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-hound-of-the-baskervilles.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-hound-of-the-baskervilles.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-hound-of-the-baskervilles.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-hound-of-the-baskervilles.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-hound-of-the-baskervilles.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-hound-of-the-baskervilles.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-hound-of-the-baskervilles.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif JP', serif;
+  --font-sans: 'Noto Sans JP', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">推理解剖室</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">ホーム</a>
+        <a href="../index.html#latest">最新</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="言語" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 日本語</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-hound-of-the-baskervilles.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-hound-of-the-baskervilles.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-hound-of-the-baskervilles.html">English</a>
+      <a class="lang-item active" data-lang="ja" href="/Detective-Analysis/ja/articles/the-hound-of-the-baskervilles.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/the-hound-of-the-baskervilles.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/the-hound-of-the-baskervilles.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/the-hound-of-the-baskervilles.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/the-hound-of-the-baskervilles.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">アーサー・コナン・ドイル · </div>
+    <h1>バスカヴィル家の犬（The Hound of the Baskervilles）</h1>
+    <div class="subtitle">アーサー・コナン・ドイル（Arthur Conan Doyle） · 長編小説</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">推理難易度</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">霧の濃度</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="the-hound-of-the-baskervilles">バスカヴィル家の犬（The Hound of the Baskervilles）— 推理分析</h1>
+<h2 id="_1">基本情報</h2>
+<ul>
+<li>著者：アーサー・コナン・ドイル（Arthur Conan Doyle）</li>
+<li>発表年：1902年（1901–1902年『ストランド・マガジン』連載）</li>
+<li>ジャンル：長編小説</li>
+<li>探偵：シャーロック・ホームズ（Sherlock Holmes）</li>
+<li>核心謎題の種類：whodunit + howdunit + whydunit</li>
+</ul>
+<hr>
+<h2 id="_2">推理難易度総評</h2>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星評価</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難易度（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>平均収束点は約82%――犯人の身元を確定させる決定的な手がかりは第13章（全体の約82%）になって初めて浮かび上がる。犯行手段は第14章（約92%）で完全に確認され、三つの真相の主軸を平均すると収束点は約82%となる</td>
+</tr>
+<tr>
+<td>霧の濃度（Fog Rating）</td>
+<td>⭐⭐⭐⭐</td>
+<td>バリモアの深夜の行動、脱獄犯セルデンの脅威、超自然的な猟犬伝説、ホームズの不在を装う偽装など大量の赤いニシン（フォールス・クルー）が存在する。作者はワトスンの一人称視点を巧みに利用し、決定的な情報を組織的に遅延・隠蔽している</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_3">あらすじ</h2>
+<p>デヴォンシャーの荒野に、バスカヴィル家には代々伝わる古い呪いがあった。一族の祖先ヒューゴー・バスカヴィル（Hugo Baskerville）が悪行の報いとして地獄の猟犬を呼び寄せ、以来、荒野の禁忌を犯した者は必ず喉を噛み切られて死ぬというものだった。</p>
+<p>チャールズ・バスカヴィル卿（Sir Charles Baskerville）がある夜、屋敷のイチイ並木の小径で変死する。その死に様は凄惨だった――顔は苦悶に歪み、身体には傷一つないにもかかわらず、足跡は死の直前に狂ったように走り逃げたことを示していた。主治医モーティマー博士（Dr. Mortimer）は死体の近くに巨大な猟犬の足跡を発見したが、恐怖による混乱を避けようと検死審問の場では口をつぐんだ。彼はロンドンへ上り、ホームズに助けを求めるとともに、チャールズの相続人である若きヘンリー卿（Sir Henry Baskerville）のカナダからの帰国を出迎える。</p>
+<p>ヘンリー卿はロンドンに着いた途端、奇妙な出来事に見舞われる――新聞の活字を切り貼りして作られた脅迫状、ホテルの部屋から消えた新品の靴、黒髭の謎の男による尾行。ホームズはワトスンにヘンリー卿の護衛を命じてバスカヴィル荘園へ向かわせる。自身は「ロンドンに残って事件を処理する」と偽りながら、実際には荒野の古代石造りの小屋に秘密裏に潜み、内偵を進めていた。</p>
+<p>荒野では次々と容疑者が浮かび上がる。忠実でありながら不可解な行動をとる執事バリモア（Barrymore）夫妻は深夜にろうそくの灯りを外に向けて信号を送り、博物学者スタプルトン（Stapleton）は博学で冷静沈着、荒野を知り尽くしているが、ヘンリー卿が「妹」のベリル（Beryl）に求愛することに異常なほど激しく反発する。悪名高い殺人犯セルデンが荒野を逃げ回り、風変わりな富豪フランクランド（Frankland）は望遠鏡で昼夜を問わず荒野を監視していた。</p>
+<p>調査が深まるにつれ、真相は層をなして剥がれていく。スタプルトンは自称する平凡な博物学者ではなく、ベリルも彼の妹ではなかった。彼は燐粉を塗りつけ、暗夜に鬼火のように燃え上がるよう細工した巨大な猟犬を、グリムペン大沼の奥深くに飼い潜めていた。チャールズ卿から盗んだ靴で臭いを嗅ぎ覚えさせ、まず心臓の弱いチャールズを恐怖で死に至らしめ、次いでヘンリー卿を狙っていたのだ。ホームズは最後の瞬間に包囲網を張り、三発の銃弾で猟犬を仕留める。スタプルトンはグリムペン大沼へと逃げ込み、二度と姿を現さなかった――おそらく沼底に沈んだのだろう。</p>
+<hr>
+<h2 id="_4">真相の解剖</h2>
+<h3 id="whodunit">真相その一：犯人の真の正体（whodunit）</h3>
+<ul>
+<li><strong>手がかりの収束点：約82%</strong></li>
+<li>答え：スタプルトンの正体はロジャー・バスカヴィル（Rodger Baskerville）――チャールズ卿の弟ロジャーの庶子であり、バスカヴィル家の隠れた相続人である。彼はスタプルトンと名乗り、妻のベリルを妹として連れ、二年にわたって荒野に潜伏した。目的は自分より前に立つ相続人を全員排除し、百万ポンド近い遺産を独り占めにすることだった。</li>
+</ul>
+<h4 id="_5">決定的な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場箇所（章／割合）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>スタプルトンはイングランド北部で学校を経営していたが疫病で失敗し、チャールズ卿が屋敷に戻って間もなく荒野に移住してきたと語る</td>
+<td>第7章／約37%</td>
+<td>彼の到来時期とチャールズの帰郷が見事に一致しており、計画性を示唆する。後に学校の話が偽りであることが判明する</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ロジャー・バスカヴィル（チャールズの弟）は1876年に黄熱病で死亡したとされているが、記述は曖昧で実際に確認した者がいない</td>
+<td>第4章／約28%</td>
+<td>一族の相続系統に埋められていない空白が残る。スタプルトンはまさにその空白から生まれた人物である</td>
+</tr>
+<tr>
+<td>3</td>
+<td>ホームズはスタプルトンが語る教職歴を調べ上げ、「ヴァンドゥルー」の学校の記録から彼が別の姓名で学校を経営し、妻とともに姿を消した事実を確認する</td>
+<td>第12章／約78%</td>
+<td>スタプルトンの偽造された身元を確認する<strong>最初の決定的手がかり</strong></td>
+</tr>
+<tr>
+<td>4</td>
+<td>大広間に掛かる古い肖像画――ホームズが帽子と長い髪を隠すと、「スタプルトンの顔」が17世紀のキャンバスから浮かび上がる</td>
+<td>第13章／約82%</td>
+<td><strong>最後の決定的手がかり</strong>：スタプルトンは老ヒューゴー・バスカヴィルの血を引く子孫であり、その容姿が彼の真の正体を視覚的に証明する</td>
+</tr>
+<tr>
+<td>5</td>
+<td>ホームズがローラ・ライオンズ夫人（Mrs. Lyons）に「ヴァンドゥルー夫妻」の写真を示すと、彼女はスタプルトンとベリルと確認する</td>
+<td>第13章／約86%</td>
+<td>外部からの裏付けとなり、スタプルトンの二重の欺瞞――ローラへの婚姻上の嘘と、世間に対する身元の偽りを最終的に確定させる</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_6">補助的な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場箇所（章／割合）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>スタプルトンはグリムペン大沼を熟知しており、その中を通り抜けられるのは自分だけだと自称する</td>
+<td>第7章／約37%</td>
+<td>猟犬がまさに沼の中に隠されていることを考えれば、沼の奥深くまで踏み込む重大な動機の存在を示唆している</td>
+</tr>
+<tr>
+<td>2</td>
+<td>スタプルトンは初対面の場で既にモーティマーとワトスンの関係を知っており、荒野の隣人たちの身上調査を事前に済ませていることがわかる</td>
+<td>第7章／約36%</td>
+<td>「新参者」の博物学者が、他人の人間関係をこれほど詳しく把握しているのは不自然である</td>
+</tr>
+<tr>
+<td>3</td>
+<td>スタプルトンはヘンリー卿に対して矛盾した行動をとる――一度は「妹」とヘンリー卿を近づけようとしながら、突然激昂して求愛を妨害する</td>
+<td>第9章／約54%</td>
+<td>この矛盾は「妻」であってこそ説明がつく。彼はベリルをヘンリー卿の監視役として利用しており、本当に去ることは望んでいなかったのだ</td>
+</tr>
+<tr>
+<td>4</td>
+<td>スタプルトンはロンドンでモーティマーとヘンリー卿を尾行する際に黒い付け髭で変装し、ホームズの名を使って御者を欺く</td>
+<td>第5章／約31%</td>
+<td>高度な知性と尾行対策の能力――普通の博物学者には備わらないものだ</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_7">偽の手がかり（レッド・ヘリング）</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場箇所（章／割合）</th>
+<th>誘導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>バリモアが深夜にろうそくを持って荒野を見つめ、妻が夜半に忍び泣きをする</td>
+<td>第6〜9章／約38〜57%</td>
+<td>読者に執事夫妻が殺人あるいは何らかの陰謀に関与しているのではないかと疑わせる。実際には、脱獄犯セルデン（バリモア夫人の弟）にこっそり食料を届けていただけだった</td>
+</tr>
+<tr>
+<td>2</td>
+<td>脱獄犯セルデン――「ノッティング・ヒルの殺人犯」が荒野をうろつき、凶暴な性格の持ち主とされる</td>
+<td>第6〜12章／約33〜76%</td>
+<td>目立つ脅威的な人物の存在が、より目立たない首謀者への注目を逸らす。また彼の存在はスタプルトンにも利用される（セルデンがヘンリー卿のお古の服を着ていたため、猟犬の意図せぬ犠牲者となった）</td>
+</tr>
+<tr>
+<td>3</td>
+<td>荒野に伝わる「地獄の猟犬」の超自然的な伝説</td>
+<td>全編を通じて</td>
+<td>コナン・ドイルはモーティマー、農民、地方の伝承を通じて、「もしかしたら本当に超自然的な力があるのではないか」と読者に迷わせる叙述の霧幕を組織的に張り巡らせている</td>
+</tr>
+<tr>
+<td>4</td>
+<td>フランクランド老人の望遠鏡――彼は自分が脱獄犯への食料運搬者を追跡していると思い込んでいる</td>
+<td>第11章／約70%</td>
+<td>実際に彼が観察していたのはホームズの助手カートライトであり、セルデンに食料を届ける子どもではなかった。この場面は読者の注意を「脱獄犯の方向」へ巧みに引き寄せる</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="whodunit_1">真相その二：ベリルの真の正体（whodunitの内層）</h3>
+<ul>
+<li><strong>手がかりの収束点：約78%</strong></li>
+<li>答え：「スタプルトンの妹」ベリルは実際には彼の妻である。スタプルトンは妻を妹として偽装することで、彼女が「自由な立場」でヘンリー卿に近づき、操作の道具として機能できるようにした。その一方、自分はローラ・ライオンズの感情につけ込み、結婚すると嘘をついて操っていた。</li>
+</ul>
+<h4 id="_8">決定的な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場箇所（章／割合）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>ベリルは初めてワトスンに会った際、「すぐにロンドンに帰って」と切迫した様子で訴える――その切迫ぶりは「親切な隣人の善意の警告」をはるかに超えていた</td>
+<td>第7章／約38%</td>
+<td>本当の妹なら初対面でこれほど感情的な訴えはしない。彼女は「兄」が人を殺していることを知っており、妻としての恐怖から叫んでいたのだ</td>
+</tr>
+<tr>
+<td>2</td>
+<td>スタプルトンがヘンリー卿のベリルへの求愛を阻止する際、その激怒ぶりにヘンリー卿は当惑する――「あの人はどこかおかしいのか？」</td>
+<td>第9章／約55%</td>
+<td>兄が妹を守ろうとするにも限度がある。制御を失った嫉妬こそが夫の反応に合致する</td>
+</tr>
+<tr>
+<td>3</td>
+<td>ホームズがヴァンドゥルー学校を調査した際、「ヴァンドゥルー氏と妻」が共に姿を消した事実を確認する</td>
+<td>第12章／約78%</td>
+<td><strong>決定的な暴露</strong>：ホームズはワトスンに「スタプルトンの妹と呼ばれていた女性は、実は彼の妻だ」と直接告げる</td>
+</tr>
+<tr>
+<td>4</td>
+<td>結末でベリルがスタプルトンの部屋の柱に縛り付けられており、首に鞭の跡がある</td>
+<td>第14章／約93%</td>
+<td>これは家庭内暴力であり、兄妹の関係ではあり得ない。謀殺計画への加担を拒否した妻に対する夫の怒りによる制裁である</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_9">補助的な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場箇所（章／割合）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>スタプルトンはローラ・ライオンズと秘密の親密な関係を保ち、結婚を約束してチャールズ卿を誘い出す手紙を書かせた</td>
+<td>第12章／約78%</td>
+<td>「妹のいる」独身男性が別の女性と婚約同然の関係を持つことは辛うじて説明がつくが、すでに妻がいるとすれば、二人の女性に同時に婚姻詐欺を働いていることになり、その謀略の全体像がより完結する</td>
+</tr>
+<tr>
+<td>2</td>
+<td>モーティマーはワトスンに、ベリルは「魅力的な若い女性」であり、スタプルトンが一緒に荒野に住んでいると話した</td>
+<td>第3章／約19%</td>
+<td>野心的な男性が美しい女性を伴って人里離れた荒野に暮らすという状況は、当時の社会規範からすれば兄妹よりも夫婦の方がはるかに自然だ</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_10">偽の手がかり（レッド・ヘリング）</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場箇所（章／割合）</th>
+<th>誘導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>スタプルトンは初対面でベリルを「Beryl」と呼び、ベリルは彼を「Jack」と呼ぶ――ごく自然な家族的な呼び方</td>
+<td>第7章／約38%</td>
+<td>日常的な呼び方（「ミスター／ミス」でなく名前）によって「兄妹」関係の自然さを演出し、読者に疑念を抱かせない</td>
+</tr>
+<tr>
+<td>2</td>
+<td>モーティマーをはじめ複数の隣人が紹介する際に「スタプルトン氏とその妹さん」と呼んでおり、地域社会全体で誰一人疑わない</td>
+<td>各所／約19〜50%</td>
+<td>コミュニティ全体の共通認識が最も強い認識論的障壁を形成する――「皆がそう言っているのだから間違いない」という心理的慣性である</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="howdunit">真相その三：犯行手段（howdunit）</h3>
+<ul>
+<li><strong>手がかりの収束点：約88%</strong></li>
+<li>答え：スタプルトンは巨大な猟犬（ブラッドハウンドとマスティフの雑種）を飼い、グリムペン大沼の奥深くに隠していた。ヘンリー卿のホテルから靴を盗んで臭いを猟犬に嗅ぎ覚えさせ、ローラ・ライオンズを使ってチャールズ卿を深夜にイチイ並木の脇門で待たせ、燐粉を塗りつけた猟犬を放った。チャールズは心臓発作を起こし、逃げ惑いながら絶命した。後にセルデンがヘンリー卿のお古の服を着ていたため、猟犬の意図せぬ犠牲者となった。最終的にヘンリー卿が単独で荒野を歩くよう仕組まれたところで、ホームズが最後の瞬間に猟犬を撃ち殺した。</li>
+</ul>
+<h4 id="_11">決定的な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場箇所（章／割合）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>モーティマーはチャールズの遺体の近くで巨大な猟犬の足跡を発見したが、検死審問では黙っていた</td>
+<td>第2〜3章／約15%</td>
+<td><strong>最も早く登場する決定的手がかり</strong>：事件が実在する猟犬に関係しており、単純な心臓発作ではないことを確定させる</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ヘンリー卿の新品の靴がロンドンのホテルで盗まれる――その後返却されるが、今度はお古の靴が盗まれる</td>
+<td>第4〜5章／約26〜30%</td>
+<td>新品の靴一足では役に立たない。臭いが染みついていないからだ。お古の靴にはヘンリー卿の確かな臭いがある――靴を盗んだ者に必要なのは臭いの標識、つまり「猟犬に認識させる嗅覚のターゲット」なのだ</td>
+</tr>
+<tr>
+<td>3</td>
+<td>荒野に響く遠吠え――スタプルトンは最初「沼の音」や「サンカノゴイの鳴き声」だと説明する</td>
+<td>第7章／約37%</td>
+<td>彼があっさりと説明し（さらに積極的に「合理的な解釈」を提供しようとさえする）のは、それが何の音かを知っているからだ。無実の人間は普通「わからない」と言うだけで、複数の解消案を率先して提示はしない</td>
+</tr>
+<tr>
+<td>4</td>
+<td>スタプルトンはグリムペン大沼を通り抜けられる唯一の人物であり、彼の農場の脇には錠のかかった外小屋がある</td>
+<td>第7章／約37%＋第14章／約91%</td>
+<td>前者は猟犬の隠し場所を示唆し、後者ではワトスン自身がスタプルトンの深夜の外小屋への出入りを目撃し、中から「不気味なざわめき」が聞こえるのを聞く</td>
+</tr>
+<tr>
+<td>5</td>
+<td>ローラ・ライオンズは、チャールズ卿を待ち合わせに呼び出したあの手紙がスタプルトンに「口述させられた」ものだったと告白する――時刻と場所は彼が設定した</td>
+<td>第13章／約85%</td>
+<td>スタプルトンがチャールズの死んだ夜の場面を能動的に演出したことを確定させる――偶然ではなく、計画だった</td>
+</tr>
+<tr>
+<td>6</td>
+<td>猟犬が撃ち殺された後、ワトスンが手でその鼻口を触れると指が蛍光を発し、特殊な臭いがした</td>
+<td>第14章／約92%</td>
+<td>燐粉の確認。「炎の地獄犬」という超自然的外見の正体を明かす――本質は化学的な偽装だった</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_12">補助的な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場箇所（章／割合）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>脇門を過ぎたあたりからチャールズの足跡が「つま先立ち」になる。ホームズは彼が散歩ではなく全力疾走していたと正しく判断する</td>
+<td>第3章／約18%</td>
+<td>死の直前の最後の行動――心臓病患者がこれほど激しく走ったのは、死に物狂いで逃げなければならない何かを目撃したからだ</td>
+</tr>
+<tr>
+<td>2</td>
+<td>チャールズは脇門で「十分以上」待っていた（葉巻の灰が二度落ちていた）――偶然立ち止まったのではなく、誰かを待っていた</td>
+<td>第3章／約17%</td>
+<td>ホームズはここから、チャールズには約束があったと推論し、誰かが意図的に彼をその場所に誘い出したことを示唆する</td>
+</tr>
+<tr>
+<td>3</td>
+<td>セルデンがヘンリー卿のお古の服を着たまま猟犬に追われ、荒野で死ぬ――猟犬が臭いで追跡することと、実在することを確認する</td>
+<td>第12章／約76%</td>
+<td>猟犬の存在を間接的に検証し、靴の盗難が嗅覚的な連結を作るためだったことを裏付ける</td>
+</tr>
+<tr>
+<td>4</td>
+<td>ホームズはヘンリー卿に特定の道を単独で帰るよう指示し、事前に待ち伏せを用意する――猟犬が必ず現れると確信していた</td>
+<td>第13〜14章／約87〜90%</td>
+<td>この時点でホームズはhowdunitを完全に把握しており、それを逆用した罠として設計している</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_13">偽の手がかり（レッド・ヘリング）</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場箇所（章／割合）</th>
+<th>誘導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>チャールズの死は検死審問で「自然死（心不全）」と裁定された</td>
+<td>第2章／約13%</td>
+<td>公式裁定が「事件なし」という法律上の外観を与え、読者も登場人物も殺人と主張しにくくなる</td>
+</tr>
+<tr>
+<td>2</td>
+<td>荒野での超自然的な目撃報告の数々（農民、馬丁などが「光を放つ地獄の猟犬」を見た）</td>
+<td>第3章以降／約18%〜</td>
+<td>ヴィクトリア朝ゴシック文学の伝統に親しんだ読者を「超自然対理性」の間で迷わせ、真実の仕組みへの疑念を遅らせる</td>
+</tr>
+<tr>
+<td>3</td>
+<td>荒野に現れる孤独な人影（後にホームズ本人と判明）</td>
+<td>第9章／約55%</td>
+<td>ワトスンはこれを別の謎あるいは潜在的な脅威として捉え、読者も同様に本筋から引き離される</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_14">推理経路の再構成</h2>
+<p><strong>第一の経路：犯人は誰か？</strong></p>
+<p>最初の疑問は第4章（約28%）に生まれる。モーティマーがロジャー・バスカヴィルは「中央アメリカで死んだ」と述べるが、その語り口は曖昧で誰も実際に確認していない。注意深い読者はこの時点で「一族の相続系統に空白がある」と心の中に書き留めておくべきだろう。</p>
+<p>第7章（約37%）でスタプルトンが登場する。チャールズの帰郷後ほどなく「偶然」引っ越してきた彼は、二年しか住んでいないはずなのに荒野の知識が異様に深く、モーティマーやワトスンの人間関係まで詳しく把握している。「なぜこの人物はすべてを知っているのか」と問いを立てる読者は、この時点で既に彼への疑念を抱き始めているはずだ。</p>
+<p>第9章（約55%）は重要な節目となる。スタプルトンのヘンリー卿への激怒は周囲の全員を当惑させる。本当に妹の兄であれば、その行動はあまりに異常だ。「何らかの私的な関係を隠しているのではないか」という方向で考察を進めれば、真相に近づける。</p>
+<p>第12章（約78%）でホームズは石小屋でワトスンに「ベリルは彼の妻であって妹ではない、また彼はかつてヴァンドゥルーという名だった」と明かす。これがスタプルトンの正体を追う手がかりの収束点だ。第13章（約82%）の肖像画の場面が最終的な確認となる――視覚的な認識がすべてを決定する。</p>
+<p><strong>第二の経路：犯行手段は？</strong></p>
+<p>靴の盗難という謎（第4〜5章、約26〜30%）は全書で最も早く登場するhowdunitの手がかりだが、その意味するところは後になって初めて明確になる。靴一足の用途は限られているが、複数の靴に染みついた臭いは追跡に使える――この時点で「なぜ誰かが靴の臭いを必要とするのか」と問いを立てれば、荒野に響く遠吠え（第7〜9章、約37〜55%）と合わせて次の結論を導き出せるかもしれない。<strong>誰かが実際の猟犬を使って特定の臭いのターゲットを追跡している</strong>、と。</p>
+<p>外小屋のざわめき（第14章、約91%）が最後のピースとなる。燐粉の暴露（約92%）が「光を放つ地獄の猟犬」という謎の最後の幕を下ろす。</p>
+<p><strong>第三の経路：最も発見が難しい細部</strong></p>
+<p>ローラ・ライオンズの役割（第10〜13章）は、本書で最も深く隠された一本の糸だ。彼女の存在は、スタプルトンが妻を操っているだけでなく、別の女性にも婚姻上の嘘をついていることを明かす。二人の女性が同時に欺かれているというこの構造は、スタプルトンの「すべては道具、感情はすべて嘘」という本質を鮮明に示している――そしてこれこそが、この事件を推理文学史上最も戦慄すべき構成要素の一つたらしめている。</p>
+<hr>
+<h2 id="_15">補足解説</h2>
+<p><strong>ホームズ・シリーズにおける『バスカヴィル家の犬』の独自の位置</strong></p>
+<p>コナン・ドイルは『最後の事件』（1893年）でホームズを「殺し」、読者の激しい怒りを買った。本作は「ライヘンバッハの滝以前に起きた出来事」という歴史的回想の形式を取り、八年の沈黙を経てホームズを復活させた（1901年連載）。ドイルがこの作品で読者の帰還を迎えたのは、ビジネスとしても極めて賢明な判断だった――『バスカヴィル家の犬』はゴシック・ホラーであると同時に古典的な推理小説であり、二種類の読者の期待を同時に満たしたからだ。</p>
+<p><strong>構成設計の巧みさ</strong></p>
+<p>本書最大の叙述的奇策は、直接的な語りの代わりに<strong>ワトスンの手紙と日記</strong>を用いたことだ――読者が目にするすべては、ワトスンの「リアルタイムの記録」であり、事後にまとめた回想ではない。この設計には二重の効果がある。
+1. 臨場感の創出（読者はワトスンと同時進行で困惑する）
+2. ホームズがすでに荒野に来ていたという事実を合法的に隠す（ホームズの行動はワトスンの視野の外にある）</p>
+<p>ホームズが荒野の石小屋に姿を現す瞬間（第11章）は、推理文学史上最も有名な「作者が読者に対して情報操作を行った」場面の一つだ。厳密に言えば、ドイルは「嘘」をついたわけではない――ホームズがワトスンの手紙の内容を知りながら沈黙を保ち、ワトスンもホームズの居場所を知らなかっただけだ。</p>
+<p><strong>霧の濃度評価の詳細</strong></p>
+<p>四つ星（五つ星でない）の理由：本書の偽の手がかりは多いものの、ドイルは「信頼できない語り手」や「メタ構造的欺き」は使っておらず、すべての手がかりは事後的に原文の中から見つけ出すことができる。クリスティの五つ星作品（『オリエント急行の殺人』や『そして誰もいなくなった』など）と比べると、ドイルの誤誘導は「叙述構造の根本的欺き」よりも「場面の感情的な衝撃」に依存している部分が大きい。</p>
+<p><strong>コナン・ドイルの他作品との比較</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>バスカヴィル家の犬</th>
+<th>まだらの紐</th>
+<th>ボヘミアの醜聞</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>核心の謎</td>
+<td>whodunit + howdunit</td>
+<td>howdunit</td>
+<td>隠匿物の謎</td>
+</tr>
+<tr>
+<td>叙述視点</td>
+<td>二重構造（ワトスンの手紙＋回想）</td>
+<td>ワトスンの傍観</td>
+<td>ワトスンの傍観</td>
+</tr>
+<tr>
+<td>偽装の手法</td>
+<td>超自然的伝説</td>
+<td>普通の事故</td>
+<td>女性の知性への侮蔑</td>
+</tr>
+<tr>
+<td>推理難易度</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+</tr>
+</tbody>
+</table>
+<p><strong>文章技術の深層観察</strong></p>
+<p>悪役としてのスタプルトンの造形は、ヴィクトリア朝探偵小説においてよく見られながら過小評価されがちなテーマ――<strong>教育者の腐敗</strong>――を体現している。彼は学校の校長であり、若い心を教え育てる者だ。彼が飼っているのは武器ではなく、自然の標本だ。その外見は科学的合理性そのものだ。「文明の仮面の下に潜む野蛮」というこのモチーフには、ドイルの筆による明確な社会的風刺の意味合いがある――最も危険な悪人とは、しばしば最も安心感を与える外見の者なのだ。</p>
+<p>荒野（ダートムア）も書中で特筆に値する役割を担っている。単なる舞台設定を超え、積極的な存在として機能しているのだ。グリムペン大沼の不可知性、先史時代の人間が残した石小屋の遺跡、野獣化した脱獄犯の存在――ドイルは荒野を文明の対極として描き出し、すべての秘密を文明の反対側に隠した。スタプルトンの最後（沼に消えて永遠に見つからない）は、詩的な正義とも言うべきものだ。自然の力を悪のために利用しようとした者を、自然の混沌が呑み込んだのである。</p>
+    <a href="../index.html" class="back-link">← ホームに戻る</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">推理解剖室</p>
+    <p>五人の作家・八十八の作品・135年にわたる推理文学の難易度の進化。</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

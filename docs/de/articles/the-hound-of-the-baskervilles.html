@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Der Hund der Baskervilles（The Hound of the Baskervilles）— Deduzierbarkeitsanalyse — Detektivanalyse</title>
+<meta name="description" content="Auf dem Moor von Devon kursiert unter der Familie Baskerville seit Generationen ein uralter Fluch: Der Vorfahre Hugo Baskerville zog durch sein Laster einen Höl">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-hound-of-the-baskervilles.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-hound-of-the-baskervilles.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-hound-of-the-baskervilles.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-hound-of-the-baskervilles.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-hound-of-the-baskervilles.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-hound-of-the-baskervilles.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-hound-of-the-baskervilles.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-hound-of-the-baskervilles.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Detektivanalyse</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Start</a>
+        <a href="../index.html#latest">Neueste</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Sprache" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 Deutsch</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-hound-of-the-baskervilles.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-hound-of-the-baskervilles.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-hound-of-the-baskervilles.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/the-hound-of-the-baskervilles.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/the-hound-of-the-baskervilles.html">한국어</a>
+      <a class="lang-item active" data-lang="de" href="/Detective-Analysis/de/articles/the-hound-of-the-baskervilles.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/the-hound-of-the-baskervilles.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/the-hound-of-the-baskervilles.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">Arthur Conan Doyle · </div>
+    <h1>Der Hund der Baskervilles（The Hound of the Baskervilles）— Deduzierbarkeitsanalyse</h1>
+    <div class="subtitle">Arthur Conan Doyle（柯南·道爾） · Roman</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Deduzierbarkeit</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Nebelgrad</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="der-hund-der-baskervillesthe-hound-of-the-baskervilles-deduzierbarkeitsanalyse">Der Hund der Baskervilles（The Hound of the Baskervilles）— Deduzierbarkeitsanalyse</h1>
+<h2 id="grundlegende-informationen">Grundlegende Informationen</h2>
+<ul>
+<li>Autor：Arthur Conan Doyle（柯南·道爾）</li>
+<li>Erscheinungsjahr：1902（Serienveröffentlichung 1901–1902 im Strand Magazine）</li>
+<li>Typ：Roman</li>
+<li>Detektiv：Sherlock Holmes（夏洛克·福爾摩斯）</li>
+<li>Kernrätseltyp：whodunit + howdunit + whydunit</li>
+</ul>
+<hr>
+<h2 id="gesamtbewertung-der-deduzierbarkeit">Gesamtbewertung der Deduzierbarkeit</h2>
+<table>
+<thead>
+<tr>
+<th>Metrik</th>
+<th>Bewertung</th>
+<th>Anmerkungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deduzierbarkeit（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>Durchschnittlicher Konvergenzpunkt ca. 82% — der entscheidende Hinweis auf die Täteridentität taucht erst in Kapitel 13（ca. 82% des Buches）auf; die Tatmethode wird vollständig erst in Kapitel 14（ca. 92%）bestätigt; der Durchschnitt aller drei Wahrheitsstränge konvergiert bei ca. 82%</td>
+</tr>
+<tr>
+<td>Nebelgrad（Fog Rating）</td>
+<td>⭐⭐⭐⭐</td>
+<td>Barrymores nächtliches Treiben, die Bedrohung durch den entflohenen Sträfling Selden, die übernatürliche Hündin-Legende, Holmes' vorgetäuschte Abwesenheit und viele weitere rote Heringe; der Autor nutzt Watsons Ich-Perspektive systematisch, um Schlüsselinformationen zu verzögern und zu verbergen</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="zusammenfassung">Zusammenfassung</h2>
+<p>Auf dem Moor von Devon kursiert unter der Familie Baskerville seit Generationen ein uralter Fluch: Der Vorfahre Hugo Baskerville zog durch sein Laster einen Höllenhund auf sich, und seitdem sollen alle Nachkommen, die das Verbot des Moores verletzen, von dem Hund an der Kehle gepackt und getötet werden.</p>
+<p>Sir Charles Baskerville stirbt eines Nachts auf dem Eibenallee-Pfad seines Gutshauses unter grauenerregenden Umständen — sein Gesicht ist verzerrt, am Körper finden sich keinerlei Verletzungen, doch seine Fußspuren zeigen, dass er kurz zuvor in wilder Panik geflüchtet ist. Sein Hausarzt Dr. Mortimer entdeckt in der Nähe der Leiche den Abdruck einer riesigen Hundepfote, verschweigt diesen Fund jedoch vor dem Leichenbeschauungsgericht, da er Panik auslösen könnte. Er reist nach London, um Holmes um Hilfe zu bitten, und wartet gleichzeitig auf die Ankunft von Charles' Erben — den jungen Sir Henry Baskerville, der aus Kanada zurückkehrt.</p>
+<p>Kaum in London eingetroffen, erlebt Sir Henry eine Reihe merkwürdiger Vorfälle: einen aus Zeitungsausschnitten zusammengeklebten Drohbrief, einen spurlos verschwundenen neuen Stiefel im Hotelzimmer und die Verfolgung durch einen geheimnisvollen Mann mit schwarzem Bart. Holmes schickt Watson als Begleiter mit Sir Henry aufs Moor — er selbst gibt vor, in London beschäftigt zu bleiben, versteckt sich aber heimlich in einem alten Steinhaus auf dem Moor und ermittelt im Verborgenen.</p>
+<p>Auf dem Moor tauchen Verdächtige einer nach dem anderen auf: das treue, aber rätselhafte Ehepaar Barrymore, das nachts mit Kerzenlicht Signale nach draußen gibt; der Naturforscher Stapleton, besonnen und gelehrt, der das Moor wie seine Westentasche kennt, aber auf Sir Henrys Werbung um seine angebliche „Schwester" Beryl mit ungewöhnlicher Heftigkeit reagiert; der berüchtigte Mörder Selden, der flüchtig über das Moor streift; und der exzentrische reiche Frankland, der Tag und Nacht mit einem Fernrohr das Moor beobachtet.</p>
+<p>Im Verlauf der Ermittlungen schält sich die Wahrheit heraus: Stapleton ist nicht der harmlose Naturforscher, der er vorgibt zu sein, und Beryl ist nicht seine Schwester. Er hält einen riesigen Jagdhund — mit Phosphor eingeschmiert, sodass er in der Nacht wie ein Irrlicht leuchtet — versteckt tief in den Grimpen-Sümpfen. Mit einem gestohlenen Schuh von Sir Henry hat er den Hund auf dessen Witterung abgerichtet; zuvor hatte er Sir Charles durch den Schreck des Hundes zu Tode erschreckt und plant nun dasselbe Schicksal für Sir Henry. Holmes legt in letzter Sekunde einen Hinterhalt und erschießt den Hund mit drei Kugeln. Stapleton flieht in Panik in den Grimpen-Sumpf und wird nie mehr gesehen — er ist zweifellos im Moor versunken.</p>
+<hr>
+<h2 id="wahrheitsanalyse">Wahrheitsanalyse</h2>
+<h3 id="wahrheit-i-die-wahre-identitat-des-taterswhodunit">Wahrheit I: Die wahre Identität des Täters（whodunit）</h3>
+<ul>
+<li><strong>Hinweis-Konvergenzpunkt: ca. 82%</strong></li>
+<li>Antwort: Stapletons wahre Identität ist Rodger Baskerville — er ist der uneheliche Sohn von Sir Charles' jüngerem Bruder Roger und damit der verborgene Erbe der Familie Baskerville. Unter dem Decknamen Stapleton hat er sich mit seiner Frau Beryl als Geschwisterpaar verkleidet und zwei Jahre lang auf dem Moor gelauert, um alle vor ihm stehenden Erben auszuschalten und beinahe eine Million Pfund Sterling Erbschaft allein einzustreichen.</li>
+</ul>
+<h4 id="schlusselhinweise">Schlüsselhinweise</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweisinhalt</th>
+<th>Fundstelle（Kapitel/Prozentanteil）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Stapleton behauptet, in Nordengland eine Schule betrieben zu haben, die wegen einer Seuche scheiterte, woraufhin er aufs Moor zog — und das kurz nachdem Sir Charles auf das Gut zurückgekehrt war</td>
+<td>Kap. 7 / ca. 37%</td>
+<td>Der Zeitpunkt seines Erscheinens fällt auffällig mit Charles' Rückkehr zusammen, was auf eine geplante Absicht hindeutet; später stellt sich heraus, dass die Schulgeschichte eine Lüge ist</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Roger Baskerville（Sir Charles' jüngerer Bruder）soll 1876 an Gelbfieber gestorben sein — die Schilderung ist jedoch vage, und niemand hat es tatsächlich bestätigt</td>
+<td>Kap. 4 / ca. 28%</td>
+<td>Hinterlässt eine nicht geschlossene Lücke in der Erbfolgekette der Familie; Stapleton schlüpft genau durch diese Lücke</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Als Stapleton von seiner Lehrertätigkeit erzählt, verfolgt Holmes die Aufzeichnungen der „Vandeleur"-Schule und bestätigt, dass er unter einem anderen Namen eine Schule betrieben hatte und dann mit seiner Frau verschwunden war</td>
+<td>Kap. 12 / ca. 78%</td>
+<td><strong>Erster entscheidender Hinweis</strong>, der Stapletons Identitätsfälschung beweist</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Das alte Porträt im Saal — Holmes verdeckt Hut und langes Haar auf dem Bild, und „Stapletons Gesicht" springt einem von der Leinwand des 17. Jahrhunderts entgegen</td>
+<td>Kap. 13 / ca. 82%</td>
+<td><strong>Letzter Schlüsselhinweis</strong>: Stapleton ist ein leiblicher Nachkomme des alten Hugo Baskerville — sein Äußeres bestätigt seine wahre Identität</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Holmes zeigt Mrs. Laura Lyons ein Foto des „Ehepaars Vandeleur"; sie erkennt Stapleton und Beryl</td>
+<td>Kap. 13 / ca. 86%</td>
+<td>Externer Beweis, der Stapletons doppelten Betrug endgültig bestätigt — die Ehelüge gegenüber Laura und die Identitätslüge gegenüber der Welt</td>
+</tr>
+</tbody>
+</table>
+<h4 id="unterstutzende-hinweise">Unterstützende Hinweise</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweisinhalt</th>
+<th>Fundstelle（Kapitel/Prozentanteil）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Stapleton kennt die Grimpen-Sümpfe wie seine Westentasche und behauptet, er sei der Einzige, der sie durchqueren kann</td>
+<td>Kap. 7 / ca. 37%</td>
+<td>Deutet auf ein gewichtiges Motiv hin, tief ins Moor vorzudringen — dort ist der Hund verborgen</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Stapleton kennt beim ersten Treffen bereits die Beziehung zwischen Mortimer und Watson, was zeigt, dass er sich über seine Nachbarn auf dem Moor gründlich informiert hat</td>
+<td>Kap. 7 / ca. 36%</td>
+<td>Ein „neu zugezogener" Naturforscher sollte das soziale Netz anderer nicht so genau kennen</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Stapleton verhält sich Sir Henry gegenüber widersprüchlich: erst vermittelt er zwischen seiner „Schwester" und Sir Henry, dann unterbindet er die Werbung plötzlich in einem Wutausbruch</td>
+<td>Kap. 9 / ca. 54%</td>
+<td>Dieser Widerspruch lässt sich nur durch die Beziehung „Ehefrau" statt „Schwester" erklären — er setzt Beryl als Beobachtungswerkzeug ein, will sie aber nicht wirklich gehen lassen</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Als Stapleton Mortimer und Sir Henry in London verfolgt, trägt er einen falschen schwarzen Bart und täuscht einen Kutscher, indem er sich als Holmes ausgibt</td>
+<td>Kap. 5 / ca. 31%</td>
+<td>Großes intellektuelles Geschick und Gegenspieler-Taktik — kein gewöhnlicher Naturforscher besäße solche Mittel</td>
+</tr>
+</tbody>
+</table>
+<h4 id="falsche-spuren">Falsche Spuren</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweisinhalt</th>
+<th>Fundstelle（Kapitel/Prozentanteil）</th>
+<th>Irreführungsrichtung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Barrymore starrt nachts mit einer Kerze aufs Moor; seine Frau weint in der Nacht</td>
+<td>Kap. 6–9 / ca. 38–57%</td>
+<td>Lässt den Leser den Haushofmeister und seine Frau unter Mordverdacht stellen oder eine Verschwörung vermuten; tatsächlich unterstützen sie heimlich den flüchtigen Sträfling Selden（Mrs. Barrymores Bruder）</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Der Sträfling Selden — der „Mörder von Notting Hill" — streift gewalttätig über das Moor</td>
+<td>Kap. 6–12 / ca. 33–76%</td>
+<td>Eine auffällig bedrohliche Figur, die die Aufmerksamkeit vom unsichtbaren Haupttäter ablenkt; seine Existenz wird auch von Stapleton genutzt（Selden trägt Sir Henrys alte Kleider und wird zum unbeabsichtigten Ersatzziel des Hundes）</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Die übernatürliche Legende des „Höllenhundes" auf dem Moor</td>
+<td>Durchgehend im gesamten Buch</td>
+<td>Doyle legt durch Mortimer, Bauern und lokale Überlieferungen systematisch einen erzählerischen Nebelschleier aus, der den Leser zwischen „übernatürliche Kräfte" und „rationale Erklärung" schwanken lässt</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Alter Franklands Fernrohr — er glaubt, den Versorger des flüchtigen Sträflings zu verfolgen</td>
+<td>Kap. 11 / ca. 70%</td>
+<td>Tatsächlich beobachtet er Holmes' Helfer Cartwright, nicht das Kind, das Selden versorgt; diese Szene lenkt den Leser erfolgreich in die „Sträflings-Richtung"</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="wahrheit-ii-beryls-wahre-identitatdie-innere-schicht-des-whodunit">Wahrheit II: Beryls wahre Identität（die innere Schicht des whodunit）</h3>
+<ul>
+<li><strong>Hinweis-Konvergenzpunkt: ca. 78%</strong></li>
+<li>Antwort: „Stapletons Schwester" Beryl ist in Wirklichkeit seine Ehefrau. Stapleton lässt seine Frau als Schwester auftreten, damit sie in dieser „freien Rolle" an Sir Henry herantreten und als Kontrollwerkzeug dienen kann; gleichzeitig täuscht er Laura Lyons und verspricht ihr die Ehe.</li>
+</ul>
+<h4 id="schlusselhinweise_1">Schlüsselhinweise</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweisinhalt</th>
+<th>Fundstelle（Kapitel/Prozentanteil）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Beryl drängt Watson beim ersten Treffen nachdrücklich, „sofort nach London zurückzukehren" — eine Dringlichkeit, die weit über eine gutgemeinte Nachbarschaftswarnung hinausgeht</td>
+<td>Kap. 7 / ca. 38%</td>
+<td>Eine echte Schwester würde beim ersten Treffen nicht solches emotionales Kapital einsetzen; sie weiß, dass „ihr Bruder" mordet, und schreit mit der Angst einer Ehefrau</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Als Stapleton Sir Henry daran hindert, Beryl den Hof zu machen, lässt sein Wutausbruch Sir Henry ratlos zurück — „Ist er ein wenig verrückt?"</td>
+<td>Kap. 9 / ca. 55%</td>
+<td>Ein Bruder, der seine Schwester schützt, hat Grenzen; unkontrollierte Eifersucht entspricht der Reaktion eines Ehemanns</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Bei der Nachforschung zur Vandeleur-Schule bestätigt Holmes, dass „Herr und Frau Vandeleur" gemeinsam verschwunden sind</td>
+<td>Kap. 12 / ca. 78%</td>
+<td><strong>Entscheidende Enthüllung</strong>: Holmes teilt Watson direkt mit: „Die Frau, die als Stapletons Schwester ausgegeben wird, ist in Wirklichkeit seine Ehefrau"</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Am Ende wird Beryl gefesselt an einen Pfosten in Stapletons Zimmer gefunden, mit Spuren von Peitschenhieben am Hals</td>
+<td>Kap. 14 / ca. 93%</td>
+<td>Das ist häusliche Gewalt, keine Geschwisterbeziehung; der Ehemann bestraft seine Frau für ihren „Verrat"（weil sie sich weigerte, weiterhin an dem Mordplan mitzuwirken）</td>
+</tr>
+</tbody>
+</table>
+<h4 id="unterstutzende-hinweise_1">Unterstützende Hinweise</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweisinhalt</th>
+<th>Fundstelle（Kapitel/Prozentanteil）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Stapleton unterhält eine heimliche Liebesbeziehung zu Laura Lyons und manipuliert sie mit einem Heiratsversprechen, damit sie einen Brief schreibt, der Sir Charles in eine Falle lockt</td>
+<td>Kap. 12 / ca. 78%</td>
+<td>Ein unverheirateter Mann mit einer „Schwester", der mit einer anderen Frau eine quasi-eheliche Beziehung entwickelt, ist noch erklärbar; wenn er jedoch bereits eine Ehefrau hat, begeht er gleichzeitig gegenüber zwei Frauen Ehebetrug — diese moralische Vollständigkeit passt besser zur Totalität seines Komplotts</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Mortimer hatte Watson erzählt, Beryl sei eine „attraktive junge Dame", und Stapleton habe sie mit auf das Moor genommen</td>
+<td>Kap. 3 / ca. 19%</td>
+<td>Ein ehrgeiziger Mann, der allein mit einer schönen Begleiterin in abgeschiedener Gegend lebt — diese Anordnung entspricht nach den gesellschaftlichen Normen der damaligen Zeit eher einem Ehepaar als Geschwistern</td>
+</tr>
+</tbody>
+</table>
+<h4 id="falsche-spuren_1">Falsche Spuren</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweisinhalt</th>
+<th>Fundstelle（Kapitel/Prozentanteil）</th>
+<th>Irreführungsrichtung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Beim ersten Treffen spricht Stapleton Beryl mit „Beryl" an, und Beryl nennt ihn „Jack" — natürliche, alltägliche Anredeformen unter Familienmitgliedern</td>
+<td>Kap. 7 / ca. 38%</td>
+<td>Durch die alltäglichen Anreden（statt förmlichem „Herr/Fräulein"）wird das „Geschwister"-Gefühl gestärkt, ohne beim Leser Verdacht zu erwecken</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Mortimer und mehrere Nachbarn stellen das Paar stets als „Herr Stapleton und seine Schwester" vor; niemand in der Gemeinde zweifelt daran</td>
+<td>An mehreren Stellen / ca. 19–50%</td>
+<td>Die kollektive Überzeugung der Gemeinschaft bildet das stärkste epistemische Hindernis — der psychologische Trägheitseffekt „Alle stellen sie so vor, also stimmt es schon"</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="wahrheit-iii-die-tatmethodehowdunit">Wahrheit III: Die Tatmethode（howdunit）</h3>
+<ul>
+<li><strong>Hinweis-Konvergenzpunkt: ca. 88%</strong></li>
+<li>Antwort: Stapleton hat einen riesigen Jagdhund gezüchtet（eine Kreuzung aus Bluthund und Mastiff）und ihn tief in den Grimpen-Sümpfen versteckt. Er stahl einen Stiefel aus Sir Henrys Hotel, damit der Hund die Witterung aufnehmen konnte; dann ließ er Laura Lyons Sir Charles dazu verleiten, nachts am Seitentor der Eibenallee zu warten, und setzte den mit Phosphor eingeriebenen Hund los. Sir Charles erlitt einen Herzanfall und starb in seiner Flucht. Später wurde Selden, weil er Sir Henrys alte Kleider trug, zum unfreiwilligen Opfer des Hundes. Am Ende wurde Sir Henry so geleitet, dass er allein über das Moor gehen sollte, und Holmes erschoss den Hund in letzter Sekunde.</li>
+</ul>
+<h4 id="schlusselhinweise_2">Schlüsselhinweise</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweisinhalt</th>
+<th>Fundstelle（Kapitel/Prozentanteil）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Mortimer entdeckt in der Nähe von Sir Charles' Leiche den Abdruck einer riesigen Hundepfote, verschweigt dies aber vor dem Leichenbeschauungsgericht</td>
+<td>Kap. 2–3 / ca. 15%</td>
+<td><strong>Frühester Schlüsselhinweis</strong>: bestätigt, dass der Fall mit einem tatsächlich existierenden Hund zusammenhängt und kein reiner Herzanfall vorliegt</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sir Henrys neuer Stiefel verschwindet im Londoner Hotel — später wird er zurückgegeben, aber ein alter Stiefel wird erneut gestohlen</td>
+<td>Kap. 4–5 / ca. 26–30%</td>
+<td>Ein einzelner neuer Stiefel ist unbrauchbar, da er noch keine deutliche Witterung trägt. Der alte Stiefel wurde von Henry getragen und hat eine eindeutige Duftspur — das zeigt, dass der Dieb eine Geruchsmarkierung braucht, nämlich ein „olfaktorisches Ziel für den Hund"</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Das Heulen auf dem Moor — Stapleton erklärt es zunächst als „Geräusch des Sumpfes" oder „Ruf einer Rohrdommel"</td>
+<td>Kap. 7 / ca. 37%</td>
+<td>Seine Verharmlosung（ja, sein aktives Anbieten einer „rationalen Erklärung"）rührt daher, dass er genau weiß, was das Geräusch bedeutet; ein Unschuldiger würde in der Regel nur „ich weiß es nicht" sagen, statt mehrere Beruhigungsargumente vorzubringen</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Stapleton ist der Einzige, der die Grimpen-Sümpfe durchqueren kann, und neben seinem Gehöft befindet sich ein verschlossenes Nebengebäude</td>
+<td>Kap. 7 / ca. 37% + Kap. 14 / ca. 91%</td>
+<td>Ersteres deutet auf das Versteck des Hundes hin; letzteres: Watson beobachtet mit eigenen Augen, wie Stapleton nachts das Nebengebäude betritt, und hört ein „seltsames Rascheln" darin</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Laura Lyons gesteht: Der Brief, der Sir Charles zum Treffen veranlasste, wurde von Stapleton „für sie diktiert" — er arrangierte Zeit und Ort, an dem Charles wartete</td>
+<td>Kap. 13 / ca. 85%</td>
+<td>Bestätigt, dass Stapleton die Szene von Sir Charles' Tod aktiv geplant hatte — kein Zufall, sondern ein kalkulierter Plan</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Nachdem der Hund erschossen ist, leuchtet Watsons Finger, als er Maul und Nase des Hundes berührt, und es gibt einen besonderen Geruch</td>
+<td>Kap. 14 / ca. 92%</td>
+<td>Bestätigung des Phosphors — erklärt das übernatürliche Erscheinungsbild des „flammenden Höllenhundes" als chemische Täuschung</td>
+</tr>
+</tbody>
+</table>
+<h4 id="unterstutzende-hinweise_2">Unterstützende Hinweise</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweisinhalt</th>
+<th>Fundstelle（Kapitel/Prozentanteil）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Sir Charles' Fußspuren wechseln nach dem Seitentor auf „Zehenspitzen", woraus Holmes korrekt schließt, dass er nicht spazierte, sondern in wildem Lauf floh</td>
+<td>Kap. 3 / ca. 18%</td>
+<td>Letzte Aktion vor dem Tod — ein Herzpatient, der so rennt, muss etwas gesehen haben, das ihn zur verzweifelten Flucht trieb</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sir Charles wartete am Seitentor „mehr als zehn Minuten"（die Zigarrenasche war zweimal gefallen）— er wartete auf jemanden, hielt sich nicht zufällig auf</td>
+<td>Kap. 3 / ca. 17%</td>
+<td>Holmes schließt daraus, dass Charles eine Verabredung hatte, was darauf hindeutet, dass ihn jemand absichtlich dorthin lockte</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Selden, der Sir Henrys alte Kleider trägt, wird vom Hund gejagt und stirbt auf dem Moor — bestätigt, dass der Hund durch Witterung verfolgt und tatsächlich existiert</td>
+<td>Kap. 12 / ca. 76%</td>
+<td>Indirekter Beweis für die Existenz des Hundes und dafür, dass der Stiefdiebstahl der Herstellung einer Geruchsverbindung diente</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Holmes weist Sir Henry an, allein auf einem bestimmten Weg nach Hause zu gehen, und legt zuvor einen Hinterhalt — er weiß genau, dass der Hund auftauchen wird</td>
+<td>Kap. 13–14 / ca. 87–90%</td>
+<td>Holmes besitzt zu diesem Zeitpunkt bereits vollständiges Wissen über das howdunit und plant, es als Fangfalle zu nutzen</td>
+</tr>
+</tbody>
+</table>
+<h4 id="falsche-spuren_2">Falsche Spuren</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweisinhalt</th>
+<th>Fundstelle（Kapitel/Prozentanteil）</th>
+<th>Irreführungsrichtung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Sir Charles' Tod wird vom Leichenbeschauungsgericht als „natürlicher Tod（Herzversagen）" eingestuft</td>
+<td>Kap. 2 / ca. 13%</td>
+<td>Das offizielle Urteil erzeugt den Anschein, dass rechtlich „kein Fall" vorliegt, und macht es für Leser und Figuren schwer, Mord zu behaupten</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Die verschiedenen übernatürlichen Sichtungsberichte auf dem Moor（Bauern, Stallknechte und andere berichten von einem „leuchtenden Höllenhund"）</td>
+<td>Ab Kap. 3 / ca. 18%</td>
+<td>Lässt den Leser（besonders jene, die mit der viktorianischen Gothic-Tradition vertraut sind）zwischen „übernatürlich" und „rational" schwanken, und verzögert den Verdacht gegenüber dem wahren Mechanismus</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Die einsame Gestalt auf dem Moor（später als Holmes selbst enthüllt）</td>
+<td>Kap. 9 / ca. 55%</td>
+<td>Watson betrachtet sie als weiteres Rätsel oder potenzielle Bedrohung; der Leser wird ebenfalls vom Hauptstrang abgelenkt</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="rekonstruktion-des-schlussfolgerungsweges">Rekonstruktion des Schlussfolgerungsweges</h2>
+<p><strong>Erster Weg: Wer ist der Täter?</strong></p>
+<p>Der früheste Verdachtsmoment liegt in Kapitel 4（ca. 28%）: Mortimer erwähnt, Roger Baskerville sei „in Mittelamerika gestorben" — doch der Ton ist vage, und niemand hat es bestätigt. Ein aufmerksamer Leser sollte sich zu diesem Zeitpunkt notieren: „Es gibt eine Lücke in der Erbfolgekette der Familie."</p>
+<p>In Kapitel 7（ca. 37%）tritt Stapleton auf. Er ist „zufällig" kurz nach Charles' Rückkehr zugezogen, kennt das Moor weit besser als es einem Zweijahresbewohner zustehen würde, und ist über die sozialen Netzwerke von Mortimer, Watson und anderen im Bilde. Ein Leser, der sich fragt, „warum weiß diese Person so viel?", sollte zu diesem Zeitpunkt bereits Verdacht gegen ihn hegen.</p>
+<p>Kapitel 9（ca. 55%）ist ein wichtiger Knotenpunkt: Stapletons Wutausbruch gegen Sir Henry verwirrt alle Nachbarn. Wäre er wirklich der Bruder seiner Schwester, wäre sein Verhalten äußerst seltsam; der Leser, der in Richtung „er verbirgt eine persönliche Beziehung" denkt, ist der Wahrheit nahe.</p>
+<p>In Kapitel 12（ca. 78%）enthüllt Holmes im Steinhaus gegenüber Watson: „Beryl ist seine Ehefrau, nicht seine Schwester, und er war einst Vandeleur." Dies ist der Konvergenzpunkt der Hinweise zur Verfolgung von Stapletons Identität. Die Porträtszene in Kapitel 13（ca. 82%）ist die endgültige Bestätigung — die visuelle Identifizierung schließt alles ab.</p>
+<p><strong>Zweiter Weg: Die Tatmethode?</strong></p>
+<p>Das Rätsel des gestohlenen Stiefels（Kap. 4–5, ca. 26–30%）ist der früheste und wichtigste howdunit-Hinweis des Buches, aber seine Bedeutung wird erst später klar. Ein einzelner Stiefel hat begrenzten Nutzen, doch die Witterung von mehr als einem Stiefel lässt sich verfolgen — wer sich fragt „warum braucht jemand den Geruch von Schuhen?", kann beim Hundegeheul auf dem Moor（Kap. 7–9, ca. 37–55%）zusammensetzen: <strong>Jemand verfolgt mit einem echten Hund ein bestimmtes Geruchsziel</strong>.</p>
+<p>Das Rascheln im Nebengebäude（Kap. 14, ca. 91%）ist das letzte Puzzlestück. Die Enthüllung des Phosphors（ca. 92%）löst das letzte Rätsel des „leuchtenden Höllenhundes".</p>
+<p><strong>Dritter Weg: Das am schwierigsten zu entdeckende Detail</strong></p>
+<p>Die Funktion von Laura Lyons（Kap. 10–13）ist der am tiefsten verborgene Strang des Buches. Ihre Existenz enthüllt, dass Stapleton nicht nur seine Frau manipuliert, sondern einer weiteren Frau ein Eheversprechen gegeben hat. Die Konzeption, dass zwei Frauen gleichzeitig betrogen werden, zeichnet klar Stapletons Wesen — „alles ist ein Werkzeug, jedes Gefühl eine Lüge" — und ist eines der kältesten Elemente dieser Geschichte in der Geschichte der Kriminaliteratur.</p>
+<hr>
+<h2 id="erganzende-anmerkungen">Ergänzende Anmerkungen</h2>
+<p><strong>Die einzigartige Stellung von „Der Hund der Baskervilles" in der Holmes-Serie</strong></p>
+<p>Doyle hatte Holmes in „Das letzte Problem"（1893）„getötet", was unter den Lesern einen Sturm der Empörung auslöste. Dieses Buch ist seine Rückkehr — in der Form eines historischen Rückblicks, der die Ereignisse „vor den Reichenbach-Fällen" schildert — nach acht Jahren des Schweigens（Serienveröffentlichung 1901）. Doyles Entscheidung, die Rückkehr des Detektivs mit dieser Geschichte zu feiern, war eine brillante kommerzielle Entscheidung: „Der Hund der Baskervilles" ist zugleich Gothic-Horrorliteratur und klassische Detektivgeschichte und spricht beide Publikumserwartungen an.</p>
+<p><strong>Die Raffinesse des strukturellen Aufbaus</strong></p>
+<p>Die größte erzählerische Kunstfertigkeit des Buches besteht darin, direkte Erzählung durch <strong>Watsons Briefe und Tagebücher</strong> zu ersetzen — alles, was der Leser sieht, ist Watsons „Echtzeitprotokoll", keine nachträglich zusammengefasste Erinnerung. Diese Konstruktion hat zwei Effekte:
+1. Sie erzeugt Unmittelbarkeit（Leser und Watson sind gleichermaßen verwirrt）
+2. Sie verbirgt auf legitime Weise die Tatsache, dass Holmes persönlich auf das Moor gereist ist（Holmes' Handlungen liegen außerhalb von Watsons Blickfeld）</p>
+<p>Der Moment, in dem Holmes im Steinhaus auf dem Moor erscheint（Kap. 11）, ist eine der berühmtesten Szenen in der Geschichte der Kriminaliteratur, in der der Autor den Leser durch Informationsvorbehalt täuscht. Streng genommen hat Doyle nicht „gelogen" — er ließ Holmes in Bezug auf Watsons Briefe schweigen und ließ Watson nicht wissen, wo Holmes sich aufhielt.</p>
+<p><strong>Erläuterung zur Nebelgrad-Bewertung</strong></p>
+<p>Der Grund für vier Sterne（und nicht fünf）: Obwohl das Buch viele falsche Spuren enthält, bedient sich Doyle keines „unzuverlässigen Erzählers" oder einer „metastrukturellen Täuschung", und alle Hinweise lassen sich im Nachhinein im Text finden. Im Vergleich zu Christies Fünf-Sterne-Nebelwerken（wie „Mord im Orient-Express" oder „Und dann gabs keines mehr"）stützt Doyles Irreführung stärker auf „emotionale Wirkung von Szenen" als auf eine „grundlegende Täuschung der Erzählstruktur".</p>
+<p><strong>Vergleich mit anderen Werken von Arthur Conan Doyle</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Der Hund der Baskervilles</th>
+<th>Das Abenteuer der gefleckten Binde</th>
+<th>Ein Skandal in Böhmen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kernrätsel</td>
+<td>whodunit + howdunit</td>
+<td>howdunit</td>
+<td>Versteck-Rätsel</td>
+</tr>
+<tr>
+<td>Erzählperspektive</td>
+<td>Doppelt（Watsons Briefe + Rückblick）</td>
+<td>Watson als Beobachter</td>
+<td>Watson als Beobachter</td>
+</tr>
+<tr>
+<td>Verschleierungsmittel</td>
+<td>Übernatürliche Legende</td>
+<td>Gewöhnlicher Unfall</td>
+<td>Geringschätzung weiblicher Intelligenz</td>
+</tr>
+<tr>
+<td>Deduzierbarkeit</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tiefere Beobachtungen zur Schreibtechnik</strong></p>
+<p>Stapletons Gestaltung als Antagonist verkörpert ein in viktorianischen Detektivromanen verbreitetes, aber unterschätztes Thema: <strong>die Korrumpierung des Erziehers</strong>. Er ist Schulleiter — jemand, der junge Geister bildet und formt; was er hält, sind keine Waffen, sondern Naturpräparate; sein äußeres Erscheinungsbild ist wissenschaftliche Rationalität. Diese „Barbarei hinter zivilisiertem Schein" hat bei Doyle eine klare gesellschaftskritische Bedeutung — der gefährlichste Bösewicht ist oft derjenige, dessen Äußeres am beruhigendsten wirkt.</p>
+<p>Die Rolle des Moors（Dartmoor）im Buch verdient ebenfalls Erwähnung: Es ist nicht nur Kulisse, sondern eine aktive Kraft. Die Unergründlichkeit der Grimpen-Sümpfe, die vorgeschichtlichen Steinhütten-Ruinen, die Verrohung des flüchtigen Sträflings — Doyle gestaltet das Moor als das Gegenteil von Zivilisation, und alle Geheimnisse sind auf der Kehrseite der Zivilisation verborgen. Stapletons letztes Schicksal（Verschwinden im Sumpf, nie aufgefunden）ist eine nahezu poetische Gerechtigkeit: Das Chaos der Natur verschlingt denjenigen, der versucht hat, die Naturgewalten für seine Verbrechen zu nutzen.</p>
+    <a href="../index.html" class="back-link">← Zur Startseite</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Detektivanalyse</p>
+    <p>Fünf Autoren · achtundachtzig Werke · 135 Jahre Entwicklung der Schwierigkeit im Kriminalroman.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
