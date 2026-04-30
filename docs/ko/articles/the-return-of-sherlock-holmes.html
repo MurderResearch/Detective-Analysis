@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>셜록 홈즈의 귀환（The Return of Sherlock Holmes）— 추리 분석 — 추리해부실</title>
+<meta name="description" content="1894년 봄, 홈즈는 라이헨바흐 폭포에서 '죽음에서 부활'하여 런던으로 돌아온다. 3년간 그는 해외를 떠돌며 티베트, 페르시아, 프랑스에 몸을 숨기고, 모리아티의 잔당을 제거할 기회를 노렸다. 이 단편집은 그의 귀환 이후 열세 건의 사건을 기록하고 있다. 빈 집에서 함정을 놓아 다시 ">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-return-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-return-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-return-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-return-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-return-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-return-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-return-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-return-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif KR', serif;
+  --font-sans: 'Noto Sans KR', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">추리해부실</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">홈</a>
+        <a href="../index.html#latest">최신</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="언어" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 한국어</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-return-of-sherlock-holmes.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-return-of-sherlock-holmes.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-return-of-sherlock-holmes.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/the-return-of-sherlock-holmes.html">日本語</a>
+      <a class="lang-item active" data-lang="ko" href="/Detective-Analysis/ko/articles/the-return-of-sherlock-holmes.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/the-return-of-sherlock-holmes.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/the-return-of-sherlock-holmes.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/the-return-of-sherlock-holmes.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">아서 코난 도일 · </div>
+    <h1>셜록 홈즈의 귀환（The Return of Sherlock Holmes）— 추리 분석</h1>
+    <div class="subtitle">코난 도일（Arthur Conan Doyle） · 단편집（전 13편）</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">추리 난이도</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">안개 등급</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="the-return-of-sherlock-holmes">셜록 홈즈의 귀환（The Return of Sherlock Holmes）— 추리 분석</h1>
+<h2 id="_1">기본 정보</h2>
+<ul>
+<li>저자：코난 도일（Arthur Conan Doyle）</li>
+<li>출판년도：1903–1904년（잡지 연재）；1905년 단행본 출판</li>
+<li>장르：단편집（전 13편）</li>
+<li>탐정：셜록 홈즈（Sherlock Holmes）</li>
+<li>핵심 수수께끼 유형：whodunit / howdunit / 밀실 수수께끼 / 암호 해독</li>
+</ul>
+<hr>
+<h2 id="_2">추리 난이도 총평（단편집 전체）</h2>
+<table>
+<thead>
+<tr>
+<th>지표</th>
+<th>등급</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>추리 난이도（Deducibility）</td>
+<td>⭐⭐⭐</td>
+<td>평균 수렴 지점 약 62% — 편마다 차이가 크며, 매우 일찍 알아챌 수 있는 변장 수수께끼부터 암호 해독까지 다양</td>
+</tr>
+<tr>
+<td>안개 등급（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>도일은 '불가능 범죄'의 외관을 활용해 혼란을 조성하지만, 위장 단서 배치는 크리스티만큼 정밀하지 않음</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>본 글은 추리 구조가 가장 대표적인 세 편을 정밀 분석한다：
+- <strong>빈 집의 모험</strong>（The Adventure of the Empty House）
+- <strong>노우드 건축가의 모험</strong>（The Adventure of the Norwood Builder）
+- <strong>춤추는 사람 모양의 모험</strong>（The Adventure of the Dancing Men）</p>
+</blockquote>
+<hr>
+<h2 id="_3">줄거리（단편집 개요）</h2>
+<p>1894년 봄, 홈즈는 라이헨바흐 폭포에서 '죽음에서 부활'하여 런던으로 돌아온다. 3년간 그는 해외를 떠돌며 티베트, 페르시아, 프랑스에 몸을 숨기고, 모리아티의 잔당을 제거할 기회를 노렸다. 이 단편집은 그의 귀환 이후 열세 건의 사건을 기록하고 있다. 빈 집에서 함정을 놓아 다시 무대에 오르는 이야기부터, 춤추는 사람 암호의 비극, '피해자'가 실은 사기꾼이었던 노우드의 반전까지, 각 편은 도일의 탐정 소설 장르에 대한 노련한 장악력을 보여준다.</p>
+<hr>
+<h2 id="1-the-adventure-of-the-empty-house">제1편：빈 집의 모험（The Adventure of the Empty House）</h2>
+<h3 id="_4">기본 정보</h3>
+<ul>
+<li>장르：단편</li>
+<li>핵심 수수께끼 유형：whodunit + howdunit（불가능 살인）</li>
+<li>수수께끼：파크 레인 427번지에서 로널드 애더（Ronald Adair）가 잠긴 방에서 시신으로 발견되었다. 총알이 두개골을 박살냈지만, 방 안에는 어떤 무기도 없었고 창문 밖에도 기어오른 흔적이 없었다.</li>
+</ul>
+<hr>
+<h3 id="_5">추리 난이도 총평</h3>
+<table>
+<thead>
+<tr>
+<th>지표</th>
+<th>등급</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>추리 난이도（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>평균 수렴 지점 약 72% — 범인과 수법의 핵심 단서는 이야기 후반부에 가서야 모두 갖춰진다</td>
+</tr>
+<tr>
+<td>안개 등급（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>'밀실 살인'의 외관이 가장 큰 안개이며；모런 대령은 일찍부터 등장하지만 신원이 밝혀지지 않는다</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_6">진상 분석</h3>
+<p><strong>진상 1：살인 수법（howdunit）</strong>
+- <strong>단서 수렴 지점：약 72%</strong>
+- 답：모런 대령은 맞은편 빈 집（Camden House）에서 폰 헤르더（Von Herder）제 무음 공기총으로 열린 창문을 통해 애더를 사살했다. 애더가 방문을 안에서 잠근 것은 포커 판에서 돌려줘야 할 돈을 계산하고 있었기 때문이며, 방해받기 싫어서였다. 범인이 잠근 것이 아니다.</p>
+<h4 id="_7">핵심 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（%）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>총알이 '바깥쪽으로 버섯처럼 퍼졌다（mushroomed out）'—버섯 모양으로 변형된 연질 확장탄으로 즉사를 야기</td>
+<td>약 8%</td>
+<td>이런 탄형은 실외에서 고속으로 창문을 뚫고 들어온 경우 이런 상처를 낼 수 있으며, 근거리 사격이 아님을 암시</td>
+</tr>
+<tr>
+<td>2</td>
+<td>화단과 지면에 기어오른 흔적이 전혀 없지만, 창문은 2층에 위치</td>
+<td>약 10%</td>
+<td>창문을 통한 침입 가능성을 배제하지만, 맞은편에서의 저격 가능성은 배제하지 못함</td>
+</tr>
+<tr>
+<td>3</td>
+<td>홈즈는 '공기총을 막기 위해' 덧창을 닫도록 명령한 적이 있다고 회상하며, 모리아티 진영이 이 무기를 보유하고 있음을 일찌감치 알고 있었음을 암시</td>
+<td>약 62%</td>
+<td><strong>핵심 단서</strong>：공기총의 존재를 가리키며, 이를 모리아티 진영과 연결</td>
+</tr>
+<tr>
+<td>4</td>
+<td>모런 대령이 기묘한 형태의 공기총을 들고 나타나, 맞은편 홈즈의 밀랍 인형을 향해 발사</td>
+<td>약 78%</td>
+<td>수법이 완전히 확인됨—무음, 고정밀도, 창문을 통과 가능</td>
+</tr>
+<tr>
+<td>5</td>
+<td>총알은 '공기총에서 발사된 연질 권총탄'—홈즈의 최종 확인</td>
+<td>약 85%</td>
+<td>진상 완전히 종결：파크 레인 사건의 탄종과 완전히 일치</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_8">보조 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（%）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>파크 레인 맞은편에 빈 집이 있어, 위치와 살인 각도가 완전히 들어맞음</td>
+<td>약 12%</td>
+<td>공격자의 은신처는 이미 존재했으며, 독자가 알아채기를 기다리고 있었다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>애더의 방문은 안에서 잠겨 있었지만 탁자 위에는 명단과 금액 계산이 있었음</td>
+<td>약 9%</td>
+<td>패 게임의 수지를 계산하고 있어 방해받기 싫어 잠근 것—밀실을 합리적으로 설명</td>
+</tr>
+<tr>
+<td>3</td>
+<td>파크 레인은 번화한 거리로 택시 승강장까지 있었지만 총소리를 들은 사람이 아무도 없음</td>
+<td>약 10%</td>
+<td>'무음 무기'만이 이 점을 설명할 수 있는 유일한 답</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_9">위장 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（%）</th>
+<th>오도 방향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>화단과 잔디에 어떤 교란 흔적도 없음</td>
+<td>약 10%</td>
+<td>독자로 하여금 외부에서 침입할 수 없다고 오해하게 만들어, 방을 들어올 필요가 없는 원거리 사격을 간과하게 함</td>
+</tr>
+<tr>
+<td>2</td>
+<td>창문틀이 '명백히 기어오를 수 없음'</td>
+<td>약 11%</td>
+<td>독자를 '밀실 살인' 방향으로 유도하여 '길 건너 저격'의 가능성을 가림</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><strong>진상 2：범인의 신원（whodunit）</strong>
+- <strong>단서 수렴 지점：약 65%</strong>
+- 답：모런 대령（Colonel Sebastian Moran）, 전 영국령 인도 군대 출신, 제국 최고의 명사수, 모리아티의 오른팔.</p>
+<h4 id="_10">핵심 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（%）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>애더가 피살된 밤 카드 게임 상대 중 한 명이 바로 <strong>모런 대령</strong>이었음</td>
+<td>약 14%</td>
+<td>범인과 피해자 사이에 직접적 접촉이 있었다—이것이 가장 이른 신원 단서이지만, 인명 목록 속에 묻혀버림</td>
+</tr>
+<tr>
+<td>2</td>
+<td>홈즈 曰：'모리아티 본인 외에도 런던에는 마지막 남은 위험한 적이 있다'</td>
+<td>약 58%</td>
+<td>모리아티 잔존 세력을 명확히 가리키며, 애더 사건의 범인과 고도로 겹침</td>
+</tr>
+<tr>
+<td>3</td>
+<td>홈즈가 확인：라이헨바흐 산꼭대기에서 그에게 돌을 던진 것은 모리아티의 부하였음</td>
+<td>약 60%</td>
+<td>이 위험한 적이 어느 급의 인물인지 확인—이미 가까이서 본 적 있으며, 원거리 사격 기술 보유</td>
+</tr>
+<tr>
+<td>4</td>
+<td>모런 대령이 직접 빈 집에 들어와 밀랍 인형에 발사</td>
+<td>약 76%</td>
+<td>범인 신원 완전히 드러남</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_11">보조 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（%）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>사건 수 주 전에 애더는 모런과 파트너로 많은 도박 자금을 땄음</td>
+<td>약 15%</td>
+<td>두 사람 사이의 특별한 관계를 암시하지만, 당시에는 살인 동기임을 알 수 없음</td>
+</tr>
+<tr>
+<td>2</td>
+<td>홈즈의 범죄 색인 노트, 'M' 페이지에는 위험한 범죄자들로 가득</td>
+<td>약 85%</td>
+<td>모런 대령의 완전한 파일이 범인의 배경과 능력을 입증</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_12">위장 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（%）</th>
+<th>오도 방향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>애더의 '아무도 모르는 적'—검시 배심원단은 '신원불명인에 의한 살인' 판정</td>
+<td>약 9%</td>
+<td>독자로 하여금 '범인의 신원이 완전히 미지'라는 전제를 받아들이게 해, 카드 게임 상대가 용의자임을 간과하게 함</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><strong>진상 3：살인 동기（whydunit）</strong>
+- <strong>단서 수렴 지점：약 90%</strong>
+- 답：애더는 모런이 카드 게임에서 부정행위를 한다는 것을 발견하고 폭로하겠다고 위협했다. 모런은 사기 도박으로 생계를 유지했기 때문에, 클럽에서 쫓겨나면 생계가 끊기므로 입막음을 위해 살인했다.</p>
+<h4 id="_13">핵심 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（%）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>애더는 죽기 전에 카드 판의 득실을 계산하고 있었으며, 탁자 위에는 각 카드 게임 상대의 채무 목록이 있었음</td>
+<td>약 9%</td>
+<td>그가 죽기 전에 하고 있던 일이 바로 부정행위로 생긴 부당이득 정산이었다—하지만 그 동기가 왜 그런지는 마지막에 드러난다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>애더와 모런은 파트너로 420파운드라는 큰돈을 '땄음'</td>
+<td>약 15%</td>
+<td>공모 사기 가능성을 암시하지만, 당시에는 방향이 불명확</td>
+</tr>
+<tr>
+<td>3</td>
+<td>홈즈의 추론：애더는 모런을 폭로하겠다고 위협했을 가능성이 높지만, 노인의 체면을 위해 조용히 물러나기만을 요구했음</td>
+<td>약 92%</td>
+<td>동기는 이야기가 거의 끝날 무렵 홈즈에 의해 완전히 재구성된다</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_14">추리 경로 재구성</h3>
+<p><strong>howdunit 경로：</strong> 세심한 독자라면 '기어오른 흔적은 없지만 내부에서 밀실을 만들 수도 없다'（10%）는 내용을 읽었을 때, 유일한 가능성이 원거리 사격임을 깨달아야 한다. '거리가 시끄러웠는데도 총소리를 들은 사람이 없다'（10%）와 결합하면, '무음 무기'가 거의 유일한 설명이다—다만 무음 공기총의 존재를 알아야 한다. 홈즈가 62%에서 공기총에 관한 과거의 위기를 언급하는 것이 독자가 이 추론을 확인할 수 있는 핵심 지점이다.</p>
+<p><strong>whodunit 경로：</strong> 모런 대령은 14%에서 카드 게임 상대로 이미 등장하지만, 인명 목록 속에 묻혀 있고 사건 당시 클럽에 있었으므로 첫인상에서는 용의자처럼 보이지 않는다. 그를 진짜로 가리킬 수 있는 것은：'원거리 정밀 사격 능력'과 '피해자와의 금전적 분쟁'이라는 두 가지 특질을 동시에 갖추고 있다는 점이다. 전자는 62%가 되어서야 명확히 암시되며（공기총 위협）, 후자는 90%가 되어서야 완전히 드러난다（사기 도박 동기）.</p>
+<p><strong>독자에게의 장벽：</strong> 도일은 의도적으로 '어떻게 살인했는가'의 답이 하나의 냉지식에 의존하도록 했다—폰 헤르더가 만든 무음 고압 공기총은 전작 《마지막 사건》에서 단 한 문장 언급된 설정이다. 그 편을 읽지 않은 독자라면 공기총이라는 답을 스스로 추론해내기가 거의 불가능하다.</p>
+<hr>
+<h3 id="_15">보충 설명</h3>
+<p><strong>홈즈의 부활과 장르적 의미</strong></p>
+<p>이 편은 시리즈 소설 역사상 가장 유명한 '캐릭터 부활' 장면을 담고 있다. 독자와 왓슨이 동시에 놀라움을 경험하며, 도일은 헌책상인의 변장을 통해 부활 자체를 하나의 작은 수수께끼로 만들었다. 이 설계 덕분에 '홈즈가 살아 있는가'라는 답이 첫 페이지에 드러나지 않고, 완전한 극적 공개 과정을 통해 전달된다.</p>
+<p><strong>'빈 집'을 함정으로 삼은 묘책</strong></p>
+<p>모런은 빈 집에 들어올 때 자신이 사냥꾼이고, 맞은편 창문의 밀랍 인형이 먹잇감이라고 생각했다. 도일은 사냥꾼과 먹잇감의 역할을 정교하게 뒤집었다—홈즈가 쓴 수법은 바로 모런이 호랑이 사냥 때 '나무 아래 염소를 묶어 호랑이를 유인'하던 방식이었다. 이 대칭적 설계 덕분에 이 편의 구조가 상당히 완결성을 갖는다.</p>
+<hr>
+<h2 id="2-the-adventure-of-the-norwood-builder">제2편：노우드 건축가의 모험（The Adventure of the Norwood Builder）</h2>
+<h3 id="_16">기본 정보</h3>
+<ul>
+<li>장르：단편</li>
+<li>핵심 수수께끼 유형：whodunit + howdunit（피해자가 실은 주모자）</li>
+<li>수수께끼：건축가 조나스 올다크（Jonas Oldacre）가 노우드 자택에서 사라지고, 목재 더미에서 그의 것으로 추정되는 탄 시신 잔해가 발견되었다. 그의 변호사이자 상속인인 맥팔레인（McFarlane）이 체포된다.</li>
+</ul>
+<hr>
+<h3 id="_17">추리 난이도 총평</h3>
+<table>
+<thead>
+<tr>
+<th>지표</th>
+<th>등급</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>추리 난이도（Deducibility）</td>
+<td>⭐⭐⭐</td>
+<td>평균 수렴 지점 약 55% — 홈즈의 의심은 처음부터 끝까지 은근히 드러나 있어, 세심한 독자라면 꽤 일찍 올다크가 살아 있다고 짐작할 수 있다</td>
+</tr>
+<tr>
+<td>안개 등급（Fog Rating）</td>
+<td>⭐⭐⭐⭐</td>
+<td>도일은 '탄 시신 잔해', '혈흔', '엄지 지문'을 겹겹이 쌓아 위증을 만들었으며, 새로운 '물증'이 추가될 때마다 독자를 한 걸음씩 잘못된 방향으로 밀어넣는다</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_18">진상 분석</h3>
+<p><strong>진상 1：올다크는 정말 죽었는가（핵심 수수께끼）</strong>
+- <strong>단서 수렴 지점：약 55%</strong>
+- 답：올다크는 전혀 죽지 않았다. 그는 미리 은신처를 만들어 두고, 낡은 옷과 동물 잔해를 태워 죽음을 위장한 뒤, 자기 집 복도 끝의 숨겨진 이중 벽 속에 숨어 맥팔레인을 함정에 빠뜨리는 계획을 꾸몄다.</p>
+<h4 id="_19">핵심 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（%）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>유언장이 기차 안에서 쓰였으며, 글씨가 엉망이었다（정차 중에는 좋고, 주행 중에는 나쁘고, 전철기 통과 시 가장 나쁜 글씨）</td>
+<td>약 20%</td>
+<td>홈즈 曰：'유언장을 효력 있게 만들 생각이 없는 사람이라야 이렇게 무성의하게 쓸 수 있다'—유언장이 함정임을 암시</td>
+</tr>
+<tr>
+<td>2</td>
+<td>혈흔이 매우 미미하여 '얼룩과 희미한 탈색' 정도—이처럼 폭력적인 살인 현장에 어울리지 않음</td>
+<td>약 46%</td>
+<td>혈액량이 비정상적으로 적어, 진짜로 몽둥이로 때려죽였다면 이럴 수 없음</td>
+</tr>
+<tr>
+<td>3</td>
+<td>금고 속의 서류 일부가 없어졌다—일부 계약서가 올다크가 '피살된' 이후에도 행방불명</td>
+<td>약 47%</td>
+<td>그가 죽었다면 누가 서류를 가져갔는가？그 자신만이 가져갈 수 있다</td>
+</tr>
+<tr>
+<td>4</td>
+<td>복도 길이가 아래층에 대응하는 공간보다 6피트 짧음</td>
+<td>약 80%</td>
+<td><strong>결정적 단서</strong>：건축가가 자기 집에 비밀 은신처를 만든 것</td>
+</tr>
+<tr>
+<td>5</td>
+<td>올다크가 숨겨진 문에서 뛰쳐나옴—연기에 놀라 모습을 드러냄</td>
+<td>약 85%</td>
+<td>그가 줄곧 집 안에 있었음이 확인됨</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_20">보조 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（%）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>여성 가정부의 행동이 수상하고, 말이 엉거주춤하며, 눈빛에 '어두운 내막을 아는 분위기'가 있음</td>
+<td>약 50%</td>
+<td>그녀는 공범으로, 주인이 어디 있는지 줄곧 알고 있었다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>올다크가 과거에 '코넬리어스 씨（Mr. Cornelius）'라는 이름으로 거액의 수표를 발행</td>
+<td>약 45%</td>
+<td>이것은 그의 가명으로, 금융 사기를 위해 마련해둔 두 번째 신분</td>
+</tr>
+<tr>
+<td>3</td>
+<td>목재 더미 숯 속에서 발견된 것은 '바지 단추'뿐이며, 제조사 표시는 올다크의 양복점 것</td>
+<td>약 38%</td>
+<td>단추만 있고 뼈는 없다—동물 잔해에 낡은 옷 단추를 곁들여 가짜 탄 시신을 만든 것</td>
+</tr>
+<tr>
+<td>4</td>
+<td>맥팔레인의 성격이 온화하여 계획 범죄의 심리적 프로필에 맞지 않음</td>
+<td>약 5%</td>
+<td>홈즈가 처음 그를 보고 판단：'이 사건은 너무 명백해서, 오히려 의심스럽다'</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_21">위장 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（%）</th>
+<th>오도 방향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>방 안의 혈흔과 몽둥이 위의 혈흔</td>
+<td>약 15%</td>
+<td>독자（와 경찰）로 하여금 실제로 폭력이 발생했으며 올다크가 맞아 죽었다고 믿게 함</td>
+</tr>
+<tr>
+<td>2</td>
+<td>목재 더미 속의 탄 시신 잔해</td>
+<td>약 20%</td>
+<td>가장 핵심적인 위장 단서—도일은 '불에 탄 시신'을 활용해 '올다크가 죽었다'는 인상을 강화</td>
+</tr>
+<tr>
+<td>3</td>
+<td>맥팔레인의 엄지 지문（혈흔）이 복도 벽에 나타남</td>
+<td>약 62%</td>
+<td>가장 탁월한 위장 단서：올다크는 밀랍 위의 엄지 지문 틀에 피를 묻혀 벽에 찍음으로써, 용의자가 사건 현장에 남긴 증거를 위조</td>
+</tr>
+<tr>
+<td>4</td>
+<td>갑자기 발효된 유언장이 맥팔레인에게 살인 동기를 부여</td>
+<td>약 3%</td>
+<td>시작점 전체가 가짜다—유언장은 미끼</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><strong>진상 2：올다크의 완전한 동기（whydunit）</strong>
+- <strong>단서 수렴 지점：약 88%</strong>
+- 답：올다크에게는 두 가지 목적이 있었다：(1) 채권자 사기—'코넬리어스' 이름으로 자산을 옮긴 뒤 증발；(2) 복수—맥팔레인의 어머니가 한때 그의 약혼녀였다가 차버렸고, 그는 상대의 결혼식 날 칼로 찢긴 사진을 보냈으며, 수십 년 동안 원한을 품고 있다가 이 기회를 빌려 그녀의 외아들을 감옥 혹은 교수대로 보내려 했다.</p>
+<h4 id="_22">핵심 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（%）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>맥팔레인의 어머니가 올다크에게 깊은 혐오감을 품고, '악의적이고 음험한 원숭이'라고 직접 불렀음</td>
+<td>약 42%</td>
+<td>올다크가 낯선 사람이 아니라 두 사람 사이에 구원(舊怨)이 있음을 드러냄</td>
+</tr>
+<tr>
+<td>2</td>
+<td>올다크는 한때 맥팔레인 어머니의 구혼자였으나 거절당한 뒤, 그녀의 결혼식 날 칼로 훼손한 사진을 보냈음</td>
+<td>약 43%</td>
+<td><strong>핵심 동기 단서</strong>：수년 전의 이 원한이 바로 음모 전체의 근원</td>
+</tr>
+<tr>
+<td>3</td>
+<td>홈즈의 질문：'블랙히스（맥팔레인의 집）에 갔다가 노우드（사건 현장）로 갔다'</td>
+<td>약 24%</td>
+<td>그는 다른 모든 사람보다 훨씬 일찍 '근원이 가족 관계 쪽에 있다'는 것을 알았다</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_23">추리 경로 재구성</h3>
+<p>20%（유언장을 기차 안에서 엉성하게 작성）를 읽을 때, 세심한 독자라면 이상함을 느껴야 한다：온 계략을 정밀하게 설계한 사람이 왜 기차 안에서 허겁지겁 유언장을 초안했는가？홈즈의 말 '그는 유언장을 효력 있게 만들 생각이 없다'가 가장 이른 확인 신호다.</p>
+<p>46%（혈흔이 미미하고, 서류가 없어짐）에 이르면, 두 가지 단서가 동시에 '올다크가 죽지 않았다'는 것을 가리킨다. 하지만 가장 강력한 확인은 80%까지 기다려야 한다：복도 길이가 맞지 않는 것이 비로소 비밀 방의 존재를 확인해 준다.</p>
+<p><strong>핵심 함정：</strong> 도일은 이야기가 절반쯤 진행되었을 때 가짜 엄지 지문을 추가했는데, 이것이 이 편에서 가장 교묘한 순간이다—독자가 올다크가 살아 있다는 의심을 품기 시작했을 때, '물증이 더욱 확실해졌다'는 충격을 받게 되며, 홈즈조차 먼저 '이것은 최종적（final）'이라고 말하고 나서야, 모두가 눈치채지 못하는 사이에 몰래 미소 짓는다. 그는 이 지문이 가짜임을 알고 있었는데, 전날 이미 그 벽이 깨끗함을 확인했기 때문이다.</p>
+<p><strong>독자에게의 가장 큰 도전：</strong> '피해자 자신이 모든 물증을 위조했다'는 것을 깨달으려면, 독자가 죽음의 현장에 대한 의심을 유지할 뿐만 아니라, '건축가가 자기 집에서 속임수를 쓰는 것이 어떤 외부인보다도 쉽다'는 것을 이해해야 한다. 도일은 중요한 보조 단서를 하나 심어두었다：탄 시신 잔해 속에서 발견된 것은 바지 단추뿐이지, 인간의 뼈가 아니었다.</p>
+<hr>
+<h3 id="_24">보충 설명</h3>
+<p><strong>'너무 명백한' 반전</strong></p>
+<p>도일은 홈즈의 입을 빌려 추리 소설 창작의 핵심 기교를 말했다：'사건이 너무 명백하면, 오히려 의심해볼 만하다.'（<em>It strikes me as being just a trifle too obvious.</em>）이 말은 레스트레이드에 대한 비판이기도 하고, 이 편 전체에 대한 메타적 논평이기도 하다. 도일은 의도적으로 독자가 먼저 '명백한 답'에 동의하게 한 뒤, 엄지 지문 위장 단서로 독자에게 한 번 거짓된 '확인감'을 주고, 마지막에야 반전시킨다.</p>
+<p><strong>올다크의 '예술적 감각 부재'</strong></p>
+<p>홈즈의 결론적 발언이 상당히 탁월하다：'그에게는 예술가의 가장 고귀한 자질—멈출 줄 아는 감각（the knowledge of when to stop）이 없었다. 이미 완벽한 함정을 더 조이려 했고—오히려 모든 것을 망쳐버렸다.' 이 말은 수수께끼의 풀이를 직접 지목한다：범인이 탐욕스러워서 빈틈을 남겼다. 이것은 탐정 소설 설계에 대한 도일의 자기 성찰이다.</p>
+<hr>
+<h2 id="3-the-adventure-of-the-dancing-men">제3편：춤추는 사람 모양의 모험（The Adventure of the Dancing Men）</h2>
+<h3 id="_25">기본 정보</h3>
+<ul>
+<li>장르：단편</li>
+<li>핵심 수수께끼 유형：암호 해독（cryptography）+ whodunit</li>
+<li>수수께끼：힐턴 큐빗（Hilton Cubitt）의 저택에 춤추는 사람 모양의 자세로 이루어진 신비한 기호가 연이어 나타나고, 아내 엘시（Elsie）는 이를 보고 경악한다. 결국 큐빗은 총에 맞아 숨지고, 엘시는 중상을 입은 채 발견된다.</li>
+</ul>
+<hr>
+<h3 id="_26">추리 난이도 총평</h3>
+<table>
+<thead>
+<tr>
+<th>지표</th>
+<th>등급</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>추리 난이도（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>평균 수렴 지점 약 78% — 암호는 독자 스스로 해독 불가（텍스트 판에는 원판 삽화 생략），범인 동기는 이야기 후반에야 완전히 드러남</td>
+</tr>
+<tr>
+<td>안개 등급（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>가장 큰 안개는 '밀폐된 방, 부부만 있었다'는 초기 인상으로 엘시가 유죄일 수 있음을 암시；또 다른 안개는 암호 자체가 동심(童心) 어린 무해한 것처럼 보인다는 점</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_27">진상 분석</h3>
+<p><strong>진상 1：춤추는 사람 모양은 무엇인가（암호의 본질）</strong>
+- <strong>단서 수렴 지점：약 15%（개념），약 80%（완전 해독）</strong>
+- 답：각각의 춤추는 사람은 하나의 영어 알파벳을 나타내며；깃발을 든 사람은 하나의 단어 끝을 표시한다. 이 암호 시스템은 올드 패트릭（엘시의 아버지）이 시카고 범죄 조직원들이 사용하도록 발명한 것이다.</p>
+<h4 id="_28">핵심 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（%）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>엘시가 기호를 보고 '그 자리에서 기절'</td>
+<td>약 12%</td>
+<td>어린이의 낙서에 대한 반응이 아니다—기호가 그녀에게 구체적인 의미가 있음을 확인</td>
+</tr>
+<tr>
+<td>2</td>
+<td>첫 번째 기호 묶음：15개의 사람 중 4개가 같음（즉 알파벳 E）</td>
+<td>약 15%</td>
+<td>홈즈가 빈도를 주목—이것이 문자 치환 암호의 핵심 돌파구</td>
+</tr>
+<tr>
+<td>3</td>
+<td>다섯 글자 단어, 깃발 표시로 단어 구분 가능, 가장 고빈도 기호＝E</td>
+<td>약 75%</td>
+<td>홈즈 해독 절차의 핵심—먼저 E를 확인한 뒤, 단어 이름（ELSIE）으로 파고듦</td>
+</tr>
+<tr>
+<td>4</td>
+<td>'NEVER'（엘시의 유일한 회신）가 N, V, R을 제공</td>
+<td>약 76%</td>
+<td>암호 해독 가속—엘시가 상대의 시스템으로 회신함으로써 홈즈에게 열쇠를 넘겨준 셈</td>
+</tr>
+<tr>
+<td>5</td>
+<td>마지막 메시지：ELSIE PREPARE TO MEET THY GOD</td>
+<td>약 80%</td>
+<td>'설득'에서 '위협'으로 격상, 범죄가 곧 일어날 것임을 알리는 최후의 경고 신호</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_29">보조 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（%）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>엘시는 결혼 전에 솔직하게 '불쾌한 과거'가 있다고 고백하며 남편이 추궁하지 말아달라고 요청</td>
+<td>약 18%</td>
+<td>그녀의 비밀이 핵심 배경</td>
+</tr>
+<tr>
+<td>2</td>
+<td>엘시는 남편이 기호를 그리는 낯선 사람을 추적하는 것을 막으려 했음</td>
+<td>약 36%</td>
+<td>그녀는 그 사람을 알고 있으며, 남편이 그와 접촉하기를 원치 않음</td>
+</tr>
+<tr>
+<td>3</td>
+<td>전보 회신：'에이브 슬래니（Abe Slaney）는 시카고에서 가장 위험한 범죄자'</td>
+<td>약 78%</td>
+<td>발신자의 신원이 확인되고, 사태가 심각함도 확인됨</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_30">위장 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（%）</th>
+<th>오도 방향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>'이것은 그냥 어린이 낙서다'라는 첫인상</td>
+<td>약 3%</td>
+<td>독자와 큐빗 모두 위협의 심각성을 경시하게 만듦</td>
+</tr>
+<tr>
+<td>2</td>
+<td>사건 현장의 모든 문과 창문이 내부에서 잠겨 있어 '제3자가 있을 수 없다'</td>
+<td>약 57%</td>
+<td>하녀와 요리사의 증언으로 부부만 관련됐다는 인상을 주어—엘시가 남편을 죽였음을 암시</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><strong>진상 2：현장에서 실제로 무슨 일이 있었는가（howdunit）</strong>
+- <strong>단서 수렴 지점：약 72%</strong>
+- 답：세 사람이 모두 현장에 있었다. 슬래니는 창문 밖에 있었고, 엘시는 돈을 들고 그를 돌려보내려 했다. 큐빗은 권총을 들고 뛰어들어왔다. 큐빗이 먼저 발사했지만 빗나갔고, 슬래니가 거의 동시에 창문 밖에서 응사하여 큐빗이 피탄 사망했다. 엘시는 창문을 닫은 뒤 스스로 총을 쏘았다（사망하지 않음）. <strong>이 사건은 결코 살인이 아니라, 큐빗이 먼저 발사한 교전이었다.</strong></p>
+<h4 id="_31">핵심 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（%）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>창문틀에 <strong>세 번째 총알</strong>의 탄흔이 있음</td>
+<td>약 66%</td>
+<td>'두 자루 총, 두 명의 부상자'라는 계산이 맞지 않는다—반드시 세 번째 인물이 발사했다는 의미</td>
+</tr>
+<tr>
+<td>2</td>
+<td>연기가 순식간에 2층 복도까지 퍼졌다—사건 당시 창문이 열려 있었음을 나타냄</td>
+<td>약 63%</td>
+<td>창문이 처음부터 잠겨 있었다면 연기가 그렇게 빠르게 퍼질 수 없음</td>
+</tr>
+<tr>
+<td>3</td>
+<td>엘시의 탁자 위 핸드백에 1,000파운드가 들어 있었음</td>
+<td>약 64%</td>
+<td>그녀가 준비한 '몸값'으로, 슬래니의 침묵을 사기 위한 것</td>
+</tr>
+<tr>
+<td>4</td>
+<td>화단에 큰 남성 발자국과 튀어나온 탄피 하나가 남아 있음</td>
+<td>약 70%</td>
+<td>슬래니가 창문 밖에서 발사했다는 물증</td>
+</tr>
+<tr>
+<td>5</td>
+<td>슬래니 본인의 자백：'그가 먼저 나에게 총을 쐈고, 나는 응사했을 뿐이다'</td>
+<td>약 92%</td>
+<td>사건의 완전한 재구성</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_32">보조 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（%）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>큐빗의 손과 잠옷에 화약 흔적이 없지만, 총은 그의 것이고 한 발이 발사되어 있음</td>
+<td>약 62%</td>
+<td>그는 더 먼 거리에서 발사해서 뚜렷한 화약 흔적이 남지 않았을 수 있음</td>
+</tr>
+<tr>
+<td>2</td>
+<td>총이 한 자루밖에 없었는데 두 사람이 부상당하고 창문틀에 탄흔이 있음</td>
+<td>약 61%</td>
+<td>'총이 한 자루뿐'이라는 논리 계산：현장 밖에 반드시 다른 무기가 있어야 한다</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_33">위장 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（%）</th>
+<th>오도 방향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>'그녀는 남편 곁에서 총에 맞은 채로 발견되었고, 방문과 창문은 내부에서 잠겨 있었다'</td>
+<td>약 55%</td>
+<td>밀폐된 현장이 엘시를 가장 유력한 용의자로 만든다—독자와 경찰 모두 그녀가 남편을 죽이고 자살을 시도했다고 의심</td>
+</tr>
+<tr>
+<td>2</td>
+<td>'마을에서는 그녀가 그를 쏜 다음 자신을 쐈다는 소문이 돌았다'</td>
+<td>약 56%</td>
+<td>시골 소문이 잘못된 방향을 강화</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_34">추리 경로 재구성</h3>
+<p><strong>암호 경로：</strong> 독자가 암호를 독자적으로 해독하기는 거의 불가능하다. 텍스트는 추상적인 '춤추는 사람 형태'를 묘사하고 있으며, 원판 삽화만이 알파벳 형태를 제공하기 때문이다. 도일도 이를 알고 있었다—이 편의 수수께끼 재미는 주로 '홈즈가 어떻게 빈도 분석으로 접근하는지 따라가는 것'에서 오는 것이지, 독자 스스로 암호를 해독하는 것에서 오는 게 아니다. 이것은 '경쟁형'이 아닌 '시연형' 수수께끼다.</p>
+<p><strong>현장 재구성 경로：</strong> 세 번째 총알의 탄흔（66%）이 이 편에서 독자가 스스로 발견할 수 있는 가장 핵심적인 단서다. 세심한 독자가 '부상자는 두 명인데 총알은 세 발'이라는 것을 알아챈다면, 현장에 세 명이 있었다고 추론할 수 있어야 한다. '연기'와 '발자국'을 결합하면, 슬래니가 창문 밖에 있었다는 위치를 기본적으로 복원할 수 있다.</p>
+<p><strong>가장 큰 인지 장벽：</strong> 도일은 이야기 후반부에서 '밀폐된 현장'에 대한 독자의 직관적 반응을 활용했다—모든 사람（경찰과 독자 포함）은 두 명의 부상자가 밀폐된 공간 안에 있었다면, 반드시 그중 한 명이 다른 한 명에게 총을 쐈다고 생각하는 경향이 있다. 세 번째 총알의 발견이 이 전제를 완전히 뒤엎었다. 이것이 이 편의 추리 설계에서 가장 정확한 일격이다.</p>
+<hr>
+<h3 id="_35">보충 설명</h3>
+<p><strong>비극으로 끝나는 탐정 이야기</strong></p>
+<p>《춤추는 사람 모양의 모험》은 코난 도일의 작품 중에서 독특한 위치를 차지한다：탐정이 '너무 늦어서' 사건을 막지 못하는 몇 안 되는 이야기 중 하나다. 큐빗은 죽었고, 엘시는 간신히 목숨을 건졌으며, 홈즈가 늦은 것은 그의 전보 회신이 이틀 늦었기 때문이다. 도일은 탐정 영웅에게 실패의 쓴맛을 맛보게 했지만, 정밀한 사후 재구성과 범인 유인으로 어느 정도의 정의감을 되살렸다.</p>
+<p><strong>암호 수수께끼의 역사적 위상</strong></p>
+<p>춤추는 사람 암호는 탐정 소설 역사상 가장 유명한 문자 치환 암호 중 하나로, 에드거 앨런 포가 《황금 풍뎅이》（The Gold-Bug, 1843）에서 사용한 암호보다 시각적 충격이 더 강하다. 도일이 여기서 보여주는 빈도 분석법（최고빈도 알파벳＝E, 짧은 단어로 'NEVER' 추측, 이름 'ELSIE'로 나머지 알파벳 보완）은 암호학의 기초 논리로, 정확하고 완전하며 가르칠 수 있다.</p>
+<p><strong>슬래니의 인간적 묘사</strong></p>
+<p>전형적인 '만화 같은 악당'과 달리, 도일은 시카고 범죄자 슬래니에게 진실한 감정적 깊이를 부여했다. 그는 진심으로 엘시를 사랑했으며, 그녀가 부상당했다는 소식을 듣고 '쉰 소리로 비통한 신음을 냈으며', '엘시가 죽는다면 나 자신은 어떻게 되어도 상관없다'고 말했다. 1,000파운드를 들고 그를 돌려보내려 한 '돈으로 감정 문제를 해결하려는' 시도에 대한 그의 반응은 '분노를 느꼈다'—이 인물은 모나지 않게 입체적으로, 단순한 도구적 악당이 아니다.</p>
+<hr>
+<h2 id="_36">단편집 전체 추리 설계 평론</h2>
+<h3 id="_37">세 편 대표작 비교</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>빈 집의 모험</th>
+<th>노우드 건축가</th>
+<th>춤추는 사람 모양</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>핵심 수수께끼 유형</td>
+<td>불가능 살인 + 무기 수수께끼</td>
+<td>피해자 생존 + 물증 위조</td>
+<td>암호 + 밀폐 현장</td>
+</tr>
+<tr>
+<td>추리 난이도</td>
+<td>⭐⭐⭐⭐（72%）</td>
+<td>⭐⭐⭐（55%）</td>
+<td>⭐⭐⭐⭐（78%）</td>
+</tr>
+<tr>
+<td>안개 등급</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>독자 스스로 풀 수 있는 가능성</td>
+<td>낮음（냉지식 필요）</td>
+<td>중간（핵심 단서 관찰 가능）</td>
+<td>낮음（암호 부분은 삽화 필요）</td>
+</tr>
+<tr>
+<td>결말 기조</td>
+<td>승리</td>
+<td>희극적 반전</td>
+<td>비극적 정의</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_38">도일의 《셜록 홈즈의 귀환》에서의 서사 전략</h3>
+<p><strong>첫 번째：'시연형' 추리 대 '경쟁형' 추리</strong></p>
+<p>이 세 편（나아가 단편집 전체）은 모두 '시연형'을 지향한다—도일은 독자가 홈즈를 이기길 바라지 않고, 독자가 구경하는 가운데 지적 즐거움을 체험하길 바란다. 단서들은 종종 전문 지식을 필요로 하며（공기총에 관한 냉지식, 건축 측량, 암호학）, 일반 독자는 아무리 꼼꼼히 읽어도 독자적으로 답을 추론하기 어렵다. 이것은 후에 크리스티가 '독자에게 공평한 기회 부여'를 원칙으로 삼은 설계와는 사뭇 다르다.</p>
+<p><strong>두 번째：물리적 정밀함</strong></p>
+<p>도일은 의학 교육을 받았으며 세부사항에 대해 거의 집착에 가까운 정밀함을 보인다：총알의 버섯 모양 변형, 연기가 퍼지는 속도, 복도의 측정 오차. 이러한 세부사항은 장식이 아니라 추리 자체의 기초다. 홈즈의 '이유'에는 언제나 명확한 물리적 혹은 논리적 근거가 있다.</p>
+<p><strong>세 번째：복수를 동기로 삼는 주선율</strong></p>
+<p>세 편 중 두 편（빈 집, 노우드）은 '수년간 쌓인 개인적 원한'을 범죄 동기로 삼는다. 도일은 '오랫동안 억눌린 증오가 마침내 폭발한다'는 심리적 호를 특별히 좋아하는 것 같다—이것은 그가 창작했던 빅토리아 시대의 사회적 배경（겉으로는 억압적이면서 속으로는 격렬한 감정）과 어느 정도 호응한다.</p>
+<p><strong>네 번째：전지적 설계자로서의 홈즈</strong></p>
+<p>이 단편집의 가장 큰 서사적 특색은：홈즈가 거의 언제나 독자보다 먼저 진실을 본다는 것이며, 그의 모든 '탐문 행동'은 사실 이미 답을 알고 있는 전제 하에 물증을 수집하거나 함정을 설계하는 것이다. 그는 밀랍 인형으로 모런을 유인하고, 연기로 올다크를 몰아내고, 춤추는 사람 암호로 슬래니를 유인했다—이 세 가지 결말은 모두 홈즈가 능동적으로 설계한 연극이지, 수동적인 진실 발견이 아니다. 이것은 이 이야기들의 극적 감각을 매우 강하게 만들지만, 동시에 '탐정과 독자가 함께 더듬어 나가는' 설계에 비해 추리의 순수성 면에서 약간 뒤떨어지게 만들기도 한다.</p>
+    <a href="../index.html" class="back-link">← 홈으로</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">추리해부실</p>
+    <p>다섯 작가 · 여든여덟 작품 · 135년에 걸친 추리문학 난이도의 진화.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>福尔摩斯归来记（The Return of Sherlock Holmes） — 推理解剖室</title>
+<meta name="description" content="1894年春，福尔摩斯从莱辛巴赫瀑布「死而复生」，重返伦敦。三年间他流亡海外，藏身西藏、波斯、法国，等待时机铲除莫里亚蒂余党。这本短篇集记录了他回归后的十三个案件，从空屋设伏再出江湖，到跳舞火柴人的字谜悲剧、「被害人」实为诈骗者的诺伍德反转，每篇都展示了道尔对侦探小说类型的娴熟掌控。 ---">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-return-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-return-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-return-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-return-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-return-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-return-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-return-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-return-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif SC', serif;
+  --font-sans: 'Noto Sans SC', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">推理解剖室</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">首页</a>
+        <a href="../index.html#latest">最新分析</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="语言" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 简体中文</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-return-of-sherlock-holmes.html">繁體中文</a>
+      <a class="lang-item active" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-return-of-sherlock-holmes.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-return-of-sherlock-holmes.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/the-return-of-sherlock-holmes.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/the-return-of-sherlock-holmes.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/the-return-of-sherlock-holmes.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/the-return-of-sherlock-holmes.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/the-return-of-sherlock-holmes.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">柯南·道尔 · </div>
+    <h1>福尔摩斯归来记（The Return of Sherlock Holmes）</h1>
+    <div class="subtitle">柯南·道尔（Arthur Conan Doyle） · 短篇集（共13篇）</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">推理难度</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">迷雾等级</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="the-return-of-sherlock-holmes">福尔摩斯归来记（The Return of Sherlock Holmes）— 推理分析</h1>
+<h2 id="_1">基本信息</h2>
+<ul>
+<li>作者：柯南·道尔（Arthur Conan Doyle）</li>
+<li>出版年：1903–1904年（杂志连载）；1905年集结出版</li>
+<li>类型：短篇集（共13篇）</li>
+<li>侦探角色：夏洛克·福尔摩斯（Sherlock Holmes）</li>
+<li>核心谜团类型：whodunit / howdunit / 密室谜题 / 密码解读</li>
+</ul>
+<hr>
+<h2 id="_2">推理难度总评（集子整体）</h2>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>星级</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理难度（Deducibility）</td>
+<td>⭐⭐⭐</td>
+<td>平均收敛点约 62% — 各篇差异颇大，从极早可察觉的伪装谜题到密码破译都有</td>
+</tr>
+<tr>
+<td>迷雾等级（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>道尔善用「不可能犯罪」的表象制造困惑，但假线索铺设不若克莉丝蒂那般精密</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>本文精析三篇推理结构最具代表性的作品：
+- <strong>空屋奇案</strong>（The Adventure of the Empty House）
+- <strong>诺伍德建筑师奇案</strong>（The Adventure of the Norwood Builder）
+- <strong>跳舞火柴人奇案</strong>（The Adventure of the Dancing Men）</p>
+</blockquote>
+<hr>
+<h2 id="_3">故事梗概（集子概述）</h2>
+<p>1894年春，福尔摩斯从莱辛巴赫瀑布「死而复生」，重返伦敦。三年间他流亡海外，藏身西藏、波斯、法国，等待时机铲除莫里亚蒂余党。这本短篇集记录了他回归后的十三个案件，从空屋设伏再出江湖，到跳舞火柴人的字谜悲剧、「被害人」实为诈骗者的诺伍德反转，每篇都展示了道尔对侦探小说类型的娴熟掌控。</p>
+<hr>
+<h2 id="the-adventure-of-the-empty-house">篇目一：空屋奇案（The Adventure of the Empty House）</h2>
+<h3 id="_4">基本信息</h3>
+<ul>
+<li>类型：短篇</li>
+<li>核心谜团类型：whodunit + howdunit（不可能谋杀）</li>
+<li>谜题：帕克巷427号，陆纳德·艾得尔（Ronald Adair）陈尸上锁房间，子弹打碎头颅，但房内无任何武器，窗外也无攀登痕迹</li>
+</ul>
+<hr>
+<h3 id="_5">推理难度总评</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>星级</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理难度（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>平均收敛点约 72% — 凶手与手法的关键线索要到故事后段才齐备</td>
+</tr>
+<tr>
+<td>迷雾等级（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>「密室谋杀」的表象是最大迷雾；莫兰上校早早现身但身份未明</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_6">真相拆解</h3>
+<p><strong>真相一：谋杀手法（howdunit）</strong>
+- <strong>线索收敛点：约 72%</strong>
+- 答案：莫兰上校从对街空屋（Camden House）以德制无声空气枪（Von Herder air-gun）穿越敞开的窗户击毙艾得尔。艾得尔自己从内锁门，是因为他正计算应归还的扑克牌赢得金额，不想被打扰——并非凶手所为。</p>
+<h4 id="_7">关键线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>子弹「向外膨胀（mushroomed out）」——具有蕈状变形的软鼻扩张弹，造成即时死亡</td>
+<td>约 8%</td>
+<td>这种弹型若从室外高速穿窗射入可造成此伤，暗示非近距离枪击</td>
+</tr>
+<tr>
+<td>2</td>
+<td>花坛和地面无任何攀登痕迹，但窗为二楼</td>
+<td>约 10%</td>
+<td>排除了攀窗进入的可能，却未排除从对面射击</td>
+</tr>
+<tr>
+<td>3</td>
+<td>福尔摩斯回忆曾下令关闭百叶窗「以防空气枪」，暗示他早知莫里亚蒂阵营拥有此武器</td>
+<td>约 62%</td>
+<td><strong>关键线索</strong>：点出了空气枪的存在，并将其与莫里亚蒂阵营连结</td>
+</tr>
+<tr>
+<td>4</td>
+<td>莫兰上校出现，手持一把怪形气枪，朝对街的福尔摩斯蜡像开枪</td>
+<td>约 78%</td>
+<td>手法完整确认——无声、高准度、可穿越窗户</td>
+</tr>
+<tr>
+<td>5</td>
+<td>子弹是「软质转轮手枪弹，从空气枪中射出」——福尔摩斯的最终确认</td>
+<td>约 85%</td>
+<td>真相完整闭合：帕克巷案的弹种完全吻合</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_8">辅助线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>帕克巷对面即有空屋，位置与谋杀角度完全吻合</td>
+<td>约 12%</td>
+<td>攻击者的藏身点早已存在，只待读者注意到</td>
+</tr>
+<tr>
+<td>2</td>
+<td>艾得尔门锁从内上锁，但桌上有名单和金额计算</td>
+<td>约 9%</td>
+<td>计算牌局收支，不想被打扰而锁门——合理解释密室</td>
+</tr>
+<tr>
+<td>3</td>
+<td>帕克巷是繁忙街道，有计程车站，但没人听到枪声</td>
+<td>约 10%</td>
+<td>「无声武器」是唯一能解释此点的答案</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_9">假线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>误导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>花坛和草地无任何扰动痕迹</td>
+<td>约 10%</td>
+<td>让读者误以为无人可从外部进入，忽略了不需进入房间的远距射击</td>
+</tr>
+<tr>
+<td>2</td>
+<td>窗台「明显无法攀登」</td>
+<td>约 11%</td>
+<td>引导读者往「密室谋杀」方向思考，遮蔽「跨街射击」的可能性</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><strong>真相二：凶手身份（whodunit）</strong>
+- <strong>线索收敛点：约 65%</strong>
+- 答案：莫兰上校（Colonel Sebastian Moran），前英属印度军队，帝国最佳射手，莫里亚蒂的左右手。</p>
+<h4 id="_10">关键线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>艾得尔遇害当晚打牌的伙伴之一即是<strong>莫兰上校</strong></td>
+<td>约 14%</td>
+<td>凶手与被害人有直接接触——此为最早的身份线索，但名字淹没在人名列表中</td>
+</tr>
+<tr>
+<td>2</td>
+<td>福尔摩斯说：「除了莫里亚蒂本人外，伦敦还剩最后一个危险敌人」</td>
+<td>约 58%</td>
+<td>明确指向莫里亚蒂残余成员，与艾得尔案的凶手高度重叠</td>
+</tr>
+<tr>
+<td>3</td>
+<td>福尔摩斯确认：是莫里亚蒂的手下在莱辛巴赫的山顶上朝他丢石头</td>
+<td>约 60%</td>
+<td>确认了这个危险敌人是谁级别的人物——曾近距离见过，拥有远程射击技能</td>
+</tr>
+<tr>
+<td>4</td>
+<td>莫兰上校亲自进入空屋，向蜡像开枪</td>
+<td>约 76%</td>
+<td>凶手身份完整揭晓</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_11">辅助线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>案发前几周艾得尔曾和莫兰搭档赢得大笔赌资</td>
+<td>约 15%</td>
+<td>暗示两人有特殊关系，但当时不知这是谋杀动机</td>
+</tr>
+<tr>
+<td>2</td>
+<td>福尔摩斯的犯罪索引簿，「M」页面记满了危险罪犯</td>
+<td>约 85%</td>
+<td>莫兰上校的完整档案，印证凶手的背景与能力</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_12">假线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>误导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>艾得尔「无人认识的敌人」——验尸陪审团裁定「不知名人士谋杀」</td>
+<td>约 9%</td>
+<td>让读者接受「凶手身份完全神秘」的前提，忽略了牌友就是嫌疑人</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><strong>真相三：谋杀动机（whydunit）</strong>
+- <strong>线索收敛点：约 90%</strong>
+- 答案：艾得尔发现莫兰在牌局中作弊，并威胁要举发他。莫兰靠诈赌维生，若被踢出俱乐部等于断送财源，故杀人灭口。</p>
+<h4 id="_13">关键线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>艾得尔死前正在计算牌局赢输，桌上有各牌友的欠款清单</td>
+<td>约 9%</td>
+<td>他死前在做的事就是清算作弊带来的不当所得——但动机之所以如此，要等到最后揭晓</td>
+</tr>
+<tr>
+<td>2</td>
+<td>艾得尔与莫兰曾搭档「赢得」420磅巨款</td>
+<td>约 15%</td>
+<td>暗示可能有联手诈骗，但当时方向不明确</td>
+</tr>
+<tr>
+<td>3</td>
+<td>福尔摩斯推理：艾得尔很可能威胁要揭发莫兰，但为维护老人脸面只要求他私下退出</td>
+<td>约 92%</td>
+<td>动机在故事几乎结尾时才由福尔摩斯完整重建</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_14">推理路径重建</h3>
+<p><strong>howdunit路径：</strong> 细心的读者在读到「没有攀登痕迹但也无法从内部制造密室」（10%）时，应意识到唯一可能是跨距射击。结合「街道嘈杂却无人听到枪声」（10%），「无声武器」几乎是唯一解释——只是必须知道无声空气枪的存在。福尔摩斯在62%时提到空气枪的过往危机，是读者可以确认此推理的关键节点。</p>
+<p><strong>whodunit路径：</strong> 莫兰上校在14%时就以牌友身份出现，但他淹没在人名列表中，且案发时他在俱乐部，所以第一印象不像嫌疑人。真正能指向他的是：他兼具「远距精确射击能力」与「与被害人的财务纠纷」这两个特质。前者在62%才明确提示（空气枪威胁），后者在90%才完整揭示（诈赌动机）。</p>
+<p><strong>对读者的障碍：</strong> 道尔刻意让「如何谋杀」的谜底依赖一个冷知识——Von Herder制造的无声高压空气枪，这是前作《最后的案件》中仅有一句话提到的设定。没读过该篇的读者几乎不可能自行推导出空气枪这个答案。</p>
+<hr>
+<h3 id="_15">补充说明</h3>
+<p><strong>福尔摩斯的复活与类型意义</strong></p>
+<p>本篇具有系列小说史上最著名的「角色复活」场景：读者和华生同时经历了惊喜，道尔以老书贩的伪装让复活本身成为一个小谜题。这个设计让「福尔摩斯是否还活着」的答案不在第一页就揭晓，而是用一个完整的戏剧性揭示过程交代。</p>
+<p><strong>「空屋」作为陷阱的巧思</strong></p>
+<p>莫兰在进入空屋时，以为自己是猎人，对街窗口的蜡像是猎物。道尔精心翻转了猎人与猎物的角色——福尔摩斯用的正是莫兰猎虎时「将山羊绑在树下引虎」的手法。这个对称设计让本篇的结构相当完整。</p>
+<hr>
+<h2 id="the-adventure-of-the-norwood-builder">篇目二：诺伍德建筑师奇案（The Adventure of the Norwood Builder）</h2>
+<h3 id="_16">基本信息</h3>
+<ul>
+<li>类型：短篇</li>
+<li>核心谜团类型：whodunit + howdunit（被害人实为主谋）</li>
+<li>谜题：建筑师奥达克（Jonas Oldacre）从诺伍德家中消失，木料堆中发现疑似其焦尸残骸，他的律师继承人麦克法兰（McFarlane）遭逮捕</li>
+</ul>
+<hr>
+<h3 id="_17">推理难度总评</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>星级</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理难度（Deducibility）</td>
+<td>⭐⭐⭐</td>
+<td>平均收敛点约 55% — 福尔摩斯的疑心从头到尾都在隐隐透露，细心的读者可以相当早就猜到奥达克还活着</td>
+</tr>
+<tr>
+<td>迷雾等级（Fog Rating）</td>
+<td>⭐⭐⭐⭐</td>
+<td>道尔用「焦尸残骸」「血迹」「拇指印」层层叠加了伪证，每新增一条「物证」就把读者往错误方向推一步</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_18">真相拆解</h3>
+<p><strong>真相一：奥达克究竟死了没（核心谜底）</strong>
+- <strong>线索收敛点：约 55%</strong>
+- 答案：奥达克根本没死。他事先建好藏身室、烧了旧衣物与动物残骸伪造死亡，躲在自家走廊尽头的隐密夹层中，策动对麦克法兰的陷害计划。</p>
+<h4 id="_19">关键线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>遗嘱写在火车上，字迹潦草（好字在停车站，坏字在行进中，最差字在过转辙器时）</td>
+<td>约 20%</td>
+<td>福尔摩斯指出：「一个不打算让遗嘱生效的人，才可能如此草率地写它」——暗示遗嘱是陷阱</td>
+</tr>
+<tr>
+<td>2</td>
+<td>血迹非常轻微，只有「污迹和淡淡的褪色」——不符合如此暴力谋杀的场景</td>
+<td>约 46%</td>
+<td>血量少得异常，若真的用棍棒打死人不可能如此</td>
+</tr>
+<tr>
+<td>3</td>
+<td>保险箱中的文件有所缺失——部分契约在奥达克「遇害」后仍下落不明</td>
+<td>约 47%</td>
+<td>若他死了，谁拿走了文件？只有他本人才能带走</td>
+</tr>
+<tr>
+<td>4</td>
+<td>走廊长度比楼下对应的空间短了六英尺</td>
+<td>约 80%</td>
+<td><strong>决定性线索</strong>：建筑师在自己家里建了一间隐密藏身室</td>
+</tr>
+<tr>
+<td>5</td>
+<td>奥达克从隐藏门冲出——被烟雾惊吓现身</td>
+<td>约 85%</td>
+<td>确认他一直就在屋里</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_20">辅助线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>女管家行为可疑、言辞闪烁、眼神带着「阴暗的知情感」</td>
+<td>约 50%</td>
+<td>她是共犯，一直知道主人在哪里</td>
+</tr>
+<tr>
+<td>2</td>
+<td>奥达克过去向「柯尼利厄斯先生（Mr. Cornelius）」开了大量支票</td>
+<td>约 45%</td>
+<td>这是他自己的化名，为财务诈骗预留的第二身份</td>
+</tr>
+<tr>
+<td>3</td>
+<td>木料堆焦炭中发现的只是「裤子扣子」，厂商标记为奥达克的裁缝</td>
+<td>约 38%</td>
+<td>只有扣子，不是骨头——动物残骸配上旧衣扣制造假焦尸</td>
+</tr>
+<tr>
+<td>4</td>
+<td>麦克法兰个性温和，无预谋犯罪的心理轮廓</td>
+<td>约 5%</td>
+<td>福尔摩斯初见他即判断：「这种案子太明显，明显到让我怀疑」</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_21">假线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>误导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>房间内的血迹与木棍上的血迹</td>
+<td>约 15%</td>
+<td>让读者（和警察）认为确实发生了暴力行为，奥达克是被打死的</td>
+</tr>
+<tr>
+<td>2</td>
+<td>木料堆中的焦尸残骸</td>
+<td>约 20%</td>
+<td>最核心的假线索——道尔用「烧掉的尸骸」强化「奥达克已死」的印象</td>
+</tr>
+<tr>
+<td>3</td>
+<td>麦克法兰的拇指印（血迹）出现在走廊墙上</td>
+<td>约 62%</td>
+<td>最精彩的假线索：奥达克用封蜡上的拇指印模，蘸血后压在墙壁，伪造嫌犯留在案发现场的证据</td>
+</tr>
+<tr>
+<td>4</td>
+<td>遗嘱突然生效让麦克法兰有谋杀动机</td>
+<td>约 3%</td>
+<td>整个起点就是假的——遗嘱是诱饵</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><strong>真相二：奥达克的完整动机（whydunit）</strong>
+- <strong>线索收敛点：约 88%</strong>
+- 答案：奥达克有两个目的：(1) 诈骗债主——以「柯尼利厄斯」名义转移资产后人间蒸发；(2) 复仇——麦克法兰的母亲曾是他的未婚妻，后来甩了他，他在对方新婚当天寄去被刀划烂的照片，记仇数十年，终于借此机会让她独子去坐牢甚至上绞架。</p>
+<h4 id="_22">关键线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>麦克法兰的母亲对奥达克充满厌恶，直呼他「恶意阴险的猿猴」</td>
+<td>约 42%</td>
+<td>揭示奥达克不是陌生人，两人有旧怨</td>
+</tr>
+<tr>
+<td>2</td>
+<td>奥达克曾是麦克法兰母亲的追求者，被拒绝后在她新婚当天寄去刀划毁容的她的照片</td>
+<td>约 43%</td>
+<td><strong>关键动机线索</strong>：这个多年前的恨意就是整个阴谋的根源</td>
+</tr>
+<tr>
+<td>3</td>
+<td>福尔摩斯问：「去了Blackheath（麦克法兰家）之后再去Norwood（案发现场）」</td>
+<td>约 24%</td>
+<td>他比所有人都早知道「源头在家族关系那边」</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_23">推理路径重建</h3>
+<p>读到20%（遗嘱草率写在火车上）时，细心的读者应该感受到奇异感：一个精心设计整个骗局的人，何必在火车上仓促起草遗嘱？福尔摩斯的话「他不打算让遗嘱生效」是最早的确认信号。</p>
+<p>到46%（血迹轻微、文件缺失），两条线索同时指向「奥达克没死」。但最有力的确认需要等到80%：走廊长度不符，才能确认隐密房间的存在。</p>
+<p><strong>关键陷阱：</strong> 道尔在故事进行到一半时加入了假拇指印，这是整篇最精妙的瞬间——就在读者开始怀疑奥达克还活着的时候，却收到「物证更加确凿」的冲击，连福尔摩斯都先说「这是最终的（final）」，才趁众人不注意时偷偷笑了。他知道这枚拇指印是假的，因为他前一天已确认那面墙是干净的。</p>
+<p><strong>对读者的最大挑战：</strong> 要意识到「被害人自己伪造了所有的物证」，需要读者不仅对死亡现场保持怀疑，还要理解「建筑师在自己家里造假比任何外人都容易」。道尔埋了一条很重要的辅助线索：焦尸残骸里只找到裤子扣子，不是人类骨头。</p>
+<hr>
+<h3 id="_24">补充说明</h3>
+<p><strong>「太明显」的反转</strong></p>
+<p>道尔借福尔摩斯之口说出了推理写作的核心技巧：「一桩罪案若太过显而易见，反而值得怀疑。」（<em>It strikes me as being just a trifle too obvious.</em>）这句话既是对莱斯特拉德的批评，也是整篇故事的后设评注。道尔有意识地让读者先同意「显而易见的答案」，再用拇指印假线索给读者一次假的「确认感」，最后才逆转。</p>
+<p><strong>奥达克的「没有艺术感」</strong></p>
+<p>福尔摩斯的结语相当精彩：「他没有一个艺术家最高贵的品质——适可而止的知觉（the knowledge of when to stop）。他想让已经完美的陷阱变得更紧——反而毁了一切。」这句话直接点名了谜题的解法：罪犯因为贪心而留下了破绽。这是道尔对侦探小说设计的自我反思。</p>
+<hr>
+<h2 id="the-adventure-of-the-dancing-men">篇目三：跳舞火柴人奇案（The Adventure of the Dancing Men）</h2>
+<h3 id="_25">基本信息</h3>
+<ul>
+<li>类型：短篇</li>
+<li>核心谜团类型：密码解读（cryptography）+ whodunit</li>
+<li>谜题：希尔顿·克比特（Hilton Cubitt）庄园陆续出现以小人跳舞姿态拼成的神秘符号，妻子艾尔西看到后惊恐不已。最终克比特中枪身亡，艾尔西被发现身受重伤</li>
+</ul>
+<hr>
+<h3 id="_26">推理难度总评</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>星级</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理难度（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>平均收敛点约 78% — 密码无法独立破解（文字版省略了原版插图），凶手动机在故事后段才完整揭示</td>
+</tr>
+<tr>
+<td>迷雾等级（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>最大迷雾是「密闭房间，只有夫妻」的初始印象，暗示艾尔西可能有罪；另一迷雾是密码本身看似童趣无害</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_27">真相拆解</h3>
+<p><strong>真相一：跳舞火柴人是什么（密码本质）</strong>
+- <strong>线索收敛点：约 15%（概念），约 80%（完整破解）</strong>
+- 答案：每个跳舞小人代表一个英文字母；持旗的小人表示一个单词的结尾。这个密码系统由老帕崔克（艾尔西父亲）发明，供芝加哥犯罪帮派成员使用。</p>
+<h4 id="_28">关键线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>艾尔西看到符号后「当场昏厥」</td>
+<td>约 12%</td>
+<td>这不是儿童涂鸦的反应——确认符号对她有具体意义</td>
+</tr>
+<tr>
+<td>2</td>
+<td>第一组符号：15个小人中有4个相同（即字母E）</td>
+<td>约 15%</td>
+<td>福尔摩斯注意到频率——这是字母替换密码的关键突破口</td>
+</tr>
+<tr>
+<td>3</td>
+<td>五字母单词、有持旗记号可分隔词语、最高频符号=E</td>
+<td>约 75%</td>
+<td>福尔摩斯解码步骤的核心——先确认E，再用词语名字（ELSIE）切入</td>
+</tr>
+<tr>
+<td>4</td>
+<td>「NEVER」（艾尔西的唯一回复）提供了N、V、R</td>
+<td>约 76%</td>
+<td>密码破解加速——艾尔西用对方的系统回应，等于给了福尔摩斯钥匙</td>
+</tr>
+<tr>
+<td>5</td>
+<td>最后一条信息：ELSIE PREPARE TO MEET THY GOD</td>
+<td>约 80%</td>
+<td>从「劝说」升级为「威胁」，是犯罪即将发生的最终警号</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_29">辅助线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>艾尔西婚前坦诚有「令人不快的往事」，要求丈夫不追问</td>
+<td>约 18%</td>
+<td>她的秘密是关键背景</td>
+</tr>
+<tr>
+<td>2</td>
+<td>艾尔西曾试图阻止丈夫追查画符的陌生人</td>
+<td>约 36%</td>
+<td>她认识此人，不想让丈夫接触他</td>
+</tr>
+<tr>
+<td>3</td>
+<td>电报回复：「艾布·斯莱尼（Abe Slaney）是芝加哥最危险的罪犯」</td>
+<td>约 78%</td>
+<td>确认了寄件人身份，也确认了事态严峻</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_30">假线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>误导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>「这只是儿童涂鸦」的第一印象</td>
+<td>约 3%</td>
+<td>让读者和克比特一样轻视了威胁的严重性</td>
+</tr>
+<tr>
+<td>2</td>
+<td>案发现场所有门窗从内部锁紧，「不可能有第三人」</td>
+<td>约 57%</td>
+<td>女仆和厨娘的证词让人以为只有夫妻涉事——暗示艾尔西杀夫</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><strong>真相二：现场究竟发生了什么（howdunit）</strong>
+- <strong>线索收敛点：约 72%</strong>
+- 答案：三方均在现场。斯莱尼在窗外，艾尔西拿着钱试图打发他离开。克比特冲入手持左轮枪。克比特先开枪未中，斯莱尼几乎同时从窗外还击，克比特中弹身亡。艾尔西关上窗户后开枪自尽（未死）。<strong>整件事根本不是谋杀，而是克比特先开枪的交火。</strong></p>
+<h4 id="_31">关键线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>窗框上有<strong>第三颗子弹</strong>的弹孔</td>
+<td>约 66%</td>
+<td>「两把枪两个伤者」的数学不对——必然有第三者开枪</td>
+</tr>
+<tr>
+<td>2</td>
+<td>烟雾瞬间蔓延到楼上走廊——说明案发时窗户是开着的</td>
+<td>约 63%</td>
+<td>若窗户从头锁着，烟雾不会那么快扩散</td>
+</tr>
+<tr>
+<td>3</td>
+<td>艾尔西桌上的手提包里放着1000英镑</td>
+<td>约 64%</td>
+<td>她准备的「赎金」，本要用来买走斯莱尼的沉默</td>
+</tr>
+<tr>
+<td>4</td>
+<td>花坛上留有大型男性足迹，及一枚被弹出的弹壳</td>
+<td>约 70%</td>
+<td>斯莱尼从窗外开枪的物证</td>
+</tr>
+<tr>
+<td>5</td>
+<td>斯莱尼本人的供词：「是他先朝我开枪，我不过是还击」</td>
+<td>约 92%</td>
+<td>完整的事件重建</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_32">辅助线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>克比特的手与睡袍上都无火药痕迹，但枪是他的且已开了一发</td>
+<td>约 62%</td>
+<td>他在较远距离开枪，未必留下明显火药痕</td>
+</tr>
+<tr>
+<td>2</td>
+<td>只发现一把枪，但两人都受伤、窗框有弹孔</td>
+<td>约 61%</td>
+<td>「只有一把枪」的逻辑推算：必定有另一把武器在现场外</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_33">假线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>误导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>「她是在丈夫身旁被找到的，中枪且房门窗户从内锁住」</td>
+<td>约 55%</td>
+<td>密闭现场让艾尔西成为最大嫌疑人——读者和警察都怀疑是她杀夫后自杀未遂</td>
+</tr>
+<tr>
+<td>2</td>
+<td>「站上说是她开枪打了他，然后打了自己」</td>
+<td>约 56%</td>
+<td>乡间传言强化了错误方向</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_34">推理路径重建</h3>
+<p><strong>密码路径：</strong> 读者几乎不可能独立破解密码，因为文本描述的是抽象的「跳舞人形」，原版插图才提供了字母形状。道尔知道这一点——本篇的谜题趣味主要来自「跟着福尔摩斯看他如何从频率分析切入」，而非让读者亲自解码。这是一篇「演示型」而非「竞争型」谜题。</p>
+<p><strong>现场重建路径：</strong> 第三颗子弹的弹孔（66%）是本篇最关键的读者可自行发现的线索。若细心的读者注意到「只有两个伤者但有三颗子弹」，就应能推断出现场有三人。结合「烟雾」和「足迹」，基本可以还原斯莱尼在窗外的位置。</p>
+<p><strong>最大认知障碍：</strong> 道尔在故事后半段利用了读者对「密闭现场」的直觉反应——所有人（包括警察和读者）都倾向认为两个伤者在一个密闭空间里，必然是其中一人对另一人开枪。第三颗子弹的发现彻底推翻了这个前提。这是本篇推理设计中最精准的一击。</p>
+<hr>
+<h3 id="_35">补充说明</h3>
+<p><strong>以悲剧收场的侦探故事</strong></p>
+<p>《跳舞火柴人》在柯南·道尔的创作中有一个独特地位：它是少数侦探「太慢」导致案件无法阻止的故事。克比特死了，艾尔西险死，福尔摩斯的迟到是因为他的电报回复晚了两天。道尔让侦探英雄尝到了失败的滋味，却用精准的事后重建和对罪犯的诱捕补回了一定的正义感。</p>
+<p><strong>密码谜题的历史地位</strong></p>
+<p>跳舞火柴人密码是侦探小说史上最著名的字母替换密码之一，比爱伦·坡在《金甲虫》（The Gold-Bug, 1843）中使用的密码更具视觉冲击力。道尔在这里展示的频率分析法（最高频字母=E，从短词猜测「NEVER」，用人名「ELSIE」补完其他字母）是密码学的基础逻辑，准确、完整且可教学。</p>
+<p><strong>斯莱尼的人性刻画</strong></p>
+<p>有别于典型的「卡通反派」，道尔让斯莱尼这个芝加哥罪犯具有真实的情感深度。他真心爱着艾尔西，得知她受伤后「发出一声粗嘎的悲鸣」，并说「如果艾尔西死了，我不在乎自己怎样」。他对带着1000英镑试图打发他的「用钱解决感情问题」的反应是「让我愤怒」——这个人物有棱有角，不只是工具性的恶棍。</p>
+<hr>
+<h2 id="_36">集子整体推理设计的评析</h2>
+<h3 id="_37">三篇代表作的比较</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>空屋奇案</th>
+<th>诺伍德建筑师</th>
+<th>跳舞火柴人</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>核心谜题类型</td>
+<td>不可能谋杀 + 武器谜题</td>
+<td>被害人存活 + 伪造物证</td>
+<td>密码 + 密闭现场</td>
+</tr>
+<tr>
+<td>推理难度</td>
+<td>⭐⭐⭐⭐（72%）</td>
+<td>⭐⭐⭐（55%）</td>
+<td>⭐⭐⭐⭐（78%）</td>
+</tr>
+<tr>
+<td>迷雾等级</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>读者可自行破解的可能性</td>
+<td>低（需冷知识）</td>
+<td>中（关键线索可观察到）</td>
+<td>低（密码部分需图）</td>
+</tr>
+<tr>
+<td>结局基调</td>
+<td>胜利</td>
+<td>喜剧性逆转</td>
+<td>悲剧性正义</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_38">道尔在《福尔摩斯归来记》中的叙事策略</h3>
+<p><strong>一、「演示型」推理对「竞争型」推理</strong></p>
+<p>这三篇（乃至整个集子）都倾向于「演示型」——道尔不打算让读者赢过福尔摩斯，而是让读者在旁观中体验智识的愉悦。线索往往需要专业知识（空气枪的冷知识、建筑测量、密码学），一般读者即便仔细阅读也难以独立推导出答案。这与后来克莉丝蒂以「让读者有公平机会」为准则的设计截然不同。</p>
+<p><strong>二、物理性的精准</strong></p>
+<p>道尔受过医学训练，对细节有近乎执念的精准：子弹的蕈状变形、烟雾扩散的速度、走廊的测量误差。这些细节不是装饰，而是推理本身的基础。福尔摩斯的「所以然」永远有明确的物理或逻辑依据。</p>
+<p><strong>三、复仇作为动机的主旋律</strong></p>
+<p>三篇中有两篇（空屋、诺伍德）以「多年积累的个人恩怨」作为犯罪动机。道尔似乎对「长年压抑的仇恨终于爆发」这个心理弧线特别感兴趣——这与他创作的维多利亚时代社会背景（表面压抑、骨子里激烈的情感）有一定呼应。</p>
+<p><strong>四、福尔摩斯作为全知设计者</strong></p>
+<p>这个集子最大的叙事特色是：福尔摩斯几乎永远比读者先看到真相，他所有的「探查行动」其实都是在已知答案的前提下收集物证或设计陷阱。他设蜡像引诱莫兰，用烟雾逼出奥达克，用跳舞火柴人密码诱捕斯莱尼——这三个结局都是福尔摩斯主动设计的剧场，而非被动的真相发现。这让这些故事的戏剧感极强，但也让它们在推理纯粹性上略逊于「让侦探和读者一起摸索」的设计。</p>
+    <a href="../index.html" class="back-link">← 回到首页</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">推理解剖室</p>
+    <p>五位作者 · 八十八部作品 · 一百三十五年推理文学的难度演化</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
