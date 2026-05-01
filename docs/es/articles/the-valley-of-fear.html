@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Valle del Terror（The Valley of Fear） — Sala de Disección Detectivesca</title>
+<meta name="description" content="Esta es la más inusual en estructura de las cuatro novelas largas de Holmes escritas por Doyle: el libro se divide en dos partes completamente distintas; la pri">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-valley-of-fear.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-valley-of-fear.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-valley-of-fear.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-valley-of-fear.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-valley-of-fear.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-valley-of-fear.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-valley-of-fear.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-valley-of-fear.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Sala de Disección Detectivesca</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Inicio</a>
+        <a href="../index.html#latest">Recientes</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Idioma" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 Español</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-valley-of-fear.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-valley-of-fear.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-valley-of-fear.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/the-valley-of-fear.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/the-valley-of-fear.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/the-valley-of-fear.html">Deutsch</a>
+      <a class="lang-item active" data-lang="es" href="/Detective-Analysis/es/articles/the-valley-of-fear.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/the-valley-of-fear.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">Arthur Conan Doyle · </div>
+    <h1>El Valle del Terror（The Valley of Fear）</h1>
+    <div class="subtitle">Conan Doyle（Arthur Conan Doyle） · Novela</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Deducibilidad</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Nivel de niebla</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="el-valle-del-terrorthe-valley-of-fear-analisis-de-deducibilidad">El Valle del Terror（The Valley of Fear）— Análisis de Deducibilidad</h1>
+<h2 id="informacion-basica">Información Básica</h2>
+<ul>
+<li>Autor: Conan Doyle（Arthur Conan Doyle）</li>
+<li>Año: 1915（serialización en revista 1914-15）</li>
+<li>Género: Novela</li>
+<li>Detective: Sherlock Holmes、Dr. Watson</li>
+<li>Tipo de misterio central: whodunit（identidad del muerto）+ howdunit（cambio de cadáver）+ engaño mediante estructura narrativa doble</li>
+</ul>
+<hr>
+<h2 id="evaluacion-general-de-deducibilidad">Evaluación General de Deducibilidad</h2>
+<table>
+<thead>
+<tr>
+<th>Indicador</th>
+<th>Estrellas</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deducibilidad（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>Punto de convergencia promedio 77% — Los tres hilos de verdad tienen distintos puntos de convergencia（47%, 88%, 97%），los dos primeros requieren razonamiento avanzado en conjunto，el tercero casi exige leer el libro completo para confirmarse</td>
+</tr>
+<tr>
+<td>Nivel de niebla（Fog Rating）</td>
+<td>⭐⭐⭐⭐</td>
+<td>Muy engañoso: La Parte 1 construye cuidadosamente la ilusión de un "asesino externo que escapa"，la Parte 2 usa cien páginas de narrativa para disfrazar al detective encubierto como un verdadero criminal；las pistas falsas son plantadas activamente por los personajes，y la propia estructura narrativa es una trampa</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="sinopsis">Sinopsis</h2>
+<p>Esta es la más inusual en estructura de las cuatro novelas largas de Holmes escritas por Doyle: el libro se divide en dos partes completamente distintas; la primera es la investigación de un asesinato ocurrido en Inglaterra, y la segunda es un flashback histórico ambientado veinte años antes en una zona minera de Estados Unidos. Solo tras leer la segunda parte comprende el lector cuál es la verdad de la primera.</p>
+<p><strong>Parte 1: La Tragedia de Birlstone</strong></p>
+<p>Holmes recibe un mensaje cifrado de "Porlock", informante infiltrado en la organización criminal de Moriarty; una vez descifrado, revela que John Douglas, residente en la mansión Birlstone del condado de Sussex, Inglaterra, se encuentra en peligro. En el mismo momento en que Holmes descifra el mensaje, el inspector MacDonald de Scotland Yard llama a su puerta con la noticia de que Douglas ha sido asesinado.</p>
+<p>El caso parece claro: Douglas fue abatido de un disparo a quemarropa con una escopeta recortada de dos cañones en su estudio; el arma fue abandonada en la escena. El puente levadizo del foso que rodea la mansión estaba levantado durante la noche, y sin embargo el asesino desapareció misteriosamente, dejando solo una huella de sangre en el alféizar de la ventana y una tarjeta misteriosa con la inscripción "V.V. 341". El mejor amigo de Douglas, Cecil Barker, fue el primer testigo; declaró haber escuchado el disparo, entrado corriendo al estudio, encontrado el cadáver e inmediatamente impedido que la esposa de Douglas bajara las escaleras.</p>
+<p>A medida que avanza la investigación, Holmes descubre contradicciones crecientes: falta una mancuerna en el estudio; la huella de sangre en el alféizar coincide exactamente con la zapatilla de Barker, no con la bota de un forastero; el cadáver resulta difícil de identificar pues el rostro fue destrozado por el disparo; el anillo de matrimonio de Douglas fue retirado del dedo pero no fue robado...</p>
+<p>Holmes anuncia que va a "drenar el foso", con el objetivo de hacer salir la verdad. Ya de noche, Barker saca por la ventana del estudio un paquete atado a una mancuerna: es un conjunto completo de ropa masculina americana, con botas y un cuchillo. En ese instante, el propio Douglas emerge de un escondrijo secreto en el hueco de la pared.</p>
+<p>Se revela la verdad: el muerto no es Douglas, sino Ted Baldwin, un asesino enviado desde América por la banda de los Scowrers. Douglas luchó contra Baldwin en la oscuridad y lo mató con la propia arma del sicario; luego, aprovechando la similitud física entre ambos, cambió las ropas del atacante, vistió al cadáver con las suyas propias y escenificó el engaño con ayuda de Barker. Todo ello constituyó un asombroso cambio de cadáver cuyo propósito era hacer creer al mundo que Douglas había muerto y que la organización que lo perseguía desde hacía años abandonase la cacería.</p>
+<p><strong>Parte 2: Los Scowrers</strong>（Flashback, 1875, Valle de Vermissa, Estados Unidos）</p>
+<p>Un joven irlandés llamado Jack McMurdo llega al valle de Vermissa, Pensilvania, y rápidamente se integra en la filial local de los Scowrers, una organización que se presenta como la "Hermandad de los Hombres Libres" (Eminent Order of Freemen) pero que en realidad es una banda de asesinos. Gracias a su audacia y habilidad gana rápidamente la confianza del jefe "Black Jack" McGinty, y al mismo tiempo se enamora de Ettie Shafter, hija de su casera.</p>
+<p>McMurdo penetra en el núcleo de la banda y participa en una serie de planes criminales, aunque en repetidas ocasiones protege en secreto a las víctimas. Cuando a través del miembro Morris se entera de que "el mejor agente encubierto de la agencia Pinkerton, Birdy Edwards, está investigando a la banda", McMurdo alega "conocer a Birdy Edwards" y organiza personalmente una trampa, convocando a McGinty y otros seis líderes en su propia casa; entonces anuncia: "Birdy Edwards está aquí. Yo soy Birdy Edwards."</p>
+<p>La policía minera irrumpe en el lugar, la banda cae al completo, McGinty es condenado a la horca y los Scowrers quedan desarticulados.</p>
+<p><strong>Epílogo</strong>: Douglas (es decir, Birdy Edwards) abandona Inglaterra y, durante la travesía hacia Sudáfrica, "cae al mar y muere". Holmes lo descifra de inmediato: no fue un accidente, sino obra de Moriarty. Los supervivientes de los Scowrers habían contratado a ese consultor criminal londinense para rastrear el paradero inglés de Douglas, y el telegrama cifrado de Porlock fue la primera pista en suelo inglés de esa operación de cacería trasatlántica.</p>
+<hr>
+<h2 id="diseccion-de-la-verdad">Disección de la Verdad</h2>
+<h3 id="verdad-no-1-la-identidad-del-muerto-no-murio-douglas-sino-el-asesino-baldwin">Verdad N.º 1: La identidad del muerto — no murió Douglas, sino el asesino Baldwin</h3>
+<ul>
+<li><strong>Punto de convergencia: aprox. 47%</strong></li>
+<li>Respuesta: El cadáver es el del sicario de los Scowrers, Ted Baldwin. Douglas mató a Baldwin en defensa propia durante el combate, aprovechó la similitud física entre ambos para vestir el cadáver con su propia ropa de dormir y, con la complicidad de Barker, falsificó la escena del crimen para hacer creer al mundo que "Douglas había muerto".</li>
+</ul>
+<h4 id="pistas-clave">Pistas Clave</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Ubicación（Capítulo/%）</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Desaparición del anillo de matrimonio: el anillo matrimonial del cadáver fue retirado deliberadamente, dejando solo los dos anillos a ambos lados</td>
+<td>Parte 1, Cap. 3 / aprox. 16%</td>
+<td>Si el asesino huía precipitadamente, ¿por qué se tomó el tiempo de extraer con precisión el anillo que se encontraba en el medio y volver a colocar los anillos exteriores? Este detalle señala directamente a alguien que manipuló el cadáver con calma</td>
+</tr>
+<tr>
+<td>2</td>
+<td>La verdad de la huella de sangre: la huella en el alféizar coincide perfectamente con la zapatilla de Barker, no con la bota de un forastero</td>
+<td>Parte 1, Cap. 5 / aprox. 35%</td>
+<td>Barker fue el primer testigo y su zapatilla estaba junto al estudio. Esto significa que el rastro del "forastero que escapó por la ventana" fue fabricado intencionalmente por Barker</td>
+</tr>
+<tr>
+<td>3</td>
+<td>La mancuerna desaparecida: en el estudio solo quedaba una mancuerna; el paradero de la otra era desconocido</td>
+<td>Parte 1, Cap. 4 / aprox. 30%</td>
+<td>Holmes subraya que "el caso gira en torno a esa mancuerna"; si desaparece un objeto pesado junto al agua, la única explicación razonable es que alguien lo hundió en ella: la mancuerna sirvió de contrapeso</td>
+</tr>
+<tr>
+<td>4</td>
+<td>La descripción física de "Hargrave": las características del asesino reportadas por el hotel (cinco pies y nueve pulgadas, unos cincuenta años, cabello y barba grises, nariz aguileña) coinciden casi exactamente con la descripción del propio Douglas</td>
+<td>Parte 1, Cap. 6 / aprox. 40%</td>
+<td>Holmes señala expresamente: "Esa es casi la descripción del propio Douglas." Esta coincidencia anómala insinúa que el presunto "asesino forastero" podría ser Douglas disfrazado</td>
+</tr>
+<tr>
+<td>5</td>
+<td>El paquete en el fondo del foso: contiene ropa masculina americana completa, botas, un cuchillo y, cosida en el forro de la chaqueta, la etiqueta "Neal, fabricado en Vermissa, EE. UU."</td>
+<td>Parte 1, Cap. 7 / aprox. 47%</td>
+<td><strong>Pista clave definitiva</strong>: "Vermissa" conecta directamente con los Scowrers y el "Valle del Terror"; el paquete son las ropas con las que el sicario pensaba disfrazarse, confirmando el plan de cambio de cadáver</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-de-apoyo">Pistas de Apoyo</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Ubicación（Capítulo/%）</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El rostro del cadáver quedó completamente destruido por el disparo de perdigones, haciendo imposible su identificación</td>
+<td>Parte 1, Cap. 3 / aprox. 16%</td>
+<td>La imposibilidad de identificar el rostro es la condición previa que hace viable el plan de cambio de cadáver</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Las reacciones contradictorias de Barker: elude las preguntas en repetidas ocasiones; al referirse al anillo usa "appears" (parece) en lugar de "is" (es)</td>
+<td>Parte 1, Cap. 5 / aprox. 33%</td>
+<td>Barker sabe más de lo que dice; utiliza deliberadamente un lenguaje ambiguo para moverse en el límite de la mentira</td>
+</tr>
+<tr>
+<td>3</td>
+<td>La marca en el antebrazo de Douglas (un triángulo dentro de un círculo) es idéntica a la del cadáver</td>
+<td>Parte 1, Cap. 3 / aprox. 16%</td>
+<td>Comprensible solo más adelante: todos los miembros de los Scowrers llevaban esa marca; la misma marca en el cuerpo de Baldwin fue el detonante que llevó a Douglas a concebir el plan de cambio de cadáver</td>
+</tr>
+<tr>
+<td>4</td>
+<td>El día antes del asesinato, Douglas se mostró "nervioso e inquieto" y viajó expresamente a Tunbridge Wells</td>
+<td>Parte 1, Caps. 3-4 / aprox. 17-23%</td>
+<td>Reconoció a Baldwin en la calle y regresó a casa a prepararse; el "asesinato" posterior fue en realidad una respuesta defensiva premeditada</td>
+</tr>
+<tr>
+<td>5</td>
+<td>La tarjeta "V.V. 341": Baldwin tenía previsto colocarla junto al cadáver de Douglas (marca de la banda que significa la Logia 341 del Valle de Vermissa), pero terminó siendo colocada junto al propio cadáver de Baldwin</td>
+<td>Parte 1, Cap. 3 / aprox. 17%</td>
+<td>Esta tarjeta era originalmente un instrumento del asesino; Douglas la aprovechó en su contra, convirtiéndola en un señuelo que desorientó la investigación</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-falsas">Pistas Falsas</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Ubicación（Capítulo/%）</th>
+<th>Dirección del engaño</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>La huella de sangre en el alféizar de la ventana del estudio</td>
+<td>Parte 1, Cap. 3 / aprox. 17%</td>
+<td>Lleva a todos —incluido el inspector MacDonald— a creer que el asesino "cruzó el foso a nado y escapó", estableciendo la base física de la teoría del "asesino forastero"</td>
+</tr>
+<tr>
+<td>2</td>
+<td>La huella de barro encontrada en la esquina del alféizar</td>
+<td>Parte 1, Cap. 3 / aprox. 17%</td>
+<td>Hace creer que realmente alguien estuvo escondido detrás de la cortina esperando, en perfecta consonancia con la versión del "forastero que se ocultó previamente en la casa"</td>
+</tr>
+<tr>
+<td>3</td>
+<td>La bicicleta aparcada en los arbustos</td>
+<td>Parte 1, Cap. 4 / aprox. 24%</td>
+<td>Materializa la hipótesis del "asesino forastero que llegó en bicicleta" y hace que la policía dedique grandes esfuerzos a rastrear al dueño de esa bicicleta</td>
+</tr>
+<tr>
+<td>4</td>
+<td>El registro del hotel de Tunbridge Wells a nombre de "Hargrave" (habitación alquilada, estancia registrada)</td>
+<td>Parte 1, Cap. 6 / aprox. 40%</td>
+<td>Añade un rastro concreto y verificable al forastero, reforzando toda la teoría de la intervención externa</td>
+</tr>
+<tr>
+<td>5</td>
+<td>El comportamiento de Barker y la señora Douglas riéndose y bromeando juntos en el jardín</td>
+<td>Parte 1, Cap. 6 / aprox. 42%</td>
+<td>Lleva a los lectores (y al inspector MacDonald) a sospechar intensamente que son dos amantes cómplices en una relación adúltera, desviando la atención de la verdad sobre el cambio de cadáver</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="verdad-no-2-la-identidad-completa-de-douglas-era-el-detective-encubierto-birdy-edwards">Verdad N.º 2: La identidad completa de Douglas — era el detective encubierto Birdy Edwards</h3>
+<ul>
+<li><strong>Punto de convergencia: aprox. 88%</strong></li>
+<li>Respuesta: El verdadero nombre de John Douglas es Birdy Edwards; bajo la identidad de "Jack McMurdo" se infiltró en los Scowrers y lideró personalmente la detención de todos los cabecillas, incluido McGinty, disolviendo el reinado del terror en la zona minera. Cambió de nombre en tres ocasiones para huir, y finalmente se asentó en Inglaterra bajo la identidad de "Douglas".</li>
+</ul>
+<h4 id="pistas-clave_1">Pistas Clave</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Ubicación（Capítulo/%）</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El misterioso pasado de Douglas: nunca habla de sus años en América, porta armas con alerta constante y lleva largo tiempo con sensación de peligro inminente</td>
+<td>Parte 1, Caps. 3-5 / aprox. 15-33%</td>
+<td>Prepara el terreno para el flashback de la Parte 2; en ese momento el lector solo sabe que "tiene enemigos que lo persiguen", sin saber que él mismo es ese detective encubierto</td>
+</tr>
+<tr>
+<td>2</td>
+<td>La señora Douglas menciona que su marido, en su delirio febril, repetía el nombre de "Bodymaster McGinty"</td>
+<td>Parte 1, Cap. 5 / aprox. 34%</td>
+<td>En la Parte 2 ese nombre corresponde al jefe de los Scowrers; gritarlo desde el subconsciente sugiere que la relación entre Douglas y McGinty va mucho más allá de la de "víctima y perseguidor"</td>
+</tr>
+<tr>
+<td>3</td>
+<td>La señora Douglas menciona el "Valle del Terror": su marido dijo "Salí del Valle del Terror, ¿podremos salir de ese valle para siempre?"</td>
+<td>Parte 1, Cap. 5 / aprox. 34%</td>
+<td>El "Valle del Terror" es el escenario geográfico de la Parte 2 y el centro de la operación encubierta; esta pista conecta directamente los eventos centrales de ambas partes</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Las cartas secretas de McMurdo en la Parte 2: escribe cada día con extrema cautela; cuando Ettie lo sorprende, las destruye rápidamente, mostrando una tensión inusual</td>
+<td>Parte 2, Cap. 5 / aprox. 64%</td>
+<td>Analizando la motivación y el patrón de conducta, no se trata de "correspondencia secreta de la banda", sino de informes periódicos a una institución externa: un criminal de verdad no necesitaría esconder con tanto pánico los "asuntos de la banda"</td>
+</tr>
+<tr>
+<td>5</td>
+<td>La "confesión" de McMurdo: "Nunca maté a nadie en Chicago. Nunca falsifiqué ni un centavo en mi vida. Las monedas que os di eran tan buenas como las de verdad, pero nunca usé ese dinero en ningún otro lugar."</td>
+<td>Parte 2, Cap. 7 / aprox. 94%</td>
+<td>Desmonta oficialmente todas las identidades falsas. Es la pista de convergencia final, a apenas un 6% del final del libro.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-de-apoyo_1">Pistas de Apoyo</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Ubicación（Capítulo/%）</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Aunque McMurdo ejecuta las misiones de la banda, en el último momento siempre impide los actos de violencia más graves (detiene a Baldwin antes de que mate al viejo editor Stanger; advierte a los Willaby antes de que volen la casa)</td>
+<td>Parte 2, Caps. 3 y 5 / aprox. 68-84%</td>
+<td>Un sicario genuinamente leal a la banda no haría esto. El patrón de conducta encaja más con alguien que, teniendo una brújula moral interior, intenta "proteger a los inocentes en la medida de lo posible sin delatar su cobertura"</td>
+</tr>
+<tr>
+<td>2</td>
+<td>La conversación privada de McMurdo con Morris: conoce el secreto y guarda silencio; muestra hacia Morris una compasión humana inusual</td>
+<td>Parte 2, Cap. 4 / aprox. 75%</td>
+<td>Alguien que genuinamente abraza la violencia no necesita mantener de forma deliberada esa línea moral</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Cuando McMurdo escucha el nombre de "Birdy Edwards" reacciona con una excitación extrema y con un gesto de "ya lo entiendo todo", declarando de inmediato "lo conozco"</td>
+<td>Parte 2, Cap. 6 / aprox. 90%</td>
+<td>En retrospectiva, es el momento en que comprende que "ha llegado la hora de que el secreto salga a la luz y hay que actuar antes de que sea demasiado tarde"</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-falsas_1">Pistas Falsas</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Ubicación（Capítulo/%）</th>
+<th>Dirección del engaño</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El recorte de periódico sobre el asesinato que presenta McMurdo (el caso del tiroteo a Jonas Pinto en Chicago)</td>
+<td>Parte 2, Cap. 2 / aprox. 58%</td>
+<td>Hace creer a McGinty y a toda la banda que es un fugitivo criminal de verdad, estableciendo la base de su credibilidad dentro del grupo; el lector también es guiado a aceptar su historial delictivo como auténtico</td>
+</tr>
+<tr>
+<td>2</td>
+<td>McMurdo exhibe monedas falsas de excelente factura</td>
+<td>Parte 2, Cap. 2 / aprox. 60%</td>
+<td>Refuerza la imagen de "curtido criminal con grandes habilidades técnicas", haciéndole difícil al lector imaginarlo como un impostor</td>
+</tr>
+<tr>
+<td>3</td>
+<td>El amor de McMurdo por Ettie: sincero, apasionado, a veces casi angustiado</td>
+<td>Parte 2, a lo largo de toda la trama / 50-87%</td>
+<td>La intensa trama emocional lleva al lector a verlo como una persona real que vive de verdad, no como alguien interpretando un papel para cumplir una misión</td>
+</tr>
+<tr>
+<td>4</td>
+<td>McMurdo "planea" personalmente la operación para atrapar a Birdy Edwards e insinúa a los miembros de la banda que "ese hombre está en la palma de su mano"</td>
+<td>Parte 2, Cap. 6 / aprox. 90-92%</td>
+<td>El lector es llevado a creer que está tendiendo una trampa asesina de verdad; solo en el último instante se comprende que toda la situación estaba completamente invertida</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="verdad-no-3-el-cerebro-en-la-sombra-moriarty-contratado-por-los-supervivientes-de-los-scowrers-mato-finalmente-a-douglas">Verdad N.º 3: El cerebro en la sombra — Moriarty, contratado por los supervivientes de los Scowrers, mató finalmente a Douglas</h3>
+<ul>
+<li><strong>Punto de convergencia: aprox. 97%</strong>（revelado en el epílogo）</li>
+<li>Respuesta: Detrás de la misión de Baldwin para asesinar a Douglas en Inglaterra se encontraba el profesor Moriarty como coordinador. Los supervivientes de los Scowrers (Baldwin, los hermanos Willaby y otros miembros que habían cumplido sus condenas), tras años de fracasos en su persecución, contrataron a Moriarty con una suma enorme para que rastrease el escondite inglés de Douglas. El telegrama cifrado del inicio de la Parte 1 es la primera pista en suelo inglés de esa operación de cacería trasatlántica, filtrada desde dentro de la red criminal de Moriarty. Al final, cuando llegan las noticias de que Douglas "cayó al mar", Holmes descifra de inmediato que fue un asesinato con "sello de maestro", no un accidente.</li>
+</ul>
+<h4 id="pistas-clave_2">Pistas Clave</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Ubicación（Capítulo/%）</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El telegrama cifrado al inicio del libro — procedente de Porlock, informante infiltrado en la organización de Moriarty, advirtiendo que "Douglas corre peligro en Birlstone"</td>
+<td>Parte 1, Cap. 1 / aprox. 1%</td>
+<td>Si la inteligencia sobre la operación de cacería pudo filtrarse, es porque la organización de Moriarty tiene puntos débiles (Porlock); que Douglas fuera vigilado por alguien bien informado indica que se trata de un encargo organizado, no de una venganza personal</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Holmes lanza una advertencia a Douglas al final de la Parte 1: "Su peligro puede ser mayor de lo que usted cree"</td>
+<td>Parte 1, Cap. 7 / aprox. 48%</td>
+<td>Holmes ya intuye que hay una fuerza de orden superior actuando en segundo plano, aunque el lector aún no puede confirmarlo</td>
+</tr>
+<tr>
+<td>3</td>
+<td>La nota anónima "Dear me, Mr. Holmes. Dear me!"</td>
+<td>Epílogo / aprox. 96%</td>
+<td>Encaja con el estilo habitualmente frío y sarcástico de Moriarty (visible también en "El problema final"), insinuando que él mismo entró en escena</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Al llegar la noticia de que Douglas "cayó al mar", Holmes comenta: "Reconozco la mano del gran maestro. Cuando veo a Moriarty, lo sé. Estos son métodos de Londres, no de América."</td>
+<td>Epílogo / aprox. 97%</td>
+<td>Pista de confirmación final. La precisión con la que el asesinato fue disfrazado de accidente supera con creces el estilo tosco de los Scowrers; es la operación característica del consultor criminal londinense</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-falsas_2">Pistas Falsas</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Ubicación（Capítulo/%）</th>
+<th>Dirección del engaño</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Toda la Parte 2 presenta a Baldwin y a los Scowrers como la amenaza principal</td>
+<td>Parte 2 completa / 49-93%</td>
+<td>Lleva al lector a creer que "la banda americana" es el origen y el final del problema, ignorando que detrás hay una organización criminal europea que coordina todo</td>
+</tr>
+<tr>
+<td>2</td>
+<td>La versión superficial del informe de Barker: "Douglas cayó al mar y murió durante la travesía a Sudáfrica"</td>
+<td>Epílogo / aprox. 96%</td>
+<td>Una muerte "accidental" en alta mar resulta completamente creíble en ese contexto; el lector tiende a aceptarla, mientras Holmes la descifra de inmediato</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="reconstruccion-del-camino-deductivo">Reconstrucción del Camino Deductivo</h2>
+<p><strong>Primer camino: identificar la verdadera identidad del muerto</strong></p>
+<p>Al llegar aproximadamente al 16% (Parte 1, Capítulo 3), el lector atento debería sentirse desconcertado por el misterio del anillo: un asesino que huye precipitadamente, ¿pudo realmente extraer con precisión en menos de un minuto el anillo del medio y volver a colocar los anillos exteriores? Este detalle resulta casi imposible de explicar si fue obra de un forastero, e insinúa que alguien estuvo junto al cadáver durante un tiempo considerable después del crimen.</p>
+<p>Al llegar aproximadamente al 30% (la mancuerna desaparecida), la pista de que "un objeto pesado ha desaparecido junto al agua" ya resulta evidente; el lector inteligente puede inferir en este punto que alguien hundió algo en el foso.</p>
+<p>Al llegar aproximadamente al 35% (la zapatilla de Barker coincide con la huella de sangre), el hecho de que la escena fue "falsificada deliberadamente" se vuelve casi seguro. Pero surge una nueva pregunta: ¿por qué querría Barker fabricar rastros de huida? Si fuera el asesino, no tendría motivo; si está protegiendo a alguien, ¿a quién?</p>
+<p>Al llegar aproximadamente al 40% ("Hargrave" se parece enormemente a Douglas), el lector más alerta debería construir en ese momento una hipótesis subversiva: quizás el muerto no es Douglas, sino que "Hargrave" era el verdadero asesino y Douglas lo mató en defensa propia, aprovechando su parecido físico para cambiar las ropas y fingir su propia muerte.</p>
+<p>Esta deducción se confirma plenamente en el 47% (el paquete en el fondo del foso). La etiqueta del sastre de Vermissa conecta directamente la chaqueta con el "Valle del Terror" y los Scowrers: las ropas del sicario estaban en el fondo del agua, y todas las piezas del rompecabezas encajan.</p>
+<p><strong>Segundo camino: la verdadera identidad de McMurdo</strong></p>
+<p>La Parte 2 comienza aproximadamente en el 50%. En apariencia, es una historia completamente nueva: el protagonista es McMurdo, un joven criminal que se une a una banda minera.</p>
+<p>Sin embargo, si el lector es suficientemente atento, en torno al 65% (McMurdo escribiendo cartas, sorprendido por Ettie) debería empezar a dudar: alguien que realmente se identifica con la banda no necesitaría sentirse tan aterrado por "la correspondencia de los asuntos de la banda"; su reacción es claramente desproporcionada y se asemeja más a alguien que oculta un secreto de naturaleza completamente diferente.</p>
+<p>En torno al 75% (la conversación de McMurdo con Morris y su patrón de protección encubierta a las víctimas en varias operaciones), se acumula en la mente del lector una disonancia cognitiva: la lógica de comportamiento de este hombre no corresponde a la de un miembro leal a la banda; se parece más a alguien con una brújula moral interior que intenta "proteger a los inocentes en la medida de lo posible sin revelar su cobertura".</p>
+<p>En torno al 90% (la reacción exagerada al escuchar el nombre de "Birdy Edwards"), aparece la mayor insinuación de todas: que alguien reaccione con tanta intensidad personal y urgencia de acción inmediata al escuchar el nombre de un detective desconocido que supuestamente no tiene nada que ver con él resulta inexplicable.</p>
+<p>Finalmente, en el 94%, McMurdo declara con su propia boca: "Yo soy Birdy Edwards."</p>
+<p><strong>Tercer camino: la manipulación de Moriarty</strong></p>
+<p>Este camino queda sembrado desde el 1% del libro, pero no converge hasta el 97%. Solo tras leer el epílogo puede el lector mirar atrás y encajar todas las piezas: desde el telegrama cifrado de la primera página hasta el "accidente" en alta mar del final, la misma mano controlaba todo.</p>
+<hr>
+<h2 id="notas-adicionales">Notas Adicionales</h2>
+<p><strong>El lugar singular de <em>El Valle del Terror</em> en la obra de Doyle</strong></p>
+<p>Es la más audaz en estructura de las cuatro novelas largas de Holmes escritas por Doyle. En esencia es "una historia dentro de otra historia": la Parte 1 es un misterio de asesinato en una mansión inglesa, la Parte 2 es un relato realista sobre el mundo criminal americano, y la relación narrativa entre ambas partes no es un simple "flashback recordatorio", sino una verdadera inversión estructural: la Parte 2 es la llave indispensable para comprender la verdad de la Parte 1.</p>
+<p>Doyle emplea aquí un inusual engaño narrativo en dos capas:</p>
+<ul>
+<li><strong>Primera capa de engaño (Parte 1)</strong>: construye en escena pruebas falsas meticulosamente elaboradas para hacer creer tanto al lector como al detective que un asesino forastero existió realmente y escapó con éxito</li>
+<li><strong>Segunda capa de engaño (Parte 2)</strong>: mediante casi la totalidad de la extensión narrativa, hace que el "pasado criminal" de McMurdo resulte increíblemente real hasta el último instante, cuando todo se invierte</li>
+</ul>
+<p>Cabe señalar que ambas capas de engaño son técnicamente "justas": Doyle sí colocó todas las pistas en el texto; simplemente el lector suele pasarlas por alto por confiar en las convenciones narrativas habituales.</p>
+<p><strong>La ironía de la tarjeta "V.V. 341"</strong></p>
+<p>Baldwin llevaba esta tarjeta con la intención de colocarla junto al cadáver de Douglas, como declaración formal de que "los Scowrers han ajustado cuentas con este hombre". Sin embargo, tras matar Douglas a Baldwin, la tarjeta terminó junto al propio cadáver de Baldwin: una ironía gélida. El símbolo enviado para proclamar una "muerte" se convirtió en el símbolo de la muerte del propio asesino. Este detalle es extraordinariamente importante dentro del sistema de pistas, porque mantiene a los investigadores tratando de buscar una explicación para "V.V. 341" sin que a nadie se le ocurra preguntarse "¿de quién era esta tarjeta y contra quién iba dirigida?".</p>
+<p><strong>El enigma de la mancuerna como la más brillante "pista contraintuitiva" de Holmes</strong></p>
+<p>De todas las deducciones de la Parte 1, "la mancuerna desaparecida" es la pista más cuidadosamente diseñada por Doyle. La mancuerna es un objeto cotidiano fácil de ignorar ("simplemente olvidaron la otra"), pero esconde una lógica ineludible: un atleta no entrena solo un lado del cuerpo; y la desaparición de un objeto pesado junto al agua, en el contexto de "necesidad de esconder un paquete", solo admite una interpretación. Holmes dice que "el caso gira en torno a esa mancuerna"; es el acertijo más típico del estilo "está a la vista y nadie lo ve" de toda la historia: la pista está delante de todos, lo único que falta es el ángulo desde el que hacerse la pregunta correcta.</p>
+<p><strong>Comparación con otras novelas largas de Holmes</strong></p>
+<table>
+<thead>
+<tr>
+<th>Novela</th>
+<th>Misterio central</th>
+<th>Estructura dual</th>
+<th>Diseño de engaño</th>
+<th>Deducibilidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Estudio en Escarlata</em></td>
+<td>whodunit + howdunit</td>
+<td>Sí（flashback americano）</td>
+<td>Moderado</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td><em>El signo de los cuatro</em></td>
+<td>whodunit + tesoro</td>
+<td>No（lineal）</td>
+<td>Moderado</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td><em>El perro de los Baskerville</em></td>
+<td>whodunit + ilusión sobrenatural</td>
+<td>No</td>
+<td>Alto（niebla del perro fantasma）</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td><em>El Valle del Terror</em></td>
+<td>identidad del muerto + identidad del infiltrado + cerebro en la sombra</td>
+<td>Sí（doble hilo inglés-americano, cada uno clave del otro）</td>
+<td>Muy alto（engaño en dos capas）</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+</tbody>
+</table>
+<p><strong>La función narrativa de Moriarty al inicio y al final</strong></p>
+<p>En el diseño de Doyle, esta novela cumple una función especial dentro del universo holmesiano: conecta <em>El problema final</em> (tras la muerte de Moriarty) con la línea principal del universo de Holmes. El hecho de que los supervivientes americanos de los Scowrers contrataran a Moriarty demuestra que su radio de acción era transnacional e indiferente a cualquier consideración moral; y que Douglas, sin importar cómo huyera, no podía escapar de él, ilustra el verdadero terror de Moriarty: no reside en la violencia directa, sino en que "siempre puede encontrarte y siempre puede encargar un trabajo limpio". La frase de Holmes "¡Dadme tiempo, dadme tiempo!" es al mismo tiempo un gesto de consuelo hacia Barker y una advertencia al lector: este adversario aún no ha caído definitivamente.</p>
+    <a href="../index.html" class="back-link">← Volver al inicio</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Sala de Disección Detectivesca</p>
+    <p>Cinco autores · ochenta y ocho obras · 135 años de evolución de la dificultad en la narrativa policíaca.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
