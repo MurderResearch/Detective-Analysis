@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>最后致敬：福尔摩斯晚期故事集（His Last Bow） — 推理解剖室</title>
+<meta name="description" content="本集收录七篇福尔摩斯晚期案件，横跨政治阴谋、异国巫毒、间谍战争等主题： 1. 威斯特里亚寓所历险（The Adventure of Wisteria Lodge）：英国绅士史考特·艾克里斯被卷入一场涉及拉丁美洲流亡独裁者的复仇谋杀。 2. 布鲁斯—帕廷顿计划历险（The Adventure of the Bruce-P">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/his-last-bow.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/his-last-bow.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/his-last-bow.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/his-last-bow.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/his-last-bow.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/his-last-bow.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/his-last-bow.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/his-last-bow.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif SC', serif;
+  --font-sans: 'Noto Sans SC', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">推理解剖室</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">首页</a>
+        <a href="../index.html#latest">最新分析</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="语言" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 简体中文</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/his-last-bow.html">繁體中文</a>
+      <a class="lang-item active" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/his-last-bow.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/his-last-bow.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/his-last-bow.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/his-last-bow.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/his-last-bow.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/his-last-bow.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/his-last-bow.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">柯南·道尔 · </div>
+    <h1>最后致敬：福尔摩斯晚期故事集（His Last Bow）</h1>
+    <div class="subtitle">柯南·道尔（Arthur Conan Doyle） · 短篇集（共七篇）</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">推理难度</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">迷雾等级</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="his-last-bow">最后致敬：福尔摩斯晚期故事集（His Last Bow）— 推理分析</h1>
+<h2 id="_1">基本信息</h2>
+<ul>
+<li>作者：柯南·道尔（Arthur Conan Doyle）</li>
+<li>出版年：1917年（各篇陆续发表于1908–1917年间）</li>
+<li>类型：短篇集（共七篇）</li>
+<li>侦探角色：夏洛克·福尔摩斯（Sherlock Holmes）</li>
+<li>核心谜团类型：whodunit / howdunit / 间谍惊悚</li>
+</ul>
+<hr>
+<h2 id="_2">推理难度总评（整集平均）</h2>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>星等</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理难度（Deducibility）</td>
+<td>⭐⭐⭐</td>
+<td>平均收敛点约 62% — 各篇差异明显，最精彩的几篇都在中段后才收敛，但线索本质上公平</td>
+</tr>
+<tr>
+<td>迷雾等级（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>中度误导；道尔擅长用角色的视角偏差与舆论压力创造红鲱鱼，而非复杂的假线索网络</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_3">故事梗概（各篇概览）</h2>
+<p>本集收录七篇福尔摩斯晚期案件，横跨政治阴谋、异国巫毒、间谍战争等主题：</p>
+<ol>
+<li><strong>威斯特里亚寓所历险</strong>（The Adventure of Wisteria Lodge）：英国绅士史考特·艾克里斯被卷入一场涉及拉丁美洲流亡独裁者的复仇谋杀。</li>
+<li><strong>布鲁斯—帕廷顿计划历险</strong>（The Adventure of the Bruce-Partington Plans）：潜艇机密图纸失窃，一具尸体被置于伦敦地铁车厢顶部——这是道尔最精心设计的密室谜题之一。</li>
+<li><strong>魔鬼的脚历险</strong>（The Adventure of the Devil's Foot）：康瓦尔荒野上，一个家庭的成员因不明原因死亡或疯癫，毫无任何外力入侵的痕迹。</li>
+<li><strong>红圈社历险</strong>（The Adventure of the Red Circle）：一个神秘房客拒绝与房东接触，通过报纸广告栏进行秘密通讯，事涉意大利黑手党。</li>
+<li><strong>费兰西丝·卡法克斯女士失踪案</strong>（The Disappearance of Lady Frances Carfax）：一位孤身旅行的贵妇在欧洲离奇失踪，生死未卜。</li>
+<li><strong>垂死侦探历险</strong>（The Adventure of the Dying Detective）：福尔摩斯躺在贝克街，声称染上了致命的热带病，他拒绝接受华生的治疗……</li>
+<li><strong>最后致敬：福尔摩斯的战时服务</strong>（His Last Bow）：1914年8月，第一次世界大战前夕，一个名叫「阿尔塔蒙特」的美裔爱尔兰人，接近德国首席间谍冯·博克……</li>
+</ol>
+<hr>
+<h2 id="_4">精选三篇深度分析</h2>
+<p>本集七篇故事在推理设计上差异悬殊。以下精选三篇推理性最强、谜题最完整者进行深度剖析。</p>
+<hr>
+<h2 id="the-adventure-of-the-bruce-partington-plans">第一篇：布鲁斯—帕廷顿计划历险（The Adventure of the Bruce-Partington Plans）</h2>
+<h3 id="_5">真相拆解</h3>
+<p><strong>故事背景</strong>：英国海军机密潜艇图纸失窃，年轻职员卡多根·韦斯特的尸体被发现陈列于伦敦地铁轨道旁，身上带有七份图纸，但最关键的三份下落不明。所有表面证据都指向韦斯特是窃取图纸的叛国贼。</p>
+<hr>
+<h3 id="howdunit">真相一：韦斯特的死亡方式（howdunit）</h3>
+<ul>
+<li><strong>线索收敛点：约 55%</strong></li>
+<li>答案：韦斯特的尸体并非从行进的列车上落下——他死亡后被放置在静止列车的顶部，当列车通过弯道时因晃动而跌落。</li>
+</ul>
+<h4 id="_6">关键线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（约百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>尸体附近几乎没有血迹，但头骨严重碎裂</td>
+<td>约 28%</td>
+<td>若从行进列车摔落，血迹应大量分布于轨道；血迹稀少意味着死亡发生在别处</td>
+</tr>
+<tr>
+<td>2</td>
+<td>死亡地点是Aldgate站，正好位于一处弯道和分叉道岔上方</td>
+<td>约 30%</td>
+<td>福尔摩斯对「道岔」（points）反复沉吟——置于车顶的物体在此处才会滑落</td>
+</tr>
+<tr>
+<td>3</td>
+<td>欧伯施坦因的住宅后窗直接面向地铁隧道的地面路段</td>
+<td>约 48%</td>
+<td>列车在此地段因路线交叉而定期停靠等待——这是置放尸体的唯一可能窗口</td>
+</tr>
+<tr>
+<td>4</td>
+<td>后窗窗台上发现煤灰中的摩擦痕迹和微量血迹</td>
+<td>约 53%</td>
+<td>确认了「尸体从此窗放置上车顶」的完整犯罪现场</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_7">辅助线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（约百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>韦斯特身上没有车票</td>
+<td>约 18%</td>
+<td>若他是自己搭车，必有车票；无票则说明他未曾购票进站</td>
+</tr>
+<tr>
+<td>2</td>
+<td>列车车厢顶部呈微弧形且无护栏</td>
+<td>约 50%</td>
+<td>确认尸体是被「置放」而非自行攀爬上去</td>
+</tr>
+<tr>
+<td>3</td>
+<td>伦敦地铁在西伦敦多处露天路段，部分地点位于住宅后方高度相近</td>
+<td>约 48%</td>
+<td>从地图上确认欧伯施坦因家「通往铁路」的地利条件</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_8">假线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（约百分比）</th>
+<th>误导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>韦斯特曾向未婚妻谈论机密的重要性，暗示他知道机密的价值</td>
+<td>约 35%</td>
+<td>让读者与侦探们认定韦斯特出售机密、死在逃跑途中</td>
+</tr>
+<tr>
+<td>2</td>
+<td>韦斯特突然抛下未婚妻奔入大雾中，行为鬼祟</td>
+<td>约 33%</td>
+<td>所有行为模式都符合「做贼心虚的叛国者」形象，实则他是发现了真正的窃贼并跟踪追踪</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="whodunit">真相二：真正的窃贼是谁（whodunit）</h3>
+<ul>
+<li><strong>线索收敛点：约 70%</strong></li>
+<li>答案：真正的窃贼是科林汀·华特上校（Colonel Valentine Walter），即已故机密局长詹姆斯·华特爵士的弟弟。他因股市债务铤而走险，用弟弟钥匙的印模复制钥匙，将图纸出售给德国特工欧伯施坦因。</li>
+</ul>
+<h4 id="_9">关键线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（约百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>除了詹姆斯·华特爵士，只有高级职员西德尼·强生持有办公室钥匙；但图纸从桌外可能被观察到（窗户缝隙）</td>
+<td>约 40%</td>
+<td>排除强生后，指向持有钥匙的詹姆斯爵士本人或其家人</td>
+</tr>
+<tr>
+<td>2</td>
+<td>詹姆斯爵士在消息传出后立即崩溃，怀着耻辱去世</td>
+<td>约 37%</td>
+<td>他死得如此突然，隐含他「知道是谁干的」——最可能的嫌疑人是他的弟弟</td>
+</tr>
+<tr>
+<td>3</td>
+<td>报纸广告栏中「皮埃罗」（Pierrot）的通讯最后一则：「只有我们两人，两次敲门」——暗示联络人对Caulfield Gardens的地点知情</td>
+<td>约 60%</td>
+<td>只有直接参与者才知道这个地址</td>
+</tr>
+<tr>
+<td>4</td>
+<td>欧伯施坦因的备用金属盒中找到一系列加密通讯——是「皮埃罗」联络上家的记录</td>
+<td>约 65%</td>
+<td>确认了间谍联络网的存在，并由此推算出另一端的人选范围</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_10">辅助线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（约百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>韦斯特曾「察觉某人靠近办公室」而甩开未婚妻追踪——那个人是他认识的官员</td>
+<td>约 55%</td>
+<td>若是陌生人，韦斯特会立刻报警而非亲自跟踪</td>
+</tr>
+<tr>
+<td>2</td>
+<td>窗台月桂树枝的折损与土地印迹，显示有人从外部窥视窗内情况</td>
+<td>约 43%</td>
+<td>窃贼熟悉办公室配置，但需要确认图纸位置——是知情人而非外部间谍</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_11">假线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（约百分比）</th>
+<th>误导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>身上带着七份图纸的死亡职员</td>
+<td>全篇前半</td>
+<td>最直接的推断——韦斯特是叛国贼，却死在交易途中；读者与官员们几乎全部被这条线索牵着走</td>
+</tr>
+<tr>
+<td>2</td>
+<td>德国特工欧伯施坦因主动离开英国</td>
+<td>约 45%</td>
+<td>让读者以为「歹徒已逃脱」，而非意识到他其实是在等待买家回来完成交易</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_12">推理路径重建</h3>
+<p><strong>第一条推理路径（howdunit：尸体如何出现）</strong></p>
+<p>第一个疑点在约 28% 出现——血迹稀少但伤势严重，这本身就是矛盾。阅读细心的读者在此刻就应怀疑「死亡地点不在轨道旁」。到 30% 福尔摩斯凝视道岔的场景，是作者给读者的明确暗示：问题不在「怎么落下」而在「从哪里落下」。真正的确认点在约 53%——发现欧伯施坦因后窗窗台的痕迹，howdunit谜题至此完全解开。</p>
+<p><strong>第二条推理路径（whodunit：谁是真正的窃贼）</strong></p>
+<p>这条路径更难走。约 37% 的詹姆斯爵士猝死，是一个微妙却重要的信号。他作为业内公认的「名誉无可质疑」的人物，却因一个「涉及他部门的丑闻」而崩溃——意味着他掌握的知识让他无法承受。推断其弟弟科林汀是嫌疑人，需要读者在70%左右将所有线索串联。福尔摩斯用「皮埃罗广告陷阱」捕捉到的，却是一个令所有人意外的人——包括福尔摩斯自己。</p>
+<hr>
+<h2 id="the-adventure-of-the-devils-foot">第二篇：魔鬼的脚历险（The Adventure of the Devil's Foot）</h2>
+<h3 id="_13">真相拆解</h3>
+<p><strong>故事背景</strong>：康瓦尔荒野，特雷根尼斯家族的三名成员在一夜之间遭遇噩运：妹妹布兰达猝死，两名哥哥精神崩溃。现场无外人入侵的迹象，窗户紧闭，门未被破坏。数日后，通报此事的弟弟莫蒂默·特雷根尼斯自己也以同样面目死亡。</p>
+<hr>
+<h3 id="howdunit_1">真相一：致命的方式（howdunit）</h3>
+<ul>
+<li><strong>线索收敛点：约 75%</strong></li>
+<li>答案：凶手（莫蒂默）使用一种西非秘密药粉「魔鬼的脚根」（devil's-foot root），加入壁炉炭火中，使药粉挥发产生令人疯狂乃至死亡的毒气。而同样的手法后来被探险家史坦达尔博士（Dr. Sterndale）用以对莫蒂默施行报复。</li>
+</ul>
+<h4 id="_14">关键线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（约百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>死亡场景中有一个点燃的壁炉，而事发后入室者都感到「窒息感」或晕眩</td>
+<td>约 22%</td>
+<td>最早的物理线索——「密闭空间中的燃烧」是中毒的共同前提</td>
+</tr>
+<tr>
+<td>2</td>
+<td>第二起事件（莫蒂默之死）发生在房间高度密闭且有一盏异常点亮的油灯的环境中</td>
+<td>约 58%</td>
+<td>油灯在大白天燃着（消耗时间显示是刻意的），与第一起事件的壁炉呼应——「有东西在燃烧中挥发毒气」</td>
+</tr>
+<tr>
+<td>3</td>
+<td>油灯遮板（talc shield）上残留灰烬与未燃尽的棕红色粉末</td>
+<td>约 62%</td>
+<td>决定性物证——福尔摩斯取样后亲身实验，证明此粉末可制造恐怖幻觉直至死亡</td>
+</tr>
+<tr>
+<td>4</td>
+<td>史坦达尔博士此前向莫蒂默展示过来自西非的「魔鬼的脚根」药粉，并解说其效果和无法被欧洲医学侦测的特性</td>
+<td>约 90%（博士自白）</td>
+<td>最后的关键：案件的毒药来源与犯罪手法在此完全揭露</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_15">辅助线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（约百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>三名受害者死前均面带「极度惊恐」的扭曲表情，但无身体外伤</td>
+<td>约 15%</td>
+<td>排除物理暴力，指向某种强烈刺激神经的精神性毒素</td>
+</tr>
+<tr>
+<td>2</td>
+<td>房屋女管家听到的是正常动静，无陌生人进入</td>
+<td>约 18%</td>
+<td>排除外部入侵者，毒药是在室内施放的，且使用者本身不在场</td>
+</tr>
+<tr>
+<td>3</td>
+<td>福尔摩斯注意到花坛地面上的脚印，把水壶打翻「意外」地制造出莫蒂默清晰的脚印样本</td>
+<td>约 45%</td>
+<td>确认莫蒂默离开方向为教区长公馆，而非其他方向——排除他绕道作案的可能，但同时暗示福尔摩斯仍在考量莫蒂默的嫌疑</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_16">假线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（约百分比）</th>
+<th>误导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>弟弟莫蒂默说有人「在花园窗外晃动」——暗示外部神秘力量</td>
+<td>约 14%</td>
+<td>引导读者往「外部入侵者」方向思考，甚至让神父和村民联想到「恶魔」</td>
+</tr>
+<tr>
+<td>2</td>
+<td>史坦达尔博士突然从普利茅斯折返，行踪可疑，且拒绝说明电报来源</td>
+<td>约 40%</td>
+<td>让读者怀疑他才是凶手（他确实后来杀了莫蒂默，但不是第一起事件的凶手）</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="whodunit_1">真相二：谁是凶手（whodunit）</h3>
+<ul>
+<li><strong>线索收敛点：约 80%</strong></li>
+<li>答案：<strong>第一起案件</strong>的凶手是弟弟莫蒂默·特雷根尼斯，他为了独吞家族财产（让其他成员变成无民事行为能力的精神病患），用药粉毒害了兄姊。<strong>第二起案件</strong>（莫蒂默之死）的凶手则是探险家史坦达尔博士，他为被杀害的情人布兰达复仇。</li>
+</ul>
+<h4 id="_17">关键线索（第一起：莫蒂默之作案）</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（约百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>案发时，只有莫蒂默不在场（他声称已先离开），而受害者都是他的兄姊</td>
+<td>约 15%</td>
+<td>最基础的「不在场却受益」法则——但因他第一个报案，让读者先入为主认为他是发现者而非凶手</td>
+</tr>
+<tr>
+<td>2</td>
+<td>案发前，莫蒂默曾与家人有过一段「已和解的金钱纠纷」——但真正和解了吗？</td>
+<td>约 23%</td>
+<td>动机线索；道尔轻描淡写地带过，但这段旧怨埋下了怀疑的种子</td>
+</tr>
+<tr>
+<td>3</td>
+<td>史坦达尔博士确认莫蒂默在案发前几周曾前往其小屋，见过「魔鬼的脚根」药粉</td>
+<td>约 90%</td>
+<td>确认了获取毒药的机会——在博士自白中完全揭露</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_18">关键线索（第二起：史坦达尔之复仇）</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（约百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>莫蒂默房间窗台的碎石来自史坦达尔小屋的砾石堆，而非教区长公馆的花园</td>
+<td>约 80%</td>
+<td>福尔摩斯的核心物证——石头的来源直接指向史坦达尔</td>
+</tr>
+<tr>
+<td>2</td>
+<td>史坦达尔承认曾深爱布兰达；布兰达是本案的死者之一</td>
+<td>约 42%</td>
+<td>动机的确立；但道尔早先轻描为「表亲关系」，掩盖了感情深度</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_19">假线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（约百分比）</th>
+<th>误导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>史坦达尔在普利茅斯「接到电报后立即折返」，行为神秘</td>
+<td>约 40%</td>
+<td>读者以为他是第一起案件的嫌疑人，但他其实是收到莫蒂默死亡前就返回的——为了追查凶手（正是莫蒂默）并施行个人正义</td>
+</tr>
+<tr>
+<td>2</td>
+<td>莫蒂默是「第一个通报者」，且全程表现得像一个深受冲击的受害者家属</td>
+<td>约 15–50%</td>
+<td>最大的身份伪装——道尔利用「报案者等于受害者」的阅读惯性，让莫蒂默逍遥法外直到几乎全篇结束</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_20">推理路径重建</h3>
+<p><strong>第一条推理路径（howdunit）</strong></p>
+<p>「密闭空间+燃烧+集体恐惧」的组合是早期线索，但光靠这些还不足以猜出毒药。读者只能在约75%（福尔摩斯亲身实验之后）确认机制。在此之前，有效的推论方向是「某种挥发性毒药被放入火源」，但具体物质直到史坦达尔的自白才揭晓。</p>
+<p><strong>第二条推理路径（whodunit）</strong></p>
+<p>莫蒂默的嫌疑最早在15%就应被仔细读者察觉：不在场、受益最大、与家人有旧怨。但道尔用「莫蒂默主动通报」制造了一道心理屏障。比较困难的是第二起案件——史坦达尔的碎石线索（80%）是一个非常细致的物理线索，一般读者难以在此前锁定他。</p>
+<p><strong>结局的伦理维度</strong></p>
+<p>这篇故事的深度远超一般howdunit。福尔摩斯在面对史坦达尔的自白后，选择放他离去。这是道尔对「法律正义与个人道德」的一次公开叩问。读者被邀请思考：当法律无法触及的地方，个人复仇是否具有正当性？</p>
+<hr>
+<h2 id="the-adventure-of-the-dying-detective">第三篇：垂死侦探历险（The Adventure of the Dying Detective）</h2>
+<h3 id="_21">真相拆解</h3>
+<p><strong>故事背景</strong>：华生接到管家赫德森太太的急报，赶到贝克街，发现福尔摩斯躺在床上，形容枯槁，声称自己染上了苏门答腊的致命疾病「塔帕努利热」，生命垂危。他拒绝让华生诊治，并指名要见一个叫科尔弗顿·史密斯（Culverton Smith）的人。史密斯与福尔摩斯有过节，但也是研究热带疾病的「专家」……</p>
+<hr>
+<h3 id="deception-mystery">真相一：福尔摩斯在骗谁（核心谜团：deception mystery）</h3>
+<ul>
+<li><strong>线索收敛点：约 85%</strong></li>
+<li>答案：福尔摩斯完全没病。他刻意模仿重病症状（禁食三日、用化妆品制造枯槁外貌），目的是引诱科尔弗顿·史密斯上门，让他在认为福尔摩斯即将死去且「病是自然传染的」状况下，在暗藏的华生面前亲口认罪。</li>
+</ul>
+<h4 id="_22">关键线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（约百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>福尔摩斯坚决拒绝让「最信任的老友」华生替他诊治，却要求见一个几乎是敌人的陌生「专家」</td>
+<td>约 15%</td>
+<td><strong>最重要的反常迹象</strong>——一个真正病危的人，最先想到的必然是最亲近的医生，而非素有嫌隙的远方人士</td>
+</tr>
+<tr>
+<td>2</td>
+<td>福尔摩斯命令华生必须在特定时间带史密斯来，且严格规定了「房间灯光的角度」和「自己的摆放位置」</td>
+<td>约 20%</td>
+<td>过于精确的舞台安排——垂死之人不需要如此费心布置场景</td>
+</tr>
+<tr>
+<td>3</td>
+<td>福尔摩斯在史密斯到来前，对房间中的每个细节都保持异常清醒的关注</td>
+<td>约 50%</td>
+<td>真正的病人无力管控环境细节；福尔摩斯却在「精神恍惚」中精确地指挥着每一步</td>
+</tr>
+<tr>
+<td>4</td>
+<td>史密斯在福尔摩斯的病榻前，在以为对方即将死去且无人在场的情况下，开始承认他曾用感染性的象牙盒杀死侄子，并试图以同样方式杀死福尔摩斯</td>
+<td>约 85%</td>
+<td>认罪后，福尔摩斯翻身下床，呼唤躲在窗帘后的警察——解局完成</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_23">辅助线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（约百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>福尔摩斯的「病症」异常符合教科书描述，却缺乏真正病患会有的「失控感」</td>
+<td>贯穿</td>
+<td>他的病好像被「演出来」的——每一个症状都刚好到位，不多也不少</td>
+</tr>
+<tr>
+<td>2</td>
+<td>一个象牙小盒被提及，是史密斯「带来的礼物」</td>
+<td>约 70%</td>
+<td>道尔埋下了物证——这个盒子后来被确认是传播疾病的凶器</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_24">假线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（约百分比）</th>
+<th>误导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>华生（和读者）看到的枯槁外貌、蜡黄皮肤、断断续续的呼吸</td>
+<td>约 5–80%</td>
+<td>全篇最大的假线索就是福尔摩斯的外表本身——道尔通过华生的视角，让读者完全相信了这场表演</td>
+</tr>
+<tr>
+<td>2</td>
+<td>福尔摩斯对华生的「冷漠」和「拒绝接受帮助」的态度</td>
+<td>约 10–40%</td>
+<td>让读者担心「福尔摩斯是否因病而神智不清、性格大变」，转移了对诈病的猜疑</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="whodunit-whydunit">真相二：科尔弗顿·史密斯的罪行（whodunit + whydunit）</h3>
+<ul>
+<li><strong>线索收敛点：约 85%（与上同一节点）</strong></li>
+<li>答案：史密斯此前用一个涂有细菌的弹射式象牙盒（盒盖打开时会弹出针尖刺伤接触者），谋杀了侄子维克多·沙维顿（Victor Savage），以继承遗产。他对福尔摩斯也使用了同样的手法——但福尔摩斯察觉到了，没有被刺到。</li>
+</ul>
+<h4 id="_25">关键线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（约百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>福尔摩斯告诉华生：「史密斯是研究热带疾病的人，而且他曾让侄子感染后死去，从中获益」</td>
+<td>约 20%</td>
+<td>提前揭示了嫌疑人的动机模式——但读者往往以为这只是背景资讯，而非直接的犯罪指控</td>
+</tr>
+<tr>
+<td>2</td>
+<td>史密斯在病榻前的一系列「暗示性言辞」：他谈到疾病传播的「好奇机制」，带着难以掩饰的洋洋得意</td>
+<td>约 78%</td>
+<td>犯罪者在以为受害者垂死时的失控自满——道尔精准捕捉了这一心理弱点</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_26">推理路径重建</h3>
+<p><strong>这篇故事的推理难点不在「谁是凶手」，而在「侦探是不是真的病了」。</strong></p>
+<p>一个细心的读者在约 15% 就应感到不对：福尔摩斯拒绝让最信任的医生朋友诊治，这几乎没有合理的「真病」解释。到 20% 的场景安排，怀疑应当升级：垂死之人，不会计算灯光角度。</p>
+<p>真正的困难是——道尔把这个反常包裹在「我的老朋友病了」的情感叙事中，让华生的担忧（以及读者与华生的认同）成为最大的心理屏障。阅读这篇故事，你必须同时信任福尔摩斯的一贯精明，又愿意相信「他这次真的可能病了」。道尔在这两个情绪之间拉锯，直到 85% 才让局面清晰。</p>
+<p><strong>此篇的特殊地位</strong></p>
+<p>《垂死侦探》是福尔摩斯正典中唯一一篇「侦探主动伪装成受害者以引出凶手」的故事。福尔摩斯不是在外部追踪嫌疑人，而是把自己设计成诱饵。这种架构在后来的推理小说中有广泛回响，最著名的继承者是阿加莎·克里斯蒂在某些篇章中的类似设计。</p>
+<hr>
+<h2 id="_27">整集补充说明</h2>
+<h3 id="_28">本集在福尔摩斯正典中的位置</h3>
+<p>《最后致敬》是道尔「晚期」福尔摩斯故事的总结，也是福尔摩斯最接近「退休」的系列。这些故事整体呈现出几个有别于早期的风格特征：</p>
+<p><strong>1. 类型多元化</strong></p>
+<p>早期福尔摩斯故事以纯粹的逻辑谜题（《血字的研究》、《四个签名》）或巧妙设计的「不可能犯罪」（《斑点带子》）为主。本集则跨越了政治惊悚（威斯特里亚寓所、布鲁斯—帕廷顿计划）、异域神秘主义（魔鬼的脚）、间谍小说（最后致敬），以及纯粹的心理戏（垂死侦探）。</p>
+<p><strong>2. 道德灰色地带的扩展</strong></p>
+<p>《魔鬼的脚》中福尔摩斯放走了杀人的史坦达尔博士；《垂死侦探》中他设计了一场骗局，其法律站得住脚的程度值得商榷。这是道尔晚期故事的标志：福尔摩斯对「法律正义」与「个人道德」的界限越来越愿意自行裁断。</p>
+<p><strong>3. 推理设计的成熟与不均</strong></p>
+<table>
+<thead>
+<tr>
+<th>篇目</th>
+<th>推理难度</th>
+<th>迷雾等级</th>
+<th>特色</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>威斯特里亚寓所历险</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>双重谜团（谁设计了alibi + 谁是真正罪犯），线索散落但收敛工整</td>
+</tr>
+<tr>
+<td>布鲁斯—帕廷顿计划</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>本集最精彩的howdunit，「尸体在车顶」是道尔设计生涯的顶峰之一</td>
+</tr>
+<tr>
+<td>魔鬼的脚历险</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>双重凶手设计，情感深度最强，收尾有伦理冲击力</td>
+</tr>
+<tr>
+<td>红圈社历险</td>
+<td>⭐⭐</td>
+<td>⭐⭐</td>
+<td>谜题较轻，重点在气氛与语言符号学（意大利文电码），悬念中等</td>
+</tr>
+<tr>
+<td>费兰西丝·卡法克斯女士失踪</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐</td>
+<td>传统的追踪案，线索公平但步骤繁复，谜底在后段才明朗</td>
+</tr>
+<tr>
+<td>垂死侦探历险</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td><strong>本集迷雾等级最高</strong>：侦探本人是最大的「假线索」，读者被完全欺骗直到85%</td>
+</tr>
+<tr>
+<td>最后致敬</td>
+<td>⭐⭐</td>
+<td>⭐⭐</td>
+<td>更接近间谍小说；谜底（阿尔塔蒙特就是福尔摩斯）极早可猜出，重点在爱国情怀的渲染</td>
+</tr>
+</tbody>
+</table>
+<p><strong>整集平均推理难度：⭐⭐⭐（平均收敛点约62%）</strong>
+<strong>整集平均迷雾等级：⭐⭐⭐</strong></p>
+<h3 id="_29">与道尔其他系列的比较</h3>
+<p>相较于《福尔摩斯冒险史》（Adventures, 1892）的轻快谜题，本集故事更沉重、更有政治意识。相较于《回忆录》（Memoirs, 1894）的高峰（《最后问题》、《海军协定》），本集在个别故事的精彩程度上不尽相同，但整体技术更成熟——道尔在用线索欺骗读者的方式上越来越老练。</p>
+<h3 id="_30">书名的双重意义</h3>
+<p>「His Last Bow」——「最后致敬」（bow可作谢幕之意）。集子末篇同名作品发生在1914年的战争前夕：退隐多年的福尔摩斯为国家最后一次出山，以间谍身份完成一场拯救英国的任务。华生问他「以后怎么打算」，他指着东方渐强的风说：「昔日的英格兰，要来了」。道尔在这里预告了他创造的角色的时代终结，也预告了一个旧世界的消逝。无论在人物史还是文学史上，这都是一次精心设计的落幕。</p>
+    <a href="../index.html" class="back-link">← 回到首页</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">推理解剖室</p>
+    <p>五位作者 · 八十八部作品 · 一百三十五年推理文学的难度演化</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

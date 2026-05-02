@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>His Last Bow — Detective Analysis</title>
+<meta name="description" content="This collection brings together seven late-period Holmes cases spanning political conspiracy, exotic occultism, and wartime espionage: 1. The Adventure of Wiste">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/his-last-bow.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/his-last-bow.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/his-last-bow.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/his-last-bow.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/his-last-bow.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/his-last-bow.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/his-last-bow.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/his-last-bow.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Detective Analysis</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#latest">Latest</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Language" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 English</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/his-last-bow.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/his-last-bow.html">简体中文</a>
+      <a class="lang-item active" data-lang="en" href="/Detective-Analysis/en/articles/his-last-bow.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/his-last-bow.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/his-last-bow.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/his-last-bow.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/his-last-bow.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/his-last-bow.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">Arthur Conan Doyle · </div>
+    <h1>His Last Bow</h1>
+    <div class="subtitle">Arthur Conan Doyle · Short story collection (seven stories)</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Deducibility</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Fog Rating</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="his-last-bow-deducibility-analysis">His Last Bow — Deducibility Analysis</h1>
+<h2 id="basic-information">Basic Information</h2>
+<ul>
+<li>Author: Arthur Conan Doyle</li>
+<li>Year: 1917 (individual stories serialised between 1908 and 1917)</li>
+<li>Type: Short story collection (seven stories)</li>
+<li>Detective: Sherlock Holmes</li>
+<li>Core mystery types: whodunit / howdunit / spy thriller</li>
+</ul>
+<hr>
+<h2 id="overall-ratings-collection-wide-average">Overall Ratings (Collection-Wide Average)</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Rating</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deducibility</td>
+<td>⭐⭐⭐</td>
+<td>Average convergence point approximately 62% — variation between stories is pronounced; the finest entries do not converge until well past the halfway mark, but the clues are fundamentally fair</td>
+</tr>
+<tr>
+<td>Fog Rating</td>
+<td>⭐⭐⭐</td>
+<td>Moderate misdirection; Doyle's preferred technique is exploiting the viewpoint character's perceptual bias and the weight of received opinion to manufacture red herrings, rather than constructing an elaborate web of false clues</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="synopsis-story-by-story-overview">Synopsis (Story-by-Story Overview)</h2>
+<p>This collection brings together seven late-period Holmes cases spanning political conspiracy, exotic occultism, and wartime espionage:</p>
+<ol>
+<li><strong>The Adventure of Wisteria Lodge</strong>: English gentleman Scott Eccles finds himself entangled in a revenge murder involving a Latin American dictator in exile.</li>
+<li><strong>The Adventure of the Bruce-Partington Plans</strong>: Secret submarine blueprints are stolen, and a young clerk's body is found laid out beside the London Underground tracks with seven of the plans on his person — but the three most critical pages are missing. One of Doyle's most meticulously constructed puzzle-mysteries.</li>
+<li><strong>The Adventure of the Devil's Foot</strong>: On the Cornish moors, members of the Tregennis family die or are driven mad in the night for no apparent reason, with no sign of outside intrusion.</li>
+<li><strong>The Adventure of the Red Circle</strong>: A mysterious lodger refuses all contact with his landlady and conducts clandestine communications through the newspaper agony column, in an affair that reaches into the Italian Mafia.</li>
+<li><strong>The Disappearance of Lady Frances Carfax</strong>: A titled lady travelling alone across Europe vanishes without trace, her fate unknown.</li>
+<li><strong>The Adventure of the Dying Detective</strong>: Holmes lies in his Baker Street rooms, claiming to be in the grip of a deadly tropical disease, and refuses to let Watson treat him…</li>
+<li><strong>His Last Bow: The War Service of Sherlock Holmes</strong>: On the eve of the First World War, August 1914, a man calling himself "Altamont" — Irish-American by background — draws close to Germany's master spy, Von Bork…</li>
+</ol>
+<hr>
+<h2 id="three-stories-selected-for-in-depth-analysis">Three Stories Selected for In-Depth Analysis</h2>
+<p>The seven stories in this collection differ widely in the quality of their detective-puzzle design. The three with the strongest mystery architecture and the most complete puzzle structures are examined in depth below.</p>
+<hr>
+<h2 id="story-one-the-adventure-of-the-bruce-partington-plans">Story One: The Adventure of the Bruce-Partington Plans</h2>
+<h3 id="truth-unpacked">Truth Unpacked</h3>
+<p><strong>Background</strong>: Britain's most secret submarine blueprints are stolen. The body of young clerk Cadogan West is discovered beside the London Underground tracks, carrying seven pages of the plans — but the three most critical pages are nowhere to be found. All surface evidence points to West as the traitor who stole them.</p>
+<hr>
+<h3 id="truth-one-how-west-died-howdunit">Truth One: How West Died (Howdunit)</h3>
+<ul>
+<li><strong>Convergence point: approximately 55%</strong></li>
+<li>Answer: West's body did not fall from a moving train. He was killed elsewhere, then placed on top of a stationary carriage; when the train rounded a curve, the body was shaken off.</li>
+</ul>
+<h4 id="key-clues">Key Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Approximate Position</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Almost no blood near the body, yet the skull is severely fractured</td>
+<td>~28%</td>
+<td>If the body had fallen from a moving train, blood would have been widely distributed along the tracks; the scarcity of blood indicates death occurred elsewhere</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The body was found at Aldgate station, which sits directly above a curve and a set of points</td>
+<td>~30%</td>
+<td>Holmes repeatedly broods over the word "points" — an object resting on a carriage roof would be dislodged precisely there</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The rear window of Oberstein's house opens directly onto an above-ground stretch of Underground track</td>
+<td>~48%</td>
+<td>Trains pause at this section regularly due to the junction — the only conceivable window of opportunity to place a body on a carriage roof</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Friction marks in the coal-dust and faint traces of blood are found on the rear windowsill</td>
+<td>~53%</td>
+<td>Definitive physical evidence confirming that the body was placed onto the carriage roof from this window</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supporting-clues">Supporting Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Approximate Position</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>West had no ticket on his person</td>
+<td>~18%</td>
+<td>If he had boarded a train himself he would have had a ticket; its absence means he never passed through a station entrance</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The roofs of Underground carriages are slightly curved and have no guard-rail</td>
+<td>~50%</td>
+<td>Confirms the body was placed there rather than having climbed up independently</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The London Underground runs above ground at several points in west London, some sections level with the rear gardens of private houses</td>
+<td>~48%</td>
+<td>Map evidence confirming that Oberstein's house enjoys direct "access to the railway"</td>
+</tr>
+</tbody>
+</table>
+<h4 id="red-herrings">Red Herrings</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Approximate Position</th>
+<th>Misleading Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>West had spoken to his fiancée about the sensitivity of the secrets, implying he knew their value</td>
+<td>~35%</td>
+<td>Leads both readers and investigators to conclude that West sold the plans and died during his escape</td>
+</tr>
+<tr>
+<td>2</td>
+<td>West abruptly abandoned his fiancée and plunged into the fog, his behaviour furtive and suspicious</td>
+<td>~33%</td>
+<td>Every behavioural cue fits the profile of a guilty traitor, when in truth he had spotted the real thief and was giving pursuit</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="truth-two-who-was-the-real-thief-whodunit">Truth Two: Who Was the Real Thief (Whodunit)</h3>
+<ul>
+<li><strong>Convergence point: approximately 70%</strong></li>
+<li>Answer: The real thief is Colonel Valentine Walter, younger brother of the late Sir James Walter, the head of the bureau. Crushed by stock-market debts, he used a wax impression of his brother's key, made a duplicate, and sold the plans to German agent Oberstein.</li>
+</ul>
+<h4 id="key-clues_1">Key Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Approximate Position</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Besides Sir James Walter, only senior clerk Sidney Johnson held a key to the office; but the plans could conceivably have been observed from outside (through a window crack)</td>
+<td>~40%</td>
+<td>Once Johnson is eliminated, suspicion falls on Sir James himself or a member of his family</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sir James collapsed the moment news broke and died in disgrace shortly afterwards</td>
+<td>~37%</td>
+<td>His sudden death implies he knew who had done it — the most plausible suspect is his own brother</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The last entry in the "Pierrot" newspaper agony-column correspondence reads: "Only ourselves, two knocks" — suggesting the contact knew the Caulfield Gardens address</td>
+<td>~60%</td>
+<td>Only a direct participant would have known that address</td>
+</tr>
+<tr>
+<td>4</td>
+<td>A series of coded communications found in Oberstein's spare tin cash-box is the record of "Pierrot" contacting his handler</td>
+<td>~65%</td>
+<td>Confirms the existence of a spy network and allows the range of suspects on the other end to be calculated</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supporting-clues_1">Supporting Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Approximate Position</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>West had "noticed someone approaching the office" and shook off his fiancée to follow — the person was an official he recognised</td>
+<td>~55%</td>
+<td>Had the figure been a stranger, West would have gone straight to the police rather than giving personal pursuit</td>
+</tr>
+<tr>
+<td>2</td>
+<td>A broken laurel branch and a soil impression on the windowsill indicate someone had been peering into the office from outside</td>
+<td>~43%</td>
+<td>The thief knew the office layout but needed to confirm the location of the plans — an insider, not an external spy</td>
+</tr>
+</tbody>
+</table>
+<h4 id="red-herrings_1">Red Herrings</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Approximate Position</th>
+<th>Misleading Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The dead clerk found carrying seven pages of the stolen plans</td>
+<td>Throughout the first half</td>
+<td>The most immediate inference — that West was the traitor and died during the handover — leads virtually every reader and official astray</td>
+</tr>
+<tr>
+<td>2</td>
+<td>German agent Oberstein leaves England of his own accord</td>
+<td>~45%</td>
+<td>Makes readers assume the villain has fled, rather than realising he is simply waiting for his buyer to return and complete the transaction</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="reconstruction-of-the-reasoning-path">Reconstruction of the Reasoning Path</h3>
+<p><strong>First reasoning path (howdunit: how the body came to be there)</strong></p>
+<p>The first anomaly appears at roughly 28% — severe injury with minimal blood is an internal contradiction. A careful reader should already doubt that death occurred beside the tracks. At 30%, the scene of Holmes staring at the points is the author's unmistakable signal to the reader: the question is not "how did the body fall?" but "from where did it fall?" Definitive confirmation arrives at about 53% — the marks discovered on Oberstein's rear windowsill close the howdunit entirely.</p>
+<p><strong>Second reasoning path (whodunit: who the real thief was)</strong></p>
+<p>This path is harder to walk. Sir James's sudden death at about 37% is a subtle but important signal. As a figure whose reputation was considered beyond question by everyone in his field, his collapse in the face of a scandal touching his own department implies he possessed knowledge too unbearable to carry. Inferring his brother Valentine as the suspect requires the reader to link all the threads at around 70%. What Holmes's "Pierrot advertisement trap" ultimately catches is a man who surprises everyone — Holmes included.</p>
+<hr>
+<h2 id="story-two-the-adventure-of-the-devils-foot">Story Two: The Adventure of the Devil's Foot</h2>
+<h3 id="truth-unpacked_1">Truth Unpacked</h3>
+<p><strong>Background</strong>: On the Cornish moors, three members of the Tregennis family are struck overnight: sister Brenda dies; her two brothers are reduced to gibbering insanity. There is no sign of an intruder; the windows were shut, the door unforced. A few days later, the brother who reported the incident — Mortimer Tregennis — is himself found dead in identical circumstances.</p>
+<hr>
+<h3 id="truth-one-the-method-of-killing-howdunit">Truth One: The Method of Killing (Howdunit)</h3>
+<ul>
+<li><strong>Convergence point: approximately 75%</strong></li>
+<li>Answer: The murderer (Mortimer) placed a West African secret drug powder — "devil's-foot root" — into the burning grate, causing it to vaporise into a fume that drives victims to madness and death. The same method was subsequently used by explorer Dr. Sterndale to exact revenge on Mortimer.</li>
+</ul>
+<h4 id="key-clues_2">Key Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Approximate Position</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>A lit grate is present at the death scene, and everyone who entered the room afterwards reports feeling a sense of suffocation or dizziness</td>
+<td>~22%</td>
+<td>The earliest physical clue — "combustion in an enclosed space" is the shared precondition for poisoning by inhalation</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The second incident (Mortimer's death) takes place in a tightly sealed room where an oil lamp is burning for no apparent reason</td>
+<td>~58%</td>
+<td>The lamp is burning in broad daylight (the degree of consumption indicates it was deliberate), echoing the grate in the first incident — "something is vaporising into a toxic fume during combustion"</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ash and partially unburnt reddish-brown powder are found on the talc shield of the oil lamp</td>
+<td>~62%</td>
+<td>The decisive physical evidence — Holmes takes a sample and conducts a personal experiment, confirming that the powder induces terrifying hallucinations leading to death</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Dr. Sterndale had previously shown Mortimer a supply of "devil's-foot root" from West Africa and explained its effects and its undetectability by European medicine</td>
+<td>~90% (Sterndale's confession)</td>
+<td>The final key: the source of the poison and the method of the crime are fully disclosed here</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supporting-clues_2">Supporting Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Approximate Position</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>All three victims bore expressions of extreme terror on their faces but showed no physical injuries</td>
+<td>~15%</td>
+<td>Rules out physical violence; points to a powerful neurological stimulant of some kind</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The housekeeper heard nothing unusual and confirmed that no stranger had entered</td>
+<td>~18%</td>
+<td>Rules out an external intruder; the poison was released from inside the room, and the person who released it was not present when it took effect</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Holmes notices footprints in the flower-bed and "accidentally" tips over a watering-can to obtain a clear impression of Mortimer's shoe</td>
+<td>~45%</td>
+<td>Confirms that Mortimer's direction of departure was toward the vicarage, not anywhere else — ruling out a detour to the scene of the crime, while simultaneously indicating Holmes is already considering Mortimer as a suspect</td>
+</tr>
+</tbody>
+</table>
+<h4 id="red-herrings_2">Red Herrings</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Approximate Position</th>
+<th>Misleading Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Mortimer claims he saw someone "moving outside the garden window" — implying an external, mysterious force</td>
+<td>~14%</td>
+<td>Pushes readers toward "outside intruder" theories; leads the vicar and villagers to invoke the supernatural</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Dr. Sterndale suddenly returns from Plymouth; his movements are suspicious and he refuses to explain the telegram he received</td>
+<td>~40%</td>
+<td>Makes readers suspect he is the murderer (he does indeed later kill Mortimer, but he did not commit the first crime)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="truth-two-who-was-the-murderer-whodunit">Truth Two: Who Was the Murderer (Whodunit)</h3>
+<ul>
+<li><strong>Convergence point: approximately 80%</strong></li>
+<li>Answer: The murderer of the <strong>first crime</strong> is Mortimer Tregennis, the younger brother, who poisoned his siblings in order to have them declared mentally incompetent — leaving himself sole heir to the family estate. The murderer of the <strong>second crime</strong> (Mortimer's death) is Dr. Sterndale, the explorer, acting in revenge for his murdered lover Brenda.</li>
+</ul>
+<h4 id="key-clues-first-crime-mortimers-act">Key Clues (First Crime: Mortimer's Act)</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Approximate Position</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>At the time of the incident, only Mortimer was absent (he claims to have left earlier), while all the victims were his own siblings</td>
+<td>~15%</td>
+<td>The most basic "absent yet benefiting" principle — but because he was the first to report the crime, readers instinctively cast him as a discoverer rather than the perpetrator</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Before the incident, Mortimer had been involved in a financial dispute with his family that was described as "settled" — but was it truly?</td>
+<td>~23%</td>
+<td>A motive clue; Doyle passes over it lightly, but the old grievance plants a seed of suspicion</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Dr. Sterndale confirms that Mortimer had visited his cottage a few weeks before the crime and had seen the "devil's-foot root" powder</td>
+<td>~90%</td>
+<td>Confirms the opportunity to obtain the poison — fully disclosed in Sterndale's confession</td>
+</tr>
+</tbody>
+</table>
+<h4 id="key-clues-second-crime-sterndales-revenge">Key Clues (Second Crime: Sterndale's Revenge)</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Approximate Position</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Fragments of gravel found on Mortimer's windowsill come from the gravel heap at Sterndale's cottage, not from the vicarage garden</td>
+<td>~80%</td>
+<td>Holmes's central physical evidence — the origin of the gravel points directly to Sterndale</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sterndale admits he had been deeply in love with Brenda; Brenda is among the dead</td>
+<td>~42%</td>
+<td>Establishes the motive; but Doyle had earlier described the relationship as merely that of cousins, concealing the depth of feeling</td>
+</tr>
+</tbody>
+</table>
+<h4 id="red-herrings_3">Red Herrings</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Approximate Position</th>
+<th>Misleading Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Sterndale "returned immediately from Plymouth upon receiving a telegram" — his behaviour is mysterious</td>
+<td>~40%</td>
+<td>Readers assume he is the suspect for the first crime, when in fact he had already returned before Mortimer died — to investigate the murderer (Mortimer himself) and administer private justice</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Mortimer was "the first to report the crime" and throughout behaves like a deeply shocked bereaved relative</td>
+<td>~15–50%</td>
+<td>The greatest disguise of all — Doyle exploits the reading habit of equating the reporter of a crime with its victim, allowing Mortimer to escape suspicion until almost the very end</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="reconstruction-of-the-reasoning-path_1">Reconstruction of the Reasoning Path</h3>
+<p><strong>First reasoning path (howdunit)</strong></p>
+<p>The combination of "sealed space + combustion + collective terror" provides early clues, but they are insufficient on their own to identify the poison. Readers can only confirm the mechanism at about 75% — after Holmes conducts his personal experiment. Before that point, the productive inferential direction is "some volatile poison was introduced into a heat source," but the specific substance is not disclosed until Sterndale's confession.</p>
+<p><strong>Second reasoning path (whodunit)</strong></p>
+<p>Mortimer's culpability could be detected as early as 15% by an attentive reader: he was absent, he benefited most, and he had an old quarrel with his family. But Doyle erects a psychological barrier by having Mortimer initiate the report. The second crime is harder still — the gravel-fragment clue pointing to Sterndale (80%) is a very fine-grained piece of physical evidence that most readers will not be able to act on before they see it.</p>
+<p><strong>The Ethical Dimension of the Ending</strong></p>
+<p>This story reaches depths far beyond the ordinary howdunit. When confronted with Sterndale's confession, Holmes chooses to let him go. This is Doyle's public interrogation of the boundary between legal justice and personal morality. The reader is invited to consider: in places the law cannot reach, does private vengeance carry legitimacy?</p>
+<hr>
+<h2 id="story-three-the-adventure-of-the-dying-detective">Story Three: The Adventure of the Dying Detective</h2>
+<h3 id="truth-unpacked_2">Truth Unpacked</h3>
+<p><strong>Background</strong>: Watson is summoned urgently by landlady Mrs. Hudson and rushes to Baker Street to find Holmes lying in bed, gaunt and hollow, claiming he has contracted a lethal tropical disease — Tapanuli fever from Sumatra — and that he is near death. He refuses to let Watson examine him, and asks instead for a man called Culverton Smith, a figure with whom Holmes has had difficulties but who is also an "expert" on tropical diseases…</p>
+<hr>
+<h3 id="truth-one-whom-is-holmes-deceiving-core-mystery-deception">Truth One: Whom Is Holmes Deceiving (Core Mystery: Deception)</h3>
+<ul>
+<li><strong>Convergence point: approximately 85%</strong></li>
+<li>Answer: Holmes is not ill at all. He has deliberately mimicked the symptoms of grave illness — fasting for three days, using cosmetics to produce a haggard appearance — in order to lure Culverton Smith to Baker Street, so that Smith, believing Holmes to be dying and the disease to be a natural contagion, will confess in the presence of a concealed Watson.</li>
+</ul>
+<h4 id="key-clues_3">Key Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Approximate Position</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Holmes categorically refuses treatment from Watson — "his most trusted old friend" — yet demands to see a near-enemy, a distant "specialist" he barely knows</td>
+<td>~15%</td>
+<td><strong>The most important anomaly</strong>: a genuinely dying man's first instinct is to call on the physician he trusts most, not an estranged acquaintance with whom he is on bad terms</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Holmes instructs Watson to bring Smith at a precisely specified time, and issues strict instructions about the angle of the room's lighting and his own positioning on the bed</td>
+<td>~20%</td>
+<td>An excessively precise staging arrangement — a dying man has no reason to choreograph his scene so carefully</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Before Smith arrives, Holmes maintains an abnormally alert awareness of every detail in the room</td>
+<td>~50%</td>
+<td>A genuinely ill man lacks the capacity to control his environment; yet Holmes, in the midst of apparent delirium, directs each step with precision</td>
+</tr>
+<tr>
+<td>4</td>
+<td>At Holmes's sickbed, believing his victim to be dying and no one else to be present, Smith begins to admit that he previously killed his nephew Victor Savage using an infected ivory box, and that he attempted the same method on Holmes</td>
+<td>~85%</td>
+<td>After the confession, Holmes swings out of bed and summons the police officer concealed behind the curtain — the case is solved</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supporting-clues_3">Supporting Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Approximate Position</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Holmes's "symptoms" conform remarkably well to textbook descriptions, yet lack the uncontrolled quality a genuine patient would display</td>
+<td>Throughout</td>
+<td>His illness has the quality of something performed — every symptom lands exactly where it needs to, neither more nor less</td>
+</tr>
+<tr>
+<td>2</td>
+<td>A small ivory box is mentioned — "a gift brought by Smith"</td>
+<td>~70%</td>
+<td>Doyle plants the physical evidence — the box is later confirmed as the vehicle for transmitting disease</td>
+</tr>
+</tbody>
+</table>
+<h4 id="red-herrings_4">Red Herrings</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Approximate Position</th>
+<th>Misleading Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The haggard appearance, the waxy skin, the laboured breathing that Watson (and the reader) witnesses</td>
+<td>~5–80%</td>
+<td>The collection's single greatest red herring is Holmes's physical appearance itself — Doyle uses Watson's perspective to make readers believe entirely in the performance</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Holmes's coldness toward Watson and his apparent refusal to accept help</td>
+<td>~10–40%</td>
+<td>Leads readers to worry that Holmes has become confused or has suffered a change of personality through illness, deflecting suspicion away from any idea of a feigned sickness</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="truth-two-culverton-smiths-crime-whodunit-whydunit">Truth Two: Culverton Smith's Crime (Whodunit + Whydunit)</h3>
+<ul>
+<li><strong>Convergence point: approximately 85% (same node as above)</strong></li>
+<li>Answer: Smith had previously used a spring-loaded ivory box coated with bacteria (when the lid is opened, a needle-tip springs out and pierces the handler's skin) to murder his nephew Victor Savage and inherit his estate. He used the same method on Holmes — but Holmes had noticed it in time and was not pricked.</li>
+</ul>
+<h4 id="key-clues_4">Key Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Approximate Position</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Holmes tells Watson: "Smith is a student of tropical diseases, and he once allowed his nephew to become infected and die, profiting thereby"</td>
+<td>~20%</td>
+<td>The suspect's motive-pattern is disclosed in advance — but readers tend to treat it as background information rather than a direct accusation of crime</td>
+</tr>
+<tr>
+<td>2</td>
+<td>A series of suggestive remarks from Smith at the bedside: he speaks of the "curious mechanism" by which disease is transmitted, with barely concealed self-satisfaction</td>
+<td>~78%</td>
+<td>The guilty man's uncontrolled smugness, believing his victim is at the point of death — Doyle captures this psychological vulnerability precisely</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="reconstruction-of-the-reasoning-path_2">Reconstruction of the Reasoning Path</h3>
+<p><strong>In this story, the puzzle does not centre on "who is the criminal" but on "is the detective genuinely ill."</strong></p>
+<p>A careful reader should feel uneasy at about 15%: Holmes refuses to be examined by the physician he trusts most implicitly, a fact for which there is virtually no rational "genuine illness" explanation. By the scene-staging at 20%, the unease should have escalated: a dying man does not calculate the angle of the light.</p>
+<p>The real difficulty is that Doyle wraps the anomaly inside an emotional narrative — "my old friend is ill" — and Watson's anguish (and the reader's identification with Watson) becomes the greatest psychological barrier. Reading this story, you are required simultaneously to trust in Holmes's habitual brilliance and to admit the possibility that "this time he really might be ill." Doyle pulls at these two emotions in opposite directions until 85%, when the situation at last becomes clear.</p>
+<p><strong>The Special Standing of This Story</strong></p>
+<p>"The Adventure of the Dying Detective" is the only story in the Holmes canon in which the detective deliberately impersonates a victim in order to draw out the criminal. Holmes is not tracking a suspect from the outside; he has engineered himself into the role of bait. This structure echoes widely through later detective fiction — its most celebrated heir being certain chapters of Agatha Christie employing a similar design.</p>
+<hr>
+<h2 id="supplementary-notes-for-the-collection-as-a-whole">Supplementary Notes for the Collection as a Whole</h2>
+<h3 id="the-collections-place-in-the-holmes-canon">The Collection's Place in the Holmes Canon</h3>
+<p><em>His Last Bow</em> is the concluding volume of Doyle's "late period" Holmes output and the series in which Holmes comes closest to retirement. As a whole, these stories display several stylistic characteristics that distinguish them from the early work:</p>
+<p><strong>1. Generic Diversification</strong></p>
+<p>The early Holmes stories are dominated by pure logic puzzles (<em>A Study in Scarlet</em>, <em>The Sign of the Four</em>) or ingeniously constructed locked-room impossibilities ("The Adventure of the Speckled Band"). This collection ranges across political thriller (Wisteria Lodge, Bruce-Partington Plans), exotic mysticism (The Devil's Foot), spy fiction (His Last Bow), and pure psychological drama (The Dying Detective).</p>
+<p><strong>2. Expansion of the Moral Grey Zone</strong></p>
+<p>In "The Devil's Foot," Holmes allows the murderous Dr. Sterndale to leave unimpeded; in "The Dying Detective," he engineers a deception whose legal standing is open to question. This is the hallmark of Doyle's late storytelling: Holmes grows ever more willing to draw his own line between legal justice and personal morality.</p>
+<p><strong>3. The Maturity — and Unevenness — of the Puzzle Design</strong></p>
+<table>
+<thead>
+<tr>
+<th>Story</th>
+<th>Deducibility</th>
+<th>Fog Rating</th>
+<th>Distinguishing Feature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The Adventure of Wisteria Lodge</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>Double mystery (who constructed the alibi + who is the real criminal); clues are scattered but converge neatly</td>
+</tr>
+<tr>
+<td>The Adventure of the Bruce-Partington Plans</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>The collection's finest howdunit; "the body on the carriage roof" is among the pinnacles of Doyle's constructive career</td>
+</tr>
+<tr>
+<td>The Adventure of the Devil's Foot</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>Double-murderer design; greatest emotional depth; ending carries ethical force</td>
+</tr>
+<tr>
+<td>The Adventure of the Red Circle</td>
+<td>⭐⭐</td>
+<td>⭐⭐</td>
+<td>Lighter puzzle; emphasis on atmosphere and linguistic semiotics (Italian cipher); moderate suspense</td>
+</tr>
+<tr>
+<td>The Disappearance of Lady Frances Carfax</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐</td>
+<td>A conventional tracking case; clues are fair but the steps are numerous; the solution only becomes clear in the later stages</td>
+</tr>
+<tr>
+<td>The Adventure of the Dying Detective</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td><strong>Highest Fog Rating in the collection</strong>: the detective himself is the greatest "red herring"; readers are completely deceived until 85%</td>
+</tr>
+<tr>
+<td>His Last Bow</td>
+<td>⭐⭐</td>
+<td>⭐⭐</td>
+<td>Closer to spy fiction; the reveal (Altamont is Holmes) can be guessed very early; the emphasis is on patriotic atmosphere</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Collection average Deducibility: ⭐⭐⭐ (average convergence point approximately 62%)</strong>
+<strong>Collection average Fog Rating: ⭐⭐⭐</strong></p>
+<h3 id="comparison-with-other-doyle-series">Comparison with Other Doyle Series</h3>
+<p>Compared with <em>The Adventures of Sherlock Holmes</em> (1892) with its brisk, light puzzles, this collection is heavier in tone and more politically conscious. Compared with the heights of <em>The Memoirs of Sherlock Holmes</em> (1894) — "The Final Problem," "The Naval Treaty" — this collection is uneven story by story, but technically more mature overall: Doyle has become increasingly accomplished at the art of deceiving the reader with his own clues.</p>
+<h3 id="the-dual-meaning-of-the-title">The Dual Meaning of the Title</h3>
+<p>"His Last Bow" — a final salute, a curtain call. The closing title story takes place on the eve of war in 1914: Holmes, retired for years, makes one last appearance for his country, completing a mission as a spy that saves England. When Watson asks what he intends to do next, Holmes gestures toward the strengthening wind from the east and says: "There's an east wind coming, Watson." Doyle here signals the end of an era for the character he created and the passing of an old world. In terms of both literary history and the character's own story, this is a carefully designed exit.</p>
+    <a href="../index.html" class="back-link">← Back to home</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Detective Analysis</p>
+    <p>Five authors · eighty-eight works · 135 years of evolving detective difficulty.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
