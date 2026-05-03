@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Les Archives de Sherlock Holmes（The Case-Book of Sherlock Holmes） — Salle de Dissection Policière</title>
+<meta name="description" content="Doyle a écrit ces douze histoires tard dans sa vie, et le ton diffère notablement de ses premières Aventures : les affaires sont plus complexes, les contours mo">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-case-book-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-case-book-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-case-book-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-case-book-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-case-book-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-case-book-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-case-book-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-case-book-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Salle de Dissection Policière</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Accueil</a>
+        <a href="../index.html#latest">Récents</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Langue" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 Français</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-case-book-of-sherlock-holmes.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-case-book-of-sherlock-holmes.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-case-book-of-sherlock-holmes.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/the-case-book-of-sherlock-holmes.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/the-case-book-of-sherlock-holmes.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/the-case-book-of-sherlock-holmes.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/the-case-book-of-sherlock-holmes.html">Español</a>
+      <a class="lang-item active" data-lang="fr" href="/Detective-Analysis/fr/articles/the-case-book-of-sherlock-holmes.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">Arthur Conan Doyle · 1927</div>
+    <h1>Les Archives de Sherlock Holmes（The Case-Book of Sherlock Holmes）</h1>
+    <div class="subtitle">Arthur Conan Doyle（柯南·道爾） · Recueil de nouvelles（12 nouvelles）</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Déductibilité</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Indice de brume</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="les-archives-de-sherlock-holmesthe-case-book-of-sherlock-holmes-analyse-de-deductibilite">Les Archives de Sherlock Holmes（The Case-Book of Sherlock Holmes）— Analyse de Déductibilité</h1>
+<h2 id="informations-de-base">Informations de base</h2>
+<ul>
+<li>Auteur：Arthur Conan Doyle（柯南·道爾）</li>
+<li>Année：1927</li>
+<li>Genre：Recueil de nouvelles（12 nouvelles）</li>
+<li>Détective：Sherlock Holmes（夏洛克·福爾摩斯）</li>
+<li>Type de mystère central：whodunit / howdunit / whydunit（variable selon les nouvelles）</li>
+</ul>
+<hr>
+<h2 id="evaluation-generale-de-deductibiliterecueil-dans-son-ensemble">Évaluation générale de déductibilité（recueil dans son ensemble）</h2>
+<table>
+<thead>
+<tr>
+<th>Indicateur</th>
+<th>Évaluation</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Déductibilité（Deducibility）</td>
+<td>⭐⭐⭐</td>
+<td>Point de convergence moyen vers 65% — grande variation selon les nouvelles, allant des énigmes de difficulté moyenne à celles de haute difficulté ; la plupart des mystères nécessitent d'avoir lu plus de la moitié pour une convergence complète</td>
+</tr>
+<tr>
+<td>Indice de brume（Fog Rating）</td>
+<td>⭐⭐⭐⭐</td>
+<td>Doyle excelle à mettre en scène des situations « superficiellement plausibles, avec des mises en scène trompeuses efficaces » ; <em>L'Aventure du vampire du Sussex</em> frôle presque les limites de la tromperie narrative</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note sur le recueil :</strong> <em>Les Archives de Sherlock Holmes</em> est l'œuvre finale de la série Holmesienne de Doyle, rassemblant les 12 dernières nouvelles publiées entre 1921 et 1927, dans lesquelles Doyle prend lui-même congé de ses lecteurs dans la préface. Cette analyse sélectionne les quatre nouvelles à la structure déductive la plus riche — <em>L'Aventure du vampire du Sussex</em>, <em>Le Problème du pont de Thor</em>, <em>L'Aventure des trois Garridebs</em> et <em>L'Aventure de la pierre de Mazarin</em> — pour une analyse approfondie, accompagnée d'un commentaire d'ensemble sur le recueil.</p>
+</blockquote>
+<hr>
+<h2 id="resume">Résumé</h2>
+<p>Doyle a écrit ces douze histoires tard dans sa vie, et le ton diffère notablement de ses premières <em>Aventures</em> : les affaires sont plus complexes, les contours moraux plus flous, et il y a parfois des descriptions qui ne correspondent plus aux standards actuels de représentation (notamment le portrait racial offensant dans <em>Les Trois Pignons</em>), mais sur le plan de la construction déductive, certaines nouvelles atteignent le sommet de toute la série.</p>
+<p>Les douze nouvelles, dans l'ordre, sont : (I) L'Aventure de l'illustre client ; (II) L'Aventure du soldat blanchi ; (III) L'Aventure de la pierre de Mazarin ; (IV) L'Aventure des trois pignons ; (V) L'Aventure du vampire du Sussex ; (VI) L'Aventure des trois Garridebs ; (VII) Le Problème du pont de Thor ; (VIII) L'Aventure du rampant ; (IX) La Crinière du lion ; (X) L'Aventure du locataire voilé ; (XI) L'Aventure de Shoscombe Old Place ; (XII) L'Aventure du marchand de couleurs retraité.</p>
+<p>Cette analyse se concentre sur l'analyse approfondie des quatre nouvelles à la conception mystérieuse la plus précise.</p>
+<hr>
+<h2 id="analyse-de-la-verite">Analyse de la vérité</h2>
+<hr>
+<h3 id="nouvelle-i-laventure-du-vampire-du-sussexthe-adventure-of-the-sussex-vampire">Nouvelle I : <em>L'Aventure du vampire du Sussex</em>（The Adventure of the Sussex Vampire）</h3>
+<h4 id="informations-de-base_1">Informations de base</h4>
+<ul>
+<li>Type de mystère central：whydunit + howdunit</li>
+<li>Mystère apparent：La femme est-elle une vampire qui suce le sang de son propre nourrisson ?</li>
+<li>Vrai mystère：Qui a réellement blessé le nourrisson ? Quelle est l'explication du comportement étrange de la mère ?</li>
+</ul>
+<hr>
+<h4 id="evaluation-de-deductibilitecette-nouvelle">Évaluation de déductibilité（cette nouvelle）</h4>
+<table>
+<thead>
+<tr>
+<th>Indicateur</th>
+<th>Évaluation</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Déductibilité（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>Point de convergence moyen vers 72% — l'identité du vrai coupable ne peut être pleinement confirmée que lorsque Holmes observe le visage de Jack dans le reflet de la vitre</td>
+</tr>
+<tr>
+<td>Indice de brume（Fog Rating）</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>Le cadre narratif surnaturel est omniprésent du début à la fin : l'interprétation du « vampire » est la fausse piste la plus puissante, à laquelle Holmes lui-même doit activement résister</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="resumecette-nouvelle">Résumé（cette nouvelle）</h4>
+<p>Robert Ferguson mandate Holmes pour enquêter sur une affaire terrifiante : sa femme péruvienne a été surprise par la nounou et par lui-même penchée sur le cou du nourrisson, en train de le sucer, et la peau du bébé portait des marques visibles de blessures. De plus, elle avait à plusieurs reprises frappé sans raison apparente Jack, le fils de quinze ans, issu du premier mariage du mari, qui souffre d'un handicap physique. La femme garde le silence sur tout, n'essaie ni de se défendre ni de demander pardon, disant seulement : « Il devrait me faire confiance. »</p>
+<p>La vérité : Jack — cloué au lit par une lésion de la colonne vertébrale et animé d'un amour possessif envers son père — avait secrètement blessé le nourrisson avec les petites flèches du carquois d'une arme d'Amérique du Sud accrochée au mur, trempées dans du curare. La mère avait percé à jour la vérité, mais pour protéger le cœur de son mari, elle avait choisi de sucer elle-même le venin par la bouche pour empêcher le poison de se répandre — préférant être prise pour un vampire plutôt que de dénoncer le fils le plus aimé de son mari.</p>
+<hr>
+<h4 id="verite-1-la-veritable-source-de-la-menace-pesant-sur-le-nourrissonwhodunit">Vérité 1 : La véritable source de la menace pesant sur le nourrisson（whodunit）</h4>
+<ul>
+<li><strong>Point de convergence : vers 72%</strong></li>
+<li>Réponse : Jack avait blessé le nourrisson avec des flèches empoisonnées d'Amérique du Sud ; poussé par un amour possessif obsessionnel envers son père et par la jalousie envers le nouveau-né de sa belle-mère, il avait agi secrètement à plusieurs reprises.</li>
+</ul>
+<h5 id="indices-cles">Indices clés</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement（pourcentage）</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Une collection complète d'armes sud-américaines est accrochée au mur, comprenant une sarbacane, un petit arc et un carquois</td>
+<td>Vers 52%（lorsque Holmes entre dans le hall）</td>
+<td>L'« intuition » de Holmes concernant l'importance de cette arme — il l'indique directement dans son raisonnement peu après</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Holmes remarque qu'il y a un carquois vide（empty quiver）dans la collection</td>
+<td>Vers 58%</td>
+<td>Quelqu'un a pris des flèches, mais personne n'explique où elles sont allées — c'est un indice physique direct</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Le chien de chasse Carlo a soudainement perdu l'usage de ses pattes arrière il y a quatre mois, et le vétérinaire n'a pas trouvé de cause</td>
+<td>Vers 60%</td>
+<td>Holmes dit immédiatement « très significatif » ; cela suggère que quelqu'un avait « testé » le poison sur le chien — c'est un indice clé</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Holmes voit dans le reflet des persiennes de la fenêtre Jack penché sur le nourrisson, son visage exprimant une jalousie et une haine intenses</td>
+<td>Vers 72%</td>
+<td>C'est le dernier indice décisif ; la motivation subjective de Jack est ici pleinement exposée, et le raisonnement converge</td>
+</tr>
+</tbody>
+</table>
+<h5 id="indices-secondaires">Indices secondaires</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement（pourcentage）</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Les « attaques » de la femme contre Jack coïncident toujours avec la période des blessures infligées au nourrisson, ou y font suite — ce qui indique que les deux événements sont liés</td>
+<td>Vers 35%</td>
+<td>Ferguson mentionne une corrélation temporelle entre les deux attaques, mais ne perçoit pas la signification lui-même</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Jack est « physiquement limité mais mentalement précoce » et manifeste envers son père une possessivité qui dépasse les normes</td>
+<td>Vers 38%</td>
+<td>Holmes pose des questions spécifiques, suggérant que la psychologie de Jack est au cœur de l'énigme</td>
+</tr>
+<tr>
+<td>3</td>
+<td>La femme dit « il devrait me faire confiance » et refuse catégoriquement d'expliquer pourquoi</td>
+<td>Vers 55%</td>
+<td>Une personne coupable ne parlerait pas ainsi — elle a des choses qu'elle ne peut pas dire, non pas qu'elle n'ait rien à dire</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Holmes chuchote en privé avec la nounou, puis lui dit : « Votre anxiété sera bientôt dissipée »</td>
+<td>Vers 68%</td>
+<td>La nounou possède manifestement certaines informations ; Holmes a déjà compris le tableau complet</td>
+</tr>
+</tbody>
+</table>
+<h5 id="fausses-pistes">Fausses pistes</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement（pourcentage）</th>
+<th>Direction de la méprise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>La nounou a vu la femme penchée sur le nourrisson, la bouche ensanglantée, et le cou du bébé portait des blessures</td>
+<td>Description centrale de toute la nouvelle</td>
+<td>Tous les observateurs（y compris la lettre de commission de Holmes et le récit de Ferguson）désignent la femme comme l'agresseure</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Holmes consulte son index sur les « vampires » et confirme les légendes populaires</td>
+<td>Vers 5%</td>
+<td>Doyle pousse délibérément Holmes à « considérer » brièvement la possibilité du surnaturel, élevant ainsi le plafond des hypothèses du lecteur</td>
+</tr>
+<tr>
+<td>3</td>
+<td>La femme refuse d'expliquer, gît dans sa chambre avec de la fièvre et refuse de voir son mari — comportement qui ressemble à celui d'une « personne coupable »</td>
+<td>Vers 55–65%</td>
+<td>Le silence est interprété comme une incapacité à se défendre ; en réalité, elle protège Jack</td>
+</tr>
+<tr>
+<td>4</td>
+<td>La femme a frappé Jack à plusieurs reprises — ce qui suggère qu'elle est hostile à cet enfant</td>
+<td>Vers 30–40%</td>
+<td>Cela amène le lecteur à penser que la femme est l'agressive qui attaque Jack activement ; en réalité, elle le « punit » pour ses tentatives d'empoisonnement</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="verite-2-le-vrai-comportement-de-la-femmehowdunit">Vérité 2 : Le vrai comportement de la femme（howdunit）</h4>
+<ul>
+<li><strong>Point de convergence : vers 60%</strong></li>
+<li>Réponse : La femme a vu de ses propres yeux Jack blesser le nourrisson avec une flèche empoisonnée, et a immédiatement aspiré le venin par la bouche pour l'empêcher de se propager. Elle choisit le silence parce qu'elle ne peut pas révéler la vérité sans détruire l'équilibre psychologique de son mari.</li>
+</ul>
+<h5 id="indices-cles_1">Indices clés</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement（pourcentage）</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>La blessure sur le cou du nourrisson est décrite comme « une petite marque rouge légèrement gonflée »（small puckered mark）</td>
+<td>Vers 55%</td>
+<td>Cela ne ressemble pas à une morsure par succion, mais plutôt à une piqûre ; Holmes examine attentivement, sans commenter mais avec sérieux</td>
+</tr>
+<tr>
+<td>2</td>
+<td>La tradition sud-américaine de sucer le venin d'une plaie par la bouche（avec la référence historique anglaise d'une reine qui aspira une blessure pour éliminer le poison）</td>
+<td>Vers 75%（lors du raisonnement de Holmes）</td>
+<td>Holmes dit : « N'est-il venu à l'esprit de personne que sucer une plaie pourrait avoir une autre finalité ? » — c'est le retournement central du raisonnement</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="reconstruction-du-chemin-deductiflaventure-du-vampire-du-sussex">Reconstruction du chemin déductif（<em>L'Aventure du vampire du Sussex</em>）</h4>
+<p>À environ <strong>5%</strong> de la lecture, Holmes établit sa position avec la maxime « No ghosts need apply » : cette affaire doit avoir une explication rationnelle. Le lecteur attentif devrait à ce stade suivre cette conviction et commencer à réfléchir sous la prémisse qu'il « ne peut pas y avoir de vampire ».</p>
+<p>À environ <strong>52–58%</strong>, lorsque Holmes entre dans le hall, Doyle consacre un passage à la description de la collection d'armes sud-américaines et indique spécifiquement ce <strong>carquois vide</strong>. C'est un moment de « mise à nu de l'indice » rare — l'auteur ne le dissimule pas ; si le lecteur lit attentivement, il devrait former une hypothèse à ce moment.</p>
+<p>À environ <strong>60%</strong>, la paralysie soudaine du chien Carlo est mentionnée, et Holmes déclare immédiatement « très significatif » — c'est le signal de confirmation donné au lecteur par Doyle : l'arme, le carquois vide, le chien malade — trois fils commencent à converger.</p>
+<p>À environ <strong>72%</strong>, Holmes observe l'expression de Jack dans le reflet de la vitre — c'est le dernier point de confirmation. À ce stade, le lecteur qui lit attentivement devrait pouvoir compléter le raisonnement.</p>
+<p>Cependant, bien que « qui l'a fait » puisse être connu à ce stade, l'énigme de la motivation — « pourquoi la mère garde-t-elle le silence » — ne sera pleinement résolue qu'après <strong>80%</strong> lorsque Holmes explique en face à face.</p>
+<hr>
+<h3 id="nouvelle-ii-le-probleme-du-pont-de-thorthe-problem-of-thor-bridge">Nouvelle II : <em>Le Problème du pont de Thor</em>（The Problem of Thor Bridge）</h3>
+<h4 id="informations-de-base_2">Informations de base</h4>
+<ul>
+<li>Type de mystère central：howdunit + whydunit（suicide déguisé en meurtre）</li>
+<li>Mystère apparent：L'institutrice Grace Dunbar a-t-elle assassiné la femme de son employeur ?</li>
+<li>Vrai mystère：Comment Maria Gibson est-elle morte sur le pont sans laisser l'arme du crime ?</li>
+</ul>
+<hr>
+<h4 id="evaluation-de-deductibilitecette-nouvelle_1">Évaluation de déductibilité（cette nouvelle）</h4>
+<table>
+<thead>
+<tr>
+<th>Indicateur</th>
+<th>Évaluation</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Déductibilité（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>Point de convergence moyen vers 78% — l'indice central du mécanisme physique（l'entaille sur le garde-fou）n'apparaît qu'à la fin de l'enquête sur place</td>
+</tr>
+<tr>
+<td>Indice de brume（Fog Rating）</td>
+<td>⭐⭐⭐⭐</td>
+<td>L'affaire elle-même est un piège parfaitement tendu : les preuves, la motivation et l'opportunité désignent toutes l'innocente</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="resumecette-nouvelle_1">Résumé（cette nouvelle）</h4>
+<p>Neil Gibson est un magnat des mines d'or. Sa femme brésilienne Maria est morte la nuit sur le pont de Thor d'une balle de revolver à travers le cerveau, sans qu'aucune arme n'ait été trouvée à proximité. Pourtant, dans le placard de la belle et jeune institutrice Grace Dunbar qu'il emploie, on a trouvé un revolver dont le calibre correspond à la balle mortelle ; en outre, la poche de Maria contenait une lettre de la main même de Dunbar l'invitant à venir la rejoindre sur le pont ce soir-là ; et un villageois de passage avait aperçu Dunbar sur le pont.</p>
+<p>La vérité : Maria savait que son mari aimait Dunbar ; elle a choisi le suicide mais a conçu un mécanisme parfait — elle a attaché le revolver à un bloc de pierre avec une corde, et après avoir tiré, le poids de la pierre entraînerait l'arme dans l'eau sous le pont — déguisant sa mort en meurtre pour que Dunbar soit condamnée à mort, accomplissant ainsi sa vengeance ultime.</p>
+<hr>
+<h4 id="verite-le-suicide-mecanique-de-maria-et-son-plan-pour-pieger-dunbar">Vérité : Le suicide mécanique de Maria et son plan pour piéger Dunbar</h4>
+<ul>
+<li><strong>Point de convergence : vers 78%</strong></li>
+<li>Réponse : Maria Gibson avait conçu elle-même un mécanisme « d'arme disparaissant » — elle avait attaché le revolver à un bloc de pierre, dont une extrémité était fixée au garde-fou du pont, et après avoir tiré, la gravité de la pierre entraînerait l'arme dans l'eau. Elle avait laissé sur le garde-fou du pont de Thor une <strong>entaille</strong> identifiable, seule preuve physique après la disparition du mécanisme.</li>
+</ul>
+<h5 id="indices-cles_2">Indices clés</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement（pourcentage）</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Holmes insiste à plusieurs reprises sur le fait que « Aucune arme n'a été trouvée près d'elle »（No weapon was found near her）— la façon dont il prononce cette phrase est inhabituelle</td>
+<td>Vers 15%</td>
+<td>Doyle envoie un signal à travers le ton de Holmes : « pas d'arme » n'est pas une déclaration ordinaire, mais le cœur de l'énigme</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Le revolver trouvé dans le placard était « posé sur le sol » et non caché</td>
+<td>Vers 20%</td>
+<td>Holmes répète ce détail trois fois, avec une insistance croissante — un vrai meurtrier ne cacherait pas son arme de cette façon</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Une <strong>entaille fraîche</strong>（a chip in the stone）et des traces de corde grossière ont été découvertes sur la pierre du garde-fou du pont de Thor</td>
+<td>Vers 78%</td>
+<td>C'est le dernier indice décisif — la trace physique du mécanisme ; le raisonnement converge entièrement à ce point</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Holmes trouve dans la boue du lac sous le pont le revolver disparu, la pierre toujours attachée dessus</td>
+<td>Vers 82%</td>
+<td>Confirmation finale, mais le lecteur devrait en théorie déjà être capable de déduire le mécanisme lorsqu'il voit l'entaille</td>
+</tr>
+</tbody>
+</table>
+<h5 id="indices-secondaires_1">Indices secondaires</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement（pourcentage）</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Maria est décrite comme une femme brésilienne aux « passions tropicales et aux émotions extrêmes », qui « l'aimait comme une femme tropicale peut aimer »</td>
+<td>Vers 55%</td>
+<td>Établit les bases de la motivation — un tel amour peut se transformer en actes extrêmes dans le désespoir</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Gibson admet qu'il est tombé amoureux de Dunbar et lui a déclaré sa flamme</td>
+<td>Vers 60%</td>
+<td>Maria le savait forcément — elle avait toutes les raisons de concevoir ce piège</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Dunbar dit qu'elle est allée au pont de Thor parce qu'elle avait reçu une lettre demandant à la rencontrer（de la main de Maria）</td>
+<td>Vers 70%</td>
+<td>Maria avait orchestré toute la scène de la rencontre — elle s'était assurée que Dunbar serait présente sur les lieux</td>
+</tr>
+</tbody>
+</table>
+<h5 id="fausses-pistes_1">Fausses pistes</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement（pourcentage）</th>
+<th>Direction de la méprise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Le revolver trouvé sur le sol du placard de Dunbar（calibre correspondant）</td>
+<td>Vers 10%</td>
+<td>Désigne directement Dunbar, et a été trouvé par un tiers, ce qui en fait une preuve apparemment objective</td>
+</tr>
+<tr>
+<td>2</td>
+<td>La lettre écrite de la main de Maria invitant Dunbar au pont — contrefaite ou authentique au nom de Dunbar</td>
+<td>Vers 15%</td>
+<td>Convainc le jury que Dunbar avait « prémédité » d'attirer la victime sur la scène du meurtre</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Le caractère brutal de Gibson et son indifférence envers sa femme — ce qui suggère qu'il pourrait être le vrai commanditaire</td>
+<td>Vers 40%</td>
+<td>Le majordome Bates insiste sur les « brutalités » de Gibson, orientant les soupçons vers lui</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Dunbar ne peut fournir aucun alibi et un villageois l'a vue sur le pont</td>
+<td>Vers 20%</td>
+<td>Rend la défense de Dunbar pitoyablement faible</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="reconstruction-du-chemin-deductifle-probleme-du-pont-de-thor">Reconstruction du chemin déductif（<em>Le Problème du pont de Thor</em>）</h4>
+<p>À environ <strong>15%</strong>, la façon dont Holmes prononce « Aucune arme n'a été trouvée près d'elle » devrait alerter le lecteur que c'est un point délibérément marqué.</p>
+<p>À environ <strong>20%</strong>, Holmes insiste trois fois sur le fait que le revolver était « posé sur le sol » du placard — si Dunbar était la coupable, une telle façon de cacher l'arme n'aurait aucun sens. Le lecteur attentif devrait à ce stade commencer à douter que Dunbar soit la victime d'un complot.</p>
+<p>Mais pour répondre à « où est l'arme ? » et « comment le meurtrier a-t-il fait disparaître l'arme ? », il faut attendre la découverte de <strong>l'entaille fraîche</strong> sur le garde-fou lors de l'enquête sur place（vers 78%）— c'est la dernière pièce du chemin de raisonnement complet.</p>
+<p>Le chemin depuis « pas d'arme » → « hypothèse que l'arme est dans l'eau » → « comment l'arme est-elle entrée dans l'eau » → « mécanisme de pierre » : avant que le lecteur ait la chance de déduire de façon autonome, Doyle évite délibérément de donner des indices directs sur le « mécanisme physique ». Seule cette entaille est une trace observable de l'original. C'est la conception howdunit la plus raffinée de tout le recueil.</p>
+<hr>
+<h3 id="nouvelle-iii-laventure-des-trois-garridebsthe-adventure-of-the-three-garridebs">Nouvelle III : <em>L'Aventure des trois Garridebs</em>（The Adventure of the Three Garridebs）</h3>
+<h4 id="informations-de-base_3">Informations de base</h4>
+<ul>
+<li>Type de mystère central：whodunit + whydunit（vrai but de l'escroquerie）</li>
+<li>Mystère apparent：L'affaire d'héritage « Garrideb » est-elle authentique ?</li>
+<li>Vrai mystère：Pourquoi « Killer » Evans se donne-t-il autant de mal pour créer cette absurde escroquerie de recherche de nom ?</li>
+</ul>
+<hr>
+<h4 id="evaluation-de-deductibilitecette-nouvelle_2">Évaluation de déductibilité（cette nouvelle）</h4>
+<table>
+<thead>
+<tr>
+<th>Indicateur</th>
+<th>Évaluation</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Déductibilité（Deducibility）</td>
+<td>⭐⭐⭐</td>
+<td>Point de convergence moyen vers 55% — le fait qu'Evans soit un escroc peut être confirmé assez tôt, mais son vrai but ne peut être déterminé qu'après la première moitié</td>
+</tr>
+<tr>
+<td>Indice de brume（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>L'escroquerie elle-même est astucieusement conçue, mais les fissures dans les mensonges apparaissent assez tôt ; la difficulté vient principalement du « pourquoi tromper » et non du « qui trompe »</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="resumecette-nouvelle_2">Résumé（cette nouvelle）</h4>
+<p>Un Américain se présentant comme « John Garrideb, avocat du Kansas » trouve Nathan Garrideb à Londres et prétend qu'un riche Américain nommé Alexander Garrideb a laissé un testament : si l'on peut trouver trois hommes du même nom de famille Garrideb, chacun recevra cinq millions de dollars en héritage. Nathan, impatient de trouver le troisième Garrideb, se tourne vers Holmes pour obtenir de l'aide.</p>
+<p>La vérité : « John Garrideb » est en réalité Killer Evans（de son vrai nom James Winter, alias Killer Evans）. Le but de son escroquerie n'est pas la fortune, mais de chasser de son appartement le collectionneur Nathan, qui ne sort jamais — car sous le plancher de l'appartement se trouvent la machine à contrefaire les billets et deux mille billets de cent livres en faux laissés par Prescott（la victime d'un meurtre antérieur）— un génial faussaire. Evans avait tué Prescott à cette adresse et souhaitait maintenant revenir récupérer ce trésor.</p>
+<hr>
+<h4 id="verite-le-vrai-but-de-lescroqueriewhydunit">Vérité : Le vrai but de l'escroquerie（whydunit）</h4>
+<ul>
+<li><strong>Point de convergence : vers 55%</strong></li>
+<li>Réponse : Evans voulait le matériel de faux monnayage et les faux billets cachés sous le plancher de l'appartement ; le locataire précédent Prescott（sa victime）avait caché une machine à fabriquer de la monnaie ici, Evans en connaissait l'emplacement mais ne pouvait y accéder en raison de la présence permanente de Nathan dans l'appartement.</li>
+</ul>
+<h5 id="indices-cles_3">Indices clés</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement（pourcentage）</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>La veste et le pantalon de « John Garrideb » sont très usés — rien à voir avec la tenue d'un « voyageur fraîchement arrivé des États-Unis »</td>
+<td>Vers 18%</td>
+<td>Holmes dit « Je faillis lui demander : que cherchez-vous à dissimuler ? » mais choisit de continuer à feindre la confiance — la tenue vestimentaire est le premier signal du mensonge</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Les annonces dans les journaux n'ont jamais fait apparaître d'avis de recherche pour un « Garrideb » — Evans prétendait avoir fait paraître des annonces depuis longtemps</td>
+<td>Vers 30%</td>
+<td>Holmes dit spécifiquement : « La rubrique des annonces est ma préférée, je ne la raterais jamais. » Cela démystifie directement le mensonge</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Holmes invente un « Dr Lysander Starr de Topeka » — Evans répond « Quel vieux brave homme ! »</td>
+<td>Vers 35%</td>
+<td>Le piège que Holmes a tendu : cet homme n'a jamais existé ; Evans « le reconnaît », prouvant ainsi qu'il ment</td>
+</tr>
+<tr>
+<td>4</td>
+<td>L'identité de l'ancien locataire Waldron/Prescott est confirmée ; Prescott avait vécu ici</td>
+<td>Vers 55%</td>
+<td>Relie l'affaire de meurtre, le faussaire et cette adresse ; le vrai but de l'escroquerie converge à ce point</td>
+</tr>
+</tbody>
+</table>
+<h5 id="indices-secondaires_2">Indices secondaires</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement（pourcentage）</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Après avoir découvert l'implication de Holmes, Evans entre dans une « grande fureur », mais dit à Nathan « Holmes ne pose pas de problème, je veux juste régler ça directement » — revirement d'attitude abrupt</td>
+<td>Vers 38%</td>
+<td>Le changement émotionnel est peu naturel ; il a besoin que cette arnaque continue à fonctionner</td>
+</tr>
+<tr>
+<td>2</td>
+<td>L'orthographe anglaise dans l'annonce（plough écrit plow, buckboard, etc.）est américaine</td>
+<td>Vers 65%</td>
+<td>C'est Evans lui-même qui a placé l'annonce, s'assurant que Nathan puisse être facilement fait sortir le jour prévu</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Nathan ne veut absolument pas quitter sa salle de collections ; tous les efforts d'Evans visent à « pousser cet homme à sortir »</td>
+<td>Toute la nouvelle</td>
+<td>La seule motivation est d'avoir l'appartement temporairement vide</td>
+</tr>
+</tbody>
+</table>
+<h5 id="fausses-pistes_2">Fausses pistes</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement（pourcentage）</th>
+<th>Direction de la méprise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Les détails juridiques complets du « testament d'Alexander Garrideb »</td>
+<td>Vers 15%</td>
+<td>Amène le lecteur à se concentrer sur « l'affaire d'héritage est-elle légale ? », plutôt que sur « pourquoi créer cette affaire d'héritage ? »</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Evans a lui-même trouvé une annonce pour « Howard Garrideb », semblant sincèrement chercher à mener à bien son plan</td>
+<td>Vers 60%</td>
+<td>Fait croire au lecteur qu'il cherche vraiment un Garrideb ; en réalité l'annonce est contrefaite par lui-même</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="reconstruction-du-chemin-deductiflaventure-des-trois-garridebs">Reconstruction du chemin déductif（<em>L'Aventure des trois Garridebs</em>）</h4>
+<p>À environ <strong>18%</strong>, les vêtements usés donnent le premier signal. À environ <strong>30–35%</strong>, le mensonge sur l'annonce et le piège de Lysander Starr établissent essentiellement la proposition « Evans est un escroc ».</p>
+<p>Mais « pourquoi tromper ? » est la vraie énigme de cette histoire. Un homme qui arnaquerait simplement pour l'argent n'aurait pas besoin d'une mise en scène aussi complexe — il pourrait directement voler ou menacer. Qu'est-ce qui l'oblige à chasser de chez lui un vieil homme qui ne sort jamais ?</p>
+<p>À environ <strong>55%</strong>, l'identité de l'ancien locataire Prescott est confirmée, et l'hypothèse « ce lieu cache un secret » est officiellement établie. La suite de l'intrigue n'est qu'une confirmation.</p>
+<p>La scène la plus émouvante de cette histoire n'est pas le triomphe du raisonnement, mais après qu'Evans a blessé Watson d'un coup de feu, le moment d'humanité soudaine de Holmes : « Si vous aviez tué Watson, vous ne sortiriez pas de cette pièce vivant aujourd'hui » — c'est le moment où Holmes est le moins masqué dans toute la série.</p>
+<hr>
+<h3 id="nouvelle-iv-laventure-de-la-pierre-de-mazarinthe-adventure-of-the-mazarin-stone">Nouvelle IV : <em>L'Aventure de la pierre de Mazarin</em>（The Adventure of the Mazarin Stone）</h3>
+<h4 id="informations-de-base_4">Informations de base</h4>
+<ul>
+<li>Type de mystère central：howdunit（comment le détective récupère le bijou dans une situation périlleuse）</li>
+<li>Mystère apparent：Holmes peut-il récupérer le diamant de la Couronne des mains d'un assassin qui prépare son meurtre ?</li>
+<li>Vrai mystère：Comment Holmes, tout en étant « dans sa chambre à coucher », parvient-il à connaître l'emplacement du diamant ?</li>
+</ul>
+<hr>
+<h4 id="evaluation-de-deductibilitecette-nouvelle_3">Évaluation de déductibilité（cette nouvelle）</h4>
+<table>
+<thead>
+<tr>
+<th>Indicateur</th>
+<th>Évaluation</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Déductibilité（Deducibility）</td>
+<td>⭐⭐⭐</td>
+<td>Point de convergence moyen vers 65% — la figure de cire et le phonographe sont chacun mentionnés au début de l'histoire, mais la conception complète de la façon dont Holmes les utilise n'est révélée qu'à la fin</td>
+</tr>
+<tr>
+<td>Indice de brume（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>Doyle dit directement au lecteur « il y a un mannequin, un tireur d'élite, un assassin qui va venir » ; l'énigme n'est pas dans le « qui » mais dans le « comment »</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="resumecette-nouvelle_3">Résumé（cette nouvelle）</h4>
+<p>Holmes est en train de poursuivre le comte Sylvius（Count Sylvius）pour le vol du diamant de la Couronne de Mazarin（the Mazarin Stone）. Le comte, animé d'une intention meurtrière, se présente en personne — il compte d'abord sonder ce que Holmes sait, puis décider s'il faut l'éliminer. Holmes fait entrer le comte dans une « pièce vide », où un mannequin portant la robe de chambre de Holmes est posté dans un coin, tandis que Holmes lui-même écoute discrètement depuis une porte dérobée dans la chambre à coucher la conversation entre le comte et son assistant Sam Merton — le comte, sans s'en douter, révèle que le diamant est caché sur lui dans une « poche secrète ».</p>
+<p>C'est l'une des rares histoires du recueil où l'énigme centrale porte directement sur « comment le détective agit », pleine d'esprit, mais avec une participation déductive relativement limitée.</p>
+<hr>
+<h4 id="verite-le-double-mecanisme-de-holmes">Vérité : Le double mécanisme de Holmes</h4>
+<ul>
+<li><strong>Point de convergence : vers 65%</strong></li>
+<li>Réponse : Holmes utilise un phonographe pour diffuser de la musique de violon（laissant croire aux criminels qu'il joue du violon dans sa chambre）, se faufile par la porte dérobée pour écouter derrière les rideaux, tout en utilisant le mannequin de cire pour que l'assistant du comte soit convaincu.</li>
+</ul>
+<h5 id="indices-cles_4">Indices clés</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement（pourcentage）</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Billy signale le « mannequin de cire » derrière les rideaux — de même apparence que Holmes, à l'angle réglable</td>
+<td>Vers 8%</td>
+<td>L'existence du mannequin est clairement communiquée au lecteur dès le début ; le lecteur sait que Holmes prépare quelque chose, mais ne connaît pas le plan complet</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Holmes dit à Watson « il y a une deuxième porte dans la chambre à coucher, qui donne derrière ce rideau »</td>
+<td>Vers 40%（révélé à la fin）</td>
+<td>Doyle choisit de ne pas révéler la porte dérobée à l'avance, en faisant le révélation finale de la magie</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Le phonographe diffuse la Barcarolle d'Hoffmann — Sam dit « ce son de violon m'agace vraiment »</td>
+<td>Vers 65%</td>
+<td>La musique est le pilier de l'illusion « Holmes est dans sa chambre » ; le phonographe est une technologie courante en 1927, mais l'attention du lecteur a été détournée</td>
+</tr>
+</tbody>
+</table>
+<h5 id="indices-secondaires_3">Indices secondaires</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement（pourcentage）</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Le comte dit que le diamant est « caché dans une poche secrète sur moi, je ne le mets jamais dehors »</td>
+<td>Vers 70%</td>
+<td>Le comte révèle spontanément l'emplacement du diamant à son assistant sans savoir qu'il est surveillé</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Le comte demande à son assistant de tenir le diamant « près de la fenêtre pour bien le voir » — à ce moment Holmes bondit</td>
+<td>Vers 78%</td>
+<td>Holmes attendait ce moment ; « avoir de la lumière pour voir clairement le diamant » est un comportement prévisible</td>
+</tr>
+</tbody>
+</table>
+<h5 id="fausses-pistes_3">Fausses pistes</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement（pourcentage）</th>
+<th>Direction de la méprise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Holmes dit « faites monter le comte, je ne veux pas être dans la pièce » — le lecteur pense qu'il veut se cacher pour éviter le danger</td>
+<td>Vers 40%</td>
+<td>En réalité, il veut que le comte soit à l'aise dans la « pièce vide » et baisse la garde</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Holmes demande à Watson d'aller chercher la police, « laissez-moi d'abord lui parler seul pour découvrir où est le diamant »</td>
+<td>Vers 42%</td>
+<td>Suggère que Holmes prévoit d'obtenir l'emplacement du diamant par la négociation ou l'intimidation ; la vraie méthode est l'écoute discrète</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="reconstruction-du-chemin-deductiflaventure-de-la-pierre-de-mazarin">Reconstruction du chemin déductif（<em>L'Aventure de la pierre de Mazarin</em>）</h4>
+<p>Le plaisir déductif de cette histoire vient principalement de « reconstituer la conception de Holmes », et non d'une enquête criminelle traditionnelle.</p>
+<p>À environ <strong>8%</strong>, le mannequin est présenté — c'est un accessoire fonctionnel, le lecteur sait qu'il sera utilisé. À environ <strong>40%</strong>, Holmes fait sortir Watson, disant « j'ai juste besoin de quelques minutes seul avec le comte » — ce « quelques minutes » suggère qu'il prévoit une action rapide, et non une longue négociation.</p>
+<p>La révélation magique finale réside dans le fait que : le comte et son assistant pensaient que « la musique = Holmes dans la chambre », mais le lecteur attentif devrait réaliser, lorsque le comte et son assistant commencent à parler librement dans la « pièce vide », que quelqu'un écoute — la seule question est « de où ».</p>
+<hr>
+<h2 id="reconstruction-du-chemin-deductifcommentaire-densemble-sur-tout-le-recueil">Reconstruction du chemin déductif（commentaire d'ensemble sur tout le recueil）</h2>
+<p><em>Les Archives de Sherlock Holmes</em>, en tant que dernier chapitre de la série Holmesienne de Doyle, présente plusieurs modèles déductifs distinctifs :</p>
+<p><strong>1. La stratégie de « mise à nu des indices » de Doyle</strong></p>
+<p>Doyle a développé à cette période une technique mature : il ne cache plus les indices, mais « les montre tout en distrayant l'attention du lecteur ». La collection d'armes sud-américaines dans <em>L'Aventure du vampire du Sussex</em> n'est jamais dissimulée, et « l'absence d'arme » dans <em>Le Problème du pont de Thor</em> est répétée plusieurs fois — mais Doyle sait que, sous l'impact émotionnel du « vampire » ou de la « belle institutrice », les lecteurs s'arrêtent rarement pour s'interroger sur la signification de ces détails.</p>
+<p><strong>2. L'impact émotionnel comme fausse piste la plus puissante</strong></p>
+<p>Dans plusieurs histoires de ce recueil, la méprise la plus efficace n'est pas un hareng rouge soigneusement conçu, mais l'intensité émotionnelle elle-même. La peur surnaturelle du vampire dans <em>L'Aventure du vampire du Sussex</em>, le triangle amoureux de Gibson et Dunbar dans <em>Le Problème du pont de Thor</em> — ces foyers émotionnels intenses amènent le lecteur à fixer son attention sur la mauvaise énigme.</p>
+<p><strong>3. L'avantage de connaissance du détective</strong></p>
+<p>Une caractéristique des histoires tardives de Holmes est que la solution de l'énigme repose souvent sur des connaissances spécialisées spécifiques : <em>L'Aventure du vampire du Sussex</em> exige de connaître les propriétés du curare, <em>Le Problème du pont de Thor</em> exige une intuition en mécanique balistique. Doyle accepte parfois à cause de cela la critique d'une « inéquité informationnelle », mais ces conceptions rendent aussi le processus de résolution du mystère plus surprenant.</p>
+<hr>
+<h2 id="notes-complementaires">Notes complémentaires</h2>
+<p><strong>La place des <em>Archives de Sherlock Holmes</em> dans la série</strong></p>
+<p>Dans sa préface, Doyle admet qu'il se sentait épuisé en écrivant ces histoires — « comme un vieux ténor qui rappelle sans cesse sur scène à la demande du public ». En effet, la qualité de ce recueil est assez inégale : la représentation des personnages noirs dans <em>Les Trois Pignons</em> met les lecteurs modernes mal à l'aise, le cadre de science-fiction dans <em>L'Aventure du rampant</em> est quelque peu absurde, et <em>L'Aventure du locataire voilé</em> et <em>L'Aventure du marchand de couleurs retraité</em> tombent dans la platitude.</p>
+<p>Mais trois nouvelles parmi elles atteignent la conception déductive la plus raffinée de toute la vie de Doyle :</p>
+<table>
+<thead>
+<tr>
+<th>Histoire</th>
+<th>Réalisation la plus remarquable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>L'Aventure du vampire du Sussex</em></td>
+<td>Le renversement stupéfiant de l'identité du vrai coupable（un enfant handicapé）, avec le déguisement surnaturel parfait</td>
+</tr>
+<tr>
+<td><em>Le Problème du pont de Thor</em></td>
+<td>La conception du mécanisme de « l'arme disparaissant », dont la créativité physique en tant que howdunit n'a pas encore été surpassée</td>
+</tr>
+<tr>
+<td><em>L'Aventure des trois Garridebs</em></td>
+<td>La conception ingénieuse de la motivation secrète, plus le moment le plus émouvant de l'amitié Holmes–Watson</td>
+</tr>
+</tbody>
+</table>
+<p><strong>L'influence de ce recueil sur la littérature policière ultérieure</strong></p>
+<p>Le mécanisme de « l'arme disparaissant » dans <em>Le Problème du pont de Thor</em> est considéré comme un important précurseur du genre des énigmes à chambre fermée/disparition, ayant directement influencé le roman policier classique japonais ultérieur（les auteurs de romans policiers japonais étudient particulièrement cette nouvelle）. Le « suspect le moins probable » dans <em>L'Aventure du vampire du Sussex</em>（un enfant handicapé）a eu une influence traçable sur la façon de penser d'Agatha Christie lorsqu'elle choisissait des meurtriers inattendus — Christie a reconnu avoir abondamment lu Sherlock Holmes.</p>
+<p><strong>L'évolution du style tardif de Doyle</strong></p>
+<p>En comparant les premières œuvres comme <em>Un Scandale en Bohême</em>（1891）ou <em>Le Dernier Problème</em>（1893）, le Holmes tardif est nettement plus « humain » : sa réaction lorsque Watson est blessé d'un coup de feu（<em>L'Aventure des trois Garridebs</em>）, sa colère envers les femmes victimes（le jugement moral sur la victimisation de Dunbar dans <em>L'Aventure de l'illustre client</em>）, sa réflexion « laissons-les résoudre ça eux-mêmes, c'est le moment de partir » à la fin de <em>L'Aventure du vampire du Sussex</em> — ces réactions sont toutes étrangères au Holmes froid comme une machine des premières années. En prenant congé, Doyle a donné à son personnage le plus célèbre un peu de sa propre chaleur humaine.</p>
+<p><strong>Contexte de référence pour les lecteurs taïwanais</strong></p>
+<p>Pour les lecteurs taïwanais abordant ce recueil pour la première fois, il est recommandé de lire d'abord <em>L'Aventure du vampire du Sussex</em> puis <em>Le Problème du pont de Thor</em> — la première montre comment Doyle enveloppe une énigme rationnelle dans un manteau surnaturel, et la seconde montre comment il conçoit une pure énigme de mécanisme physique. Lire ces deux nouvelles ensemble permet d'avoir une perception intuitive de la pleine amplitude des techniques déductives de Doyle.</p>
+<hr>
+<h2 id="tableau-recapitulatif-des-evaluations-de-deductibilite-par-nouvelle">Tableau récapitulatif des évaluations de déductibilité par nouvelle</h2>
+<table>
+<thead>
+<tr>
+<th>Titre</th>
+<th>Déductibilité</th>
+<th>Indice de brume</th>
+<th>Point de convergence</th>
+<th>Type d'énigme central</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L'Aventure de l'illustre client</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>~65%</td>
+<td>whydunit</td>
+</tr>
+<tr>
+<td>L'Aventure du soldat blanchi</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>~62%</td>
+<td>whodunit（énigme de maladie）</td>
+</tr>
+<tr>
+<td>L'Aventure de la pierre de Mazarin</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>~65%</td>
+<td>howdunit</td>
+</tr>
+<tr>
+<td>L'Aventure des trois pignons</td>
+<td>⭐⭐</td>
+<td>⭐⭐</td>
+<td>~45%</td>
+<td>whodunit</td>
+</tr>
+<tr>
+<td>L'Aventure du vampire du Sussex</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>~72%</td>
+<td>whodunit + howdunit</td>
+</tr>
+<tr>
+<td>L'Aventure des trois Garridebs</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>~55%</td>
+<td>whydunit</td>
+</tr>
+<tr>
+<td>Le Problème du pont de Thor</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>~78%</td>
+<td>howdunit（suicide déguisé）</td>
+</tr>
+<tr>
+<td>L'Aventure du rampant</td>
+<td>⭐⭐</td>
+<td>⭐⭐</td>
+<td>~40%</td>
+<td>whydunit（science-fiction）</td>
+</tr>
+<tr>
+<td>La Crinière du lion</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐</td>
+<td>~60%</td>
+<td>howdunit（mystère naturel）</td>
+</tr>
+<tr>
+<td>L'Aventure du locataire voilé</td>
+<td>⭐⭐</td>
+<td>⭐⭐</td>
+<td>~40%</td>
+<td>whydunit</td>
+</tr>
+<tr>
+<td>L'Aventure de Shoscombe Old Place</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>~65%</td>
+<td>whodunit</td>
+</tr>
+<tr>
+<td>L'Aventure du marchand de couleurs retraité</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>~60%</td>
+<td>whodunit</td>
+</tr>
+<tr>
+<td><strong>Moyenne du recueil</strong></td>
+<td><strong>⭐⭐⭐</strong></td>
+<td><strong>⭐⭐⭐</strong></td>
+<td><strong>~59%</strong></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+    <a href="../index.html" class="back-link">← Retour à l'accueil</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Salle de Dissection Policière</p>
+    <p>Cinq auteurs · quatre-vingt-huit œuvres · 135 ans d'évolution de la difficulté du roman policier.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

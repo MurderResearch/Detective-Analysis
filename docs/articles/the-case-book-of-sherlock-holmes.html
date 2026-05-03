@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>福爾摩斯探案全集：最後的案件簿（The Case-Book of Sherlock Holmes） — 推理解剖室</title>
+<meta name="description" content="道爾在生命晚期寫下這十二篇故事，筆觸已與早年的《冒險史》明顯不同：案件更趨複雜、道德輪廓更加模糊，偶爾出現不符合時代正確性的描寫（尤其〈三個山牆〉中充滿偏見的黑人形象），但推理構造上有幾篇達到了系列的巔峰。 十二篇依次為：（I）顯赫委託人、（II）漂白兵士、（III）馬扎蘭石、（IV）三個山牆、（V）蘇塞克斯吸血鬼、（">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-case-book-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-case-book-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-case-book-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-case-book-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-case-book-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-case-book-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-case-book-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-case-book-of-sherlock-holmes.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif TC', serif;
+  --font-sans: 'Noto Sans TC', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">推理解剖室</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">首頁</a>
+        <a href="../index.html#latest">最新分析</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="語言" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 繁體中文</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item active" data-lang="zh-TW" href="/Detective-Analysis/articles/the-case-book-of-sherlock-holmes.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-case-book-of-sherlock-holmes.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-case-book-of-sherlock-holmes.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/the-case-book-of-sherlock-holmes.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/the-case-book-of-sherlock-holmes.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/the-case-book-of-sherlock-holmes.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/the-case-book-of-sherlock-holmes.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/the-case-book-of-sherlock-holmes.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">柯南·道爾 · </div>
+    <h1>福爾摩斯探案全集：最後的案件簿（The Case-Book of Sherlock Holmes）</h1>
+    <div class="subtitle">柯南·道爾（Arthur Conan Doyle） · 短篇集（12篇）</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">推理難度</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">迷霧等級</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="the-case-book-of-sherlock-holmes">福爾摩斯探案全集：最後的案件簿（The Case-Book of Sherlock Holmes）— 推理分析</h1>
+<h2 id="_1">基本資訊</h2>
+<ul>
+<li>作者：柯南·道爾（Arthur Conan Doyle）</li>
+<li>出版年：1927年</li>
+<li>類型：短篇集（12篇）</li>
+<li>偵探角色：夏洛克·福爾摩斯（Sherlock Holmes）</li>
+<li>核心謎團類型：whodunit / howdunit / whydunit（各故事不同）</li>
+</ul>
+<hr>
+<h2 id="_2">推理難度總評（整部選集）</h2>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星等</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難度（Deducibility）</td>
+<td>⭐⭐⭐</td>
+<td>平均收斂點約 65% — 各故事差異大，從中等難度到高難度均有；多數謎案須讀過大半才能完整收斂</td>
+</tr>
+<tr>
+<td>迷霧等級（Fog Rating）</td>
+<td>⭐⭐⭐⭐</td>
+<td>道爾擅長以「表象合理、誤導有力」的手法設局；〈蘇塞克斯的吸血鬼〉幾乎觸及敘事欺騙的極限</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>選集說明：</strong>《最後的案件簿》是道爾霍姆斯系列的終結之作，收錄 1921–1927 年間發表的最後 12 個短篇，道爾在序言中親自向讀者告別。本分析從中選取最具推理深度的四篇——〈蘇塞克斯的吸血鬼〉、〈索爾橋謎案〉、〈三個加里德布〉、〈馬扎蘭石〉——進行完整剖析，並附集體評述。</p>
+</blockquote>
+<hr>
+<h2 id="_3">故事大綱</h2>
+<p>道爾在生命晚期寫下這十二篇故事，筆觸已與早年的《冒險史》明顯不同：案件更趨複雜、道德輪廓更加模糊，偶爾出現不符合時代正確性的描寫（尤其〈三個山牆〉中充滿偏見的黑人形象），但推理構造上有幾篇達到了系列的巔峰。</p>
+<p>十二篇依次為：（I）顯赫委託人、（II）漂白兵士、（III）馬扎蘭石、（IV）三個山牆、（V）蘇塞克斯吸血鬼、（VI）三個加里德布、（VII）索爾橋謎案、（VIII）爬行者、（IX）獅鬃、（X）蒙臉的房客、（XI）肖斯科姆舊莊、（XII）退休的染料商。</p>
+<p>本分析重點剖析其中謎團設計最精密的四篇。</p>
+<hr>
+<h2 id="_4">真相拆解</h2>
+<hr>
+<h3 id="the-adventure-of-the-sussex-vampire">篇目一：〈蘇塞克斯的吸血鬼〉（The Adventure of the Sussex Vampire）</h3>
+<h4 id="_5">基本資訊</h4>
+<ul>
+<li>核心謎團類型：whydunit + howdunit</li>
+<li>表面謎題：妻子是否為吸血鬼，吸吮親生嬰兒的血？</li>
+<li>真正謎題：嬰兒究竟被誰傷害？母親的奇怪行為有何解釋？</li>
+</ul>
+<hr>
+<h4 id="_6">推理難度總評（本篇）</h4>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星等</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難度（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>平均收斂點約 72% — 真兇身分要等到霍姆斯在玻璃窗的反射中觀察到傑克的臉才完全確認</td>
+</tr>
+<tr>
+<td>迷霧等級（Fog Rating）</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>超自然敘事框架從頭貫穿：「吸血鬼」詮釋是最強力的假線索，連霍姆斯本人也需要主動抵制</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="_7">故事概要（本篇）</h4>
+<p>羅伯特·費格森（Robert Ferguson）委託霍姆斯調查一件駭人聽聞的事：他的秘魯裔妻子被保母和他本人親眼目擊，俯身在嬰兒頸上吸血，嬰兒的皮膚上有清晰的傷口。此外，她還曾多次無端毆打丈夫前妻所生的十五歲殘障兒子傑克。妻子對一切保持沉默，既不辯解，也不請求原諒，只說「他應該信任我」。</p>
+<p>真相是：傑克（Jack）——因脊椎損傷而行動不便、對父親充滿偏執的愛——一直用牆上南美武器收藏中的小鳥弓箭，以浸有箭毒木（curare）的箭矢秘密刺傷嬰兒。母親看破真相，卻為了保護丈夫的心，選擇親自以口吸出毒液，寧願被誤解為吸血鬼，也不肯揭發丈夫最愛的兒子。</p>
+<hr>
+<h4 id="whodunit">真相一：嬰兒的真正威脅來源（whodunit）</h4>
+<ul>
+<li><strong>線索收斂點：約 72%</strong></li>
+<li>答案：傑克（Jack）用南美毒箭傷害嬰兒；他出於對父親的偏執愛情與對繼母新生兒的嫉妒，已秘密行動多次。</li>
+</ul>
+<h5 id="_8">關鍵線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>牆上掛有一套完整的南美武器，包括吹管、小鳥弓及箭袋</td>
+<td>約 52%（霍姆斯進入大廳時）</td>
+<td>霍姆斯的「本能感覺」那件武器的重要性——稍後在推理中直接點出</td>
+</tr>
+<tr>
+<td>2</td>
+<td>霍姆斯注意到陳列中有一個空箭袋（empty quiver）</td>
+<td>約 58%</td>
+<td>某人已取用了箭矢，但沒有人說明去向——這是直接的物理線索</td>
+</tr>
+<tr>
+<td>3</td>
+<td>獵犬卡洛（Carlo）四個月前突然後肢癱瘓，獸醫找不到病因</td>
+<td>約 60%</td>
+<td>霍姆斯立刻說「非常有意義」；暗示有人曾在狗身上「試藥」——是關鍵線索</td>
+</tr>
+<tr>
+<td>4</td>
+<td>霍姆斯在窗玻璃的百葉窗反射中，看到傑克俯身觀察嬰兒時臉上顯出強烈的嫉妒與仇恨</td>
+<td>約 72%</td>
+<td>此為最後關鍵線索，傑克的主觀動機在此完全暴露，推理收斂</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_9">輔助線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>妻子對傑克的「攻擊」總是在攻擊嬰兒的同期或之後——說明兩事件相關</td>
+<td>約 35%</td>
+<td>費格森提及兩次攻擊時間有關聯，但他自己未察覺意義</td>
+</tr>
+<tr>
+<td>2</td>
+<td>傑克「身體受限但心智早熟」，對父親表現出超乎尋常的佔有欲</td>
+<td>約 38%</td>
+<td>霍姆斯特別追問，暗示傑克的心理是謎題的核心</td>
+</tr>
+<tr>
+<td>3</td>
+<td>妻子表示「他應該信任我」，堅決不肯解釋原因</td>
+<td>約 55%</td>
+<td>一個有罪的人不會這樣說話——她有話不能說，而不是沒話說</td>
+</tr>
+<tr>
+<td>4</td>
+<td>霍姆斯私下與保母低聲交談後，對她說「妳的焦慮很快就會消除」</td>
+<td>約 68%</td>
+<td>保母顯然已掌握某些訊息，霍姆斯已理解完整圖像</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_10">假線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>保母目擊妻子俯身嬰兒，嘴邊有血，嬰兒頸部有傷口</td>
+<td>全篇核心描述</td>
+<td>所有觀察者（包括霍姆斯的委託索引、費格森的敘述）都指向妻子是施害者</td>
+</tr>
+<tr>
+<td>2</td>
+<td>霍姆斯查閱「吸血鬼」索引，確認民間傳說</td>
+<td>約 5%</td>
+<td>道爾刻意讓霍姆斯短暫「考慮」超自然可能，拉高讀者的假設天花板</td>
+</tr>
+<tr>
+<td>3</td>
+<td>妻子拒絕解釋，在房中低燒拒見丈夫，行為如同「有罪之人」</td>
+<td>約 55–65%</td>
+<td>沉默被解讀為無法辯解；實際上她是在保護傑克</td>
+</tr>
+<tr>
+<td>4</td>
+<td>妻子曾多次毆打傑克——暗示她敵視這個孩子</td>
+<td>約 30–40%</td>
+<td>讓讀者以為妻子是主動攻擊傑克的施害方；實際上她是在「報復」傑克的暗算</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="howdunit">真相二：妻子的真實行為（howdunit）</h4>
+<ul>
+<li><strong>線索收斂點：約 60%</strong></li>
+<li>答案：妻子親眼目睹傑克用毒箭刺傷嬰兒，立刻以口吸出箭毒，防止毒素擴散。她選擇沉默，因為她無法在不摧毀丈夫心理的前提下說出真相。</li>
+</ul>
+<h5 id="_11">關鍵線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>嬰兒頸上的傷口描述為「小小的紅色皺起」（small puckered mark）</td>
+<td>約 55%</td>
+<td>不像吸咬傷，更像刺傷；霍姆斯仔細檢查，無評論但態度認真</td>
+</tr>
+<tr>
+<td>2</td>
+<td>南美文化中以口吸毒的傳統（英格蘭歷史上王后吸傷口以排毒的典故）</td>
+<td>約 75%（霍姆斯推理時）</td>
+<td>霍姆斯說「難道沒有人想過，吸傷口可能有另一個目的？」——這是核心推理翻轉</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="_12">推理路徑重建（〈蘇塞克斯的吸血鬼〉）</h4>
+<p>讀到約 <strong>5%</strong> 時，霍姆斯以「No ghosts need apply」的格言表明立場：這個案件一定有理性解釋。細心的讀者此時應跟隨這個信念，開始在「不可能有吸血鬼」的前提下思考。</p>
+<p>讀到約 <strong>52–58%</strong>，霍姆斯進入大廳時，道爾花了一段文字描述南美武器收藏，並特別點出那個<strong>空箭袋</strong>。這是一個罕見的「裸露線索」時刻——作者沒有掩蓋，讀者若仔細閱讀，應在此建立假設。</p>
+<p>讀到約 <strong>60%</strong>，獵犬卡洛的突發癱瘓被提出，霍姆斯立刻表示「非常有意義」——這是道爾給讀者的確認信號：武器、空箭袋、生病的狗，三條線已開始收斂。</p>
+<p>讀到約 <strong>72%</strong>，霍姆斯觀察到傑克在玻璃反射中的表情——這是最後的確認點。至此，仔細閱讀的讀者應能完成推理。</p>
+<p>然而，「誰幹的」到此雖已可知，「為什麼母親沉默」的動機謎團要等到 <strong>80%</strong> 之後霍姆斯當面解釋才完全落定。</p>
+<hr>
+<h3 id="the-problem-of-thor-bridge">篇目二：〈索爾橋謎案〉（The Problem of Thor Bridge）</h3>
+<h4 id="_13">基本資訊</h4>
+<ul>
+<li>核心謎團類型：howdunit + whydunit（自殺偽裝成謀殺）</li>
+<li>表面謎題：女家庭教師鄧巴（Grace Dunbar）是否謀殺了主人的妻子？</li>
+<li>真正謎題：瑪麗亞·吉布森（Maria Gibson）如何在橋上死亡，而沒有留下凶器？</li>
+</ul>
+<hr>
+<h4 id="_14">推理難度總評（本篇）</h4>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星等</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難度（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>平均收斂點約 78% — 物理機關的核心線索（橋欄的缺口）要到現場調查後段才出現</td>
+</tr>
+<tr>
+<td>迷霧等級（Fog Rating）</td>
+<td>⭐⭐⭐⭐</td>
+<td>案件本身是完美的陷害設局：證據、動機、機會全部指向無辜者</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="_15">故事概要（本篇）</h4>
+<p>尼爾·吉布森（Neil Gibson）是一位黃金礦業大亨，他的巴西妻子瑪麗亞深夜在索爾橋上被一顆左輪手槍子彈貫穿腦部，身旁沒有發現任何武器。然而，他雇用的年輕美麗女家庭教師格蕾絲·鄧巴的衣櫃裡，卻找到了一把左輪手槍，口徑與致命子彈相符；而且瑪麗亞口袋裡有一封鄧巴親筆邀約的信，約她當晚到橋上見面；更有一名路過村民見過鄧巴在橋上出現。</p>
+<p>真相：瑪麗亞知道丈夫愛上了鄧巴，她選擇自殺，但設計了一個完美的機關——用繩子將手槍綁在一塊石頭上，扣下板機後，手槍因石頭的重量墜入橋下的水中——將死亡偽裝成謀殺，讓鄧巴被判死刑，以此完成最終的復仇。</p>
+<hr>
+<h4 id="_16">真相：瑪麗亞的機關自殺與陷害計劃</h4>
+<ul>
+<li><strong>線索收斂點：約 78%</strong></li>
+<li>答案：瑪麗亞·吉布森自行設計了一個「消失的武器」機關——她將左輪手槍綁在一塊石頭上，一端固定在橋欄上，開槍後石頭的重力會將手槍拉入水中。她在索爾橋橋欄上留下了可供辨識的<strong>缺口痕跡</strong>，這是機關消失後唯一的物理證據。</li>
+</ul>
+<h5 id="_17">關鍵線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>霍姆斯反覆強調「屍體旁沒有武器」（No weapon was found near her）——他說這句話時的停頓方式不尋常</td>
+<td>約 15%</td>
+<td>道爾透過霍姆斯的語氣給出信號：「沒有武器」不是一個普通的陳述，而是謎題的核心</td>
+</tr>
+<tr>
+<td>2</td>
+<td>衣櫃裡找到的手槍是「放在地板上」而非藏起來</td>
+<td>約 20%</td>
+<td>霍姆斯重複這個細節三次，語氣越來越重——一個真正的殺手不會這樣藏兇器</td>
+</tr>
+<tr>
+<td>3</td>
+<td>在索爾橋橋欄石材上發現了一個<strong>新鮮的缺口</strong>（a chip in the stone）及粗麻繩的紋路</td>
+<td>約 78%</td>
+<td>這是最後的決定性線索——機關的物理痕跡；至此推理完全收斂</td>
+</tr>
+<tr>
+<td>4</td>
+<td>霍姆斯在橋下的湖泥中找到了消失的手槍，石頭仍綁在上面</td>
+<td>約 82%</td>
+<td>最終確認，但讀者理論上在看到缺口時已可推理出機關</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_18">輔助線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>瑪麗亞是「熱帶氣質、感情極端」的巴西女性，「愛他像熱帶女人能愛的那樣」</td>
+<td>約 55%</td>
+<td>建立動機基礎——這種愛在絕望時能轉化為極端行動</td>
+</tr>
+<tr>
+<td>2</td>
+<td>吉布森坦承愛上了鄧巴，且向鄧巴表白過</td>
+<td>約 60%</td>
+<td>瑪麗亞一定知道——她有充分動機設計這個陷害</td>
+</tr>
+<tr>
+<td>3</td>
+<td>鄧巴說她去索爾橋是因為收到一封要求見面的信（瑪麗亞親筆）</td>
+<td>約 70%</td>
+<td>瑪麗亞設計了整個相遇場景——她確保了鄧巴會在現場</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_19">假線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>在鄧巴衣櫃地板上找到的手槍（口徑符合）</td>
+<td>約 10%</td>
+<td>直接指向鄧巴，且是由第三方發現，看似客觀證據</td>
+</tr>
+<tr>
+<td>2</td>
+<td>瑪麗亞親筆信約鄧巴到橋上——以鄧巴的名義偽造或真實存在</td>
+<td>約 15%</td>
+<td>讓陪審團相信鄧巴「預謀」引誘被害人前往謀殺現場</td>
+</tr>
+<tr>
+<td>3</td>
+<td>吉布森的殘酷性格與對妻子的冷漠——暗示他可能是幕後真兇</td>
+<td>約 40%</td>
+<td>大莊園管家貝茨強調吉布森的「暴行」，引導懷疑吉布森</td>
+</tr>
+<tr>
+<td>4</td>
+<td>鄧巴無法提供不在場證明，且一名村民目擊她在橋上</td>
+<td>約 20%</td>
+<td>讓鄧巴的自辯顯得蒼白無力</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="_20">推理路徑重建（〈索爾橋謎案〉）</h4>
+<p>讀到約 <strong>15%</strong> 時，霍姆斯說「屍體旁沒有武器」時停頓的方式應讓讀者察覺這是一個被刻意標記的謎點。</p>
+<p>讀到約 <strong>20%</strong> 時，霍姆斯三度強調手槍放在衣櫃「地板上」——如果真兇是鄧巴，這樣的藏法毫無道理。仔細的讀者應在此開始懷疑鄧巴是被陷害的。</p>
+<p>但要回答「武器去哪了」以及「兇手如何消失武器」，必須等到現場調查中在橋欄上發現的那道<strong>新鮮缺口</strong>（約 78%）——這才是完整推理路徑的最後一塊。</p>
+<p>從「無武器」→「假設武器在水中」→「如何使武器進入水中」→「機關石頭」這條路徑，在讀者有機會自主推論之前，道爾刻意不給「物理機關」的直接線索。只有那道缺口是可以觀察到的原始痕跡。這是全集中最精緻的 howdunit 設計。</p>
+<hr>
+<h3 id="the-adventure-of-the-three-garridebs">篇目三：〈三個加里德布〉（The Adventure of the Three Garridebs）</h3>
+<h4 id="_21">基本資訊</h4>
+<ul>
+<li>核心謎團類型：whodunit + whydunit（騙局的真實目的）</li>
+<li>表面謎題：「加里德布」繼承案是否為真？</li>
+<li>真正謎題：「殺手」伊文斯（Killer Evans）為什麼要費盡心思製造這個荒謬的名字搜尋騙局？</li>
+</ul>
+<hr>
+<h4 id="_22">推理難度總評（本篇）</h4>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星等</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難度（Deducibility）</td>
+<td>⭐⭐⭐</td>
+<td>平均收斂點約 55% — 伊文斯是騙子這一點相當早就可以確認，但他的真實目的要等到後半段才能確定</td>
+</tr>
+<tr>
+<td>迷霧等級（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>騙局本身設計精巧，但謊言的裂縫出現得比較早；難度主要來自「為什麼騙」而非「誰在騙」</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="_23">故事概要（本篇）</h4>
+<p>一個自稱「約翰·加里德布，堪薩斯律師」的美國人找到倫敦的納森·加里德布（Nathan Garrideb），聲稱有一位名叫亞歷山大·加里德布的美國富翁留下遺囑：若能找到三個同姓的加里德布男性，每人可獲五百萬美元遺產。納森急於尋找第三個加里德布，遂向霍姆斯求助。</p>
+<p>真相：「約翰·加里德布」其實是殺手伊文斯（本名 James Winter，別名 Killer Evans）。他騙局的目的不是財富，而是要把整天不出門的收藏家納森趕出他的公寓——因為公寓地板下藏有前兇殺案受害者普雷斯科特（Prescott）——一位天才偽幣製造師——留下的造幣機器與兩千張百元英鎊假鈔。伊文斯是在這個地址殺了普雷斯科特，現在想回來取走那批財富。</p>
+<hr>
+<h4 id="whydunit">真相：騙局的真實目的（whydunit）</h4>
+<ul>
+<li><strong>線索收斂點：約 55%</strong></li>
+<li>答案：伊文斯想要公寓地板下的偽幣設備與假鈔，前任租客普雷斯科特（他的被殺人）在此藏有造幣機器，伊文斯知道地點，卻因納森長年不離開公寓而無法取得。</li>
+</ul>
+<h5 id="_24">關鍵線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>「約翰·加里德布」的外套和褲子磨損嚴重，絕非「剛從美國來的旅行者」的裝扮</td>
+<td>約 18%</td>
+<td>霍姆斯說「我幾乎要問他：你在騙什麼？」但選擇繼續佯裝信任——衣著是說謊的早期信號</td>
+</tr>
+<tr>
+<td>2</td>
+<td>報紙廣告欄從未出現「加里德布」的尋人啟事——伊文斯聲稱已廣告多時</td>
+<td>約 30%</td>
+<td>霍姆斯特別說：「報紙廣告欄是我的最愛，我絕不會漏看。」直接戳破謊言</td>
+</tr>
+<tr>
+<td>3</td>
+<td>霍姆斯虛構「托皮卡的萊桑德·史塔博士」——伊文斯說「好老頭！」</td>
+<td>約 35%</td>
+<td>霍姆斯的測試陷阱：這個人從來不存在；伊文斯通過「認識」他，證明在說謊</td>
+</tr>
+<tr>
+<td>4</td>
+<td>前任租客沃爾德倫（Waldron）/普雷斯科特的身份確認；普雷斯科特曾住在此地</td>
+<td>約 55%</td>
+<td>連接謀殺案、偽幣師、與此地址，騙局的真實目的至此收斂</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_25">輔助線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>伊文斯發現霍姆斯介入後「大怒」，但對納森說「霍姆斯沒問題，我只是想直接辦事」——態度急轉</td>
+<td>約 38%</td>
+<td>情緒轉折不自然；他需要繼續讓這個局維持運作</td>
+</tr>
+<tr>
+<td>2</td>
+<td>廣告的英文拼寫（plough 拼成 plow，buckboard 等）是美式英文</td>
+<td>約 65%</td>
+<td>廣告是伊文斯自己登的，他確保納森離開那天能順利潛入</td>
+</tr>
+<tr>
+<td>3</td>
+<td>納森完全不想離開他的收藏室，伊文斯的所有努力都在「催促這個人出門」</td>
+<td>全篇</td>
+<td>唯一的動機是需要公寓暫時清空</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_26">假線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>「亞歷山大·加里德布的遺囑」的完整法律細節</td>
+<td>約 15%</td>
+<td>讓讀者專注在「繼承案是否合法」，而非「為什麼要創造這個繼承案」</td>
+</tr>
+<tr>
+<td>2</td>
+<td>伊文斯主動找到了「霍華德·加里德布」的廣告，看似在誠心完成計劃</td>
+<td>約 60%</td>
+<td>讓讀者以為他真的在找加里德布；實際上廣告是他自己偽造的</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="_27">推理路徑重建（〈三個加里德布〉）</h4>
+<p>讀到約 <strong>18%</strong> 時，外套磨損給出第一個信號。讀到約 <strong>30–35%</strong> 時，廣告謊言和萊桑德·史塔測試使「伊文斯是騙子」的命題基本確立。</p>
+<p>但「為什麼騙？」是本故事真正的謎。一個只為錢財行騙的人不需要如此複雜的布局——他完全可以直接偷竊或威脅。是什麼讓他非得把一個從不外出的老頭趕出門不可？</p>
+<p>讀到約 <strong>55%</strong>，前任租客普雷斯科特的身份被確認，「此地藏有秘密」的假設正式成立。此後的劇情只是確認。</p>
+<p>本故事最感人的場景並非推理的勝利，而是在伊文斯開槍打傷華生之後，霍姆斯的人性瞬間流露——「如果你殺了華生，你今天就走不出這個房間」——這是整個系列中霍姆斯最少偽裝的片刻。</p>
+<hr>
+<h3 id="the-adventure-of-the-mazarin-stone">篇目四：〈馬扎蘭石〉（The Adventure of the Mazarin Stone）</h3>
+<h4 id="_28">基本資訊</h4>
+<ul>
+<li>核心謎團類型：howdunit（偵探如何在危局中取回珠寶）</li>
+<li>表面謎題：霍姆斯能否從計劃謀殺他的殺手手中取回皇冠鑽石？</li>
+<li>真正謎題：霍姆斯如何在自身「身處臥室」的情況下，得知鑽石的下落？</li>
+</ul>
+<hr>
+<h4 id="_29">推理難度總評（本篇）</h4>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星等</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難度（Deducibility）</td>
+<td>⭐⭐⭐</td>
+<td>平均收斂點約 65% — 蠟像假人和留聲機在故事開頭分別提及，但霍姆斯如何利用它們的完整設計要到最後才揭曉</td>
+</tr>
+<tr>
+<td>迷霧等級（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>道爾直接告訴讀者「有假人、有狙擊手、有殺手要來訪」，謎題不在「誰」而在「怎麼做到的」</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="_30">故事概要（本篇）</h4>
+<p>霍姆斯正在追查西爾維斯伯爵（Count Sylvius）偷竊馬扎蘭皇冠鑽石（the Mazarin Stone）一案。伯爵帶著殺意親自登門——他打算先摸清霍姆斯知道多少，再決定是否除掉他。霍姆斯讓伯爵進入一個「空房間」，房間角落的假人身上戴著霍姆斯的晨袍，而霍姆斯本人則從臥室的第二扇暗門偷聽伯爵與助手山姆·莫頓的對話——伯爵在不知情的情況下說出了鑽石就藏在他自己身上「秘密口袋」裡。</p>
+<p>這是全集中少數直接以「偵探如何行動」為謎題核心的故事，機智感十足，但推理的可參與性相對較低。</p>
+<hr>
+<h4 id="_31">真相：霍姆斯的雙重機關</h4>
+<ul>
+<li><strong>線索收斂點：約 65%</strong></li>
+<li>答案：霍姆斯用留聲機播放小提琴音樂（讓罪犯以為他在臥室練琴），自己從暗門繞到窗簾後偷聽，同時利用蠟製假人讓伯爵的助手信以為真。</li>
+</ul>
+<h5 id="_32">關鍵線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>比利指出窗簾後的「蠟製假人」——外形與霍姆斯一模一樣，可調整角度</td>
+<td>約 8%</td>
+<td>假人的存在從一開始就清楚告知讀者；讀者知道霍姆斯在佈局，但不知道完整計劃</td>
+</tr>
+<tr>
+<td>2</td>
+<td>霍姆斯告訴華生「臥室還有第二扇門，通往那道窗簾後面」</td>
+<td>約 40%（故事末尾揭示）</td>
+<td>道爾在設計上選擇不事先透露暗門，讓這成為最終的魔術揭曉</td>
+</tr>
+<tr>
+<td>3</td>
+<td>留聲機播放霍夫曼的船歌——山姆說「那小提琴聲讓我很不爽」</td>
+<td>約 65%</td>
+<td>音樂是「霍姆斯在臥室裡」的假象支柱；留聲機在 1927 年已是常見技術，但讀者的注意力被轉移了</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_33">輔助線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>伯爵說鑽石「藏在我身上的秘密口袋，我從不把它放在外面」</td>
+<td>約 70%</td>
+<td>伯爵在不知道被監聽的情況下，對助手主動說出鑽石的位置</td>
+</tr>
+<tr>
+<td>2</td>
+<td>伯爵讓助手拿著鑽石「到窗邊看清楚」——此時霍姆斯一躍而出</td>
+<td>約 78%</td>
+<td>霍姆斯等待這個瞬間，「有光線才能看清楚鑽石」是一個可預測的行為</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_34">假線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>霍姆斯說「去叫伯爵上來，我要不在房間裡」——讀者以為他要躲起來回避危險</td>
+<td>約 40%</td>
+<td>實際上他是要利用伯爵在「空房間」裡放鬆戒心</td>
+</tr>
+<tr>
+<td>2</td>
+<td>霍姆斯請華生去找警察，「讓我先單獨跟他談談找出鑽石在哪」</td>
+<td>約 42%</td>
+<td>暗示霍姆斯打算靠談判或恐嚇讓伯爵說出地點；實際手法是偷聽</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="_35">推理路徑重建（〈馬扎蘭石〉）</h4>
+<p>這個故事的推理樂趣主要來自「拼出霍姆斯的設計」，而非傳統的破案推理。</p>
+<p>讀到約 <strong>8%</strong> 時，假人被展示——這是一個功能性道具，讀者知道它一定會被使用。讀到約 <strong>40%</strong> 時，霍姆斯請走華生，說「我只需要幾分鐘單獨和伯爵談」——這個「幾分鐘」的設定暗示他打算進行某種快速行動，而不是長時間談判。</p>
+<p>最後的魔術揭曉在於：伯爵和助手以為「音樂=霍姆斯在臥室」，但仔細的讀者應在伯爵和助手開始在「無人的房間裡」輕鬆說話時，就意識到有人在聽——問題只是「從哪裡聽」。</p>
+<hr>
+<h2 id="_36">推理路徑重建（整部選集總論）</h2>
+<p>《最後的案件簿》作為道爾霍姆斯系列的最終章，呈現出幾個獨特的推理模式：</p>
+<p><strong>1. 道爾的「裸露線索」策略</strong></p>
+<p>道爾在這一時期發展出一種成熟的技巧：他不再隱藏線索，而是「展示但分散讀者注意力」。〈蘇塞克斯的吸血鬼〉中的南美武器收藏從不遮掩，〈索爾橋謎案〉中「沒有武器」被反覆強調——但道爾知道，讀者在「吸血鬼」或「美麗女家庭教師」的情緒衝擊下，往往不會停下來追問這些細節的含義。</p>
+<p><strong>2. 情感衝擊作為最強假線索</strong></p>
+<p>本選集多個故事的最有效誤導，不是精心設計的紅鯡魚，而是情感強度本身。〈蘇塞克斯的吸血鬼〉中吸血的超自然恐懼、〈索爾橋謎案〉中吉布森對鄧巴的愛情糾紛——這些強烈的情緒焦點讓讀者緊盯著錯誤的謎題。</p>
+<p><strong>3. 偵探的知識優勢</strong></p>
+<p>晚期霍姆斯故事的一個特徵是，謎題的解答往往依賴特定專業知識：〈蘇塞克斯的吸血鬼〉需要知道箭毒木（curare）的特性、〈索爾橋謎案〉需要對彈道力學有直覺。道爾有時因此承擔了「資訊不公平」的批評，但這些設計也讓解謎過程更具驚喜感。</p>
+<hr>
+<h2 id="_37">補充說明</h2>
+<p><strong>《最後的案件簿》在系列中的位置</strong></p>
+<p>道爾在序言中坦承，他寫這批故事時已感到疲憊——「像一個年老的男高音，應觀眾要求不斷謝幕」。確實，本選集的品質相當不均：〈三個山牆〉中對黑人角色的描寫令現代讀者不適，〈爬行者〉的科幻設定有些荒誕，〈蒙臉的房客〉和〈退休的染料商〉則流於平淡。</p>
+<p>但其中三篇卻達到了道爾一生中最精妙的推理設計：</p>
+<table>
+<thead>
+<tr>
+<th>故事</th>
+<th>最突出的成就</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>〈蘇塞克斯的吸血鬼〉</td>
+<td>真兇身份的驚人反轉（殘障孩子），加上超自然外衣的完美偽裝</td>
+</tr>
+<tr>
+<td>〈索爾橋謎案〉</td>
+<td>「消失的武器」機關設計，howdunit 的物理創意至今無人超越</td>
+</tr>
+<tr>
+<td>〈三個加里德布〉</td>
+<td>幕後動機的精巧設計，加上最感人的霍姆斯──華生情誼時刻</td>
+</tr>
+</tbody>
+</table>
+<p><strong>本選集對後世推理文學的影響</strong></p>
+<p>〈索爾橋謎案〉的「消失武器」機關被視為密室/消失型謎題的重要前驅，直接影響了後來的日本本格推理（日本推理作家尤其研究此篇）。〈蘇塞克斯的吸血鬼〉的「最不可能的嫌疑人」（一個殘障孩子）對阿嘉莎·克莉絲蒂在選擇意外兇手時的思路有可追溯的影響——克莉絲蒂承認她大量閱讀福爾摩斯。</p>
+<p><strong>道爾晚期風格的轉變</strong></p>
+<p>比對早期〈波西米亞醜聞〉（1891）或〈最後一案〉（1893），晚期的福爾摩斯明顯更「人性化」：他對華生中彈的反應（〈三個加里德布〉）、他對受害婦女的憤怒（〈顯赫委託人〉中對鄧巴受害的道德評判）、他在〈蘇塞克斯的吸血鬼〉結尾的「讓他們自己解決吧，這是我們離開的時機」——這些都是早期冷靜如機器的霍姆斯不會有的反應。道爾在告別時，給了他筆下最著名的人物一點他本人的溫度。</p>
+<p><strong>台灣讀者的參考脈絡</strong></p>
+<p>台灣讀者若初次接觸本選集，建議先讀〈蘇塞克斯的吸血鬼〉再讀〈索爾橋謎案〉——前者示範了道爾如何以「超自然外衣包裝理性謎題」，後者示範了他如何設計純粹的物理機關謎。這兩篇合讀，可以對道爾推理手法的全幅度有直觀的感受。</p>
+<hr>
+<h2 id="_38">各篇推理難度評分總表</h2>
+<table>
+<thead>
+<tr>
+<th>篇名</th>
+<th>推理難度</th>
+<th>迷霧等級</th>
+<th>收斂點</th>
+<th>核心謎型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>顯赫委託人</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>~65%</td>
+<td>whydunit</td>
+</tr>
+<tr>
+<td>漂白兵士</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>~62%</td>
+<td>whodunit（疾病謎）</td>
+</tr>
+<tr>
+<td>馬扎蘭石</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>~65%</td>
+<td>howdunit</td>
+</tr>
+<tr>
+<td>三個山牆</td>
+<td>⭐⭐</td>
+<td>⭐⭐</td>
+<td>~45%</td>
+<td>whodunit</td>
+</tr>
+<tr>
+<td>蘇塞克斯的吸血鬼</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>~72%</td>
+<td>whodunit + howdunit</td>
+</tr>
+<tr>
+<td>三個加里德布</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>~55%</td>
+<td>whydunit</td>
+</tr>
+<tr>
+<td>索爾橋謎案</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>~78%</td>
+<td>howdunit（自殺偽裝）</td>
+</tr>
+<tr>
+<td>爬行者</td>
+<td>⭐⭐</td>
+<td>⭐⭐</td>
+<td>~40%</td>
+<td>whydunit（科幻）</td>
+</tr>
+<tr>
+<td>獅鬃</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐</td>
+<td>~60%</td>
+<td>howdunit（自然之謎）</td>
+</tr>
+<tr>
+<td>蒙臉的房客</td>
+<td>⭐⭐</td>
+<td>⭐⭐</td>
+<td>~40%</td>
+<td>whydunit</td>
+</tr>
+<tr>
+<td>肖斯科姆舊莊</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>~65%</td>
+<td>whodunit</td>
+</tr>
+<tr>
+<td>退休的染料商</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>~60%</td>
+<td>whodunit</td>
+</tr>
+<tr>
+<td><strong>全集平均</strong></td>
+<td><strong>⭐⭐⭐</strong></td>
+<td><strong>⭐⭐⭐</strong></td>
+<td><strong>~59%</strong></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+    <a href="../index.html" class="back-link">← 回到首頁</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">推理解剖室</p>
+    <p>五位作者 · 八十八部作品 · 一百三十五年推理文學的難度演化</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
