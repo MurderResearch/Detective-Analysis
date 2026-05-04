@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>恐怖と神秘の物語（Tales of Terror and Mystery） — 推理解剖室</title>
+<meta name="description" content="1890年6月3日、Monsieur Caratalと名乗る謎めいた南米人がリヴァプールで特別列車を借り切り、パリへ急行した。列車はセント・ヘレンズ通過後に確認されたが、ケニオン・ジャンクションに達したあと忽然と姿を消した——蒸気機関車一両、客車二両、荷物車一両、機関士、機関助士、車掌、そして乗客二名が、すべて消え去っ">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/tales-of-terror-and-mystery.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/tales-of-terror-and-mystery.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/tales-of-terror-and-mystery.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/tales-of-terror-and-mystery.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/tales-of-terror-and-mystery.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/tales-of-terror-and-mystery.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/tales-of-terror-and-mystery.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/tales-of-terror-and-mystery.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif JP', serif;
+  --font-sans: 'Noto Sans JP', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">推理解剖室</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">ホーム</a>
+        <a href="../index.html#latest">最新</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="言語" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 日本語</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/tales-of-terror-and-mystery.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/tales-of-terror-and-mystery.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/tales-of-terror-and-mystery.html">English</a>
+      <a class="lang-item active" data-lang="ja" href="/Detective-Analysis/ja/articles/tales-of-terror-and-mystery.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/tales-of-terror-and-mystery.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/tales-of-terror-and-mystery.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/tales-of-terror-and-mystery.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/tales-of-terror-and-mystery.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">アーサー・コナン・ドイル · </div>
+    <h1>恐怖と神秘の物語（Tales of Terror and Mystery）</h1>
+    <div class="subtitle">アーサー・コナン・ドイル（Arthur Conan Doyle） · 短編集</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">推理難易度</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">霧の濃度</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="tales-of-terror-and-mystery">恐怖と神秘の物語（Tales of Terror and Mystery）— 推理分析</h1>
+<h2 id="_1">基本情報</h2>
+<ul>
+<li>著者：アーサー・コナン・ドイル（Arthur Conan Doyle）</li>
+<li>発表年：1922年（各作品の初稿は1898〜1912年頃に執筆）</li>
+<li>ジャンル：短編集</li>
+<li>探偵：固定探偵なし（各篇において、記者・検察官・自首者の証言によって真相が明かされる）</li>
+<li>謎の中核タイプ：howdunit（いかにして）+ whodunit（誰が）+ what happened（何が起きたか）</li>
+</ul>
+<hr>
+<h2 id="_2">作品概観</h2>
+<p>本書は「恐怖の物語」（Tales of Terror）と「神秘の物語」（Tales of Mystery）の二部構成で、それぞれ六篇の短編を収録している。恐怖篇は超自然的な戦慄を基調とし、神秘篇は純粋な犯罪謎解きに徹しており、六篇のほぼすべてが完結した推理パズルを形成している。本稿では、神秘篇のなかでも推理構造が最も完成されており、手がかりの配置が最も緻密な三篇に焦点を当てる。</p>
+<ol>
+<li><strong>「消えた特別列車」（The Lost Special）</strong>——一本の列車が乗客ごとイングランド最多運行の幹線上から白昼堂々と消滅する。</li>
+<li><strong>「時計を持つ男」（The Man with the Watches）</strong>——疾走する列車から三名の乗客が謎の蒸発を遂げ、六本のアメリカ製名時計を手にした見知らぬ死体だけが残される。</li>
+<li><strong>「黒い医師」（The Black Doctor）</strong>——村の名医が書斎で変死体となって発見され、あらゆる状況証拠は逮捕された地方紳士を指し示す——しかし死んだはずの本人が法廷に立って証言するまで、誰も真相を知らなかった。</li>
+</ol>
+<p>この三篇には共通の語り構造がある。謎はまず新聞・法廷・公式の探偵によってあらゆる可能性が検討されるが、何一つ解明されない。真相はやがて「告白書」あるいは「死者本人の陳述」という形で外部から投じられ、すべての人を驚愕させる。これは従来型の探偵謎解きではなく、ドイルが「不可能犯罪」に対して試みた別種の探求である——読者を完全に困惑した公衆の視点に置き、告白が明かされる前に、テキストの細部から自力で真相を導き出せるかどうかを試す。</p>
+<hr>
+<h2 id="_3">推理難度総評（全篇）</h2>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星評価</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難易度（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>平均収束点は約72%——三篇の重要手がかりは均等に分布しているが、メディア報道のノイズを突き抜けて真相を特定する必要がある</td>
+</tr>
+<tr>
+<td>霧の濃度（Fog Rating）</td>
+<td>⭐⭐⭐⭐</td>
+<td>ドイルは「素人推理家」による巧妙な誤謬理論を意図的に設計して読者を惑わせており、二篇とも仮説的分析によって真の方向性が覆い隠されている</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="the-lost-special">第一篇：消えた特別列車（The Lost Special）</h2>
+<h3 id="_4">あらすじ</h3>
+<p>1890年6月3日、Monsieur Caratalと名乗る謎めいた南米人がリヴァプールで特別列車を借り切り、パリへ急行した。列車はセント・ヘレンズ通過後に確認されたが、ケニオン・ジャンクションに達したあと忽然と姿を消した——蒸気機関車一両、客車二両、荷物車一両、機関士、機関助士、車掌、そして乗客二名が、すべて消え去った。沿線を捜索しても何も見つからず、機関士の遺体だけが発見された。その後八年間、謎は解けぬまま宙に浮いた。やがて犯罪の首謀者であるエルベール・ド・ルルナックがフランスのマルセイユで別の殺人罪により死刑判決を受ける直前、告白書によって世界に向けて、この完全な政治的暗殺をいかに計画したかを明かした。</p>
+<hr>
+<h3 id="_5">真相の解剖</h3>
+<p><strong>真相：列車は廃坑の支線に誘い込まれ、廃線を走って炭坑の深みへと突入し、地中に永久に消えた。</strong></p>
+<ul>
+<li><strong>手がかり収束点：約70%</strong></li>
+</ul>
+<h4 id="_6">重要手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分比）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>カラタルが携えた革のブリーフケースは革紐で手首に縛りつけられており、彼は極度に緊張した様子だった</td>
+<td>約8%</td>
+<td>生死に関わる秘密文書を運んでいることを示す——殺害動機の根源</td>
+</tr>
+<tr>
+<td>2</td>
+<td>「ホレース・ムーア」と名乗る男が同じ列車の車両借り切りを申請して断られ、その後謎の消滅を遂げ、やがて荷物車に潜り込んでいた</td>
+<td>約30%</td>
+<td>「ホレース・ムーア」の行動は異常だ——なぜ彼はこの列車に乗ることにこれほど執着したのか？読者はここで彼を共謀者と疑うべきだ</td>
+</tr>
+<tr>
+<td>3</td>
+<td>コリンズ警部の報告：二駅間に幹線と接続されていた七本の支線があり、そのうち四本の廃線は「幹線との接続レールが撤去済み」、三本は現役使用中</td>
+<td>約55%</td>
+<td><strong>最も重要な構造的手がかり</strong>：廃線が「接続レール撤去済み」とわざわざ明記されている——もし誰かが再接続したなら？</td>
+</tr>
+<tr>
+<td>4</td>
+<td>四本の廃線のうち、「ハーツイーズ炭坑」だけが「かつてイングランド最大の炭坑の一つ」として名指しされている</td>
+<td>約58%</td>
+<td>大型炭坑は深い立坑を意味する——列車一本を丸ごと飲み込んで痕跡を残さない深さがある</td>
+</tr>
+<tr>
+<td>5</td>
+<td>車掌ジェイムズ・マクファーソンがニューヨークから妻に手紙を送り、送金し、海を渡って来るよう暗示している</td>
+<td>約65%</td>
+<td>事件後に車掌がアメリカ大陸へ逃亡し、助けを求めたり警察に届けたりしていない——彼は共謀者であり、事件は犯罪であって事故ではない</td>
+</tr>
+<tr>
+<td>6</td>
+<td>「素人推理家」の書簡（タイムズ紙、7月3日付）が正確に指摘する：不可能なことを消去した後に残るものは、いかに奇妙に見えようとも真実でなければならない</td>
+<td>約68%</td>
+<td>全篇で最も重要な論理的示唆——しかし探偵は「廃線を再接続する」という可能性を排除しそこなった</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_7">補助手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分比）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>カラタルは中米の著名な金融家兼政治ブローカーであり、彼のパリ行きは大きなスキャンダルに関係していた</td>
+<td>約20%</td>
+<td>殺害動機を強化する——複数のフランス高官を失墜させうる証拠を持ち歩いていた</td>
+</tr>
+<tr>
+<td>2</td>
+<td>列車はケニオン・ジャンクション以降に消えたが、後続の普通列車が同じ区間を通過したとき「何も見当たらなかった」</td>
+<td>約42%</td>
+<td>脱線の可能性を排除し、列車が完全な状態で幹線を離れたことを示す</td>
+</tr>
+<tr>
+<td>3</td>
+<td>機関士の遺体が幹線脇のエニシダの茂みの中で発見され、頭部に損傷があった</td>
+<td>約50%</td>
+<td>列車は単純な脱線事故ではない。機関士は殺害された（後に睡眠薬で意識を失わせた後に落下させたと判明）</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_8">偽手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分比）</th>
+<th>誤誘導の方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>新聞の憶測：超自然的な力の仕業、足の不自由なカラタルは悪魔の化身</td>
+<td>約62%</td>
+<td>読者を合理的分析から遠ざける</td>
+</tr>
+<tr>
+<td>2</td>
+<td>列車がランカシャー＝スタッフォードシャー運河に沈んだという説</td>
+<td>約68%</td>
+<td>誤った物理的方向に誘導する（後に運河の深さによって否定される）</td>
+</tr>
+<tr>
+<td>3</td>
+<td>ブリーフケースに新型爆発物が入っており、列車ごと粉々に吹き飛ばされたという説</td>
+<td>約68%</td>
+<td>明らかに荒唐無稽だが、一時的に読者の注意を引きつける</td>
+</tr>
+<tr>
+<td>4</td>
+<td>「素人推理家」の分析が大半の支線を正確に消去しながら、「現役の三本の支線上での内部労働者の共謀」に焦点を当てる</td>
+<td>約68%</td>
+<td>分析の方向性（支線）は正しいが結論がずれている——「廃線を再接続できる」という可能性を見落としている</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_9">推理経路の再構成（「消えた特別列車」）</h3>
+<p><strong>最初の疑念（約30%）</strong>：「ホレース・ムーア」の登場は極めて不審だ。借り切りを申請して断られ、その後荷物車に潜り込んだという行動は、彼がどうしてもこの列車に乗らなければならなかったことを示している。注意深い読者はここで気づくはずだ——これは偶然ではなく、綿密に準備されたバックアッププランだと。</p>
+<p><strong>重要な転換点（約55〜60%）</strong>：コリンズ警部の報告は全篇で最も精緻な手がかりの場面だ。七本の支線を列挙し、廃止された四本については「幹線との接続レールが撤去済み」とわざわざ書き添えている。ドイルはここに逆向きの問いを埋め込んでいる——撤去したなら、再設置することもできるのではないか？「かつてイングランド最大の炭坑の一つ」と形容されたハーツイーズ炭坑は、読者に底なしの立坑を直ちに連想させるはずだ。ここで初めて推論の輪郭が見えてくる——列車は再接続されたハーツイーズ廃坑支線に誘い込まれ、坑道へと沈んだのだと。</p>
+<p><strong>確認点（約65%）</strong>：車掌マクファーソンの手紙の配達。鉄道会社のベテラン車掌が大事件の後にアメリカ大陸へ逃亡し、家族を海外に呼び寄せようとしている——これは偶然生き延びた者の行動ではなく、逃亡中の共謀者の行動だ。この時点で「組織的な犯罪集団が列車乗務員を買収した」という構図が完成する。</p>
+<p><strong>最終確認（約70%）</strong>：「素人推理家」（ドイルが「評判の高い素人推理家」——すなわちすでに「死んだ」ホームズ——を意識的に示唆している）の論理的枠組み「不可能を消去した後に残るものが真実」は、読者への最後の示唆だ。注意深い読者はここで推論を完成できるはずだ——廃線の再接続→ハーツイーズ炭坑→列車が坑道に沈む→共謀者が痕跡を消去。</p>
+<hr>
+<h2 id="the-man-with-the-watches">第二篇：時計を持つ男（The Man with the Watches）</h2>
+<h3 id="_10">あらすじ</h3>
+<p>1892年3月18日、ロンドンのユーストン駅を出発してマンチェスターへ向かう急行列車がラグビーに到着した際、六本のアメリカ製名時計を手にした正体不明の若い男の死体が一車両で発見された——乗車券なし、身分証明書なし、洗濯物の識別標示もなし。それと同時に、先に乗り込んでいた三名の乗客（背の高い老人、女の連れ、葉巻を吸っている口髭の男）が全員忽然と消えていた。謎は五年間解けぬまま宙に浮いたが、ニューヨークからの一通の手紙が真相を明かした。</p>
+<hr>
+<h3 id="_11">真相の解剖</h3>
+<p><strong>真相</strong>：「老人」は悪名高いアメリカ人詐欺師スパロウ・マッコイ、「女の連れ」は彼の仲間エドワード——美男子で変装の名手である若い詐欺師だ。「口髭の男」はエドワードの兄ジェイムズで、アメリカから弟を止めに追いかけてきた。ジェイムズが車内で弟と言い争い、マッコイが拳銃を抜いて脅したが暴発し、立ち上がろうとしたエドワードを（標的のジェイムズではなく）射殺した。三人はその後、列車が速度を落とした際に次々と飛び降り、エドワードの死体だけが残された。</p>
+<ul>
+<li><strong>手がかり収束点：約75%</strong></li>
+</ul>
+<h4 id="_12">重要手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分比）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>六本の時計はすべてアメリカ製（ロチェスター、ティファニーなど）であり、死者がアメリカ人であることを示す</td>
+<td>約10%</td>
+<td>身元の方向性を示す最も重要な初期手がかり</td>
+</tr>
+<tr>
+<td>2</td>
+<td>「女の連れ」の歩き方が「力強い」（vigorous step）であり、傍らの老人を追い越すほどだった</td>
+<td>約5%</td>
+<td>ドイルによる変装の示唆——本物の女性が「男性を追い越す歩調」になることは通常なく、後の記述でも「背が高く姿勢が良い」と特筆されている</td>
+</tr>
+<tr>
+<td>3</td>
+<td>死者のポケットにあった小さな丸鏡（直径一インチ）——こんなに小さな鏡は普通の持ち物ではない</td>
+<td>約12%</td>
+<td><strong>全篇で最も核心的な手がかり</strong>。書簡の著者ジェイムズは明確に述べている：「賭博師ならこれが何かわかる。」カード卓での小鏡は対戦相手の手札を見るためのものだ。最近のホテル詐欺賭博スキャンダルと組み合わせれば、職業的賭博師という指摘に十分足りる</td>
+</tr>
+<tr>
+<td>4</td>
+<td>死者のリネン類はすべて新品で識別標示がなく、ブーツと衣服はイギリス製だが、明らかに急ごしらえで購入されたもの</td>
+<td>約14%</td>
+<td>この人物が意図的に身元の痕跡を消していることを示す——逃亡中か、身元を隠している人物だ</td>
+</tr>
+<tr>
+<td>5</td>
+<td>吸いかけの葉巻（口髭の男が車両を移ったことを示唆）：車掌はウィルズデンで彼が隣の車両に移ったと合理的に推測している</td>
+<td>約25%</td>
+<td>「三名の見知らぬ乗客」が実は互いに関係のある一グループであることを示す</td>
+</tr>
+<tr>
+<td>6</td>
+<td>列車が速度を落とした区間の路傍の土手下で発見された聖書（Testament）には、三世代にわたる家族の書き込みがある</td>
+<td>約30%</td>
+<td><strong>書簡の著者ジェイムズ本人が自分の遺品と確認</strong>：出発前に母から贈られ、飛び降りた際に落としてしまった——口髭の男と死者は兄弟であり、家族はイングランドのバックス出身だ</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_13">補助手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分比）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>死者の金歯の施術（gold stopping）にアメリカ的な特徴がある</td>
+<td>約14%</td>
+<td>死者のアメリカ的背景をさらに裏付ける</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ホテル詐欺賭博スキャンダル：ロンドンのノーサンバーランド・アヴェニューのホテルで最近、二名の共謀詐欺師によるカード詐欺事件が起きていた</td>
+<td>約52%</td>
+<td>読者が小鏡と結びつければ、「この二人はその詐欺事件の逃亡犯だ」と推理できる</td>
+</tr>
+<tr>
+<td>3</td>
+<td>急行列車はトリング付近の工事区間で時速8〜10マイルまで速度を落とし、飛び降り可能な条件が整っていた</td>
+<td>約22%</td>
+<td>三名の乗客が逃げ出せたという機序が信憑性を持つことを確認する</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_14">偽手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分比）</th>
+<th>誤誘導の方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>「素人推理家」（ドイルがホームズを再び匂わせているとほぼ確実視される）による精巧な「並走列車理論」——死者は普通列車から急行列車に乗り移った狂人だという説</td>
+<td>約55%</td>
+<td>論理の構造が非常に精緻で、読者はほとんど説得されてしまう。しかし後に鉄道会社が時刻表の事実で完全に論破する</td>
+</tr>
+<tr>
+<td>2</td>
+<td>「女の連れ」が本物の女性として扱われ、アナーキストやニヒリスト秘密結社の陰謀に巻き込まれているという見方</td>
+<td>約38%</td>
+<td>読者が「彼女は男性の変装かもしれない」という可能性に全く気づかなくなる</td>
+</tr>
+<tr>
+<td>3</td>
+<td>死者は座席の下に隠れていたスパイで、秘密を盗み聞きしたために殺されたという推測</td>
+<td>約35%</td>
+<td>大量の報道を集めるが、三名の乗客より先に乗り込んでいたはずという事実と座席下に潜む空間がないという事実を無視している</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_15">推理経路の再構成（「時計を持つ男」）</h3>
+<p><strong>最初に疑念を持てる時点（約5〜10%）</strong>：二つの細部がほぼ同時に現れる——「女の連れの力強い歩調が男を追い越す」と「六本のアメリカ製時計」だ。前者を捉えれば変装を直ちに連想でき、後者は死者のアメリカ的背景を確認し、以降の推理の土台を作る。</p>
+<p><strong>最も重要な手がかりの節（約12〜15%）</strong>：小さな丸鏡。この細部は原文で「非常に特殊なもの」と意図的に描写され、後にジェイムズが書簡の中で「唯一の真の手がかり」と明示している。読者が「小鏡＋アメリカ人＋最近のホテル詐欺賭博スキャンダル」を結びつけられれば、「死者は職業的賭博師であり、最近のホテル詐欺に関わっていた」と推理できる。</p>
+<p><strong>中盤の強化（約25〜30%）</strong>：吸いかけの葉巻（車両移動を示唆）と家族の聖書（兄弟の絆を示唆し、かつ誰かが真相の一部を知りながら黙っていることを示唆）。この時点でおおよその輪郭が見えてくる——この人々は互いに知り合いであり、アメリカ人同士の争いに関係している。</p>
+<p><strong>枠組みの確認（約55%）</strong>：「素人推理家」の理論は誤りだが、一つの有益な思考の枠組みを提供している——消えた三名の乗客と死亡事件は互いに関連しているはずで、それぞれ無関係なわけではない。この論点自体は正しく、方向性だけが間違っている。</p>
+<hr>
+<h2 id="the-black-doctor">第三篇：黒い医師（The Black Doctor）</h2>
+<h3 id="_16">あらすじ</h3>
+<p>ランカシャーの村の名医ドクター・アロイシアス・ラナは、婚約が破棄された直後に書斎で変死体となって発見された。顔面に損傷があり、絞殺の疑いがある。事件前夜、妹を深く愛する地方紳士アーサー・モートンが乗馬鞭を持って憤然と訪問していた。あらゆる状況証拠が彼を犯人として指し示した。しかし裁判初日、故人の元婚約者フランシス・モートンが出廷し、「ドクター・ラナは死んでいない」と証言した——事件後に届いた彼からの手紙を持っていたからだ。翌日、ドクター・ラナ本人が法廷に現れ、あの夜の真相を自ら語った。</p>
+<hr>
+<h3 id="_17">真相の解剖</h3>
+<p><strong>真相</strong>：ドクター・ラナには双子の弟アーネストがおり、アルゼンチンから渡英して兄を恐喝していた。アーネストは激しい口論の最中に心臓発作で急死した。ドクター・ラナはこれを機に弟の衣服と着替え、遺体に自分の身元を担わせ、現金を持って出奔してスペイン行きの船に乗った。事件には殺人が一切存在しない——死者はアーネストであり、ドクター・ラナは自分の「偽の死」を演出したのだ。</p>
+<hr>
+<h3 id="whodunit">真相その一：「犯人」の正体（whodunit）</h3>
+<ul>
+<li><strong>手がかり収束点：約80%</strong>（アーサー・モートンが「犯人ではありえない」ことの確認）</li>
+<li>答え：犯人は存在せず、殺人事件はなかった</li>
+</ul>
+<h4 id="_18">重要手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分比）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>事件当夜、家政婦が「叫び声か助けを求める声」を聞いた直後、ドクター・ラナが異常なほど怒った様子で彼女を追い払った</td>
+<td>約35%</td>
+<td>被害者であるならば、なぜその後まだ話せたのか？この声は「訪問者」が突然倒れた時の声かもしれない</td>
+</tr>
+<tr>
+<td>2</td>
+<td>死者は布製のスリッパ（cloth slippers）を履いており、靴底が清潔だった</td>
+<td>約45%</td>
+<td>死者が明らかに外出していない——室内にいる状態で死んだ。しかも靴底がこれほど清潔なことは、激しい格闘や移動がなかったことを示す</td>
+</tr>
+<tr>
+<td>3</td>
+<td>絨毯上の泥の足跡——しかし事件当夜、ランカシャー全域で大雨が降り、「誰のブーツも泥だらけ」だった</td>
+<td>約48%</td>
+<td>ドイルは意図的にこの証拠を無効化している：足跡自体は特定の人物を指せない</td>
+</tr>
+<tr>
+<td>4</td>
+<td>アーサー・モートンが目撃されて私道に入った時刻は、家政婦がドクター・ラナの声を最後に聞いた11時30分<strong>より後</strong>だった</td>
+<td>約50%</td>
+<td>死亡が11時30分以前（家政婦が最後に声を聞いた時刻）に起きたならば、モートンにはアリバイがある</td>
+</tr>
+<tr>
+<td>5</td>
+<td>フランシス・モートンが「ドクター・ラナは死んでいない」と証言し、事件後に届いた手紙を提出した</td>
+<td>約85%</td>
+<td>殺人の存在を直接否定する——謎は「誰がラナを殺したか」から「死者は誰か」へと転換する</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_19">補助手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分比）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>金庫が空になっていたが、ドクター・ラナはその日に穀物代を一括払いしたばかりだった</td>
+<td>約40%</td>
+<td>二重の解釈：強盗または正当な支出、どちらとも確定できない</td>
+</tr>
+<tr>
+<td>2</td>
+<td>死者の金時計がポケットに残っていた——強盗目的の犯人なら貴重品を残さないはずだ</td>
+<td>約40%</td>
+<td>強盗の動機を排除するが、感情的犯罪としての解釈も依然として可能</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_20">偽手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分比）</th>
+<th>誤誘導の方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>アーサー・モートンが事件当夜に乗馬鞭を持って現れ、かつてドクター・ラナを公然と脅迫していた</td>
+<td>約22%、48%</td>
+<td>圧倒的な嫌疑の枠組みを構築し、読者と陪審員はほぼ同時に説得されてしまう</td>
+</tr>
+<tr>
+<td>2</td>
+<td>フランシス・モートンの写真が額縁から外され持ち去られていた</td>
+<td>約43%</td>
+<td>「妹への執着を持つ人物」、すなわちアーサー・モートンが持ち去ったという示唆</td>
+</tr>
+<tr>
+<td>3</td>
+<td>アーサー・モートンが午前3時になっても医師の門前の月桂樹の茂みで目撃された</td>
+<td>約52%</td>
+<td>「被害者の帰宅を待ち伏せしていた」という理論を強化し、ほぼすべての読者に彼の有罪を確信させてしまう</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="what-happened">真相その二：死者の正体（what happened）</h3>
+<ul>
+<li><strong>手がかり収束点：約70%</strong>（双子の弟の存在）</li>
+<li>答え：死者はドクター・ラナの双子の弟アーネストで、アルゼンチンから来て激しい口論の最中に心臓発作で急死した</li>
+</ul>
+<h4 id="_21">重要手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分比）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>ドクター・ラナがブエノスアイレスからの手紙を受け取った——「これまで一度も届いたことのない海外からの手紙」で、受け取った直後に婚約を破棄した</td>
+<td>約5%</td>
+<td>外部の力が彼の生活に介入したことを示し、その力は南米から来た——つまり彼の過去から</td>
+</tr>
+<tr>
+<td>2</td>
+<td>婚約破棄の理由についてフランシスは「彼の家族に関わる個人的な事情」と述べた</td>
+<td>約12%</td>
+<td>「家族」の秘密——ドイルは知られていない家族の一員の存在を示唆している</td>
+</tr>
+<tr>
+<td>3</td>
+<td>死者の顔に「軽い腫れ」があり、法医学的に絞殺と断定されたが、「重篤な心臓病」も認められた</td>
+<td>約45%</td>
+<td>心臓病患者は激しい口論中の感情的衝撃によって死亡する可能性があり、他者の暴力は必要ない</td>
+</tr>
+<tr>
+<td>4</td>
+<td>書斎の床で見つかった「緑の眼帯」（green eye-patch）——家政婦は見たことがないと言う</td>
+<td>約43%</td>
+<td><strong>最も見落とされやすく、振り返ったとき最も重要な手がかり</strong>：この眼帯は訪問者（アーネスト）のものであり、ドクター・ラナのものではない。訪問者が自分の持ち物を残していった</td>
+</tr>
+<tr>
+<td>5</td>
+<td>死者がドクター・ラナの衣服を着ており、ラナは訪問者の衣服を着て逃走した——フランシスへの手紙がそのすべてを説明する</td>
+<td>約85%</td>
+<td>ここに至って全体像が確認できる：着替え→偽の死→逃亡</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_22">偽手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分比）</th>
+<th>誤誘導の方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>多くの「友人や患者」が死者をドクター・ラナ本人と認識した</td>
+<td>約55%</td>
+<td>双子の高い類似性によって、顔を知る者を含むすべての人が身元を確認してしまい、読者も死者の身元を疑わなくなる</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ラナは（ランセット誌の広告で）診療所の売却広告を出していた</td>
+<td>約20%</td>
+<td>単に転居したかったのだ、スキャンダルを逃れようとしたのだという印象を与え、「消滅を計画していた」という見方を妨げる</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_23">推理経路の再構成（「黒い医師」）</h3>
+<p><strong>最初の疑念（約5〜10%）</strong>：最初の「ブエノスアイレスからの手紙」が全篇で最も追跡する価値のある手がかりだ。ドクター・ラナの「謎めいた孤立した過去」という設定を打ち破る——誰かが彼のことを知っており、その人物の出現によって彼は直ちに婚約を破棄し、ほとんど崩壊寸前になった。その人物とは誰か？注意深い読者は、なぜ彼が南米からの知らせをそれほど恐れるのかを問い続けるべきだ。</p>
+<p><strong>中盤の手がかりへの集中（約43〜45%）</strong>：緑の眼帯と心臓病。眼帯は、書斎に「訪問者」が自分の個人的な持ち物を持ち込んでいたことを確認し、しかもその訪問者はアーサー・モートンではない（モートンが使ったのは乗馬鞭であり、眼帯ではない）。心臓病の発見は、外力によらない死亡の可能性を示唆する。</p>
+<p><strong>構造的な解答点（約50%）</strong>：読者が次の三つの前提を同時に受け入れるならば——①モートンが到着する前に謎の訪問者が来ていた；②訪問者には心臓病があり、目撃されずに出入りした；③ドクター・ラナは事件後に謎の失踪を遂げた——「死者はドクター・ラナではない」という仮説を導き出せる。しかし双子の弟へと結びつけるには、「南米からの手紙」という背景がなお必要だ。</p>
+<p><strong>最終確認（約85%）</strong>：フランシスの手紙が登場し、謎は「whodunit」から「what happened」へと完全に転換する。この時点ですべての読者が確認できるはずだ——ドクター・ラナはまだ生きており、死者は彼の双子の兄弟だと。</p>
+<hr>
+<h2 id="_24">総括的補足</h2>
+<h3 id="_25">ドイルの最大の語り口の妙：「素人推理家」という隠し技</h3>
+<p>「消えた特別列車」と「時計を持つ男」にはそれぞれ、「著名な素人推理家」あるいは「名高い刑事探偵」の名で投稿された分析の書簡が登場し、タイムズ紙とデイリー・ガゼット紙にそれぞれ掲載されている。この二通の書簡の語調・方法論（「不可能なことを消去した後に残るものが真実でなければならない」）・文体は、同時期のホームズ物語と非常によく似ている。</p>
+<p>ドイルがこの二篇を執筆した頃（約1898〜1900年）、ホームズはライヘンバッハの滝で正式に「死んでいた」（1893年「最後の事件」）のであり、「空家」（1903年）での復活はまだ先のことだった。したがって、この二人の「素人推理家」はおそらく、ドイルがホームズへの密かな敬意あるいは自己対話として記したもの——「死んだ」この探偵を匿名の形で現実の謎事件に介入させながら、しかし精妙ではあっても最終的には誤りの結論を出させているのだ。この設計は示唆に富む：最も優れた演繹的推理でさえ、決定的な情報が欠けた状況では真実とすれ違うことがある、と。</p>
+<h3 id="_26">三篇に共通する構造：「告白が探偵に代わる」</h3>
+<p>三篇のどれにも探偵の主人公がおらず、真相の開示は以下に依存している。
+- <strong>「消えた特別列車」</strong>：刺客ド・ルルナックの死の直前の告白書
+- <strong>「時計を持つ男」</strong>：生存者ジェイムズの匿名書簡
+- <strong>「黒い医師」</strong>：「死者」ドクター・ラナ本人の出廷</p>
+<p>この構造的設計はドイルの一つの実験だ——探偵のいない状況で、謎事件はどこまで解けない状態を保てるか？答えは：八年（「消えた列車」）、五年（「時計の男」）、数ヵ月（「黒い医師」）。ドイルはこれにより、犯罪者あるいは事情を知る者が沈黙を選んでいる限り、公式捜査は告白なしにはほぼ永遠に複雑な人為的犯罪を完全には解明できないことを示している。</p>
+<p>この洞察は「探偵小説の根本的な設定」に対する誠実な修正でもある——現実の謎解きは往々にして探偵の推理の結果ではなく、内部の者の告白あるいは油断によってもたらされる。</p>
+<h3 id="_27">ホームズ・シリーズとの対比</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>ホームズ・シリーズ</th>
+<th>「恐怖と神秘の物語」（神秘篇）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>謎解き役</td>
+<td>天才探偵</td>
+<td>犯罪者本人、生存者、被害者</td>
+</tr>
+<tr>
+<td>真相開示の機構</td>
+<td>演繹的推理</td>
+<td>告白、書簡、出廷証言</td>
+</tr>
+<tr>
+<td>読者の立場</td>
+<td>探偵を補佐して追跡する</td>
+<td>単身で霧の中に立ち向かい、自ら手がかりを篩いにかける</td>
+</tr>
+<tr>
+<td>霧の製造者</td>
+<td>犯人の偽装</td>
+<td>メディアの誤った憶測、「素人推理家」の精緻な謬論</td>
+</tr>
+</tbody>
+</table>
+<p>「恐怖と神秘の物語」の神秘篇は、ドイルがホームズを取り除いた後、純粋な謎の構造に正面から向き合った試みだ。三篇はいずれも綿密な手がかりの配置と多層的な誤誘導によって構成されており、超然たる謎解き役がいなくても、注意深い読者が告白の開示前に自力で真相に近づくことができる。これこそが同時代の作家と比べたドイルの核心的な才能だ——彼は「ホームズのための舞台」を書いているのではなく、「謎そのものの完全な生命」を書いているのである。</p>
+    <a href="../index.html" class="back-link">← ホームに戻る</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">推理解剖室</p>
+    <p>五人の作家・八十八の作品・135年にわたる推理文学の難易度の進化。</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

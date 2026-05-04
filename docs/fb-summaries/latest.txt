@@ -1,10 +1,10 @@
-📖 【推理解剖室】福爾摩斯探案全集：最後的案件簿（The Case-Book of Sherlock Holmes）
+📖 【推理解剖室】恐怖與神秘故事集（Tales of Terror and Mystery）
 ✍️ 柯南·道爾（Arthur Conan Doyle） · 
 
-推理難度 ★★★☆☆ | 迷霧等級 ★★★★☆
+推理難度 ★★★★☆ | 迷霧等級 ★★★★☆
 
-道爾在生命晚期寫下這十二篇故事，筆觸已與早年的《冒險史》明顯不同：案件更趨複雜、道德輪廓更加模糊，偶爾出現不符合時代正確性的描寫（尤其〈三個山牆〉中充滿偏見的黑人形象），但推理構造上有幾篇達到了系列的巔峰。 十二篇依次為：（I）顯赫委託人、（II）漂白兵士、（III）馬扎蘭石、（IV）三個山牆、（V）蘇塞克斯吸血鬼、（VI）三個加里德布、（VII）索爾橋謎案、（VIII）爬行者、（IX）獅鬃、（X）蒙臉的房客、（XI）肖斯科姆舊莊、（XII）退休的染料商。 本分析重點剖析其中謎團設計最精密的四篇。 ---
+1890 年 6 月 3 日，一名自稱 Monsieur Caratal 的神秘南美人在利物浦搭上一輛包租的特別列車，急赴巴黎。列車在 St. Helens 之後驗明正身，但抵達 Kenyon Junction 後便消失無蹤——一輛完整的蒸汽火車、兩節車廂、一輛行李車、司機、司爐、守衛，以及兩名旅客，全部蒸發。沿線搜查無果，只找到司機的屍體。此後八年，謎案懸而未決。最後是犯罪主謀 Herbert de Lernac 在法國馬賽以另一件謀殺罪被判死刑前，以自白書的形式向全世界說明了他如何策劃這場完美的政治暗殺。 ---  真相拆解 真相：列車被引入廢棄礦坑支線，沿廢棄軌道衝入礦坑深淵，從此永久消…
 
-🔗 完整分析 → https://murderresearch.github.io/Detective-Analysis/articles/the-case-book-of-sherlock-holmes.html
+🔗 完整分析 → https://murderresearch.github.io/Detective-Analysis/articles/tales-of-terror-and-mystery.html
 
 #推理小說 #推理解剖室 #柯南道爾
