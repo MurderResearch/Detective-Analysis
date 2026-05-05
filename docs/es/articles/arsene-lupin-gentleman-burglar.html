@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arsène Lupin, Ladrón de Guante Blanco（The Extraordinary Adventures of Arsène Lupin, Gentleman-Burglar） — Sala de Disección Detectivesca</title>
+<meta name="description" content="Las aventuras extraordinarias de Arsène Lupin, ladrón de guante blanco es la colección de relatos cortos que Leblanc escribió para la revista francesa Je sais t">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/arsene-lupin-gentleman-burglar.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/arsene-lupin-gentleman-burglar.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/arsene-lupin-gentleman-burglar.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/arsene-lupin-gentleman-burglar.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/arsene-lupin-gentleman-burglar.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/arsene-lupin-gentleman-burglar.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/arsene-lupin-gentleman-burglar.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/arsene-lupin-gentleman-burglar.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Sala de Disección Detectivesca</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Inicio</a>
+        <a href="../index.html#latest">Recientes</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Idioma" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 Español</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/arsene-lupin-gentleman-burglar.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/arsene-lupin-gentleman-burglar.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/arsene-lupin-gentleman-burglar.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/arsene-lupin-gentleman-burglar.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/arsene-lupin-gentleman-burglar.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/arsene-lupin-gentleman-burglar.html">Deutsch</a>
+      <a class="lang-item active" data-lang="es" href="/Detective-Analysis/es/articles/arsene-lupin-gentleman-burglar.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/arsene-lupin-gentleman-burglar.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">Maurice Leblanc · </div>
+    <h1>Arsène Lupin, Ladrón de Guante Blanco（The Extraordinary Adventures of Arsène Lupin, Gentleman-Burglar）</h1>
+    <div class="subtitle">Maurice Leblanc · Colección de relatos cortos (9 relatos)</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Deducibilidad</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Nivel de niebla</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="arsene-lupin-ladron-de-guante-blancothe-extraordinary-adventures-of-arsene-lupin-gentleman-burglar-analisis-de-deducibilidad">Arsène Lupin, Ladrón de Guante Blanco（The Extraordinary Adventures of Arsène Lupin, Gentleman-Burglar）— Análisis de Deducibilidad</h1>
+<h2 id="informacion-basica">Información básica</h2>
+<ul>
+<li>Autor：Maurice Leblanc</li>
+<li>Año：1907（relatos publicados por entregas entre 1905–1907; compilados en volumen)</li>
+<li>Género：Colección de relatos cortos (9 relatos)</li>
+<li>Detective：Sin detective tradicional — Arsène Lupin en persona asume los roles de criminal, detective y núcleo del enigma</li>
+<li>Tipo de misterio central：identity mystery（misterio de identidad）/ howdunit / whodunit</li>
+</ul>
+<hr>
+<h2 id="evaluacion-global-de-deducibilidadcoleccion-completa">Evaluación global de deducibilidad（colección completa）</h2>
+<table>
+<thead>
+<tr>
+<th>Indicador</th>
+<th>Estrellas</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deducibilidad（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>Punto de convergencia promedio aprox. 78% — Las pistas clave suelen estar ocultas en las «filtraciones inconscientes» del narrador; al lector común le resulta difícil obtener una visión completa antes de la mitad del relato</td>
+</tr>
+<tr>
+<td>Nivel de niebla（Fog Rating）</td>
+<td>⭐⭐⭐⭐</td>
+<td>Leblanc es maestro en desorientar al lector mediante «narradores poco fiables» e «identidades falsas declaradas abiertamente»; en varios relatos Lupin es al mismo tiempo el creador del enigma y la respuesta al mismo</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Nota sobre el formato de la colección:</strong> El presente análisis se centra en los cuatro relatos con el diseño de enigmas más rico: «El arresto de Arsène Lupin» (Cap. I), «La evasión de Arsène Lupin» (Cap. III), «El collar de la reina» (Cap. V) y «La perla negra» (Cap. VIII). Los cinco relatos restantes reciben una reseña breve.</p>
+</blockquote>
+<hr>
+<h2 id="sinopsis">Sinopsis</h2>
+<p><em>Las aventuras extraordinarias de Arsène Lupin, ladrón de guante blanco</em> es la colección de relatos cortos que Leblanc escribió para la revista francesa <em>Je sais tout</em> («Yo lo sé todo»), y constituye el primer libro de la serie «Arsène Lupin». Los nueve relatos giran en torno al mismo protagonista — Arsène Lupin — aunque cada uno emplea una estructura de enigma y una estrategia narrativa diferentes.</p>
+<p>Lupin no es un detective; es un criminal genial. Sin embargo, como Leblanc lo hace más inteligente que todos los inspectores de la historia, el lector se ve obligado a comprender el enigma desde su punto de vista. Esto produce una de las paradojas más singulares de la historia de la literatura policial: <strong>la respuesta al enigma es con frecuencia el propio Lupin</strong> — su identidad, su plan, su método.</p>
+<p>En comparación con la serie de Sherlock Holmes de Conan Doyle, la dificultad de los enigmas en la serie Lupin proviene de otra dimensión: el lector no trata de «identificar al culpable», sino de «seguirle el ritmo al pensamiento de Lupin» — y Leblanc dedica grandes esfuerzos a garantizar que el lector no pueda hacerlo.</p>
+<hr>
+<h2 id="analisis-en-profundidad-cuatro-relatos-seleccionados">Análisis en profundidad: cuatro relatos seleccionados</h2>
+<hr>
+<h3 id="relato-i-el-arresto-de-arsene-lupinthe-arrest-of-arsene-lupin">Relato I: «El arresto de Arsène Lupin»（The Arrest of Arsène Lupin）</h3>
+<h4 id="informacion-basica_1">Información básica</h4>
+<ul>
+<li>Misterio central：La verdadera identidad del narrador, el «señor d'Andrézy»</li>
+<li>Tipo：identity mystery + howdunit</li>
+</ul>
+<h4 id="evaluacion-de-deducibilidad">Evaluación de deducibilidad</h4>
+<table>
+<thead>
+<tr>
+<th>Indicador</th>
+<th>Estrellas</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deducibilidad（Deducibility）</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>Punto de convergencia ~90% — La pista verdaderamente decisiva (la cámara Kodak) no aflora del todo hasta el instante previo al arresto</td>
+</tr>
+<tr>
+<td>Nivel de niebla（Fog Rating）</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>El narrador es el criminal; todo el relato transcurre desde la perspectiva de un «testigo inocente», y el lector es engañado sistemáticamente</td>
+</tr>
+</tbody>
+</table>
+<h4 id="resumen-del-relato">Resumen del relato</h4>
+<p>A bordo del transatlántico <em>La Provence</em>, un telegrama avisa a todo el barco de que hay en primera clase un pasajero rubio cuyo nombre empieza por R, y que ese pasajero es Arsène Lupin. El narrador, el «señor d'Andrézy», colabora con ingenio y razonamiento para reducir la lista de sospechosos, apuntando hacia «el señor Rozaine», también rubio y que viaja solo. Rozaine es detenido brevemente, pero queda en libertad al no presentar la cicatriz esperada, y la situación se torna caótica. Al llegar al puerto de Nueva York, el detective Ganimard intercepta al mismísimo narrador — que resulta ser el verdadero Lupin.</p>
+<h4 id="despiece-de-la-verdad">Despiece de la verdad</h4>
+<p><strong>Verdad I: El narrador d'Andrézy es Arsène Lupin</strong>
+- <strong>Punto de convergencia de pistas: aprox. 90%</strong>
+- Respuesta: El narrador del relato no es un testigo inocente sino el propio Lupin. Intencionadamente dirige la sospecha de la inicial R hacia Rozaine mientras «colabora» activamente en la investigación para asegurarse de no ser sospechoso.</p>
+<h5 id="pistas-clave">Pistas clave</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Posición en el texto (%)</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Cuando se pide a Rozaine que muestre su brazo, <strong>muestra el izquierdo</strong> en lugar del derecho</td>
+<td>Aprox. 25%</td>
+<td>El telegrama especifica claramente que la cicatriz está «en el antebrazo derecho». Una persona que de verdad quiere demostrar su inocencia no mostraría el brazo equivocado — pero casi ningún lector repara en este detalle en ese momento</td>
+</tr>
+<tr>
+<td>2</td>
+<td>El narrador muestra una «intuición» anormalmente precisa sobre la psicología y el modo de actuar de Lupin, como si se describiera a sí mismo</td>
+<td>Aprox. 40–60%</td>
+<td>Sus predicciones sobre detalles como que Lupin «no permitiría que nadie registrase su equipaje» van mucho más allá de lo que cualquier pasajero ordinario podría saber</td>
+</tr>
+<tr>
+<td>3</td>
+<td>El narrador propone activamente prestar su cámara Kodak a Nelly para que fotografíe el paisaje, y justo antes de ser detenido se la entrega expresamente</td>
+<td>Aprox. 85–90%</td>
+<td>Este es el gesto más crucial — transfiere la cámara en el último momento antes de ser arrestado porque en ella se ocultan los objetos robados. Este movimiento solo adquiere significado cuando se mira atrás conociendo ya la verdad</td>
+</tr>
+<tr>
+<td>4</td>
+<td>«¡Qué lástima que yo no sea un hombre honrado!» (<em>What a pity that I am not an honest man!</em>) — palabras que se dice a sí mismo tras ser detenido</td>
+<td>Aprox. 95%</td>
+<td>Esta es la confesión del último instante, la única frase que apunta inequívocamente a la verdadera identidad del narrador</td>
+</tr>
+</tbody>
+</table>
+<h5 id="pistas-auxiliares">Pistas auxiliares</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Posición en el texto (%)</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Nelly siente temor al principio ante el «joven silencioso» (Rozaine) que irrumpe en su camarote — lo que implica que la tranquilidad que siente después ante d'Andrézy es fruto del engaño</td>
+<td>Aprox. 15%</td>
+<td>El lector debería advertir que la intuición de Nelly suele ser más fiable que su propio intelecto</td>
+</tr>
+<tr>
+<td>2</td>
+<td>El narrador interviene activamente en la investigación y reduce la lista de sospechosos por propia iniciativa — motivación sospechosa para un «testigo inocente»</td>
+<td>A lo largo del relato</td>
+<td>Un inocente de verdad normalmente no colabora con tanto entusiasmo en la investigación</td>
+</tr>
+<tr>
+<td>3</td>
+<td>El nombre d'Andrézy es el de una persona real, pero esa persona murió hace tres años en Macedonia</td>
+<td>Aprox. 95% (revelado por Ganimard)</td>
+<td>Pista retrospectiva que solo se desvela en el momento del arresto</td>
+</tr>
+</tbody>
+</table>
+<h5 id="pistas-falsas">Pistas falsas</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Posición en el texto (%)</th>
+<th>Dirección del engaño</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El nombre de Rozaine empieza por R, es rubio y viaja solo — encaja exactamente con la descripción del telegrama</td>
+<td>Aprox. 20–30%</td>
+<td>Hace que los lectores y los pasajeros concentren sus sospechas en Rozaine, ignorando que el propio telegrama fue una trampa tendida por Lupin</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Rozaine es efectivamente atacado y robado, y lleva encima una tarjeta de aceptación de recompensa</td>
+<td>Aprox. 45%</td>
+<td>Lleva al lector a creer que Rozaine es realmente una víctima, descartando la posibilidad de que sea Lupin — cuando en realidad este ataque fue escenificado por el propio Lupin</td>
+</tr>
+<tr>
+<td>3</td>
+<td>El telegrama mismo: «pasajero rubio cuyo nombre empieza por R»</td>
+<td>Aprox. 5%</td>
+<td>Este telegrama es en sí mismo el cebo que Lupin preparó de antemano para que todo el mundo centrase la atención en Rozaine</td>
+</tr>
+</tbody>
+</table>
+<h4 id="reconstruccion-del-camino-deductivo">Reconstrucción del camino deductivo</h4>
+<p><strong>Camino deductivo del misterio de identidad</strong></p>
+<p>Al llegar al 25% del relato, un lector atento debería detenerse y preguntarse: «¿Por qué Rozaine muestra el brazo izquierdo en lugar del derecho?» Es la única contradicción perceptible en el momento, pero es tan pequeña, tan eclipsada por la acción de Ganimard, que la inmensa mayoría de los lectores la pasa por alto.</p>
+<p>Si el lector recuerda ese detalle y entre el 40% y el 60% lee sobre la «familiaridad anormal» del narrador con la psicología de Lupin, debería empezar a sospechar. Pero Leblanc cuida que la voz del narrador esté impregnada de la distinción y la despreocupación de la alta sociedad, haciendo muy difícil asociarla a un criminal.</p>
+<p>El momento verdaderamente decisivo llega al 85%: el narrador entrega voluntariamente la Kodak a Nelly — gesto que en el momento parece simplemente «darle la cámara para que fotografíe», pero que, una vez conocida la verdad, se revela como la transferencia de los objetos robados. Esta pista solo se ve cuando ya se conoce la respuesta, y ese es precisamente el procedimiento más brillante de Leblanc.</p>
+<p><strong>El truco narrativo de Leblanc</strong></p>
+<p>Este relato emplea el arma más peligrosa de la literatura policial: <strong>un narrador en primera persona poco fiable, siendo el propio narrador el criminal</strong>. El lector contempla la historia «desde el hombro» de Lupin en todo momento, sin advertir en ningún instante que su punto de vista ha sido cuidadosamente diseñado. Esta técnica era una proeza de vanguardia en 1905 — el «Barril de amontillado» de Poe tiene un diseño similar, pero allí el lector sabe desde el principio que el narrador es el asesino; la versión de Leblanc es engaño puro.</p>
+<hr>
+<h3 id="relato-ii-la-evasion-de-arsene-lupinthe-escape-of-arsene-lupin">Relato II: «La evasión de Arsène Lupin»（The Escape of Arsène Lupin）</h3>
+<h4 id="informacion-basica_2">Información básica</h4>
+<ul>
+<li>Misterio central：¿Cómo desaparece Lupin de una prisión vigilada estrechamente? ¿Quién es «Baudru Désiré»?</li>
+<li>Tipo：howdunit（misterio del método）+ identity mystery</li>
+</ul>
+<h4 id="evaluacion-de-deducibilidad_1">Evaluación de deducibilidad</h4>
+<table>
+<thead>
+<tr>
+<th>Indicador</th>
+<th>Estrellas</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deducibilidad（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>Punto de convergencia ~80% — La confirmación llega cuando Lupin revela que «él es Baudru», pero los indicios previos están dispersos a lo largo del texto</td>
+</tr>
+<tr>
+<td>Nivel de niebla（Fog Rating）</td>
+<td>⭐⭐⭐⭐</td>
+<td>Los múltiples planes de fuga falsos (el furgón modificado, las cartas cifradas) constituyen un doble señuelo cuidadosamente diseñado</td>
+</tr>
+</tbody>
+</table>
+<h4 id="resumen-del-relato_1">Resumen del relato</h4>
+<p>En prisión, Lupin anuncia públicamente que «no asistirá a su propio juicio». La policía intercepta una carta cifrada, descubre el plan de fuga y extrema la vigilancia. El día del juicio aparece en el banquillo un vagabundo andrajoso llamado «Baudru Désiré», que no se parece en nada a Lupin; Ganimard jura ante el tribunal que «este hombre no es Arsène Lupin», lo que desata el caos. El juicio se suspende y Lupin ha desaparecido. Cuando Ganimard sigue a Baudru después de la vista y se queda a solas con él en el bosque, oye aquella risa que jamás olvidará — es la de Lupin.</p>
+<h4 id="despiece-de-la-verdad_1">Despiece de la verdad</h4>
+<p><strong>Verdad I: Baudru Désiré es Lupin disfrazado</strong>
+- <strong>Punto de convergencia de pistas: aprox. 80%</strong>
+- Respuesta: Durante los dos meses que siguieron al traslado a la nueva celda, Lupin transformó gradualmente su aspecto mediante agentes químicos, práctica constante y ayuno, hasta asemejarse a Baudru — un vagabundo real con cierto parecido físico. En la sala del tribunal, sabía que si alguien lo examinaba detenidamente con la predisposición de que «podría ser Lupin» sería reconocido; por tanto, su defensa principal consistió en lograr que Ganimard declarase voluntariamente que «este hombre no es Lupin».</p>
+<h5 id="pistas-clave_1">Pistas clave</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Posición en el texto (%)</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Tras ser trasladado a la nueva celda, Lupin permanece durante dos meses «tumbado en silencio, de cara a la pared», lo que hace creer a los guardias que está sumido en la desesperación</td>
+<td>Aprox. 40%</td>
+<td>Este «período de silencio» es el tiempo que emplea para transformar sistemáticamente su aspecto, pero el texto lo presenta como «desánimo del derrotado»</td>
+</tr>
+<tr>
+<td>2</td>
+<td>En el juicio, el aspecto del acusado es «pálido, demacrado, con las mejillas hundidas, muy distinto de las fotografías de los periódicos»</td>
+<td>Aprox. 70%</td>
+<td>Un cambio físico tan exagerado debería despertar sospechas, pero se interpreta como «el desgaste de la vida carcelaria»</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ganimard siente «una extraña inquietud» en la sala, mira fijamente al acusado una y otra vez y finalmente se acerca a observarlo de cerca</td>
+<td>Aprox. 72%</td>
+<td>La intuición de Ganimard aflora brevemente en este momento, pero es sofocada por las palabras autoritarias del juez</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Tras salir de la cárcel, Baudru emite en el bosque de Boulogne «aquella risa diabólicamente familiar»</td>
+<td>Aprox. 90%</td>
+<td>Este es el momento de confirmación definitiva — esa risa es un identificador que no puede falsificarse</td>
+</tr>
+</tbody>
+</table>
+<h5 id="pistas-auxiliares_1">Pistas auxiliares</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Posición en el texto (%)</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Lupin dice en prisión: «Mis datos de medición no existen — o mejor dicho, son falsos»</td>
+<td>Aprox. 80% (explicación posterior de Lupin)</td>
+<td>Antes de ser detenido ya había sobornado al personal de la oficina de antropometría en Estados Unidos</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Lupin estudió dermatología en el Hospital Saint-Louis bajo la tutela del doctor Altier — este historial lo menciona el juez en el juicio del capítulo III</td>
+<td>Aprox. 68%</td>
+<td>Este historial se presenta como «el pasado peculiar de Lupin», pero en realidad es el origen de su técnica de disfraz</td>
+</tr>
+</tbody>
+</table>
+<h5 id="pistas-falsas_1">Pistas falsas</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Posición en el texto (%)</th>
+<th>Dirección del engaño</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>La carta cifrada escondida en un cigarro, que describe un elaborado «plan de fuga» (furgón policial modificado, automóvil de apoyo)</td>
+<td>Aprox. 50–55%</td>
+<td>Hace que la policía (y el lector) concentren la atención en ese «intento de fuga fallido», ignorando que el plan verdadero — la sustitución de identidad — lleva ya tiempo en marcha</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Aquel «intento de fuga fallido» (saltar del furgón, aparecer en público en un café, volver voluntariamente a la cárcel)</td>
+<td>Aprox. 60%</td>
+<td>Lupin lo divulga deliberadamente de forma ostentosa para crear la expectativa pública de que «Lupin intentará escapar», preparando a todos en el juicio para aceptar la explicación de que «ese hombre es un sustituto»</td>
+</tr>
+</tbody>
+</table>
+<h4 id="reconstruccion-del-camino-deductivo_1">Reconstrucción del camino deductivo</h4>
+<p>El punto más brillante de este relato está en que Lupin convierte <strong>la propia expectativa pública</strong> en una herramienta criminal.</p>
+<p>Al llegar al 40% del texto, un lector atento debería notar que «los dos meses de silencio» son inusuales. Lupin nunca ha sido un hombre silencioso; ese cambio de conducta requiere explicación. Pero Leblanc ofrece una razón aparentemente suficiente — el desánimo tras el traslado de celda — y el lector la acepta.</p>
+<p>Al 70%, la descripción del aspecto del acusado en el juicio es extremadamente anómala: mirada vacía, postura desgarbada, sin respuesta a las palabras. No es solo el «agotamiento de la vida carcelaria», sino más bien el estado de demencia fingida deliberadamente. Un lector atento debería empezar a sospechar en este punto.</p>
+<p>El punto de confirmación definitiva llega al 90%: la risa de Lupin. Esta es una pista que no puede «deducirse» racionalmente, porque depende de la memoria corporal de Ganimard, no del razonamiento cognitivo del lector. Es un diseño intencional de Leblanc — el misterio de identidad de Lupin solo puede desvelarse en última instancia mediante la «percepción», no mediante la «lógica».</p>
+<hr>
+<h3 id="relato-iii-el-collar-de-la-reinathe-queens-necklace">Relato III: «El collar de la reina»（The Queen's Necklace）</h3>
+<h4 id="informacion-basica_3">Información básica</h4>
+<ul>
+<li>Misterio central：¿Quién robó el collar de la reina, custodiado con tanto celo? ¿Cómo lo hizo?</li>
+<li>Tipo：howdunit（misterio de habitación cerrada）+ whodunit + identity mystery</li>
+</ul>
+<h4 id="evaluacion-de-deducibilidad_2">Evaluación de deducibilidad</h4>
+<table>
+<thead>
+<tr>
+<th>Indicador</th>
+<th>Estrellas</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deducibilidad（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>Punto de convergencia promedio ~77% — El método puede deducirse en torno al 70%; la identidad del ladrón no puede confirmarse hasta el ~85%</td>
+</tr>
+<tr>
+<td>Nivel de niebla（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>El principal engaño consiste en hacer sospechar al lector de Henriette (la madre), no de su hijo pequeño</td>
+</tr>
+</tbody>
+</table>
+<h4 id="resumen-del-relato_2">Resumen del relato</h4>
+<p>Los condes de Dreux-Soubise poseen un histórico collar de diamantes de la reina, que guardan cada noche en una pequeña cámara acorazada contigua al dormitorio. Una mañana el collar desaparece: la ventana de la cámara está cerrada por dentro y la puerta del dormitorio también tiene el cerrojo echado desde dentro — es un misterio de habitación cerrada. La investigación se centra en Henriette, amiga de los condes que se hospeda en el mismo edificio, y en su hijo pequeño Raoul. Años después, el «Caballero Floriani» (Chevalier Floriani) visita a los condes y «deduce» con facilidad la solución: el ladrón fue el niño de seis años Raoul, hijo de Henriette — quien de mayor adoptó el alias «Floriani» y regresó al escenario del crimen; ese niño es el futuro Arsène Lupin.</p>
+<h4 id="despiece-de-la-verdad_2">Despiece de la verdad</h4>
+<p><strong>Verdad I: El ladrón fue el niño de seis años Raoul — el futuro Arsène Lupin</strong>
+- <strong>Punto de convergencia de pistas: aprox. 85%</strong>
+- Respuesta: Raoul utilizó unas tablas de madera de la cocina a modo de puente para cruzar el pequeño patio interior, se coló por la rejilla de ventilación superior de la ventana de la cámara acorazada con ayuda de un atizador doblado, y tomó el collar. Fue vendiendo los diamantes uno a uno en la escuela para sufragar los gastos de su madre gravemente enferma.</p>
+<h5 id="pistas-clave_2">Pistas clave</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Posición en el texto (%)</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>La ventana de la cocina de Henriette «da exactamente a la ventana de la cámara acorazada», y las dos ventanas distan «al menos tres metros»</td>
+<td>Aprox. 45%</td>
+<td>Floriani señala después que tres metros suponen un obstáculo para un adulto, pero que un niño puede franquearlos tendiéndole un puente</td>
+</tr>
+<tr>
+<td>2</td>
+<td>El pequeño Raoul «había llegado justo de la escuela y estaba sentado leyendo» la mañana del suceso</td>
+<td>Aprox. 50%</td>
+<td>Este detalle se menciona deliberadamente, pero lleva al lector a creer que el niño es un acompañante inocente; en realidad «haber llegado justo de la escuela» significa que había estado fuera hace un momento</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Durante seis años, Henriette recibe cada año dos mil francos de un remitente anónimo, enviados desde distintas ciudades con distintas firmas</td>
+<td>Aprox. 55–65%</td>
+<td>Las remesas anónimas implican que quien las envía no quiere revelar su identidad — «alguien que conoce los hechos y siente culpa» es lógicamente más coherente que «un bienhechor desconocido». La pregunta es: ¿quién conocería la dirección de Henriette? ¿A quién le importaría su situación?</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Floriani pregunta por la «rejilla de ventilación» de la cámara acorazada y deduce con exactitud su posición y su mecanismo de apertura</td>
+<td>Aprox. 72%</td>
+<td>La precisión excesiva de su «deducción» sugiere que no está razonando sino recordando</td>
+</tr>
+<tr>
+<td>5</td>
+<td>El relato de Floriani va adquiriendo cada vez más el tono de una experiencia vivida en primera persona; usa expresiones como «lo que imagina que siente el hijo de Henriette en este momento»</td>
+<td>Aprox. 85%</td>
+<td>Un lector atento debería confirmar ya en este punto que Floriani es Raoul, que es ese niño</td>
+</tr>
+</tbody>
+</table>
+<h5 id="pistas-auxiliares_2">Pistas auxiliares</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Posición en el texto (%)</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>La investigación no encuentra ninguna vía de entrada y salida razonable; «un ser humano no puede desaparecer» — pero la complexión de un niño le permite colarse por espacios por los que un adulto no puede pasar</td>
+<td>Aprox. 35–50%</td>
+<td>Los investigadores dan siempre por sentado que el autor del robo es un adulto, por lo que ignoran la posibilidad de que sea un niño</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Cuando la condesa increpa a Henriette y la expulsa, ella no reacciona con ira sino con una aceptación silenciosa — como quien sabe que «no puede decir la verdad»</td>
+<td>Aprox. 60%</td>
+<td>Su silencio no es culpa, sino protección de su hijo</td>
+</tr>
+<tr>
+<td>3</td>
+<td>El conde confirma al final que las tablas de madera de la cocina «habían sido retiradas» y que el atizador «seguía allí»</td>
+<td>Aprox. 82%</td>
+<td>Las pruebas materiales coinciden con el razonamiento de Floriani</td>
+</tr>
+</tbody>
+</table>
+<h5 id="pistas-falsas_2">Pistas falsas</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Posición en el texto (%)</th>
+<th>Dirección del engaño</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Henriette «sabía que el collar se guardaba por las noches en la cámara acorazada»</td>
+<td>Aprox. 45%</td>
+<td>Hace que el lector y los investigadores concentren las sospechas en Henriette, no en su hijo</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Los investigadores comprueban que las ventanas «están cerradas por dentro y completamente selladas»</td>
+<td>Aprox. 35%</td>
+<td>Lleva a pensar que la vía de intrusión es imposible, ignorando la rejilla de ventilación — un acceso que solo se concibe conociendo la arquitectura</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Concluido el juicio, el magistrado se inclina a pensar que «los condes vendieron el collar para recaudar dinero»</td>
+<td>Aprox. 65%</td>
+<td>Hace creer al lector que quizá el enigma carece por completo de solución, que todo fue un fraude al seguro</td>
+</tr>
+</tbody>
+</table>
+<h4 id="reconstruccion-del-camino-deductivo_2">Reconstrucción del camino deductivo</h4>
+<p><strong>Camino deductivo del método（howdunit）</strong></p>
+<p>Al 45%, la posición de la cocina de Henriette ya es la base para deducir el método. Si el lector recuerda que «la ventana de la cocina da exactamente a la ventana de la cámara acorazada» y aplica la lógica de Floriani de que «debe de haber algún modo de tender un puente», puede deducir el método por sí mismo en torno al ~70%. La dificultad del howdunit en este enigma es de nivel medio.</p>
+<p><strong>Camino deductivo de la identidad（whodunit）</strong></p>
+<p>La dificultad radica en que la mayoría de los lectores no pensarán en «un niño de seis años». La presuposición cultural nos dice que un robo sofisticado es obra de un adulto. Leblanc lo sabe, y por eso entierra al 50% la pista de que Raoul «había llegado justo de la escuela», presentándola como un detalle inocuo.</p>
+<p>La pista que de verdad permite al lector «confirmar a Raoul» es la emoción «excesivamente íntima» de las palabras de Floriani al 85% — «imagina lo que siente ese niño al ver ahora a esta familia» — una narración que solo puede tener alguien que lo ha vivido. Hacia el ~90%, el conde le pregunta directamente «¿Quién es usted?» y la sonrisa callada de Floriani completa la confirmación.</p>
+<hr>
+<h3 id="relato-iv-la-perla-negrathe-black-pearl">Relato IV: «La perla negra»（The Black Pearl）</h3>
+<h4 id="informacion-basica_4">Información básica</h4>
+<ul>
+<li>Misterio central：¿Quién mató a la condesa? ¿Dónde está escondida la perla negra?</li>
+<li>Tipo：whodunit + misterio de paradero de un objeto</li>
+</ul>
+<h4 id="evaluacion-de-deducibilidad_3">Evaluación de deducibilidad</h4>
+<table>
+<thead>
+<tr>
+<th>Indicador</th>
+<th>Estrellas</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deducibilidad（Deducibility）</td>
+<td>⭐⭐⭐</td>
+<td>Punto de convergencia promedio ~65% — Hay pistas suficientes para identificar al asesino en torno al ~65%; el escondite de la perla no puede deducirse hasta el ~85%</td>
+</tr>
+<tr>
+<td>Nivel de niebla（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>El engaño principal procede de la identidad del «visitante de las tres de la madrugada» y de la absolución de Danègre</td>
+</tr>
+</tbody>
+</table>
+<h4 id="resumen-del-relato_3">Resumen del relato</h4>
+<p>La célebre actriz Leotine Zalti (condesa d'Andillot) es asesinada en su domicilio y desaparece la legendaria perla negra que llevaba consigo. La policía detiene al criado Victor Danègre: en su habitación se encuentra un traje de etiqueta manchado de sangre, y en el lugar de los hechos aparece un botón desprendido de ese traje. Sin embargo, el abogado defensor señala que nadie vio la llave, nadie vio el cuchillo, y que existe una contradicción entre la hora del crimen (11:20 pm) y la del misterioso visitante que entró a las 3 de la madrugada — Danègre es absuelto. Tras salir de la cárcel, Lupin, disfrazado de ex inspector de policía, lo amenaza con las pruebas irrefutables que posee y lo obliga a revelar el escondite de la perla negra.</p>
+<h4 id="despiece-de-la-verdad_3">Despiece de la verdad</h4>
+<p><strong>Verdad I: Victor Danègre es el asesino</strong>
+- <strong>Punto de convergencia de pistas: aprox. 65%</strong>
+- Respuesta: Danègre copió tres semanas antes la llave de repuesto de la cocina, planeando el crimen con premeditación. Aprovechando su conocimiento de que la condesa guardaba la perla negra en la caja de papel de carta, entró en el dormitorio mientras ella dormía, pero ella lo descubrió y él la mató.</p>
+<h5 id="pistas-clave_3">Pistas clave</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Posición en el texto (%)</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Al traje de etiqueta manchado de sangre de Danègre le falta un botón, y ese botón se encontró en el lugar de los hechos</td>
+<td>Aprox. 55%</td>
+<td>Prueba material concluyente; pero el abogado alega que «otra persona lo colocó allí para incriminarle» — Lupin revela después que sucedió exactamente lo contrario: el propio Danègre conservó las pruebas</td>
+</tr>
+<tr>
+<td>2</td>
+<td>El reloj marca las 11:20 pm (hora del crimen), y la condesa «tenía costumbre de acostarse temprano» — a las 11:20 pm ya dormía</td>
+<td>Aprox. 55%</td>
+<td>La hora del crimen cae dentro del patrón razonable de su vida cotidiana, compatible con un autor del crimen que la conocía desde dentro</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Danègre solo sale del edificio una vez al día: al estanco de la esquina — esa salida se produce en la madrugada posterior al crimen (poco después de las 3)</td>
+<td>Aprox. 60%</td>
+<td>Su radio de acción es extremadamente limitado; la perla debe de estar escondida en algún punto del trayecto que recorre en esa única salida</td>
+</tr>
+<tr>
+<td>4</td>
+<td>El «misterioso visitante» de las tres de la madrugada (es decir, Lupin) <strong>no es</strong> el asesino — cuando llega, la mujer ya está muerta y el reloj ya marca las 11:20 pm</td>
+<td>Aprox. 60%</td>
+<td>La diferencia entre los dos momentos (las 3 am y las 11:20 pm) confirma que el crimen se cometió a las 11:20 pm, y que el asesino entró y salió antes de las 3 am</td>
+</tr>
+</tbody>
+</table>
+<h5 id="pistas-auxiliares_3">Pistas auxiliares</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Posición en el texto (%)</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Danègre «tiene malos antecedentes; es un borracho y un jugador conocido»</td>
+<td>Aprox. 55%</td>
+<td>Apunta al móvil: motivación económica y antecedentes previos</td>
+</tr>
+<tr>
+<td>2</td>
+<td>La prima de la condesa, Mlle. de Sinclèves, recibe una carta que describe cómo está escondida la perla negra — carta que desaparece después</td>
+<td>Aprox. 55%</td>
+<td>La desaparición de esa carta indica que alguien conocía de antemano la localización de la perla y elimina activamente los rastros que podrían delatarlo</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Lupin (el visitante de las tres de la madrugada) se lleva el cuchillo del crimen y la llave de repuesto — que después se convierten en las «pruebas irrefutables» con las que amenaza a Danègre</td>
+<td>Aprox. 90% (revelado a posteriori)</td>
+<td>En ese momento Lupin ya tenía la certeza de que Danègre era el autor, por lo que conserva las pruebas</td>
+</tr>
+</tbody>
+</table>
+<h5 id="pistas-falsas_3">Pistas falsas</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Posición en el texto (%)</th>
+<th>Dirección del engaño</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El enigma del «misterioso visitante de las tres de la madrugada»</td>
+<td>Aprox. 50–70%</td>
+<td>Hace que el lector y la policía concentren sus esfuerzos en «quién es ese individuo», en lugar de en «quién estaba allí a las 11:20 pm»</td>
+</tr>
+<tr>
+<td>2</td>
+<td>La absolución de Danègre por el jurado</td>
+<td>Aprox. 70%</td>
+<td>La inocencia legal lleva al lector a abandonar sus sospechas sobre él, pero inocencia legal no equivale a inocencia real</td>
+</tr>
+<tr>
+<td>3</td>
+<td>El abogado señala la «laguna» lógica de que «sin llave no pudo cerrar al salir»</td>
+<td>Aprox. 68%</td>
+<td>Este «agujero» en realidad es falso — Danègre sí tenía una llave de repuesto, pero Lupin se la había llevado</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Verdad II: La perla negra está escondida entre las losetas del pavimento</strong>
+- <strong>Punto de convergencia de pistas: aprox. 85%</strong>
+- Respuesta: La única salida de Danègre (ir temprano al estanco) fue su única oportunidad de esconder la perla. Las grietas entre las losetas del pavimento cerca del estanco eran el único lugar donde podía ocultar un objeto de forma rápida y discreta.</p>
+<h5 id="pistas-clave-escondite-de-la-perla">Pistas clave (escondite de la perla)</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Posición en el texto (%)</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Antes de ser detenido, Danègre «solo salió del edificio una vez» — para ir al estanco</td>
+<td>Aprox. 60%</td>
+<td>Es una pista y a la vez una delimitación del espacio: la perla debe de estar en algún punto de ese trayecto</td>
+</tr>
+<tr>
+<td>2</td>
+<td>El estanco dista «unos pocos pasos» de la casa de la condesa — en la misma manzana</td>
+<td>Aprox. 60%</td>
+<td>Reduce el radio de búsqueda</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Danègre señala «entre la decimosegunda y la decimotercera loseta contando desde el desagüe, a la derecha»</td>
+<td>Aprox. 92% (confesión forzada)</td>
+<td>Confirmación explícita, pero lógicamente deducible al 85%</td>
+</tr>
+</tbody>
+</table>
+<h4 id="reconstruccion-del-camino-deductivo_3">Reconstrucción del camino deductivo</h4>
+<p>Este relato es lógicamente el más cercano a un enigma policial tradicional de los nueve que componen la colección, pero Leblanc eleva la dificultad mediante dos recursos.</p>
+<p><strong>Primer recurso: la cortina de humo del visitante misterioso</strong></p>
+<p>El «misterioso visitante» de las tres de la madrugada (que en realidad es Lupin) crea una cortina de humo perfecta: el lector empieza a preguntarse si quizá el asesino fue ese visitante. Esta duda ocupa demasiada atención entre el 50% y el 70%, eclipsando la verdadera ventana temporal del crimen que fija el reloj (11:20 pm). Si el lector advierte al 60% que «los dos momentos se separan por casi cuatro horas y describen a dos personas distintas», puede devolver el foco al escenario de las 11:20 pm.</p>
+<p><strong>Segundo recurso: el efecto psicológico de la inocencia legal</strong></p>
+<p>La absolución de Danègre hace que el lector (y su instinto de justicia) tienda a pensar que «si es inocente, es verdaderamente inocente». Leblanc desafía aquí la capacidad cognitiva del lector: el resultado de un procedimiento legal no equivale a la verdad factual. Lupin conoció la verdad desde el principio; su plan consistió en dejar que el sistema legal primero «condenase» y luego «absolviese», para actuar sobre Danègre en el momento de mayor fragilidad psicológica.</p>
+<hr>
+<h2 id="resenas-breves-de-los-cinco-relatos-restantes">Reseñas breves de los cinco relatos restantes</h2>
+<table>
+<thead>
+<tr>
+<th>Título</th>
+<th>Tipo de enigma</th>
+<th>Deducibilidad</th>
+<th>Nivel de niebla</th>
+<th>Reseña</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>II. «Arsène Lupin en prisión»（Arsène Lupin in Prison）</td>
+<td>howdunit (cómo planea un robo desde la cárcel)</td>
+<td>⭐⭐</td>
+<td>⭐⭐</td>
+<td>Lupin explica su ardid a Ganimard; la respuesta se desvela casi sola, aunque la sustitución de identidad del «falso Ganimard» sigue siendo ingeniosa</td>
+</tr>
+<tr>
+<td>IV. «El viajero misterioso»（The Mysterious Traveller）</td>
+<td>identity + reversal (el narrador es Lupin, que además atrapa al verdadero criminal)</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>Doble engaño de identidad: el narrador es Lupin y el verdadero criminal en el tren es el fugitivo Pierre Onfrey</td>
+</tr>
+<tr>
+<td>VI. «Los siete de corazones»（The Seven of Hearts）</td>
+<td>espionaje, asesinato y misterio + identity (Jean Daspry = Lupin)</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>El relato de estructura más compleja; la revelación de que «Daspry es Lupin» llega al final, aunque en la parte central ya hay indicios</td>
+</tr>
+<tr>
+<td>VII. «La caja fuerte de la señora Imbert»（Madame Imbert's Safe）</td>
+<td>irony reversal (Lupin es engañado)</td>
+<td>⭐</td>
+<td>⭐⭐</td>
+<td>La respuesta es un giro irónico: Lupin cree que él roba, pero en realidad es él quien ha sido engañado; el «enigma» en sí es una broma metaficcional dirigida al lector</td>
+</tr>
+<tr>
+<td>IX. «Sherlock Holmes llega demasiado tarde»（Sherlock Holmes Arrives Too Late）</td>
+<td>puzzle-solving (enigma del pasaje secreto) + identity (Velmont = Lupin)</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐</td>
+<td>El enigma del pasaje secreto en el palacio tiene una lógica clara; la identidad de «Velmont es Lupin» se insinúa con fuerza desde el comienzo del relato</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="reconstruccion-global-del-camino-deductivoperspectiva-de-la-coleccion">Reconstrucción global del camino deductivo（perspectiva de la colección）</h2>
+<p>Los nueve relatos de <em>Arsène Lupin, ladrón de guante blanco</em> comparten una estructura profunda: <strong>el núcleo del enigma suele ser «quién es Lupin» o «qué está haciendo Lupin en este momento»</strong>. Esto es radicalmente distinto del «quién es el asesino» de la novela policial tradicional.</p>
+<p>El lector de esta colección debe abandonar dos hábitos deductivos:</p>
+<ol>
+<li><strong>No confíes en el narrador</strong> — En varios relatos, el narrador en primera persona o el personaje que más «parece el protagonista» suele ser el propio Lupin.</li>
+<li><strong>No confíes en las conclusiones de la investigación oficial</strong> — Los veredictos de inocencia de los tribunales y los resultados de las pesquisas policiales formales son, en el mundo de Lupin, con frecuencia exactamente lo contrario de la verdad.</li>
+</ol>
+<p>El verdadero «lector deductivo» debería preguntarse al inicio de cada relato: «En este escenario, ¿qué persona actúa con más fluidez y más sentido estratégico? Esa es Lupin.»</p>
+<hr>
+<h2 id="observaciones-adicionales">Observaciones adicionales</h2>
+<p><strong>La revolución narrativa de Leblanc</strong></p>
+<p>Entre 1905 y 1907, la serie de Sherlock Holmes de Conan Doyle estaba en su apogeo. En ese contexto, Leblanc creó a Lupin y logró algo aparentemente imposible: <strong>hacer que el lector amase a un criminal al que nunca podría adivinar</strong>.</p>
+<p>La estructura del enigma de Holmes consiste en «el lector sigue al detective para resolver el misterio»; la de los enigmas de Lupin consiste en «el lector sigue al criminal mientras delinque, pero siempre va un paso por detrás». Estos dos modelos establecieron cada uno una tradición propia en la historia de la literatura policial. Las primeras historias de antihéroes criminales de Wilkie Collins y la posterior «narración inversa» (la forma que expone primero el método criminal para que luego el detective lo resuelva) tienen sus precedentes en la serie Lupin.</p>
+<p><strong>La especificidad de la dificultad deductiva</strong></p>
+<p>A diferencia de la Christie, con quien el lector puede «competir en igualdad de condiciones», la dificultad de los enigmas de la serie Lupin proviene en gran medida de <strong>la asimetría inherente a la propia estructura narrativa</strong>. Lo que le falta al lector no es inteligencia, sino información — porque Lupin siempre sabe más que el narrador (incluido él mismo cuando es el narrador).</p>
+<p>Esto confiere a los índices de «deducibilidad» de esta colección una peculiaridad: aunque se señalen todas las pistas, estas solo pueden identificarse como «pistas» una vez conocida la respuesta. Este es el diseño más radical de Leblanc — construyó un laberinto en el que el mapa de la entrada solo puede leerse desde la salida.</p>
+<p><strong>Comparación con Holmes de Doyle</strong></p>
+<p>Leblanc no disimula su homenaje (y su provocación) a Doyle — en el noveno relato hace que Holmes aparezca en persona, pero permite que Lupin gane el duelo de forma cortés. Este relato está diseñado deliberadamente para ser demasiado transparente en el plano deductivo (Sherlock Holmes descifra el enigma del pasaje secreto en diez minutos), pero resulta sugerente en el plano humano: en una época de competencia intelectual, los dos hombres más inteligentes se encuentran y optan cada uno por seguir su propio camino.</p>
+<p><strong>Nota para el lector hispanohablante</strong></p>
+<p>El motivo del «collar de la reina» hace referencia a un escándalo histórico real de la víspera de la Revolución Francesa (el «Asunto del collar de la reina», 1785). En la historia real, el cardenal de Rohan y la impostora Jeanne de la Motte utilizaron cartas de la reina falsificadas para estafar a un joyero, desencadenando un escándalo que dañó gravemente la reputación de María Antonieta y contribuyó indirectamente a acelerar el estallido de la Revolución. Leblanc utiliza este episodio histórico real como trasfondo y convierte al ficticio Lupin en el descubridor de la solución al enigma histórico, lo que en sí mismo es un «meta-enigma» diseñado con suma habilidad.</p>
+    <a href="../index.html" class="back-link">← Volver al inicio</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Sala de Disección Detectivesca</p>
+    <p>Cinco autores · ochenta y ocho obras · 135 años de evolución de la dificultad en la narrativa policíaca.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>アルセーヌ・ルパン：怪盗紳士（The Extraordinary Adventures of Arsène Lupin, Gentleman-Burglar） — 推理解剖室</title>
+<meta name="description" content="『怪盗紳士』は、ルブランがフランスの雑誌『Je sais tout（私は何でも知っている）』のために執筆したシリーズ短篇の単行本化作品であり、「Arsène Lupin」シリーズの第一作でもある。九つの物語はいずれも同一の中心人物——Arsène Lupin——を軸としながら、それぞれ異なる謎の構造と語りの戦略を採って">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/arsene-lupin-gentleman-burglar.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/arsene-lupin-gentleman-burglar.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/arsene-lupin-gentleman-burglar.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/arsene-lupin-gentleman-burglar.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/arsene-lupin-gentleman-burglar.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/arsene-lupin-gentleman-burglar.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/arsene-lupin-gentleman-burglar.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/arsene-lupin-gentleman-burglar.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif JP', serif;
+  --font-sans: 'Noto Sans JP', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">推理解剖室</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">ホーム</a>
+        <a href="../index.html#latest">最新</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="言語" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 日本語</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/arsene-lupin-gentleman-burglar.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/arsene-lupin-gentleman-burglar.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/arsene-lupin-gentleman-burglar.html">English</a>
+      <a class="lang-item active" data-lang="ja" href="/Detective-Analysis/ja/articles/arsene-lupin-gentleman-burglar.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/arsene-lupin-gentleman-burglar.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/arsene-lupin-gentleman-burglar.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/arsene-lupin-gentleman-burglar.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/arsene-lupin-gentleman-burglar.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">モーリス・ルブラン · </div>
+    <h1>アルセーヌ・ルパン：怪盗紳士（The Extraordinary Adventures of Arsène Lupin, Gentleman-Burglar）</h1>
+    <div class="subtitle">モーリス・ルブラン（Maurice Leblanc） · 短篇集（9篇）</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">推理難易度</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">霧の濃度</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="the-extraordinary-adventures-of-arsene-lupin-gentleman-burglar">アルセーヌ・ルパン：怪盗紳士（The Extraordinary Adventures of Arsène Lupin, Gentleman-Burglar）— 推理分析</h1>
+<h2 id="_1">基本情報</h2>
+<ul>
+<li>著者：モーリス・ルブラン（Maurice Leblanc）</li>
+<li>発表年：1907年（短篇は1905–1907年に順次発表、のち単行本として刊行）</li>
+<li>ジャンル：短篇集（9篇）</li>
+<li>探偵：伝統的な探偵役なし——Arsène Lupin 本人が犯罪者・探偵・謎の核心を同時に担う</li>
+<li>中心的謎のタイプ：identity mystery（人物の正体謎）/ howdunit / whodunit</li>
+</ul>
+<hr>
+<h2 id="_2">推理難易度総評（選集全体）</h2>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星評価</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難易度（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>平均収束点は約78%——重要な手がかりは語り手の「無意識の漏らし」に隠されており、中盤以前に全体像を把握することは一般読者には困難</td>
+</tr>
+<tr>
+<td>霧の濃度（Fog Rating）</td>
+<td>⭐⭐⭐⭐</td>
+<td>ルブランは「信頼できない語り手の視点」と「公然たる偽りの正体」で読者を欺くことに最も長けている。Arsène Lupin は多くの短篇で謎の作り手であり、同時に謎の答えでもある</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>選集の凡例について：</strong> 本篇では、謎の設計が最も豊かな四つの短篇を深く分析する。〈Arsène Lupin の逮捕〉（第1章）、〈Arsène Lupin の脱獄〉（第3章）、〈王妃の首飾り〉（第5章）、〈黒真珠〉（第8章）。残りの五篇については簡評を付す。</p>
+</blockquote>
+<hr>
+<h2 id="_3">あらすじ</h2>
+<p>『怪盗紳士』は、ルブランがフランスの雑誌『Je sais tout（私は何でも知っている）』のために執筆したシリーズ短篇の単行本化作品であり、「Arsène Lupin」シリーズの第一作でもある。九つの物語はいずれも同一の中心人物——Arsène Lupin——を軸としながら、それぞれ異なる謎の構造と語りの戦略を採っている。</p>
+<p>Arsène Lupin は探偵ではなく天才犯罪者だが、ルブランが彼を物語中のすべての警察官よりも聡明に描くため、読者は否応なく彼の視点から謎を理解することになる。これが推理文学史上もっとも奇妙な逆説の一つを生む。<strong>謎の答えはしばしば Arsène Lupin 自身である</strong>——彼の正体、彼の計画、彼の手口が謎の解答なのだ。</p>
+<p>コナン・ドイルのホームズと比較すると、Arsène Lupin シリーズの謎の難度は別次元に由来する。読者は「犯人を見つける」のではなく、「Arsène Lupin の思考についていく」ことを求められる——そしてルブランは大量の紙幅を費やして、読者がついていけないよう確実に仕組んでいる。</p>
+<hr>
+<h2 id="_4">深度分析：精選四篇</h2>
+<hr>
+<h3 id="arsene-lupin-the-arrest-of-arsene-lupin">第一篇：〈Arsène Lupin の逮捕〉（The Arrest of Arsène Lupin）</h3>
+<h4 id="_5">基本情報</h4>
+<ul>
+<li>中心的謎：語り手「d'Andrézy 氏」の真の正体</li>
+<li>タイプ：identity mystery + howdunit</li>
+</ul>
+<h4 id="_6">推理難易度総評</h4>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星評価</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難易度（Deducibility）</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>収束点 ~90%——決定的な手がかり（コダックのカメラ）は逮捕の直前まで完全には浮上しない</td>
+</tr>
+<tr>
+<td>霧の濃度（Fog Rating）</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>語り手が犯罪者本人。物語全体が「無実の傍観者」の視点で進み、読者は系統的に欺かれる</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_7">物語概要</h4>
+<p>大西洋横断客船「プロヴァンス号」上に電報が届き、全乗客に知らされる。一等船室に、Rで始まる名前を持つ金髪の男性乗客がいて、それがまさに Arsène Lupin だという。語り手「d'Andrézy 氏」は機知と推理で容疑者の範囲を絞り込み、同じく金髪で単独旅行中の「Rozaine 氏」を指し示す。Rozaine は一時逮捕されるが、傷跡がないため釈放され、状況は混乱する。ニューヨーク港到着時、探偵 Ganimard が足を止めたのは語り手本人だった——彼こそが本物の Arsène Lupin だったのだ。</p>
+<h4 id="_8">真相の解剖</h4>
+<p><strong>真相その一：語り手 d'Andrézy こそが Arsène Lupin である</strong>
+- <strong>収束点：約90%</strong>
+- 答え：物語全体の語り手は無実の傍観者ではなく、Arsène Lupin 本人だった。彼はイニシャル R の誤誘導を意図的に Rozaine に向け、同時に積極的に「捜査を手伝う」ことで自身への疑惑を排除した。</p>
+<h5 id="_9">重要な手がかり</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Rozaine が腕の提示を求められた際、<strong>左腕</strong>を見せた（右腕ではなく）</td>
+<td>約25%</td>
+<td>電報は傷が「右前腕」にあると明記していた。本当に潔白を証明しようとする人物が間違った腕を見せるはずはない——しかし読者はこの細部をほとんど意識しない</td>
+</tr>
+<tr>
+<td>2</td>
+<td>語り手が Arsène Lupin の心理と行動様式に対して示す「直感」が異常なほど正確で、まるで自分自身を描写しているかのよう</td>
+<td>約40–60%</td>
+<td>「Arsène Lupin が自分の荷物を誰にも調べさせないだろう」などの細部への予見は、普通の乗客に想定されるレベルをはるかに超えている</td>
+</tr>
+<tr>
+<td>3</td>
+<td>語り手は積極的にコダックのカメラを Nelly に貸そうと提案し、逮捕される直前にわざわざ「カメラを彼女の手に渡す」</td>
+<td>約85–90%</td>
+<td>これが最も重要な行動だ——逮捕される寸前にカメラを移転させたのは、カメラの中に盗品が隠されていたから。この行動の意味は、真相を知った後に振り返って初めて理解できる</td>
+</tr>
+<tr>
+<td>4</td>
+<td>「何という残念なことか、私は正直者ではない」（What a pity that I am not an honest man!）——逮捕後の独り言</td>
+<td>約95%</td>
+<td>これは最後の瞬間の告白であり、語り手の真の正体を明確に指し示す唯一の言葉でもある</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_10">補助的な手がかり</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Nelly は最初、個室に無断で入ってきた「無言の青年」（Rozaine）に恐怖を感じていた——つまり彼女が後に d'Andrézy に対して示した安心感は騙されていたことを暗示する</td>
+<td>約15%</td>
+<td>読者は、Nelly の直感がしばしば彼女自身の理性よりも信頼できることに注目すべきだ</td>
+</tr>
+<tr>
+<td>2</td>
+<td>語り手は積極的に捜査に介入し、進んで容疑者の範囲を絞り込む——「無実の傍観者」としては動機が不審</td>
+<td>全体を通じて</td>
+<td>本当の無実者は通常これほど熱心に「捜査を手伝う」ことはしない</td>
+</tr>
+<tr>
+<td>3</td>
+<td>d'Andrézy という名前は実在する人物のものだが、その人物は三年前にマケドニアで死亡している</td>
+<td>約95%（Ganimard が明かす）</td>
+<td>逮捕時に初めて明かされる後知恵の手がかり</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_11">偽の手がかり</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>誤誘導の方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Rozaine の名前がR で始まり、金髪で、単独旅行中という点が電報の記述と完全に一致する</td>
+<td>約20–30%</td>
+<td>読者と船内の乗客の疑惑を Rozaine に集中させ、電報そのものが Arsène Lupin の仕掛けた罠であることを見えなくする</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Rozaine は実際に暴行・強盗を受け、身には懸賞金を受け入れるカードまで残されている</td>
+<td>約45%</td>
+<td>読者に Rozaine が本当に被害者だと信じさせ、彼が Arsène Lupin である可能性を排除する——この暴行は Arsène Lupin 自身が演出したものだ</td>
+</tr>
+<tr>
+<td>3</td>
+<td>電報そのもの：「Rで始まる名前の金髪乗客」</td>
+<td>約5%</td>
+<td>この電報自体が Arsène Lupin があらかじめ仕掛けた罠であり、全員の注意を Rozaine に向けるための餌だった</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_12">推理経路の再構築</h4>
+<p><strong>正体謎の推理経路</strong></p>
+<p>約25%を読み進んだところで、細心の読者は立ち止まって問うべきだ。「Rozaine はなぜ左腕を見せたのか、右腕ではなく？」これが物語全体の中で「その場で気づける唯一の矛盾」だが、あまりにも些細すぎて Ganimard の行動に掻き消され、ほとんどの読者は読み飛ばしてしまう。</p>
+<p>この細部を記憶していた読者が40%から60%にかけて、語り手の Arsène Lupin 心理に対する「異常な親しみ」を読んだなら、疑惑を持ち始めるべきだろう。しかしルブランは意図的に語り手の声を上流社会の教養と軽やかさで満たし、犯罪者とは結びつけにくくしている。</p>
+<p>本当の決定的な瞬間は85%にある。語り手が積極的にコダックを Nelly に手渡す——この行動はその瞬間には「Nelly に撮影させる」ように見えるが、真相を知ってから振り返ると、これが盗品の移転であったと理解できる。この手がかりは答えを知った後にしか見えない。これこそルブランの最も巧みな手法だ。</p>
+<p><strong>ルブランの叙述トリック</strong></p>
+<p>この短篇は推理文学において最も危険な武器を使っている。<strong>第一人称の信頼できない語り手であり、その語り手本人が犯罪者である</strong>という手法だ。読者はずっと Arsène Lupin の肩越しに物語を「見て」いながら、自分の視点がすでに設計済みであることにまったく気づかない。この技術は1905年においては驚くべき先鋒的な試みだった——ポーの『アモンティリャードの樽』にも類似の設計はあるが、あの篇では読者は最初から語り手が殺人犯だと知っている。ルブランの版は完全なる欺瞞だ。</p>
+<hr>
+<h3 id="arsene-lupin-the-escape-of-arsene-lupin">第二篇：〈Arsène Lupin の脱獄〉（The Escape of Arsène Lupin）</h3>
+<h4 id="_13">基本情報</h4>
+<ul>
+<li>中心的謎：Arsène Lupin はいかにして厳重に監視された刑務所から消えたのか。「Baudru Désiré」とは何者か？</li>
+<li>タイプ：howdunit（犯行手口謎）+ identity mystery</li>
+</ul>
+<h4 id="_14">推理難易度総評</h4>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星評価</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難易度（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>収束点 ~80%——Arsène Lupin が「Baudru は自分だ」と明かす時点で確認されるが、前兆の手がかりは全篇に散在している</td>
+</tr>
+<tr>
+<td>霧の濃度（Fog Rating）</td>
+<td>⭐⭐⭐⭐</td>
+<td>複数の偽りの脱獄計画（改造された囚人護送車、密書）が精巧に設計された二重の誤誘導をなしている</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_15">物語概要</h4>
+<p>刑務所内で Arsène Lupin は公然と「自分の裁判には出席しない」と宣言する。警察は密書を入手し、脱獄計画を察知して厳戒態勢を敷く。裁判の日、「Baudru Désiré」と名乗るみすぼらしいホームレスが被告席に現れる。Arsène Lupin らしくない風貌に Ganimard は法廷で「この人物は Arsène Lupin ではない」と宣誓し、騒動が起きる。裁判は中止となり、Arsène Lupin はすでに消えていた。出廷後に Baudru を追跡した Ganimard は、森の中で独りになった時、決して忘れられないあの笑い声を耳にする——それは Arsène Lupin の笑い声だった。</p>
+<h4 id="_16">真相の解剖</h4>
+<p><strong>真相その一：Baudru Désiré は変装した Arsène Lupin である</strong>
+- <strong>収束点：約80%</strong>
+- 答え：新しい独房に移された二ヶ月の間、Arsène Lupin は薬品、継続的な練習、そして断食によって、自分の外見を徐々に Baudru——彼と若干似た実在のホームレス——へと変えていった。法廷では、「Arsène Lupin かもしれない」という予断を持って注意深く観察されれば見破られると承知していたため、最重要の防衛線は Ganimard 自らに「この人物は Arsène Lupin ではない」と進んで宣言させることだった。</p>
+<h5 id="_17">重要な手がかり</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>新しい独房に移された後、Arsène Lupin は二ヶ月間にわたって「静かに横たわり、壁に顔を向け」、看守たちに落ち込んでいる印象を与えた</td>
+<td>約40%</td>
+<td>この「沈黙の期間」は外見を系統的に改造する時間だったが、文章はそれを「挫折による落胆」として提示している</td>
+</tr>
+<tr>
+<td>2</td>
+<td>法廷での被告の外見は「青白く、やつれ、頬がこけており、新聞の写真とは大きくかけ離れていた」</td>
+<td>約70%</td>
+<td>誇張された身体の変化は本来疑惑を呼ぶべきだが、「刑務所生活の過酷さによるもの」と解釈されてしまう</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ganimard は法廷で「奇妙な不安」を覚え、繰り返し被告を凝視し、最終的に近づいてじっくり観察する</td>
+<td>約72%</td>
+<td>この場面で Ganimard の直感が短く光るが、裁判長の強い言葉に押し潰されてしまう</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Baudru が釈放された後、ブローニュの森のベンチで「あの地獄のように聞き慣れた笑い声」を発する</td>
+<td>約90%</td>
+<td>この瞬間が最終的な確認となる——この笑い声は偽ることのできない識別記号だ</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_18">補助的な手がかり</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Arsène Lupin は獄中で言った。「私の身体測定データは存在しない——あるいは偽物だ」</td>
+<td>約80%（Arsène Lupin の事後説明）</td>
+<td>彼は逮捕される前にアメリカの人体測定局の職員に賄賂を贈っていた</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Arsène Lupin はかつてサン＝ルイ病院で Altier 医師に師事し皮膚病を研究していた——この経歴が第三章の法廷場面で裁判長により言及される</td>
+<td>約68%</td>
+<td>この経歴は Arsène Lupin の「奇妙な過去」として提示されるが、実際は彼の変装技術の源だった</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_19">偽の手がかり</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>誤誘導の方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>葉巻の中に隠された密書には、複雑な「脱獄計画」（改造された護送車、待機する自動車）が記されていた</td>
+<td>約50–55%</td>
+<td>警察（と読者）の注意を「失敗した脱獄の試み」に集中させ、本当の計画——正体の入れ替え——がすでに進行中であることを見えなくする</td>
+</tr>
+<tr>
+<td>2</td>
+<td>あの「失敗した脱獄の試み」（護送車から飛び出し、カフェに公然と姿を現し、自ら刑務所に戻る）</td>
+<td>約60%</td>
+<td>Arsène Lupin はこの件を大々的に宣伝することで「Arsène Lupin は必ず逃げる」という公衆の予期を作り上げ、法廷の全員に「あの人物は替え玉だ」という説明を受け入れやすくした</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_20">推理経路の再構築</h4>
+<p>この短篇が最も巧みなのは、Arsène Lupin が<strong>公衆の予期そのもの</strong>を犯罪の道具として使った点だ。</p>
+<p>約40%を読み進んだところで、細心の読者は「二ヶ月の沈黙期間」に不自然さを感じるべきだ。Arsène Lupin はかつて無口な人物ではなかった——この行動の変化には説明が必要だ。しかしルブランは一見十分な理由を与えてくれる——房の移転後の落胆——読者はそれを受け入れてしまう。</p>
+<p>70%の場面、法廷での被告の外見描写は極端に異常だ。虚ろな眼差し、歪んだ姿勢、言葉への無反応。これは単なる「獄中生活による憔悴」ではなく、意図的に演じられた精神喪失の状態のように見える。細心の読者はここで疑惑を持ち始めるべきだ。</p>
+<p>本当の確認点は90%にある。Arsène Lupin の笑い声だ。これは理性的に「推論」できる手がかりではない。Ganimard の身体記憶に依存するものであり、読者の認知的推理には依らないからだ。これはルブランの意図的な設計だ——Arsène Lupin の正体謎は、最終的に「論理」ではなく「知覚」によってしか解き明かせない。</p>
+<hr>
+<h3 id="the-queens-necklace">第三篇：〈王妃の首飾り〉（The Queen's Necklace）</h3>
+<h4 id="_21">基本情報</h4>
+<ul>
+<li>中心的謎：厳重に保管されていた王妃の首飾りを誰が盗んだのか？どうやって？</li>
+<li>タイプ：howdunit（密室謎）+ whodunit + identity mystery</li>
+</ul>
+<h4 id="_22">推理難易度総評</h4>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星評価</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難易度（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>平均収束点 ~77%——手口は約70%で推論可能、盗人の正体は約85%で確認できる</td>
+</tr>
+<tr>
+<td>霧の濃度（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>主な誤誘導は読者の疑惑を Henriette（母親）に向けることにあり、幼い息子への疑念を阻む</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_23">物語概要</h4>
+<p>ドリュー＝スービス伯爵夫妻は歴史的なダイヤモンドの王妃の首飾りを所有しており、着用の後は常に寝室脇の小さな密室に施錠して保管していた。ある朝、首飾りが消えた。密室の窓は鍵がかかり、寝室のドアも内側から掛け金がかかっており、完全な密室だった。捜査の焦点は伯爵夫妻と同じ建物に住む友人 Henriette とその幼い息子 Raoul に向けられる。数年後、「フロリアニ騎士（Chevalier Floriani）」が訪問し、難なく謎を「推理」してみせる——盗人は六歳の Raoul であり、Henriette の息子だった。成長した彼は「フロリアニ」と名を変えて事件現場に戻ってきた人物であり、将来の Arsène Lupin その人でもあった。</p>
+<h4 id="_24">真相の解剖</h4>
+<p><strong>真相その一：盗人は六歳の Raoul——未来の Arsène Lupin である</strong>
+- <strong>収束点：約85%</strong>
+- 答え：Raoul は台所にあった棚板を橋として使い、小さな中庭を渡り、曲げた火掻き棒で小窓上部の換気口を引っかけて密室に侵入し、首飾りを持ち出した。彼は学校でダイヤを少しずつ売り、重病の母親の生活費を工面した。</p>
+<h5 id="_25">重要な手がかり</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Henriette の台所の窓が「密室の窓に真向かい」にあり、両窓の距離は「少なくとも三メートル」</td>
+<td>約45%</td>
+<td>フロリアニは後に、三メートルの距離は大人には障害だが、子供が橋を渡せば越えられると指摘する</td>
+</tr>
+<tr>
+<td>2</td>
+<td>子供の Raoul は事件当日の朝「学校から帰ったばかりで、座って本を読んでいた」</td>
+<td>約50%</td>
+<td>この細部は意図的に言及されるが、読者には子供が無実の同伴者と思わせる。実際「学校から帰ったばかり」は、彼が外で活動していたことを意味する</td>
+</tr>
+<tr>
+<td>3</td>
+<td>六年の間、Henriette は毎年二千フランの匿名の送金を受け取り、異なる都市から異なる署名で送られてきた</td>
+<td>約55–65%</td>
+<td>匿名送金は送り主が身元を明かしたくないことを示す——「何らかの事情を知っている後ろめたい人物」の論理は「不可解な善意の人物」よりも合理的だ。問題は誰が Henriette の住所を知り、彼女の状況を気にかけるのかということだ</td>
+</tr>
+<tr>
+<td>4</td>
+<td>フロリアニが密室の「換気口」について尋ね、その位置と開け方を正確に推定する</td>
+<td>約72%</td>
+<td>彼が「推理」する際の過剰な正確さは、推論ではなく記憶から話していることを暗示する</td>
+</tr>
+<tr>
+<td>5</td>
+<td>フロリアニの話はますます直接体験のように聞こえ始め、「彼が想像する Henriette の息子が今この瞬間感じていること」という表現まで使う</td>
+<td>約85%</td>
+<td>この時点で細心の読者はすでに確認できるはずだ。フロリアニは Raoul であり、あの子供本人だと</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_26">補助的な手がかり</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>捜査では合理的な出入り口が見つからず「人は消えられない」——しかし子供の体型なら大人には入れない空間を通り抜けられる</td>
+<td>約35–50%</td>
+<td>捜査者は常に犯人が大人と仮定していたため、子供の可能性を見落とした</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Henriette は伯爵夫人に叱責されて追い出された後、怒りを見せず、ただ静かに受け入れた——まるで「真実を言ってはならない」と知っている人のように</td>
+<td>約60%</td>
+<td>彼女の沈黙は罪悪感ではなく、息子を守るためのものだ</td>
+</tr>
+<tr>
+<td>3</td>
+<td>伯爵が最後に確認する。台所の棚板が「取り外されていた」こと、火掻き棒も「そこにある」こと</td>
+<td>約82%</td>
+<td>物証がフロリアニの推理と一致する</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_27">偽の手がかり</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>誤誘導の方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Henriette が「首飾りが夜に密室に隠されていることを知っていた」</td>
+<td>約45%</td>
+<td>読者と捜査者の疑惑を Henriette に集中させ、彼女の息子への疑念を阻む</td>
+</tr>
+<tr>
+<td>2</td>
+<td>捜査者が発見した窓は「内側から鍵がかかり、完全に閉まっていた」</td>
+<td>約35%</td>
+<td>侵入経路を不可能と思わせるが、換気口——建築を熟知していなければ思い至らない経路——を見落としさせる</td>
+</tr>
+<tr>
+<td>3</td>
+<td>裁判後、裁判官は「伯爵夫妻が金銭のために首飾りを売った」と傾く</td>
+<td>約65%</td>
+<td>読者に「謎全体にそもそも真実などないのかもしれない、ただの保険詐欺だ」と思わせる</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_28">推理経路の再構築</h4>
+<p><strong>手口（howdunit）の推理経路</strong></p>
+<p>45%の時点で、Henriette の台所の位置が手口を推論する基盤となる。読者が「台所の窓が密室の窓に真向かい」という事実を記憶し、フロリアニの「必ず橋を渡す方法があった」という推論の論理を加えれば、約70%の時点で自力で手口を導き出せる。この謎の howdunit 難度は中程度だ。</p>
+<p><strong>正体（whodunit）の推理経路</strong></p>
+<p>難しいのは、ほとんどの読者が「六歳の子供」を思いつかないことだ。文化的な先入観は、精密な窃盗は大人の行為だと教える。ルブランはこれを承知していたため、50%の場面で Raoul が「学校から帰ったばかり」という伏線を埋め込みながら、無害な細部として提示した。</p>
+<p>読者が「Raoul だと確認」できる手がかりは85%のフロリアニの言葉の中にある「過度に私的な」感情だ——「あの子供が今このご家庭を見てどう感じているか、彼は想像する」——このような語り口は直接体験者にしかできない。約90%になると伯爵が直接「あなたはどなたですか」と問い、フロリアニの微笑みながらの沈黙が確認を完成させる。</p>
+<hr>
+<h3 id="the-black-pearl">第四篇：〈黒真珠〉（The Black Pearl）</h3>
+<h4 id="_29">基本情報</h4>
+<ul>
+<li>中心的謎：誰が伯爵夫人を殺したのか？黒真珠はどこに隠されているのか？</li>
+<li>タイプ：whodunit + 物品の所在謎</li>
+</ul>
+<h4 id="_30">推理難易度総評</h4>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星評価</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難易度（Deducibility）</td>
+<td>⭐⭐⭐</td>
+<td>平均収束点 ~65%——犯人の正体は約65%の時点で十分な手がかりがあり、真珠の隠し場所は約85%で推論できる</td>
+</tr>
+<tr>
+<td>霧の濃度（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>主な誤誘導は Arsène Lupin の「午前三時の訪問者」の正体と、Danègre の無罪釈放にある</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_31">物語概要</h4>
+<p>著名な女優 Léotine Zalti（d'Andillot 伯爵夫人）が自宅で刺殺され、携帯していた代々伝わる黒真珠が消える。警察は従僕 Victor Danègre を逮捕する。彼の寝室で血のついた礼服が発見され、現場では礼服から外れたボタンも見つかった。しかし弁護人は指摘する——鍵を見た者はなく、凶器のナイフを見た者もなく、犯行時刻（午後11時20分）と謎の訪問者の入室時刻（午前3時）が矛盾すると——Danègre は最終的に無罪放免となる。釈放後、元刑事に変装した Arsène Lupin が確実な物証を盾に彼を脅し、黒真珠の隠し場所を白状させる。</p>
+<h4 id="_32">真相の解剖</h4>
+<p><strong>真相その一：Victor Danègre が犯人である</strong>
+- <strong>収束点：約65%</strong>
+- 答え：Danègre は三週間前から台所の予備鍵を複製し、計画的に犯行に及んだ。伯爵夫人が黒真珠をレターボックスの中に隠す習慣を知っていた彼は、彼女が眠った後に寝室に入ったが、彼女に見つかり、殺害した。</p>
+<h5 id="_33">重要な手がかり</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Danègre の血の付いた礼服にはボタンが一つ欠けており、現場でそのボタンが見つかった</td>
+<td>約55%</td>
+<td>物証は明白だが、弁護人は「他者が証拠を捏造した」と主張する——Arsène Lupin は後にこれが逆だったと暴く。証拠を保持したのは彼自身だったのだ</td>
+</tr>
+<tr>
+<td>2</td>
+<td>時計は午後11時20分（犯行時刻）を示しており、伯爵夫人は「早寝の習慣」があった——午後11時20分には彼女はすでに眠っていた</td>
+<td>約55%</td>
+<td>犯行時刻は合理的な生活習慣の範囲内にあり、彼女を知る内部の人間による犯行と一致する</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Danègre が一日に外出する機会は一度だけだった。角のタバコ屋へ——この外出は事件後の早朝（夜明け以降まもなく）</td>
+<td>約60%</td>
+<td>彼の行動範囲は極めて限られており、真珠は必ずこの外出の経路上に隠されている</td>
+</tr>
+<tr>
+<td>4</td>
+<td>午前三時の「謎の訪問者」（すなわち Arsène Lupin）は犯人<strong>ではない</strong>——彼が到着した時すでに人は死んでおり、時計は午後11時20分を示していた</td>
+<td>約60%</td>
+<td>二つの時刻（午前3時と午後11時20分）の差がかえって確認する。犯行時刻は午後11時20分であり、犯人は午前3時より前に入り去った何者かだ</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_34">補助的な手がかり</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Danègre は「素行が悪く、既知の酔っぱらいで賭博師だった」</td>
+<td>約55%</td>
+<td>動機を示唆する。金銭的欲求があり、前科もある</td>
+</tr>
+<tr>
+<td>2</td>
+<td>伯爵夫人の従姉妹 Mlle. de Sinclèves のもとに、黒真珠の隠し方を描写した手紙が届いたが、その後手紙は消えた</td>
+<td>約55%</td>
+<td>この消えた手紙は、誰かが事前に真珠の隠し場所を知っており、積極的に自分の露呈につながりうる手がかりを消していたことを示す</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Arsène Lupin（午前三時の訪問者）は凶器のナイフと予備鍵を持ち去った——これらが後に Danègre を脅す「確実な証拠」となる</td>
+<td>約90%（事後に明かされる）</td>
+<td>Arsène Lupin はその時点で既に Danègre の犯行と確信していたため、証拠を保持した</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_35">偽の手がかり</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>誤誘導の方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>「午前三時の謎の訪問者」という謎</td>
+<td>約50–70%</td>
+<td>読者と警察の調査力を「あの人物は誰か」に集中させ、「午後11時20分に誰がその場にいたか」から目を逸らす</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Danègre が陪審によって「無罪釈放」された</td>
+<td>約70%</td>
+<td>法的な無罪判決が読者に彼への疑惑を捨てさせるが、法的な無罪は事実上の無罪ではない</td>
+</tr>
+<tr>
+<td>3</td>
+<td>弁護人が指摘する「鍵なしには施錠して立ち去れない」という論理</td>
+<td>約68%</td>
+<td>この「穴」は実は偽物だ——彼は実際に予備鍵を持っていたが、Arsène Lupin によって持ち去られていたのだ</td>
+</tr>
+</tbody>
+</table>
+<p><strong>真相その二：黒真珠は歩道の石畳の隙間に隠されている</strong>
+- <strong>収束点：約85%</strong>
+- 答え：Danègre の唯一の外出（早朝のタバコ屋への足）が、真珠を隠す唯一の機会だった。タバコ屋近くの歩道の石畳の隙間が、素早く目立たずに物を隠せる唯一の場所だった。</p>
+<h5 id="_36">重要な手がかり（真珠の隠し場所）</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（百分率）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Danègre は逮捕前に「アパートを一度しか出ていない」——タバコ屋へ</td>
+<td>約60%</td>
+<td>これが手がかりであり、範囲の限定でもある。真珠は必ずその経路の近くにある</td>
+</tr>
+<tr>
+<td>2</td>
+<td>タバコ屋は伯爵夫人の家から「数歩の距離」——同じ街区内</td>
+<td>約60%</td>
+<td>捜索範囲を絞り込む</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Danègre が「排水口の右から数えて十二番目と十三番目の石畳の間」と指示する</td>
+<td>約92%（強制された自白）</td>
+<td>この時点で初めて明確になるが、論理的には85%で推定できる</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_37">推理経路の再構築</h4>
+<p>この短篇は論理的には本集九篇の中で伝統的な推理謎題に最も近いが、ルブランは二つの手法で難度を高めた。</p>
+<p><strong>第一層の手法：謎の訪問者という煙幕</strong></p>
+<p>午前三時の「謎の訪問者」（実際は Arsène Lupin）は完璧な煙幕を作った。読者は「殺したのはその訪問者かもしれない」と疑い始める。この疑念は50%から70%にかけてあまりに多くの注意を占領し、時計（午後11時20分）が確立した本当の犯行の窓口を覆い隠した。60%の時点で「二つの時刻は四時間近くの差があり、それぞれ異なる人物を描写している」と気づければ、焦点を午後11時20分の場面に戻すことができる。</p>
+<p><strong>第二層の手法：法的無罪の心理的効果</strong></p>
+<p>Danègre の無罪釈放によって、読者（と読者の本能的な正義感）は「無罪ならば本当に無実だ」と思い込む。ルブランはここで読者の認知に挑戦する。法的手続きの結果は事実の真相とイコールではない。Arsène Lupin は最初から真相を知っており、彼の計画は法律システムに先に「有罪、そして無罪釈放」させ、Danègre が最も精神的に脆くなった時に行動することだった。</p>
+<hr>
+<h2 id="_38">残り五篇の簡評</h2>
+<table>
+<thead>
+<tr>
+<th>篇名</th>
+<th>謎のタイプ</th>
+<th>推理難易度</th>
+<th>霧の濃度</th>
+<th>簡評</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>II.〈獄中の Arsène Lupin〉（Arsène Lupin in Prison）</td>
+<td>howdunit（獄中から窃盗を計画する方法）</td>
+<td>⭐⭐</td>
+<td>⭐⭐</td>
+<td>Arsène Lupin が自ら Ganimard に計略を説明するため、謎はほぼ自己解明的。しかし「偽 Ganimard」の正体の入れ替わりにはなお面白みがある</td>
+</tr>
+<tr>
+<td>IV.〈謎の旅人〉（The Mysterious Traveller）</td>
+<td>identity + reversal（語り手が Arsène Lupin であり、かつ本物の犯罪者を追う）</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>二重の正体欺瞞：語り手は Arsène Lupin であり、列車上の本物の犯罪者は逃亡者 Pierre Onfrey</td>
+</tr>
+<tr>
+<td>VI.〈ハートの7〉（The Seven of Hearts）</td>
+<td>スパイ殺人事件 + identity（Jean Daspry = Arsène Lupin）</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>最も複雑な構造を持つ一篇。「Daspry は Arsène Lupin だ」という暴露は最後に起きるが、中盤にはすでに示唆がある</td>
+</tr>
+<tr>
+<td>VII.〈アンベール夫人の金庫〉（Madame Imbert's Safe）</td>
+<td>irony reversal（Arsène Lupin が騙される）</td>
+<td>⭐</td>
+<td>⭐⭐</td>
+<td>謎の核心は逆転にある。Arsène Lupin は自分が盗みを働いていると思っていたが、実は彼自身が騙されていた。「謎」そのものが読者へのメタ的な悪戯だ</td>
+</tr>
+<tr>
+<td>IX.〈シャーロック・ホームズの遅すぎた到着〉（Sherlock Holmes Arrives Too Late）</td>
+<td>puzzle-solving（秘密通路の謎）+ identity（Velmont = Arsène Lupin）</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐</td>
+<td>宮殿の秘密通路の謎そのものは論理明快。「Velmont は Arsène Lupin だ」という設定は物語の冒頭から強い示唆がある</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_39">総合推理経路の再構築（選集の視点から）</h2>
+<p>『怪盗紳士』の九篇は一つの深層構造を共有している。<strong>謎の核心はしばしば「Arsène Lupin は誰か」または「Arsène Lupin は今何をしているのか」だ</strong>。これは伝統的な推理小説の「犯人は誰か」とは根本的に異なる。</p>
+<p>この選集を読む読者は、二つの推理習慣を捨てなければならない。</p>
+<ol>
+<li><strong>語り手を信じるな</strong> — 多くの短篇において、第一人称の語り手や場面の中で最も「主人公らしい」人物が、しばしば Arsène Lupin 本人だ。</li>
+<li><strong>公式の捜査結論を信じるな</strong> — 裁判所の無罪判決も警察の正式な捜索結果も、Arsène Lupin の世界ではしばしばまったく逆の意味を持つ。</li>
+</ol>
+<p>真の「推理読者」は各短篇の冒頭で自問すべきだ。「この場面で、誰の行動が最も滑らかで、最も戦略的な感覚を持っているか？それが Arsène Lupin だ。」</p>
+<hr>
+<h2 id="_40">補充説明</h2>
+<p><strong>ルブランが創り出した物語革命</strong></p>
+<p>1905–1907年、コナン・ドイルのホームズ・シリーズはまさに頂点にあった。ルブランはこの文脈の中で Arsène Lupin を創造し、一見不可能なことをやってのけた。<strong>読者に、決して見通せない犯罪者を愛させた</strong>のだ。</p>
+<p>ホームズの謎の構造は「読者が探偵とともに謎を解く」というものだ。Arsène Lupin の謎の構造は「読者が犯罪者とともに犯罪を追うが、常に一歩遅れる」というものだ。この二つのモデルは推理文学史においてそれぞれ独自の伝統を確立した。コリンズ（Wilkie Collins）の初期の反英雄的犯罪者の物語、そして後の「倒叙推理」（犯行手口を先に述べてから探偵が謎を解くスタイル）の先祖を、Arsène Lupin シリーズの中に見ることができる。</p>
+<p><strong>推理難度の特殊性</strong></p>
+<p>クリスティの読者が「公平な謎解き競争」を楽しめるのとは異なり、Arsène Lupin シリーズの謎の難度は大部分において<strong>叙述構造そのものの不均衡</strong>から来ている。読者に欠けているのは知性ではなく情報だ——Arsène Lupin は常に語り手（自分自身が語り手である時でも）よりも多くを知っているからだ。</p>
+<p>これによって、この選集の「推理難易度」評価には特殊な性質がある。たとえすべての手がかりに印をつけたとしても、それらの手がかりは答えを知った後にしか「手がかり」として認識できない。これがルブランの最も徹底した設計だ——彼は出口に着いて初めて入口の地図が読めるような迷宮を作った。</p>
+<p><strong>ドイルのホームズとの比較</strong></p>
+<p>ルブランはドイルへの敬意（そして挑戦）を隠さない——第九篇では直接ホームズを登場させ、Arsène Lupin が礼儀正しい方法でこの対決を制する。この篇は推理の次元では意図的に透明すぎるほど透明に設計されている（シャーロック・ホームズは十分でもない時間で秘密通路の謎を解く）。しかし人間的な次元では含蓄に富んでいる。知性を競うこの時代に、二人の最も聡明な人物が出会い、それぞれ立ち去ることを選んだのだ。</p>
+<p><strong>台湾の読者への補充</strong></p>
+<p>「王妃の首飾り」という典故は、フランス革命前夜の実際の歴史的スキャンダル（1785年の「首飾り事件」）に関わる。史実では、ロアン枢機卿と詐欺師ジャンヌ・ド・ラ・モットが偽造した王妃の手紙を使って宝石商を騙し、マリー・アントワネットの名誉を傷つけるスキャンダルを引き起こした。これが間接的に革命の勃発を早めたとも言われる。ルブランはこの実際の歴史を背景として使い、虚構の Arsène Lupin を歴史的謎の解答者として位置づけた。これ自体が精巧に設計された「メタ謎題」だ。</p>
+    <a href="../index.html" class="back-link">← ホームに戻る</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">推理解剖室</p>
+    <p>五人の作家・八十八の作品・135年にわたる推理文学の難易度の進化。</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
