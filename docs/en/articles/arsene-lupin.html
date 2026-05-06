@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arsène Lupin — Detective Analysis</title>
+<meta name="description" content="On a sunny September day, millionaire Gournay-Martin and his family are spending their final few days at his Château de Charmerace. The millionaire's eldest dau">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/arsene-lupin.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/arsene-lupin.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/arsene-lupin.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/arsene-lupin.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/arsene-lupin.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/arsene-lupin.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/arsene-lupin.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/arsene-lupin.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Detective Analysis</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#latest">Latest</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Language" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 English</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/arsene-lupin.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/arsene-lupin.html">简体中文</a>
+      <a class="lang-item active" data-lang="en" href="/Detective-Analysis/en/articles/arsene-lupin.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/arsene-lupin.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/arsene-lupin.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/arsene-lupin.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/arsene-lupin.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/arsene-lupin.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">Maurice Leblanc · </div>
+    <h1>Arsène Lupin</h1>
+    <div class="subtitle">Maurice Leblanc; adapted and co-authored by Edgar Jepson · Novel</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Deducibility</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Fog Rating</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="arsene-lupin-deducibility-analysis">Arsène Lupin — Deducibility Analysis</h1>
+<h2 id="basic-information">Basic Information</h2>
+<ul>
+<li>Author: Maurice Leblanc; adapted and co-authored by Edgar Jepson</li>
+<li>Year: 1909 (this edition is the English-translated novelisation of the stage play; the original French series began in 1907)</li>
+<li>Type: Novel</li>
+<li>Detective: Chief-Inspector Guerchard — who is also the losing side of the battle of wits</li>
+<li>Core mystery type: whodunit (disguised identity) + howdunit (method of theft) + dual role (thief-as-hero)</li>
+</ul>
+<hr>
+<h2 id="ratings">Ratings</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Rating</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deducibility</td>
+<td>⭐⭐⭐</td>
+<td>Average convergence point 56% — clues to the three main truths accumulate around the midpoint; the challenge lies in whether the reader can overcome the psychological barrier of the "heroic narrative"</td>
+</tr>
+<tr>
+<td>Fog Rating</td>
+<td>⭐⭐⭐⭐</td>
+<td>The author systematically misdirects the reader through a "wolf in sheep's clothing" narrative structure: the Duke plays detective's assistant and romantic hero throughout, making it very difficult for the reader to turn suspicion back on him as the target</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="synopsis">Synopsis</h2>
+<p>On a sunny September day, millionaire Gournay-Martin and his family are spending their final few days at his Château de Charmerace. The millionaire's eldest daughter Germaine is soon to marry the nominal lord of the estate — the Duke of Charmerace, Jacques — and accompanying her is her secretary and companion Sonia Kritchnoff, a young woman of Russian origin with no family in the world.</p>
+<p>That day brings two unexpected visitors: Charolais père et fils, who claim to be retired brewers and arrive on the pretext of enquiring about a second-hand motor car. Their arrival is odd, and their departure odder still — as they leave, the young son attempts to pocket a small silver statuette, but is stopped by a sharp, whispered word from his father. The following day, on the eve of the whole household's move to Paris, a letter from Lupin arrives like a bombshell: it announces that the following morning he will "politely help himself" to Gournay-Martin's treasured old masters and to a priceless ancient coronet belonging to a princess.</p>
+<p>The night passes, and the theft duly takes place. Three motor cars are stolen, the Charolais family vanishes without trace, the drawing room of the vast Paris town house is stripped bare, and the housekeeper Victoire is found unconscious inside the fireplace. Examining magistrate Formery is first on the scene and rules out any connection to Lupin, dismissing the affair as an ordinary burglary; the seasoned detective Guerchard arrives close behind and remains convinced throughout that Lupin himself is the mastermind — even though not one person in the world knows what he looks like.</p>
+<p>Throughout the entire investigation, the Duke of Charmerace accompanies the two investigators almost without interruption, asking numerous questions with the air of a curious bystander, turning up several key clues, and at all times performing the role of an enthusiastic amateur sleuth. Then, just before midnight, in a breathless countdown, the ancient coronet silently disappears and the Duke makes a composed exit — and only then does Guerchard's instinct at last receive its irrefutable proof: the Duke of Charmerace is Arsène Lupin.</p>
+<hr>
+<h2 id="truth-breakdown">Truth Breakdown</h2>
+<h3 id="truth-one-the-dukes-true-identity-whodunit">Truth One: The Duke's True Identity (whodunit)</h3>
+<ul>
+<li><strong>Clue convergence point: approximately 70%</strong></li>
+<li>Answer: Jacques, Duke of Charmerace, is in reality the celebrated Arsène Lupin, who has assumed a false identity to infiltrate a wealthy family and used an engagement to gain access to a priceless collection. The real Duke disappeared long ago (later confirmed dead), and Lupin, a master of disguise, took his place, moving effortlessly in the highest social circles for seven years.</li>
+</ul>
+<h4 id="key-clues">Key Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Location (chapter/percentage)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The young Charolais son attempts to pocket a silver statuette; his father stops him with a sharp whispered warning — yet the entire incident takes place unseen by any character in the room, witnessed only by the narrator's eye</td>
+<td>Chapter 2 / approx. 7%</td>
+<td>When the reader first encounters this scene it appears to be a random aside; in retrospect it becomes clear that the "father" is Lupin, and his intervention is meant to prevent the plan from being exposed prematurely</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The Duke knows Charmerace's details with uncanny intimacy: he volunteers without hesitation that the timetable is in the drawer of the lacquer cabinet</td>
+<td>Chapter 7 / approx. 25%</td>
+<td>One might forgive a genuine duke for not remembering everything, but his casual recollection of exactly where the object is kept reveals a familiarity with the house that goes far beyond the ordinary</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The Duke departs Charmerace at 8 p.m. but does not arrive in Paris until 6 a.m. — a journey of only two hundred miles over ten hours; he explains this as engine trouble</td>
+<td>Chapter 18 / approx. 68%</td>
+<td>In a powerful motor car of that era, two hundred miles (approximately 320 kilometres) would normally take three to four hours; the six-hour gap left unaccounted for is more than enough time for him to have directed the entire Paris burglary</td>
+</tr>
+<tr>
+<td>4</td>
+<td>A faded photograph is found tucked inside Victoire the housekeeper's prayer book: an elderly woman standing beside a youth of seventeen or eighteen — and the youth's face bears a striking resemblance to the present-day Duke</td>
+<td>Chapter 17 / approx. 67%</td>
+<td>Guerchard immediately recognises the face as the Duke's in youth. Victoire is Lupin's former nurse; her being drugged and hidden in the fireplace was deliberately arranged by Lupin to protect her</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Pink salvias from the greenhouse appear at the scene of the Paris burglary. A telephone call to the gardener confirms that the only person to enter the greenhouse the previous day was the Duke</td>
+<td>Chapter 14 / approx. 52%</td>
+<td>The most decisive physical clue — the Duke picked the salvias before leaving and brought them into the very house he had arranged to burgle</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supporting-clues">Supporting Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Location (chapter/percentage)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The Duke "knows nothing about Lupin," which is entirely plausible given that he has just returned from the Antarctic; yet when he hears of Lupin's exploits he becomes excessively "curious," asking questions with a precision no ordinary bystander could muster</td>
+<td>Chapter 3 / approx. 12%</td>
+<td>Lupin is sounding out exactly how much the world at large knows about him</td>
+</tr>
+<tr>
+<td>2</td>
+<td>When Guerchard analyses the mechanics of the theft, the Duke's responses show a speed of comprehension far beyond what an innocent bystander should possess</td>
+<td>Chapters 13–14 / approx. 48–55%</td>
+<td>"You should have been a detective, my dear Duke" — Guerchard's half-joking compliment is in fact a signal planted by the author</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The Duke advises Gournay-Martin to leave the ancient coronet in the town house rather than take it to the Ritz</td>
+<td>Chapter 18 / approx. 67%</td>
+<td>On the surface a safety precaution ("it would be more dangerous on your person"), in reality it ensures the target object remains where he can take it</td>
+</tr>
+<tr>
+<td>4</td>
+<td>The Duke's solicitude for Sonia clearly exceeds whatever feeling he has for Germaine; his reaction to the theft of Sonia's pendant shows that he knows what happened and is concealing it</td>
+<td>Chapters 12–13 / approx. 45–50%</td>
+<td>Lupin is himself a thief; his compassion for her is not moral superiority but recognition between kindred spirits</td>
+</tr>
+</tbody>
+</table>
+<h4 id="red-herrings">Red Herrings</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Location (chapter/percentage)</th>
+<th>Misdirection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The manner in which the Charolais family is introduced — vulgar, clumsy, and grasping — leads the reader to assume naturally that they are the masterminds</td>
+<td>Chapter 2 / approx. 6%</td>
+<td>Fixes the reader's attention on the Charolais family and positions the Duke as the good-natured man helping to catch the thieves</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Examining magistrate Formery's ruling — "This is not Lupin's style; it is far too crude" — is repeatedly restated throughout the novel</td>
+<td>Chapters 9–13 / approx. 35–50%</td>
+<td>By having an official who represents the rational authority of the law repeatedly vouch for Lupin's absence, the author reinforces the reader's tendency to follow Formery down the wrong path</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Lupin's letter announcing "I shall steal on the morrow morning" leads everyone to assume the mastermind is audacious enough to declare open war himself</td>
+<td>Chapter 5 / approx. 18%</td>
+<td>Both the reader and the detectives concentrate on how to stop this "outside intruder," and never think to suspect the Duke who has been inside the household all along</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Guerchard's obsession is repeatedly mocked — even the Duke joins in the mockery — causing readers to unconsciously accept the view that "Guerchard sees Lupin everywhere; he has become fixated"</td>
+<td>Chapters 9–16 / approx. 35–60%</td>
+<td>This is the most exquisitely crafted red herring in the book: the author turns the reader's own bias against the "obsessive detective" archetype against them, making the correct line of reasoning appear ridiculous</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="truth-two-how-the-theft-was-carried-out-howdunit">Truth Two: How the Theft Was Carried Out (howdunit)</h3>
+<ul>
+<li><strong>Clue convergence point: approximately 52%</strong></li>
+<li>Answer: Lupin's gang had rented the vacant house under construction next to the Paris town house months in advance, broken through the brick partition wall shared by the two buildings behind the fireplace, and opened a secret passage wide enough to move large pieces of furniture. During the night of the theft, the stolen goods were carried directly through the fireplace passage into the neighbouring building and then removed by van along a back street, completely bypassing the police patrol on the street in front.</li>
+</ul>
+<h4 id="key-clues_1">Key Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Location (chapter/percentage)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The window-ladder and the plaster footprints on the carpet are both judged by Guerchard to be deliberately fabricated false signs: the plaster appears on a single footprint only, and the ladder bears no trace of a downward journey</td>
+<td>Chapter 14 / approx. 52%</td>
+<td>This eliminates entry and exit through the front of the house and turns Guerchard's attention toward the only logical remaining exit — the fireplace</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Victoire, after being drugged, is placed inside the fireplace; her position there is itself a clue</td>
+<td>Chapter 11 / approx. 42%</td>
+<td>She did not fall there "by accident"; Lupin's people placed her in the fireplace to protect her, and simultaneously to leave a trail for Guerchard</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The brickwork behind the fireplace bears evidence of having been demolished and rebuilt — the colour of the new and old bricks differs, and the soot coating above six feet in height abruptly stops</td>
+<td>Chapter 14 / approx. 53%</td>
+<td>Guerchard climbs the ladder to examine it, gives the wall a push, and it swings open into the vacant house next door</td>
+</tr>
+<tr>
+<td>4</td>
+<td>The floor of the adjoining vacant house is covered in footprints, and at the turn of the stairs a fresh pink salvia is found</td>
+<td>Chapter 14 / approx. 53%</td>
+<td>The salvia confirms that the "vacant house next door" forms part of the theft route and links the trail back to the greenhouse at Charmerace</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supporting-clues_1">Supporting Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Location (chapter/percentage)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The behaviour of the Charolais père et fils while viewing the motor cars at the château — covertly reconnoitring the premises — suggests that they are the operational scouts</td>
+<td>Chapter 2 / approx. 7%</td>
+<td>The true planner, the Duke/Lupin, openly masters every detail in his capacity as master of the house</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The locks of Gournay-Martin's Paris town house show no sign of forced entry; the concierge and his wife confirm that the bolts were undone from the inside</td>
+<td>Chapter 14 / approx. 56%</td>
+<td>An accomplice exists within — Lupin's people had a duplicate key and had already cleared away any internal obstacles in advance</td>
+</tr>
+</tbody>
+</table>
+<h4 id="red-herrings_1">Red Herrings</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Location (chapter/percentage)</th>
+<th>Misdirection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The ladder, the cut marks on the window frame, and the plaster footprints on the carpet</td>
+<td>Chapter 9 / approx. 33%</td>
+<td>Create a complete crime scene consistent with entry through the window from outside, guiding Formery and the reader to accept this false version of events</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Two motor cars are stolen from the household on the night before the burglary</td>
+<td>Chapter 7 / approx. 26%</td>
+<td>Strands all the household's occupants at the château (or forces them to take the train), eliminating any human witness who might have seen the Duke driving to Paris</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="truth-three-sonias-hidden-character-whydunit">Truth Three: Sonia's Hidden Character (whydunit)</h3>
+<ul>
+<li><strong>Clue convergence point: approximately 45%</strong></li>
+<li>Answer: Sonia appears to be Germaine's Russian secretary and companion; in reality she is a thief who has stolen on multiple occasions, driven by poverty and jealousy. She has taken items belonging to the Gournay-Martin household, has taken one of the strings of pearls given to Germaine as a wedding gift — and finally, in a moment of jealous impulse, has stolen in front of everyone the pearl pendant that the Duke had given to Germaine with his own hands. These earlier thefts bring her under Guerchard's suspicion and, at the crucial moment, give him the means to hold Lupin hostage.</li>
+</ul>
+<h4 id="key-clues_2">Key Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Location (chapter/percentage)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Shortly after the household arrives at the Paris town house, one string of pearl necklaces — a wedding gift — goes missing; the maid Irma confirms it was never brought to Paris</td>
+<td>Chapter 12 / approx. 42%</td>
+<td>The first theft clue that points clearly to a member of the household, narrowing the field to the women in the party</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The pearl pendant the Duke gave Germaine disappears during the investigation; on the very day of the burglary, the Duke quietly recovers it from Sonia's bag</td>
+<td>Chapter 13 / approx. 47%</td>
+<td>The Duke's reaction — "Poor little thing…" — shows that this is not the first time he has noticed; he has been aware for some time but has chosen to protect her</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Sonia confesses to the Duke that she stole on a reckless impulse out of resentment at Germaine's "having everything," and admits this is not the first time</td>
+<td>Chapter 13 / approx. 48%</td>
+<td>A direct confirmation, though the reader does not receive the full confession until this point; an attentive reader should have inferred this when the pendant first went missing</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supporting-clues_2">Supporting Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Location (chapter/percentage)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Sonia reacts with excessive anxiety when the young Charolais son attempts to steal the pendant — a flicker of recognition rather than mere alarm</td>
+<td>Chapter 4 / approx. 15%</td>
+<td>If the reader retains the memory of her expression, it can be worked backwards later</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sonia is entirely alone in the world — both parents dead — has lived in want for years, and harbours a visibly suppressed resentment of Germaine's comfortable circumstances</td>
+<td>Chapter 4 / approx. 13%</td>
+<td>The psychological foundation for her motive; the author presents this material with such sympathy that the reader lowers their guard completely</td>
+</tr>
+</tbody>
+</table>
+<h4 id="red-herrings_2">Red Herrings</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Location (chapter/percentage)</th>
+<th>Misdirection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Sonia's tenderness and affection for the Duke — fretting over his duel, bringing him tea with trembling hands — casts her firmly in the reader's mind as "the pure and helpless young woman"</td>
+<td>Chapters 3–4 / approx. 10–14%</td>
+<td>The reader sees Sonia through the Duke's eyes and has no basis whatsoever for suspecting that she is also a thief</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="reconstruction-of-the-reasoning-paths">Reconstruction of the Reasoning Paths</h2>
+<p><strong>Path One: The Duke is Lupin</strong></p>
+<p>A sufficiently alert reader can plant the first seed of suspicion as early as <strong>Chapter 2 (7%)</strong> — the sharp whispered word with which the Charolais "father" stops his son's theft is lightning-fast, and the entire episode takes place outside the line of sight of every other character. The author chooses to present this moment through an omniscient perspective, allowing the <em>reader</em> rather than any <em>character</em> to witness it — while offering no explanation of who the "sternly whispering father" is commanding, or why.</p>
+<p>By <strong>Chapter 5 (18%)</strong>, Lupin's letter has arrived, and the Duke's reaction is a casual "probably just a hoax"; his relaxed composure against the general atmosphere of alarm strikes a jarring note.</p>
+<p><strong>The salvias at 52%</strong> form the pivotal node in the middle of the book: only the Duke entered the greenhouse, and only the Duke carried those flowers to Paris. If the reader accepts this clue at the moment it is offered, the Duke's "missing time" (ten hours of driving) and his "familiarity with the crime scene" can be fitted together into a complete picture.</p>
+<p><strong>The photograph at 67–70%</strong> is the final keystone: the young man's face in Victoire's prayer book, combined with Guerchard's undisguised suspicion from that point on, elevates the reader's conclusion from "reasonable suspicion" to "near certainty."</p>
+<p>At this juncture, the careful reader should be ready to state with confidence: the Duke is Lupin.</p>
+<p><strong>Path Two: Reconstructing the Method of the Theft</strong></p>
+<p>At <strong>52%</strong>, Guerchard uses a three-stage process of elimination to rule out the window-ladder, the main stairs, and the front door one by one, leaving only the fireplace. The ordinary reader follows Guerchard and reaches sudden clarity at the "push the brickwork open" scene at 53%. A reader who is one step ahead — who has already noticed the fabricated nature of the window-ladder evidence (a single isolated plaster footprint on the carpet, with no corresponding trail of footsteps) — may begin to suspect that the true exit lies inside the building as early as around 40%.</p>
+<p><strong>Path Three: Sonia is Also a Thief</strong></p>
+<p>This is the path most deeply dependent on narrative framing. The author leads the reader to regard Sonia throughout with compassionate eyes; her slender beauty, her lonely history, her quiet forbearance are all carefully designed "signals of innocence." The sole early crack appears in her expression when the young Charolais son attempts his theft — that momentary "flicker of recognition," if the reader is sensitive enough to catch it, can leave a small question mark around 15%. But most readers will wait until the pearl necklace disappears at 42% before realising that there is a thief inside the household whom they have never thought to suspect.</p>
+<hr>
+<h2 id="additional-notes">Additional Notes</h2>
+<p><strong>The Genre Subversion of <em>Arsène Lupin</em></strong></p>
+<p>This novel represents Leblanc's most audacious experiment in the history of detective fiction: he places a thief at the centre of a detective story and makes the thief the narrative's hero. Conan Doyle invites the reader to admire the detective; Leblanc invites the reader to admire the thief — and yet the same pattern of admiration (wit, elegance, omnipotence) leads to a morally diametrically opposite conclusion.</p>
+<p>More subtly still, Guerchard — the genuine "detective" in the book — is consistently the one who is laughed at and suspected of fixation. Formery represents "the normal rational order of the law," and every one of his conclusions is wrong. Guerchard's "Lupin obsession" turns out to be the correct reading — a small joke Leblanc plays on the reader: we follow Formery's "reason" and are duly led astray.</p>
+<p><strong>The Precise Application of the "Wolf in Sheep's Clothing" Narrative Technique</strong></p>
+<p>The novel's central mystery — Duke = Lupin — rests on a structural deception: the entire narrative framework presents the Duke as a real person with a name, an engagement, and a past, and at no point adopts a tone of direct suspicion towards his origins. Every peculiarity the reader notices is immediately supplied with a plausible rationalisation (he has just returned from the Antarctic; he has an irreverent sense of humour; he is attached to the château).</p>
+<p>This technique is comparable to certain methods employed by Christie, but there is a fundamental difference: Christie's unreliable narrators typically conceal what they <em>know</em>; Leblanc's Lupin deliberately displays "transparent cleverness" — and the reader, without realising it, finds themselves appreciating how he smiles at Guerchard while concealing a knife behind that smile.</p>
+<p><strong>Guerchard and Lupin: The Dual Structure of an Intellectual Duel</strong></p>
+<p>The book actually contains two parallel detective narratives running simultaneously:
+- Guerchard investigating whether the Duke is Lupin
+- Lupin investigating how much Guerchard knows, and when</p>
+<p>The Duke accompanies Guerchard on his investigation almost without interruption — nominally a curious amateur assistant, in reality a mirror. Every one of his "perceptive questions" is a means of gauging exactly which clues Guerchard has assembled and how close he is. This two-way detective structure was a remarkably unusual design for 1909, and calls to mind the later tension in Christopher Nolan's films where detective and suspect are each aware of how much the other knows.</p>
+<p><strong>Sonia: The Moral Dilemma of a Thief Who Falls in Love with a Thief</strong></p>
+<p>Sonia's presence is the most delicately wrought moral question in the book. She is a thief; Lupin is also a thief. Yet the reader's sympathy for her far exceeds their sympathy for him — because her motive for stealing is a suppressed mixture of jealousy and desolation, while Lupin's motive is intellectual play and personal style. In the final chapter she tells Lupin "I hate thieves!" and moments later discovers that the man before her is the greatest thief of all, yet falls into his arms all the same — Leblanc leaves the reader in an interesting predicament at this instant: are we censuring her inconsistency, or moved by her all-too-human weakness?</p>
+<p><strong>Comparison with Leblanc's Short Stories</strong></p>
+<p>Compared with Leblanc's early short story collections featuring Lupin (such as <em>The Exploits of Arsène Lupin</em>), this novel is less densely plotted as a mystery, but achieves a far greater depth of psychological characterisation. The Lupin of the short stories is an almost invulnerable symbol of wit; in this novel, Sonia's existence opens up a fatal emotional breach in him — precisely the crack that Guerchard ultimately exploits as a means of coercion, and the one point of genuine humanity that Lupin harbours beneath his formidable intellectual armour.</p>
+    <a href="../index.html" class="back-link">← Back to home</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Detective Analysis</p>
+    <p>Five authors · eighty-eight works · 135 years of evolving detective difficulty.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

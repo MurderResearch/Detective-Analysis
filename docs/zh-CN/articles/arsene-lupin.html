@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>亚森·罗宾（Arsène Lupin） — 推理解剖室</title>
+<meta name="description" content="九月的晴日，百万富翁古尔内—马丁（Gournay-Martin）一家在旗下的夏尔姆拉斯古堡（Château de Charmerace）消磨最后几天。堡主的长女杰曼（Germaine）即将嫁给名义上的堡主——夏尔姆拉斯公爵雅克（Jacques），陪伴她的还有秘书兼伴读索妮亚（Sonia Kritchnoff），一个出身">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/arsene-lupin.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/arsene-lupin.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/arsene-lupin.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/arsene-lupin.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/arsene-lupin.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/arsene-lupin.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/arsene-lupin.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/arsene-lupin.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif SC', serif;
+  --font-sans: 'Noto Sans SC', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">推理解剖室</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">首页</a>
+        <a href="../index.html#latest">最新分析</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="语言" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 简体中文</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/arsene-lupin.html">繁體中文</a>
+      <a class="lang-item active" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/arsene-lupin.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/arsene-lupin.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/arsene-lupin.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/arsene-lupin.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/arsene-lupin.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/arsene-lupin.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/arsene-lupin.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">莫里斯·勒布朗 · </div>
+    <h1>亚森·罗宾（Arsène Lupin）</h1>
+    <div class="subtitle">莫里斯·卢布朗（Maurice Leblanc）；改编合著：Edgar Jepson · 长篇小说</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">推理难度</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">迷雾等级</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="arsene-lupin">亚森·罗宾（Arsène Lupin）— 推理分析</h1>
+<h2 id="_1">基本资讯</h2>
+<ul>
+<li>作者：莫里斯·卢布朗（Maurice Leblanc）；改编合著：Edgar Jepson</li>
+<li>出版年：1909年（本版为英译剧本改写版，原法文版系列始于1907年）</li>
+<li>类型：长篇小说</li>
+<li>侦探角色：盖夏尔探长（Chief-Inspector Guerchard）——亦是斗智的败方</li>
+<li>核心谜团类型：whodunit（伪装身份谜团）+ howdunit（窃案手法）+ 双重角色（thief-as-hero）</li>
+</ul>
+<hr>
+<h2 id="_2">推理难度总评</h2>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>星等</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理难度（Deducibility）</td>
+<td>⭐⭐⭐</td>
+<td>平均收敛点 56% — 三条主线真相的线索在中段前后陆续到齐，功夫在于读者能否跨越「英雄叙事」的心理障碍</td>
+</tr>
+<tr>
+<td>迷雾等级（Fog Rating）</td>
+<td>⭐⭐⭐⭐</td>
+<td>作者以「狼披羊皮」的叙事结构系统性误导读者：公爵一路担任侦探助手与浪漫英雄，令读者难以反身怀疑他就是目标人物</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_3">故事梗概</h2>
+<p>九月的晴日，百万富翁古尔内—马丁（Gournay-Martin）一家在旗下的夏尔姆拉斯古堡（Château de Charmerace）消磨最后几天。堡主的长女杰曼（Germaine）即将嫁给名义上的堡主——夏尔姆拉斯公爵雅克（Jacques），陪伴她的还有秘书兼伴读索妮亚（Sonia Kritchnoff），一个出身俄国、孤苦伶仃的年轻女子。</p>
+<p>当天出现了两个陌生访客：自称退休啤酒商的夏洛雷（Charolais）父子，借询问二手车为由登门。他们来得奇怪，走得更奇怪——临走时少年儿子试图袖走一只银质小雕像，却被父亲严厉低声制止。隔日，举家迁往巴黎前夕，罗宾的一封信如炸弹般投入：声称将在明天清晨「礼貌地取走」古尔内—马丁珍藏的老大师名画，以及归属公主的古王冠。</p>
+<p>一夜过去，盗案果然发生。三辆汽车遭窃，夏洛雷一家消失无踪，偌大的巴黎宅邸客厅被洗劫一空，连女管家维克托尔（Victoire）都昏迷在壁炉里。预审法官弗尔梅里（Formery）率先到场，断定这不过是普通窃案，与罗宾无关；老练侦探盖夏尔随后赶到，却始终坚信主谋就是罗宾本人——尽管没有一个人知道他长什么脸。</p>
+<p>整个调查过程中，夏尔姆拉斯公爵几乎全程陪同两位侦探勘查，问了许多「好奇者」的问题，发现了几条关键线索，始终表现得像个热心的业余侦探。直至午夜前，在那场屏息以待的倒数计时中，古王冠无声消失，公爵从容离场——而后盖夏尔的直觉才终于获得铁证：夏尔姆拉斯公爵，就是亚森·罗宾。</p>
+<hr>
+<h2 id="_4">真相拆解</h2>
+<h3 id="whodunit">真相一：公爵的真实身份（whodunit）</h3>
+<ul>
+<li><strong>线索收敛点：约 70%</strong></li>
+<li>答案：夏尔姆拉斯公爵雅克其实是大名鼎鼎的亚森·罗宾，以假身份潜入富豪家族，借婚约之名接近百万收藏。真实的公爵早已失踪（后来确认死亡），罗宾以高超易容术取而代之，七年来从容周旋于名流社交圈。</li>
+</ul>
+<h4 id="_5">关键线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>夏洛雷少年试图窃走银雕像，父亲严厉低声警告制止，但前后无任何人在场见到此幕——除了叙事者之眼</td>
+<td>第二章 / 约7%</td>
+<td>读者读到时，这幕像是随机插曲；回头看才明白：「父亲」就是罗宾，制止行动是保护计划不提前曝光</td>
+</tr>
+<tr>
+<td>2</td>
+<td>公爵对古堡的细节了如指掌：他主动说出东方矮柜抽屉里有时刻表，说得毫不迟疑</td>
+<td>第七章 / 约25%</td>
+<td>真实的公爵如说对此无记忆尚可理解，但他「偶然」想起藏放位置，显示他对这里的熟悉程度超乎寻常</td>
+</tr>
+<tr>
+<td>3</td>
+<td>公爵从夏尔姆拉斯出发的时间（晚上8点）到抵达巴黎（早上6点）相差10小时，行程却只有200英里；他解释为「引擎故障」</td>
+<td>第十八章 / 约68%</td>
+<td>10小时跑200英里（约320公里），当年百匹马力跑车正常行驶仅需3–4小时，中间有整整6小时空白——足够他指挥整个巴黎的窃案</td>
+</tr>
+<tr>
+<td>4</td>
+<td>维克托尔（女管家）的祷告书中夹着一张旧照片：老妇人与一个十七八岁少年并排——少年的脸与今日公爵神似</td>
+<td>第十七章 / 约67%</td>
+<td>盖夏尔立刻从照片认出这就是公爵年轻时的脸。维克托尔是罗宾的旧保姆，她昏迷被藏壁炉是罗宾为保护她而刻意安排的</td>
+</tr>
+<tr>
+<td>5</td>
+<td>温室中粉红色鼠尾草（pink salvias）出现在巴黎盗窃现场。园丁电话确认：昨日唯一进过温室的人是公爵</td>
+<td>第十四章 / 约52%</td>
+<td>最关键的实物线索——公爵离开前采摘了鼠尾草，带进了他亲手布置的盗窃据点</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_6">辅助线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>公爵「对罗宾一无所知」，却是刚从南极归来，以正常逻辑完全说得过去；但他听到罗宾的事迹后反应过度「好奇」，细节问得太精准</td>
+<td>第三章 / 约12%</td>
+<td>罗宾借此摸清社会上对自己的认知程度</td>
+</tr>
+<tr>
+<td>2</td>
+<td>盖夏尔分析窃案流程时，公爵的回应比一个无辜旁观者应有的理解速度快太多</td>
+<td>第十三–十四章 / 约48–55%</td>
+<td>「您真该去当侦探，公爵阁下」——盖夏尔半开玩笑的赞美，其实是作者埋下的信号</td>
+</tr>
+<tr>
+<td>3</td>
+<td>公爵建议古尔内—马丁把古王冠留在宅邸，而非带去里茨酒店</td>
+<td>第十八章 / 约67%</td>
+<td>表面上是出于安全考量（「带在身上更危险」），实质上是确保目标物留在他能取走的地方</td>
+</tr>
+<tr>
+<td>4</td>
+<td>公爵对索妮亚的关心显然超过对杰曼的爱意；他对索妮亚失窃吊坠一事的反应显示他知情且有所隐瞒</td>
+<td>第十二–十三章 / 约45–50%</td>
+<td>罗宾本人是盗贼，他的怜惜并非出于道德优越感，而是同类相怜</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_7">假线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>误导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>夏洛雷一家的登场方式（粗俗、笨拙、贪婪）让读者自然认定他们就是主谋</td>
+<td>第二章 / 约6%</td>
+<td>误导读者把注意力钉在夏洛雷身上，将公爵视为协助抓贼的好人</td>
+</tr>
+<tr>
+<td>2</td>
+<td>预审法官弗尔梅里的论断：「这不是罗宾的手法，太粗糙了」——且全书不断重申</td>
+<td>第九–十三章 / 约35–50%</td>
+<td>作者让一个代表「法律理性」的官员反复替罗宾背书，强化读者跟着弗尔梅里走错路的倾向</td>
+</tr>
+<tr>
+<td>3</td>
+<td>罗宾寄信宣告「明天清晨行窃」——让所有人以为主谋大胆到亲自宣战</td>
+<td>第五章 / 约18%</td>
+<td>读者和侦探都将目光集中在如何防堵「那个外来者」，从未怀疑早就在宅邸内部的公爵</td>
+</tr>
+<tr>
+<td>4</td>
+<td>盖夏尔的执念被反复嘲笑（连公爵也加入嘲笑），令读者下意识认同「盖夏尔看什么都是罗宾，他偏执了」</td>
+<td>第九–十六章 / 约35–60%</td>
+<td>这是全书最精妙的红鲱鱼：用读者对「固执侦探」类型的偏见来对付读者，反使正确路线显得可笑</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="howdunit">真相二：窃案如何执行（howdunit）</h3>
+<ul>
+<li><strong>线索收敛点：约 52%</strong></li>
+<li>答案：罗宾的团队早在数月前便租用了巴黎宅邸隔壁一栋施工中的空房，打通了两栋建筑之间的壁炉砖墙，开出一道足供搬运大件家具的秘密通道。夜间行窃时，赃物经壁炉通道直接搬入隔壁，由货车沿另一条小街运走，完全绕开前街的警察巡逻线。</li>
+</ul>
+<h4 id="_8">关键线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>案发现场的窗梯、地毯灰泥脚印均被盖夏尔判定为刻意伪造的假迹象：灰泥仅出现在单一脚印处，梯子没有下行的痕迹</td>
+<td>第十四章 / 约52%</td>
+<td>盖夏尔由此排除正面出入法，将目光转向唯一的逻辑出口——壁炉</td>
+</tr>
+<tr>
+<td>2</td>
+<td>维克托尔被迷昏后置于壁炉之中，这个位置本身即是提示</td>
+<td>第十一章 / 约42%</td>
+<td>她不是「偶然」倒在那里的；罗宾/他的人把她放在壁炉就是为了保护她、同时为盖夏尔埋下一条线索</td>
+</tr>
+<tr>
+<td>3</td>
+<td>壁炉后方的砖墙留有拆除又重砌的痕迹（新旧砖色不一，高六呎以上的煤灰突然截断）</td>
+<td>第十四章 / 约53%</td>
+<td>盖夏尔登梯检视，一推即开，进入隔壁空屋</td>
+</tr>
+<tr>
+<td>4</td>
+<td>隔壁空屋地板满是脚印，楼梯转角捡到一枝新鲜粉红鼠尾草</td>
+<td>第十四章 / 约53%</td>
+<td>鼠尾草确认了「隔壁空屋」就是窃案路线的一环，并将线索指向夏尔姆拉斯的温室</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_9">辅助线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>夏洛雷父子在古堡参观汽车时「偷偷勘查宅邸」的举动，暗示他们是执行层的踩点人员</td>
+<td>第二章 / 约7%</td>
+<td>真正的策划人（公爵/罗宾）则以主人身份光明正大掌握一切细节</td>
+</tr>
+<tr>
+<td>2</td>
+<td>古尔内—马丁的宅邸门锁未被暴力破坏，门房夫妇确认门闩是被从内部打开的</td>
+<td>第十四章 / 约56%</td>
+<td>内应存在——罗宾的人持有备用钥匙，并且已在内部预先排除障碍</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_10">假线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>误导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>梯子、窗框割痕、地毯上的灰泥脚印</td>
+<td>第九章 / 约33%</td>
+<td>制造「从外部爬窗而入」的完整犯罪现场，引导弗尔梅里与读者接受这条错误路径</td>
+</tr>
+<tr>
+<td>2</td>
+<td>窃案前夜派人偷走两辆汽车</td>
+<td>第七章 / 约26%</td>
+<td>让宅邸所有人困在古堡（或赶搭火车），消除公爵驾车赴巴黎的任何人形见证</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="whydunit">真相三：索妮亚的隐秘身份（whydunit）</h3>
+<ul>
+<li><strong>线索收敛点：约 45%</strong></li>
+<li>答案：索妮亚表面是杰曼的俄国籍秘书伴读，实际上是一个因贫穷与嫉妒而多次行窃的小偷。她偷过古尔内—马丁家的物品，偷过杰曼收到的婚礼珍珠项链中的一条——最后，因妒忌而在众目睽睽之下偷走了公爵亲手送给杰曼的珍珠吊坠。这些早期的盗窃让盖夏尔把她列为嫌疑人，也让罗宾在最后关头受制于人。</li>
+</ul>
+<h4 id="_11">关键线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>巴黎宅邸到达后不久，珍珠项链（婚礼赠礼之一）遗失，女佣爱尔玛确认未曾带到巴黎</td>
+<td>第十二章 / 约42%</td>
+<td>第一条明确指向宅邸内部人员的失窃线索，范围缩小到随行女性</td>
+</tr>
+<tr>
+<td>2</td>
+<td>公爵赠给杰曼的珍珠吊坠在调查中消失，案发当日公爵自己从索妮亚的包中悄然取回</td>
+<td>第十三章 / 约47%</td>
+<td>公爵的反应（「可怜的小家伙……」）显示他不是第一次察觉，而是早已知情但选择包庇</td>
+</tr>
+<tr>
+<td>3</td>
+<td>索妮亚向公爵坦白：因愤恨不平杰曼「拥有一切」而冲动行窃，并承认这并非第一次</td>
+<td>第十三章 / 约48%</td>
+<td>直接确认，但此时读者才得到完整告白；早一步的读者应在吊坠失踪时已推断到此</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_12">辅助线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>索妮亚对夏洛雷少年试图窃走吊坠的反应过度紧张，像是有所共鸣</td>
+<td>第四章 / 约15%</td>
+<td>读者若记得她的神情，日后可以倒推</td>
+</tr>
+<tr>
+<td>2</td>
+<td>索妮亚无依无靠，父母双亡，长年生活困窘，对杰曼的优渥境遇有明显压抑的愤恨</td>
+<td>第四章 / 约13%</td>
+<td>作案动机的心理基础；作者把这段交代得极为同情，使读者对她丧失戒心</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_13">假线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>误导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>索妮亚对公爵表现出的关心与爱意（为他担忧决斗、为他颤抖地端茶）让读者代入她为「纯洁受害的弱女子」角色</td>
+<td>第三–四章 / 约10–14%</td>
+<td>读者跟着公爵的眼睛看索妮亚，完全无从怀疑她也是贼</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_14">推理路径重建</h2>
+<p><strong>第一条路径：公爵就是罗宾</strong></p>
+<p>一个足够警觉的读者可以在<strong>第二章（7%）</strong>就种下最初的怀疑——夏洛雷「父亲」制止儿子行窃的那一声严厉低语，像闪电一样迅速，而且整个过程恰好不在任何角色的视线范围内。作者选择由全知视角呈现此幕，让「读者」而非「角色」看见了它——却不解释「严厉低语的父亲」是谁在命令谁。</p>
+<p>到了<strong>第五章（18%）</strong>，罗宾的信件送达，公爵的反应是轻描淡写的「大概只是玩笑」，他的松弛与其余所有人的惊恐形成违和对比。</p>
+<p><strong>52%的鼠尾草</strong>是中段的关键节点：只有公爵进过温室，只有公爵带了这枝花到巴黎。若读者在此刻接受这条线索，公爵的「时间空白」（10小时驾车）与「对案发地点的熟悉」就可以拼成完整图案。</p>
+<p><strong>67–70%的照片</strong>是最后的拱心石：维克托尔的祷告书中那个少年的脸，配上盖夏尔从此不再掩饰的怀疑目光，让这条路径从「合理怀疑」升格为「几乎确定」。</p>
+<p>在这个节点，仔细阅读的读者应已能断定：公爵就是罗宾。</p>
+<p><strong>第二条路径：窃案手法的还原</strong></p>
+<p>盖夏尔在<strong>52%处</strong>用三段逻辑排除法逐一否定窗梯、楼梯、正门，最后只剩壁炉。一般读者跟着盖夏尔走，在53%的「推砖开墙」一幕才豁然开朗。先行一步的读者若早早察觉窗梯的伪造性质（地毯上孤零零一枚灰泥脚印，无对应行走路线），可在40%前后就开始怀疑真正出口在内部。</p>
+<p><strong>第三条路径：索妮亚其实也是贼</strong></p>
+<p>这条路径对叙事依赖最深。作者让读者全程以怜惜之心看待索妮亚，她的纤细美貌、孤苦身世、隐忍善良都是精心设计的「无辜信号」。唯一的早期裂缝是她在夏洛雷少年试图行窃时的神情——那一瞬间的「共鸣」，如果读者敏感到足以察觉，可以在15%前后就留下一个小小的问号。但大多数读者会等到珍珠项链失窃的42%，才意识到宅邸内部有个他们未曾怀疑的贼。</p>
+<hr>
+<h2 id="_15">补充说明</h2>
+<p><strong>《亚森·罗宾》的类型颠覆</strong></p>
+<p>这部小说代表了卢布朗在侦探小说史上最大胆的一次类型实验：他把「小偷」放进「侦探故事」里，让小偷担任叙事的核心英雄。柯南·道尔让读者崇拜侦探，卢布朗则让读者崇拜窃贼——而且同样的崇拜模式（机智、优雅、无所不能）却得出了道德上截然相反的结论。</p>
+<p>更精妙的是，书中真正的「侦探」盖夏尔始终是那个被嘲笑、被疑似「偏执」的人。弗尔梅里代表着「正常理性的法律秩序」，而他的每一个论断都是错的。盖夏尔的「罗宾执念」才是对的——卢布朗在这里安排了一个对读者的小小嘲弄：读者跟着弗尔梅里的「理性」走，却被带偏了。</p>
+<p><strong>「狼披羊皮」叙事技术的精确应用</strong></p>
+<p>本书核心谜题（公爵 = 罗宾）仰赖一个构造性欺骗：整个叙事框架以「公爵是一个有名有姓、有婚约、有过去的真实人物」为前提呈现，从未对他的来历施加任何直接的怀疑语气。读者收到的所有「奇怪之处」都被立刻提供了合理化解释（他刚从南极回来、他幽默跳脱、他对古堡有感情）。</p>
+<p>这种技法与克莉丝蒂的某些手法相近，但有本质差异：克莉丝蒂的不可靠叙述者通常隐藏自己的「知」；卢布朗的罗宾则以「透明的机灵」刻意展示，就连读者都在不知不觉中欣赏他如何对盖夏尔笑里藏刀。</p>
+<p><strong>盖夏尔与罗宾：智识对决的双重结构</strong></p>
+<p>这本书实际上有两条平行的侦探叙事：
+- 盖夏尔侦查「公爵是否是罗宾」
+- 罗宾侦查「盖夏尔知道多少、何时知道」</p>
+<p>公爵几乎全程陪同盖夏尔调查，名义上是好奇的业余助手，实质上是一面镜子——他的每一个「有见地的提问」都在确认盖夏尔掌握了哪些线索、还差多远。这种双向侦探结构在1909年是相当罕见的设计，令人想到后来克里斯托弗·诺兰电影中「侦探与嫌犯互知对方知道什么」的紧张结构。</p>
+<p><strong>索妮亚：小偷爱上小偷的道德困局</strong></p>
+<p>索妮亚的存在是全书最细腻的道德提问。她是贼，罗宾也是贼；但读者对她的同情远超过对罗宾——因为她偷窃的动机是压抑的妒忌与孤苦，而罗宾的动机是智识游戏与个人风格。最后一章她对罗宾说「我讨厌贼！」之后马上知道眼前人就是大贼罗宾，却依然投怀入抱——卢布朗让读者在这个瞬间陷入一种有趣的窘境：我们是在批判她的前后矛盾，还是感动于她的人性软弱？</p>
+<p><strong>与卢布朗短篇的比较</strong></p>
+<p>相较于卢布朗早期的罗宾短篇集（如《亚森·罗宾探案》），这部长篇的谜团密度较低，但人物心理的立体程度大幅提升。短篇中的罗宾是一个几乎没有弱点的机智符号；这部长篇中的他因为索妮亚的存在而多了一个致命的情感破口——正是盖夏尔最终用来要挟他的那个裂缝，也是罗宾在强大的智识外壳下藏着的那一点真实人性。</p>
+    <a href="../index.html" class="back-link">← 回到首页</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">推理解剖室</p>
+    <p>五位作者 · 八十八部作品 · 一百三十五年推理文学的难度演化</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
