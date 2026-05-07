@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>*Arsène Lupin contre Herlock Sholmès* — Salle de Dissection Policière</title>
+<meta name="description" content=" « La Dame blonde » (chapitres I à VI) Le professeur de mathématiques versaillais Gerbois achète un vieux secrétaire chez un brocanteur et se trouve mêlé malgré">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/arsene-lupin-vs-herlock-sholmes.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/arsene-lupin-vs-herlock-sholmes.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/arsene-lupin-vs-herlock-sholmes.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/arsene-lupin-vs-herlock-sholmes.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/arsene-lupin-vs-herlock-sholmes.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/arsene-lupin-vs-herlock-sholmes.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/arsene-lupin-vs-herlock-sholmes.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/arsene-lupin-vs-herlock-sholmes.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Salle de Dissection Policière</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Accueil</a>
+        <a href="../index.html#latest">Récents</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Langue" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 Français</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/arsene-lupin-vs-herlock-sholmes.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/arsene-lupin-vs-herlock-sholmes.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/arsene-lupin-vs-herlock-sholmes.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/arsene-lupin-vs-herlock-sholmes.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/arsene-lupin-vs-herlock-sholmes.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/arsene-lupin-vs-herlock-sholmes.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/arsene-lupin-vs-herlock-sholmes.html">Español</a>
+      <a class="lang-item active" data-lang="fr" href="/Detective-Analysis/fr/articles/arsene-lupin-vs-herlock-sholmes.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">Maurice Leblanc · 1908</div>
+    <h1>*Arsène Lupin contre Herlock Sholmès*</h1>
+    <div class="subtitle">Maurice Leblanc · Recueil de novellas (diptyque, huit chapitres)</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Déductibilité</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Indice de brume</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="arsene-lupin-contre-herlock-sholmes-analyse-deductive"><em>Arsène Lupin contre Herlock Sholmès</em> — Analyse déductive</h1>
+<h2 id="informations-de-base">Informations de base</h2>
+<ul>
+<li>Auteur : Maurice Leblanc</li>
+<li>Année : 1908</li>
+<li>Genre : Recueil de novellas (diptyque, huit chapitres)</li>
+<li>Détective : Herlock Sholmès, l'inspecteur Ganimard ; Arsène Lupin tient à la fois le rôle du criminel et du pivot déductif</li>
+<li>Type d'énigme central : whodunit + howdunit + whydunit (deux arcs narratifs entrelacés)</li>
+</ul>
+<hr>
+<h2 id="evaluation-globale-de-la-difficulte-deductive">Évaluation globale de la difficulté déductive</h2>
+<p>Le livre se divise en deux arcs narratifs indépendants : <strong>« La Dame blonde »</strong> (chapitres I à VI, environ 80 % de l'ouvrage) et <strong>« La Lampe juive »</strong> (chapitres VII et VIII, environ 20 %). Les deux récits sont de styles très différents : le premier est une grande course-poursuite à travers Paris, le second une énigme d'intérieur resserrée, qui stupéfie le lecteur par un retournement moral en fin de course.</p>
+<table>
+<thead>
+<tr>
+<th>Indicateur</th>
+<th>Étoiles</th>
+<th>Commentaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Déductibilité</td>
+<td>⭐⭐⭐⭐</td>
+<td>Point de convergence moyen de « La Dame blonde » : environ 65 % ; de « La Lampe juive » : environ 91 % ; moyenne pondérée globale : environ 71 %</td>
+</tr>
+<tr>
+<td>Indice de brume</td>
+<td>⭐⭐⭐⭐</td>
+<td>Quatre couches de brouillard hermétiques : fausses identités multiples (Antoinette Bréhat / Madame de Réal / Clotilde Destange), confusion savamment orchestrée entre doublures (la vraie et la fausse Madame Réal), simulation d'effraction (traces d'échelle), et aveu de mensonge bienveillant (le sacrifice d'Alice)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="resume">Résumé</h2>
+<h3 id="la-dame-blonde-chapitres-i-a-vi">« La Dame blonde » (chapitres I à VI)</h3>
+<p>Le professeur de mathématiques versaillais Gerbois achète un vieux secrétaire chez un brocanteur et se trouve mêlé malgré lui à une bataille pour la fortune soigneusement orchestrée par Arsène Lupin : le tiroir secret du meuble renferme un billet de loterie gagnant d'un million de francs. Lupin dérobe le secrétaire et s'empare du billet, mais se retrouve dans une impasse — « le billet est entre mes mains, mais le droit est du vôtre » ; le professeur, dont la fille Suzanne a été « invitée » par Lupin à titre d'otage, est contraint de transiger et accepte la moitié de la prime.</p>
+<p>À la fin de cette farce, une mystérieuse « dame blonde » fait son apparition — elle surgit d'abord sous le nom d'« Antoinette Bréhat » dans la chambre du baron d'Hautrec, trouvé assassiné, puis se tapie sous l'identité de « Madame de Réal » aux côtés de la comtesse de Crozon, orchestrant le vol du diamant bleu. Ganimard remonte péniblement la piste, mais passe trois fois à côté de la « vraie dame blonde » et finit par arrêter une courtière en diamants qui porte le même nom.</p>
+<p>Tandis que la police parisienne s'agite en vain, le célèbre détective anglais Herlock Sholmès est invité en France et engage avec Lupin un duel d'esprit de dix jours. Sholmès découvre que les trois scènes de crime — l'appartement de l'avocat Detinan, l'ancien hôtel du baron d'Hautrec et le château de Crozon — ont toutes été conçues et bâties par le même architecte, Lucien Destange, ce qui explique l'existence de passages secrets. Il s'infiltre sous un faux nom dans la bibliothèque de Destange et finit par identifier la dame blonde : <strong>Clotilde Destange</strong>, fille de l'architecte, maîtresse secrète et complice de Lupin depuis de longues années.</p>
+<p>Lorsque Sholmès se sert de Clotilde comme otage, Lupin, déguisé en chauffeur de taxi qu'il a lui-même commandé, les enlève tranquillement tous les deux et expédie Sholmès de force à bord d'un navire en partance pour l'Angleterre. Sholmès déjoue la manœuvre en faisant avancer la montre du capitaine, débarque prématurément à Southampton, revient en toute hâte à Paris et, grâce à une adresse que Lupin avait imprudemment laissé filtrer au téléphone, encercle l'appartement avec Ganimard. Lupin est finalement arrêté, le diamant bleu retrouvé (dissimulé dans le cœur creux de la canne de Lupin), mais Sholmès garde pour lui seul l'identité de Clotilde, en échange de sa liberté.</p>
+<h3 id="la-lampe-juive-chapitres-vii-et-viii">« La Lampe juive » (chapitres VII et VIII)</h3>
+<p>De retour à Paris, Sholmès est sollicité par le baron d'Imblevalle pour élucider un étrange cambriolage : la bibliothèque du baron a été dévalisée par effraction extérieure apparente (échelle, découpe d'un carreau de vitre) — on y a dérobé une vieille lampe juive dont le socle creux abritait une chimère en or sertie de rubis. La police n'a rien trouvé ; Lupin, lui, envoie une lettre pour avertir Sholmès de ne pas s'en mêler.</p>
+<p>À peine arrivé à Paris, Sholmès est intercepté par une jeune femme mystérieuse qui le supplie d'abandonner l'enquête et de rentrer en Angleterre. Sholmès n'en démord pas. Quarante minutes suffisent à lui faire percer le simulacre d'« effraction extérieure » : les trous de l'échelle ont été créés par un même morceau de bois aux emplacements décalés, les rayures du balcon ont été faites au papier de verre — le vol vient de l'intérieur.</p>
+<p>L'indice crucial est fourni par inadvertance par la petite Henriette : la gouvernante Alice Demun a l'habitude de découper des lettres dans les journaux pour composer des messages. Sholmès découvre dans un livre d'apprentissage de la lecture les lettres manquantes, reconstitue le code correspondant et retrouve la trace des communications secrètes entre Alice et la rubrique des annonces personnelles de l'<em>Écho de France</em> — le canal qu'elle utilisait pour contacter Lupin. Un autre indice, un numéro de taxi tombé du petit sac d'Alice, la relie à une seconde adresse mystérieuse.</p>
+<p>Un homme soupçonné de chantage (sous le pseudonyme de Bresson) se suicide tandis que Sholmès le traque, et l'affaire se complique encore. La seconde nuit, le cambriolage se reproduit : cette fois une tabatière en diamants et un collier d'opales sont également emportés, et Wilson est blessé.</p>
+<p>La conclusion voit Sholmès retrouver Lupin sur les bords de la Seine, déguisé en vieux pêcheur ; les deux hommes s'affrontent dans un duel final aussi absurde que brillant à bord d'une barque qui prend l'eau — le canot coule et chacun regagne la rive à la nage. Sholmès révèle ensuite toute la vérité : c'est Alice qui a volé la lampe juive, mais son mobile était de protéger sa maîtresse. La véritable victime est la baronne Suzanne d'Imblevalle — elle avait fréquenté imprudemment Bresson dans le monde, et celui-ci la menaçait de divulguer ses lettres. Alice, pour la protéger, avait organisé le cambriolage avec l'aide de Lupin afin de satisfaire le maître chanteur ; le second cambriolage, lui, avait été perpétré par Bresson seul, par pure cupidité.</p>
+<p>Le baron apprend la vérité et le couple en est ébranlé ; Alice, aidée par Sholmès, rentre avec lui en Angleterre — et Lupin est déjà à bord du même navire, qui craque une allumette avec la plus parfaite sérénité.</p>
+<hr>
+<h2 id="decryptage-de-la-verite">Décryptage de la vérité</h2>
+<h3 id="la-dame-blonde-premier-arc">« La Dame blonde » — Premier arc</h3>
+<hr>
+<h3 id="verite-1-les-passages-secrets-des-trois-scenes-de-crime-howdunit">Vérité 1 : Les passages secrets des trois scènes de crime (howdunit)</h3>
+<ul>
+<li><strong>Point de convergence des indices : environ 53 % (première moitié du chapitre IV)</strong></li>
+<li>Réponse : L'appartement de l'avocat Detinan (25, rue Clapeyron), l'ancien hôtel du baron d'Hautrec (134, avenue Henri-Martin) et le château de Crozon ont tous été conçus et bâtis par l'architecte Lucien Destange. Lupin, engagé sous le nom de « Maxime Bermond » pour des travaux de rénovation, a secrètement aménagé entre les maisons mitoyennes des passages cachés — derrière des bibliothèques, dans des doubles fonds de cheminées, à travers des caves — formant un réseau complet de sorties de secours. Ce dispositif permettait à la dame blonde de pénétrer dans les lieux visés, d'accomplir sa mission, puis de s'éclipser par la sortie de l'immeuble voisin, laissant derrière elle une énigme apparemment insoluble.</li>
+</ul>
+<h4 id="indices-cles">Indices clés</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement (chapitre / pourcentage)</th>
+<th>Commentaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Le linteau du 25, rue Clapeyron porte la mention « Destange, architecte, 1875 » ; celui du 23 également</td>
+<td>Chapitre IV / environ 42 %</td>
+<td>Première découverte : le nom de l'architecte commun aux trois scènes de crime apparaît pour la première fois</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Le 134, avenue Henri-Martin (ancien hôtel du baron d'Hautrec) et les deux immeubles voisins portent également la mention « Destange, architecte, 1874 »</td>
+<td>Chapitre IV / environ 43 %</td>
+<td>Deux scènes de crime confirment le même architecte ; l'hypothèse du « passage secret » prend forme</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Confirmation téléphonique depuis le château de Crozon : « Lucien Destange, architecte, 1877 »</td>
+<td>Chapitre IV / environ 53 %</td>
+<td>Les trois scènes de crime sont reliées ; Destange est le pivot central — <strong>point de convergence de cette vérité</strong></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Le 40, rue Chalgrin (lieu de réunion de Lupin) porte lui aussi la mention « Lucien Destange, architecte, 1877 » ; le 42 également</td>
+<td>Chapitre V / environ 75 %</td>
+<td>Confirme le schéma des crimes de Lupin liés à ses chantiers, et explique comment les grenats trouvés cette nuit-là dans la cave et les deux immeubles communicants sont reliés</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Dans la grande armoire du bureau de Destange, des livres de comptes au sigle « M. B. » répertorient 16 adresses de travaux de réaménagement (dont les trois scènes de crime)</td>
+<td>Chapitre V / environ 80 %</td>
+<td>Les comptes révèlent que « Maxime Bermond » est un pseudonyme de Lupin, et que la complicité avec Destange dure depuis de nombreuses années</td>
+</tr>
+</tbody>
+</table>
+<h4 id="indices-secondaires">Indices secondaires</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement (chapitre / pourcentage)</th>
+<th>Commentaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Ganimard fouille l'appartement de Detinan pendant trois jours et trois nuits sans jamais trouver par où Lupin est sorti</td>
+<td>Chapitre I / environ 17 %</td>
+<td>Indique que le « tour de passe-passe » n'est pas de la magie mais repose nécessairement sur un passage physique — la piste est semée</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Affaire du baron d'Hautrec : les meubles ont été replacés, la scène nettoyée — cette personne connaissait parfaitement la disposition de la chambre</td>
+<td>Chapitre II / environ 27 %</td>
+<td>Ganimard le remarque le premier ; sous-entend quelqu'un de familier avec l'agencement des lieux</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Au château de Crozon, le diamant est d'abord volé, puis mystérieusement glissé dans le pot de poudre dentifrice du consul d'Autriche Bleichen — seul quelqu'un connaissant parfaitement la structure du château pouvait entrer et sortir à plusieurs reprises</td>
+<td>Chapitre II / environ 35 %</td>
+<td>L'auteur du méfait connaît le château comme sa poche ; aucun étranger n'aurait pu accomplir cela</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Sholmès découvre sur le plancher de l'ancien hôtel du baron d'Hautrec des marques à la craie : des cercles indiquent des panneaux mobiles, des flèches indiquent le sens de déplacement, des chiffres indiquent le nombre de lames de parquet — ce sont des instructions que Lupin avait laissées à l'avance pour ses complices</td>
+<td>Chapitre III / environ 50 %</td>
+<td>Bien qu'il s'agisse d'une mise en scène de Lupin, ces marques révèlent en elles-mêmes la forme concrète d'existence des passages secrets</td>
+</tr>
+</tbody>
+</table>
+<h4 id="faux-indices">Faux indices</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement (chapitre / pourcentage)</th>
+<th>Direction de la méprise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Lupin et la dame blonde « disparaissent » de l'appartement de Detinan, laissant seulement à Ganimard la plaisanterie d'escalader une cheminée pendant trois jours</td>
+<td>Chapitre I / environ 18 %</td>
+<td>Oriente l'attention du lecteur vers le mystère de l'« évasion magique », en occultant le mécanisme physique sous-jacent — la communication entre immeubles voisins</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Affaire du château de Crozon : tous les soupçons se portent sur le consul autrichien Bleichen, et le diamant est effectivement retrouvé dans ses bagages</td>
+<td>Chapitre II / environ 32 %</td>
+<td>Détournement de l'attention : entraîne le lecteur à suivre la police en désignant Bleichen comme coupable</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Lupin « enferme » Sholmès et Wilson dans l'ancien hôtel du baron d'Hautrec et leur fait livrer un panier-repas</td>
+<td>Chapitre III / environ 48 %</td>
+<td>Pure plaisanterie, mais qui concentre l'attention du lecteur sur le mécanisme des « serrures », faisant ignorer la possibilité d'une cave communiquant avec l'immeuble voisin</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="verite-2-la-veritable-identite-de-la-dame-blonde-whodunit">Vérité 2 : La véritable identité de la dame blonde (whodunit)</h3>
+<ul>
+<li><strong>Point de convergence des indices : environ 75 % (milieu du chapitre V)</strong></li>
+<li>Réponse : La dame blonde est <strong>Clotilde Destange</strong>, fille de l'architecte, qui opère sous trois pseudonymes différents dans les trois affaires : « Antoinette Bréhat » (secrétaire temporaire du baron d'Hautrec), « Madame de Réal » (amie intime de la comtesse de Crozon) et sa propre identité (en se faisant passer pour une mélancolique recluse). Son abondante chevelure blonde lui sert de couverture — teinte en brun, elle « disparaît ».</li>
+</ul>
+<h4 id="indices-cles_1">Indices clés</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement (chapitre / pourcentage)</th>
+<th>Commentaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Ganimard note qu'Antoinette Bréhat (affaire du baron) avait exactement les mêmes cheveux que la dame blonde, et que cette dernière était réapparue sous un nouveau nom (Madame de Réal) à Crozon dès le « lendemain » du meurtre du baron</td>
+<td>Chapitre II / environ 33 %</td>
+<td>La première intuition de Ganimard reliant les deux affaires — mais il ne parvient pas à aller plus loin</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Ganimard retrouve à Crozon deux flacons de parfum identiques : l'un provenant de la chambre du château de Crozon, l'autre de la chambre d'hôtel à Trouville ; tous deux portent la même fragrance, correspondant à la « vraie dame blonde »</td>
+<td>Chapitre II / environ 36 %</td>
+<td>Confirme qu'Antoinette Bréhat et Madame de Réal sont la même personne — les indices sont complets, mais ils désignent elle, pas encore Clotilde</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Sholmès, infiltré dans la bibliothèque de Destange, aperçoit une silhouette mystérieuse fouillant l'armoire dans la pénombre — c'est « Maxime Bermond », alias Lupin : Clotilde est présente, elle est dans la confidence, mais demeure parfaitement sereine</td>
+<td>Chapitre IV / environ 62 %</td>
+<td>La connivence tacite entre Clotilde et Lupin est exposée pour la première fois ; le lecteur peut à présent soupçonner qu'elle est sa complice</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Sholmès file une « femme voilée » jusqu'à un appartement, traverse un passage secret et pénètre dans un boudoir somptueux ; la femme soulève son voile — Sholmès reconnaît <strong>Clotilde Destange</strong></td>
+<td>Chapitre V / environ 75 %</td>
+<td><strong>Point de convergence de cette vérité</strong> : l'identité de la dame blonde est officiellement révélée</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Sholmès compare quatre échantillons graphologiques (l'écriture d'Antoinette Bréhat, la lettre anonyme de l'affaire de Crozon, l'écriture de Madame de Réal, le registre de l'hôtel Beaurivage) — les quatre sont identiques</td>
+<td>Chapitre II / environ 38 %</td>
+<td>La chaîne de preuves de Ganimard est déjà complète, mais elle s'effondre au dernier instant à cause d'une erreur d'identification (une vraie courtière en diamants portant le même nom)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="indices-secondaires_1">Indices secondaires</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement (chapitre / pourcentage)</th>
+<th>Commentaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Clotilde passe pour « recluse, ne sortant jamais » — ce personnage fictif couvre précisément ses nombreuses sorties</td>
+<td>Chapitre IV / environ 60 %</td>
+<td>Exploitation inversée de l'alibi : les autres ont construit pour elle l'image d'une femme qui « ne peut absolument pas être sortie »</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sholmès surprend la conversation de Lupin et Clotilde dans le bureau : elle reconnaît avoir tué pour lui, mais c'est un accident survenu en situation de légitime défense</td>
+<td>Chapitre V / environ 73 %</td>
+<td>Confirme qu'elle est l'auteure des faits dans l'affaire du baron d'Hautrec (elle a porté le coup fatal), et non une meurtrière de sang-froid</td>
+</tr>
+</tbody>
+</table>
+<h4 id="faux-indices_1">Faux indices</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement (chapitre / pourcentage)</th>
+<th>Direction de la méprise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>La « Madame Réal » arrêtée par Ganimard au salon de thé est une vraie courtière en diamants, blonde, qui ne ressemble en rien à Clotilde</td>
+<td>Chapitre II / environ 38 %</td>
+<td>Lupin, anticipant la filature de Ganimard, a délibérément fait utiliser à la dame blonde un pseudonyme homonyme d'une personne réelle, assurant ainsi que toute traque aboutisse à une impasse</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Ganimard, Detinan et le comte de Crozon refusent tous trois au salon de thé d'identifier Madame Réal comme la personne qu'ils ont vue, faisant s'effondrer toute la théorie de Sholmès</td>
+<td>Chapitre II / environ 40 %</td>
+<td>Imitation d'une réussite qui échoue — le lecteur croit que la « solution » a été réfutée et continue de soupçonner d'autres pistes</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="verite-3-lauthenticite-et-le-paradoxe-du-diamant-bleu-howdunit">Vérité 3 : L'authenticité et le paradoxe du diamant bleu (howdunit)</h3>
+<ul>
+<li><strong>Point de convergence des indices : environ 68 % (la révélation que le diamant est caché dans la canne n'intervient qu'à 97 %, mais le « faux diamant » est exposé dès 31 %)</strong></li>
+<li>Réponse : Clotilde, sous l'identité de « Madame de Réal », vole le vrai diamant bleu au château de Crozon et le remplace par un faux synthétique, qu'elle glisse discrètement dans le pot de poudre dentifrice du consul Bleichen pour le compromettre (et détourner les soupçons). Le vrai diamant bleu est depuis lors dissimulé dans le cœur creux de la canne que Lupin porte en permanence.</li>
+</ul>
+<h4 id="indices-cles_2">Indices clés</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement (chapitre / pourcentage)</th>
+<th>Commentaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Lors de la vente aux enchères, le grand acheteur Herschmann, sur le point d'emporter le lot, reçoit une lettre anonyme l'avertissant que « le diamant bleu porte malheur » et rate l'enchère, distrait</td>
+<td>Chapitre II / environ 28 %</td>
+<td>Lupin manipule secrètement le résultat de la vente pour que la comtesse de Crozon remporte le lot — c'est un rouage du plan, qui indique que le destin du diamant bleu est tracé d'avance</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sholmès annonce à la comtesse de Crozon dans le train que le « diamant bleu » entre ses mains est un faux synthétique — le vrai est en possession de Lupin</td>
+<td>Chapitre III / environ 47 %</td>
+<td><strong>Révélation du faux diamant</strong> ; le lecteur apprend l'existence du vrai, mais ignore où il se trouve</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Lors de la première conversation entre Lupin et Sholmès au restaurant, Lupin ne confirme ni ne dément, mais répond « Voilà qui est fort bien raisonné » — autant dire qu'il acquiesce</td>
+<td>Chapitre III / environ 48 %</td>
+<td>Confirmation indirecte que le jugement de Sholmès est correct</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Avant son arrestation, Lupin dit à Sholmès : « Je n'ai pas l'intention de vous remettre le diamant bleu » — soulignant ainsi que le diamant est bien sur lui</td>
+<td>Chapitre VI / environ 93 %</td>
+<td>Confirmation de la détention</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Sholmès propose d'échanger la liberté de Clotilde contre le diamant bleu ; Lupin accepte et l'invite à tourner le bout de métal au bas de la canne pour en extraire une boulette de cire contenant le vrai diamant</td>
+<td>Chapitre VI / environ 97 %</td>
+<td><strong>Révélation de la cachette</strong> — vérité entièrement convergée</td>
+</tr>
+</tbody>
+</table>
+<h4 id="indices-secondaires_2">Indices secondaires</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement (chapitre / pourcentage)</th>
+<th>Commentaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Après la découverte du diamant, Bleichen affirme que le comte de Crozon le lui a tendu un piège, créant une situation où les deux parties se contredisent mutuellement — la police est totalement incapable de trancher sur l'authenticité du diamant</td>
+<td>Chapitre II / environ 33 %</td>
+<td>L'élégance du plan de Lupin : le faux diamant et la vraie accusation coexistent simultanément, plongeant les autorités dans une totale confusion</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sholmès, en présentant le « faux diamant » à la comtesse, explique simultanément le principe de fabrication des diamants synthétiques (poudre de diamant compressée à haute température)</td>
+<td>Chapitre III / environ 47 %</td>
+<td>Donne au lecteur un arrière-plan scientifique qui renforce la crédibilité de l'hypothèse du « faux diamant »</td>
+</tr>
+</tbody>
+</table>
+<h4 id="faux-indices_2">Faux indices</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement (chapitre / pourcentage)</th>
+<th>Direction de la méprise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Le diamant est trouvé dans le pot de poudre dentifrice de Bleichen de manière nette et directe ; tout le monde, y compris la police, pense qu'il s'agit du vrai diamant</td>
+<td>Chapitre II / environ 30 %</td>
+<td>Le lecteur, suivant le point de vue officiel, se convainc que « l'affaire est résolue et le diamant retrouvé », occultant complètement la possibilité que le diamant découvert soit un faux</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="la-lampe-juive-second-arc">« La Lampe juive » — Second arc</h3>
+<hr>
+<h3 id="verite-4-le-veritable-instigateur-du-vol-de-la-lampe-juive-whodunit-whydunit">Vérité 4 : Le véritable instigateur du vol de la lampe juive (whodunit + whydunit)</h3>
+<ul>
+<li><strong>Point de convergence des indices : environ 91 % (fin du chapitre VIII)</strong></li>
+<li>Réponse : <strong>En apparence</strong>, la coupable est la gouvernante Alice Demun, qui a commis le vol de son plein gré et a « sollicité l'aide de Lupin » de sa propre initiative ; mais elle n'est qu'un instrument. <strong>Le vrai cœur tragique</strong> est <strong>la baronne Suzanne d'Imblevalle</strong> : elle avait imprudemment fréquenté l'aventurier Bresson en société et lui avait laissé plusieurs lettres compromettantes ; Bresson s'en servait pour la faire chanter, exigeant qu'elle lui remette le bijou dissimulé dans le socle de la lampe juive. Alice, voyant la détresse de sa maîtresse, a contacté Lupin pour orchestrer le vol, afin de satisfaire Bresson, récupérer les lettres et libérer la baronne du chantage.</li>
+</ul>
+<h4 id="indices-cles_3">Indices clés</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement (chapitre / pourcentage)</th>
+<th>Commentaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Sholmès réfute l'hypothèse de l'« effraction extérieure » : l'écartement des trous de l'échelle varie (les deux séries sont faites avec le même morceau de bois), les rayures du balcon viennent du papier de verre, le morceau de bois est caché dans le massif de fleurs — le vol a été mis en scène de l'intérieur</td>
+<td>Chapitre VII / environ 15 %</td>
+<td><strong>Révélation du mode opératoire</strong> : le voleur est un membre de la maisonnée, non un intrus</td>
+</tr>
+<tr>
+<td>2</td>
+<td>La petite Henriette dit que la gouvernante Alice a l'habitude de découper des lettres dans les journaux pour les assembler en « télégrammes »</td>
+<td>Chapitre VII / environ 45 %</td>
+<td>Premier indice pointant vers Alice, et révélation de son outil de communication avec l'extérieur</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Dans le livre de lecture pour enfants, le mot « samedi (Saturday) » a été découpé ; neuf lettres et trois chiffres manquent également — une fois reconstitués, ils donnent « REPOND Z—CH—237 », renvoyant à l'annonce n° 237 dans la rubrique des petites annonces de l'<em>Écho de France</em></td>
+<td>Chapitre VII / environ 50 %</td>
+<td>Confirme qu'Alice communique avec Lupin via les annonces de presse, établit la date du crime (samedi) et le code de l'opération</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Le numéro de taxi 8 279 (tombé du petit sac d'Alice) renvoie à un déplacement du dimanche matin : elle a pris un taxi seule, portant un « long paquet », depuis les environs du parc jusqu'à l'avenue des Ternes</td>
+<td>Chapitre VII / environ 60 %</td>
+<td>Confirme le trajet emprunté par Alice pour transmettre les objets volés après le cambriolage</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Sholmès retrouve dans l'<em>Écho de France</em> sept annonces reconstituant intégralement la correspondance : Alice (code 540) sollicite la protection de Lupin, lui fournit l'adresse, confirme la date de l'action ; dernière annonce : « Compris. Samedi exécution. Dimanche matin au parc »</td>
+<td>Chapitre VIII / environ 85 %</td>
+<td>La reconstitution complète de la correspondance confirme qu'Alice est l'instigatrice active (et non une personne contrainte)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Le baron fait remarquer que la porte de la bibliothèque était « verrouillée de l'intérieur » — Alice ne peut pas être entrée de la manière qu'elle décrit ; son aveu s'effondre au niveau des faits</td>
+<td>Chapitre VIII / environ 91 %</td>
+<td><strong>Point de convergence de cette vérité</strong> : le lecteur peut désormais déduire que ce qu'Alice dit est faux et que la véritable personne de l'intérieur est quelqu'un d'autre</td>
+</tr>
+<tr>
+<td>7</td>
+<td>La baronne Suzanne reconnaît elle-même que le cambriolage a été planifié avec elle comme victime en toile de fond, qu'Alice s'est sacrifiée pour elle, et que les lettres détenues par Bresson sont bien le point de départ de tout</td>
+<td>Chapitre VIII / environ 93 %</td>
+<td>Vérité entièrement révélée</td>
+</tr>
+</tbody>
+</table>
+<h4 id="indices-secondaires_3">Indices secondaires</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement (chapitre / pourcentage)</th>
+<th>Commentaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Lupin envoie à l'avance une lettre avertissant Sholmès de ne pas intervenir, avec une insistance inhabituelle — ce qui ne correspond pas à son comportement habituel, et laisse entendre qu'il se positionne ici comme protecteur et non comme simple criminel</td>
+<td>Chapitre VII / environ 5 %</td>
+<td>Dans cette affaire, Lupin joue le rôle d'un « gris bienveillant » ; le lecteur attentif peut douter que ses motifs se réduisent au vol</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sholmès ne trouve rien dans la cuisine, l'écurie ni le jardin de la maîtresse de maison — le voleur n'avait pas besoin de pénétrer dans ces lieux, puisqu'il y résidait déjà</td>
+<td>Chapitre VII / environ 35 %</td>
+<td>Élimine tout individu extérieur, rétrécit le cercle des suspects internes</td>
+</tr>
+<tr>
+<td>3</td>
+<td>La lettre envoyée à Bresson (arrivée après sa mort) dit : « Il n'accepte aucun compromis. Il exige tout — les objets du premier et du second incident. Sinon il agira » — le chantage de Bresson n'a pas cessé malgré la restitution des objets</td>
+<td>Chapitre VIII / environ 87 %</td>
+<td>Révèle que Bresson continuait de faire pression, souligne que le cambriolage orchestré par Alice était insuffisant pour libérer la baronne, et explique le mobile du second vol</td>
+</tr>
+</tbody>
+</table>
+<h4 id="faux-indices_3">Faux indices</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement (chapitre / pourcentage)</th>
+<th>Direction de la méprise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Tous les « éléments matériels » de l'effraction extérieure : l'échelle sur le balcon, le carreau découpé, les traces de trous, l'entrée par le parc Monceau</td>
+<td>Chapitre VII / environ 10 %</td>
+<td>Entraîne le lecteur à suivre la police et le baron en croyant à un cambriolage extérieur classique</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Alice « avoue » avec sérénité qu'elle est la voleuse, mais est incapable d'expliquer le détail de la serrure</td>
+<td>Chapitre VIII / environ 90 %</td>
+<td>Le mensonge bienveillant d'Alice est presque parfait ; sans la remarque du baron sur la contradiction de la serrure, elle aurait presque réussi à endosser seule toute la responsabilité</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="verite-5-lidentite-de-bresson-et-le-second-cambriolage-whodunit">Vérité 5 : L'identité de Bresson et le second cambriolage (whodunit)</h3>
+<ul>
+<li><strong>Point de convergence des indices : environ 90 % (chapitre VIII)</strong></li>
+<li>Réponse : Bresson est un maître chanteur qui loue un appartement sous un faux nom et détient depuis longtemps les lettres compromettantes de la baronne comme monnaie d'échange. Il a perpétré de sa propre initiative le second cambriolage (vol de la tabatière en diamants et du collier d'opales), sans lien avec Alice — par pure cupidité. Traqué par Sholmès et Ganimard, il emballe les objets volés et les jette dans la Seine pour les dissimuler, puis se suicide dans le désespoir.</li>
+</ul>
+<h4 id="indices-cles_4">Indices clés</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement (chapitre / pourcentage)</th>
+<th>Commentaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>« Bresson » loue un appartement avenue des Ternes sous un faux nom pour environ un mois, se déplace mystérieusement, son identité est inconnue — des vêtements portant des initiales différentes se trouvent dans le même appartement, confirmant que son vrai nom n'est pas « Bresson »</td>
+<td>Chapitre VII / environ 58 %</td>
+<td>Première confirmation de la nature fictive de l'identité de Bresson</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sholmès observe Bresson qui, de nuit, se rend sur les berges de la Seine pour jeter un paquet — sans pouvoir l'intercepter</td>
+<td>Chapitre VII / environ 80 %</td>
+<td>Révèle que Bresson est en train de dissimuler (de faire disparaître) les objets du second cambriolage</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Bresson se suicide quand les deux hommes enfoncent sa porte — ce n'est pas le comportement de Lupin ni de ses hommes ; l'individu relève clairement d'un autre réseau</td>
+<td>Chapitre VII / environ 85 %</td>
+<td>Exclut que Bresson soit l'un des hommes de Lupin</td>
+</tr>
+<tr>
+<td>4</td>
+<td>La lettre reçue par Bresson après sa mort révèle qu'il continuait de faire pression sur un tiers, exigeant simultanément « les objets du premier et du second incident » — il connaissait donc les deux cambriolages comme liés à la même maisonnée</td>
+<td>Chapitre VIII / environ 87 %</td>
+<td>Établit clairement que le second cambriolage est aussi l'œuvre de Bresson, et non de Lupin</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Après le naufrage de la barque, Sholmès regagne la rive à la nage et, suivant une allusion que Lupin lui avait involontairement livrée à bord, retrouve au fond de la rivière le paquet que Bresson avait caché : il contient la lampe juive et les autres objets volés, dont le socle renferme bien le bijou</td>
+<td>Chapitre VIII / environ 97 %</td>
+<td>Tous les objets volés retrouvés ; le mode opératoire du chantage de Bresson (prendre le bijou lui-même en gage) est entièrement éclairci</td>
+</tr>
+</tbody>
+</table>
+<h4 id="faux-indices_4">Faux indices</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement (chapitre / pourcentage)</th>
+<th>Direction de la méprise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>À l'extérieur de l'appartement, Sholmès aperçoit un « homme déguisé en mendiant » qui le surveille ; il pense que c'est un complice ou un guetteur de Bresson</td>
+<td>Chapitre VIII / environ 82 %</td>
+<td>Ce mendiant est un indicateur de Lupin, non un homme de Bresson — mais sa présence amène le lecteur à croire que Bresson a mis en place une ligne de défense secrète</td>
+</tr>
+<tr>
+<td>2</td>
+<td>La scène du second cambriolage (carreau découpé, échelle) est quasi identique à celle du premier, ce qui semble réfuter l'hypothèse d'un vol « de l'intérieur » avancée par Sholmès</td>
+<td>Chapitre VII / environ 67 %</td>
+<td>Le second est une vraie effraction extérieure, mais lecteur et Sholmès sont également déconcertés : cela invalide-t-il le premier raisonnement ? Sholmès maintient que non</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="reconstruction-du-raisonnement-deductif">Reconstruction du raisonnement déductif</h2>
+<h3 id="la-dame-blonde-un-parcours-de-larchitecture-a-lamour">« La Dame blonde » : un parcours de l'architecture à l'amour</h3>
+<p>Au chapitre I, le lecteur assiste à une comédie animée de lutte pour la fortune, sans énigme apparente — l'identité, la méthode et l'objectif de Lupin sont transparents. Le vrai mystère émerge au chapitre II : <strong>Qui est la dame blonde ? Comment apparaît-elle puis disparaît-elle d'une chambre close ?</strong></p>
+<p>Un lecteur attentif qui, au chapitre II (environ 33 %), prend note du raisonnement de Ganimard — « Antoinette Bréhat avait exactement les mêmes cheveux que la dame blonde, et elle est réapparue dès le lendemain de l'affaire du baron sous le nom de "Madame de Réal" » — devrait pouvoir déduire qu'il s'agit de la même personne. Mais son identité précise demeure un mystère.</p>
+<p><strong>Premier nœud clé (environ 42 %)</strong> : Sholmès lit au coin d'une rue l'inscription « Destange, architecte, 1875 ». C'est un détail minuscule, facile à manquer — mais pour un lecteur doté de quelques connaissances en histoire de l'architecture, c'est un moment d'explosion nucléaire : les trois « disparitions impossibles » trouvent soudainement une explication physique unifiée.</p>
+<p><strong>Deuxième nœud clé (environ 53 %)</strong> : les trois scènes de crime (rue Clapeyron, avenue Henri-Martin, château de Crozon) sont toutes confirmées comme ayant été conçues et bâties par le même Destange. Le lecteur peut dès lors <strong>reconstituer intégralement le « comment »</strong> : même architecte, passages secrets, communication entre immeubles voisins, liberté de circuler.</p>
+<p><strong>Troisième nœud clé (environ 62 %)</strong> : Sholmès voit Clotilde et Lupin (sous le nom de Maxime Bermond) interagir en privé, et comprend qu'elle n'est pas seulement la fille passive de l'architecte, mais une complice active. Il manque encore un pas : est-elle la dame blonde ?</p>
+<p><strong>Point de convergence (environ 75 %)</strong> : Sholmès file la femme voilée à travers le passage secret, soulève son voile — <strong>Clotilde Destange</strong> : la vraie identité de la dame blonde est officiellement révélée. Toutes les énigmes convergent ici : elle a sillonné Paris grâce aux plans de son père, et son amour l'a rendue consentante à devenir l'ombre de Lupin.</p>
+<h3 id="la-lampe-juive-du-temoignage-dune-enfant-a-la-verite-morale">« La Lampe juive » : du témoignage d'une enfant à la vérité morale</h3>
+<p>« La Lampe juive » est une énigme « à rebours » : le cambriolage de surface est vite percé à jour (15 %), mais le vrai mystère — <strong>qui ? pourquoi ?</strong> — reste enfoui jusqu'à la toute fin.</p>
+<p><strong>Premier nœud clé (environ 15 %)</strong> : Sholmès démasque la fausse scène de crime et confirme que le voleur est un membre de la maisonnée. Mais qui, parmi les habitants de la maison ? Le baron et la baronne, les domestiques, la gouvernante, les enfants.</p>
+<p><strong>Deuxième nœud clé (environ 45 %)</strong> : une simple phrase d'Henriette — « la gouvernante découpe des lettres pour faire des télégrammes » — semble être une parole d'enfant sans conséquence, mais c'est la clé de tout le système de communication. Un lecteur attentif, croisant cet indice avec celui de la mystérieuse jeune femme qui tentait d'arrêter Sholmès à la gare, devrait à ce stade pouvoir raisonnablement soupçonner qu'Alice est bien plus qu'une garde-malade.</p>
+<p><strong>Troisième nœud clé (environ 50 %)</strong> : les lettres manquantes reconstituent « REPOND—ECHO—237 ». C'est le code de communication d'Alice, pointant vers ses échanges secrets avec Lupin.</p>
+<p><strong>Quatrième nœud clé (environ 85 %)</strong> : sept annonces de presse reconstituent l'intégralité de la correspondance. Alice est la demandeuse (« 540 Lady implores protection »), et la personne à qui elle s'adresse est Lupin — elle lui a fourni l'adresse et confirmé la date de l'opération.</p>
+<p><strong>Cinquième nœud clé (environ 91 %)</strong> : le baron soulève la contradiction de la serrure. L'aveu d'Alice s'effondre logiquement — elle affirme être entrée par la porte de la bibliothèque, mais celle-ci était verrouillée de l'intérieur, et seuls le baron et la baronne se trouvaient dans la maison ce soir-là.</p>
+<p><strong>Convergence de la vérité (environ 93 %)</strong> : l'effondrement de la baronne accomplit la dernière étape. Le lecteur comprend enfin qu'Alice est une protectrice et non la coupable principale ; que la baronne est celle qui détenait le « mobile » — son passé, sa confiance imprudente en Bresson, voilà le véritable point de départ. C'est le retournement moral le plus saisissant de tout le livre : <strong>vous pensiez avoir trouvé la « criminelle » — mais elle est en réalité la personne la plus innocente de toutes.</strong></p>
+<hr>
+<h2 id="remarques-complementaires">Remarques complémentaires</h2>
+<p><strong>Contraste entre les deux conceptions déductives</strong></p>
+<p>Ce qui rend ce livre si fascinant, c'est précisément que les stratégies de construction des deux arcs narratifs sont diamétralement opposées :</p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>« La Dame blonde »</th>
+<th>« La Lampe juive »</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Direction de l'élucidation</td>
+<td>Du bas vers le haut (des faits vers les personnages)</td>
+<td>Du haut vers le bas (des personnages vers les mobiles)</td>
+</tr>
+<tr>
+<td>Rythme de convergence</td>
+<td>Progressif, multicouche</td>
+<td>Retournement final brutal</td>
+</tr>
+<tr>
+<td>Technique centrale</td>
+<td>L'architecture comme outil déductif</td>
+<td>Le langage enfantin comme vecteur d'indice</td>
+</tr>
+<tr>
+<td>Surprise majeure</td>
+<td>Les passages secrets de l'architecte</td>
+<td>Le « vrai coupable » est le protecteur de la victime</td>
+</tr>
+<tr>
+<td>Tonalité morale</td>
+<td>Bataille symétrique entre deux génies</td>
+<td>Drame asymétrique du sacrifice et de l'amour</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sholmès contre Lupin : la singularité de ce duel</strong></p>
+<p>Leblanc accomplit dans ce livre quelque chose d'inédit dans l'histoire de la littérature policière : il donne aux deux plus grands « adversaires » un axe narratif commun, sans laisser ni l'un ni l'autre l'emporter totalement. Sholmès résout presque toutes les énigmes, récupère le diamant bleu, fait arrêter Lupin — mais Lupin s'évade après son arrestation, laissant Ganimard couvert de ridicule ; l'identité de Clotilde est gardée secrète par Sholmès lui-même ; et le « vrai échec » final de Sholmès se produit dans « La Lampe juive » — son enquête, bien que victorieuse, brise une famille, met au jour la vérité sur Bresson et expose au grand jour le secret de la baronne. Lupin, lui, note avec légèreté dans la dernière scène : « Si vous n'étiez pas intervenu, j'aurais pu tout arranger pour eux sans rien abîmer. »</p>
+<p>C'est une ironie littéraire profonde : <strong>le métier du détective est de dévoiler la vérité, mais parfois c'est le dévoilement de la vérité lui-même qui cause le plus grand tort.</strong></p>
+<p><strong>La stratégie d'écriture autour de « Herlock Sholmès »</strong></p>
+<p>Leblanc mêle hommage et raillerie envers l'œuvre originale de Conan Doyle. Il dote Sholmès d'un acolyte, Wilson (avatar de Watson), qui est un faire-valoir encore plus comique — il n'accumule pas seulement les erreurs de jugement, mais est blessé à deux reprises (fracture au bras, coup de couteau près du cœur). Conan Doyle exigera par la suite que Leblanc change le nom du personnage pour éviter toute confusion chez les lecteurs — c'est pourquoi le livre utilise « Herlock Sholmes » et non « Sherlock Holmes ». Pourtant, la façon dont Leblanc dépeint Sholmès n'est nullement malveillante : il lui confère une véritable intelligence et une vraie grandeur d'âme, tout en le confrontant à un adversaire plus complexe qu'aucun criminel : <strong>un Lupin doté d'émotions, d'esthétique et d'un sens de l'honneur.</strong></p>
+<p><strong>Note complémentaire pour les lecteurs francophones</strong></p>
+<p>Dans « La Dame blonde », l'histoire du diamant bleu mérite quelques mots : dans la fiction, il est présenté comme une pierre ayant appartenu à la noblesse française (en lien avec le duc d'Orléans et une actrice). La rareté extrême du diamant bleu tient à ce que sa couleur naturelle provient d'une structure cristalline particulière enrichie en bore, la plus rare des teintes dans le règne du diamant ; le célèbre « Hope Diamond » en est l'exemple historique le plus connu. En faisant de cette gemme son accessoire central, Leblanc évoque précisément la fascination de la haute société française de l'époque pour les objets ayant appartenu à l'aristocratie — pour le lecteur, le diamant bleu symbolise la « pétrification des hiérarchies sociales », et le geste de Lupin qui le « vole aux riches par l'intelligence » en acquiert une tension morale bien plus forte.</p>
+    <a href="../index.html" class="back-link">← Retour à l'accueil</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Salle de Dissection Policière</p>
+    <p>Cinq auteurs · quatre-vingt-huit œuvres · 135 ans d'évolution de la difficulté du roman policier.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

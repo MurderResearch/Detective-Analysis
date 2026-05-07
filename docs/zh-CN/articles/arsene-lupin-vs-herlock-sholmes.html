@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>《亚森·罗宾大战赫洛克·修姆斯》 — 推理解剖室</title>
+<meta name="description" content=" 〈金发女郎〉（第一至六章） 凡尔赛数学教授热布瓦（Gerbois）在旧货店购得一张小书桌，不意卷入亚森·罗宾精心设计的财富争夺战——那张书桌的秘密抽屉里，藏着一张中了百万法郎头彩的彩票。罗宾盗走书桌，夺得彩票，却陷入「票在我手，法理在你」的困局；教授则因女儿苏珊（Suzanne）遭罗宾「请走」充当人质，被迫妥协，换得">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/arsene-lupin-vs-herlock-sholmes.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/arsene-lupin-vs-herlock-sholmes.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/arsene-lupin-vs-herlock-sholmes.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/arsene-lupin-vs-herlock-sholmes.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/arsene-lupin-vs-herlock-sholmes.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/arsene-lupin-vs-herlock-sholmes.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/arsene-lupin-vs-herlock-sholmes.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/arsene-lupin-vs-herlock-sholmes.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif SC', serif;
+  --font-sans: 'Noto Sans SC', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">推理解剖室</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">首页</a>
+        <a href="../index.html#latest">最新分析</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="语言" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 简体中文</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/arsene-lupin-vs-herlock-sholmes.html">繁體中文</a>
+      <a class="lang-item active" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/arsene-lupin-vs-herlock-sholmes.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/arsene-lupin-vs-herlock-sholmes.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/arsene-lupin-vs-herlock-sholmes.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/arsene-lupin-vs-herlock-sholmes.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/arsene-lupin-vs-herlock-sholmes.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/arsene-lupin-vs-herlock-sholmes.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/arsene-lupin-vs-herlock-sholmes.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">莫里斯·勒布朗 · </div>
+    <h1>《亚森·罗宾大战赫洛克·修姆斯》</h1>
+    <div class="subtitle">莫里斯·卢布朗（Maurice Leblanc） · 中篇小说集（两部曲，共八章）</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">推理难度</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">迷雾等级</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="_1">《亚森·罗宾大战赫洛克·修姆斯》— 推理分析</h1>
+<h2 id="_2">基本资讯</h2>
+<ul>
+<li>作者：莫里斯·卢布朗（Maurice Leblanc）</li>
+<li>出版年：1908年</li>
+<li>类型：中篇小说集（两部曲，共八章）</li>
+<li>侦探角色：赫洛克·修姆斯（Herlock Sholmes）、加尼马尔探长（Ganimard）；亚森·罗宾身兼罪犯与推理主轴</li>
+<li>核心谜团类型：whodunit + howdunit + whydunit（双弧线交织）</li>
+</ul>
+<hr>
+<h2 id="_3">推理难度总评</h2>
+<p>本书分为两个独立叙事弧：<strong>〈金发女郎〉</strong>（第一至六章，约占全书 80%）与<strong>〈犹太灯〉</strong>（第七至八章，约占 20%）。二者风格迥异：前者是一场跨越巴黎的宏大追逐戏，后者是一个紧凑的室内谜题，却在最后以道德反转震撼读者。</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>星等</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理难度（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>〈金发女郎〉平均收敛点约 65%；〈犹太灯〉平均收敛点约 91%；整体加权平均约 71%</td>
+</tr>
+<tr>
+<td>迷雾等级（Fog Rating）</td>
+<td>⭐⭐⭐⭐</td>
+<td>多层假身份（Antoinette Bréhat / Madame de Réal / Clotilde Destange）、精心设计的替身混淆（真假 Madame Réal）、假入室伪装（梯子痕迹）、善意谎言自白（Alice 的自我牺牲），四重烟雾密不透风</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_4">故事梗概</h2>
+<h3 id="_5">〈金发女郎〉（第一至六章）</h3>
+<p>凡尔赛数学教授热布瓦（Gerbois）在旧货店购得一张小书桌，不意卷入亚森·罗宾精心设计的财富争夺战——那张书桌的秘密抽屉里，藏着一张中了百万法郎头彩的彩票。罗宾盗走书桌，夺得彩票，却陷入「票在我手，法理在你」的困局；教授则因女儿苏珊（Suzanne）遭罗宾「请走」充当人质，被迫妥协，换得半数奖金。</p>
+<p>就在这场闹剧尾声，一位神出鬼没的「金发女郎」悄然登场——她先以「Antoinette Bréhat」之名出现在遇害的欧特雷克男爵（Baron d'Hautrec）卧室，再以「Madame de Réal」身份蛰伏于克罗宗伯爵夫人身边，策动蓝钻石失窃案。加尼马尔循线追查，却三番两次与「真正的金发女郎」擦身而过，反而逮住了一名同名同姓的无辜钻石掮客。</p>
+<p>就在巴黎警方手足无措之际，英国名侦探赫洛克·修姆斯应邀赴法，与罗宾展开一场短短十天的智慧对决。修姆斯发现三个犯罪现场——律师德提南（Detinan）的公寓、欧特雷克男爵旧宅、克罗宗城堡——竟全由同一位建筑师德斯坦格（Lucien Destange）设计建造，秘密通道由此而生。他以假名潜入德斯坦格的图书馆，终于认出金发女郎的真面目：德斯坦格之女<strong>克洛蒂德（Clotilde Destange）</strong>，罗宾多年的秘密爱人与同谋。</p>
+<p>然而当修姆斯以克洛蒂德作为人质时，罗宾乔装成预订好的计程车司机，从容劫走两人，将修姆斯强制送上一艘驶往英国的轮船。修姆斯随即用计拨快船长的表，提前在南安普顿上岸，星夜赶回巴黎，利用电话中罗宾无意透露的公寓地址，与加尼马尔联手包围。最终罗宾被捕，蓝钻石被起出（藏在罗宾的手杖空芯中），但克洛蒂德的身份由修姆斯一人保密，换取她的自由。</p>
+<h3 id="_6">〈犹太灯〉（第七至八章）</h3>
+<p>巴黎归来不久，修姆斯接获 d'Imblevalle 男爵之邀，调查一件蹊跷窃案：男爵的书房被人以外部闯入的方式（梯子、切割窗格）盗走一盏古老的犹太灯，灯的空心底座中藏着一件镶红宝石的金奇美拉首饰。警方调查一无所获，罗宾却寄来书信警告修姆斯不要插手。</p>
+<p>修姆斯甫抵巴黎便遭一名神秘年轻女子截住，恳求他放弃调查，返回英国。修姆斯不为所动。短短四十分钟后，他便看穿「外部闯入」的假象：梯子痕迹由木块伪造，阳台划痕以砂纸制成——窃案来自内部。</p>
+<p>线索由小女孩亨丽葉特（Henriette）无意间提供：家庭教师爱丽丝·德曼（Alice Demun）习惯从报纸剪下字母拼成信件。修姆斯在儿童识字课本中发现遭剪去的字母，还原出对应密码，追踪到爱丽丝与「Echo de France」个人启事栏的秘密通讯——那是她与罗宾的联络频道。另一线索则是一枚掉落的计程车号码，将爱丽丝与第二个神秘地址相连。</p>
+<p>一名疑似勒索者的男子（化名布雷松，Bresson）在修姆斯追查下自杀，案情愈加扑朔。第二夜，窃案再度发生，这次连钻石鼻烟盒、蛋白石项链也一并被盗，威尔森（Wilson）并因此负伤。</p>
+<p>最终修姆斯在河边重遇伪装成钓鱼老翁的罗宾，两人在漏水的小船上演了一场荒诞却精彩的最后对决，船沉水中、各自游回岸边。随后修姆斯揭示全部真相：窃取犹太灯的是爱丽丝，但她的动机是为了保护女主人。真正的苦主是男爵夫人苏珊（Suzanne d'Imblevalle）——她曾在社交场上轻率结识布雷松，被他持私信威胁。爱丽丝为了保护她，透过罗宾的协助安排窃案，以满足勒索者的要求；而布雷松另行策动的第二次窃案则是他自己的贪婪之举。</p>
+<p>男爵得知真相，夫妻感情受创；爱丽丝在修姆斯的协助下随他返回英国，而罗宾已藏身同一艘渡海轮船，泰然自若地点燃一根火柴。</p>
+<hr>
+<h2 id="_7">真相拆解</h2>
+<h3 id="_8">〈金发女郎〉第一章</h3>
+<hr>
+<h3 id="howdunit">真相一：三个犯罪现场的秘密通道（howdunit）</h3>
+<ul>
+<li><strong>线索收敛点：约 53%（第四章前半）</strong></li>
+<li>答案：律师德提南的公寓（rue Clapeyron 25 号）、欧特雷克男爵旧宅（avenue Henri-Martin 134 号）、克罗宗城堡，三处皆由建筑师路西安·德斯坦格（Lucien Destange）设计建造。罗宾以「马克斯·贝蒙（Maxime Bermond）」之名受雇承揽装修，暗中在邻屋之间增设秘密通道：书架后、壁炉夹层、地窖穿越等，形成完整的逃生网络。这套结构让金发女郎可以进入目标地点、完成任务，再从相邻建筑物的出口悄然离去，留下一个「无从进出」的谜。</li>
+</ul>
+<h4 id="_9">关键线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>rue Clapeyron 25 号门楣刻有「Destange, architecte, 1875」，相邻 23 号亦然</td>
+<td>第四章 / 约 42%</td>
+<td>第一个发现：三案现场的共同建筑师名字首次出现</td>
+</tr>
+<tr>
+<td>2</td>
+<td>avenue Henri-Martin 134 号（欧特雷克男爵旧宅）及两栋邻屋，同样刻有「Destange, architecte, 1874」</td>
+<td>第四章 / 约 43%</td>
+<td>两个犯罪现场确认同一建筑师，「秘密通道」假说成形</td>
+</tr>
+<tr>
+<td>3</td>
+<td>克罗宗城堡电话确认：「Lucien Destange, architecte, 1877」</td>
+<td>第四章 / 约 53%</td>
+<td>三案现场全部串连，Destange 即为关键枢纽——<strong>本真相的线索收敛点</strong></td>
+</tr>
+<tr>
+<td>4</td>
+<td>rue Chalgrin 40 号（罗宾的聚会地点）亦标有「Lucien Destange, architecte, 1877」，邻近 42 号也同</td>
+<td>第五章 / 约 75%</td>
+<td>确认罗宾选址犯案的模式，并解释了当夜在地窖中发现的石榴石（garnet）与两栋建筑相通的原理</td>
+</tr>
+<tr>
+<td>5</td>
+<td>德斯坦格书房大柜中的「M.B.」账目记录，列出 16 处改建地址（含三案现场）</td>
+<td>第五章 / 约 80%</td>
+<td>账目揭示「Maxime Bermond」即罗宾所用化名，与德斯坦格有长达多年的合谋</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_10">辅助线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>加尼马尔在德提南公寓搜查三天三夜，始终找不到罗宾离去的路径</td>
+<td>第一章 / 约 17%</td>
+<td>点明「消失术」不是魔法，必有实体通道，埋下伏线</td>
+</tr>
+<tr>
+<td>2</td>
+<td>欧特雷克男爵案：家具被重新摆好，现场清理过——此人必熟悉房间格局</td>
+<td>第二章 / 约 27%</td>
+<td>加尼马尔首先注意到这一点，暗示家具摆设的熟悉者</td>
+</tr>
+<tr>
+<td>3</td>
+<td>克罗宗城堡失窃时，钻石先被盗，又被神秘地放进奥地利领事布莱辛的牙粉瓶——只有熟悉城堡结构者才能多次进出</td>
+<td>第二章 / 约 35%</td>
+<td>行凶者对城堡布局了若指掌，非外来者所能办到</td>
+</tr>
+<tr>
+<td>4</td>
+<td>修姆斯在欧特雷克男爵旧宅地板发现粉笔标记：圆圈标示暗板、箭头标示移动方向、数字标示地板块数——这是罗宾事先留给同谋的施工或使用指引</td>
+<td>第三章 / 约 50%</td>
+<td>虽是一场罗宾设下的捉弄，这些标记本身却揭示了秘密通道的存在形式</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_11">假线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>误导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>罗宾与金发女郎在德提南公寓「消失」，仅留加尼马尔爬烟囱三天的笑话</td>
+<td>第一章 / 约 18%</td>
+<td>让读者把焦点放在「魔术脱逃」的神秘性，忽略其背后的实体机制——相邻建筑的连通</td>
+</tr>
+<tr>
+<td>2</td>
+<td>克罗宗城堡案：所有嫌疑指向奥地利领事布莱辛，钻石确实在他的行李中被发现</td>
+<td>第二章 / 约 32%</td>
+<td>转移视线，让读者跟着警方认定布莱辛犯案</td>
+</tr>
+<tr>
+<td>3</td>
+<td>罗宾在欧特雷克男爵旧宅「锁门困住」修姆斯与威尔森，并送来野餐篮</td>
+<td>第三章 / 约 48%</td>
+<td>纯属玩弄，但使读者将注意力集中在「门锁」机制，忽略了地窖与邻宅相通的可能</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="whodunit">真相二：金发女郎的真实身份（whodunit）</h3>
+<ul>
+<li><strong>线索收敛点：约 75%（第五章中段）</strong></li>
+<li>答案：金发女郎是<strong>克洛蒂德·德斯坦格（Clotilde Destange）</strong>，建筑师之女，以三个不同化名活跃于三起案件中：「Antoinette Bréhat」（欧特雷克男爵的临时女秘书）、「Madame de Réal」（克罗宗伯爵夫人的闺蜜）、以及本人的真名身份（保持「深居简出的忧郁女子」印象）。她以天然金发为幌，染成棕色即可「消失」。</li>
+</ul>
+<h4 id="_12">关键线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>加尼马尔注意到：Antoinette Bréhat（男爵案）的头发与金发女郎完全相符，且后者在男爵案发后「翌日」便以新名义（Madame de Réal）现身克罗宗</td>
+<td>第二章 / 约 33%</td>
+<td>加尼马尔连结两案的最早直觉，但他未能进一步追踪</td>
+</tr>
+<tr>
+<td>2</td>
+<td>加尼马尔在克罗宗找到两个相同香水瓶，其一来自 Château de Crozon 房间，另一来自特鲁维尔旅馆房间，两者皆留有相同味道，对应「真实金发女郎」</td>
+<td>第二章 / 约 36%</td>
+<td>确认「Antoinette Bréhat」与「Madame de Réal」为同一人，线索已完整——但指向的是她，而非克洛蒂德</td>
+</tr>
+<tr>
+<td>3</td>
+<td>修姆斯卧底德斯坦格图书馆，见到一名神秘身影在暮色中搜寻大柜，后者是「Maxime Bermond」即罗宾：克洛蒂德在场、心知肚明，却泰然自若</td>
+<td>第四章 / 约 62%</td>
+<td>克洛蒂德与罗宾之间的默契性配合首次曝光，读者此时可怀疑她是同谋</td>
+</tr>
+<tr>
+<td>4</td>
+<td>修姆斯跟踪「蒙面女郎」至一栋公寓，穿越秘密通道进入华丽闺房，女子摘下头纱，修姆斯认出她是<strong>克洛蒂德·德斯坦格</strong></td>
+<td>第五章 / 约 75%</td>
+<td><strong>本真相的线索收敛点</strong>：金发女郎身份正式揭晓</td>
+</tr>
+<tr>
+<td>5</td>
+<td>修姆斯对照四份笔迹样本（Antoinette Bréhat 的字迹、克罗宗案匿名信、Madame de Réal 的笔迹、Beaurivage 旅馆登记簿）——四者一致</td>
+<td>第二章 / 约 38%</td>
+<td>加尼马尔的证据链已完整，但因最后「确认人」认人失误（一名真实同名钻石掮客），整条线索功亏一篑</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_13">辅助线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>克洛蒂德平日「深居简出，从不外出」——这个人设正好掩护她的频繁行动</td>
+<td>第四章 / 约 60%</td>
+<td>「不在场证明」的反向利用：别人替她建立了一个「绝不可能外出」的印象</td>
+</tr>
+<tr>
+<td>2</td>
+<td>修姆斯在书房中窃听罗宾与克洛蒂德的对话，她坦承曾为他杀人，但那是在自我防卫中发生的意外</td>
+<td>第五章 / 约 73%</td>
+<td>确认她是欧特雷克男爵案的当事人（致命一击的施予者），而非有预谋的杀人犯</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_14">假线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>误导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>加尼马尔在茶室逮捕的「Madame Réal」，是一名真实存在的金发钻石掮客，与克洛蒂德分毫不似</td>
+<td>第二章 / 约 38%</td>
+<td>罗宾事先知晓加尼马尔的追查路线，故意让金发女郎使用与真人同音的化名，确保追查者扑空</td>
+</tr>
+<tr>
+<td>2</td>
+<td>加尼马尔、德提南、克罗宗伯爵三人在茶室均拒绝辨认 Madame Réal 是他们所见之人，令修姆斯整个理论崩溃</td>
+<td>第二章 / 约 40%</td>
+<td>模仿成功者的失败——读者以为「谜底」已被否定，导致继续怀疑其他方向</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="howdunit_1">真相三：蓝钻石的真伪与下落（howdunit）</h3>
+<ul>
+<li><strong>线索收敛点：约 68%（蓝钻石藏在手杖的揭露出现在 97% 位置，但「假钻石」在 31% 即揭示）</strong></li>
+<li>答案：克洛蒂德以「Madame de Réal」身份在克罗宗城堡盗走真正的蓝钻石，以人工合成的仿制钻石替代，再将假石悄悄藏入领事布莱辛的牙粉瓶以嫁祸（同时转移嫌疑）。真正的蓝钻石始终藏在罗宾随身携带的手杖空芯中。</li>
+</ul>
+<h4 id="_15">关键线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>拍卖会上，大买家赫斯曼（Herschmann）在即将得标之际，收到一封匿名信警告「蓝钻石带来不幸」，分心失标</td>
+<td>第二章 / 约 28%</td>
+<td>罗宾暗中操控拍卖结果，让克罗宗伯爵夫人得标——这是整个计划的一环，说明蓝钻石的命运早有安排</td>
+</tr>
+<tr>
+<td>2</td>
+<td>修姆斯在火车上告知克罗宗伯爵夫人：她手上的「蓝钻石」是人工合成的假货，真石已在罗宾手中</td>
+<td>第三章 / 约 47%</td>
+<td><strong>假钻石真相揭露</strong>；读者得知真石的存在，但不知其位置</td>
+</tr>
+<tr>
+<td>3</td>
+<td>罗宾在餐厅初次与修姆斯对话，既未承认也未否认，却以「那真是高明的推断」回应，等同默认</td>
+<td>第三章 / 约 48%</td>
+<td>间接确认修姆斯的判断正确</td>
+</tr>
+<tr>
+<td>4</td>
+<td>罗宾被捕前告诉修姆斯：「我不打算交出蓝钻石」——以此强调钻石确实在他身上</td>
+<td>第六章 / 约 93%</td>
+<td>确认持有</td>
+</tr>
+<tr>
+<td>5</td>
+<td>修姆斯提出以克洛蒂德的自由换取蓝钻石；罗宾接受，指示他转动手杖底部铁头，取出藏在空芯的蜡丸，蜡丸中藏有真钻石</td>
+<td>第六章 / 约 97%</td>
+<td><strong>藏匿地点揭晓</strong>，真相完全收敛</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_16">辅助线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>布莱辛在钻石被找到后，坚称是克罗宗伯爵栽赃，形成两造各执一词的局面——警方根本无从判断钻石真伪</td>
+<td>第二章 / 约 33%</td>
+<td>罗宾计划的精巧之处：假钻石和真正指控同时存在，让官方完全陷入泥沼</td>
+</tr>
+<tr>
+<td>2</td>
+<td>修姆斯在向伯爵夫人出示「假钻石」时，同步解释人工合成钻石的制造原理（钻石粉末高温压制）</td>
+<td>第三章 / 约 47%</td>
+<td>给读者一个科学背景，让「假钻石」的说法更具说服力</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_17">假线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>误导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>钻石在布莱辛的牙粉瓶里被发现，确凿且直接，所有人包括警方都认为是真钻石</td>
+<td>第二章 / 约 30%</td>
+<td>读者跟着官方视角认定「案件已破、钻石已找回」，完全忽视「被找到的钻石可能是假的」这一可能性</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_18">〈犹太灯〉第二章</h3>
+<hr>
+<h3 id="whodunit-whydunit">真相四：犹太灯窃案的真正策划者（whodunit + whydunit）</h3>
+<ul>
+<li><strong>线索收敛点：约 91%（第八章后段）</strong></li>
+<li>答案：<strong>表面真凶</strong>是家庭教师爱丽丝·德曼（Alice Demun），她自愿犯案并自行「协商了罗宾的协助」；但她只是工具。<strong>真正的悲剧核心</strong>是<strong>男爵夫人苏珊·d'Imblevalle</strong>：她轻率与冒险者布雷松（Bresson）交际，留下数封私信；布雷松以此勒索，要求她交出藏在犹太灯底座的首饰。爱丽丝看穿女主人的痛苦，主动联系罗宾策划窃案，以满足布雷松要求，换回私信，令男爵夫人摆脱勒索。</li>
+</ul>
+<h4 id="_19">关键线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>修姆斯否定「外部闯入」假说：梯子孔洞间距不同（前后两组由同一木块制造），阳台刻痕来自砂纸，木块藏在花圃中——窃案由内部人员伪造现场</td>
+<td>第七章 / 约 15%</td>
+<td><strong>犯案手法揭露</strong>：窃贼是家内人，不是外来者</td>
+</tr>
+<tr>
+<td>2</td>
+<td>小女孩亨丽葉特说：家庭教师爱丽丝习惯从报纸剪下字母拼成「电报」寄出</td>
+<td>第七章 / 约 45%</td>
+<td>首个指向爱丽丝的线索，且是她联络外部的工具</td>
+</tr>
+<tr>
+<td>3</td>
+<td>儿童识字课本中，「星期六（Saturday）」一词遭剪除；另有九个字母和三个数字缺失，排列后得「REPOND Z—CH—237」，指向 Echo de France 个人广告栏 237 号</td>
+<td>第七章 / 约 50%</td>
+<td>确认爱丽丝透过报纸广告与罗宾通讯，确定犯案日期（周六）及行动代号</td>
+</tr>
+<tr>
+<td>4</td>
+<td>计程车号码 8,279（从爱丽丝随身小布包掉出）指向周日早晨的出行记录：她独自携带「细长包裹」从公园附近叫车至 avenue des Ternes</td>
+<td>第七章 / 约 60%</td>
+<td>确认窃案后爱丽丝转交赃物的路线</td>
+</tr>
+<tr>
+<td>5</td>
+<td>修姆斯在 Echo de France 查出七则广告，完整记录爱丽丝（代号 540）向罗宾求助、提供地址、约定行动的全过程；最后一则：「了解。周六执行。周日早晨于公园」</td>
+<td>第八章 / 约 85%</td>
+<td>通讯记录完整重建，确认爱丽丝是主动策划者（而非被胁迫者）</td>
+</tr>
+<tr>
+<td>6</td>
+<td>男爵指出：书房的门「从内锁住」，爱丽丝不可能如她所称的方式进入——爱丽丝的自白在事实层面崩溃</td>
+<td>第八章 / 约 91%</td>
+<td><strong>本真相的线索收敛点</strong>：读者至此可推断爱丽丝所言为假，真正的内部人应另有其人</td>
+</tr>
+<tr>
+<td>7</td>
+<td>男爵夫人苏珊亲口承认：窃案是以她为受害者背景策划的，爱丽丝为她牺牲自己，那些被布雷松掌握的私信才是一切的起点</td>
+<td>第八章 / 约 93%</td>
+<td>真相完全揭晓</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_20">辅助线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>罗宾提前寄信警告修姆斯不要介入，措辞异常强烈——这与罗宾的一贯作风不符，暗示他此次是站在保护者的立场，而非单纯的犯罪者</td>
+<td>第七章 / 约 5%</td>
+<td>罗宾在此案中扮演「善意的灰色」角色，读者若留意此处，可怀疑他的动机不只是盗窃</td>
+</tr>
+<tr>
+<td>2</td>
+<td>修姆斯在女主人厨房、马厩、花园均一无所获——盗窃者不需要进入这些地方，因为她本就住在屋内</td>
+<td>第七章 / 约 35%</td>
+<td>排除外部人员，缩小内部嫌疑范围</td>
+</tr>
+<tr>
+<td>3</td>
+<td>送往布雷松的信件（死后才到）写道：「他不接受任何妥协。他要求一切——第一件以及第二次事件的物品。否则他将采取行动」——布雷松的敲诈并未因归还物品而停止</td>
+<td>第八章 / 约 87%</td>
+<td>揭示布雷松始终持续施压，说明爱丽丝策划的窃案并不足以让男爵夫人解脱，也解释了第二次窃案的动机</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_21">假线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>误导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>所有外部闯入的「物证」：阳台梯子、切割窗格、孔洞痕迹、Parc Monceau 的入口</td>
+<td>第七章 / 约 10%</td>
+<td>让读者跟着警方以及男爵相信这是一场标准的外部入室窃案</td>
+</tr>
+<tr>
+<td>2</td>
+<td>爱丽丝以坦然、自白的方式「承认」自己是盗贼，却说不清门锁细节</td>
+<td>第八章 / 约 90%</td>
+<td>爱丽丝的善意谎言几近完美，若非男爵点破门锁矛盾，几乎成功将责任揽在自己身上</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="whodunit_1">真相五：布雷松的身份与第二次窃案（whodunit）</h3>
+<ul>
+<li><strong>线索收敛点：约 90%（第八章）</strong></li>
+<li>答案：布雷松是以假名租住公寓的勒索者，长期掌握男爵夫人的私信作为筹码。他另行策动了第二次窃案（盗走钻石鼻烟盒、蛋白石项链），此事与爱丽丝无关——是他个人的贪婪。被修姆斯与加尼马尔追捕后，他将赃物包好投入塞纳河中藏匿，随后因绝望而自杀。</li>
+</ul>
+<h4 id="_22">关键线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>「Bresson」以假名租用 avenue des Ternes 公寓，租期约一个月，行踪诡秘，身份不明——同一公寓有不同首字缩写的衣物，说明真名非「Bresson」</td>
+<td>第七章 / 约 58%</td>
+<td>首次确认布雷松的假身份性质</td>
+</tr>
+<tr>
+<td>2</td>
+<td>修姆斯目击布雷松夜间前往塞纳河边抛弃包裹，但无法拦截</td>
+<td>第七章 / 约 80%</td>
+<td>揭示布雷松正在销毁（藏匿）第二次窃案的物品</td>
+</tr>
+<tr>
+<td>3</td>
+<td>布雷松在两人闯门时自杀——不是罗宾的作风，也不是罗宾的手下会有的行为，确认此人是另一套势力</td>
+<td>第七章 / 约 85%</td>
+<td>排除布雷松是罗宾的人</td>
+</tr>
+<tr>
+<td>4</td>
+<td>布雷松死后收到的信件揭示：他仍在向某方施压，要求同时取得「第一件与第二件事件的物品」——说明他知晓两次窃案皆与同一家庭相关</td>
+<td>第八章 / 约 87%</td>
+<td>明确第二次窃案也是布雷松的计谋，而非罗宾所为</td>
+</tr>
+<tr>
+<td>5</td>
+<td>修姆斯在船沉后游至岸边，依照罗宾在船上无意透露的暗示，在河床找到布雷松藏匿的包裹，包含犹太灯及其他被盗物品，灯底座中确有首饰</td>
+<td>第八章 / 约 97%</td>
+<td>所有赃物寻回，布雷松的勒索手段（以首饰本身作抵押）完整呈现</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_23">假线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>误导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>修姆斯在公寓外见到一个「装扮成乞丐」的跟踪者，以为他是布雷松的同谋或监视者</td>
+<td>第八章 / 约 82%</td>
+<td>这名乞丐是罗宾的线人，不是布雷松的人——但此人的存在让读者以为布雷松在暗中部署防线</td>
+</tr>
+<tr>
+<td>2</td>
+<td>第二次窃案的现场（切割窗格、梯子）与第一次几乎完全相同，让修姆斯的「内部人假说」似乎被推翻</td>
+<td>第七章 / 约 67%</td>
+<td>第二次是真正的外部闯入，但读者和修姆斯同样困惑：这是否推翻了第一次的推断？修姆斯坚持不是</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_24">推理路径重建</h2>
+<h3 id="_25">〈金发女郎〉：一条从建筑学到爱情的推理路径</h3>
+<p>阅读第一章时，读者目睹的是一场热闹的财产争夺喜剧，看不出任何「谜」的成分——罗宾的身份、方法、目标都是透明的。真正的谜在第二章浮现：<strong>金发女郎是谁？她如何出现又消失在密封的房间？</strong></p>
+<p>一个仔细的读者，在第二章（约 33% 处）若注意到加尼马尔的推论——「Antoinette Bréhat 的头发与金发女郎完全一样，且她在男爵案后翌日立刻以『Madame de Réal』出现」——应可推断这是同一人。但她的具体身份仍是谜。</p>
+<p><strong>第一个关键节点（约 42%）</strong>：修姆斯在街角读到「Destange, architecte, 1875」的铭文。这是一个小细节，容易被忽略，但对一个具备建筑史知识的读者来说，这是核爆时刻——三个「不可能的消失」忽然有了一个统一的物理解释。</p>
+<p><strong>第二个关键节点（约 53%）</strong>：三个犯罪现场（rue Clapeyron、avenue Henri-Martin、Château de Crozon）全部确认由同一位德斯坦格设计建造。读者至此可以<strong>完整推导出「如何做到」</strong>：同一建筑师，秘密通道，连通邻屋，进出自如。</p>
+<p><strong>第三个关键节点（约 62%）</strong>：修姆斯看见克洛蒂德与罗宾（以 Maxime Bermond 之名）的私下互动，意识到她不只是被动的建筑师之女，而是主动的同谋。此时仍需一步：她是否就是金发女郎？</p>
+<p><strong>收敛点（约 75%）</strong>：修姆斯跟踪蒙面女子穿越秘密通道，掀开她的面纱——<strong>克洛蒂德·德斯坦格</strong>，金发女郎的真面目正式揭晓。所有谜团在此汇合：她用她父亲的建筑蓝图穿行巴黎，她的爱令她甘愿成为罗宾的影子。</p>
+<h3 id="_26">〈犹太灯〉：一条从孩童之口到道德真相的推理路径</h3>
+<p>〈犹太灯〉是一个「反向」谜题：表面窃案很快被识破（15%），但真正的谜——<strong>谁？为何？</strong>——深藏到最后。</p>
+<p><strong>第一个关键节点（约 15%）</strong>：修姆斯破解假现场，确认窃贼是家内人。但家里的人有谁？男爵夫妇、佣人、家庭教师、孩子。</p>
+<p><strong>第二个关键节点（约 45%）</strong>：亨丽葉特的一句话——「家庭教师剪字母拼电报」——看似童言无忌，却是整个通讯体系的钥匙。一个仔细的读者，结合「是谁最早阻止修姆斯调查」的线索（抵达车站的神秘少女），此时应能合理怀疑爱丽丝不只是护士，更是案中人。</p>
+<p><strong>第三个关键节点（约 50%）</strong>：被剪去的字母还原出「REPOND—ECHO—237」。这是爱丽丝的通讯密码，指向她与罗宾之间的谋谋。</p>
+<p><strong>第四个关键节点（约 85%）</strong>：七则报纸广告重建整段通讯历史。爱丽丝是主动求助者（「540 Lady implores protection」），而她求助的对象是罗宾——她向罗宾提供了地址、确认了行动日期。</p>
+<p><strong>第五个关键节点（约 91%）</strong>：男爵指出门锁矛盾。爱丽丝的自白在逻辑上崩溃——她说自己从书房的门进入，但那扇门从内锁住，当晚屋内只有男爵夫妇两人。</p>
+<p><strong>真相收敛（约 93%）</strong>：男爵夫人的崩溃完成最后一步。读者至此才明白爱丽丝是保护者，而非罪魁；男爵夫人才是那个持有「动机」的人——她的过去、她对布雷松的一时轻信，才是这一切的起点。这是整本书最具震撼力的道德反转：<strong>你以为你找到了「罪犯」，但她其实是那个最无辜的人。</strong></p>
+<hr>
+<h2 id="_27">补充说明</h2>
+<p><strong>两篇的推理设计对比</strong></p>
+<p>这本书最引人入胜之处，恰恰在于两个故事弧的推理设计策略截然相反：</p>
+<table>
+<thead>
+<tr>
+<th>面向</th>
+<th>〈金发女郎〉</th>
+<th>〈犹太灯〉</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>谜底方向</td>
+<td>由下而上（从事件追溯人物）</td>
+<td>由上而下（从人物追溯动机）</td>
+</tr>
+<tr>
+<td>收敛速度</td>
+<td>渐进式、多层次</td>
+<td>突然的最后反转</td>
+</tr>
+<tr>
+<td>核心技巧</td>
+<td>建筑学作为推理工具</td>
+<td>儿童语言作为线索媒介</td>
+</tr>
+<tr>
+<td>最大惊奇</td>
+<td>建筑师的秘密通道</td>
+<td>「真正的犯人」是受害者的保护者</td>
+</tr>
+<tr>
+<td>道德底色</td>
+<td>天才之间的对称之战</td>
+<td>牺牲与爱的不对称戏剧</td>
+</tr>
+</tbody>
+</table>
+<p><strong>修姆斯 vs. 罗宾：这场对决的特殊性</strong></p>
+<p>卢布朗在这本书中做了一件在侦探文学史上前所未见的事：他让两位最强的「对手」共享同一本书的叙事主轴，却没有让任何一方完胜。修姆斯解开了几乎所有谜题，找回了蓝钻石，逮住了罗宾；但罗宾在被逮捕后逃脱、令加尼马尔颜面尽失，克洛蒂德的身份由修姆斯亲自封存，而修姆斯最终的「真正失败」是在〈犹太灯〉中——他的调查虽然成功，却拆散了一个家庭，令布雷松的真相曝光，令男爵夫人的秘密无所遁形。罗宾反倒在最后一幕轻描淡写地指出：「如果你不介入，我本可以替他们收拾好一切，什么也不用破坏。」</p>
+<p>这是一个深刻的文学讽刺：<strong>侦探的工作是揭露真相，但有时真相的揭露本身才是最大的伤害。</strong></p>
+<p><strong>「赫洛克·修姆斯」的书写策略</strong></p>
+<p>卢布朗对柯南·道尔原作的致敬与调侃并行。他为修姆斯安排的搭档威尔森（Watson 的化身）是一个更为滑稽的陪衬——他不只在各种误判中出糗，更真的两度受伤（手臂骨折、刀刺心脏附近）。柯南·道尔后来曾要求卢布朗更改角色名称，以免读者混淆，这也是为何书中使用「Herlock Sholmes」而非「Sherlock Holmes」的原因。然而卢布朗对修姆斯的刻画绝非恶意嘲弄——他让这位英国侦探展现了真正的智慧与风骨，只是让他面对一个比任何罪犯都更复杂的对手：<strong>一个有情感、有美学、有道义的罗宾。</strong></p>
+<p><strong>对台湾读者的补充</strong></p>
+<p>〈金发女郎〉中，蓝钻石的历史背景在中文语境中值得一提：蓝钻石曾属法国皇室（故事设定中与「奥尔良公爵」及女演员有关）。这种宝石之所以稀贵，在于其天然蓝色源自硼元素的特殊晶格结构，是钻石中最稀有的颜色之一，历史上的「希望钻石（Hope Diamond）」即为著名案例。卢布朗以此为道具，恰好呼应当时法国上流社会对贵族遗物的迷恋——对读者而言，蓝钻石是「社会阶层固化」的象征，而罗宾「盗富济智」的行为在道德上因此更具张力。</p>
+    <a href="../index.html" class="back-link">← 回到首页</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">推理解剖室</p>
+    <p>五位作者 · 八十八部作品 · 一百三十五年推理文学的难度演化</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,10 +1,10 @@
-📖 【推理解剖室】亞森・羅蘋（Arsène Lupin）
-✍️ 莫里斯・盧布朗（Maurice Leblanc）；改編合著：Edgar Jepson · 
+📖 【推理解剖室】《亞森·羅蘋大戰赫洛克·修姆斯》
+✍️ 莫里斯·盧布朗（Maurice Leblanc） · 
 
-推理難度 ★★★☆☆ | 迷霧等級 ★★★★☆
+推理難度 ★★★★☆ | 迷霧等級 ★★★★☆
 
-九月的晴日，百萬富翁古爾內—馬丁（Gournay-Martin）一家在旗下的夏爾姆拉斯古堡（Château de Charmerace）消磨最後幾天。堡主的長女杰曼（Germaine）即將嫁給名義上的堡主——夏爾姆拉斯公爵雅克（Jacques），伴隨她的還有秘書兼伴讀索妮亞（Sonia Kritchnoff），一個出身俄國、孤苦伶仃的年輕女子。 當天出現了兩個陌生訪客：自稱退休啤酒商的夏洛雷（Charolais）父子，藉詢問二手車為由登門。他們來得奇怪，走得更奇怪——臨走時少年兒子試圖袖走一只銀質小雕像，卻被父親嚴厲低聲制止。隔日，舉家遷往巴黎前夕，羅蘋的一封信如炸彈般投入：聲稱將在明天清晨「…
+ 〈金髮女郎〉（第一至六章） 凡爾賽數學教授熱布瓦（Gerbois）在舊貨店購得一張小書桌，不意捲入亞森·羅蘋精心設計的財富爭奪戰——那張書桌的秘密抽屜裡，藏著一張中了百萬法郎頭彩的彩票。羅蘋盜走書桌，奪得彩票，卻陷入「票在我手，法理在你」的困局；教授則因女兒蘇珊（Suzanne）遭羅蘋「請走」充當人質，被迫妥協，換得半數獎金。 就在這場鬧劇尾聲，一位神出鬼沒的「金髮女郎」悄然登場——她先以「Antoinette Bréhat」之名出現在遇害的歐特雷克男爵（Baron d'Hautrec）臥室，再以「Madame de Réal」身份蟄伏於克羅宗伯爵夫人身邊，策動藍鑽石失竊案。加尼馬爾循線追查…
 
-🔗 完整分析 → https://murderresearch.github.io/Detective-Analysis/articles/arsene-lupin.html
+🔗 完整分析 → https://murderresearch.github.io/Detective-Analysis/articles/arsene-lupin-vs-herlock-sholmes.html
 
-#推理小說 #推理解剖室 #莫里斯・盧布朗
+#推理小說 #推理解剖室 #莫里斯盧布朗
