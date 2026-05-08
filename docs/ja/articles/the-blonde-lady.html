@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>金髪の美女（The Blonde Lady） — 推理解剖室</title>
+<meta name="description" content=" 第一章：金髪の美女（The Blonde Lady） すべては一枚の宝くじから始まる。ヴェルサイユの数学教師ジェルボワがたまたま購入した宝くじには当選番号が記されていたが、その番号の記録ごと宝くじが書き机から盗まれてしまう。盗賊はすぐに正体を明かす——アルセーヌ・ルパンだ。百万フランの宝くじはやがて二人の間の露骨な交">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-blonde-lady.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-blonde-lady.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-blonde-lady.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-blonde-lady.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-blonde-lady.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-blonde-lady.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-blonde-lady.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-blonde-lady.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif JP', serif;
+  --font-sans: 'Noto Sans JP', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">推理解剖室</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">ホーム</a>
+        <a href="../index.html#latest">最新</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="言語" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 日本語</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-blonde-lady.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-blonde-lady.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-blonde-lady.html">English</a>
+      <a class="lang-item active" data-lang="ja" href="/Detective-Analysis/ja/articles/the-blonde-lady.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/the-blonde-lady.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/the-blonde-lady.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/the-blonde-lady.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/the-blonde-lady.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">モーリス・ルブラン · </div>
+    <h1>金髪の美女（The Blonde Lady）</h1>
+    <div class="subtitle">モーリス・ルブラン（Maurice Leblanc） · 長編小説（二つの独立した章を含む）</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">推理難易度</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">霧の濃度</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="the-blonde-lady">金髪の美女（The Blonde Lady）— 推理分析</h1>
+<h2 id="_1">基本情報</h2>
+<ul>
+<li>著者：モーリス・ルブラン（Maurice Leblanc）</li>
+<li>発表年：1907年（フランス語原版《Arsène Lupin contre Herlock Sholmès》）；1910年英訳版刊行</li>
+<li>ジャンル：長編小説（二つの独立した章を含む）</li>
+<li>探偵：ホームロック・シアーズ（Holmlock Shears、シャーロック・ホームズの諧謔的分身）、フランス人刑事ガニマール（Ganimard）が補佐</li>
+<li>核心謎題の種類：whodunit × howdunit × wherefound——三種類の謎が並立し、幾重にも重なり合う</li>
+</ul>
+<hr>
+<h2 id="_2">推理難易度総評</h2>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星評価</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難易度（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>平均収束点は約80%——第一章における金髪の美女の正体は約75%、青いダイヤの真の在り処は約93%；第二章のユダヤの燭台の内情は約95%。シアーズの推理過程は部分的に追うことができるが、ルブランは意図的に最後の瞬間まで最も深い真相を明かさない</td>
+</tr>
+<tr>
+<td>霧の濃度（Fog Rating）</td>
+<td>⭐⭐⭐⭐</td>
+<td>二重の囮（偽の青いダイヤ、偽の「本物の」マドモワゼル・ド・レアル）、シアーズ自身も三度罠に落ちる；第二章では無実の人物による自発的な自白が真相を覆い隠し、霧の中にさらに霧がかかる</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_3">あらすじ</h2>
+<h3 id="the-blonde-lady_1">第一章：金髪の美女（The Blonde Lady）</h3>
+<p>すべては一枚の宝くじから始まる。ヴェルサイユの数学教師ジェルボワがたまたま購入した宝くじには当選番号が記されていたが、その番号の記録ごと宝くじが書き机から盗まれてしまう。盗賊はすぐに正体を明かす——アルセーヌ・ルパンだ。百万フランの宝くじはやがて二人の間の露骨な交渉材料となり、ルパンはジェルボワの娘シュザンヌを人質にとって教授を屈服させ、五十万フランを分け取る。</p>
+<p>同じ頃、パリのアンリ・マルタン大通りでは別の殺人事件が世間を震撼させていた。元外交官のドートレック男爵が寝室で変死体として発見され、稀代の名宝「青いダイヤ」（かつてフランス王室の御宝）は死者の指にはめられたままなのに、犯人は煙のように消えていた。捜査により、「アントワネット・ブレア」と名乗る女性同伴者が姿を消したことが判明し、その髪の色はジェルボワ事件で目撃された金髪の美女と一致していた。</p>
+<p>続いてオークション会場での怪事件が起きる。富豪の買い手エルシュマンが高値でダイヤを競り落とそうとした瞬間、謎めいたメモが彼の注意を引き離し、青いダイヤはド・クロゾン伯爵夫人の手に渡った。六ヶ月後、伯爵夫人の夏の別荘でダイヤが再び盗まれ——最終的にオーストリア領事ブライヒェンの歯磨き粉の瓶の中から「発見」される。</p>
+<p>このときロンドンの名探偵ホームロック・シアーズ（ホームズの諧謔版）が依頼を受けて介入し、大勝負が幕を開ける。シアーズは重要な手がかりをたどる。三つの犯行現場——弁護士デティナンのアパート（クラパレイロン通り）、男爵の旧邸（アンリ・マルタン大通り134番地）、クロゾン城——がいずれも同一の建築家リュシアン・デスタンジュ（Lucien Destange）によって設計されたことを発見する。秘密の通路を通じて、金髪の美女は神出鬼没に動き回れたのだ。シアーズは新しい秘書に変装してデスタンジュ邸に潜入し、「金髪の美女」とは「外出しない」とされていた、黒髪の娘——クロティルド・デスタンジュ（Clotilde Destange）であることを最終的に確認する。彼女はルパンの愛人であり、愛する人のために殺人や宝石盗奪も辞さなかったが、良心の呵責を涙で潤む瞳の奥に隠していた。</p>
+<p>シアーズはクロティルドを拘束しようとするが、彼女は会話の途中でお針子に電話すると称してルパンに密告していた——あの「タクシー運転手」こそルパン本人だった！シアーズはノルマンディーの海辺まで強制的に連れ去られ、蒸気ヨットに乗せられて国外追放される。だがルパンは最終的にシアーズに逆追跡され、クレヴォー通りの秘密アジトを包囲されるも、エレベーターを使った一計で脱出する。シアーズは「クロティルドの自由」と引き換えに本物の青いダイヤを取り戻す——それはルパンのステッキの先端にある、中空のくるくる回る飾り球の中に隠されていた。</p>
+<h3 id="the-jewish-lamp">第二章：ユダヤの燭台（The Jewish Lamp）</h3>
+<p>ロンドンから戻ったシアーズは再びパリへ赴き、ド・アンブリヴァル男爵のために外部からの侵入に見えた窃盗事件を調査する。誰かが窓を割って侵入し、古びたユダヤの燭台を盗んでいった——その台座には価値ある金のキメラ・ルビー翡翠細工が秘められていた。シアーズはただちに内部の人間の仕業と断定する。外に立てかけられたはしご跡、ガラスの切断跡、地面の穴……すべて精巧に演出された偽装にすぎない。</p>
+<p>家庭教師のアリス・ドムン（Alice Demun）が疑惑の焦点となる。シアーズは子供の絵本から切り取られた特定の文字を発見し、それをつなぎ合わせてアリスと「ルパン」が《フランスの反響》紙（Echo de France）を使って秘密通信していた電報暗号を解読する。アリスはついに自白して罪を認める——しかし男爵がある細部（書斎の扉が内側から掛け金をかけられていた）に疑問を呈したとき、シアーズははっと悟る。アリスは無実だった。真の首謀者は伯爵夫人スザンヌ・ド・アンブリヴァル——彼女は脅迫者ブレッソン（Bresson）に私的な手紙を握られており、アリスを通じてルパンに連絡を取り、ユダヤの燭台を盗ませることで手紙を取り戻そうとしたのだ。アリスは女主人への深い情義から自ら罪をかぶった。ブレッソンは最終的にシアーズとガニマールの追跡の末に自殺し、宝物はセーヌ川に沈むが、シアーズが引き揚げて回収する。</p>
+<hr>
+<h2 id="_4">真相の解剖</h2>
+<h3 id="_5">第一章：金髪の美女</h3>
+<hr>
+<h4 id="_6">真相その一：「金髪の美女」の真の正体</h4>
+<ul>
+<li><strong>線索収束点：約75%</strong></li>
+<li>答え：クロティルド・デスタンジュ（Clotilde Destange）、著名な建築家リュシアンの娘、ルパンの秘密の愛人。彼女は三つの偽名で登場する：男爵に付き添った「アントワネット・ブレア」（Antoinette Brehat）、伯爵夫人にダイヤ購入を勧めた「ド・レアル夫人」（Mme. de Real）、そしてデティナン事務所からルパンを連れ去った謎の「金髪の美女」。登場時は眩いばかりの金髪で、事後は本来の黒髪に戻る。</li>
+</ul>
+<h4 id="_7">重要な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場箇所（章／パーセント）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>金髪の美女の髪は「金属的な光沢」を持つと描写され、デティナン事件と青いダイヤ事件のいずれでも目撃者が同じ特徴を述べている</td>
+<td>第一章 Ch.1–2 ／約10–25%</td>
+<td>同一人物が複数の事件で現れるという基本的な識別特徴を形成する</td>
+</tr>
+<tr>
+<td>2</td>
+<td>三つの犯行現場——クラパレイロン通り25番地、アンリ・マルタン大通り134番地、クロゾン城——の門廻りにはいずれも「デスタンジュ建築師、1874／1875／1877」と刻まれている</td>
+<td>第一章 Ch.4 ／約65%</td>
+<td>これが核心の物的証拠：同一建築家→同一秘密通路の設計→同一の黒幕</td>
+</tr>
+<tr>
+<td>3</td>
+<td>シアーズがデスタンジュ邸に変装潜入した後、ルパンが「マクシム・ベルモン」の名で自由に出入りし、クロティルドと深い仲であることを目の当たりにする</td>
+<td>第一章 Ch.4 ／約70%</td>
+<td>金髪の美女が必ずこの邸の人間であることを確認する</td>
+</tr>
+<tr>
+<td>4</td>
+<td>シアーズは覆面をした女を尾行してあるアパートに辿り着き、引き戸の壁板を通じてその女がクロティルドだと判明する——彼女はデスタンジュの書庫の円形ホールへと直接つながっていた</td>
+<td>第一章 Ch.5 ／約75%</td>
+<td><strong>最後の重要線索</strong>：クロティルドが金髪の美女であると正式に確認される</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_8">補助的な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場箇所（章／パーセント）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>ガニマールが男爵の手元で発見した金髪は、鑑定人によって「明るい金色の金属的光沢」と認定され、金髪の美女のものと一致する</td>
+<td>第一章 Ch.2 ／約25%</td>
+<td>同一人物が犯行を行った可能性を強化する</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ド・レアル夫人はまず伯爵夫人に青いダイヤの購入を勧め、その後伯爵夫人の邸でダイヤを盗む</td>
+<td>第一章 Ch.2 ／約30–40%</td>
+<td>金髪の美女が積極的に標的を誘導して購入させた上で盗み取るという罠を張っていたことを示す</td>
+</tr>
+<tr>
+<td>3</td>
+<td>クロティルドの「外出しない」引きこもりというイメージが、金髪の美女が毎回姿を現した後に謎のように消える時間軸と一致する</td>
+<td>第一章 Ch.4 ／約68%</td>
+<td>逆説的な手がかり：「外出しない」人が外に出られない……いや、正面玄関を使う必要がないだけでは？</td>
+</tr>
+<tr>
+<td>4</td>
+<td>デスタンジュの古い台帳に「M. B.」（マクシム・ベルモン＝ルパン）の秘密ファイルがあり、十五棟の「改築」建物が記録されている</td>
+<td>第一章 Ch.5 ／約79%</td>
+<td>ルパンがこれらの建物を組織的に利用していたことを示し、合理的な操作の枠組みを提供する</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_9">偽の手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場箇所（章／パーセント）</th>
+<th>誤誘導の方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>ガニマールは茶館に罠を仕掛け、薄い金色の髪と青白い顔をした「実在する」ド・レアル夫人（宝石ブローカー）を引き出す</td>
+<td>第一章 Ch.2 ／約37%</td>
+<td>読者に金髪の美女がこの本物の宝石商であると思わせ、ガニマールの捜査が失敗に終わると宣告する——実際にはこの女はルパンが巧妙に仕組んだ影武者の囮だった</td>
+</tr>
+<tr>
+<td>2</td>
+<td>男爵邸の外壁にある「はしご跡」と「地面の穴」が外部からの侵入を示唆しているように見える</td>
+<td>第一章 Ch.2 ／約20%</td>
+<td>捜査の方向を外来者の侵入へと逸らせる。実際には事件時に誰も窓から侵入してはいなかった</td>
+</tr>
+<tr>
+<td>3</td>
+<td>クロティルドの黒髪：読者もシアーズも一時はそのためにクロティルドが「金髪の美女」であることを否定していた</td>
+<td>第一章 Ch.4–5 ／約65–70%</td>
+<td>シアーズは後に自嘲する：「金髪の美女が犯行後もずっと金髪のままでいると思うか！」</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="_10">真相その二：「青いダイヤ」の真の在り処</h4>
+<ul>
+<li><strong>線索収束点：約93%</strong></li>
+<li>答え：ブライヒェン領事の歯磨き粉の瓶から発見されたのは複製品（ダイヤの粉を高温で溶かし直して作った模造品）；本物の青いダイヤは、金髪の美女が男爵の指から取り外せなかった後、ずっとルパンの手中にあった。彼は本物のダイヤを自分のステッキの先端——中空になったくるくる回る飾り球の中——に隠していた。最終的にシアーズはクロティルドの自由と引き換えに本物のダイヤを受け取る。</li>
+</ul>
+<h4 id="_11">重要な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場箇所（章／パーセント）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>シアーズは列車の中で伯爵夫人の指輪を取り出して鑑定し、その場で断言する：「これは偽物だ。」</td>
+<td>第一章 Ch.3 ／約42%</td>
+<td>「本物のダイヤはルパンの手中にある」という前提を確立する</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ルパンは自ら模造品のすり替えを認め、金髪の美女（クロティルド）が本物のダイヤを盗み、模造品をブライヒェンの荷物に入れたと説明する</td>
+<td>第一章 Ch.3 ／約43%</td>
+<td>出来事の完全な論理を確認する——ただし本物のダイヤがどこに隠されているかはこの時点ではまだ明かされない</td>
+</tr>
+<tr>
+<td>3</td>
+<td>ルパンは網に掛かった後、隅からステッキを取り上げ、シアーズに底部の金具を回して先端の飾り球を開けるよう指示する</td>
+<td>第一章 Ch.6 ／約93%</td>
+<td><strong>最後の重要線索</strong>：本物のダイヤの隠し場所がついに明らかになる</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_12">補助的な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場箇所（章／パーセント）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>シアーズが伯爵夫人を説得して指のダイヤが偽物だと確信させる根拠として、光沢の異常さと台座の微妙な不自然さを挙げる</td>
+<td>第一章 Ch.3 ／約42%</td>
+<td>「すり替え説」に物理的な根拠を与える</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ルパンはシアーズに言う：「クロティルドの自由を保証してくれれば、あなたが欲しいものを渡そう。」——彼が本物のダイヤの「交換価値」を知っていることを示す</td>
+<td>第一章 Ch.6 ／約91%</td>
+<td>本物のダイヤが取引可能な具体的な資産であることを示唆する</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_13">偽の手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場箇所（章／パーセント）</th>
+<th>誤誘導の方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>ブライヒェンの歯磨き粉の瓶から「青いダイヤ」が見つかったことで、全員（読者を含む）が事件は解決したと一時的に思い込む</td>
+<td>第一章 Ch.2 ／約35%</td>
+<td>読者にブライヒェンが盗賊だと誤信させ、「なぜ賢い泥棒が盗品を自分の荷物に隠すのか」という根本的な矛盾を見落とさせる</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="_14">真相その三：ルパンが密室から消えた方法——建築家の秘密通路</h4>
+<ul>
+<li><strong>線索収束点：約65%</strong></li>
+<li>答え：リュシアン・デスタンジュ建築家は三棟の建物を設計する際、いずれも隣接する建物へとつながる秘密通路、隠し階段、あるいは引き戸の壁板を設けていた。ルパンは長年「マクシム・ベルモン」の名でデスタンジュの未完成工事の後期施工に携わり、これらの通路の詳細をすべて掌握した上で利用していた。</li>
+</ul>
+<h4 id="_15">重要な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場箇所（章／パーセント）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>クラパレイロン通り25番地と23番地の門廻りに「デスタンジュ建築師、1875」と刻まれている</td>
+<td>第一章 Ch.4 ／約65%</td>
+<td>最初の重要な手がかり</td>
+</tr>
+<tr>
+<td>2</td>
+<td>アンリ・マルタン大通り134番地とその隣棟にも同様に「デスタンジュ建築師、1874」と刻まれている</td>
+<td>第一章 Ch.4 ／約66%</td>
+<td>二つ目の手がかり、三点が線でつながる</td>
+</tr>
+<tr>
+<td>3</td>
+<td>シアーズがクロゾン城に電話をかけ、城の正門に「リュシアン・デスタンジュ建築師、1877」と刻まれていることを確認する</td>
+<td>第一章 Ch.4 ／約67%</td>
+<td><strong>線索の収束</strong>：三つの場所がすべて同一建築家の手によるものと判明し、シアーズは「すべてが明らかになった！」と叫ぶ</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_16">補助的な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場箇所（章／パーセント）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>ルパンもクロティルドもデティナンのアパートへ「音もなく侵入」でき、探偵たちが厳重に張り込んでいても不可能ではなかった</td>
+<td>第一章 Ch.1 ／約10%</td>
+<td>通常ではない出入り口が存在することを示す</td>
+</tr>
+<tr>
+<td>2</td>
+<td>シアーズはマルモン通り40番地でガーネットが落ちた跡を発見し、地下室を追跡して42番地へ続くことを確認——隣接する建物がつながっているという事実を裏付ける</td>
+<td>第一章 Ch.5 ／約76%</td>
+<td>秘密通路の存在を具体的に検証する</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_17">偽の手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場箇所（章／パーセント）</th>
+<th>誤誘導の方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>シアーズとウィルソンはデティナンのアパートで夜通し捜索し、煙突、床、すべての扉を調べたが、どこにも出口が見当たらなかった</td>
+<td>第一章 Ch.1 ／約14%</td>
+<td>「消失」という謎の不可能性を強調し、「隣接する建物がつながっている」という真相を覆い隠す</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_18">第二章：ユダヤの燭台</h3>
+<hr>
+<h4 id="_19">真相その一：ユダヤの燭台盗難事件の真相——外部の賊ではなく、人間関係の恩讐</h4>
+<ul>
+<li><strong>線索収束点（表層：外部侵入の偽装）：約15%；深層（真の首謀者）：約95%</strong></li>
+<li>答え：</li>
+<li>表層の偽装：はしご、ガラスの切断、地面の穴……すべて偽造だ。シアーズは最初に現場を訪れた時点でこれが内部者の仕業だと見抜く。</li>
+<li>深層の真相：ド・アンブリヴァル男爵夫人スザンヌはかつて書いた私的な手紙を脅迫者ブレッソンに握られていた。手紙を取り戻すため、彼女は家庭教師アリス・ドムンを通じてルパンに連絡を取り、ユダヤの燭台（内部に翡翠の金のキメラ細工が隠されている）を盗ませることで対価とした。アリスは女主人を守るため、最終的に自ら罪をかぶろうとしたが、ある細部に嘘が露見する。</li>
+</ul>
+<h4 id="_20">重要な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場箇所（章／パーセント）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>はしごの跡が残す穴は、バルコニー下と手すり側で間隔が異なり、しかも形状がまったく同じ——明らかに同一の杭で偽造されたものだ</td>
+<td>第二章 Ch.1 ／約15%</td>
+<td>シアーズは庭で「穴あけ杭」を拾い上げ、外部侵入説の嘘を暴く</td>
+</tr>
+<tr>
+<td>2</td>
+<td>アリスは子供の絵本から特定の文字を切り取っており、シアーズはそれをつなぎ合わせて「REPONDEZ……ECH 237」——すなわち「《フランスの反響》紙237番に返信せよ」を解読する</td>
+<td>第二章 Ch.1 ／約78%</td>
+<td>アリスとルパンの秘密通信を確認し、事件の核心が浮かび上がる</td>
+</tr>
+<tr>
+<td>3</td>
+<td>男爵の証言：書斎の扉はその夜、内側から掛け金をかけられていた——もしアリスが書斎から燭台を盗んだなら、内側から誰かが扉を開けて彼女を入れたはずだ</td>
+<td>第二章 Ch.2 ／約95%</td>
+<td><strong>最後の重要線索</strong>：アリスの自白の論理を崩し、シアーズは方向を転換する——真の首謀者は女主人その人だった</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_21">補助的な手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場箇所（章／パーセント）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>盗難の一夜目、賊は燭台だけを盗んでいった；二夜目、本物の外部窃盗犯（ブレッソンの手下）はタバコ入れやネックレスなど値打ちものを盗んだ——二度の窃盗がまったく異なる性質のものだと示す</td>
+<td>第二章 Ch.1 ／約60%</td>
+<td>二度の盗みの対象を比較することで、一夜目は「特定の用途がある」燭台だけを狙っていたことが推論できる</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ブレッソンはセーヌ川のほとりで包みを捨てて引き返すが、別の追跡者にも監視されている——彼自身も誰かに見張られており、事件に別の絡み合いがあることを示す</td>
+<td>第二章 Ch.1 ／約82%</td>
+<td>ブレッソンは単なる買い手ではなく、脅迫の連鎖全体の一環であることを示す</td>
+</tr>
+<tr>
+<td>3</td>
+<td>子供のアンリエットがシアーズに打ち明ける：家庭教師は新聞の切り抜き文字で手紙を貼り合わせる習慣があり、子供自身が切ったのではないと</td>
+<td>第二章 Ch.1 ／約74%</td>
+<td>シアーズに事件を解く切り口を提供する</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_22">偽の手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場箇所（章／パーセント）</th>
+<th>誤誘導の方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>偽造されたはしご跡、切断されたガラス、バルコニーの擦り傷</td>
+<td>第二章 Ch.1 ／約10%</td>
+<td>標準的な外部窃盗の現場として演出され、警察（そして読者）を「外部侵入者を探す」という惰性的な思考に誘導する</td>
+</tr>
+<tr>
+<td>2</td>
+<td>アリス・ドムンは尋問中も落ち着き払い、自己弁護を一切しない。シアーズさえも彼女がルパンに鍛えられた老練な共犯者だと信じてしまう</td>
+<td>第二章 Ch.1–2 ／約70–90%</td>
+<td>読者とシアーズをともに誤った方向へ誘導する：真相はすでに暴かれたと思わせる。実際にはアリスは身を挺して女主人を守ろうとした無実の女性に過ぎない</td>
+</tr>
+<tr>
+<td>3</td>
+<td>ブレッソンの自殺が「慌てて逃亡する犯人が逮捕直前に自ら命を絶つ」という形で描かれ、彼こそ主犯だという示唆を醸し出す</td>
+<td>第二章 Ch.1 ／約84%</td>
+<td>読者に事件は終結したと思わせ、ブレッソンが盗賊ではなくあくまで脅迫者に過ぎないことを見落とさせる</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_23">推理経路の再構成</h2>
+<h3 id="_24">第一章：金髪の美女の解決経路</h3>
+<p><strong>シアーズが歩み、読者も理論上は辿れる一本の道：</strong></p>
+<p>読者にとっての最初の機会は約25%に訪れる：ガニマールの報告がアントワネット・ブレアの髪と金髪の美女が「完全に一致する」と指摘する。この時点で注意深い読者は、この二つの名前が同一人物である可能性に気づくべきだ。</p>
+<p>第二の機会は約35%前後：ド・レアル夫人が自ら伯爵夫人にダイヤ購入を勧め、その後不思議なことに伯爵夫人の邸で「盗み返す」——行動のパターンが全く同じだ。「金髪の美女」は三つの事件で一貫した行動様式を残している。</p>
+<p><strong>シアーズが本当に突破口を見出した節目は65%——建築家の刻み文字の発見だ。</strong></p>
+<p>それ以前に、シアーズはクラパレイロン通り25番地と23番地（ウィルソンが腕を骨折した後、シアーズが一人でこの刻み文字を目にした）で「デスタンジュ建築師」の文字に気づいていた。次にアンリ・マルタン大通りへ赴いて確認し、さらにクロゾン城へ電話で確認——三点が線でつながり、共通の建築家の存在が、空間的にまったく無関係な三つの事件を一本の因果の鎖で結び合わせる。</p>
+<p><strong>その後のシアーズの経路は読者が完全に追うことができる：</strong>
+- 建築家 → 本人を探し出す → 邸内に潜入する → ルパンが偽名でここに自由に出入りしていることを発見する → クロティルドの秘密の部屋（別棟へとつながる）を発見する → 金髪の美女の正体を確認する</p>
+<p>注目に値するのは、ルブランがシアーズを邸内に潜入させた直後に「クロティルドの姿」を描写し、読者に明確な視点のヒントを与えていることだ。ただし読者が「ついていけない」唯一の点は、シアーズがあれほど短い時間で建築家の刻み文字に「思い至った」経緯である——この直観的な飛躍はやや唐突に訪れており、シアーズ自身も、ウィルソンが骨折した瞬間になぜ突然ひらめいたのかを完全には説明できていない。</p>
+<hr>
+<h3 id="_25">第二章：ユダヤの燭台の解決経路</h3>
+<p><strong>この章の醍醐味は、二層にわたる真相にある：</strong></p>
+<p><strong>第一層（約15%）：偽の外部侵入</strong>
+シアーズは一時間もかからず偽装を見破る。この経路は読者に完全に開かれている。穴の間隔を測る（バルコニー下9インチ、手すり側11インチ、形が同じなのに平行でない）、庭で偽造杭を見つける——どれも読者が本来発見できた「可視の手がかり」だ。シアーズの推論は：真の窃盗犯は各品物の場所を熟知しており、かつてここに住んでいたか働いていたかのどちらかだ、ということだ。</p>
+<p><strong>第二層（約95%）：真の首謀者は誰か</strong>
+アリスの自白で読者（そしてシアーズ）はいったん気を緩める。しかし男爵の目立たない証言——「書斎の扉はその夜内側から掛け金をかけられていた」——がほぼ最後の瞬間にアリスの嘘を突き崩す。</p>
+<p>この細部は理解するのが難しくはない：もしアリスが書斎から燭台を盗んだなら、書斎の扉は必ず内側から誰かが開けて彼女を入れたはずだ。その時間、書斎にいたのは男爵夫妻だけだった。つまり夫婦のどちらかがアリスを入れたことになる——あるいは夫婦のどちらかが自分で燭台を盗んでアリスに渡した、ということになる。</p>
+<p>シアーズが男爵夫人へと向き直ったとき、その顔色がすべてを物語っていた。</p>
+<p>この「逆転」は読者にとって不可能ではないが、アリスの自白を聞いた後も「扉の掛け金という細部」への警戒心を保ち続けることが必要だ。ルブランはここで「情報過多」という手品を使っている：アリスの一見完璧な自白が、この唯一の論理的矛盾を覆い隠してしまうのだ。</p>
+<hr>
+<h2 id="_26">補足説明</h2>
+<h3 id="_27">シリーズにおける『金髪の美女』の特別な位置づけ</h3>
+<p>『金髪の美女』（英語版タイトルで言えば『Arsène Lupin versus Holmlock Shears』）は、ルブランのシリーズにおいて決定的な転換点をなす作品だ：ルパンはもはや無能な警察を手玉に取るだけの紳士泥棒ではなく、対等な相手と真正面から対峙する存在になった。</p>
+<p>ルブランの「シアーズ」が明らかにコナン・ドイルのホームズの直接の転用であることは言うまでもない——名前の綴りをわずかに変え、「ウィルソン」は「ワトスン」に対応し、「シアーズのパーク・レーン219番地」は「ベイカー街221番地」に対応する。この「テクスト横断的な諧謔」それ自体が一種の文学的遊戯だ：ルブランはコナン・ドイルへの挑戦を宣言しつつ、読者に向かって「ルパンはイギリス最高の探偵でさえ打ち倒せる」と告げているのだ。</p>
+<p>しかし興味深いことに、ルブランはルパンに一方的な勝利を与えていない。シアーズはほぼすべての局面でルパンに翻弄されながらも、真に打ち倒されることはない——建築家の手がかりを見抜き、金髪の美女の正体を確認し、本物の青いダイヤを取り戻し、最終的に第二局ではルパンを逮捕させることにも成功する（もっともルパンはお得意の劇的な方法で脱走するのだが）。この「好敵手同士、互いに一勝一敗」という設計こそ、『金髪の美女』最も心を打つ筆法のひとつだ。</p>
+<h3 id="_28">推理設計の構造的特徴</h3>
+<p><strong>本書は伝統的な推理小説ではなく、「追跡と駆け引きの文学」だ。</strong></p>
+<p>伝統的な探偵小説では、読者の楽しみは「探偵とともに謎を解くこと」にある。本書では、読者は三つの視点を同時に追う——シアーズ（追っている）、ルパン（逃げながら反転して追い返す）、そして超然とした作者の語り（いくばくかの称賛を伴った中立の立場）。この三角形の視点が、本書の「謎」を「犯人は誰か」だけにとどまらず、「次の一手を先に読むのはどちらか」という問いへと広げている。</p>
+<p>ルブランの設計においていくつか注目に値する手法がある：</p>
+<ol>
+<li>
+<p><strong>「偽の逮捕」という二重構造</strong>：第一章でシアーズは金髪の美女を捕まえたと思い込む（偽）、ルパンがガニマールに包囲されたとも思う（真、しかしルパンはやはり逃走する）；この「やっと捕まえた、また逃げた」という繰り返しのリズムは、意図的に読者を「もう少しで勝てる」と「またしても負けた」の間で往復させ、読む緊張感を生み出している。</p>
+</li>
+<li>
+<p><strong>謎解きのリズムの意図的なずれ</strong>：本書最大の謎（建築家の秘密通路）が全体の三分の二になってようやくシアーズに解き明かされるが、その後のシアーズの行動は極めて迅速で、「核心的な事実を知った」から「事件がほぼ収束する」までの落差が非常に短い。これにより後半に「なんてスピードが速いんだ」という疾走感を読者に与える。</p>
+</li>
+<li>
+<p><strong>「恋愛」が「罪行」を担う</strong>：クロティルドはルパンへの愛のために殺人や宝石盗奪も辞さないが、ほとんど宗教的ともいえる静けさと毅然とした態度を保ち続ける。第二章のアリスは親友への情義から女主人のために自ら進んで罪をかぶろうとする。この二人の女性の「自発的な犠牲」は、伝統的な意味での「犯人の暴露」を残酷で複雑なものにしてしまう——シアーズが最終的に二人に対して「目をつぶる」選択をするのは、まさに作者がそこで問いかけているからだ：「正義」とは真相を暴くことなのか、それとも人情を壊すことなのか？</p>
+</li>
+</ol>
+<h3 id="_29">シリーズ他作品との比較</h3>
+<p>ルブランのルパン短編と比べると、『金髪の美女』の推理密度はより高い：短編は通常謎の糸が一本だが、本書は同時に三本を操作し（金髪の美女の正体、青いダイヤの在り処、建築家の秘密）、さらに第二章の後段には一段と精巧な「二重の逆転」を設けている。</p>
+<p>コナン・ドイルのホームズと比べると、シアーズの思考経路はより外在化された形で描かれている（彼はしばしば推論の過程を声に出して言う）ため、読者が追いやすい；しかしルパンの存在によってシアーズは常に「監視され」「反制される」立場に置かれており、伝統的な探偵の全知感が損なわれる。その結果読者は探偵に感情移入しながらも、綱渡りをしながら笑顔を見せる泥棒に心臓が高鳴るのを抑えられなくなる。</p>
+<h3 id="_30">読者へのおまけ情報</h3>
+<p>「ホームロック・シアーズ」（Holmlock Shears）はルブランによるシャーロック・ホームズ（Sherlock Holmes）への諧謔であり、名前の綴りを少し変えたものだ。フランス語原版では「Herlock Sholmès」と表記されており、より直截だった。台湾では早い時期の中国語訳においてそのまま「シャーロック」や「ホームズ」と訳された例もあるが、厳密には著作権と法律上この二つのキャラクターは別人物だ——コナン・ドイルは生前この件についてルブランに抗議し、それがフランス語再版時に名前を「Holmlock Shears」へと変更させる契機となった。</p>
+<p>「ユダヤの燭台」（Jewish Lamp、フランス語で Lampe Juive）はヘブライの伝統に見られるハヌカー燭台の形式で、十九世紀末のヨーロッパの骨董市場では珍重されていた。ルブランがこの器物を選んだのは、「燭台に物を隠す」という実用的な機能以外にも、当時のフランス社会が「東方の異文化への神秘的な感覚」を持っていたことへのロマンティックな投影があったと言えるだろう。</p>
+<p>「青いダイヤ」（Blue Diamond）の物語背景は、歴史上著名な「フレンチ・ブルー」（French Blue）——かつてルイ14世の所有物であり、後に「ホープ・ダイヤモンド」（Hope Diamond）の前身となった宝石——を指し示している。ルブランはこの実在の歴史的伝説を巧みに借用し、架空の宝石にいくばくかの現実感を与えた。</p>
+    <a href="../index.html" class="back-link">← ホームに戻る</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">推理解剖室</p>
+    <p>五人の作家・八十八の作品・135年にわたる推理文学の難易度の進化。</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
