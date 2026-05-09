@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Aguja Hueca (The Hollow Needle) — Sala de Disección Detectivesca</title>
+<meta name="description" content="En el Château d'Ambrumésy, a orillas del mar en Normandía, ocurre un robo con asesinato en plena noche: Jean Daval, secretario privado del Conde de Gesvres, apa">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-hollow-needle.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-hollow-needle.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-hollow-needle.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-hollow-needle.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-hollow-needle.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-hollow-needle.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-hollow-needle.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-hollow-needle.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Sala de Disección Detectivesca</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Inicio</a>
+        <a href="../index.html#latest">Recientes</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Idioma" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 Español</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-hollow-needle.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-hollow-needle.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-hollow-needle.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/the-hollow-needle.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/the-hollow-needle.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/the-hollow-needle.html">Deutsch</a>
+      <a class="lang-item active" data-lang="es" href="/Detective-Analysis/es/articles/the-hollow-needle.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/the-hollow-needle.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">Maurice Leblanc · 1909</div>
+    <h1>La Aguja Hueca (The Hollow Needle)</h1>
+    <div class="subtitle">Maurice Leblanc · Novela larga (10 capítulos)</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Deducibilidad</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Nivel de niebla</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="la-aguja-hueca-the-hollow-needle-analisis-de-deducibilidad">La Aguja Hueca (The Hollow Needle) — Análisis de Deducibilidad</h1>
+<h2 id="informacion-basica">Información básica</h2>
+<ul>
+<li>Autor: Maurice Leblanc</li>
+<li>Año: 1909</li>
+<li>Género: Novela larga (10 capítulos)</li>
+<li>Detective: Isidore Beautrelet, estudiante de bachillerato de último año</li>
+<li>Tipo de misterio central: whodunit + howdunit + enigma de la ubicación del tesoro (whereis)</li>
+</ul>
+<hr>
+<h2 id="evaluacion-de-dificultad-deductiva">Evaluación de dificultad deductiva</h2>
+<table>
+<thead>
+<tr>
+<th>Indicador</th>
+<th>Estrellas</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deducibilidad（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>Punto de convergencia promedio: 62% — Las capas de verdad se distribuyen irregularmente; el secreto más central, «la aguja hueca», no puede deducirse razonablemente hasta el 85% del libro, mientras que los enigmas tempranos (qué fue robado, quién es el asesino) son relativamente más accesibles</td>
+</tr>
+<tr>
+<td>Nivel de niebla（Fog Rating）</td>
+<td>⭐⭐⭐⭐</td>
+<td>Engaños activos múltiples: cadáveres falsos, intercambio de sombreros, traidor infiltrado, víctima fingida, herido atendido en secreto — la desorientación es el arma más sofisticada de este caso</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="sinopsis">Sinopsis</h2>
+<p>En el Château d'Ambrumésy, a orillas del mar en Normandía, ocurre un robo con asesinato en plena noche: Jean Daval, secretario privado del Conde de Gesvres, aparece muerto en el estudio, mientras que Raymonde de Saint-Véran, sobrina del conde, dispara en la oscuridad contra un ladrón que huye e impacta el blanco. Sin embargo, el hombre herido desaparece misteriosamente — las ruinas del castillo son registradas sin resultado, las cuatro paredes están vigiladas, y el hombre parece haberse evaporado en el aire.</p>
+<p>Isidore Beautrelet, estudiante de bachillerato de tan solo 17 años, se infiltra en la escena de la investigación y, gracias a una extraordinaria capacidad de razonamiento lógico, resuelve varios enigmas en dos días: revela qué fue robado, identifica al asesino, confirma que el fugitivo herido no es otro que el célebre ladrón Arsène Lupin, y concluye que Lupin se esconde en una cripta subterránea bajo las ruinas. Los medios de comunicación se agitan; el joven detective se hace famoso de la noche a la mañana.</p>
+<p>Sin embargo, el triunfo de Beautrelet es efímero. Los secuaces de Lupin lo apuñalan; Raymonde es supuestamente asesinada y arrojada desde un acantilado; y en un documento cifrado antiguo aparecen dos palabras, «aiguille creuse» (aguja hueca), que apuntan hacia un secreto más antiguo y vasto. Beautrelet profundiza en la investigación, solo para descubrir que su padre ha sido secuestrado por Lupin como moneda de cambio. Este duelo de inteligencias, exhibido públicamente en los periódicos, conduce finalmente a una columna natural de roca en la costa normanda — la «aguja hueca», guardada en secreto por los reyes de Francia desde la época de César, una cámara natural que alberga los tesoros de innumerables generaciones y que constituye el trono final y oculto de Lupin.</p>
+<hr>
+<h2 id="analisis-de-la-verdad">Análisis de la verdad</h2>
+<h3 id="verdad-i-el-verdadero-asesino-de-jean-daval-whodunit">Verdad I: El verdadero asesino de Jean Daval (whodunit)</h3>
+<ul>
+<li><strong>Punto de convergencia: aprox. 70%</strong></li>
+<li>Respuesta: El propio Conde de Gesvres, que mató a Daval en defensa propia. Daval era el infiltrado del grupo de Lupin; aprovechó el caos para atacar al conde despierto con un cuchillo, y el conde se lo arrebató y lo mató. Por razones de afecto antiguo, el conde no quiso revelar la verdad pública y desvió deliberadamente a la policía, insinuando que Daval era una víctima inocente.</li>
+</ul>
+<h4 id="pistas-clave">Pistas clave</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Ubicación (capítulo/porcentaje)</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Las primeras palabras del conde al despertar del desmayo: «No estoy herido — ¿y Daval? ¿Está vivo? El cuchillo — ¿dónde está el cuchillo?»</td>
+<td>Cap. 1 / aprox. 8%</td>
+<td>¿Por qué la primera reacción de alguien que fue atacado y perdió el conocimiento es confirmar el paradero del «cuchillo»? El cuchillo solo tiene significado para quien lo blandió, no para una víctima inocente</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Jean Daval, en el momento del crimen a las 4 de la madrugada, vestía ropa de día completa, incluidas botas con clavos, y la cama estaba perfectamente tendida, sin haber sido usada</td>
+<td>Cap. 2 / aprox. 35%</td>
+<td>Si lo despertó algún ruido, ¿por qué no llevaba zapatillas? Beautrelet señala: simplemente no había dormido; estaba esperando activamente que algo ocurriera</td>
+</tr>
+<tr>
+<td>3</td>
+<td>El pintor «Charpenais», que hizo las copias de los Rubens, fue presentado al Conde de Gesvres por el propio Daval</td>
+<td>Cap. 2 / aprox. 40%</td>
+<td>El puente entre el ideólogo y el ejecutor del crimen — Daval no era una víctima, era un cómplice</td>
+</tr>
+<tr>
+<td>4</td>
+<td>El papel secante de Daval contenía una dirección: «A.L.N., Apartado de correos 45, París» — la misma dirección que apareció en el telegrama enviado por el falso cochero</td>
+<td>Cap. 2 / aprox. 43%</td>
+<td>Evidencia escrita: Daval mantenía correspondencia con la banda de Lupin y era un participante central del plan</td>
+</tr>
+<tr>
+<td>5</td>
+<td>El conde lo admitió posteriormente en persona y entregó dos borradores de cartas escritas por Daval a sus cómplices</td>
+<td>Cap. 2 / aprox. 48%</td>
+<td>Confirmación — punto de convergencia de pistas</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-secundarias">Pistas secundarias</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Ubicación (capítulo/porcentaje)</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El testimonio del conde ante la policía era anormalmente vago y fragmentado; «solo recordaba los hechos principales»</td>
+<td>Cap. 1 / aprox. 12%</td>
+<td>Una persona que afirma haber sido simplemente atacada y desmayada no controla así de cuidadosamente los detalles de su declaración</td>
+</tr>
+<tr>
+<td>2</td>
+<td>El conde nunca pidió socorro antes de perder el conocimiento, ni intentó transmitir ninguna información al exterior</td>
+<td>Cap. 1 / aprox. 10%</td>
+<td>Sabía que su actuación requería silencio</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Los signos de desorden en el estudio (boudoir) — sillas volcadas, mesa rota — no coinciden del todo con la versión de «un intruso que irrumpe de repente»</td>
+<td>Cap. 1 / aprox. 9%</td>
+<td>La forma del forcejeo se asemeja más a un enfrentamiento que a una agresión por sorpresa</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-falsas">Pistas falsas</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Ubicación (capítulo/porcentaje)</th>
+<th>Dirección del engaño</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El conde describió: «Un hombre se precipitó desde la puerta y me dejó sin sentido», insinuando que todo fue obra de un intruso exterior</td>
+<td>Cap. 1 / aprox. 12%</td>
+<td>Lleva a los lectores (y a la policía) a centrar su atención en el «misterioso tercer hombre», convenciéndoles de que el caso es simplemente un asesinato cometido por un ladrón externo</td>
+</tr>
+<tr>
+<td>2</td>
+<td>La imagen de Daval — el viejo secretario de absoluta confianza del conde, celebrado como buena persona por todos — lo convierte en una víctima inocente de apariencia</td>
+<td>Cap. 1 / aprox. 13%</td>
+<td>El marco de «la víctima más probable» impide que los lectores sospechen de su papel como cómplice</td>
+</tr>
+<tr>
+<td>3</td>
+<td>La revelación póstuma de la amante de Daval (Mme. Verdier) como móvil de sus robos</td>
+<td>Cap. 2 / aprox. 50%</td>
+<td>Este detalle lo convierte en un «hombre desgraciado que delinquió por amor», generando compasión en lugar de sospecha</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="verdad-ii-la-identidad-del-fugitivo-herido-y-su-escondite-whodunit-whereis">Verdad II: La identidad del fugitivo herido y su escondite (whodunit + whereis)</h3>
+<ul>
+<li><strong>Punto de convergencia: aprox. 40%</strong></li>
+<li>Respuesta: El hombre herido es el propio Arsène Lupin (bajo el alias «Étienne de Vaudreix»), escondido en una antigua cripta bajo el suelo de la pequeña capilla, atendido en secreto por Raymonde durante cuarenta días.</li>
+</ul>
+<h4 id="pistas-clave_1">Pistas clave</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Ubicación (capítulo/porcentaje)</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>La dirección del telegrama enviado por el falso cochero: «A.L.N., Apartado de correos 45»</td>
+<td>Final cap. 1 / aprox. 22%</td>
+<td>Beautrelet lo reconoce de inmediato: A.L.N. = las letras iniciales y finales de <strong>A</strong>rsène <strong>L</strong>upi<strong>N</strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td>El verdadero sombrero de cuero fue llevado por el falso cochero; lo que quedó fue un sombrero falso — un hábil intercambio de herramientas de identificación</td>
+<td>Final cap. 1 / aprox. 20%</td>
+<td>El nivel de sofisticación de esta operación es propio del estilo de Lupin, y sugiere que el robo fue liderado por el personaje más notable del gremio</td>
+</tr>
+<tr>
+<td>3</td>
+<td>El hombre herido era absolutamente incapaz de salir del perímetro de las ruinas, y sin embargo la búsqueda en superficie no arrojó ningún resultado</td>
+<td>Cap. 1 / aprox. 18%</td>
+<td>«Solo podía estar en las ruinas, pero no se le encuentra» → debe existir un espacio subterráneo</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Charpenais tardó nada menos que cinco meses en «copiar» los cuadros — tiempo muy superior al necesario — y permanecía en el castillo hasta el anochecer cada día</td>
+<td>Cap. 2 / aprox. 38%</td>
+<td>Usó ese tiempo para explorar en secreto la estructura de la capilla, fue así como descubrió la cripta</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Las iniciales «E.V.» (Étienne de Vaudreix) cosidas en el interior de la ropa del cadáver — el alias parisino de Lupin</td>
+<td>Cap. 3 / aprox. 60%</td>
+<td>Evidencia material que confirma que el cadáver de la cripta fue en su momento la identidad encubierta de Lupin</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-secundarias_1">Pistas secundarias</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Ubicación (capítulo/porcentaje)</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El inspector Ganimard también admitió: «Este método lleva la marca de Lupin; no puede ser obra de nadie más»</td>
+<td>Cap. 2 / aprox. 32%</td>
+<td>Juicio profesional como confirmación secundaria</td>
+</tr>
+<tr>
+<td>2</td>
+<td>La residencia parisina «Rue Marbeuf, 38» está contigua a la oficina de correos donde se encuentra el apartado 45</td>
+<td>Final cap. 2 / aprox. 45%</td>
+<td>La coincidencia geográfica confirma el vínculo entre el alias y la dirección</td>
+</tr>
+<tr>
+<td>3</td>
+<td>El cirujano Dr. Delattre fue llevado por «policías falsos» para operar a un «herido anónimo»; el tiempo de ida y vuelta coincide exactamente con la distancia de París a Ambrumésy</td>
+<td>Cap. 2 / aprox. 30%</td>
+<td>La escala de la operación médica de urgencia solo puede ser coordinada por el jefe de la banda</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-falsas_1">Pistas falsas</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Ubicación (capítulo/porcentaje)</th>
+<th>Dirección del engaño</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El médico dijo que el herido fue alojado «en la habitación de un hotel», en condiciones «deplorables»</td>
+<td>Cap. 2 / aprox. 28%</td>
+<td>La policía se desvivió por registrar todos los hoteles en varios kilómetros a la redonda, desviando la atención — Beautrelet señaló posteriormente que el cómplice de Lupin mintió siguiendo instrucciones</td>
+</tr>
+<tr>
+<td>2</td>
+<td>El «cadáver de Lupin» descubierto en la cripta — con la cabeza aplastada hasta el punto de ser irreconocible</td>
+<td>Cap. 3 / aprox. 58%</td>
+<td>El cadáver era un accesorio cuidadosamente preparado (un cadáver real de otra persona utilizado como sustituto), con el propósito de hacer creer a todos que Lupin había muerto</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="verdad-iii-que-fue-robado-whatdunit">Verdad III: Qué fue robado (whatdunit)</h3>
+<ul>
+<li><strong>Punto de convergencia: aprox. 35% (cuadros de Rubens); aprox. 65% (esculturas de la capilla)</strong></li>
+<li>Respuesta: Cuatro cuadros originales de Rubens fueron sustituidos por copias; todas las preciosas esculturas de la capilla gótica (columnas pequeñas, bajorrelieves, grupos de figuras talladas en piedra) fueron reemplazadas por réplicas de yeso perfectamente ejecutadas, y las originales fueron trasladadas al otro lado del Sena en varios viajes.</li>
+</ul>
+<h4 id="pistas-clave-cuadros-de-rubens">Pistas clave (cuadros de Rubens)</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Ubicación (capítulo/porcentaje)</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El conde Gesvres dijo que «algo se había llevado», pero también que «no faltaba absolutamente nada» — una contradicción evidente</td>
+<td>Cap. 1 / aprox. 15%</td>
+<td>El razonamiento lógico de Beautrelet: si «algo fue robado pero nada falta», la única explicación es que «los originales fueron reemplazados por copias de igual apariencia»</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Charpenais trabajó en el castillo durante cinco meses enteros bajo el pretexto de «copiar» los cuadros, y el propio conde ya sabía que las pinturas eran falsas</td>
+<td>Cap. 2 / aprox. 33%</td>
+<td>El «resultado» de su trabajo fueron los cuatro cuadros sustituidos</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Las dos jóvenes vieron al fugitivo cargando «algo bastante grande que golpeaba contra su muslo»</td>
+<td>Cap. 1 / aprox. 5%</td>
+<td>La forma y el peso de un lienzo enrollado coinciden perfectamente con los de un gran cuadro al óleo</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-clave-esculturas-de-la-capilla">Pistas clave (esculturas de la capilla)</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Ubicación (capítulo/porcentaje)</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>La carta de Harlington mencionaba: «Puedes añadir las demás cosas, si logras hacerlo — tengo mis dudas al respecto»</td>
+<td>Cap. 3 / aprox. 55%</td>
+<td>«Las demás cosas» alude a un plan de robo más audaz — la capilla entera</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Beautrelet golpeó con su bastón una de las figuras talladas de la capilla, que se pulverizó en polvo de yeso — «¡Hueca! ¡Papel maché y yeso!»</td>
+<td>Cap. 3 / aprox. 62%</td>
+<td>El experimento in situ lo confirma directamente</td>
+</tr>
+<tr>
+<td>3</td>
+<td>El cochero Vatinel transportó mercancías durante seis días consecutivos: «Grandes bloques de piedra — o piezas más pequeñas con forma alargada, envueltas en papel de periódico, que decía eran cosas muy valiosas»</td>
+<td>Cap. 3 / aprox. 56%</td>
+<td>El registro logístico de los traslados diarios corresponde al proceso de extracción, pieza a pieza, de las tallas de la capilla</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-falsas_2">Pistas falsas</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Ubicación (capítulo/porcentaje)</th>
+<th>Dirección del engaño</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>La descripción inicial del salón (drawing room): «orden perfecto, nada parecía estar fuera de lugar»</td>
+<td>Cap. 1 / aprox. 14%</td>
+<td>Lleva a los investigadores (y a los lectores) a creer que el robo no tiene relación con esa habitación, creando así el enigma de «¿qué fue exactamente lo que robaron?»</td>
+</tr>
+<tr>
+<td>2</td>
+<td>La capilla, reconocida como «una joya de la arquitectura gótica… considerada un excelente ejemplo del estilo normando-gótico»</td>
+<td>Cap. 1 / aprox. 11%</td>
+<td>La barrera psicológica de «¿cómo es posible robar un edificio tan valioso?» impide a los lectores pensar en esa dirección</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="verdad-iv-el-doble-papel-de-raymonde-verdadera-identidad-y-posicion">Verdad IV: El doble papel de Raymonde (verdadera identidad y posición)</h3>
+<ul>
+<li><strong>Punto de convergencia: aprox. 65%</strong></li>
+<li>Respuesta: Raymonde fue quien disparó y hirió a Lupin, pero después, movida por la compasión, lo ayudó a esconderse en la capilla y lo atendió en secreto durante cuarenta días. Todas sus acciones (proporcionar una descripción falsa del sospechoso a la policía, pretender descubrir a Beautrelet, fabricar la «carta de amenaza») tenían como objetivo proteger a Lupin de ser descubierto. Al final, Lupin (bajo el alias Valméras) la cortejó, y ella aceptó su amor en la segunda mitad de la novela.</li>
+</ul>
+<h4 id="pistas-clave_2">Pistas clave</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Ubicación (capítulo/porcentaje)</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Las dos primas describieron el aspecto del hombre herido de manera completamente opuesta: Raymonde dijo «alto y fornido», Suzanne dijo «de estatura mediana, delgado»</td>
+<td>Cap. 1 / aprox. 17%</td>
+<td>Una de las dos está mintiendo — Suzanne no tiene motivo para mentir; Raymonde es quien estuvo cerca de Lupin</td>
+</tr>
+<tr>
+<td>2</td>
+<td>La «carta de amenaza que ponía en peligro a la señorita Raymonde» — enviada por un cómplice de Lupin, con el contenido: «Si ella mató al jefe, le irá mal»</td>
+<td>Final cap. 1 / aprox. 23%</td>
+<td>Beautrelet señaló posteriormente que esa carta fue en realidad organizada por la propia Raymonde mediante contactos secretos, con el propósito de hacer que pareciera una «víctima amenazada» y no una «cómplice»</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Raymonde identificó a Beautrelet afirmando que lo había visto en el camino antes del crimen — demostrado posteriormente como una mentira; Beautrelet estaba en otro lugar en ese momento</td>
+<td>Cap. 1 / aprox. 26%</td>
+<td>Interfirió activamente en la investigación para impedir que Beautrelet continuara deduciendo</td>
+</tr>
+<tr>
+<td>4</td>
+<td>El artículo de Beautrelet declaró explícitamente: fue Raymonde quien, durante cuarenta días, llevó medicamentos a Lupin, le vendó las heridas y lo cuidó hasta su recuperación</td>
+<td>Cap. 4 / aprox. 68%</td>
+<td>El artículo reconstructivo de Beautrelet como punto de convergencia final</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-secundarias_2">Pistas secundarias</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Ubicación (capítulo/porcentaje)</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El farmacéutico de Ouville preparó múltiples recetas para Raymonde, y no para uso personal de ella</td>
+<td>Cap. 4 / aprox. 65%</td>
+<td>El tipo y la cantidad de recetas superan las necesidades personales de una mujer sana</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Después de los sucesos, ella mostró «una calma recuperada más rápidamente de lo esperado», en marcado contraste con su prima Suzanne</td>
+<td>Caps. 1-2</td>
+<td>Sabía que Lupin estaba a salvo — porque ella lo había ayudado</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-falsas_3">Pistas falsas</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Ubicación (capítulo/porcentaje)</th>
+<th>Dirección del engaño</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>La imagen heroica de Raymonde que «valerosamente disparó e hirió al fugitivo»</td>
+<td>Cap. 1 / aprox. 8%</td>
+<td>Crea la impresión previa de «ella está del lado de la justicia», impidiendo que los lectores sospechen que sus acciones posteriores tengan ninguna motivación indebida</td>
+</tr>
+<tr>
+<td>2</td>
+<td>La noticia falsa del «asesinato» de Raymonde (manchas de sangre, pañuelo, el «cadáver encontrado» al pie del acantilado)</td>
+<td>Cap. 3 / aprox. 52%</td>
+<td>Hace creer a todos que murió, y nadie continúa investigando si podía ser cómplice o si desapareció voluntariamente</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="verdad-v-el-secreto-de-la-aguja-hueca-whereis-enigma-historico">Verdad V: El secreto de la aguja hueca (whereis + enigma histórico)</h3>
+<ul>
+<li><strong>Punto de convergencia: aprox. 85%</strong></li>
+<li>Respuesta: La «aguja hueca» (Aiguille Creuse) es una columna natural de roca marina hueca en el interior (une aiguille de mer), situada cerca de Étretat en la costa normanda. Desde que Julio César conquistó la Galia, fue el lugar donde los reyes de Francia guardaban en secreto sus tesoros y lo utilizaban como refugio de emergencia. El secreto se transmitía de generación en generación bajo el principio de que «en cualquier momento, solo una persona lo sabe»; Lupin, a través de un antiguo documento en pergamino, descifró el misterio y se convirtió en la única persona de la historia que no era rey y que conocía este secreto. La entrada a la aguja hueca se encuentra en la base de la columna y requiere una marea específica y una contraseña para acceder.</li>
+</ul>
+<h4 id="pistas-clave_3">Pistas clave</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Ubicación (capítulo/porcentaje)</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El mensaje cifrado del antiguo pergamino: usando números para las vocales y puntos para las consonantes, se descifra finalmente en palabras como «aiguille creuse» (aguja hueca) y «demoiselles» (señoritas, en referencia a las rocas cercanas a la orilla)</td>
+<td>Cap. 3 / aprox. 57%</td>
+<td>La primera puerta lingüística — la aparición de las palabras centrales</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Lupin le dijo a Beautrelet: «Este secreto es un tesoro inagotable, o un refugio mágico invisible — o ambas cosas. ¿Puedes imaginar el poder extraordinario que extraigo de él?»</td>
+<td>Cap. 4 / aprox. 71%</td>
+<td>El propio Lupin, bajo presión, admitió indirectamente que el alcance de la aguja supera con creces el de un simple «escondite del tesoro»</td>
+</tr>
+<tr>
+<td>3</td>
+<td>El antiguo documento revelado en el capítulo sexto, «Le Traité de l'Aiguille» (El Tratado de la Aguja), que registraba los nombres de todos los conocedores del secreto desde César hasta Luis XVI y el modo de su transmisión</td>
+<td>Cap. 6 / aprox. 85%</td>
+<td>La revelación completa del marco histórico — punto de convergencia</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Beautrelet encontró finalmente la roca en la costa de Étretat y, guiado por el mensaje cifrado del pergamino (la contraseña «¡Sésamo, ábrete!»), entró en ella y contempló con sus propios ojos el reino de Lupin</td>
+<td>Cap. 9 / aprox. 92%</td>
+<td>Confirmación material</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-secundarias_3">Pistas secundarias</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Ubicación (capítulo/porcentaje)</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>La mercancía transportada por Charpenais (es decir, el cómplice de Lupin) no eran solo obras de arte, sino también «grandes bloques de piedra» — materiales de construcción para reformar el interior de la aguja hueca</td>
+<td>Cap. 3 / aprox. 56%</td>
+<td>Lupin estaba convirtiendo la aguja en un refugio moderno</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Lupin dijo que toda su vida había estado orientada hacia un objetivo que siempre había mantenido en secreto — «Si supieras el secreto, ¿seguirías combatiéndome?»</td>
+<td>Cap. 4 / aprox. 72%</td>
+<td>Sugiere que su ambición no era el robo ordinario, sino un plan dinástico de mayor alcance</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-falsas_4">Pistas falsas</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Ubicación (capítulo/porcentaje)</th>
+<th>Dirección del engaño</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Lupin se esforzó desesperadamente por arrebatar el mensaje cifrado del pergamino (haciendo que Brédoux actuara con el cuchillo), lo que llevó a los lectores a creer que «el documento cifrado en sí mismo es la única pista»</td>
+<td>Cap. 3 / aprox. 60%</td>
+<td>Beautrelet se dio cuenta posteriormente: lo que Lupin temía no era que el código fuera descifrado, sino que el material o la marca del pergamino (el sello de cera roja) pudiera revelar su procedencia histórica</td>
+</tr>
+<tr>
+<td>2</td>
+<td>«La aguja hueca» evoca intuitivamente una aguja de coser o una contraseña — no un accidente geográfico normando real y existente</td>
+<td>Cap. 3 / aprox. 57%</td>
+<td>La referencia geográfica concreta del nombre queda oscurecida por su aparente rareza</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="reconstruccion-del-camino-deductivo">Reconstrucción del camino deductivo</h2>
+<p><strong>Primera vía: ¿Quién mató a Jean Daval?</strong></p>
+<p>El primer punto de ruptura para el lector aparece en el capítulo 1 (aprox. 8%): el conde Gesvres, al recuperar el conocimiento, pregunta «¿dónde está el cuchillo?» — un detalle fugacísimo, muy fácil de pasar por alto. Si se toma como punto de partida, el lector atento puede sospechar que el conde sabe más de lo que dice. En el capítulo 2 (aprox. 35-40%), la ropa completa de Daval y la pista de la ropa interior señalan que era alguien que estaba al tanto de lo que iba a ocurrir; junto con el hecho de que fue él quien presentó a Charpenais (aprox. 40%), la relación de complicidad queda básicamente establecida. La dirección en el papel secante (aprox. 43%) es la pista confirmatoria. Todas las pistas convergen en aprox. el 70%, momento en que Beautrelet anuncia la respuesta ante todos.</p>
+<p><strong>Segunda vía: ¿Quién es el hombre herido y dónde se esconde?</strong></p>
+<p>Las iniciales «A.L.N.» ya aparecen al final del capítulo 1 (aprox. 22%), pero hace falta una breve pausa para darse cuenta de que esas tres letras hacen referencia a <strong>A</strong>rsène <strong>L</strong>upi<strong>N</strong>. Una vez que se sospecha que es Lupin, todos los enigmas encuentran de inmediato un marco explicativo: su organización, sus métodos, su audacia. En cuanto al escondite, el razonamiento lógico en el capítulo 2 (aprox. 30%) ya es suficiente: «No puede cruzar el cordón, y no se le encuentra en ningún lugar» → debe existir un espacio subterráneo; «Charpenais trabajó largamente en la capilla» → descubrió la cripta. El punto de convergencia llega cuando Beautrelet anuncia «está ahí — bajo las ruinas» (aprox. 42%).</p>
+<p><strong>Tercera vía: Los Rubens y la capilla</strong></p>
+<p>El momento más elegante de «la lógica precede a los hechos»: «Algo fue robado, pero nada falta» → «Necesariamente fue sustituido por copias» — esta deducción ya es válida al final del capítulo 1 (aprox. 25%), sin necesidad de ningún otro hecho, basándose puramente en la lógica. El secreto de la capilla llega mucho más tarde (capítulo 3, aprox. 60-65%), porque «robar una capilla entera» supera los límites de la imaginación del lector ordinario.</p>
+<p><strong>Cuarta vía: La aguja hueca</strong></p>
+<p>Es el enigma más difícil de todo el libro, porque abarca cinco siglos de historia. El mensaje cifrado del pergamino aparece ya en el capítulo 3 (aprox. 57%), pero su significado no se revela plenamente hasta los capítulos 6-9 (85-92%). El lector atento puede intuir su magnitud en la advertencia de Lupin (capítulo 4, aprox. 71%) — «un tesoro inagotable o un refugio mágico» — pero el salto de «la aguja hueca = la roca real de Étretat» requiere conocimiento geográfico, algo que resultaba más natural para los lectores franceses de principios del siglo XX que para los de hoy.</p>
+<hr>
+<h2 id="notas-complementarias">Notas complementarias</h2>
+<p><strong>El lugar especial de «La aguja hueca» en la serie de Leblanc</strong></p>
+<p>«La aguja hueca» es una de las novelas largas más aclamadas de la serie de Arsène Lupin, y la razón es que entrelaza dos tramas principales — el «duelo de inteligencias» (Beautrelet vs. Lupin) y el «enigma histórico» (el secreto de la monarquía francesa) — en un todo casi perfecto. Esta ambición era bastante infrecuente en la ficción popular de la época.</p>
+<p><strong>Una obra que verdaderamente cambió la posición del «detective»</strong></p>
+<p>El adversario de Holmes es siempre un enigma que debe ser resuelto; el adversario de Beautrelet es una persona que «gestiona activamente el proceso de su propia investigación». Lupin no es un sospechoso pasivo, sino el coautor de la narrativa del caso — organiza testigos, diseña pistas falsas, controla la opinión pública en los medios, e incluso secuestra al padre del detective principal como ficha de negociación. Esto hace que «La aguja hueca» se parezca más a una partida de ajedrez que a un rompecabezas.</p>
+<p><strong>Beautrelet — el genio anti-Conan Doyle</strong></p>
+<p>El perfil de Beautrelet (estudiante de bachillerato de 17 años, sin bagaje profesional, que supera a los profesionales mediante la lógica) es la burla deliberada y la reinterpretación de Leblanc del arquetipo del «detective genio». No es sereno — llora a gritos cuando su padre es secuestrado; no es perfecto — Brédoux lo apuñala, y Lupin lo domina en las negociaciones. Pero precisamente esta vulnerabilidad lo hace más tridimensional que Holmes, y también más convincente cuando revela la verdad al final.</p>
+<p><strong>Una obra maestra de ingeniería de la niebla: la superposición de engaños múltiples</strong></p>
+<p>El sistema de desorientación de «La aguja hueca» está diseñado con extraordinaria precisión y merece un análisis independiente:</p>
+<table>
+<thead>
+<tr>
+<th>Capa del engaño</th>
+<th>Engañador</th>
+<th>Objetivo</th>
+<th>Método</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Primera capa</td>
+<td>Daval (ya muerto)</td>
+<td>El conde</td>
+<td>Afirmó lealtad; era en realidad un cómplice</td>
+</tr>
+<tr>
+<td>Segunda capa</td>
+<td>Raymonde</td>
+<td>La policía y Beautrelet</td>
+<td>Proporcionó descripciones falsas, fabricó una carta de amenaza falsa, mintió afirmando haber reconocido a Beautrelet</td>
+</tr>
+<tr>
+<td>Tercera capa</td>
+<td>El falso cochero</td>
+<td>Los investigadores</td>
+<td>Intercambio de sombreros, envío de telegramas, desaparición</td>
+</tr>
+<tr>
+<td>Cuarta capa</td>
+<td>Brédoux</td>
+<td>M. Filleul</td>
+<td>Se infiltró en el núcleo de la investigación bajo la identidad de escribano judicial</td>
+</tr>
+<tr>
+<td>Quinta capa</td>
+<td>Lupin (a través del médico)</td>
+<td>El mundo entero</td>
+<td>La pista falsa del «hotel» desvió a todos hacia una dirección equivocada</td>
+</tr>
+<tr>
+<td>Sexta capa</td>
+<td>Cadáveres falsos (dos)</td>
+<td>Beautrelet y la policía</td>
+<td>Hicieron creer que Lupin había muerto y que Raymonde había sido asesinada</td>
+</tr>
+</tbody>
+</table>
+<p>La acumulación de seis capas de engaño hace prácticamente imposible que el lector confirme cualquier «verdad» antes del capítulo 5 — y solo cuando se aceptan las dos premisas de que «Lupin sigue vivo» y «Raymonde sigue viva» todo el enigma se desmorona automáticamente como un castillo de naipes.</p>
+<p><strong>«La aguja hueca» como símbolo cultural</strong></p>
+<p>Las columnas de roca talladas por el mar en Étretat son paisajes geográficos reales de la costa normanda; Leblanc los insertó ingeniosamente en la historia ficticia de Francia: César, Clodoveo, la dinastía merovingia, la dinastía carolingia… hasta Lupin. Este «secreto de Estado francés» ficticio impregna la novela de un aura casi mítica, elevando «La aguja hueca» por encima de los límites de la novela policíaca ordinaria y llevándola al territorio fronterizo de la «fantasía histórica».</p>
+<p><strong>Comparación con otras obras de la misma serie</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>«Arsène Lupin» (relatos breves tempranos)</th>
+<th>«El triángulo de oro»</th>
+<th>«La aguja hueca»</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>El papel de Lupin</td>
+<td>Protagonista y detective</td>
+<td>El jugador oculto</td>
+<td>El fugitivo y enamorado</td>
+</tr>
+<tr>
+<td>Adversario</td>
+<td>Sin adversario personalizado</td>
+<td>Inspector Ganimard</td>
+<td>Beautrelet (genio coetáneo)</td>
+</tr>
+<tr>
+<td>Escala del enigma central</td>
+<td>Un robo único</td>
+<td>Crímenes múltiples</td>
+<td>Un secreto histórico que abarca dos mil años</td>
+</tr>
+<tr>
+<td>Complejidad humana</td>
+<td>Baja</td>
+<td>Media</td>
+<td>Alta (Lupin llora, cede, se enamora)</td>
+</tr>
+</tbody>
+</table>
+<p>«La aguja hueca» es una de las pocas obras de la serie de Lupin en que este muestra «las limitaciones humanas» — se enamora de alguien que no lo ama, siente una verdadera inquietud ante Beautrelet, y su «victoria» final (conservar la aguja hueca y a Raymonde) es en realidad un autoexilio del mundo. Esta complejidad representa el nivel más alto que la ficción popular de 1909 podía alcanzar.</p>
+    <a href="../index.html" class="back-link">← Volver al inicio</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Sala de Disección Detectivesca</p>
+    <p>Cinco autores · ochenta y ocho obras · 135 años de evolución de la dificultad en la narrativa policíaca.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

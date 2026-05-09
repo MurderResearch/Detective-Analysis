@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Die hohle Nadel (The Hollow Needle) — Deduktionsanalyse — Detektivanalyse</title>
+<meta name="description" content="In der Normandie ereignet sich in der Nacht im Schloss Ambrumésy (Château d'Ambrumésy) ein Einbruch mit Mord: Der Privatsekretär des Grafen de Gesvres, Jean Dav">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-hollow-needle.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-hollow-needle.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-hollow-needle.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-hollow-needle.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-hollow-needle.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-hollow-needle.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-hollow-needle.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-hollow-needle.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Detektivanalyse</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Start</a>
+        <a href="../index.html#latest">Neueste</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Sprache" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 Deutsch</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-hollow-needle.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-hollow-needle.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-hollow-needle.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/the-hollow-needle.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/the-hollow-needle.html">한국어</a>
+      <a class="lang-item active" data-lang="de" href="/Detective-Analysis/de/articles/the-hollow-needle.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/the-hollow-needle.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/the-hollow-needle.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">Maurice Leblanc · 1909</div>
+    <h1>Die hohle Nadel (The Hollow Needle) — Deduktionsanalyse</h1>
+    <div class="subtitle">Maurice Leblanc · Roman (10 Kapitel)</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Deduzierbarkeit</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Nebelgrad</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="die-hohle-nadel-the-hollow-needle-deduktionsanalyse">Die hohle Nadel (The Hollow Needle) — Deduktionsanalyse</h1>
+<h2 id="grundinformationen">Grundinformationen</h2>
+<ul>
+<li>Autor: Maurice Leblanc</li>
+<li>Erscheinungsjahr: 1909</li>
+<li>Typ: Roman (10 Kapitel)</li>
+<li>Detektiv: Isidore Beautrelet, Oberstufenschüler</li>
+<li>Art des Kernrätsels: whodunit + howdunit + mysteriöser Schatzort (whereis)</li>
+</ul>
+<hr>
+<h2 id="deduktionsbewertung">Deduktionsbewertung</h2>
+<table>
+<thead>
+<tr>
+<th>Indikator</th>
+<th>Sterne</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deduzierbarkeit（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>Durchschnittlicher Konvergenzpunkt 62 % — die Wahrheitsschichten sind ungleichmäßig verteilt; das eigentliche Geheimnis der „hohlen Nadel" lässt sich erst bei ca. 85 % des Buches rational herleiten, während frühere Rätsel (gestohlene Gegenstände, Identität des Mörders) leichter zugänglich sind</td>
+</tr>
+<tr>
+<td>Nebelgrad（Fog Rating）</td>
+<td>⭐⭐⭐⭐</td>
+<td>Mehrfache aktive Täuschungen: gefälschte Leichen, vertauschte Hüte, Verrat durch Insider, Verkleidung als Opfer, heimlich gepflegte Verletzte — Irreführung ist die präziseste Waffe dieses Falls</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="zusammenfassung">Zusammenfassung</h2>
+<p>In der Normandie ereignet sich in der Nacht im Schloss Ambrumésy (Château d'Ambrumésy) ein Einbruch mit Mord: Der Privatsekretär des Grafen de Gesvres, Jean Daval, wird tot in der Bibliothek aufgefunden, und die Nichte des Grafen, Raymonde de Saint-Véran, schießt im Dunkeln auf einen fliehenden Einbrecher und trifft ihn. Doch der Verwundete verschwindet daraufhin auf rätselhafte Weise — die Schlossruinen werden durchsucht, alle vier Mauern werden bewacht, und dennoch scheint er sich in Luft aufgelöst zu haben.</p>
+<p>Der gerade einmal 17-jährige Gymnasiast Isidore Beautrelet drängt sich in die Ermittlungen und löst innerhalb von zwei Tagen mit verblüffender logischer Schärfe mehrere Rätsel auf einmal: Er lüftet das Geheimnis des Gestohlenen, benennt den Mörder, bestätigt, dass der verwundete Flüchtige niemand anderes ist als der berühmte Meisterdieb Arsène Lupin, und schlussfolgert, dass Lupin sich in einem unterirdischen Versteck der Schlossruinen verbirgt. Die Presse ist in Aufruhr, und der jugendliche Detektiv wird über Nacht berühmt.</p>
+<p>Doch Beautrelet's Triumph ist kurzlebig. Lupins Handlanger verletzen ihn mit einem Messer; Raymonde wird angeblich ermordet und von einer Klippe geworfen; auf einem alten Geheimschriftstück tauchen zwei Wörter auf — „aiguille creuse" (die hohle Nadel) — die auf ein noch älteres, noch gewaltigeres Geheimnis hinweisen. Beautrelet vertieft seine Nachforschungen, entdeckt aber, dass Lupin seinen Vater als Faustpfand entführt hat. Dieser in der Presse öffentlich ausgetragene Wettkampf der Geister führt schließlich zu einem natürlichen Felsturm an der normannischen Küste — der „hohlen Nadel", die Frankreichs Könige seit der Zeit Cäsars als ihr Geheimnis hüteten: eine natürliche Schatzkammer voll der Reichtümer unzähliger Generationen, und Lupins verborgener letzter Thron.</p>
+<hr>
+<h2 id="wahrheitsanalyse">Wahrheitsanalyse</h2>
+<h3 id="wahrheit-i-wer-hat-jean-daval-wirklich-getotet-whodunit">Wahrheit I: Wer hat Jean Daval wirklich getötet? (whodunit)</h3>
+<ul>
+<li><strong>Konvergenzpunkt: ca. 70 %</strong></li>
+<li>Antwort: Der Graf de Gesvres selbst tötete Daval in Notwehr. Daval war ein Komplize von Lupins Bande und versuchte in der Verwirrung, den erwachten Grafen mit einem Messer zu erstechen; der Graf entwand ihm die Waffe und wehrte ihn tödlich ab. Aus Rücksicht auf eine alte Freundschaft wollte der Graf die Wahrheit nicht preisgeben und lenkte die Polizei absichtlich in die Irre, indem er Daval als unschuldiges Opfer darstellte.</li>
+</ul>
+<h4 id="schlusselhinweise">Schlüsselhinweise</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Fundstelle (Kapitel / ca. %)</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Die ersten Worte des Grafen nach dem Erwachen aus der Bewusstlosigkeit: „Ich bin nicht verletzt — was ist mit Daval? Lebt er noch? Das Messer — wo ist das Messer?"</td>
+<td>Kap. 1 / ca. 8 %</td>
+<td>Warum fragt jemand, der nur überwältigt wurde, zuerst nach dem Messer? Das Messer ist nur für den Täter von Belang, nicht für ein unschuldiges Opfer</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Jean Daval war zur Tatzeit um 4 Uhr morgens vollständig angekleidet — Tageskleidung, genagelte Stiefel — und sein Bett war ordentlich, er hatte nicht geschlafen</td>
+<td>Kap. 2 / ca. 35 %</td>
+<td>Wenn er durch ein Geräusch aufgeweckt worden wäre, warum dann keine Hausschuhe? Beautrelet stellt fest: Er hatte überhaupt nicht geschlafen; er wartete aktiv darauf, dass etwas geschieht</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Der Rubens-Kopist „Charpenais" war von Daval persönlich dem Grafen de Gesvres empfohlen worden</td>
+<td>Kap. 2 / ca. 40 %</td>
+<td>Das Bindeglied zwischen dem Planer und dem Ausführenden des Verbrechens — Daval ist kein Opfer, sondern ein Mitschuldiger</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Auf Davals Löschpapier findet sich die Adresse „A.L.N., Postfach 45, Paris" — dieselbe Adresse, die auf dem Telegramm des falschen Kutschers erscheint</td>
+<td>Kap. 2 / ca. 43 %</td>
+<td>Schriftlicher Beweis: Daval stand in Verbindung mit Lupins Bande und war ein Kernmitglied des Plans</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Der Graf gesteht später persönlich und übergibt zwei Briefentwürfe, die Daval an seinen Komplizen geschrieben hatte</td>
+<td>Kap. 2 / ca. 48 %</td>
+<td>Bestätigung — Konvergenzpunkt</td>
+</tr>
+</tbody>
+</table>
+<h4 id="unterstutzende-hinweise">Unterstützende Hinweise</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Fundstelle (Kapitel / ca. %)</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Die Aussage des Grafen gegenüber der Polizei ist ungewöhnlich vage und bruchstückhaft — er erinnere sich nur an „die wesentlichen Tatsachen"</td>
+<td>Kap. 1 / ca. 12 %</td>
+<td>Jemand, der behauptet, nur überwältigt worden zu sein, kontrolliert seine Aussage mit auffälliger Sorgfalt</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Bevor der Graf das Bewusstsein verlor, hatte er nie um Hilfe gerufen und auch nicht versucht, irgendwelche Informationen nach außen zu geben</td>
+<td>Kap. 1 / ca. 10 %</td>
+<td>Er weiß, dass sein Handeln Schweigen erfordert</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Die Spuren des Durcheinanders in der Bibliothek — umgeworfene Stühle, zerbrochener Tisch — passen nicht ganz zur Version einer unerwarteten Invasion von außen</td>
+<td>Kap. 1 / ca. 9 %</td>
+<td>Die Art des Kampfes ähnelt eher einem Kräftemessen als einem Überfall</td>
+</tr>
+</tbody>
+</table>
+<h4 id="falsche-fahrten">Falsche Fährten</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Fundstelle (Kapitel / ca. %)</th>
+<th>Irreführungsrichtung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Der Graf beschreibt: „Ein Mann stürzte sich von der Tür auf mich und betäubte mich vollständig" — was nahelegt, dass alles das Werk eines äußeren Eindringlings war</td>
+<td>Kap. 1 / ca. 12 %</td>
+<td>Lenkt die Aufmerksamkeit von Lesern (und Polizei) auf den „mysteriösen dritten Mann" und lässt den Fall wie einen gewöhnlichen Einbruchmord aussehen</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Davals Image — der seit Jahren vom Grafen hochgeschätzte Sekretär, von allen als tadelloser Mensch gelobt — lässt ihn wie ein harmloses Opfer wirken</td>
+<td>Kap. 1 / ca. 13 %</td>
+<td>Der Rahmen des „wahrscheinlichsten Opfers" verhindert, dass der Leser an seiner Mitschuld zweifelt</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Die nachträgliche Enthüllung von Davals Geliebter (Mme. Verdier) als Motiv für seinen Anteil am Diebstahl</td>
+<td>Kap. 2 / ca. 50 %</td>
+<td>Dieses Detail macht ihn zum „armen Mann, der aus Liebe sündigte" und weckt Mitleid statt Verdacht</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="wahrheit-ii-identitat-des-verwundeten-fluchtlings-und-sein-versteck-whodunit-whereis">Wahrheit II: Identität des verwundeten Flüchtlings und sein Versteck (whodunit + whereis)</h3>
+<ul>
+<li><strong>Konvergenzpunkt: ca. 40 %</strong></li>
+<li>Antwort: Der Verwundete ist Arsène Lupin persönlich (unter dem Decknamen „Étienne de Vaudreix"), der sich in einer antiken Krypta unter dem Boden der kleinen Kapelle verbirgt und heimlich von Raymonde vierzig Tage lang gepflegt wird.</li>
+</ul>
+<h4 id="schlusselhinweise_1">Schlüsselhinweise</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Fundstelle (Kapitel / ca. %)</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Die Adresse auf dem Telegramm des falschen Kutschers: „A.L.N., Postfach 45"</td>
+<td>Ende Kap. 1 / ca. 22 %</td>
+<td>Beautrelet erkennt sofort: A.L.N. = die Anfangs- und Endbuchstaben von <strong>A</strong>rsène <strong>L</strong>upi<strong>N</strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Die echte Ledermütze wurde vom falschen Kutscher mitgenommen; zurückgelassen wurde eine gefälschte Mütze — ein sorgfältig konstruierter Austausch des Erkennungszeichens</td>
+<td>Ende Kap. 1 / ca. 20 %</td>
+<td>Die Raffinesse dieser Operation entspricht Lupins Stil und deutet darauf hin, dass der Einbruch von einer Person auf höchstem Niveau geleitet wurde</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Der Verwundete konnte den Bereich der Ruinen unmöglich verlassen haben, doch eine Bodensuche ergab keinerlei Ergebnisse</td>
+<td>Kap. 1 / ca. 18 %</td>
+<td>„Kann nur in den Ruinen sein und ist dennoch nirgends zu finden" → Es muss einen unterirdischen Raum geben</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Charpenais verbrachte ganze fünf Monate damit, Gemälde zu „kopieren" — weit mehr Zeit als nötig — und blieb täglich bis in den Abend auf dem Schloss</td>
+<td>Kap. 2 / ca. 38 %</td>
+<td>Er nutzte diese Zeit, um heimlich die Struktur der Kapelle zu erkunden, und entdeckte dabei die unterirdische Kammer</td>
+</tr>
+<tr>
+<td>5</td>
+<td>In der Kleidung des Toten war das Monogramm „E.V." eingenäht (Étienne de Vaudreix) — Lupins Pariser Pseudonym</td>
+<td>Kap. 3 / ca. 60 %</td>
+<td>Dinglicher Beweis: Die Leiche in der Krypta trug einst Lupins Identitätsmaske</td>
+</tr>
+</tbody>
+</table>
+<h4 id="unterstutzende-hinweise_1">Unterstützende Hinweise</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Fundstelle (Kapitel / ca. %)</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Inspektor Ganimard räumt selbst ein: „Diese Methode trägt Lupins Handschrift — das kann unmöglich das Werk eines anderen sein"</td>
+<td>Kap. 2 / ca. 32 %</td>
+<td>Das professionelle Urteil als ergänzende Bestätigung</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Das Pariser Appartement „Rue Marbeuf Nr. 38" liegt direkt neben dem Postamt, bei dem sich Postfach 45 befindet</td>
+<td>Ende Kap. 2 / ca. 45 %</td>
+<td>Die geografische Übereinstimmung bestätigt die Verbindung zwischen Pseudonym und Adresse</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Der Chirurg Dr. Delattre wurde von „falschen Polizisten" mitgenommen, um an einem „unbekannten Verletzten" zu operieren; die Fahrtdauer entspricht genau der Entfernung von Paris nach Ambrumésy</td>
+<td>Kap. 2 / ca. 30 %</td>
+<td>Der Umfang dieser medizinischen Notfallaktion konnte nur von einem Anführer in Bewegung gesetzt werden</td>
+</tr>
+</tbody>
+</table>
+<h4 id="falsche-fahrten_1">Falsche Fährten</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Fundstelle (Kapitel / ca. %)</th>
+<th>Irreführungsrichtung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Der Arzt berichtet, der Patient sei „in einem Hotelzimmer" untergebracht worden, unter „jämmerlichsten Bedingungen"</td>
+<td>Kap. 2 / ca. 28 %</td>
+<td>Die Polizei durchsucht aufwendig alle Hotels im Umkreis von mehreren Kilometern — Beautrelet stellt später fest, dass Lupins Komplize auf Anweisung log</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Die in der Krypta aufgefundene „Lupin-Leiche" mit vollständig zertrümmertem, unkenntlichem Schädel</td>
+<td>Kap. 3 / ca. 58 %</td>
+<td>Die Leiche ist ein sorgfältig arrangiertes Täuschungsobjekt (eine andere, tatsächlich verstorbene Person wurde als Ersatz eingesetzt), um alle glauben zu machen, Lupin sei tot</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="wahrheit-iii-was-wurde-gestohlen-whatdunit">Wahrheit III: Was wurde gestohlen? (whatdunit)</h3>
+<ul>
+<li><strong>Konvergenzpunkt: ca. 35 % (Rubens-Gemälde); ca. 65 % (Kapellenskulpturen)</strong></li>
+<li>Antwort: Vier echte Rubens-Gemälde wurden durch Kopien ersetzt; sämtliche kostbaren Skulpturen der gotischen Kapelle (Säulchen, Reliefs, Steinfigurengruppen) wurden durch präzise Gipsabdrücke ausgetauscht, während die Originale nach und nach über die Seine gebracht wurden.</li>
+</ul>
+<h4 id="schlusselhinweise-rubens-gemalde">Schlüsselhinweise (Rubens-Gemälde)</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Fundstelle (Kapitel / ca. %)</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Der Graf de Gesvres sagt, „etwas sei fortgebracht worden", behauptet aber gleichzeitig, „es fehle nichts" — ein offensichtlicher Widerspruch</td>
+<td>Kap. 1 / ca. 15 %</td>
+<td>Beautrelet's logischer Schluss: Wenn „etwas gestohlen wurde, aber nichts fehlt", ist die einzige Erklärung, dass „die Originale durch äußerlich identische Kopien ersetzt wurden"</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Charpenais arbeitete unter dem Vorwand des „Kopierens" fünf volle Monate auf dem Schloss; der Graf selbst wusste, dass die Bilder Fälschungen sind</td>
+<td>Kap. 2 / ca. 33 %</td>
+<td>Das „Ergebnis" seiner Arbeit waren vier gefälschte Gemälde an Stelle der Originale</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Zwei junge Frauen sehen, wie der Flüchtige „einen ziemlich großen Gegenstand trug, der gegen seine Oberschenkel schlug"</td>
+<td>Kap. 1 / ca. 5 %</td>
+<td>Form und Gewicht einer aufgerollten Leinwand entsprechen vollständig einem großformatigen Ölgemälde</td>
+</tr>
+</tbody>
+</table>
+<h4 id="schlusselhinweise-kapellenskulpturen">Schlüsselhinweise (Kapellenskulpturen)</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Fundstelle (Kapitel / ca. %)</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Harlingtons Brief erwähnt: „Du kannst noch andere Dinge hinzufügen, wenn es dir gelingt — daran zweifle ich allerdings"</td>
+<td>Kap. 3 / ca. 55 %</td>
+<td>„Andere Dinge" bezieht sich auf einen noch kühneren Diebstahlsplan — die Kapelle selbst</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Beautrelet schlägt mit seinem Spazierstock gegen eine Steinfigur der Kapelle und zertrümmert sie zu Gipsstaub — „Hohl! Pappe und Gips!"</td>
+<td>Kap. 3 / ca. 62 %</td>
+<td>Das Experiment vor Ort bestätigt es unmittelbar</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Der Kutscher Vatinel transportierte sechs Tage lang Güter: „Große Steine — oder kleinere längliche Stücke, in Zeitungspapier eingewickelt und angeblich sehr wertvoll"</td>
+<td>Kap. 3 / ca. 56 %</td>
+<td>Die tägliche Transportdokumentation entspricht dem schrittweisen Abtransport der Kapellenskulpturen</td>
+</tr>
+</tbody>
+</table>
+<h4 id="falsche-fahrten_2">Falsche Fährten</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Fundstelle (Kapitel / ca. %)</th>
+<th>Irreführungsrichtung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Die anfängliche Beschreibung des Salons (drawing room): „Alles in vollkommener Ordnung, nichts schien zu fehlen"</td>
+<td>Kap. 1 / ca. 14 %</td>
+<td>Lässt Ermittler (und Leser) glauben, dass der Diebstahl mit diesem Zimmer nichts zu tun hat — so entsteht das Rätsel: „Was wurde überhaupt gestohlen?"</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Die Kapelle gilt als „Juwel gotischer Architektur … als herausragendes Beispiel normannischer Gotik"</td>
+<td>Kap. 1 / ca. 11 %</td>
+<td>Die psychologische Hürde „Wie kann ein so wertvolles Bauwerk gestohlen werden?" verhindert, dass der Leser in diese Richtung denkt</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="wahrheit-iv-raymondes-doppelrolle-wahre-identitat-und-haltung">Wahrheit IV: Raymondes Doppelrolle (wahre Identität und Haltung)</h3>
+<ul>
+<li><strong>Konvergenzpunkt: ca. 65 %</strong></li>
+<li>Antwort: Raymonde ist diejenige, die Lupin angeschossen hat, half ihm aber danach aus Mitleid, sich in der Kapelle zu verstecken, und pflegte ihn heimlich vierzig Tage lang. Ihre Handlungen in der Folge — falsche Täterbeschreibungen gegenüber der Polizei, fingiertes Durchschauen Beautrelet's, die Inszenierung des „Drohbriefs" — dienten alle dazu, Lupin vor der Entdeckung zu schützen. Am Ende lässt sie sich von Lupin (unter dem Decknamen Valméras) umwerben und nimmt in der zweiten Romanhälfte seine Liebe an.</li>
+</ul>
+<h4 id="schlusselhinweise_2">Schlüsselhinweise</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Fundstelle (Kapitel / ca. %)</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Die Aussagen der beiden Cousinen über das Aussehen des Verwundeten sind vollständig gegensätzlich: Raymonde sagt „groß und kräftig", Suzanne sagt „mittelgroß und schlank"</td>
+<td>Kap. 1 / ca. 17 %</td>
+<td>Eine von beiden lügt — Suzanne hat kein Motiv zu lügen; Raymonde ist diejenige, die Lupin aus der Nähe gesehen hat</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Der „Raymonde bedrohende Drohbrief" — der Absender ist ein Komplize Lupins, der Inhalt: „Wenn sie den Chef getötet hat, ist sie erledigt"</td>
+<td>Ende Kap. 1 / ca. 23 %</td>
+<td>Beautrelet erkennt später, dass dieser Brief von Raymonde selbst über geheime Kanäle in Auftrag gegeben wurde, um sich als „bedrohtes Opfer" darzustellen statt als Komplizin</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Raymonde behauptet, Beautrelet habe sich vor dem Verbrechen auf einem Weg in der Nähe aufgehalten — was sich nachträglich als Lüge erweist; Beautrelet war zu jener Zeit woanders</td>
+<td>Kap. 1 / ca. 26 %</td>
+<td>Sie greift aktiv in die Ermittlungen ein, um zu verhindern, dass Beautrelet weiter schlussfolgert</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Beautrelet's Zeitungsartikel stellt klar fest: Es war Raymonde, die Lupin vierzig Tage lang mit Medikamenten versorgte, seine Wunden verband und ihn bis zur Genesung pflegte</td>
+<td>Kap. 4 / ca. 68 %</td>
+<td>Beautrelet's Rekonstruktionsartikel als abschließender Konvergenzpunkt</td>
+</tr>
+</tbody>
+</table>
+<h4 id="unterstutzende-hinweise_2">Unterstützende Hinweise</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Fundstelle (Kapitel / ca. %)</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Der Apotheker in Ouville stellte Raymonde mehrere verschiedene Rezepte aus — nicht ihre persönlichen Medikamente</td>
+<td>Kap. 4 / ca. 65 %</td>
+<td>Art und Anzahl der Rezepte übersteigen den persönlichen Bedarf einer gesunden jungen Frau</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Nach dem Vorfall zeigte sie sich stets „viel schneller wieder gefasst als erwartet" — ein starker Kontrast zu ihrer Cousine Suzanne</td>
+<td>Kap. 1–2</td>
+<td>Sie weiß, dass Lupin in Sicherheit ist — weil sie ihm geholfen hat</td>
+</tr>
+</tbody>
+</table>
+<h4 id="falsche-fahrten_3">Falsche Fährten</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Fundstelle (Kapitel / ca. %)</th>
+<th>Irreführungsrichtung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Raymondes Heldenimage als die Frau, die „mutig auf den Flüchtigen geschossen und ihn verwundet hat"</td>
+<td>Kap. 1 / ca. 8 %</td>
+<td>Erzeugt den Vorurteil, sie stehe auf der Seite der Gerechtigkeit — so zweifelt der Leser nicht daran, dass ihre späteren Handlungen ein unlauteres Motiv verbergen könnten</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Die Falschmeldung von Raymondes „Ermordung" (Blutspuren, Schal, „Leiche unter der Klippe gefunden")</td>
+<td>Kap. 3 / ca. 52 %</td>
+<td>Lässt alle glauben, sie sei tot; niemand untersucht mehr, ob sie möglicherweise Mitschuldige oder freiwillig Verschwundene ist</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="wahrheit-v-das-geheimnis-der-hohlen-nadel-whereis-historisches-ratsel">Wahrheit V: Das Geheimnis der hohlen Nadel (whereis + historisches Rätsel)</h3>
+<ul>
+<li><strong>Konvergenzpunkt: ca. 85 %</strong></li>
+<li>Antwort: Die „hohle Nadel" (Aiguille Creuse) ist ein natürlicher, von innen hohler Meeresfelszapfen (une aiguille de mer) in der Nähe von Étretat an der normannischen Küste. Seit Cäsars Eroberung Galliens diente er den französischen Königen als geheimes Schatzgewölbe und Zufluchtsort in Notzeiten. Das Geheimnis wurde nach dem Prinzip weitergegeben, dass „zu jedem Zeitpunkt nur eine Person es kennt"; Lupin entschlüsselte durch ein altes Pergamentdokument das Rätsel und wurde so zur einzigen Person in der Geschichte, die dieses Geheimnis kannte, ohne ein König zu sein. Der Eingang zur hohlen Nadel befindet sich am Fuß des Felsturms und ist nur bei einem bestimmten Wasserstand und mit einer Parole zugänglich.</li>
+</ul>
+<h4 id="schlusselhinweise_3">Schlüsselhinweise</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Fundstelle (Kapitel / ca. %)</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Der verschlüsselte Text des alten Pergaments: Ziffern stehen für Vokale, Punkte für Konsonanten; schließlich werden die Wörter „aiguille creuse" (die hohle Nadel) und „demoiselles" (Jungfrauen, gemeint sind die küstennahen Felsen) entziffert</td>
+<td>Kap. 3 / ca. 57 %</td>
+<td>Das sprachliche erste Tor — das Auftauchen der Schlüsselwörter</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Lupin sagt zu Beautrelet: „Dieses Geheimnis ist ein unerschöpflicher Schatz oder ein unsichtbares, wunderbares Versteck — oder beides zugleich. Können Sie sich die übernatürliche Macht vorstellen, die ich daraus schöpfe?"</td>
+<td>Kap. 4 / ca. 71 %</td>
+<td>Lupin selbst gibt unter Druck indirekt zu, dass das Ausmaß der Nadel weit über einen bloßen „Schatzort" hinausgeht</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Das in Kapitel 6 enthüllte antike Dokument „Le Traité de l'Aiguille" (Die Abhandlung über die Nadel) verzeichnet die Namen aller Eingeweihten von Cäsar bis Ludwig XVI. sowie die Art der Weitergabe</td>
+<td>Kap. 6 / ca. 85 %</td>
+<td>Die vollständige Enthüllung des historischen Rahmens — Konvergenzpunkt</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Beautrelet findet schließlich den Felszapfen an der Küste von Étretat und tritt auf Anweisung des Pergamenttextes (Parole: „Sesam, öffne dich!") ein — und sieht Lupins Reich mit eigenen Augen</td>
+<td>Kap. 9 / ca. 92 %</td>
+<td>Dingliche Bestätigung</td>
+</tr>
+</tbody>
+</table>
+<h4 id="unterstutzende-hinweise_3">Unterstützende Hinweise</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Fundstelle (Kapitel / ca. %)</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Unter den von Charpenais (d. h. Lupins Komplizen) abtransportierten Gütern befanden sich nicht nur Kunstwerke, sondern auch „große Steine" — Baumaterialien für den Umbau des Inneren der hohlen Nadel</td>
+<td>Kap. 3 / ca. 56 %</td>
+<td>Lupin gestaltet die Nadel zu einem modernen Unterschlupf um</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Lupin sagt, sein gesamtes Leben habe sich auf ein einziges Ziel hinbewegt, das er stets geheim gehalten habe — „Würden Sie noch gegen mich kämpfen, wenn Sie das Geheimnis kennten?"</td>
+<td>Kap. 4 / ca. 72 %</td>
+<td>Deutet darauf hin, dass sein Ehrgeiz kein gewöhnlicher Diebstahl ist, sondern ein weitreichenderer dynastischer Plan</td>
+</tr>
+</tbody>
+</table>
+<h4 id="falsche-fahrten_4">Falsche Fährten</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Fundstelle (Kapitel / ca. %)</th>
+<th>Irreführungsrichtung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Lupin kämpft verzweifelt um den Besitz des Pergamenttextes (er lässt Brédoux ein Messerattentat ausführen) — was den Leser glauben lässt, „der Text selbst sei der einzige Schlüssel"</td>
+<td>Kap. 3 / ca. 60 %</td>
+<td>Beautrelet erkennt später: Lupin fürchtet nicht die Entschlüsselung des Textes, sondern dass das Material oder die Markierung (das rote Wachssiegel) auf die historische Herkunft des Dokuments hinweisen könnte</td>
+</tr>
+<tr>
+<td>2</td>
+<td>„Die hohle Nadel" lässt instinktiv an eine Nähnadel oder ein Codewort denken — nicht an ein real existierendes normannisches Wahrzeichen</td>
+<td>Kap. 3 / ca. 57 %</td>
+<td>Die konkrete geografische Bedeutung des Namens wird durch seine Seltsamkeit verborgen</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="rekonstruktion-des-ermittlungsweges">Rekonstruktion des Ermittlungsweges</h2>
+<p><strong>Erster Weg: Wer hat Jean Daval getötet?</strong></p>
+<p>Der früheste Ansatzpunkt für den Leser erscheint in Kapitel 1 (ca. 8 %): der Graf erwacht aus der Bewusstlosigkeit und fragt „Wo ist das Messer?" — ein flüchtiges Detail, das leicht übersehen wird. Wer davon ausgeht, kann vermuten, dass der Graf mehr weiß, als er sagt. In Kapitel 2 (ca. 35–40 %) legen Davals Vollkleidung und der Zustand seines Bettes nahe, dass er Eingeweihter war; die Tatsache, dass er Charpenais empfohlen hatte (ca. 40 %), bestätigt die Mitschuld im Wesentlichen. Die Adresse auf dem Löschpapier (ca. 43 %) ist der bestätigende Hinweis. Alle Hinweise konvergieren bei ca. 70 %, als Beautrelet die Antwort vor allen Anwesenden verkündet.</p>
+<p><strong>Zweiter Weg: Wer ist der Verwundete, und wo versteckt er sich?</strong></p>
+<p>Das Kürzel „A.L.N." erscheint bereits am Ende von Kapitel 1 (ca. 22 %), aber es braucht einen kurzen gedanklichen Halt, um zu erkennen, dass diese drei Buchstaben auf <strong>A</strong>rsène <strong>L</strong>upi<strong>N</strong> hinweisen. Sobald man diesen Verdacht hegt, erhält jedes Rätsel sofort einen Erklärungsrahmen: seine Organisation, seine Methoden, seine Kühnheit. Was den Versteck betrifft, ist die logische Schlussfolgerung in Kapitel 2 (ca. 30 %) bereits ausreichend: „Konnte die Absperrung nicht überwinden und ist trotzdem nirgends zu finden" → Es muss einen unterirdischen Raum geben; „Charpenais arbeitete lange Zeit in der Kapelle" → Entdeckung der Krypta. Der Konvergenzpunkt liegt in Kapitel 2, als Beautrelet verkündet: „Er ist dort — unter den Ruinen" (ca. 42 %).</p>
+<p><strong>Dritter Weg: Rubens und die Kapelle</strong></p>
+<p>Der raffinierteste „Logik vor Fakten"-Moment: „Etwas wurde gestohlen, aber nichts fehlt" → „Es muss durch Kopien ersetzt worden sein" — diese Schlussfolgerung gilt bereits am Ende von Kapitel 1 (ca. 25 %), ohne weitere Fakten, durch reinen logischen Schluss. Das Geheimnis der Kapelle lässt viel länger auf sich warten (Kapitel 3, ca. 60–65 %), da „der gesamte Inhalt einer Kapelle gestohlen wurde" die Vorstellungskraft gewöhnlicher Leser übersteigt.</p>
+<p><strong>Vierter Weg: Die hohle Nadel</strong></p>
+<p>Dies ist das schwierigste Rätsel des gesamten Buches, da es fünf Jahrhunderte Geschichte umspannt. Der verschlüsselte Pergamenttext taucht zwar in Kapitel 3 (ca. 57 %) auf, seine vollständige Bedeutung wird aber erst in den Kapiteln 6–9 (85–92 %) enthüllt. Aufmerksame Leser können in Lupins Andeutung (Kapitel 4, ca. 71 %) das Ausmaß erahnen — „unerschöpflicher Schatz oder wunderbares Versteck" — doch der Sprung von „hohle Nadel = wirklicher Felsturm bei Étretat" erfordert geografisches Wissen, das für französische Leser zu Beginn des 20. Jahrhunderts naheliegender war als für heutige Leser.</p>
+<hr>
+<h2 id="erganzende-anmerkungen">Ergänzende Anmerkungen</h2>
+<p><strong>Die besondere Stellung von „Die hohle Nadel" in Leblancs Serie</strong></p>
+<p>„Die hohle Nadel" ist einer der meistgelobten Romane der Arsène-Lupin-Reihe, weil er den „Verstandeskampf" (Beautrelet vs. Lupin) und das „historische Rätsel" (das Geheimnis der französischen Königsdynastie) zu einem nahezu vollkommenen Ganzen zusammenfügt. Ein solcher Anspruch war in der Unterhaltungsliteratur jener Zeit ausgesprochen selten.</p>
+<p><strong>Ein Werk, das die Rolle des „Detektivs" grundlegend veränderte</strong></p>
+<p>Der Gegner von Sherlock Holmes ist stets ein Rätsel, das entschlüsselt werden muss; Beautrelet's Gegner ist ein Mensch, der „aktiv den Verlauf seiner eigenen Untersuchung steuert". Lupin ist kein passiver Verdächtiger, sondern der Mitautor der Fallerzählung — er arrangiert Zeugen, konstruiert falsche Fährten, steuert die Meinung der Presse und entführt sogar den Vater des Chefdetektivs als Verhandlungspfand. Dadurch ähnelt „Die hohle Nadel" eher einem Schachspiel als einem Puzzle.</p>
+<p><strong>Beautrelet — das Anti-Conan-Doyle-Genie</strong></p>
+<p>Beautrelet's Konzeption (17-jähriger Gymnasiast, kein professioneller Hintergrund, mit Logik den Profis überlegen) ist Leblancs bewusste Parodie und Neuinterpretation des „Detektiv-Genies". Er ist nicht kaltblütig — als sein Vater entführt wird, bricht er in Tränen aus; er ist nicht unfehlbar — er wird von Brédoux niedergestochen und in den Verhandlungen von Lupin in die Enge getrieben. Doch gerade diese Verletzlichkeit macht ihn dreidimensionaler als Sherlock Holmes und lässt ihn bei der endgültigen Enthüllung der Wahrheit umso überzeugender wirken.</p>
+<p><strong>Ein Meisterwerk der Nebelschöpfung: Mehrfache Täuschungsschichten</strong></p>
+<p>Das Täuschungssystem in „Die hohle Nadel" ist von außerordentlicher Präzision und verdient eine gesonderte Analyse:</p>
+<table>
+<thead>
+<tr>
+<th>Täuschungsebene</th>
+<th>Täuschender</th>
+<th>Ziel</th>
+<th>Methode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Erste Ebene</td>
+<td>Daval (bereits tot)</td>
+<td>Der Graf</td>
+<td>Gibt vor, loyal zu sein; ist in Wirklichkeit Komplize</td>
+</tr>
+<tr>
+<td>Zweite Ebene</td>
+<td>Raymonde</td>
+<td>Polizei und Beautrelet</td>
+<td>Gibt falsche Beschreibungen, fabriziert einen Drohbrief, lügt über Beautrelet's angebliche Anwesenheit</td>
+</tr>
+<tr>
+<td>Dritte Ebene</td>
+<td>Falscher Kutscher</td>
+<td>Die Ermittler</td>
+<td>Tauscht die Mütze aus, schickt das Telegramm, verschwindet</td>
+</tr>
+<tr>
+<td>Vierte Ebene</td>
+<td>Brédoux</td>
+<td>M. Filleul</td>
+<td>Infiltriert das Ermittlungszentrum in der Rolle des Gerichtsschreibers</td>
+</tr>
+<tr>
+<td>Fünfte Ebene</td>
+<td>Lupin (durch den Arzt)</td>
+<td>Die gesamte Welt</td>
+<td>Die Falschinformation „Hotel" lenkt alle Suchen in die falsche Richtung</td>
+</tr>
+<tr>
+<td>Sechste Ebene</td>
+<td>Falsche Leichen (zwei)</td>
+<td>Beautrelet und die Polizei</td>
+<td>Täuschen Lupins Tod vor; täuschen Raymondes Ermordung vor</td>
+</tr>
+</tbody>
+</table>
+<p>Die Anhäufung dieser sechs Täuschungsebenen macht es für den Leser bis zum fünften Kapitel nahezu unmöglich, irgendetwas mit Sicherheit zu sagen — doch sobald die beiden Grundannahmen „Lupin lebt noch, Raymonde lebt noch" akzeptiert werden, löst sich das gesamte Rätsel wie ein Kartenhaus von selbst auf.</p>
+<p><strong>„Die hohle Nadel" als Kultursymbol</strong></p>
+<p>Die Meeresfelszapfen von Étretat sind eine real existierende geografische Formation an der normannischen Küste. Leblanc fügt dieses Touristenziel geschickt in eine fiktive französische Geschichte ein: Cäsar, Chlodwig, die Merowinger, die Kapetinger … bis hin zu Lupin. Dieses fiktive „französische Staatsgeheimnis" verleiht dem Roman eine nahezu mythische Aura und hebt „Die hohle Nadel" über die Grenzen des gewöhnlichen Detektivromans hinaus in das Grenzgebiet der „historischen Fantasie".</p>
+<p><strong>Vergleich mit anderen Werken der Reihe</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>„Arsène Lupin" (frühe Kurzgeschichten)</th>
+<th>„Das Dreieck der Liebe" (Le Triangle d'Or)</th>
+<th>„Die hohle Nadel"</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lupins Rolle</td>
+<td>Hauptfigur und Detektiv</td>
+<td>Der verborgene Spieler</td>
+<td>Flüchtling und Liebhaber</td>
+</tr>
+<tr>
+<td>Gegner</td>
+<td>Kein individueller Gegner</td>
+<td>Inspektor Ganimard</td>
+<td>Beautrelet (gleichaltrig, gleich talentiert)</td>
+</tr>
+<tr>
+<td>Umfang des Kernrätsels</td>
+<td>Einzelner Diebstahl</td>
+<td>Mehrfache Verbrechen</td>
+<td>Historisches Geheimnis über zweitausend Jahre</td>
+</tr>
+<tr>
+<td>Menschliche Komplexität</td>
+<td>Gering</td>
+<td>Mittel</td>
+<td>Hoch (Lupin weint, macht Kompromisse, verliebt sich)</td>
+</tr>
+</tbody>
+</table>
+<p>„Die hohle Nadel" gehört zu den wenigen Werken der Lupin-Reihe, in denen Lupin „menschliche Grenzen" zeigt — er verliebt sich in eine Frau, die ihn nicht liebt; er empfindet echte Unruhe angesichts von Beautrelet; sein letzter „Sieg" (die hohle Nadel zu behalten und Raymonde zu gewinnen) ist in Wirklichkeit eine Art Selbstverbannung aus der Welt. Diese Komplexität ist der Höchststand dessen, was ein Unterhaltungsroman des Jahres 1909 erreichen konnte.</p>
+    <a href="../index.html" class="back-link">← Zur Startseite</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Detektivanalyse</p>
+    <p>Fünf Autoren · achtundachtzig Werke · 135 Jahre Entwicklung der Schwierigkeit im Kriminalroman.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

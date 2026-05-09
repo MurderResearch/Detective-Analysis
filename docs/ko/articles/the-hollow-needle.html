@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>속이 빈 바늘（The Hollow Needle）— 추리 분석 — 추리해부실</title>
+<meta name="description" content="노르망디 해변의 앙브뤼메시 성（Château d'Ambrumésy）에서 한밤중에 절도 살인 사건이 발생한다. 제스브르 백작（Comte de Gesvres）의 개인 비서 장 다발（Jean Daval）이 서재에서 시신으로 발견되고, 백작의 조카딸 레몽드（Raymonde de Saint-Vé">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-hollow-needle.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-hollow-needle.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-hollow-needle.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-hollow-needle.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-hollow-needle.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-hollow-needle.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-hollow-needle.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-hollow-needle.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif KR', serif;
+  --font-sans: 'Noto Sans KR', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">추리해부실</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">홈</a>
+        <a href="../index.html#latest">최신</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="언어" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 한국어</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-hollow-needle.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-hollow-needle.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-hollow-needle.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/the-hollow-needle.html">日本語</a>
+      <a class="lang-item active" data-lang="ko" href="/Detective-Analysis/ko/articles/the-hollow-needle.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/the-hollow-needle.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/the-hollow-needle.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/the-hollow-needle.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">모리스 르블랑 · </div>
+    <h1>속이 빈 바늘（The Hollow Needle）— 추리 분석</h1>
+    <div class="subtitle">모리스 르블랑（Maurice Leblanc） · 장편（10장）</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">추리 난이도</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">안개 등급</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="the-hollow-needle">속이 빈 바늘（The Hollow Needle）— 추리 분석</h1>
+<h2 id="_1">기본 정보</h2>
+<ul>
+<li>저자：모리스 르블랑（Maurice Leblanc）</li>
+<li>출판년도：1909년</li>
+<li>장르：장편（10장）</li>
+<li>탐정：이시도르 보트를레（Isidore Beautrelet），고등학교 6학년생</li>
+<li>핵심 미스터리 유형：whodunit + howdunit + 신비로운 보물의 위치（whereis）</li>
+</ul>
+<hr>
+<h2 id="_2">추리 난이도 총평</h2>
+<table>
+<thead>
+<tr>
+<th>지표</th>
+<th>별점</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>추리 난이도（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>평균 수렴점 62% — 각 층위의 진실이 분산되어 분포하며, 가장 핵심적인 「속이 빈 바늘」의 비밀은 전체의 85%가 지나야 합리적으로 추론 가능. 초반 미스터리（절도 대상, 범인 신원）는 상대적으로 더 쉬움</td>
+</tr>
+<tr>
+<td>안개 등급（Fog Rating）</td>
+<td>⭐⭐⭐⭐</td>
+<td>다중 능동적 기만：시체 위장, 모자 바꿔치기, 내부 배신자, 피해자 위장, 비밀리에 간호받는 부상자——오도가 이 사건에서 가장 정교한 무기</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_3">줄거리</h2>
+<p>노르망디 해변의 앙브뤼메시 성（Château d'Ambrumésy）에서 한밤중에 절도 살인 사건이 발생한다. 제스브르 백작（Comte de Gesvres）의 개인 비서 장 다발（Jean Daval）이 서재에서 시신으로 발견되고, 백작의 조카딸 레몽드（Raymonde de Saint-Véran）가 어둠 속에서 도주하는 도둑에게 총을 쏘아 맞힌다. 그러나 이 부상당한 남자는 그대로 신비롭게 사라져버린다——성의 폐허를 수색해도 성과가 없고, 사방의 담장에는 모두 경비가 서 있었는데, 그는 마치 공기 속으로 증발한 듯했다.</p>
+<p>겨우 17세의 고등학생 이시도르 보트를레가 조사 현장에 몰래 들어와, 놀라운 논리적 추리력으로 이틀 만에 여러 수수께끼를 연달아 풀어낸다. 무엇이 훔쳐졌는지 밝히고, 범인을 지목하고, 부상당한 도주자의 진짜 신원이 세상에 이름 높은 괴도 아르센 뤼팽（Arsène Lupin）임을 확인하며, 뤼팽이 폐허 지하 밀실에 숨어 있다고 판단한다. 언론은 떠들썩해지고, 소년 명탐정은 하루아침에 유명인이 된다.</p>
+<p>그러나 보트를레의 승리는 짧았다. 뤼팽의 부하가 그를 칼로 찌르고, 레몽드는 살해당한 것으로 의심받아 절벽 아래로 시신이 던져지며, 고대 밀서에 등장한 두 단어「aiguille creuse」（속이 빈 바늘）는 더욱 오래되고 방대한 비밀을 가리킨다. 보트를레는 깊이 수사하다가 자신의 아버지가 뤼팽에게 납치되어 협박의 수단으로 쓰이고 있음을 알게 된다. 신문 지면에서 공개적으로 펼쳐지던 이 지략 대결은 마침내 노르망디 해변의 천연 암주（岩柱）를 향한다——카이사르 시대부터 역대 프랑스 군주들이 비밀리에 지켜온 「속이 빈 바늘」, 그것은 무수한 세대의 보물을 감춘 천연 밀실이자 뤼팽의 은밀한 최후의 왕좌였다.</p>
+<hr>
+<h2 id="_4">진실 해부</h2>
+<h3 id="1-whodunit">진실 1：장 다발의 진범（whodunit）</h3>
+<ul>
+<li><strong>단서 수렴점：약 70%</strong></li>
+<li>정답：제스브르 백작（Comte de Gesvres） 본인이 정당방위로 다발을 살해했다. 다발은 뤼팽 집단의 내부 협조자로, 혼란을 틈타 칼을 들고 잠에서 깨어난 백작을 찌르려다가, 백작에게 칼을 빼앗겨 반격당해 죽었다. 백작은 옛 정 때문에 진실을 공개하기 싫어서 경찰을 의도적으로 오도하며 다발이 무고한 피해자인 것처럼 암시했다.</li>
+</ul>
+<h4 id="_5">핵심 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/퍼센트）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>백작이 혼수상태에서 깨어난 뒤 첫마디：「나는 다치지 않았어——다발은요？ 살아 있나요？ 그 칼——그 칼은 어디 있죠？」</td>
+<td>1장 / 약 8%</td>
+<td>공격당해 기절한 사람이 왜 첫 반응으로 「칼」의 행방을 확인하는가？ 칼은 행위자에게만 의미가 있지, 무고한 피해자에게는 해당되지 않는다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>장 다발은 새벽 4시 사건 발생 당시 구두쇠까지 포함한 완전한 낮 복장을 입고 있었고, 침대는 정돈된 채 잠든 흔적이 없었다</td>
+<td>2장 / 약 35%</td>
+<td>소음에 놀라 깨어났다면 왜 슬리퍼를 신지 않았는가？ 보트를레가 지적하길：그는 애초에 잠들지 않았으며, 어떤 일이 벌어지기를 능동적으로 기다리고 있었다</td>
+</tr>
+<tr>
+<td>3</td>
+<td>루벤스 그림을 모사한 화가 「샤르프네（Charpenais）」는 다발이 직접 제스브르 백작에게 소개한 인물</td>
+<td>2장 / 약 40%</td>
+<td>범행의 설계자와 실행자 사이를 잇는 다리——다발은 피해자가 아니라 공모자다</td>
+</tr>
+<tr>
+<td>4</td>
+<td>다발의 흡묵지에 남은 주소「A.L.N., 사서함 45호, 파리」——같은 주소가 가짜 마부가 보낸 전보에도 등장</td>
+<td>2장 / 약 43%</td>
+<td>서면 증거：다발은 뤼팽 집단과 통신을 유지했으며, 계획의 핵심 참여자</td>
+</tr>
+<tr>
+<td>5</td>
+<td>백작이 나중에 직접 시인하고, 다발이 공모자들에게 쓴 두 통의 초고 편지를 내놓음</td>
+<td>2장 / 약 48%</td>
+<td>확인 — 단서 수렴점</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_6">보조 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/퍼센트）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>제스브르 백작이 경찰에 한 진술이 비정상적으로 모호하고 단편적이며，「주요 사실만 기억한다」</td>
+<td>1장 / 약 12%</td>
+<td>단순히 공격당해 기절했다고 주장하는 사람의 진술이 그토록 세심하게 세부를 통제하고 있다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>백작은 의식을 잃기 전 결코 도움을 요청하지도, 외부에 어떤 신호도 보내려 하지 않았다</td>
+<td>1장 / 약 10%</td>
+<td>그는 자신의 행동에 침묵이 필요하다는 것을 알고 있었다</td>
+</tr>
+<tr>
+<td>3</td>
+<td>서재（boudoir）에 나타난 혼란의 흔적——쓰러진 의자, 부서진 탁자——이 「외부인이 갑작스럽게 침입했다」는 버전의 이야기와 완전히 일치하지 않는다</td>
+<td>1장 / 약 9%</td>
+<td>격투의 형태가 기습보다는 대치에 가깝다</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_7">가짜 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/퍼센트）</th>
+<th>오도 방향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>백작의 묘사：「한 남자가 문쪽에서 달려들어 내 정신을 쏙 빼놓았다」，전체 사건이 외부 침입자에 의한 것임을 암시</td>
+<td>1장 / 약 12%</td>
+<td>독자（와 경찰）의 관심을 「신비로운 제3의 인물」에 집중시켜, 사건이 외부 도둑의 살인이라고 믿게 함</td>
+</tr>
+<tr>
+<td>2</td>
+<td>다발의 이미지——백작에게 깊이 신임받는 노비서, 모든 이가 칭찬하는 좋은 사람——이 그를 결백한 피해자처럼 보이게 만든다</td>
+<td>1장 / 약 13%</td>
+<td>「가장 그럴법한 피해자」의 틀 때문에 독자가 그의 공모자 역할을 의심하지 않는다</td>
+</tr>
+<tr>
+<td>3</td>
+<td>다발의 정부（Mme. Verdier）가 그의 절도 동기로 사후에 밝혀짐</td>
+<td>2장 / 약 50%</td>
+<td>이 세부 사항이 그를 「사랑 때문에 범죄를 저지른 가련한 인물」로 만들어, 오히려 의심이 아닌 동정을 불러일으킨다</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="2-whodunit-whereis">진실 2：부상당한 도주자의 신원과 은신처（whodunit + whereis）</h3>
+<ul>
+<li><strong>단서 수렴점：약 40%</strong></li>
+<li>정답：부상당한 남자는 아르센 뤼팽 본인（가명「Étienne de Vaudreix」）으로, 작은 예배당 바닥 아래의 고대 지하 묘소（crypt）에 숨어 레몽드의 비밀 간호를 받으며 40일을 보냈다.</li>
+</ul>
+<h4 id="_8">핵심 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/퍼센트）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>가짜 마부가 보낸 전보 주소：「A.L.N., 사서함 45호」</td>
+<td>1장 말 / 약 22%</td>
+<td>보트를레가 즉시 알아챔：A.L.N. = <strong>A</strong>rsène <strong>L</strong>upi<strong>N</strong> 의 첫 글자와 마지막 글자</td>
+</tr>
+<tr>
+<td>2</td>
+<td>진짜 가죽 모자는 가짜 마부가 가져가고, 남은 것은 가짜 모자——정교하게 설계된 식별 도구의 교환</td>
+<td>1장 말 / 약 20%</td>
+<td>이 조작의 수준이 뤼팽의 스타일에 부합하며, 이 절도가 최고 수준의 인물이 주도했음을 암시</td>
+</tr>
+<tr>
+<td>3</td>
+<td>부상당한 남자가 폐허 구역을 전혀 벗어날 수 없었으나, 지상 수색에서는 아무것도 발견되지 않음</td>
+<td>1장 / 약 18%</td>
+<td>「폐허 안에만 있을 수 있는데 찾을 수 없다」→ 필연적으로 지하 공간이 있다</td>
+</tr>
+<tr>
+<td>4</td>
+<td>샤르프네가 무려 다섯 달 동안 그림을 「모사」했는데——정상적으로 필요한 시간을 훨씬 초과하며, 매일 황혼 무렵까지 성에 머물렀다</td>
+<td>2장 / 약 38%</td>
+<td>그는 이 기간을 이용해 예배당 구조를 은밀히 탐사했으며, 바로 그렇게 지하 밀실을 발견했다</td>
+</tr>
+<tr>
+<td>5</td>
+<td>사망자 의복 내부에 「E.V.」 약자（Étienne de Vaudreix）가 새겨져 있었다——뤼팽의 파리 가명</td>
+<td>3장 / 약 60%</td>
+<td>물질적 증거가 밀실 속 시체가 한때 뤼팽의 신원 위장이었음을 확인</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_9">보조 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/퍼센트）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>가니마르 형사도 인정：「이 수법에는 뤼팽의 낙인이 찍혀 있어, 다른 누구의 작품일 수 없다」</td>
+<td>2장 / 약 32%</td>
+<td>직업적 판단이 보조 확인 역할</td>
+</tr>
+<tr>
+<td>2</td>
+<td>파리의 주택「Rue Marbeuf 38번지」가 사서함 45호가 위치한 우체국 바로 옆에 있다</td>
+<td>2장 말 / 약 45%</td>
+<td>지리적 우연이 가명과 주소의 연결을 확인</td>
+</tr>
+<tr>
+<td>3</td>
+<td>외과의사 들라트르（Dr. Delattre）가 「가짜 경찰」에게 이끌려「무명 부상자」의 수술을 하러 갔는데, 왕복 시간이 파리에서 앙브뤼메시까지의 거리에 정확히 부합</td>
+<td>2장 / 약 30%</td>
+<td>의료 긴급 행동의 규모를 보면, 두목만이 이러한 자원을 동원할 수 있다</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_10">가짜 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/퍼센트）</th>
+<th>오도 방향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>의사가 부상자를 「한 여관 방에」 안치했으며, 환경이 「형편없이 열악했다」고 말함</td>
+<td>2장 / 약 28%</td>
+<td>경찰이 반경 수 킬로미터 내의 모든 여관을 샅샅이 뒤지며 주의가 분산됨——보트를레는 나중에 이것이 뤼팽의 공모자가 지시에 따라 거짓말한 것임을 지적</td>
+</tr>
+<tr>
+<td>2</td>
+<td>밀실에서 발견된 「뤼팽의 시체」——머리가 완전히 으스러져 알아볼 수 없는 상태</td>
+<td>3장 / 약 58%</td>
+<td>시체는 정교하게 꾸민 소품으로（실제로 사망한 다른 시체로 대체），목적은 모든 사람이 뤼팽이 이미 죽었다고 믿게 하는 것</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="3-whatdunit">진실 3：훔쳐진 것은 무엇인가（whatdunit）</h3>
+<ul>
+<li><strong>단서 수렴점：약 35%（루벤스 그림）；약 65%（예배당 조각）</strong></li>
+<li>정답：루벤스 진품 4점이 복제품으로 교체되었고, 고딕 양식 예배당의 모든 귀중한 조각품（작은 원주, 부조, 석조 성상군）도 정밀한 석고 복제품으로 교체되어, 원본들은 분批로 센 강 건너편으로 운반되었다.</li>
+</ul>
+<h4 id="_11">핵심 단서（루벤스 그림）</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/퍼센트）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>제스브르 백작이 「무언가가 가져가졌다」고 하면서도 「아무것도 없어진 게 없다」고 말함——자기모순</td>
+<td>1장 / 약 15%</td>
+<td>보트를레의 논리적 추론：「도난당했는데 없어진 것이 없다」면, 유일한 설명은 「원본이 동일한 외관의 복제품으로 교체되었다」는 것</td>
+</tr>
+<tr>
+<td>2</td>
+<td>샤르프네가 「모사」를 명목으로 성에서 꼬박 다섯 달을 일했고, 제스브르 백작 자신도 그림이 가짜인 것을 알았다</td>
+<td>2장 / 약 33%</td>
+<td>그가 일한 「성과」가 바로 진품을 가짜로 바꿔치기한 4점의 그림이다</td>
+</tr>
+<tr>
+<td>3</td>
+<td>두 젊은 여성이 목격한 도주자가 「꽤 큰 물건을 들고 허벅지에 부딪히며」 달아남</td>
+<td>1장 / 약 5%</td>
+<td>캔버스를 말았을 때의 형태와 무게가 대형 유화와 완전히 일치</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_12">핵심 단서（예배당 조각）</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/퍼센트）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>할링턴（Harlington）의 편지에서 언급：「당신이 성공한다면 다른 것들도 추가할 수 있을 거예요——그건 좀 의심스럽지만」</td>
+<td>3장 / 약 55%</td>
+<td>「다른 것들」은 더 대담한 절도 계획——예배당 자체를 가리킨다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>보트를레가 지팡이로 예배당의 석조 성상을 내리쳐 석고 가루로 부수었다——「속이 비었어요！ 종이죽과 석고！」</td>
+<td>3장 / 약 62%</td>
+<td>현장 실험으로 직접 확인</td>
+</tr>
+<tr>
+<td>3</td>
+<td>마부 바티넬（Vatinel）이 엿새 연속으로 화물을 운반：「큰 돌덩이——또는 더 작은 가늘고 긴 물건들, 신문지에 싸여 아주 귀중하다고 함」</td>
+<td>3장 / 약 56%</td>
+<td>날마다의 운반 물류 기록이 예배당 석조물이 하나하나 옮겨진 과정과 대응</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_13">가짜 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/퍼센트）</th>
+<th>오도 방향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>화실（drawing room）「완벽한 질서, 없어진 것이 아무것도 없어 보인다」는 초기 묘사</td>
+<td>1장 / 약 14%</td>
+<td>조사관（과 독자）이 절도가 이 방과 무관하다고 믿게 해서, 「도대체 무엇을 훔쳤는가」라는 수수께끼가 생긴다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>예배당이 「고딕 건축의 진수……노르망디 고딕 양식의 훌륭한 모범으로 여겨진다」는 공인된 걸작</td>
+<td>1장 / 약 11%</td>
+<td>「이렇게 소중한 건물을 어떻게 훔칠 수 있겠는가？」라는 심리적 장벽이 독자가 이 방향으로 생각하지 못하게 한다</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="4">진실 4：레몽드의 이중 역할（진짜 신원과 입장）</h3>
+<ul>
+<li><strong>단서 수렴점：약 65%</strong></li>
+<li>정답：레몽드는 뤼팽에게 총을 쏴 부상을 입힌 인물이지만, 이후 연민으로 그가 예배당에 숨도록 도와주고 40일 동안 비밀리에 그를 간호했다. 그녀의 일련의 행동（경찰에 잘못된 용의자 묘사 제공, 보트를레의 추리를 방해하는 척하기, 「협박 편지」 조작）은 모두 뤼팽이 발각되지 않도록 보호하기 위한 것이었다. 그녀는 결국 뤼팽（가명 Valméras）에게 구애를 받아, 소설 후반부에서 그의 사랑을 받아들인다.</li>
+</ul>
+<h4 id="_14">핵심 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/퍼센트）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>두 사촌이 부상당한 남자의 외모를 정반대로 묘사：레몽드는 「크고 건장하다」고 하고, 수잔은 「중간 키에 날씬하다」고 함</td>
+<td>1장 / 약 17%</td>
+<td>둘 중 한 사람이 거짓말을 하고 있다——수잔이 거짓말할 동기가 없으니, 뤼팽에게 가까이 다가간 것은 레몽드다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>「레몽드 양을 위협하는 협박 편지」——발신인은 뤼팽의 공모자이고, 내용은 「그녀가 두목을 죽였다면 큰일 날 거다」</td>
+<td>1장 말 / 약 23%</td>
+<td>보트를레는 나중에 이 편지가 실제로 레몽드 자신이 비밀 연락을 통해 발송하도록 주선한 것임을 지적——그 목적은 자신을 「협박받는 피해자」처럼 보이게 하고 「공범」처럼 보이지 않게 하기 위한 것</td>
+</tr>
+<tr>
+<td>3</td>
+<td>레몽드가 보트를레를 사건 발생 전 오솔길에서 보았다고 지목——이후 거짓말로 밝혀지며, 보트를레는 당시 다른 곳에 있었다</td>
+<td>1장 / 약 26%</td>
+<td>그녀가 능동적으로 수사를 방해하여 보트를레가 계속 추리하지 못하게 막음</td>
+</tr>
+<tr>
+<td>4</td>
+<td>보트를레의 기사에 명시：레몽드가 40일 동안 뤼팽에게 약을 가져다주고, 상처를 감싸고, 회복될 때까지 간호했다</td>
+<td>4장 / 약 68%</td>
+<td>보트를레의 재구성 기사가 최종 수렴점</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_15">보조 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/퍼센트）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>우비르의 약사가 레몽드를 위해 여러 종류의 처방약을 조제했는데, 그녀 개인을 위한 약이 아니었다</td>
+<td>4장 / 약 65%</td>
+<td>처방의 종류와 수량이 건강한 여성 한 명의 개인적 필요를 초과</td>
+</tr>
+<tr>
+<td>2</td>
+<td>그녀는 사건 발생 후 시종일관「예상보다 빠르게 냉정을 되찾은」 모습을 보이며, 사촌 수잔과 강렬한 대조를 이룬다</td>
+<td>1-2장</td>
+<td>그녀는 뤼팽이 안전하다는 것을 알고 있었다——자신이 그를 도왔기 때문에</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_16">가짜 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/퍼센트）</th>
+<th>오도 방향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>레몽드가 「용감하게 총으로 도주자에게 부상을 입혔다」는 영웅적 이미지</td>
+<td>1장 / 약 8%</td>
+<td>「그녀는 정의의 편」이라는 선입견을 형성하여, 독자가 이후 그녀의 일련의 행동에 어떤 불순한 동기가 있다고 의심하지 않게 한다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>레몽드「가 살해당했다」는 가짜 소식（혈흔, 스카프, 절벽 아래서「발견된 시체」）</td>
+<td>3장 / 약 52%</td>
+<td>모든 사람이 그녀가 이미 죽었다고 믿게 하여, 그녀가 공모자이거나 자발적으로 사라진 것일 가능성을 아무도 계속 조사하지 않게 한다</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="5-whereis">진실 5：속이 빈 바늘의 비밀（whereis + 역사적 수수께끼）</h3>
+<ul>
+<li><strong>단서 수렴점：약 85%</strong></li>
+<li>정답：「속이 빈 바늘」（Aiguille Creuse）은 노르망디 해안 에트르타（Étretat） 근처의 천연 속이 빈 해식 암주（une aiguille de mer）로, 카이사르 대제가 갈리아를 정복한 때부터 역대 프랑스 군주들이 비밀리에 보물을 보관하고 비상시 피신처로 사용해온 곳이다. 이 비밀은 「어느 때나 오직 한 사람만 안다」는 원칙으로 대대로 전해졌다. 뤼팽은 고대 양피지 문서를 통해 이 수수께끼를 풀어내어, 역사상 왕이 아니면서 이 비밀을 지닌 유일한 인물이 되었다. 속이 빈 바늘의 입구는 암주 바닥에 있으며, 특정 조류 조건과 암호어가 필요하다.</li>
+</ul>
+<h4 id="_17">핵심 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/퍼센트）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>고대 양피지 암호：숫자로 모음을 대신하고 점으로 자음을 대신하여, 최종적으로「aiguille creuse」（속이 빈 바늘）와「demoiselles」（여성들, 해안 가까운 암석군을 지칭）등의 단어를 해독</td>
+<td>3장 / 약 57%</td>
+<td>언어학의 첫 번째 관문——핵심 단어의 등장</td>
+</tr>
+<tr>
+<td>2</td>
+<td>뤼팽이 보트를레에게：「이 비밀은 무한한 보물창고이거나, 아니면 아무도 볼 수 없는 신비로운 피신처——혹은 둘 다입니다. 내가 거기서 끌어내는 초월적인 힘을 상상할 수 있겠어요？」</td>
+<td>4장 / 약 71%</td>
+<td>뤼팽 본인이 압박 속에서 바늘의 규모가 단순한 「보물 장소」를 훨씬 초월한다고 간접적으로 인정</td>
+</tr>
+<tr>
+<td>3</td>
+<td>6장에서 밝혀진 고대 문헌《바늘에 관한 논문》（Le Traité de l'Aiguille），카이사르부터 루이 16세까지 내막을 아는 모든 인물의 이름과 전수 방식을 기록</td>
+<td>6장 / 약 85%</td>
+<td>역사적 틀의 완전한 공개 — 단서 수렴점</td>
+</tr>
+<tr>
+<td>4</td>
+<td>보트를레가 마침내 에트르타 해안에서 암주를 찾아내고, 양피지 암호의 안내（암호어「열려라, 참깨！」）에 따라 그 안으로 들어가 뤼팽의 왕국을 직접 목격</td>
+<td>9장 / 약 92%</td>
+<td>실물 확인</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_18">보조 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/퍼센트）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>샤르프네（즉 뤼팽의 공모자）가 운반한 화물에는 예술품뿐만 아니라 「큰 돌덩이」도 있었다——그것은 건재로, 속이 빈 바늘 내부를 개조하는 데 사용</td>
+<td>3장 / 약 56%</td>
+<td>뤼팽이 바늘을 현대적인 피신처로 개조하고 있었다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>뤼팽이 자신의 일생 전체가 한 목표를 향해 나아가고 있었다고 말하며, 줄곧 비밀을 지켜왔다——「당신이 이 비밀을 안다면, 그래도 나와 싸우겠어요？」</td>
+<td>4장 / 약 72%</td>
+<td>그의 야망이 평범한 절도가 아니라 더 심원한 왕조적 계획임을 암시</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_19">가짜 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/퍼센트）</th>
+<th>오도 방향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>뤼팽이 양피지 암호를 필사적으로 빼앗으려 한 것（브레두（Brédoux）를 시켜 칼로 위해를 가하게 함）이 독자로 하여금 「암호 자체가 유일한 단서」라고 생각하게 만든다</td>
+<td>3장 / 약 60%</td>
+<td>보트를레는 나중에 깨닫는다：뤼팽이 두려워한 것은 암호가 해독되는 것이 아니라, 암호의 재질이나 표시（붉은 밀랍 봉인）가 그것의 역사적 출처를 드러낼 수 있다는 것</td>
+</tr>
+<tr>
+<td>2</td>
+<td>「속이 빈 바늘」이 직관적으로 재봉 바늘이나 암호를 연상시키게 한다——실제로 존재하는 노르망디 지형지물이 아니라</td>
+<td>3장 / 약 57%</td>
+<td>이름 자체의 구체적인 지리적 지시가 기이함에 의해 가려진다</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_20">추리 경로 재구성</h2>
+<p><strong>첫 번째 경로：장 다발의 범인은 누구인가？</strong></p>
+<p>독자의 가장 이른 돌파구는 1장（약 8%）에서 나타난다：제스브르 백작이 혼수상태에서 깨어나 「그 칼은 어디 있죠」라고 묻는 것——이 세부사항은 극히 짧고 매우 지나치기 쉽다. 이것을 출발점으로 삼는다면, 주의 깊은 독자는 백작이 말한 것보다 더 많이 알고 있다고 의심할 수 있다. 2장（약 35-40%）에 이르면, 다발의 완전한 낮 복장의 세부 사항이 그가 내막을 아는 사람임을 암시하고, 그가 샤르프네를 소개한 사실（약 40%）이 더해지면 공모 관계가 기본적으로 확인된다. 흡묵지 주소（약 43%）는 확인 단서다. 모든 단서는 약 70%에서 수렴하며, 이때 보트를레가 모든 사람 앞에서 정답을 발표한다.</p>
+<p><strong>두 번째 경로：부상당한 남자는 누구이며 어디에 숨어 있는가？</strong></p>
+<p>「A.L.N.」 약자는 1장 말（약 22%）에 이미 등장하지만, 이 세 글자가 <strong>A</strong>rsène <strong>L</strong>upi<strong>N</strong> 을 가리킨다는 것을 깨닫기까지 잠시 멈춤이 필요하다. 이것이 뤼팽이라는 의심이 생기는 순간, 모든 수수께끼는 즉시 설명의 틀을 갖게 된다：그의 조직, 그의 수단, 그의 담대함. 은신처에 대해서는 논리적 추론이 2장（약 30%）에서 이미 충분하다：「봉쇄선을 넘을 수도 없고 전혀 찾을 수도 없다」→ 지하 공간이 있을 것이다；「샤르프네가 예배당에서 장시간 일했다」→ 밀실을 발견했을 것이다. 수렴점은 2장에서 보트를레가「그는 거기 있어요——폐허 지하에」（약 42%）라고 선언하는 부분이다.</p>
+<p><strong>세 번째 경로：루벤스와 예배당</strong></p>
+<p>가장 정교한「사실보다 논리가 앞서는」순간：「무언가 훔쳐졌는데 없어진 것이 없다」→「필연적으로 복제품으로 교체되었다」——이 추론은 1장 말（약 25%）에 이미 성립하며, 다른 어떤 사실도 필요하지 않고 순수하게 논리만으로 가능하다. 예배당의 비밀은 훨씬 늦게（3장, 약 60-65%）나오는데, 「예배당 전체가 도난당했다」는 것이 일반적인 독자의 상상 범위를 초월하기 때문이다.</p>
+<p><strong>네 번째 경로：속이 빈 바늘</strong></p>
+<p>이것은 전체 소설에서 가장 어려운 수수께끼로, 다섯 세기의 역사에 걸쳐 있기 때문이다. 양피지 암호는 3장（약 57%）에 이미 등장하지만, 그 의미는 6-9장（85-92%）이 되어서야 완전히 밝혀진다. 주의 깊은 독자는 뤼팽의 경고（4장, 약 71%）에서 그 규모를——「무한한 보물창고 또는 신비로운 피신처」——느낄 수 있지만, 「속이 빈 바늘＝에트르타의 실제 암주」라는 비약은 지리적 지식이 필요하며, 20세기 초 프랑스 독자들에게 오늘날 독자들보다 더 자연스럽게 다가왔다.</p>
+<hr>
+<h2 id="_21">보충 설명</h2>
+<p><strong>《속이 빈 바늘》이 르블랑 시리즈에서 차지하는 특별한 위치</strong></p>
+<p>《속이 빈 바늘》은 아르센 뤼팽 시리즈 중 가장 폭넓은 찬사를 받는 장편 중 하나로, 「지략 대결」（보트를레 vs. 뤼팽）과 「역사적 수수께끼」（프랑스 왕실의 비밀）라는 두 주선을 거의 완벽한 하나의 전체로 엮어냈기 때문이다. 이는 당시 통속 소설에서 상당히 드문 야망이었다.</p>
+<p><strong>「탐정」의 위치를 진정으로 바꾼 작품</strong></p>
+<p>셜록 홈즈의 상대는 언제나 단지 풀어야 할 수수께끼일 뿐이다；보트를레의 상대는 「자신이 조사받는 과정을 능동적으로 관리하는」 인물이다. 뤼팽은 수동적인 용의자가 아니라, 사건 서사의 공동 저자다——그는 증인을 배치하고, 가짜 단서를 설계하고, 미디어 여론을 통제하고, 심지어 주탐정의 아버지를 납치해 협상 수단으로 삼는다. 이것이 《속이 빈 바늘》을 퍼즐보다는 체스에 더 가깝게 만든다.</p>
+<p><strong>보트를레——반 코난 도일의 천재</strong></p>
+<p>보트를레의 설정（17세 고등학생, 직업적 배경 없음, 논리로 전문가를 압도）은 르블랑이 「천재 탐정」 유형에 대해 의도적으로 조롱하고 재해석한 것이다. 그는 냉정하지 않다——아버지가 납치되었을 때 목 놓아 울었다；그는 완벽하지 않다——브레두에게 칼에 찔리고, 협상에서 뤼팽에게 압도당했다. 그러나 바로 이러한 취약성이 그를 홈즈보다 더 입체적으로 만들고, 최종적으로 진실을 밝혔을 때 더욱 설득력 있게 한다.</p>
+<p><strong>안개 공정의 걸작：다층적 기만의 중첩</strong></p>
+<p>《속이 빈 바늘》의 오도 시스템 설계는 극히 정밀하여 별도로 분석할 가치가 있다：</p>
+<table>
+<thead>
+<tr>
+<th>기만 층위</th>
+<th>기만자</th>
+<th>목표</th>
+<th>수법</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1층</td>
+<td>다발（이미 사망）</td>
+<td>백작</td>
+<td>충성을 주장하지만 실은 공모자</td>
+</tr>
+<tr>
+<td>2층</td>
+<td>레몽드</td>
+<td>경찰과 보트를레</td>
+<td>잘못된 묘사 제공, 가짜 협박 편지 조작, 보트를레를 알아보았다고 거짓말</td>
+</tr>
+<tr>
+<td>3층</td>
+<td>가짜 마부</td>
+<td>조사관</td>
+<td>모자 바꾸기, 전보 전달, 증발</td>
+</tr>
+<tr>
+<td>4층</td>
+<td>브레두</td>
+<td>M. 필뢰（M. Filleul）</td>
+<td>법원 서기 신분으로 조사 핵심에 침투</td>
+</tr>
+<tr>
+<td>5층</td>
+<td>뤼팽（의사를 통해）</td>
+<td>전 세계</td>
+<td>「여관」이라는 가짜 단서로 모든 사람이 잘못된 방향을 수색하게 함</td>
+</tr>
+<tr>
+<td>6층</td>
+<td>가짜 시체（두 구）</td>
+<td>보트를레와 경찰</td>
+<td>뤼팽이 이미 죽었다고, 레몽드가 이미 살해당했다고 위장</td>
+</tr>
+</tbody>
+</table>
+<p>여섯 층위의 기만이 중첩되어, 독자들은 5장 이전에는 어떤 「진실」도 거의 확인할 수 없다——그리고 일단 「뤼팽은 살아 있고, 레몽드도 살아 있다」는 두 전제가 받아들여지면, 전체 수수께끼는 블록이 쓰러지듯 자동으로 해체된다.</p>
+<p><strong>「속이 빈 바늘」이라는 문화적 상징</strong></p>
+<p>에트르타의 해식 암주는 노르망디 해안에 실제로 존재하는 지리적 경관으로, 르블랑은 이 관광 명소를 교묘하게 프랑스의 허구적 역사 속에 심어 넣었다：카이사르, 클로비스, 메로빙거 왕조, 카페 왕조……뤼팽에까지 이른다. 이 허구적인「프랑스 국가 비밀」이 소설에 신화에 가까운 기질을 더해주어,《속이 빈 바늘》을 보통 탐정 소설의 범주를 초월하여 「역사 판타지」의 경계 지대로 진입하게 한다.</p>
+<p><strong>같은 시리즈 다른 작품과의 비교</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>《아르센 뤼팽》（초기 단편）</th>
+<th>《황금 삼각형》</th>
+<th>《속이 빈 바늘》</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>뤼팽의 역할</td>
+<td>주인공 겸 탐정</td>
+<td>숨겨진 책사</td>
+<td>도주자 겸 연인</td>
+</tr>
+<tr>
+<td>상대</td>
+<td>개인화된 상대 없음</td>
+<td>가니마르 형사</td>
+<td>보트를레（동류이면서 다른 재능）</td>
+</tr>
+<tr>
+<td>핵심 수수께끼 규모</td>
+<td>단일 절도</td>
+<td>복수의 범죄</td>
+<td>2천 년에 걸친 역사적 비밀</td>
+</tr>
+<tr>
+<td>인간적 복잡도</td>
+<td>낮음</td>
+<td>중간</td>
+<td>높음（뤼팽이 울고, 타협하고, 사랑에 빠짐）</td>
+</tr>
+</tbody>
+</table>
+<p>《속이 빈 바늘》은 뤼팽 시리즈 중 드물게 뤼팽에게 「인간의 한계」를 보여주는 작품이다——그는 자신을 사랑하지 않는 사람에게 빠져들고, 보트를레 앞에서 진짜 불안을 느끼며, 최종적인 「승리」（속이 빈 바늘과 레몽드를 보유하는 것）는 실제로 세상에 대한 일종의 자기 추방이다. 이 복잡성이야말로 1909년 통속 소설이 도달할 수 있었던 최고의 수준이다.</p>
+    <a href="../index.html" class="back-link">← 홈으로</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">추리해부실</p>
+    <p>다섯 작가 · 여든여덟 작품 · 135년에 걸친 추리문학 난이도의 진화.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
