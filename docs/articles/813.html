@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>813 — 推理解剖室</title>
+<meta name="description" content="巴黎皇宮飯店，百萬富翁凱瑟巴赫（Kesselbach）正計畫執行一項改變歐洲政治格局的秘密計畫。他的第一步，是委託傳說中的大盜亞森·羅蘋為他辦一件棘手的事——但在羅蘋完成任務（將凱瑟巴赫綁在椅子上、取走皮箱後）離開後，凱瑟巴赫、秘書查普曼（Chapman）以及服務生波多（Beudot）相繼被殺，手法一致：咽喉一刀，極其">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/813.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/813.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/813.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/813.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/813.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/813.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/813.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/813.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif TC', serif;
+  --font-sans: 'Noto Sans TC', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">推理解剖室</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">首頁</a>
+        <a href="../index.html#latest">最新分析</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="語言" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 繁體中文</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item active" data-lang="zh-TW" href="/Detective-Analysis/articles/813.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/813.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/813.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/813.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/813.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/813.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/813.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/813.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">莫里斯·盧布朗 · </div>
+    <h1>813</h1>
+    <div class="subtitle">莫里斯·盧布朗（Maurice Leblanc） · 長篇</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">推理難度</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">迷霧等級</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="813">813 — 推理分析</h1>
+<h2 id="_1">基本資訊</h2>
+<ul>
+<li>作者：莫里斯·盧布朗（Maurice Leblanc）</li>
+<li>出版年：1910年</li>
+<li>類型：長篇</li>
+<li>偵探角色：亞森·羅蘋（Arsène Lupin）——同時以「M. 勒諾曼」（Lenormand）警察局長與「謝寧王子」（Prince Sernine）雙重身份出現</li>
+<li>核心謎團類型：whodunit + 身分謎團（identity mystery） + 暗號謎團（code mystery） + 陰謀謎團（scheme mystery）</li>
+</ul>
+<hr>
+<h2 id="_2">推理難度總評</h2>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星等</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難度（Deducibility）</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>平均收斂點 83% — 兇手身分線索收斂約 70%、暗號「813」全解約 78%、Pierre Leduc 真實身分約 75%、魯帆三重身分約 85%、凱瑟巴赫陰謀本質約 88%；各謎層深度交織，讀者幾乎要讀到九成才能全局收攏</td>
+</tr>
+<tr>
+<td>迷霧等級（Fog Rating）</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>作者以「偵探即竊賊」的結構欺騙讀者：閱讀視角的「警探」勒諾曼局長本身就是羅蘋；疊加四重人物身分（謝寧 / 勒諾曼 / 羅蘋 / 各別案件中的不同假名），加上多條彼此干擾的假線索，是系列中迷霧密度最高的作品之一</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_3">故事大綱</h2>
+<p>巴黎皇宮飯店，百萬富翁凱瑟巴赫（Kesselbach）正計畫執行一項改變歐洲政治格局的秘密計畫。他的第一步，是委託傳說中的大盜亞森·羅蘋為他辦一件棘手的事——但在羅蘋完成任務（將凱瑟巴赫綁在椅子上、取走皮箱後）離開後，凱瑟巴赫、秘書查普曼（Chapman）以及服務生波多（Beudot）相繼被殺，手法一致：咽喉一刀，極其精準。</p>
+<p>兇器相同，但兇手不是羅蘋——這是全書的第一個核心謎題。</p>
+<p>警察廳局長勒諾曼（Lenormand）奉命偵查此案。他冷靜、犀利、行事作風與警察體制格格不入，彷彿在用另一套邏輯追查真兇。與此同時，社交圈裡出現了謎樣的謝寧王子（Prince Sernine），貴氣逼人，到處活動，似乎也對凱瑟巴赫案充滿興趣。</p>
+<p>隨著調查推進，讀者逐漸發現：謝寧 = 勒諾曼 = 亞森·羅蘋，三位一體，用不同面孔在同一個案件裡同時扮演嫌疑人、調查者與幕後操控者。</p>
+<p>凱瑟巴赫的計畫核心是一個叫「皮埃爾·勒杜克」（Pierre Leduc）的神秘男人——他是某歐洲王室的秘密繼承人，而支撐這項王位主張的證據，藏在德國費爾登茨（Veldenz）城堡的某處。這個藏匿地點被加密成一個數字：<strong>813</strong>。</p>
+<p>與此同時，羅蘋的宿敵浮出水面：巴倫·阿爾滕海姆（Baron Altenheim），一個在數個身份之間穿梭的職業罪犯（胡安·里貝拉 = 帕爾伯里少校 = 拉烏爾·德·馬爾萊希），以及他更危險的兄弟——路易·德·馬爾萊希（Louis de Malreich），一個沉默、精準、穿黑衣的殺手，正是三起謀殺的真兇，以「L.M.」縮寫留下蹤跡。</p>
+<p>羅蘋被捕入獄，卻仍在桑德監獄中遙控整個棋局。最終他被德意志皇帝秘密釋放，以換取找回那批失竊的外交密信——那是俾斯麥當年藏下的足以顛覆列國外交的機密文件。</p>
+<p>然而費爾登茨城堡的銀匣打開後，是空的。</p>
+<p>馬爾萊希搶先一步。</p>
+<hr>
+<h2 id="_4">真相拆解</h2>
+<h3 id="whodunit">真相一：誰殺了凱瑟巴赫、查普曼與波多（whodunit）</h3>
+<ul>
+<li><strong>線索收斂點：約 70%</strong></li>
+<li>答案：路易·德·馬爾萊希（Louis de Malreich），又名萊昂·馬希葉（Léon Massier），阿爾滕海姆男爵的親兄弟。三起謀殺的手法一致，使用同一把小刀精準刺入咽喉，是其獨特的殺人方式。</li>
+</ul>
+<h4 id="_5">關鍵線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>兇手身上掉落一個香菸盒，刻有縮寫「L.M.」</td>
+<td>約 5%</td>
+<td>第一個身份線索，但縮寫可以是任何人——讀者難以立即識別</td>
+</tr>
+<tr>
+<td>2</td>
+<td>三起謀殺手法完全一致：咽喉一刀，傷口極小而精準</td>
+<td>約 8–20%</td>
+<td>確認同一兇手所為，並暗示兇手具備特殊訓練或冷血意志</td>
+</tr>
+<tr>
+<td>3</td>
+<td>查普曼是「主動跟著兇手走」而非被強迫——說明兇手是他認識或信任的人</td>
+<td>約 25%</td>
+<td>排除陌生人作案，縮小嫌疑圈</td>
+</tr>
+<tr>
+<td>4</td>
+<td>阿爾滕海姆男爵身份揭露為胡安·里貝拉 = 帕爾伯里少校 = 拉烏爾·德·馬爾萊希</td>
+<td>約 55%</td>
+<td>「馬爾萊希」家族出現，「L.M.」縮寫有了第一個具名的家族對應</td>
+</tr>
+<tr>
+<td>5</td>
+<td>路易·德·馬爾萊希通過戶籍記錄確認身份，即萊昂·馬希葉</td>
+<td>約 70%</td>
+<td><strong>收斂點</strong>：真兇的完整姓名與身份在此確立</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_6">輔助線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>阿爾滕海姆在某一殺案發生時有完整不在場證明</td>
+<td>約 30%</td>
+<td>暗示幕後另有其人，但讀者未必立即往「兄弟」方向聯想</td>
+</tr>
+<tr>
+<td>2</td>
+<td>某個「穿黑衣、鋼鐵灰眼睛、面容剛硬」的陌生男人出現在多處現場邊緣</td>
+<td>約 40–60%</td>
+<td>物理描述的重複強化了同一人作案的印象，但未點名</td>
+</tr>
+<tr>
+<td>3</td>
+<td>阿爾滕海姆被自己的「夥伴」殺死——以防止他招供</td>
+<td>約 75%</td>
+<td>反推兇手具備消滅洩密風險的動機與能力</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_7">假線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>羅蘋在第一起謀殺前確實進入了凱瑟巴赫的房間</td>
+<td>約 3%</td>
+<td>讓讀者第一反應懷疑羅蘋是兇手，而羅蘋自己的聲辯反而顯得可疑</td>
+</tr>
+<tr>
+<td>2</td>
+<td>紅髮女僕葛楚德（Gertrude）是阿爾滕海姆的內線，在案發現場附近頻繁出現</td>
+<td>約 18%</td>
+<td>引導讀者將注意力集中在阿爾滕海姆集團，忽略其「弟弟」這條線</td>
+</tr>
+<tr>
+<td>3</td>
+<td>「L.M.」縮寫在早期被多人猜測：勒諾曼（Lenormand）、盧卡斯（Lucas）等名字都符合縮寫</td>
+<td>約 5–30%</td>
+<td>刻意模糊縮寫指向，讓勒諾曼局長本人也成為「可疑對象」</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="813apooncode-mystery">真相二：「813」與「APOON」的意義（code mystery）</h3>
+<ul>
+<li><strong>線索收斂點：約 78%</strong></li>
+<li>答案：「813」是一道機關密碼。數字分解：8、1、3 對應時鐘刻度，操作者須依序按下時鐘錶面上第 8、第 1、第 3 個點，機關開啟，通往費爾登茨城堡拿破崙廳（Napoleon Room）的第 12 號密室。「APOON」是臨死的費爾登茨大公試圖以顫抖的手指寫下「NAPOLEON」（拿破崙廳）時所留下的殘缺字跡——字首「N」未寫出，末尾「LEON」同樣未完成，僅留「APOON」。</li>
+</ul>
+<h4 id="_8">關鍵線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>案發現場發現編號「813」的藍邊標籤</td>
+<td>約 4%</td>
+<td>謎題的起點，全書書名即來源於此，但意義完全不明</td>
+</tr>
+<tr>
+<td>2</td>
+<td>史坦威格（Steinweg）老人知道費爾登茨的秘密，但被恐嚇封口</td>
+<td>約 35%</td>
+<td>確認「813」與費爾登茨城堡有關聯</td>
+</tr>
+<tr>
+<td>3</td>
+<td>費爾登茨城堡中存在一座帶有特殊機關的古老時鐘</td>
+<td>約 65%</td>
+<td>「時鐘」與「數字」的聯繫在此建立</td>
+</tr>
+<tr>
+<td>4</td>
+<td>「APOON」字跡在大公臨終時留下，被認為是一個人名或地名的殘缺</td>
+<td>約 72%</td>
+<td>羅蘋識破這是「NAPOLEON」的片段縮寫</td>
+</tr>
+<tr>
+<td>5</td>
+<td>按下時鐘刻度 8、1、3，機關應聲開啟，通往密室</td>
+<td>約 78%</td>
+<td><strong>收斂點</strong>：密碼的完整操作邏輯在實際操作中揭曉</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_9">輔助線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>凱瑟巴赫始終執著於「找到費爾登茨大公」，暗示答案在大公那邊</td>
+<td>約 10–30%</td>
+<td>建立凱瑟巴赫計畫與費爾登茨之間的連結</td>
+</tr>
+<tr>
+<td>2</td>
+<td>城堡中有一個名為「拿破崙廳」的特殊房間</td>
+<td>約 60%</td>
+<td>「APOON」= NAPOLEON 的地點指向</td>
+</tr>
+<tr>
+<td>3</td>
+<td>銀匣被發現時是空的——馬爾萊希搶先進入過密室</td>
+<td>約 80%</td>
+<td>反推整個密碼確實可解，且已被人正確使用</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_10">假線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>「813」被多個角色猜測為房間號碼、電話號碼或銀行帳號</td>
+<td>約 10–40%</td>
+<td>各種合理解釋層出不窮，讓讀者難以在密碼揭曉前確定方向</td>
+</tr>
+<tr>
+<td>2</td>
+<td>「APOON」最初被認為可能是一個人名（如「Apoon」先生）或外國地名</td>
+<td>約 72–76%</td>
+<td>轉移對「縮寫字」這個解讀框架的注意力</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="pierre-leduc-identity-mystery">真相三：Pierre Leduc 的真實身分（identity mystery）</h3>
+<ul>
+<li><strong>線索收斂點：約 75%</strong></li>
+<li>答案：皮埃爾·勒杜克（Pierre Leduc）是一個由羅蘋扶植的假身份。真正的歷史繼承人是費爾登茨-費爾登茨大公國（Zweibrucken-Veldenz）的赫爾曼四世（Hermann IV）。書中「新的皮埃爾·勒杜克」則是一個曾試圖自殺的落魄詩人傑哈爾·博普雷（Gérard Baupré），被羅蘋救起後以人工傷疤和切斷的手指改造成符合描述的替身。</li>
+</ul>
+<h4 id="_11">關鍵線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>凱瑟巴赫計畫的核心是「找到一個人」，這個人具備某種特殊的歷史身份</td>
+<td>約 10%</td>
+<td>建立「繼承人」謎題的基礎框架</td>
+</tr>
+<tr>
+<td>2</td>
+<td>費爾登茨城堡與一個小公國王室的歷史紀錄</td>
+<td>約 50%</td>
+<td>確認「繼承人」身份的歷史根據</td>
+</tr>
+<tr>
+<td>3</td>
+<td>羅蘋找到傑哈爾·博普雷，對他進行身體改造以符合「皮埃爾·勒杜克」的外貌描述</td>
+<td>約 65%</td>
+<td>揭示「現任皮埃爾·勒杜克」是替身，而非真正的歷史繼承人</td>
+</tr>
+<tr>
+<td>4</td>
+<td>戶籍文件與家族記錄確認赫爾曼四世即為失蹤多年的費爾登茨王位繼承人</td>
+<td>約 75%</td>
+<td><strong>收斂點</strong>：真正的王室身份鏈條在此完整確立</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_12">輔助線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>各方勢力都在爭奪「皮埃爾·勒杜克」這個人——暗示他的身份具有政治與金錢上的極高價值</td>
+<td>全篇</td>
+<td>讓讀者明白此謎題的賭注規模</td>
+</tr>
+<tr>
+<td>2</td>
+<td>史坦威格老人認識「真正的」繼承人，其描述與「現任版本」有細節出入</td>
+<td>約 55%</td>
+<td>暗示「皮埃爾·勒杜克」的現有版本可能是偽造的</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_13">假線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>傑哈爾·博普雷被設計成符合所有外貌描述，包括刻意製造的傷疤與截斷的手指</td>
+<td>約 65%</td>
+<td>讓讀者一度以為羅蘋找到了「真正」的繼承人，直到更深層的欺騙被揭穿</td>
+</tr>
+<tr>
+<td>2</td>
+<td>多個配角聲稱認識或「確認」了皮埃爾·勒杜克的身份</td>
+<td>約 40–60%</td>
+<td>多重「確認」製造虛假的確定感</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="identity-mystery">真相四：偵探勒諾曼與謝寧王子的真實身分（identity mystery）</h3>
+<ul>
+<li><strong>線索收斂點：約 85%</strong></li>
+<li>答案：勒諾曼局長（M. Lenormand）= 謝寧王子（Prince Sernine）= 亞森·羅蘋（Arsène Lupin）。「Prince Sernine」是「Arsène Lupin」的字母重組（anagram）。羅蘋同時扮演追查案件的警探與在社交圈活動的貴族，以兩個不同的角色同時操控整個棋局。</li>
+</ul>
+<h4 id="_14">關鍵線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>「Prince Sernine」這個名字本身即是「Arsène Lupin」的字母重組</td>
+<td>約 5%（但多數讀者不會立即察覺）</td>
+<td>盧布朗將答案藏在書名旁，但讀者的閱讀慣性使這個線索幾乎隱形</td>
+</tr>
+<tr>
+<td>2</td>
+<td>勒諾曼的行事風格與警察體制格格不入，使用的是情報與心理戰術而非警察程序</td>
+<td>貫穿</td>
+<td>暗示他的「偵探」身份是一個表演</td>
+</tr>
+<tr>
+<td>3</td>
+<td>謝寧王子與勒諾曼從未同時出現在同一場景</td>
+<td>約 40–60%</td>
+<td>古典「同一人」伏筆的典型手法，但被大量其他事件掩蓋</td>
+</tr>
+<tr>
+<td>4</td>
+<td>羅蘋直接身份揭露的場景——某個知情者當面確認兩個身份合而為一</td>
+<td>約 85%</td>
+<td><strong>收斂點</strong>：三重身份的完整合併在接近尾聲時才被明確揭示</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_15">輔助線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>勒諾曼掌握的情報超出任何「正常」警察應有的能力</td>
+<td>全篇</td>
+<td>他的資訊來源令人起疑，卻被讀者歸因於「天才偵探的直覺」</td>
+</tr>
+<tr>
+<td>2</td>
+<td>謝寧王子似乎對案件內情有異乎尋常的了解</td>
+<td>約 15–50%</td>
+<td>讀者習慣將「了解內情的人」視為「同謀」而非「兇手或偵探本人」</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_16">假線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>全書用大量篇幅描繪勒諾曼「追查羅蘋」的努力——警探與罪犯的對立框架被持續強化</td>
+<td>全篇前半</td>
+<td>讓讀者自動將「勒諾曼」與「羅蘋」放入對立陣營，屏蔽同一性的可能性</td>
+</tr>
+<tr>
+<td>2</td>
+<td>謝寧王子的貴族背景與社交行為與羅蘋慣常的盜賊形象完全相悖</td>
+<td>約 5–60%</td>
+<td>形象落差加深讀者對此身份的信任</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="scheme-mystery">真相五：凱瑟巴赫計畫的本質（scheme mystery）</h3>
+<ul>
+<li><strong>線索收斂點：約 88%</strong></li>
+<li>答案：凱瑟巴赫的計畫是以費爾登茨大公的王位主張為政治槓桿，而支撐這項主張的核心證據，是普法戰爭後俾斯麥藏下的一批足以顛覆多國外交局勢的密信。這些密信被存放在費爾登茨城堡拿破崙廳的機關密室中。凱瑟巴赫想藉此在歐洲政治棋盤上製造一個全新的籌碼。密信最終被馬爾萊希搶先取走，銀匣空置。</li>
+</ul>
+<h4 id="_17">關鍵線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>凱瑟巴赫提及「改變歐洲政治格局」的宏大計畫，但細節刻意保留</td>
+<td>約 8%</td>
+<td>計畫的野心規模確立，但本質未知</td>
+</tr>
+<tr>
+<td>2</td>
+<td>史坦威格老人透露費爾登茨城堡藏有「某種文件」</td>
+<td>約 35%</td>
+<td>計畫的實質內容開始聚焦於文件</td>
+</tr>
+<tr>
+<td>3</td>
+<td>俾斯麥的名字出現，與密信相關聯</td>
+<td>約 70%</td>
+<td>文件的政治性質與歷史脈絡建立</td>
+</tr>
+<tr>
+<td>4</td>
+<td>密室打開，銀匣為空——密信已被盜</td>
+<td>約 80%</td>
+<td>計畫全貌揭曉，同時宣告計畫失敗</td>
+</tr>
+<tr>
+<td>5</td>
+<td>德意志皇帝親自介入，秘密釋放羅蘋以換取找回密信</td>
+<td>約 88%</td>
+<td><strong>收斂點</strong>：密信的政治份量通過帝國級介入得到最終確認</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_18">輔助線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>多個歐洲勢力的代理人都在覬覦「凱瑟巴赫的秘密」</td>
+<td>約 20–50%</td>
+<td>外部勢力的介入強化了計畫的政治份量</td>
+</tr>
+<tr>
+<td>2</td>
+<td>凱瑟巴赫出發前已對某人交代過「皮埃爾·勒杜克計畫」的概要</td>
+<td>約 15%</td>
+<td>計畫的整體輪廓通過他人的轉述得到片段呈現</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_19">假線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>早期「凱瑟巴赫計畫」被包裝為純粹的財富與商業收購計畫</td>
+<td>約 8–25%</td>
+<td>讓讀者以為這是一個商業陰謀，低估其政治和外交維度</td>
+</tr>
+<tr>
+<td>2</td>
+<td>阿爾滕海姆似乎是「計畫」的最終受益者，引導讀者將整個謎題歸結在他身上</td>
+<td>約 30–55%</td>
+<td>掩蓋了馬爾萊希才是真正行動者的事實</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_20">推理路徑重建</h2>
+<p><strong>第一條推理路徑：兇手身分（whodunit）</strong></p>
+<p>故事開頭 5% 的香菸盒「L.M.」縮寫是一個被設計成「太早出現」的線索——它在讀者還來不及建立足夠的人物框架時就已出現，因此幾乎無法被正確利用。真正有意義的推理機會出現在 25% 的「查普曼主動跟走」觀察：這條線索排除了外部入侵者，指向一個查普曼熟識且信任的人。到 55% 阿爾滕海姆家族的「馬爾萊希」姓氏出現，細心的讀者才能將「L.M.」與「Louis de Malreich」連接。但若沒有 70% 的身份確認文件，這個推論仍是推測而非確認。</p>
+<p><strong>第二條推理路徑：「813」密碼</strong></p>
+<p>這條路徑對一般讀者來說幾乎是不可能在揭曉前獨立破解的。「813」的表面意義太具迷惑性——它「看起來」像是一個號碼而非一道機關操作序列。真正的破解依賴「費爾登茨城堡存在一座帶機關的時鐘」這個局部知識（約 65%），加上「APOON」= NAPOLEON 的語言解碼（約 72-75%），才能在 78% 時完成邏輯閉合。讀者能「跟上」羅蘋的破解過程，但幾乎不可能「搶先」羅蘋。</p>
+<p><strong>第三條推理路徑：勒諾曼 = 謝寧 = 羅蘋</strong></p>
+<p>這是全書最刁鑽的推理路徑。線索在 5% 時就以「字母重組」的形式埋入（Prince Sernine / Arsène Lupin），但只有具備字謎意識且同時在法文環境中閱讀的讀者才能捕捉。更主流的「偵探 vs. 罪犯」對立框架幾乎讓所有讀者自動屏蔽這個可能性。勒諾曼行事風格的「異常」提供了持續的疑點信號，但作者用「天才偵探慣例」這個類型期待把疑點合理化了。直到 85% 的直接揭露，多數讀者才被「告知」而非「推導出」答案。</p>
+<p><strong>第四條推理路徑：凱瑟巴赫計畫本質</strong></p>
+<p>這條路徑是「資訊積累型」而非「線索推導型」——讀者隨著事件發展逐漸拼湊出計畫的輪廓，但沒有一個關鍵的「啊哈」時刻，而是一系列逐漸清晰的揭露，直到 88% 的帝國介入才讓全局圖景完整成形。</p>
+<hr>
+<h2 id="_21">補充說明</h2>
+<p><strong>《813》在盧布朗系列中的結構創新</strong></p>
+<p>在羅蘋系列的發展史中，《813》標誌著一個關鍵的敘事轉型：盧布朗不再滿足於讓羅蘋扮演「聰明罪犯偶爾助人」的角色，而是將他徹底置入一個<strong>偵探位置</strong>——但這個偵探同時是唯一比真正的偵探更接近真相的人，因為他「既是案件的當事人，又是調查者，又是幕後操控者」。</p>
+<p>這個三重結構（thief / detective / puppeteer）在推理文學史上是相當罕見的設計。它帶來的閱讀困境在於：讀者習慣信任敘述者視角，而「勒諾曼視角」正是羅蘋精心設計的認知陷阱。所有從「勒諾曼這個偵探」出發的推理，本質上都是在配合羅蘋的劇本——讀者永遠被領著走，而非自主推理。</p>
+<p><strong>與系列其他作品的對比</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>亞森·羅蘋入門（早期短篇）</th>
+<th>羅蘋 vs. 福爾摩斯（賀洛克·修爾姆斯）</th>
+<th>813</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>羅蘋的角色</td>
+<td>竊賊 / 助人者</td>
+<td>對手</td>
+<td>竊賊 + 偵探 + 幕後者</td>
+</tr>
+<tr>
+<td>偵探立場</td>
+<td>外部追查者</td>
+<td>外部對手</td>
+<td>羅蘋本人</td>
+</tr>
+<tr>
+<td>讀者視角</td>
+<td>旁觀者</td>
+<td>第三方裁判</td>
+<td>被羅蘋操控的「信徒」</td>
+</tr>
+<tr>
+<td>核心謎團</td>
+<td>手法之謎</td>
+<td>誰更聰明</td>
+<td>多層身份與政治陰謀</td>
+</tr>
+</tbody>
+</table>
+<p><strong>關於盧布朗的「公平性」問題</strong></p>
+<p>《813》是否對讀者公平？從嚴格的推理小說標準來看，答案令人存疑。「Prince Sernine」的字母重組線索技術上是「給出答案」，但在故事情境中幾乎不可能被主動察覺。真兇「L.M.」的縮寫確實早早出現，但在人物框架建立前的縮寫提示，功能接近於裝飾性細節而非可解謎題。</p>
+<p>盧布朗的強項從來不是「公平競技式」的推理結構，而是<strong>速度感、氣氛的堆疊與最終揭幕的快感</strong>。《813》最值得推崇之處不在於其可解性，而在於它以一個長篇的篇幅成功維持「整個世界都在跟你玩遊戲而你不自知」的閱讀焦慮——這種閱讀體驗本身，是一種不同於阿嘉莎·克莉絲蒂「解謎式」滿足感的、更接近驚悚片的敘事快感。</p>
+<p><strong>對台灣讀者的補充</strong></p>
+<p>《813》寫作於 1910 年，正是歐洲各大帝國角力最激烈的時代。俾斯麥的外交密信、德意志皇帝的直接介入、歐洲小國王位繼承的政治操弄——這些設定對當時的歐洲讀者而言具有強烈的現實感，幾乎像是在閱讀一份「可能真實發生」的政治驚悚報導。今日讀者可將其類比為一部以冷戰核密碼或現代政治泄密事件為背景的懸疑小說，其政治張力並不因百年時光而消退。</p>
+    <a href="../index.html" class="back-link">← 回到首頁</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">推理解剖室</p>
+    <p>五位作者 · 八十八部作品 · 一百三十五年推理文學的難度演化</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
