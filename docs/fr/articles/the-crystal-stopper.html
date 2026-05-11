@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le Bouchon de cristal (The Crystal Stopper) — Salle de Dissection Policière</title>
+<meta name="description" content="Par une nuit de fin d'automne, Arsène Lupin mène ses hommes dans une villa au bord du lac d'Enghien pour y commettre un cambriolage. Son assistant Gilbert et Va">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-crystal-stopper.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-crystal-stopper.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-crystal-stopper.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-crystal-stopper.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-crystal-stopper.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-crystal-stopper.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-crystal-stopper.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-crystal-stopper.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Salle de Dissection Policière</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Accueil</a>
+        <a href="../index.html#latest">Récents</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Langue" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 Français</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-crystal-stopper.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-crystal-stopper.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-crystal-stopper.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/the-crystal-stopper.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/the-crystal-stopper.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/the-crystal-stopper.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/the-crystal-stopper.html">Español</a>
+      <a class="lang-item active" data-lang="fr" href="/Detective-Analysis/fr/articles/the-crystal-stopper.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">Maurice Leblanc · 1912</div>
+    <h1>Le Bouchon de cristal (The Crystal Stopper)</h1>
+    <div class="subtitle">Maurice Leblanc · Roman</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Déductibilité</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Indice de brume</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="le-bouchon-de-cristal-the-crystal-stopper-analyse-deductive">Le Bouchon de cristal (The Crystal Stopper) — Analyse déductive</h1>
+<h2 id="informations-de-base">Informations de base</h2>
+<ul>
+<li>Auteur : Maurice Leblanc</li>
+<li>Année : 1912</li>
+<li>Genre : Roman</li>
+<li>Détective : Arsène Lupin</li>
+<li>Type d'énigme centrale : where-is-it (lieu de dissimulation) + whodunit (identité d'un personnage mystérieux)</li>
+</ul>
+<hr>
+<h2 id="evaluation-globale-de-la-deductibilite">Évaluation globale de la déductibilité</h2>
+<table>
+<thead>
+<tr>
+<th>Indicateur</th>
+<th>Étoiles</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Déductibilité</td>
+<td>⭐⭐⭐⭐</td>
+<td>Point de convergence moyen vers 76% — l'identité de la mystérieuse femme peut être déduite aux alentours de 30%, mais l'énigme centrale « où est cachée la liste ? » n'offre des indices suffisants qu'à 88%, et la réponse finale (l'œil de verre) ne peut pratiquement être comprise qu'au moment même de la révélation</td>
+</tr>
+<tr>
+<td>Indice de brume</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>Leblanc fait ici l'exceptionnelle chose de laisser l'antagoniste lui-même semer les principales fausses pistes — Daubrecq fabrique délibérément un faux bouchon de cristal pour tromper tout le monde, y compris le narrateur Lupin pendant la moitié entière du roman ; la conception en triple imbrication du « lieu de dissimulation » fait que chaque « J'ai trouvé ! » du lecteur n'est qu'une erreur de jugement</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="resume">Résumé</h2>
+<p>Par une nuit de fin d'automne, Arsène Lupin mène ses hommes dans une villa au bord du lac d'Enghien pour y commettre un cambriolage. Son assistant Gilbert et Vaucheray, à la recherche d'un mystérieux objet, se disputent si violemment que Vaucheray poignarde à mort le domestique Léonard. La police arrive ; Lupin s'échappe de justesse, mais ses deux complices sont capturés.</p>
+<p>En s'enfuyant, Gilbert glisse quelque chose dans la main de Lupin : un simple <strong>bouchon de cristal</strong>.</p>
+<p>Ce petit bouchon de verre devient dès lors le symbole central de tout le roman. Pourquoi Gilbert et Vaucheray ont-ils risqué leur vie pour s'en emparer ? Quel secret renferme-t-il ?</p>
+<p>Lupin remonte jusqu'au propriétaire initial du bouchon : le député Alexis Daubrecq — un personnage étrange à l'apparence simiesque, arborant des lunettes à double monture. Cet homme détient une liste compromettant vingt-sept hommes politiques (la « liste des vingt-sept », registre des pots-de-vin versés par la Compagnie des Deux-Mers), et l'utilise pour faire chanter ses victimes une à une. Sa position politique est inattaquable ; personne n'ose s'en prendre à lui.</p>
+<p>Parallèlement, une mystérieuse femme aux cheveux gris surgit à plusieurs reprises : elle rend visite à Daubrecq en pleine nuit et manque de le poignarder ; elle dérobe le bouchon de cristal que Lupin a deux fois réussi à s'approprier chez Daubrecq ; elle dirige les propres hommes de Lupin — Groller et Machu — contre leur maître. Qui est-elle ? Pourquoi se bat-elle pour ce bouchon ?</p>
+<p>La réponse est révélée au cinquième chapitre : il s'agit de <strong>Clarisse Mergy</strong>, la propre mère de Gilbert. Son mari — l'ancien député Victorien Mergy — était l'une des victimes de Daubrecq ; victime du chantage, il s'était tiré une balle dans la tête trois ans plus tôt. Son fils aîné Gilbert (de son vrai nom Antoine Mergy), manipulé en coulisses par Daubrecq, avait sombré dans la délinquance sous la coupe de Lupin et se retrouve désormais sous la menace de la guillotine.</p>
+<p>Trois forces s'affrontent dans un jeu à trois bandes : Daubrecq (détenteur de la liste), la Préfecture de police (à la poursuite de la liste), Clarisse et Lupin (cherchant à s'emparer de la liste).</p>
+<p>Or, après des mois de recherches, Lupin et ses hommes ont beau retourner le bureau de Daubrecq dans tous les sens, le véritable sens du bouchon de cristal demeure une énigme — jusqu'au jour où Clarisse révèle qu'elle a récupéré dans la corbeille à papier de Daubrecq un brouillon de lettre portant ces mots : « <strong>Creuser l'intérieur du cristal de façon à y ménager une cavité que nul ne puisse soupçonner.</strong> » Un verrier de Storbridge, en Angleterre, a fabriqué un bouchon de cristal évidé, et la liste secrète, roulée en minuscule cylindre, y est dissimulée.</p>
+<p>Pourtant, même armé de cet indice, Lupin fouille en vain tous les objets de cristal, explore à plusieurs reprises le bureau de Daubrecq, son tabatière, sa douille de lampe — le bouchon décisif reste introuvable.</p>
+<p>Ce n'est qu'à la fin, quand Lupin chloroforme Daubrecq à Nice, lui retire ses épaisses lunettes et, du pouce, fait sauter son « œil de verre », que la vérité éclate enfin :</p>
+<p><strong>Ce bouchon de cristal n'avait jamais été autre chose que l'œil de verre de Daubrecq.</strong></p>
+<hr>
+<h2 id="analyse-de-la-verite">Analyse de la vérité</h2>
+<h3 id="verite-n-1-lidentite-de-la-femme-mysterieuse-whodunit">Vérité n° 1 : L'identité de la femme mystérieuse (whodunit)</h3>
+<ul>
+<li><strong>Point de convergence des indices : environ 30%</strong></li>
+<li>Réponse : la femme aux cheveux gris est Clarisse Mergy, la propre mère de Gilbert, veuve du député Victorien Mergy, résolue à se venger de Daubrecq qui a poussé son mari au suicide.</li>
+</ul>
+<h4 id="indices-cles">Indices clés</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Indice</th>
+<th>Emplacement (chap./%)</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>La femme mystérieuse tâtonne dans le bureau de Daubrecq en cherchant le bouchon de carafe, révélant qu'elle aussi cherche le bouchon de cristal</td>
+<td>Chap. 3 / env. 19%</td>
+<td>Son objectif est identique à celui de Lupin, ce qui établit qu'elle est dans le secret</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Scène nocturne dans le bureau de Daubrecq : la femme lève un couteau pour tuer Daubrecq, mais celui-ci la maîtrise aisément, révélant un contentieux de longue date entre eux</td>
+<td>Chap. 3 / env. 20%</td>
+<td>Ce n'est pas un conflit fortuit, mais l'explosion d'une rancœur ancienne</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Lupin appréhende le « commanditaire » et découvre un enfant de six ou sept ans ; en observant attentivement son visage, il « distingue une ressemblance avec quelqu'un qu'il connaît »</td>
+<td>Chap. 4 / env. 27%</td>
+<td>Le visage de l'enfant ressemble à celui d'un personnage du roman — l'annonce est lourde de sens</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Groller et Machu — les propres hommes de Lupin — viennent en aide à la femme mystérieuse, prouvant qu'elle a un lien ancien avec Gilbert et n'est pas une étrangère</td>
+<td>Chap. 3 / env. 24%</td>
+<td>Seul quelqu'un de proche de Gilbert pouvait mobiliser ses complices</td>
+</tr>
+</tbody>
+</table>
+<h4 id="indices-secondaires">Indices secondaires</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Indice</th>
+<th>Emplacement (chap./%)</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>La femme connaît l'adresse de l'appartement secret de Lupin rue Ramatuelle, ce qui implique qu'elle l'a obtenue par les canaux d'information de Gilbert</td>
+<td>Chap. 2 / env. 15%</td>
+<td>Seul l'entourage le plus proche de Gilbert pouvait le savoir</td>
+</tr>
+<tr>
+<td>2</td>
+<td>La femme reconnaît instantanément, en voyant la lettre adressée par Gilbert à « M. de Beaumont, Michel », que c'est le nom de code utilisé par Gilbert pour contacter Lupin</td>
+<td>Chap. 2 / env. 14%</td>
+<td>Non seulement elle connaît Gilbert, mais elle connaît aussi son mode de communication avec Lupin</td>
+</tr>
+<tr>
+<td>3</td>
+<td>La réaction de Daubrecq dans sa loge de théâtre quand il voit Lupin s'approcher de la femme : arrogant et possessif, non pas sur ses gardes comme face à une inconnue</td>
+<td>Chap. 3 / env. 22%</td>
+<td>Il existe manifestement entre eux un contentieux personnel de longue date</td>
+</tr>
+</tbody>
+</table>
+<h4 id="fausses-pistes">Fausses pistes</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Indice</th>
+<th>Emplacement (chap./%)</th>
+<th>Direction de la méprise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>La femme mystérieuse fait transmettre à Lupin le message « Tout est inutile, renoncez » — avec le ton d'un indicateur professionnel</td>
+<td>Chap. 3 / env. 19%</td>
+<td>Le lecteur croit qu'elle est un espion au service de Daubrecq ou un informateur de la police</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Groller et Machu sont découverts en train d'aider la femme mystérieuse</td>
+<td>Chap. 3 / env. 24%</td>
+<td>Le lecteur croit qu'ils ont été achetés et trahissent leur maître, plutôt qu'ils répondent à l'appel de la mère de Gilbert</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="verite-n-2-ou-se-cache-le-vrai-bouchon-de-cristal-premiere-couche-de-tromperie-le-paquet-de-tabac-de-daubrecq">Vérité n° 2 : Où se cache le « vrai » bouchon de cristal ? (Première couche de tromperie — le paquet de tabac de Daubrecq)</h3>
+<ul>
+<li><strong>Point de convergence des indices : environ 65%</strong></li>
+<li>Réponse : Daubrecq a roulé une fausse liste (un faux soigneusement fabriqué) dans un bouchon de cristal évidé, qu'il a dissimulé dans un paquet de tabac Maryland portant les cachets officiels du gouvernement, posé sur son bureau. C'est un <strong>piège</strong> délibérément tendu par Daubrecq.</li>
+</ul>
+<h4 id="indices-cles_1">Indices clés</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Indice</th>
+<th>Emplacement (chap./%)</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Billet de Daubrecq à Prasville : « C'est à portée de votre main, vous l'avez touché ! Encore un peu plus, vous auriez réussi… Quelle bêtise ! »</td>
+<td>Chap. 2 / env. 13%</td>
+<td>La cachette est à portée de main, posée sous les yeux de tous</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Clarisse révèle qu'elle a trouvé dans la corbeille à papier de Daubrecq un brouillon de lettre portant les mots : « Creuser l'intérieur du cristal… de façon à y ménager une cavité »</td>
+<td>Chap. 5 / env. 31%</td>
+<td>Cela pointe directement vers le bouchon de cristal « évidé »</td>
+</tr>
+<tr>
+<td>3</td>
+<td>En fouillant le bureau, Lupin constate que le paquet de tabac posé dessus a « disparu », lui dont la mémoire des emplacements de chaque objet est parfaite</td>
+<td>Chap. 9 / env. 65%</td>
+<td>Ce qui disparaît est ce qui compte — ce paquet de tabac Maryland portant des cachets officiels est le contenant dissimulateur</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Lupin explique rétrospectivement que Daubrecq a délibérément choisi un paquet de tabac portant des cachets officiels « insoupçonnables » pour que tous l'ignorent</td>
+<td>Chap. 11 / env. 82%</td>
+<td>Leblanc fait explicitement citer à Lupin « La Lettre volée » (The Purloined Letter) de Poe</td>
+</tr>
+</tbody>
+</table>
+<h4 id="indices-secondaires_1">Indices secondaires</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Indice</th>
+<th>Emplacement (chap./%)</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Daubrecq, soumis à la torture, murmure « Marie » dans un demi-état de conscience</td>
+<td>Chap. 8 / env. 55%</td>
+<td>Lupin croit d'abord à un prénom ou au nom d'une villa ; il comprend plus tard que c'est le début du mot « Maryland »</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Daubrecq ne fume que du tabac Maryland, et un paquet non ouvert trône en permanence sur son bureau</td>
+<td>Chap. 3 / env. 17%</td>
+<td>Le lecteur a vu ce détail des dizaines de fois sans jamais s'en méfier</td>
+</tr>
+</tbody>
+</table>
+<h4 id="fausses-pistes_1">Fausses pistes</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Indice</th>
+<th>Emplacement (chap./%)</th>
+<th>Direction de la méprise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Le bouchon de cristal évidé lui-même, ainsi que les informations de commande obtenues par Clarisse en Angleterre</td>
+<td>Chap. 5 / env. 31%</td>
+<td>Le lecteur est entièrement entraîné vers l'idée que « le bouchon de cristal est le contenant », occultant la possibilité de l'œil de verre</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Prasville et ses hommes fouillent à plusieurs reprises le bureau et ses flacons</td>
+<td>Chap. 2 / env. 11%</td>
+<td>Le lecteur croit que le bureau a été retourné de fond en comble — or le paquet de tabac n'a jamais été ouvert</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="verite-n-3-la-veritable-cachette-de-la-liste-lil-de-verre-the-real-crystal-stopper">Vérité n° 3 : La véritable cachette de la liste — l'œil de verre (the real crystal stopper)</h3>
+<ul>
+<li><strong>Point de convergence des indices : environ 90%</strong></li>
+<li>Réponse : l'œil gauche de Daubrecq est un <strong>œil de verre</strong> — le véritable « bouchon de cristal » — dont l'intérieur a été évidé pour y dissimuler la liste des vingt-sept, roulée en cylindre. Il la dissimule sous une double protection : une épaisse monture noire opaque et des lunettes ordinaires par-dessus. Personne ne s'en est aperçu en vingt ans.</li>
+</ul>
+<h4 id="indices-cles_2">Indices clés</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Indice</th>
+<th>Emplacement (chap./%)</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Première description physique de Daubrecq : « Des yeux faibles et injectés de sang, derrière ses lunettes qui dissimulent en outre une paire de verres protecteurs noirs »</td>
+<td>Chap. 2 / env. 11%</td>
+<td>Ce double écran oculaire est des plus inhabituels — les verres protecteurs ne servent pas à corriger la vue, mais à dissimuler l'œil de verre lui-même</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Clarisse trouve dans la corbeille à papier de Daubrecq le brouillon : « Creuser l'<strong>intérieur</strong> du cristal de façon à y ménager une cavité que nul ne puisse soupçonner »</td>
+<td>Chap. 5 / env. 31%</td>
+<td>« Cristal » peut désigner l'œil de verre ; « que nul ne puisse soupçonner » renvoie à l'œil de verre dissimulé dans l'orbite</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Lupin surprend la scène de torture dans la tour de Mortepierre : soumis à la souffrance, Daubrecq à demi-conscient murmure « Marie »</td>
+<td>Chap. 8 / env. 55%</td>
+<td>En surface, cela renvoie à « Maryland », mais cela pourrait aussi être qu'il protège ce qui est caché dans son propre corps — il n'a même pas besoin de révéler l'endroit</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Dans le bureau de Daubrecq, après avoir constaté la disparition du paquet de tabac, Lupin a une illumination : « Tout s'éclaire… jusqu'à ce demi-mot, ce mot que la torture a arraché à Daubrecq dans la tour ! L'énigme est résolue. »</td>
+<td>Chap. 9 / env. 65%</td>
+<td>Ce que Lupin croit avoir résolu n'est pas l'œil de verre, mais le paquet de tabac ; cependant, l'allusion au « demi-mot » est elle-même à double fond</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Lupin coince Daubrecq à Nice, lui ôte ses lunettes et, à la vue de l'œil de verre, dit en substance : « Du pouce — vous comprenez ? — j'ai fait sauter son œil gauche ! »</td>
+<td>Chap. 11 / env. 90%</td>
+<td>L'ultime indice décisif — la véritable nature de l'œil de verre est ici révélée</td>
+</tr>
+</tbody>
+</table>
+<h4 id="indices-secondaires_2">Indices secondaires</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Indice</th>
+<th>Emplacement (chap./%)</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Daubrecq emporte partout son paquet de tabac et ne le confie jamais à quiconque</td>
+<td>Tout au long du roman</td>
+<td>Le lecteur comprend son attachement au tabac, mais la vraie raison est que l'œil de verre suit toujours la personne elle-même</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Clarisse découvre en Angleterre la commande du verrier John Howard : « Fabriquer un bouchon de cristal d'après modèle » — soit le faux leurre</td>
+<td>Chap. 5 / env. 31%</td>
+<td>Daubrecq a commandé spécialement un faux leurre, prouvant qu'il avait prévu que quelqu'un suivrait la piste du « cristal »</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Leblanc fait citer à Lupin explicitement « La Lettre volée » de Poe : la chose la plus difficile à trouver est celle qui est posée devant vous</td>
+<td>Chap. 9 / env. 65%</td>
+<td>Cela pointe vers la réponse finale — l'œil de verre — dissimulation encore plus « sous les yeux de tous » que le paquet de tabac</td>
+</tr>
+</tbody>
+</table>
+<h4 id="fausses-pistes-le-leurre-tendu-par-daubrecq-lui-meme">Fausses pistes (le leurre tendu par Daubrecq lui-même)</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Indice</th>
+<th>Emplacement (chap./%)</th>
+<th>Direction de la méprise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Le brouillon de lettre retrouvé par Clarisse, la commande au verrier anglais, et le paquet de tabac Maryland dissimulant le faux bouchon de cristal évidé</td>
+<td>Chap. 5 et chap. 3 / env. 11-31%</td>
+<td>Tout le concept du « bouchon de cristal cachant la liste » est un <strong>faux index</strong> que Daubrecq a délibérément laissé découvrir — le vrai contenant est son œil de verre, et le terme « bouchon de cristal » n'est qu'une tromperie au sens littéral</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Daubrecq laisse lui-même Prasville fouiller le bureau à répétition, tout en veillant à laisser le paquet de tabac sur la table</td>
+<td>Chap. 2-3 / env. 11-13%</td>
+<td>Il persuade tout le monde que la chose « à portée de main » est un objet posé sur le bureau, non son propre œil</td>
+</tr>
+<tr>
+<td>3</td>
+<td>La fausse liste (le faux) glissée dans le bouchon de cristal du paquet de tabac réussit à abuser Clarisse et Lupin pendant la moitié du roman</td>
+<td>Chap. 11 / env. 82-88%</td>
+<td>Même en ayant trouvé le « bouchon de cristal », on ne détient qu'un faux soigneusement fabriqué</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="reconstruction-du-chemin-deductif">Reconstruction du chemin déductif</h2>
+<p><strong>Premier chemin : Qui est la femme mystérieuse ?</strong></p>
+<p>Aux alentours de 14%, la femme intercepte la lettre adressée par Gilbert à « M. de Beaumont, Michel » — elle connaît non seulement le pseudonyme de Lupin, mais aussi le code de communication de Gilbert. Seule la personne la plus proche de Gilbert pouvait le savoir. Aux alentours de 20%, elle lève un couteau dans le bureau de Daubrecq pour le tuer, trahissant une rancœur si profonde qu'elle dépasse de loin un simple conflit d'intérêts. À 27%, Lupin discerne un visage familier dans les traits du petit garçon — si le lecteur se souvient du visage de la femme, il peut à ce stade deviner que l'enfant est son fils et que cette femme est parente de Gilbert, vraisemblablement sa mère.</p>
+<p>Point de confirmation : 30%, Clarisse avoue elle-même.</p>
+<p><strong>Deuxième chemin : Où se cache le bouchon de cristal ? (Première couche — fausse réponse)</strong></p>
+<p>Clarisse révèle à 31% la commande anglaise et le brouillon évoquant le « cristal évidé » ; le lecteur entre alors, en même temps que Lupin, dans le cadre d'hypothèse du « bouchon de cristal évidé contenant la liste ». La lettre provocatrice de Daubrecq sur « ce qui est à votre portée » focalise la recherche sur les objets du bureau. Le « Marie » de Daubrecq (55%) pousse le lecteur à tenter toutes sortes d'interprétations. Jusqu'à 65%, quand Lupin remarque que le paquet de tabac a disparu du bureau — le lecteur attentif peut alors, avant même Lupin, imaginer qu'un objet scellé par des cachets officiels est la dernière chose que l'on soupçonnerait.</p>
+<p>Point de confirmation : 65-68%, Lupin extrait du paquet de tabac de Daubrecq le bouchon de cristal et la liste.</p>
+<p><strong>Troisième chemin : Authenticité de la liste — l'apparition de l'œil de verre</strong></p>
+<p>C'est l'énigme la plus centrale du roman, et la plus imprévisible. Le seul indice solide est la description physique de Daubrecq à 11% (la double protection oculaire), ainsi que, tout au long du récit, le soin jaloux qu'il prend de son œil (il laisse fouiller tout le bureau, mais exige qu'on ne le touche pas, lui). La formulation « cristal évidé de l'intérieur » pourrait théoriquement s'appliquer à un globe oculaire, mais aucun lecteur — ni aucun personnage du roman — n'est capable d'émettre l'hypothèse de l'œil de verre avant le seuil des 88%.</p>
+<p>Le plan de Daubrecq est d'une ingéniosité diabolique : il a organisé une vraie fausse piste (le brouillon découvrable → le verrier → le bouchon de cristal évidé → le paquet de tabac) pour que tous s'y perdent, tandis que le vrai « bouchon de cristal » (l'œil de verre) a toujours existé sous un autre nom — « l'œil » — parfaitement visible aux yeux de tous.</p>
+<p>Point de confirmation : 90%, Lupin fait sauter l'œil de verre, ouvre le mécanisme coulissant au dos, et découvre la vraie liste avec son filigrane en croix.</p>
+<hr>
+<h2 id="notes-complementaires">Notes complémentaires</h2>
+<p><strong>La place du <em>Bouchon de cristal</em> dans l'œuvre de Leblanc</strong></p>
+<p>Ce roman de 1912 est l'une des œuvres les plus représentatives des « récits de Lupin en situation d'échec » de Leblanc. Dans la plupart des histoires de Lupin, le héros se joue de la police et mène son jeu avec désinvolture ; ici, ce schéma est presque renversé — Lupin accumule les erreurs, se fait berner, se voit trahir, tombe malade, et frôle la défaite totale. L'ensemble du roman dégage une tension quasi « anti-héroïque ».</p>
+<p><strong>La technique de déduction la plus profonde : la structure en triple emboîtement des fausses pistes</strong></p>
+<p>Leblanc a conçu dans ce roman un système de « triple fausse piste » d'une rareté extrême :</p>
+<table>
+<thead>
+<tr>
+<th>Niveau</th>
+<th>Contenu</th>
+<th>Nature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Premier niveau</td>
+<td>Le bouchon de cristal dérobé dans la villa d'Enghien</td>
+<td>Le « modèle » — non l'original — révélé vers 4%</td>
+</tr>
+<tr>
+<td>Deuxième niveau</td>
+<td>Le bouchon de cristal évidé dans le paquet de tabac Maryland</td>
+<td>Leurre délibérément tendu par Daubrecq, contenant une fausse liste — démasqué à 88%</td>
+</tr>
+<tr>
+<td>Troisième niveau</td>
+<td>L'œil de verre de Daubrecq</td>
+<td>Le véritable « bouchon de cristal » — révélé à 90%</td>
+</tr>
+</tbody>
+</table>
+<p>Le plus stupéfiant est que la fausse piste du deuxième niveau est <strong>fabriquée de main de maître par l'antagoniste lui-même</strong>, et non imposée par l'auteur dans la narration. Daubrecq a prévu que quelqu'un suivrait la piste du « cristal » ; il a donc délibérément laissé découvrir le brouillon de lettre, la commande anglaise, et le faux bouchon de cristal évidé dans le paquet de tabac — un piège narratif tendu avec une prescience digne d'un crime parfait, qui abuse simultanément lecteur et détective.</p>
+<p>Ce procédé est d'une rareté insigne dans l'histoire du roman policier : d'ordinaire, seul l'auteur trompe le lecteur ; ici, c'est <strong>l'antagoniste à l'intérieur du monde de la fiction qui a berné tout le monde</strong>, et Leblanc se borne à consigner fidèlement cette supercherie.</p>
+<p><strong>L'ombre d'Edgar Poe</strong></p>
+<p>À 65%, Leblanc fait citer par Lupin en personne « La Lettre volée » (The Purloined Letter) de Poe — ce procédé consistant à poser la lettre bien en vue sur le porte-lettres, visible de tous et pourtant introuvable. Ayant découvert le paquet de tabac, Lupin croit avoir percé le secret de ce tour de passe-passe ; il ne réalise pas que Leblanc utilise une logique à la Poe plus profonde encore : la cachette encore plus évidente que « le paquet de tabac posé sur le bureau » est « l'œil de verre planté dans le visage même de l'individu ». Leblanc ne se contente pas de rendre hommage à Poe : il mène avec lui un débat littéraire. Poe dit « dissimuler sans dissimuler » ; Leblanc rétorque : « dissimuler sur sa propre personne — voilà l'ultime forme de dissimulation à ciel ouvert ».</p>
+<p><strong>La conception du personnage de Clarisse</strong></p>
+<p>Parmi les figures féminines des récits de Lupin, Clarisse Mergy est la plus finement caractérisée. Elle n'est pas « la femme à sauver », mais une vengeresse ayant agi seule pendant des années, s'étant infiltrée dans le camp ennemi avant même l'arrivée de Lupin. Son amour maternel pour son fils, sa haine de Daubrecq, ses sentiments ambivalents envers Lupin (gratitude et mépris mêlés) débouchent, à la fin du roman, sur un dénouement déchirant : elle repousse la demande en mariage de Lupin, car elle est une « honnête femme », et lui n'est en fin de compte « qu'un Arsène Lupin ».</p>
+<p><strong>Comparaison avec <em>L'Aiguille creuse</em></strong></p>
+<p>Ces deux œuvres ont en commun le motif du « contenant creux qui dissimule un secret » : dans <em>L'Aiguille creuse</em>, c'est la falaise creuse de Caux ; dans <em>Le Bouchon de cristal</em>, c'est l'œil de verre. Mais là où <em>L'Aiguille creuse</em> penche vers la légende du trésor, l'énigme du <em>Bouchon de cristal</em> s'inscrit dans un vrai crime de chantage politique, avec une critique sociale bien plus mordante — Daubrecq est en réalité une sombre prophétie sur la corruption des systèmes politiques : sa « liste des vingt-sept » réduit toute l'élite politique de la Troisième République en otages ; personne ne peut le sanctionner, jusqu'à ce que son œil de verre lui soit arraché.</p>
+<p><strong>Note pour les lecteurs francophones</strong></p>
+<p>La « liste des vingt-sept » s'inspire manifestement du scandale de Panama de 1892 — le « scandale de Panama » qui ébranla la France lorsque fut révélé que de nombreux députés avaient touché des pots-de-vin de la Compagnie du Canal de Panama, provoquant une crise politique majeure et plusieurs suicides. Leblanc s'en empare pour créer la fiction de la « Compagnie des Deux-Mers », conférant au chantage de Daubrecq un poids historique bien réel. Cette couche de sens fait du <em>Bouchon de cristal</em> bien plus qu'un roman policier : c'est une élégie sur l'inévitable ruine que porte en germe la corruption politique.</p>
+    <a href="../index.html" class="back-link">← Retour à l'accueil</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Salle de Dissection Policière</p>
+    <p>Cinq auteurs · quatre-vingt-huit œuvres · 135 ans d'évolution de la difficulté du roman policier.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

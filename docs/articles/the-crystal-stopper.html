@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>水晶瓶塞（The Crystal Stopper） — 推理解剖室</title>
+<meta name="description" content="秋末某夜，亞森·呂邦帶領手下赴昂吉恩湖邊別墅行竊。助手吉伯特（Gilbert）與沃什雷（Vaucheray）為尋找某樣神秘物件，竟在爭搶中讓沃什雷刺死主僕萊昂纳德。警方趕到，呂邦僥倖脫身，兩名手下落網。 呂邦逃脫時，吉伯特塞給他一件東西：一枚普通的水晶瓶塞。 這枚小玻璃塞從此成為整部小說的核心象徵。為什麼吉伯特和沃什雷">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-crystal-stopper.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-crystal-stopper.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-crystal-stopper.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-crystal-stopper.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-crystal-stopper.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-crystal-stopper.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-crystal-stopper.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-crystal-stopper.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif TC', serif;
+  --font-sans: 'Noto Sans TC', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">推理解剖室</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">首頁</a>
+        <a href="../index.html#latest">最新分析</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="語言" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 繁體中文</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item active" data-lang="zh-TW" href="/Detective-Analysis/articles/the-crystal-stopper.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-crystal-stopper.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-crystal-stopper.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/the-crystal-stopper.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/the-crystal-stopper.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/the-crystal-stopper.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/the-crystal-stopper.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/the-crystal-stopper.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">莫里斯·盧布朗 · </div>
+    <h1>水晶瓶塞（The Crystal Stopper）</h1>
+    <div class="subtitle">莫里斯·盧布朗（Maurice Leblanc） · 長篇</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">推理難度</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">迷霧等級</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="the-crystal-stopper">水晶瓶塞（The Crystal Stopper）— 推理分析</h1>
+<h2 id="_1">基本資訊</h2>
+<ul>
+<li>作者：莫里斯·盧布朗（Maurice Leblanc）</li>
+<li>出版年：1912年</li>
+<li>類型：長篇</li>
+<li>偵探角色：亞森·盧邦（Arsène Lupin）</li>
+<li>核心謎團類型：where-is-it（藏匿地點）＋ whodunit（神秘人物身份）</li>
+</ul>
+<hr>
+<h2 id="_2">推理難度總評</h2>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星等</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難度（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>平均收斂點約 76% — 神秘女人身份可在 30% 前後推出，但核心謎題「名單藏何處」要到 88% 才有足夠線索，而最終答案（義眼）幾乎只能在揭曉瞬間理解</td>
+</tr>
+<tr>
+<td>迷霧等級（Fog Rating）</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>盧布朗罕見地讓反派親自佈下主要假線索——達布雷克刻意製造假水晶瓶塞欺騙所有人，連敘事者呂邦也被耍了整整半本書；三重嵌套的「藏匿地點」設計使得讀者的每一次「我找到了！」都是誤判</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_3">故事大綱</h2>
+<p>秋末某夜，亞森·呂邦帶領手下赴昂吉恩湖邊別墅行竊。助手吉伯特（Gilbert）與沃什雷（Vaucheray）為尋找某樣神秘物件，竟在爭搶中讓沃什雷刺死主僕萊昂纳德。警方趕到，呂邦僥倖脫身，兩名手下落網。</p>
+<p>呂邦逃脫時，吉伯特塞給他一件東西：一枚普通的<strong>水晶瓶塞</strong>。</p>
+<p>這枚小玻璃塞從此成為整部小說的核心象徵。為什麼吉伯特和沃什雷寧願冒生命危險也要搶奪它？它藏著什麼秘密？</p>
+<p>呂邦追查到瓶塞的原主人：眾議員達布雷克（Alexis Daubrecq）——一個外貌猶如山人猩猩、戴著雙層眼鏡的怪人。此人手握一份涉及二十七名政客的醜聞名單（「二十七人名單」，兩洋運河公司行賄記錄），以此逐一勒索受害者，其政治地位固若金湯，無人敢動。</p>
+<p>同時，一名神秘的灰髮女子反覆出現：她深夜拜訪達布雷克，幾乎親手用匕首刺殺他；她竊走呂邦兩度從達布雷克處取得的水晶瓶塞；她指揮呂邦自己的手下（格羅勒與馬舍）對抗呂邦。她是誰？她為何要爭奪這枚瓶塞？</p>
+<p>謎底在第五章揭開：她是<strong>克拉麗絲·梅爾吉</strong>（Clarisse Mergy），正是吉伯特的親生母親。她丈夫——前議員維克托里安·梅爾吉——正是達布雷克的受害者之一，三年前因被勒索而飲彈自盡。她的長子吉伯特（本名安托萬·梅爾吉）因達布雷克幕後操縱而走上歧路，落入呂邦旗下，如今面臨斷頭臺。</p>
+<p>三股力量三角博弈：達布雷克（持名單者）、警察總署（追名單者）、克拉麗絲與呂邦（奪名單者）。</p>
+<p>然而呂邦一行歷經數月搜索，無論如何翻遍達布雷克的書房，水晶瓶塞的真正意義始終成謎——直到克拉麗絲揭露：她從廢紙簍撿到達布雷克的一封草稿，上書「<strong>將水晶內部挖空，以留下無人能察覺的空腔</strong>」。英國斯托布里奇的玻璃工匠造了一枚中空水晶瓶塞，秘密名單就捲成細卷藏於其中。</p>
+<p>然而，即使掌握這條線索，呂邦翻遍所有水晶器物，在達布雷克的書桌、菸草盒、燈具插座裡反覆搜索，就是找不到那枚關鍵的瓶塞。</p>
+<p>直到最後，當呂邦在尼斯氯倒達布雷克，摘下他厚重的眼鏡，以拇指頂出他那枚「玻璃眼珠」——謎底才終於浮出水面：</p>
+<p><strong>那枚水晶瓶塞，從來就是達布雷克的義眼。</strong></p>
+<hr>
+<h2 id="_4">真相拆解</h2>
+<h3 id="whodunit">真相一：神秘女人的身份（whodunit）</h3>
+<ul>
+<li><strong>線索收斂點：約 30%</strong></li>
+<li>答案：灰髮女子是克拉麗絲·梅爾吉，即吉伯特的親生母親，已故議員梅爾吉的遺孀，因丈夫被達布雷克逼死而立誓復仇。</li>
+</ul>
+<h4 id="_5">關鍵線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（章節/百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>神秘女人在達布雷克書房中暗中摸索水瓶塞子，顯示她也在找水晶瓶塞</td>
+<td>第三章 / 約 19%</td>
+<td>她的目標與呂邦完全相同，說明她知情者的身份</td>
+</tr>
+<tr>
+<td>2</td>
+<td>達布雷克書房午夜場景：神秘女人舉刀欲殺達布雷克，被達布雷克輕易制止，顯示兩人有長期糾葛</td>
+<td>第三章 / 約 20%</td>
+<td>非偶然衝突，而是夙怨積仇的爆發</td>
+</tr>
+<tr>
+<td>3</td>
+<td>呂邦抓住的「幕後主謀」是個六七歲的小孩，呂邦仔細觀察孩子的臉龐，「發現了某種他認識的相似之處」</td>
+<td>第四章 / 約 27%</td>
+<td>孩子長相與書中某人雷同，伏筆大意</td>
+</tr>
+<tr>
+<td>4</td>
+<td>格羅勒與馬舍——呂邦自己的手下——竟幫助神秘女人，說明她與吉伯特舊有關聯，而非外人</td>
+<td>第三章 / 約 24%</td>
+<td>只有吉伯特的親近人才能調動他的同夥</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_6">輔助線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（章節/百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>女人知道呂邦在魯馬蒂尼翁街的秘密公寓地址，說明她透過吉伯特的資訊管道而來</td>
+<td>第二章 / 約 15%</td>
+<td>吉伯特最親近的人才可能知道</td>
+</tr>
+<tr>
+<td>2</td>
+<td>女人看到吉伯特寫給「德·博蒙，米歇爾先生」的信，即刻認出這是吉伯特聯絡呂邦的暗語</td>
+<td>第二章 / 約 14%</td>
+<td>她非但認識吉伯特，且知道他與呂邦的通訊方式</td>
+</tr>
+<tr>
+<td>3</td>
+<td>達布雷克在劇院包廂看到呂邦接近那女人時的反應：傲慢而佔有，而非陌生的警覺</td>
+<td>第三章 / 約 22%</td>
+<td>兩人之間顯然存在長期的個人糾葛</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_7">假線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（章節/百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>神秘女人派人傳話「一切都無用，請放棄」給呂邦，以職業告密者的口吻</td>
+<td>第三章 / 約 19%</td>
+<td>讓讀者誤以為她是達布雷克一方的間諜或警察線人</td>
+</tr>
+<tr>
+<td>2</td>
+<td>格羅勒和馬舍被發現協助神秘女人</td>
+<td>第三章 / 約 24%</td>
+<td>讓讀者誤以為他們是被收買的叛徒，而非受吉伯特之母感召</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_8">真相二：「真正的」水晶瓶塞藏在哪裡？（第一層誤導——達布雷克的菸草包）</h3>
+<ul>
+<li><strong>線索收斂點：約 65%</strong></li>
+<li>答案：達布雷克將假名單（無效偽造品）捲入中空水晶塞，藏在一包政府印花完整的馬里蘭菸草（Maryland tobacco）中，放在書桌上。這是達布雷克刻意設置的<strong>誘餌陷阱</strong>。</li>
+</ul>
+<h4 id="_9">關鍵線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（章節/百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>達布雷克致普拉斯維爾的便條：「就在你的手邊，你觸碰到了！再多一點點，你就成功了……可惜你太蠢了。」</td>
+<td>第二章 / 約 13%</td>
+<td>隱藏地點極其明顯，就擺在眾人眼前</td>
+</tr>
+<tr>
+<td>2</td>
+<td>克拉麗絲揭露：她在廢紙簍撿到達布雷克的信稿，寫著「將水晶內部挖空……留下無人能察覺的空腔」</td>
+<td>第五章 / 約 31%</td>
+<td>直接指向水晶瓶塞的「中空」設計</td>
+</tr>
+<tr>
+<td>3</td>
+<td>呂邦在書房搜索時，注意到書桌上的菸草包「不見了」，而他對書房每個物件的位置記憶絲毫不差</td>
+<td>第九章 / 約 65%</td>
+<td>消失的才是有意義的東西——這枚鑲有政府印花的馬里蘭菸草包就是藏匿容器</td>
+</tr>
+<tr>
+<td>4</td>
+<td>呂邦事後解釋：達布雷克刻意用「無法被懷疑」的政府印花菸草包作偽裝，使所有人視而不見</td>
+<td>第十一章 / 約 82%</td>
+<td>盧布朗借呂邦之口明引愛倫·坡的「藏而不藏的信」（The Purloined Letter）手法</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_10">輔助線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（章節/百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>被酷刑折磨的達布雷克喃喃說出「Marie」（瑪麗）</td>
+<td>第八章 / 約 55%</td>
+<td>呂邦初以為指人名或別墅名，後知是「Maryland」（馬里蘭）的前兩音節</td>
+</tr>
+<tr>
+<td>2</td>
+<td>達布雷克只抽馬里蘭菸草，書桌上常年擺著未開封的煙包</td>
+<td>第三章 / 約 17%</td>
+<td>讀者看過無數次這個細節，卻未曾懷疑</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_11">假線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（章節/百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>中空水晶瓶塞本身，以及克拉麗絲在英國獲得的訂購資料</td>
+<td>第五章 / 約 31%</td>
+<td>讀者被完全引向「水晶瓶塞即藏匿容器」這個思路，而忽略義眼可能性</td>
+</tr>
+<tr>
+<td>2</td>
+<td>普拉斯維爾等人多次搜索書桌、瓶瓶罐罐</td>
+<td>第二章 / 約 11%</td>
+<td>讓讀者認為書桌已被徹底搜遍，其實菸草包從未有人開啟</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="the-real-crystal-stopper">真相三：名單的真正藏處——義眼（the real crystal stopper）</h3>
+<ul>
+<li><strong>線索收斂點：約 90%</strong></li>
+<li>答案：達布雷克的左眼是一枚<strong>玻璃義眼</strong>（glass eye），即真正的「水晶瓶塞」——內部已被掏空，二十七人名單就捲藏其中。他以厚重的黑色遮光眼鏡加上一般眼鏡雙重遮蔽，二十年來無人察覺。</li>
+</ul>
+<h4 id="_12">關鍵線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（章節/百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>達布雷克的第一次人物描寫：「弱而充血的眼睛，眼鏡之下還架著一副黑色護目眼鏡」</td>
+<td>第二章 / 約 11%</td>
+<td>雙層眼部遮蔽極不尋常——護目鏡本非視力矯正用途，而是遮蔽義眼本身</td>
+</tr>
+<tr>
+<td>2</td>
+<td>克拉麗絲在廢紙簍中找到達布雷克的信稿：「將水晶<strong>內部</strong>挖空，以留下無人能察覺的空腔」</td>
+<td>第五章 / 約 31%</td>
+<td>「水晶」可指玻璃義眼；「無人能察覺」指義眼藏於眼眶本身</td>
+</tr>
+<tr>
+<td>3</td>
+<td>呂邦在摩爾特皮耶爾的塔樓中偷聽酷刑場景：被折磨的達布雷克在意識半清醒時喃喃吐出「Marie」</td>
+<td>第八章 / 約 55%</td>
+<td>表面上引向「Maryland」，但也可能是在保護藏匿其身體的東西——他甚至無需說出地點</td>
+</tr>
+<tr>
+<td>4</td>
+<td>在達布雷克的書房裡，呂邦注意到菸草包不見後若有所悟，腦中閃現一個字：「一切都清楚了……甚至是那半個字，那個達布雷克在塔中被酷刑逼出的字！謎底解開了。」</td>
+<td>第九章 / 約 65%</td>
+<td>呂邦此刻知道的「謎底」並非義眼，而是菸草包；但他「那半個字」的提示是雙層的</td>
+</tr>
+<tr>
+<td>5</td>
+<td>呂邦在尼斯逼住達布雷克，摘下其眼鏡後，看到義眼時引用的意象：「用大拇指——你明白嗎？——頂出他的左眼！」</td>
+<td>第十一章 / 約 90%</td>
+<td>最後關鍵線索——義眼的真身在此揭曉</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_13">輔助線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（章節/百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>達布雷克無論走到哪裡，菸草包隨身攜帶，從不假手他人</td>
+<td>貫穿全書</td>
+<td>讀者會理解他對菸草的執著，但真正原因是義眼始終跟著他本人</td>
+</tr>
+<tr>
+<td>2</td>
+<td>克拉麗絲在英國查到玻璃工匠約翰·霍華德的訂單，寫著「照模型製作一枚水晶瓶」——即那枚假誘餌</td>
+<td>第五章 / 約 31%</td>
+<td>達布雷克特地訂製假誘餌，說明他早已預料到有人會追查「水晶」線索</td>
+</tr>
+<tr>
+<td>3</td>
+<td>盧布朗透過呂邦之口明引愛倫·坡《偷竊的信》：最難找的東西，就是擺在眼前的東西</td>
+<td>第九章 / 約 65%</td>
+<td>暗示「義眼」這個最終答案——比菸草包還要「擺在眼前」的藏匿之所</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_14">假線索（達布雷克親手佈下的誘餌）</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（章節/百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>克拉麗絲撿到的那封信稿、英國玻璃工匠的訂單、偽裝成中空水晶瓶塞的馬里蘭菸草包</td>
+<td>第五章及第三章 / 約 11-31%</td>
+<td>整個「水晶瓶塞藏名單」的概念，就是達布雷克有意讓人發現的<strong>假索引</strong>——真正的容器是他的義眼，而「水晶瓶塞」的說法不過是字面欺騙</td>
+</tr>
+<tr>
+<td>2</td>
+<td>達布雷克親自讓普拉斯維爾反覆進入書房搜索，卻始終讓菸草包留在桌上</td>
+<td>第二、三章 / 約 11-13%</td>
+<td>讓所有人相信「就在你手邊」的東西是書桌上的某件器物，而非他自己的眼睛</td>
+</tr>
+<tr>
+<td>3</td>
+<td>假名單（偽造品）被裝入菸草包中的水晶塞，竟能騙過克拉麗絲和呂邦長達半本書</td>
+<td>第十一章 / 約 82-88%</td>
+<td>即使找到了「水晶瓶塞」，所得到的也只是精心製作的偽造名單</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_15">推理路徑重建</h2>
+<p><strong>第一條路徑：誰是神秘女人？</strong></p>
+<p>讀到約 14% 時，女人截走吉伯特寄給「德·博蒙，米歇爾先生」的信——她不僅知道呂邦的假名，還知道吉伯特的通訊暗語。這幾乎只有吉伯特最親近的人才能知道。讀到 20% 時，她在達布雷克書房舉刀欲殺，說明積怨之深早已超越一般利益糾紛。27% 時，呂邦在小男孩臉上看到熟悉的輪廓——若讀者記得女人臉龐，此刻應能猜出：這個小孩是她的兒子，而這個女人與吉伯特有親緣關係，很可能就是他的母親。</p>
+<p>確認點：30%，克拉麗絲親口坦承。</p>
+<p><strong>第二條路徑：水晶瓶塞藏在哪裡？（第一層，錯誤答案）</strong></p>
+<p>克拉麗絲在 31% 揭露英國訂單與「挖空水晶」的信稿，讀者與呂邦同步進入「中空水晶瓶塞藏名單」的假設框架。達布雷克的「你的手邊」挑釁信讓搜索方向聚焦在書房物件。達布雷克那聲「Marie」（55%）令讀者嘗試各種解讀。直到 65%，呂邦注意到書桌上那包菸草不見了——細心的讀者此刻或許能先於呂邦想到：一包有政府印花封緘的東西，是最不會被懷疑的藏匿物。</p>
+<p>確認點：65-68%，呂邦從達布雷克的菸草包中取出水晶塞與名單。</p>
+<p><strong>第三條路徑：名單真偽——義眼的出現</strong></p>
+<p>這是本書最核心、也最難預判的謎題。唯一的硬線索是 11% 時達布雷克的外貌描寫（雙層眼部遮蔽），以及整個故事中他對義眼的刻意保護（書房搜索時他讓人搜一切，卻只要對方別碰他的人）。「水晶內部挖空」的字面意義理論上可套用在眼球上，但沒有任何讀者——包括小說中所有角色——能在 88% 之前提出「義眼」這個假設。</p>
+<p>達布雷克的佈局精妙無比：他安排了一條真實的假線索（可被發現的信稿→玻璃工匠→中空水晶塞→菸草包），讓所有人沉迷追查，而真正的「水晶瓶塞」（義眼）始終以另一個名字——「眼珠」——堂堂正正地存在於眾目睽睽之下。</p>
+<p>確認點：90%，呂邦頂出義眼，打開背面的滑動機關，發現真實名單與十字架浮水印。</p>
+<hr>
+<h2 id="_16">補充說明</h2>
+<p><strong>《水晶瓶塞》在盧布朗創作中的地位</strong></p>
+<p>這部 1912 年的長篇是盧布朗「呂邦作為主角的逆境故事」中最具代表性的作品之一。在大多數呂邦故事中，主角笑傲警方、從容佈局；而本書幾乎顛覆了這個模式——呂邦接連失誤、被捉弄、被出賣、病倒、差點以失敗告終。全書有一種近乎「反英雄敘事」的張力。</p>
+<p><strong>最深刻的推理技法：三重假線索的巢套結構</strong></p>
+<p>盧布朗在本書設計了極為罕見的「三層假線索」：</p>
+<table>
+<thead>
+<tr>
+<th>層次</th>
+<th>內容</th>
+<th>性質</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第一層</td>
+<td>昂吉恩別墅盜取的水晶瓶塞</td>
+<td>「模型」非真品，約 4% 揭曉</td>
+</tr>
+<tr>
+<td>第二層</td>
+<td>馬里蘭菸草包中的中空水晶塞</td>
+<td>達布雷克親手佈下的誘餌，內藏偽造名單，88% 揭穿</td>
+</tr>
+<tr>
+<td>第三層</td>
+<td>達布雷克的玻璃義眼</td>
+<td>真正的「水晶瓶塞」，90% 揭曉</td>
+</tr>
+</tbody>
+</table>
+<p>最驚人之處在於：第二層的假線索是<strong>反派親自精心製造的</strong>，而非作者在敘事上施加的隱瞞。達布雷克預見到有人會追查「水晶」線索，因此刻意讓人找到那封信稿、那份英國訂單、那枚藏在菸草包裡的假水晶塞——這是罪犯用謀殺級的先見之明佈下的情節圈套，讀者和偵探同步被耍。</p>
+<p>這個手法在偵探小說史上極為少見：通常只有作者騙讀者，這裡卻是<strong>故事世界內部的反派騙了所有人</strong>，作者（盧布朗）不過是如實記錄這場騙局。</p>
+<p><strong>愛倫·坡的陰影</strong></p>
+<p>盧布朗在 65% 處讓呂邦親口引用坡的《偷竊的信》（The Purloined Letter）——那個「把信就攤在信架上、讓所有人看見卻找不到」的手法。呂邦找到菸草包後以為自己看穿了這個把戲，卻沒意識到盧布朗用的是更深一層的坡式邏輯：比「擺在桌上的菸草包」還要更明顯的藏匿地點，是「就長在那個人臉上的義眼」。盧布朗不只是致敬坡，他是在進行一場文學上的辯論：坡說「藏而不藏」，盧布朗回答「藏在自身之上才是終極的藏而不藏」。</p>
+<p><strong>克拉麗絲的人物設計</strong></p>
+<p>在眾多呂邦故事的女性角色中，克拉麗絲·梅爾吉是描寫最為立體的一位。她不是「被救的女人」，而是一個獨立行動了數年的復仇者，甚至在呂邦出現之前就已深入敵陣。她對兒子的母愛、對達布雷克的仇恨、對呂邦的矛盾情感（感激與輕蔑並存），在故事末尾留下一個令人心碎的結尾：她拒絕了呂邦的求婚，因為她是一個「真正誠實的女人」，而他終究「只是個亞森·呂邦」。</p>
+<p><strong>本書與《空心針》（The Hollow Needle）的比較</strong></p>
+<p>這兩部作品都以「中空的容器藏著秘密」為核心：《空心針》中是科斯克的中空懸崖，《水晶瓶塞》中是義眼。不同的是，《空心針》的秘密更接近寶藏傳說，而《水晶瓶塞》的謎題嵌入了一場真實的政治勒索犯罪，社會批判的色彩更為濃厚——達布雷克其實是一個關於腐敗政治體制的黑暗預言：他的「二十七人名單」讓整個第三共和的政治菁英淪為囚徒，無人能制裁他，直到他的義眼被摘除。</p>
+<p><strong>對台灣讀者的補充</strong></p>
+<p>「二十七人名單」的背景明顯影射 1892 年震驚法國的「巴拿馬運河醜聞」（Panama Affair）——大批議員議員被揭露收受賄賂，導致政局動盪、多人自殺。盧布朗以此為藍本，創造出「兩洋運河公司」這個虛構版本，讓達布雷克的勒索具有真實的歷史重量。這層背景使《水晶瓶塞》不僅是一部推理小說，也是一首關於政治腐敗必然毀滅的哀歌。</p>
+    <a href="../index.html" class="back-link">← 回到首頁</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">推理解剖室</p>
+    <p>五位作者 · 八十八部作品 · 一百三十五年推理文學的難度演化</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

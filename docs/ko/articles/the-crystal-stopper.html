@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>수정 마개（The Crystal Stopper）— 추리 분석 — 추리해부실</title>
+<meta name="description" content="늦가을 어느 밤, 아르센 뤼팽은 부하들을 이끌고 앙기엥 호숫가 별장에 침입한다. 조수 질베르（Gilbert）와 보슈레（Vaucheray）는 어떤 신비로운 물건을 찾던 중 쟁탈전이 벌어져 보슈레가 하인 레오나르를 찌러 죽이고 만다. 경찰이 출동하자 뤼팽은 간신히 탈출하지만 두 부하는 체포">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-crystal-stopper.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-crystal-stopper.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-crystal-stopper.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-crystal-stopper.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-crystal-stopper.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-crystal-stopper.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-crystal-stopper.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-crystal-stopper.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif KR', serif;
+  --font-sans: 'Noto Sans KR', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">추리해부실</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">홈</a>
+        <a href="../index.html#latest">최신</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="언어" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 한국어</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-crystal-stopper.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-crystal-stopper.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-crystal-stopper.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/the-crystal-stopper.html">日本語</a>
+      <a class="lang-item active" data-lang="ko" href="/Detective-Analysis/ko/articles/the-crystal-stopper.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/the-crystal-stopper.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/the-crystal-stopper.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/the-crystal-stopper.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">모리스 르블랑 · </div>
+    <h1>수정 마개（The Crystal Stopper）— 추리 분석</h1>
+    <div class="subtitle">모리스 르블랑（Maurice Leblanc） · 장편</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">추리 난이도</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">안개 등급</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="the-crystal-stopper">수정 마개（The Crystal Stopper）— 추리 분석</h1>
+<h2 id="_1">기본 정보</h2>
+<ul>
+<li>저자: 모리스 르블랑（Maurice Leblanc）</li>
+<li>출판년도: 1912년</li>
+<li>장르: 장편</li>
+<li>탐정: 아르센 뤼팽（Arsène Lupin）</li>
+<li>핵심 수수께끼 유형: where-is-it（은닉 장소）＋ whodunit（정체불명 인물의 신원）</li>
+</ul>
+<hr>
+<h2 id="_2">추리 난이도 총평</h2>
+<table>
+<thead>
+<tr>
+<th>지표</th>
+<th>별점</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>추리 난이도（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>평균 수렴점 약 76% — 의문의 여인 정체는 30% 전후에 추리 가능하지만, 핵심 수수께끼 「명단이 어디에?」는 88%까지 충분한 단서가 없으며, 최종 답(의안)은 거의 공개 순간에야 이해 가능</td>
+</tr>
+<tr>
+<td>안개 등급（Fog Rating）</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>르블랑이 드물게 악당 스스로 주요 가짜 단서를 배치하게 했다——도브레크가 의도적으로 가짜 수정 마개를 만들어 모두를 속이고, 화자인 뤼팽조차 책 절반 내내 당했다; 세 겹으로 중첩된 「은닉 장소」 설계로 독자의 매번 「찾았다!」는 오판이 된다</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_3">줄거리</h2>
+<p>늦가을 어느 밤, 아르센 뤼팽은 부하들을 이끌고 앙기엥 호숫가 별장에 침입한다. 조수 질베르（Gilbert）와 보슈레（Vaucheray）는 어떤 신비로운 물건을 찾던 중 쟁탈전이 벌어져 보슈레가 하인 레오나르를 찌러 죽이고 만다. 경찰이 출동하자 뤼팽은 간신히 탈출하지만 두 부하는 체포된다.</p>
+<p>탈출하는 순간, 질베르가 뤼팽에게 무언가를 쥐여준다. 평범한 <strong>수정 마개</strong> 하나였다.</p>
+<p>이 작은 유리 마개는 이후 소설 전체의 핵심 상징이 된다. 질베르와 보슈레는 왜 목숨을 걸면서까지 그것을 빼앗으려 했을까? 그 안에 무슨 비밀이 숨겨져 있을까?</p>
+<p>뤼팽은 마개의 원래 주인을 추적한다. 하원의원 도브레크（Alexis Daubrecq）——겉모습은 산인이나 유인원을 연상케 하고, 이중 안경을 쓴 기이한 인물이다. 그는 스물일곱 명의 정치인에 관한 추문 명단（「스물일곱 인 명단」, 두 대양 운하 회사 뇌물 수수 기록）을 손에 쥐고 피해자들을 하나씩 협박하며, 그의 정치적 지위는 난공불락이라 아무도 그를 건드리지 못한다.</p>
+<p>한편, 정체를 알 수 없는 백발의 여인이 반복해서 등장한다. 그녀는 한밤중에 도브레크를 찾아가 직접 단검으로 그를 찌르려 하고, 뤼팽이 도브레크에게서 두 차례 빼앗은 수정 마개를 훔쳐 간다. 심지어 뤼팽 자신의 부하 그롤레와 마쉬를 조종해 뤼팽에게 맞서게 한다. 그녀는 누구인가? 왜 이 마개를 두고 다투는가?</p>
+<p>수수께끼는 5장에서 풀린다. 그녀는 <strong>클라리스 메르지</strong>（Clarisse Mergy）, 바로 질베르의 친어머니이다. 그녀의 남편——전 의원 빅토리앵 메르지——는 도브레크의 피해자 중 한 명으로, 3년 전 협박을 견디지 못하고 권총으로 스스로 목숨을 끊었다. 그녀의 장남 질베르（본명 앙투안 메르지）는 도브레크의 배후 조종으로 잘못된 길에 들어서 뤼팽 휘하에 들어갔고, 지금은 단두대를 앞두고 있다.</p>
+<p>세 세력이 삼각 대립을 벌인다. 도브레크（명단을 가진 자）, 경찰청（명단을 추적하는 자）, 클라리스와 뤼팽（명단을 빼앗으려는 자）.</p>
+<p>그러나 뤼팽 일행은 수개월에 걸쳐 아무리 도브레크의 서재를 뒤져도 수정 마개의 진정한 의미를 끝내 알 수 없었다——클라리스가 폭로할 때까지. 그녀는 도브레크가 버린 초안 편지를 휴지통에서 주웠는데, 거기에는 이렇게 쓰여 있었다. 「<strong>수정 내부를 파내어 아무도 알아채지 못할 공동을 만들 것</strong>」. 영국 스토브리지의 유리 장인이 속이 빈 수정 마개를 하나 만들었고, 비밀 명단이 가늘게 말려 그 안에 숨겨진 것이다.</p>
+<p>그러나 이 단서를 손에 넣었음에도 뤼팽은 수정으로 된 물건들을 모두 뒤졌고, 도브레크의 책상, 담배 상자, 램프 소켓까지 반복해서 뒤졌지만 그 결정적인 마개만은 찾아낼 수 없었다.</p>
+<p>마침내 마지막 순간, 니스에서 뤼팽이 도브레크를 쓰러뜨리고 그 두꺼운 안경을 벗기자 엄지손가락으로 그의 「유리 안구」를 밀어내는데——그제야 수수께끼의 답이 떠오른다.</p>
+<p><strong>그 수정 마개는 처음부터 도브레크의 의안이었던 것이다.</strong></p>
+<hr>
+<h2 id="_4">진상 해부</h2>
+<h3 id="1-whodunit">진상 1：정체불명 여인의 신원（whodunit）</h3>
+<ul>
+<li><strong>단서 수렴점：약 30%</strong></li>
+<li>정답：백발의 여인은 클라리스 메르지로, 질베르의 친어머니이자 고인이 된 의원 메르지의 미망인이며, 남편을 도브레크에게 빼앗겨 복수를 맹세한 여인이다.</li>
+</ul>
+<h4 id="_5">핵심 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/비율）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>정체불명의 여인이 도브레크의 서재에서 병마개를 어둠 속에 더듬는데, 이는 그녀 역시 수정 마개를 찾고 있음을 보여준다</td>
+<td>3장 / 약 19%</td>
+<td>그녀의 목표는 뤼팽과 완전히 동일하며, 그녀가 사정을 아는 인물임을 증명한다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>도브레크 서재의 한밤중 장면：정체불명의 여인이 단검을 들고 도브레크를 죽이려 하지만 도브레크에게 손쉽게 제압당한다. 두 사람 사이에 오랜 원한이 있음을 보여준다</td>
+<td>3장 / 약 20%</td>
+<td>우연한 충돌이 아니라 오래 쌓인 원한의 폭발이다</td>
+</tr>
+<tr>
+<td>3</td>
+<td>뤼팽이 붙잡은 「배후 주모자」는 여섯 살이나 일곱 살짜리 어린아이인데, 뤼팽은 아이의 얼굴을 자세히 살피다가 「자신이 아는 어떤 사람과의 닮음을 발견한다」</td>
+<td>4장 / 약 27%</td>
+<td>아이의 생김새가 소설 속 어떤 인물과 닮아 있다는 복선이 깔린다</td>
+</tr>
+<tr>
+<td>4</td>
+<td>그롤레와 마쉬——뤼팽 자신의 부하——가 정체불명의 여인을 돕는다는 사실은, 그녀가 외부인이 아니라 질베르와 오래된 인연이 있음을 뜻한다</td>
+<td>3장 / 약 24%</td>
+<td>질베르의 가까운 사람만이 그의 동료들을 움직일 수 있다</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_6">보조 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/비율）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>여인이 뤼팽의 루마티니뇽 가 비밀 아파트 주소를 알고 있는데, 이는 그녀가 질베르의 정보망을 통해 알아낸 것임을 뜻한다</td>
+<td>2장 / 약 15%</td>
+<td>질베르와 가장 가까운 사람만이 알 수 있는 정보이다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>여인이 질베르가 「드 보몽, 미셸 씨」에게 쓴 편지를 보자마자 이것이 질베르가 뤼팽과 연락하는 암호임을 알아챈다</td>
+<td>2장 / 약 14%</td>
+<td>그녀는 질베르를 알 뿐만 아니라 그와 뤼팽의 통신 방식까지 알고 있다</td>
+</tr>
+<tr>
+<td>3</td>
+<td>극장 박스석에서 뤼팽이 그 여인에게 접근하는 것을 보는 도브레크의 반응：낯선 이에 대한 경계가 아니라 오만하고 독점적인 태도이다</td>
+<td>3장 / 약 22%</td>
+<td>두 사람 사이에 분명히 오래된 개인적인 원한이 존재한다</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_7">가짜 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/비율）</th>
+<th>오도 방향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>정체불명의 여인이 사람을 시켜 뤼팽에게 「모든 것이 소용없으니 포기하라」는 전갈을 전하는데, 그 말투가 직업적인 밀고자를 연상케 한다</td>
+<td>3장 / 약 19%</td>
+<td>독자로 하여금 그녀가 도브레크 편의 스파이나 경찰 밀정이라고 오해하게 만든다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>그롤레와 마쉬가 정체불명의 여인을 돕는 것이 발각된다</td>
+<td>3장 / 약 24%</td>
+<td>독자로 하여금 그들이 돈에 매수된 배신자라고 오해하게 만든다. 질베르의 어머니에게 이끌린 것이 아니라는 인상을 준다</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="2">진상 2：「진짜」 수정 마개는 어디에 숨겨져 있는가?（첫 번째 층의 오도——도브레크의 담배 꾸러미）</h3>
+<ul>
+<li><strong>단서 수렴점：약 65%</strong></li>
+<li>정답：도브레크는 가짜 명단（유효하지 않은 위조품）을 속이 빈 수정 마개 안에 말아 넣고, 정부 인지가 붙은 메릴랜드 담배（Maryland tobacco） 한 꾸러미 안에 숨겨 책상 위에 올려두었다. 이것은 도브레크가 의도적으로 설치한 <strong>미끼 함정</strong>이다.</li>
+</ul>
+<h4 id="_8">핵심 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/비율）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>도브레크가 프라스빌에게 보낸 쪽지：「바로 당신 손 가까이에 있어요. 당신이 거기에 손을 댔잖아요! 조금만 더 했으면 성공했을 텐데……하지만 당신은 너무 멍청했어요.」</td>
+<td>2장 / 약 13%</td>
+<td>은닉 장소는 지극히 뻔하여 모든 이의 눈앞에 놓여 있다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>클라리스가 폭로한다：그녀는 도브레크의 편지 초안을 휴지통에서 주웠는데, 거기에 「수정 내부를 파내어……아무도 알아채지 못할 공동을 남긴다」고 쓰여 있었다</td>
+<td>5장 / 약 31%</td>
+<td>수정 마개의 「중공」 설계를 직접 가리킨다</td>
+</tr>
+<tr>
+<td>3</td>
+<td>뤼팽이 서재를 수색할 때 책상 위의 담배 꾸러미가 「사라졌다」는 것을 알아채는데, 그는 서재의 모든 물건 위치를 한 치도 틀리지 않게 기억하고 있다</td>
+<td>9장 / 약 65%</td>
+<td>사라진 것이야말로 의미 있는 것이다——정부 인지로 봉인된 이 메릴랜드 담배 꾸러미가 바로 은닉 용기이다</td>
+</tr>
+<tr>
+<td>4</td>
+<td>뤼팽이 나중에 설명한다：도브레크는 의도적으로 「의심받을 수 없는」 정부 인지 담배 꾸러미를 위장 용기로 사용해 모든 이의 눈을 가렸다</td>
+<td>11장 / 약 82%</td>
+<td>르블랑은 뤼팽의 입을 통해 에드거 앨런 포의 「도둑맞은 편지」（The Purloined Letter） 수법을 명시적으로 인용한다</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_9">보조 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/비율）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>혹독한 고문을 당한 도브레크가 혼미한 의식 속에서 「Marie」（마리）라고 중얼거린다</td>
+<td>8장 / 약 55%</td>
+<td>뤼팽은 처음에 인명이나 별장 이름이라고 생각하지만, 나중에 「Maryland」（메릴랜드）의 앞 두 음절임을 알게 된다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>도브레크는 메릴랜드 담배만 피우고 책상 위에는 항상 뜯지 않은 담배 꾸러미가 놓여 있다</td>
+<td>3장 / 약 17%</td>
+<td>독자는 이 세부 사항을 수없이 보고도 의심하지 않는다</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_10">가짜 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/비율）</th>
+<th>오도 방향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>속이 빈 수정 마개 자체, 그리고 클라리스가 영국에서 입수한 주문 자료</td>
+<td>5장 / 약 31%</td>
+<td>독자는 완전히 「수정 마개가 곧 은닉 용기」라는 사고 틀에 끌려 들어가 의안의 가능성을 간과하게 된다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>프라스빌 등이 서재의 병과 단지를 여러 차례 수색한다</td>
+<td>2장 / 약 11%</td>
+<td>독자로 하여금 서재가 이미 완전히 뒤졌다고 생각하게 만든다. 사실은 담배 꾸러미를 아무도 열어보지 않은 것이다</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="3-the-real-crystal-stopper">진상 3：명단의 진짜 은닉처——의안（the real crystal stopper）</h3>
+<ul>
+<li><strong>단서 수렴점：약 90%</strong></li>
+<li>정답：도브레크의 왼쪽 눈은 <strong>유리 의안</strong>（glass eye）이며, 이것이 바로 진짜 「수정 마개」이다——내부가 파여 있고, 스물일곱 인 명단이 가늘게 말려 그 안에 숨겨져 있다. 그는 두꺼운 검정 차광 안경에 일반 안경까지 이중으로 가려, 20년 동안 아무도 눈치채지 못했다.</li>
+</ul>
+<h4 id="_11">핵심 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/비율）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>도브레크의 첫 번째 인물 묘사：「약하고 충혈된 눈, 안경 아래 또 검정 차광 안경을 덧대고 있다」</td>
+<td>2장 / 약 11%</td>
+<td>이중 눈 가리개는 매우 비상하다——차광 안경은 시력 교정용이 아니라 의안 자체를 가리기 위한 것이다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>클라리스가 휴지통에서 도브레크의 편지 초안을 찾아낸다：「수정 <strong>내부</strong>를 파내어 아무도 알아채지 못할 공동을 남긴다」</td>
+<td>5장 / 약 31%</td>
+<td>「수정」은 유리 의안을 가리킬 수 있다；「아무도 알아채지 못한다」는 것은 의안이 안와 자체에 숨겨져 있음을 뜻한다</td>
+</tr>
+<tr>
+<td>3</td>
+<td>뤼팽이 모르트피에르의 탑에서 고문 장면을 엿듣는다：고문당한 도브레크가 반의식 상태에서 「Marie」라고 중얼거린다</td>
+<td>8장 / 약 55%</td>
+<td>표면적으로는 「Maryland」를 가리키는 것처럼 보이지만, 자신의 몸에 숨겨진 것을 보호하려는 것일 수도 있다——그는 장소를 말할 필요조차 없다</td>
+</tr>
+<tr>
+<td>4</td>
+<td>도브레크의 서재에서 뤼팽이 담배 꾸러미가 없어진 것을 알아챈 후 무언가를 깨달은 듯, 머릿속에서 한 단어가 번쩍인다：「모든 게 명확해졌다……그 반 토막 단어, 탑에서 도브레크가 고문에 못 이겨 내뱉은 그 단어조차도！수수께끼가 풀렸다.」</td>
+<td>9장 / 약 65%</td>
+<td>뤼팽이 이 순간 아는 「수수께끼의 답」은 의안이 아니라 담배 꾸러미이다；하지만 「반 토막 단어」의 암시는 이중적이다</td>
+</tr>
+<tr>
+<td>5</td>
+<td>뤼팽이 니스에서 도브레크를 꼼짝 못하게 하고 안경을 벗긴 후 의안을 보았을 때 인용하는 이미지：「엄지손가락으로——알겠어요?——그의 왼쪽 눈을 밀어냈어요！」</td>
+<td>11장 / 약 90%</td>
+<td>마지막 결정적 단서——의안의 정체가 여기서 밝혀진다</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_12">보조 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/비율）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>도브레크는 어디에 가든 담배 꾸러미를 몸에 지니고 절대 남의 손에 맡기지 않는다</td>
+<td>책 전체에 걸쳐</td>
+<td>독자는 그의 담배에 대한 집착을 이해하게 되지만, 진짜 이유는 의안이 항상 그 자신과 함께하기 때문이다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>클라리스가 영국에서 유리 장인 존 하워드의 주문서를 찾아낸다. 「모형대로 수정 병 하나를 제작할 것」——즉 그 가짜 미끼이다</td>
+<td>5장 / 약 31%</td>
+<td>도브레크가 특별히 가짜 미끼를 주문 제작했다는 것은 누군가 「수정」 단서를 추적하리라 이미 예상했음을 뜻한다</td>
+</tr>
+<tr>
+<td>3</td>
+<td>르블랑은 뤼팽의 입을 통해 포의 「도둑맞은 편지」를 명시적으로 인용한다：가장 찾기 어려운 것은 눈앞에 놓인 것이다</td>
+<td>9장 / 약 65%</td>
+<td>「의안」이라는 최종 답을 암시한다——담배 꾸러미보다 훨씬 더 「눈앞에 놓인」 은닉처이다</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_13">가짜 단서（도브레크가 직접 설치한 미끼）</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/비율）</th>
+<th>오도 방향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>클라리스가 주운 편지 초안, 영국 유리 장인의 주문서, 속이 빈 수정 마개로 위장된 메릴랜드 담배 꾸러미</td>
+<td>5장 및 3장 / 약 11-31%</td>
+<td>「수정 마개에 명단이 숨겨져 있다」는 개념 전체가, 도브레크가 의도적으로 발견되게 한 <strong>가짜 색인</strong>이다——진짜 용기는 그의 의안이며, 「수정 마개」라는 말은 문자 그대로의 속임수에 불과하다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>도브레크가 직접 프라스빌로 하여금 반복해서 서재에 들어와 수색하게 하면서도 항상 담배 꾸러미를 책상 위에 남겨둔다</td>
+<td>2·3장 / 약 11-13%</td>
+<td>모든 이로 하여금 「당신 손 가까이에」 있는 것이 책상 위의 어떤 물건이지, 그 자신의 눈이 아니라고 믿게 만든다</td>
+</tr>
+<tr>
+<td>3</td>
+<td>가짜 명단（위조품）이 담배 꾸러미 속의 수정 마개에 들어 있는데, 클라리스와 뤼팽을 책의 절반 내내 속일 수 있었다</td>
+<td>11장 / 약 82-88%</td>
+<td>「수정 마개」를 찾아냈다 해도 얻게 되는 것은 정교하게 만들어진 위조 명단뿐이다</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_14">추리 경로 재구성</h2>
+<p><strong>첫 번째 경로：정체불명의 여인은 누구인가?</strong></p>
+<p>약 14%에서, 여인이 질베르가 「드 보몽, 미셸 씨」에게 보낸 편지를 가로챈다——그녀는 뤼팽의 가명을 알 뿐 아니라 질베르의 통신 암호까지 알고 있다. 이것은 거의 질베르와 가장 가까운 사람만이 알 수 있는 것이다. 약 20%에서, 그녀는 도브레크의 서재에서 단검을 들고 살해를 시도하는데, 이는 그 원한이 일반적인 이해관계의 다툼을 훨씬 뛰어넘음을 보여준다. 27%에서, 뤼팽은 어린 사내아이의 얼굴에서 낯익은 윤곽을 발견한다——독자가 그 여인의 얼굴을 기억하고 있다면 이 순간 추리할 수 있을 것이다. 이 아이는 그녀의 아들이고, 그 여인은 질베르와 혈연관계이며, 아마도 그의 어머니일 것이라고.</p>
+<p>확인 시점：30%, 클라리스가 직접 고백한다.</p>
+<p><strong>두 번째 경로：수정 마개는 어디에 숨겨져 있는가?（첫 번째 층, 오답）</strong></p>
+<p>클라리스가 31%에서 영국 주문서와 「수정을 파낸다」는 편지 초안을 폭로하자, 독자와 뤼팽은 동시에 「속이 빈 수정 마개에 명단이 있다」는 가정의 틀 안으로 빠져든다. 도브레크의 「당신 손 가까이에」라는 도발적인 편지는 수색 방향을 서재의 물건들로 집중시킨다. 도브레크가 내뱉은 「Marie」（55%）는 독자로 하여금 온갖 해석을 시도하게 만든다. 65%에서 뤼팽이 책상 위의 담배 꾸러미가 사라진 것을 알아챌 때, 세심한 독자라면 뤼팽보다 먼저 생각해낼 수 있을지도 모른다. 정부 인지로 봉인된 물건이야말로 가장 의심받지 않는 은닉물이라고.</p>
+<p>확인 시점：65-68%, 뤼팽이 도브레크의 담배 꾸러미에서 수정 마개와 명단을 꺼낸다.</p>
+<p><strong>세 번째 경로：명단의 진위——의안의 등장</strong></p>
+<p>이것은 이 책에서 가장 핵심적이고 가장 예측하기 어려운 수수께끼이다. 유일한 단단한 단서는 11%에서 나오는 도브레크의 외모 묘사（이중 눈 가리개）, 그리고 이야기 전체에 걸친 의안에 대한 그의 의도적인 보호이다（서재 수색 시 그는 모든 것을 뒤지게 하면서도 자신의 몸만은 건드리지 말라고 한다）. 「수정 내부를 파낸다」는 문자적 의미는 이론적으로 눈알에도 적용할 수 있지만, 88% 이전에 「의안」이라는 가설을 제기할 수 있는 독자는——소설 속 모든 등장인물을 포함해서——아무도 없다.</p>
+<p>도브레크의 계략은 절묘하기 그지없다. 그는 진짜 가짜 단서（발견될 수 있는 편지 초안→유리 장인→속이 빈 수정 마개→담배 꾸러미）라는 하나의 경로를 만들어 모든 이가 추적에 몰입하게 했고, 진짜 「수정 마개」（의안）는 다른 이름——「눈알」——으로 당당히 모든 이의 눈앞에 존재하고 있었다.</p>
+<p>확인 시점：90%, 뤼팽이 의안을 밀어내 뒤의 미끄럼 장치를 열고 진짜 명단과 십자가 워터마크를 발견한다.</p>
+<hr>
+<h2 id="_15">보충 설명</h2>
+<p><strong>르블랑 작품에서 《수정 마개》의 위치</strong></p>
+<p>1912년의 이 장편은 르블랑의 「뤼팽이 주인공인 역경 이야기」 중 가장 대표적인 작품 중 하나이다. 대부분의 뤼팽 이야기에서 주인공은 경찰을 비웃으며 여유롭게 계략을 짠다；하지만 이 책은 그 구도를 거의 전복시킨다——뤼팽은 연이어 실수를 저지르고, 놀림당하고, 배신당하며, 병들어 쓰러지고, 실패로 끝날 뻔한다. 책 전체에 거의 「반영웅 서사」에 가까운 긴장감이 흐른다.</p>
+<p><strong>가장 심오한 추리 기법：삼중 가짜 단서의 중첩 구조</strong></p>
+<p>르블랑은 이 책에서 극히 드문 「세 겹의 가짜 단서」를 설계했다：</p>
+<table>
+<thead>
+<tr>
+<th>층위</th>
+<th>내용</th>
+<th>성질</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>첫 번째 층</td>
+<td>앙기엥 별장에서 탈취한 수정 마개</td>
+<td>「모형」으로 진품이 아님, 약 4%에서 밝혀짐</td>
+</tr>
+<tr>
+<td>두 번째 층</td>
+<td>메릴랜드 담배 꾸러미 속의 속이 빈 수정 마개</td>
+<td>도브레크가 직접 설치한 미끼, 내부에 위조 명단 포함, 88%에서 폭로됨</td>
+</tr>
+<tr>
+<td>세 번째 층</td>
+<td>도브레크의 유리 의안</td>
+<td>진짜 「수정 마개」, 90%에서 밝혀짐</td>
+</tr>
+</tbody>
+</table>
+<p>가장 놀라운 점은, 두 번째 층의 가짜 단서는 <strong>악당이 직접 정교하게 만들어낸 것</strong>이지, 작가가 서사 차원에서 숨긴 것이 아니라는 것이다. 도브레크는 누군가가 「수정」 단서를 추적하리라 예견하여, 의도적으로 그 편지 초안과 영국 주문서와 담배 꾸러미 속의 가짜 수정 마개를 발견하게 만들었다——이것은 범인이 살인범 수준의 선견지명으로 짜놓은 플롯의 함정이며, 독자와 탐정은 동시에 속았다.</p>
+<p>이 기법은 탐정 소설사에서 극히 드물다. 보통은 작가만이 독자를 속이는데, 여기서는 <strong>이야기 세계 내부의 악당이 모든 이를 속였고</strong>, 작가（르블랑）는 이 사기극을 있는 그대로 기록했을 뿐이다.</p>
+<p><strong>에드거 앨런 포의 그림자</strong></p>
+<p>르블랑은 65%에서 뤼팽의 입을 통해 포의 「도둑맞은 편지」（The Purloined Letter）를 직접 인용한다——편지를 편지꽂이에 그냥 꽂아두어 모든 이가 보면서도 찾지 못하게 하는 기법이다. 뤼팽은 담배 꾸러미를 찾아내고 자신이 이 속임수를 꿰뚫었다고 생각하지만, 르블랑이 사용한 것은 더 깊은 층의 포식 논리임을 깨닫지 못한다. 「책상 위의 담배 꾸러미」보다도 훨씬 더 명백한 은닉처는, 「바로 그 사람의 얼굴에 붙어 있는 의안」이다. 르블랑은 포에게 경의를 표한 것이 아니라, 하나의 문학적 논쟁을 벌이고 있다. 포가 「숨기지 않고 숨긴다」고 했다면, 르블랑은 「자신의 몸 위에 숨기는 것이 궁극의 숨기지 않고 숨기기」라고 답한다.</p>
+<p><strong>클라리스의 인물 설계</strong></p>
+<p>수많은 뤼팽 이야기의 여성 등장인물 중 클라리스 메르지는 가장 입체적으로 묘사된 인물이다. 그녀는 「구조받는 여인」이 아니라, 수년간 독자적으로 행동해온 복수자이며, 심지어 뤼팽이 등장하기 전부터 이미 적진 깊숙이 들어가 있었다. 아들에 대한 모성애, 도브레크에 대한 증오, 뤼팽에 대한 복잡한 감정（감사와 경멸이 공존한다）은 이야기 말미에 마음을 저미는 결말을 남긴다. 그녀는 뤼팽의 청혼을 거절한다. 그녀는 「진정으로 정직한 여인」이고, 그는 결국 「단지 아르센 뤼팽일 뿐」이기 때문이다.</p>
+<p><strong>이 책과 《속이 빈 바늘》（The Hollow Needle）의 비교</strong></p>
+<p>두 작품 모두 「속이 빈 용기에 비밀이 숨겨져 있다」는 것을 핵심으로 한다. 《속이 빈 바늘》에서는 에트르타의 속이 빈 절벽이고, 《수정 마개》에서는 의안이다. 다른 점은, 《속이 빈 바늘》의 비밀이 보물 전설에 더 가깝다면, 《수정 마개》의 수수께끼는 현실의 정치적 협박 범죄에 내포되어 있으며 사회 비판의 색채가 훨씬 짙다——도브레크는 사실 부패한 정치 체제에 대한 어두운 예언이다. 그의 「스물일곱 인 명단」은 제3공화국의 정치 엘리트 전체를 포로로 만들어 아무도 그를 제재할 수 없게 했고, 그의 의안이 적출될 때까지 그랬다.</p>
+<p><strong>한국 독자를 위한 보충</strong></p>
+<p>「스물일곱 인 명단」의 배경은 1892년 프랑스를 뒤흔든 「파나마 운하 스캔들」（Panama Affair）을 명백히 암시한다——다수의 의원이 뇌물을 받은 사실이 폭로되어 정국이 혼란에 빠지고 여러 명이 자살했다. 르블랑은 이를 모델로 「두 대양 운하 회사」라는 허구의 버전을 만들어 도브레크의 협박에 실제 역사적 무게감을 부여했다. 이 배경으로 인해 《수정 마개》는 단순한 추리 소설에 그치지 않고, 정치 부패가 필연적으로 파멸을 부른다는 것을 노래한 비가이기도 하다.</p>
+    <a href="../index.html" class="back-link">← 홈으로</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">추리해부실</p>
+    <p>다섯 작가 · 여든여덟 작품 · 135년에 걸친 추리문학 난이도의 진화.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

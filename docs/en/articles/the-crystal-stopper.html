@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Crystal Stopper — Detective Analysis</title>
+<meta name="description" content="On a late autumn night, Arsène Lupin leads his associates on a burglary at a lakeside villa in Enghien. His assistants Gilbert and Vaucheray, searching for a my">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-crystal-stopper.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-crystal-stopper.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-crystal-stopper.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-crystal-stopper.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-crystal-stopper.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-crystal-stopper.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-crystal-stopper.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-crystal-stopper.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Detective Analysis</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#latest">Latest</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Language" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 English</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-crystal-stopper.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-crystal-stopper.html">简体中文</a>
+      <a class="lang-item active" data-lang="en" href="/Detective-Analysis/en/articles/the-crystal-stopper.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/the-crystal-stopper.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/the-crystal-stopper.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/the-crystal-stopper.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/the-crystal-stopper.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/the-crystal-stopper.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">Maurice Leblanc · 1912</div>
+    <h1>The Crystal Stopper</h1>
+    <div class="subtitle">Maurice Leblanc · Novel</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Deducibility</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Fog Rating</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="the-crystal-stopper-deducibility-analysis">The Crystal Stopper — Deducibility Analysis</h1>
+<h2 id="basic-information">Basic Information</h2>
+<ul>
+<li>Author: Maurice Leblanc</li>
+<li>Year: 1912</li>
+<li>Type: Novel</li>
+<li>Detective: Arsène Lupin</li>
+<li>Core mystery type: where-is-it (hidden location) + whodunit (mysterious identity)</li>
+</ul>
+<hr>
+<h2 id="deducibility-rating">Deducibility Rating</h2>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Stars</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deducibility</td>
+<td>⭐⭐⭐⭐</td>
+<td>Average convergence point approximately 76% — the mysterious woman's identity can be deduced around the 30% mark, but the core puzzle "where is the list hidden" does not yield sufficient clues until 88%, and the final answer (the glass eye) can only truly be understood at the moment of revelation</td>
+</tr>
+<tr>
+<td>Fog Rating</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>Leblanc takes the rare step of having the villain personally plant the main red herrings — Daubrecq deliberately creates a fake crystal stopper to deceive everyone, including narrator Lupin himself, for nearly half the book; the triple-nested "hidden location" design ensures that every time the reader thinks "I've found it!" they are wrong</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="synopsis">Synopsis</h2>
+<p>On a late autumn night, Arsène Lupin leads his associates on a burglary at a lakeside villa in Enghien. His assistants Gilbert and Vaucheray, searching for a mysterious object, get into a struggle that ends with Vaucheray stabbing the owner's servant Léonard to death. The police arrive; Lupin barely escapes, while his two men are captured.</p>
+<p>As Lupin flees, Gilbert presses something into his hand: an ordinary <strong>crystal stopper</strong>.</p>
+<p>That small glass stopper becomes the central symbol of the entire novel. Why would Gilbert and Vaucheray risk their lives to seize it? What secret does it hold?</p>
+<p>Lupin traces the stopper back to its original owner: Deputy Alexis Daubrecq — a grotesque figure resembling an orangutan, peering through double-layered spectacles. This man possesses a list implicating twenty-seven politicians (the "List of Twenty-Seven," recording bribery payments to the Panama Canal Company), and uses it to blackmail his victims one by one. His political position is unassailable; no one dares move against him.</p>
+<p>Meanwhile, a mysterious grey-haired woman keeps appearing: she visits Daubrecq late at night and nearly stabs him with a dagger; she steals the crystal stopper that Lupin retrieves from Daubrecq on two separate occasions; she commands two of Lupin's own men — Groller and Machu — against Lupin himself. Who is she? Why does she covet this stopper?</p>
+<p>The answer is revealed in chapter five: she is <strong>Clarisse Mergy</strong>, the biological mother of Gilbert himself. Her husband — former deputy Victorien Mergy — was one of Daubrecq's victims, driven to shoot himself three years earlier under the weight of blackmail. Her elder son Gilbert (born Antoine Mergy) was led astray through Daubrecq's behind-the-scenes manipulation, fell in with Lupin's circle, and now faces the guillotine.</p>
+<p>Three forces locked in a triangle: Daubrecq (holder of the list), the Prefecture of Police (pursuers of the list), and Clarisse and Lupin (seekers of the list).</p>
+<p>Yet after months of searching, no matter how thoroughly Lupin's team ransacks Daubrecq's study, the true significance of the crystal stopper remains an enigma — until Clarisse reveals what she found: a draft letter retrieved from Daubrecq's wastepaper basket, reading: <strong>"Hollow out the interior of the crystal, so as to leave a cavity that no one can detect."</strong> A glass craftsman in Stourbridge, England, had made a hollow crystal stopper, and the secret list was rolled up and concealed inside it.</p>
+<p>Even armed with this knowledge, Lupin overturns every crystal object in Daubrecq's possession — searching desk, tobacco jar, lamp fittings — and still cannot find the crucial stopper.</p>
+<p>Until, finally, Lupin chloroforms Daubrecq in Nice, removes his thick spectacles, and with his thumb pops out Daubrecq's glass eye — and the truth surfaces at last:</p>
+<p><strong>That crystal stopper had always been Daubrecq's glass eye.</strong></p>
+<hr>
+<h2 id="truth-breakdown">Truth Breakdown</h2>
+<h3 id="truth-1-the-identity-of-the-mysterious-woman-whodunit">Truth #1: The Identity of the Mysterious Woman (whodunit)</h3>
+<ul>
+<li><strong>Clue convergence point: approximately 30%</strong></li>
+<li>Answer: The grey-haired woman is Clarisse Mergy — Gilbert's biological mother, widow of the late deputy Mergy, who swore vengeance after her husband was hounded to his death by Daubrecq.</li>
+</ul>
+<h4 id="key-clues">Key Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Location (Chapter/%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The mysterious woman gropes through the bottles on Daubrecq's bookshelf in the dark, showing she is also searching for the crystal stopper</td>
+<td>Chapter 3 / ~19%</td>
+<td>Her objective is identical to Lupin's, establishing her as someone in the know</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Midnight scene in Daubrecq's study: the mysterious woman raises a knife to kill Daubrecq but is effortlessly restrained by him, revealing a long-standing personal entanglement between the two</td>
+<td>Chapter 3 / ~20%</td>
+<td>Not a chance confrontation but the eruption of a deep, accumulated grievance</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The "hidden mastermind" Lupin captures turns out to be a boy of six or seven; Lupin studies the child's face and "perceives a resemblance he recognizes"</td>
+<td>Chapter 4 / ~27%</td>
+<td>The child resembles someone already in the story — a broad foreshadowing of the connection</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Groller and Machu — Lupin's own men — are found aiding the mysterious woman, indicating she has an existing bond with Gilbert rather than being an outsider</td>
+<td>Chapter 3 / ~24%</td>
+<td>Only someone closely tied to Gilbert could command his associates</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supporting-clues">Supporting Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Location (Chapter/%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The woman knows the address of Lupin's secret apartment on the Rue des Roumains, indicating she obtained it through Gilbert's channels</td>
+<td>Chapter 2 / ~15%</td>
+<td>Only those closest to Gilbert could have known</td>
+</tr>
+<tr>
+<td>2</td>
+<td>When the woman sees a letter Gilbert wrote to "Monsieur de Beaumont, Michel," she instantly recognizes it as Gilbert's coded means of contacting Lupin</td>
+<td>Chapter 2 / ~14%</td>
+<td>She not only knows Gilbert personally but is aware of his communication method with Lupin</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Daubrecq's reaction in his theatre box upon seeing Lupin approach the woman: arrogant and possessive rather than the wariness of a stranger</td>
+<td>Chapter 3 / ~22%</td>
+<td>A long-standing personal relationship clearly exists between the two</td>
+</tr>
+</tbody>
+</table>
+<h4 id="red-herrings">Red Herrings</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Location (Chapter/%)</th>
+<th>Misdirection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The mysterious woman sends a message to Lupin — "It is all useless; please abandon it" — in the tone of a professional informant</td>
+<td>Chapter 3 / ~19%</td>
+<td>Leads the reader to assume she is a spy or police informer working for Daubrecq</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Groller and Machu are discovered helping the mysterious woman</td>
+<td>Chapter 3 / ~24%</td>
+<td>Leads the reader to assume they are bribed traitors rather than men responding to Gilbert's mother</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="truth-2-where-is-the-real-crystal-stopper-first-layer-of-misdirection-daubrecqs-tobacco-pouch">Truth #2: Where Is the "Real" Crystal Stopper? (First layer of misdirection — Daubrecq's tobacco pouch)</h3>
+<ul>
+<li><strong>Clue convergence point: approximately 65%</strong></li>
+<li>Answer: Daubrecq has rolled a fake list (a worthless forgery) into a hollow crystal stopper and hidden it inside a pouch of Maryland tobacco bearing an intact government revenue seal, left on his desk. This is a deliberately set <strong>decoy trap</strong> laid by Daubrecq.</li>
+</ul>
+<h4 id="key-clues_1">Key Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Location (Chapter/%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Daubrecq's note to Prasville: "It is right under your hand — you touched it! One little effort more, and you would have succeeded… But you are too stupid."</td>
+<td>Chapter 2 / ~13%</td>
+<td>The hiding place is absurdly obvious, sitting right before everyone's eyes</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Clarisse reveals: she found a draft letter in Daubrecq's wastepaper basket reading "hollow out the interior of the crystal… leaving a cavity that no one can detect"</td>
+<td>Chapter 5 / ~31%</td>
+<td>Points directly to the "hollow" design of the crystal stopper</td>
+</tr>
+<tr>
+<td>3</td>
+<td>While searching the study, Lupin notices that the tobacco pouch on the desk "has disappeared," though his memory of every object's position in the room is perfect</td>
+<td>Chapter 9 / ~65%</td>
+<td>What goes missing is what matters — this government-sealed Maryland tobacco pouch is the hiding vessel</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Lupin's subsequent explanation: Daubrecq deliberately used a government-sealed tobacco pouch — "above suspicion" — as camouflage so that everyone would overlook it</td>
+<td>Chapter 11 / ~82%</td>
+<td>Leblanc has Lupin explicitly invoke Poe's "The Purloined Letter" technique</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supporting-clues_1">Supporting Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Location (Chapter/%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>A tortured Daubrecq, half-conscious, murmurs the word "Marie"</td>
+<td>Chapter 8 / ~55%</td>
+<td>Lupin initially takes it for a person's name or a villa name; it later proves to be the first two syllables of "Maryland"</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Daubrecq smokes only Maryland tobacco, and an unopened pouch has stood on his desk year-round</td>
+<td>Chapter 3 / ~17%</td>
+<td>Readers have seen this detail countless times without ever suspecting it</td>
+</tr>
+</tbody>
+</table>
+<h4 id="red-herrings_1">Red Herrings</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Location (Chapter/%)</th>
+<th>Misdirection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The hollow crystal stopper itself, along with the ordering records Clarisse obtains in England</td>
+<td>Chapter 5 / ~31%</td>
+<td>Steers the reader entirely toward the assumption that "the crystal stopper is the hiding vessel," eliminating any thought of the glass eye</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Prasville and others repeatedly searching the desk and every bottle and jar</td>
+<td>Chapter 2 / ~11%</td>
+<td>Makes the reader assume the desk has been thoroughly combed, when in fact the tobacco pouch has never been opened by anyone</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="truth-3-the-true-hiding-place-of-the-list-the-glass-eye-the-real-crystal-stopper">Truth #3: The True Hiding Place of the List — The Glass Eye (the real crystal stopper)</h3>
+<ul>
+<li><strong>Clue convergence point: approximately 90%</strong></li>
+<li>Answer: Daubrecq's left eye is a <strong>glass eye</strong> — the true "crystal stopper" — hollowed out inside, with the List of Twenty-Seven rolled up and concealed within it. He wears a heavy dark shade over ordinary spectacles as a double shield; for twenty years, no one has noticed.</li>
+</ul>
+<h4 id="key-clues_2">Key Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Location (Chapter/%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The first physical description of Daubrecq: "eyes weak and bloodshot, with a pair of dark protective spectacles beneath his regular glasses"</td>
+<td>Chapter 2 / ~11%</td>
+<td>Double-layered eye coverings are highly unusual — the shade is not for vision correction but to conceal the glass eye itself</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Clarisse finds Daubrecq's draft letter in the wastepaper basket: "hollow out the <strong>interior</strong> of the crystal, so as to leave a cavity that no one can detect"</td>
+<td>Chapter 5 / ~31%</td>
+<td>"Crystal" can refer to a glass eye; "no one can detect" points to concealment within the eye socket itself</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Lupin eavesdrops on the torture scene in the tower at Mortepierre: a semi-conscious Daubrecq murmurs "Marie"</td>
+<td>Chapter 8 / ~55%</td>
+<td>On the surface this leads to "Maryland," but it may also be Daubrecq protecting what is hidden on his person — he need not even name a location</td>
+</tr>
+<tr>
+<td>4</td>
+<td>After Lupin notices the tobacco pouch missing in the study, a flash of insight strikes him: "Everything is clear… even that half-word, that word wrung from Daubrecq in the tower under torture! The mystery is solved."</td>
+<td>Chapter 9 / ~65%</td>
+<td>The "solution" Lupin reaches at this moment is the tobacco pouch, not the glass eye — but his remark about "that half-word" operates on two levels</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Lupin corners Daubrecq in Nice, removes his spectacles, and then the image: "With my thumb — you understand? — I pushed out his left eye!"</td>
+<td>Chapter 11 / ~90%</td>
+<td>The final key clue — the true nature of the glass eye is revealed here</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supporting-clues_2">Supporting Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Location (Chapter/%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Wherever Daubrecq goes, the tobacco pouch accompanies him; he never lets anyone else handle it</td>
+<td>Throughout</td>
+<td>The reader understands his devotion to tobacco, but the real reason is that the glass eye always travels with his person</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Clarisse traces the order in England to glass craftsman John Howard, written as "make a crystal bottle to this model" — i.e., the fake decoy</td>
+<td>Chapter 5 / ~31%</td>
+<td>Daubrecq had the decoy purpose-made, indicating he foresaw that someone would trace the "crystal" lead</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Leblanc has Lupin explicitly cite Poe's "The Purloined Letter": the hardest thing to find is the thing placed right before your eyes</td>
+<td>Chapter 9 / ~65%</td>
+<td>Hints at the final answer — the glass eye, a hiding place even more "before your eyes" than the tobacco pouch</td>
+</tr>
+</tbody>
+</table>
+<h4 id="red-herrings-decoys-laid-personally-by-daubrecq">Red Herrings (Decoys Laid Personally by Daubrecq)</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Location (Chapter/%)</th>
+<th>Misdirection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The draft letter found by Clarisse, the English glass craftsman's order, and the Maryland tobacco pouch containing the hollow crystal stopper</td>
+<td>Chapters 5 and 3 / ~11–31%</td>
+<td>The entire concept of "the crystal stopper hides the list" is a <strong>false index</strong> Daubrecq has deliberately allowed to be discovered — the true container is his glass eye, and the phrase "crystal stopper" is nothing but literal deception</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Daubrecq personally allows Prasville to enter his study and search it repeatedly, yet always leaves the tobacco pouch sitting on the desk</td>
+<td>Chapters 2–3 / ~11–13%</td>
+<td>Makes everyone believe that the object "right under your hand" is some item on the desk rather than his own eye</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The fake list (a forgery) inserted into the hollow crystal stopper inside the tobacco pouch successfully deceives Clarisse and Lupin for nearly half the book</td>
+<td>Chapter 11 / ~82–88%</td>
+<td>Even after finding the "crystal stopper," what one obtains is only an expertly crafted counterfeit list</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="reconstructing-the-reasoning-path">Reconstructing the Reasoning Path</h2>
+<p><strong>First Path: Who is the mysterious woman?</strong></p>
+<p>At approximately 14%, the woman intercepts a letter Gilbert sent to "Monsieur de Beaumont, Michel" — she not only knows Lupin's alias but knows Gilbert's coded communication method. This is knowledge that only someone extremely close to Gilbert could possess. At around 20%, she raises a knife against Daubrecq in his study, revealing a depth of grievance far exceeding any ordinary dispute over interest. At 27%, Lupin notices a familiar outline in a small boy's face — a reader who remembers the woman's features should be able to infer at this moment that the child is her son, and that this woman is related by blood to Gilbert, very likely his mother.</p>
+<p>Confirmation point: 30%, when Clarisse confesses her identity directly.</p>
+<p><strong>Second Path: Where is the crystal stopper hidden? (First layer — wrong answer)</strong></p>
+<p>At 31%, Clarisse reveals the English order and the draft letter about "hollowing out the crystal," locking the reader and Lupin together into the false assumption that "the hollow crystal stopper hides the list." Daubrecq's taunting note — "you touched it" — focuses the search on objects in the study. Daubrecq's murmured "Marie" at 55% sends readers trying every interpretation they can think of. Then at 65%, Lupin notices that the tobacco pouch on the desk has disappeared — an attentive reader may at this point overtake Lupin and realize: a pouch bearing an intact government revenue seal is the last thing anyone would suspect.</p>
+<p>Confirmation point: 65–68%, when Lupin extracts the crystal stopper and the list from Daubrecq's tobacco pouch.</p>
+<p><strong>Third Path: Is the list genuine? — The appearance of the glass eye</strong></p>
+<p>This is the most central and least predictable puzzle in the book. The only hard clue is the description of Daubrecq's appearance at 11% (double-layered eye coverings), together with his meticulous self-protection throughout the story (when his study is searched he allows everything to be handled, as long as no one touches his person). The literal reading of "hollow out the interior of the crystal" could theoretically be applied to an eyeball, but no reader — and no character within the novel — can arrive at the hypothesis of a "glass eye" before the 88% mark.</p>
+<p>Daubrecq's scheme is masterfully constructed: he arranged a genuine-seeming false trail (discoverable draft letter → glass craftsman → hollow crystal stopper → tobacco pouch), keeping everyone absorbed in the chase while the true "crystal stopper" — the glass eye — sits openly in plain sight under a different name: "eye."</p>
+<p>Confirmation point: 90%, when Lupin pushes out the glass eye, opens the sliding mechanism on its back, and finds the authentic list with its watermark cross.</p>
+<hr>
+<h2 id="additional-notes">Additional Notes</h2>
+<p><strong>The Place of <em>The Crystal Stopper</em> in Leblanc's Body of Work</strong></p>
+<p>This 1912 novel is one of the most representative entries in Leblanc's "Lupin in adversity" cycle. In most Lupin stories the protagonist outmaneuvers the police with effortless grace; here the pattern is nearly inverted — Lupin makes blunder after blunder, is tricked, is betrayed, falls ill, and barely avoids ending in defeat. The novel carries a tension approaching that of an anti-hero narrative.</p>
+<p><strong>The Deepest Technique: A Triple-Nested Red-Herring Structure</strong></p>
+<p>Leblanc constructs an exceptionally rare "three-layer false trail" in this book:</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Content</th>
+<th>Nature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First</td>
+<td>The crystal stopper stolen from the Enghien villa</td>
+<td>A "model," not the real thing; revealed at ~4%</td>
+</tr>
+<tr>
+<td>Second</td>
+<td>The hollow crystal stopper inside the Maryland tobacco pouch</td>
+<td>A decoy personally laid by Daubrecq, containing a forged list; exposed at ~88%</td>
+</tr>
+<tr>
+<td>Third</td>
+<td>Daubrecq's glass eye</td>
+<td>The true "crystal stopper"; revealed at ~90%</td>
+</tr>
+</tbody>
+</table>
+<p>The most stunning aspect is that the second layer of misdirection is <strong>crafted personally by the villain</strong>, not imposed by the author through narrative concealment. Daubrecq foresaw that someone would trace the "crystal" lead, so he deliberately allowed the draft letter to be found, the English order to be found, and the hollow stopper hidden in the tobacco pouch to be found — a plot trap laid by a criminal mind of murderous foresight, ensnaring reader and detective alike.</p>
+<p>This technique is extraordinarily rare in detective fiction history: ordinarily only the author deceives the reader; here, <strong>the villain within the story's world deceives everyone</strong>, and the author (Leblanc) merely records the deception faithfully.</p>
+<p><strong>The Shadow of Edgar Allan Poe</strong></p>
+<p>At the 65% mark Leblanc has Lupin explicitly cite Poe's "The Purloined Letter" — that technique of leaving a letter lying openly on a letter rack so that everyone can see it yet no one can find it. Having discovered the tobacco pouch, Lupin believes he has seen through this trick — but he fails to realize that Leblanc is applying a still deeper layer of Poe's logic: a hiding place even more obvious than "the tobacco pouch on the desk" is "the glass eye growing right on that man's face." Leblanc is not merely paying homage to Poe; he is conducting a literary argument. Poe says "hide by not hiding." Leblanc replies: "To hide upon one's own body is the ultimate not-hiding."</p>
+<p><strong>The Character Design of Clarisse Mergy</strong></p>
+<p>Among the female characters across the Lupin stories, Clarisse Mergy is the most fully drawn. She is not "the woman who must be rescued" but an independent avenger who has been operating deep inside enemy territory for years — long before Lupin enters the picture. Her maternal love for her son, her hatred of Daubrecq, her contradictory feelings toward Lupin (gratitude and contempt coexisting) — all converge in a heartbreaking ending: she refuses Lupin's proposal of marriage, because she is "a truly honest woman," and he is, in the end, "only an Arsène Lupin."</p>
+<p><strong>Comparing This Novel with <em>The Hollow Needle</em></strong></p>
+<p>Both works place a "hollow vessel concealing a secret" at their core: in <em>The Hollow Needle</em> it is the hollow cliff of Creus, in <em>The Crystal Stopper</em> it is the glass eye. The difference is that <em>The Hollow Needle</em>'s secret belongs more to the register of legendary treasure, while <em>The Crystal Stopper</em>'s puzzle is embedded in a real political blackmail crime, and its social criticism runs considerably deeper — Daubrecq is in effect a dark prophecy about a corrupt political order: his "List of Twenty-Seven" reduces the entire political elite of the Third Republic to captives; no one can sanction him, until his glass eye is removed.</p>
+<p><strong>A Note for Readers Unfamiliar with French History</strong></p>
+<p>The background of the "List of Twenty-Seven" clearly alludes to the 1892 Panama Affair (<em>l'affaire de Panama</em>) — the scandal that rocked France when large numbers of deputies were exposed for taking bribes, destabilizing the government and driving several to suicide. Leblanc drew on this episode to create the fictitious "Panama Canal Company," lending Daubrecq's blackmail genuine historical weight. This layer of context makes <em>The Crystal Stopper</em> something more than a detective novel; it is also an elegy for the inevitable self-destruction of political corruption.</p>
+    <a href="../index.html" class="back-link">← Back to home</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Detective Analysis</p>
+    <p>Five authors · eighty-eight works · 135 years of evolving detective difficulty.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
