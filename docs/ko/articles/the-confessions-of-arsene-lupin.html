@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>아르센 뤼팽의 고백（The Confessions of Arsène Lupin）— 추리 분석 — 추리해부실</title>
+<meta name="description" content="《아르센 뤼팽의 고백》은 르블랑이 뤼팽 시리즈를 위해 엮은 10편의 단편집으로, 가상의 '서술자'가 뤼팽이 직접 이야기한 모험을 기록하는 형식으로 구성된다. 이 책은 특별한 뤼팽의 모습을 보여준다——그는 도둑이기도 하고 탐정이기도 하며, 범죄를 저지르는 동시에 사건을 해결한다. 때로는 ">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-confessions-of-arsene-lupin.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-confessions-of-arsene-lupin.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-confessions-of-arsene-lupin.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-confessions-of-arsene-lupin.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-confessions-of-arsene-lupin.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-confessions-of-arsene-lupin.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-confessions-of-arsene-lupin.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-confessions-of-arsene-lupin.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif KR', serif;
+  --font-sans: 'Noto Sans KR', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">추리해부실</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">홈</a>
+        <a href="../index.html#latest">최신</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="언어" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 한국어</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-confessions-of-arsene-lupin.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-confessions-of-arsene-lupin.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-confessions-of-arsene-lupin.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/the-confessions-of-arsene-lupin.html">日本語</a>
+      <a class="lang-item active" data-lang="ko" href="/Detective-Analysis/ko/articles/the-confessions-of-arsene-lupin.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/the-confessions-of-arsene-lupin.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/the-confessions-of-arsene-lupin.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/the-confessions-of-arsene-lupin.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">모리스 르블랑 · </div>
+    <h1>아르센 뤼팽의 고백（The Confessions of Arsène Lupin）— 추리 분석</h1>
+    <div class="subtitle">모리스 르블랑（Maurice Leblanc） · 단편집（10편）</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">추리 난이도</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">안개 등급</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="the-confessions-of-arsene-lupin">아르센 뤼팽의 고백（The Confessions of Arsène Lupin）— 추리 분석</h1>
+<h2 id="_1">기본 정보</h2>
+<ul>
+<li>저자：모리스 르블랑（Maurice Leblanc）</li>
+<li>출판년도：1913년</li>
+<li>장르：단편집（10편）</li>
+<li>탐정：아르센 뤼팽（Arsène Lupin）——겸업 신사 도둑 겸 아마추어 탐정</li>
+<li>핵심 미스터리 유형：whodunit / howdunit / 은신 미스터리 / 신분 기만</li>
+</ul>
+<hr>
+<h2 id="_2">추리 난이도 총평</h2>
+<table>
+<thead>
+<tr>
+<th>지표</th>
+<th>별점</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>추리 난이도（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>평균 수렴점 약 78% — 각 편의 핵심 단서는 모두 후반부에 이르러서야 갖춰지며, 독자에게는 뛰어난 기억력과 인내심이 요구된다. 일부 편목은 미리 추론하는 것이 거의 불가능하다</td>
+</tr>
+<tr>
+<td>안개 등급（Fog Rating）</td>
+<td>⭐⭐⭐⭐</td>
+<td>르블랑은 뤼팽을 1인칭 정보 통제자로 내세워 추리 과정을 능동적으로 감추는 방식을 즐겨 사용한다. 진실은 대개 마지막 순간에 '마술사의 장막 걷기'처럼 공개되며, 독자는 오랫동안 정보 불균형 상태에 놓이게 된다</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_3">줄거리</h2>
+<p>《아르센 뤼팽의 고백》은 르블랑이 뤼팽 시리즈를 위해 엮은 10편의 단편집으로, 가상의 '서술자'가 뤼팽이 직접 이야기한 모험을 기록하는 형식으로 구성된다. 이 책은 특별한 뤼팽의 모습을 보여준다——그는 도둑이기도 하고 탐정이기도 하며, 범죄를 저지르는 동시에 사건을 해결한다. 때로는 기사처럼 변신해 약한 여성을 구하고, 때로는 사기로 위선자를 탈탈 털기도 한다.</p>
+<p>10편의 기본 면모:
+- <strong>1편〈20만 프랑 현상금〉</strong>：암호 신호에서 출발해 살인 겸 사기 사건을 밝혀낸다. 진범은 현상금을 건 남작 본인이다.
+- <strong>2편〈결혼반지〉</strong>：뤼팽（가명 Horace Velmont）이 남편에게 박해받는 백작 부인을 구하고, 마술사 방식으로 반지를 바꿔치기한다.
+- <strong>3편〈그림자의 표식〉</strong>：백 년 된 가문의 수수께끼를 풀어낸다. 18개의 다이아몬드가 해시계 균열 속에 숨겨져 있다.
+- <strong>4편〈지옥의 함정〉</strong>：뤼팽이 오히려 과부에게 포로로 잡히고, 이어서 포로의 조카딸（남자로 변장한 조카）에 의해 신비롭게 구출된다.
+- <strong>5편〈붉은 스카프〉</strong>：뤼팽이 센 강에 버려진 쓰레기 꾸러미 하나로 살인 사건 전체를 재구성한다.
+- <strong>6편〈죽음의 그림자〉</strong>：뤼팽이 배후 흑막을 밝혀낸다——병든 척하는 계부가 딸을 살해하려 꾸미고 있었다.
+- <strong>7편〈모구 숲의 비극〉</strong>：에드거 앨런 포의 〈모르그 가의 살인〉에 경의를 표하는 작품. 범인은 유인원이다.
+- <strong>8편〈뤼팽의 결혼〉</strong>：뤼팽이 귀족 사촌으로 변장해 공작에게 딸과 결혼하도록 강요한다. 결말은 예상과 달리 낭만적 비애로 가득하다.
+- <strong>9편〈보이지 않는 죄수〉</strong>：늙은 부랑자가 허수아비로 변장해 한 달 동안 숨어 있다. 뤼팽은 '세 개의 밀짚'으로 수수께끼를 푼다.
+- <strong>10편〈백조목의 에디스〉</strong>：최대의 판국——스파르만토 대령 본인이 바로 뤼팽이며, 죽음조차 위조된 것이었다.</p>
+<p>본 분석은 그 중 추리 함량이 가장 높은 네 편을 중점 해부한다：<strong>1편, 3편, 9편, 10편</strong>.</p>
+<hr>
+<h2 id="_4">선택 작품 심층 분석</h2>
+<hr>
+<h3 id="120-two-hundred-thousand-francs-reward">1편：〈20만 프랑 현상금〉（Two Hundred Thousand Francs Reward!）</h3>
+<p><strong>미스터리 유형</strong>：whodunit + howdunit（라프르노를 죽인 자는 누구인가? 남작 부인은 어디에 있는가? 금고 비밀번호는 무엇인가?）</p>
+<p><strong>각 측면 단서 수렴점</strong>：
+- 암호 'ETNA'의 발견：약 <strong>12%</strong>（의도적으로 틀리게 쓴 철자）
+- 진범의 신분（레프스타인 남작）：약 <strong>72%</strong>（뤼팽이 남작의 서재에서 정면으로 지목할 때）
+- 남작 부인의 사망, 시신이 금고 안에：약 <strong>90%</strong>（뤼팽이 금고를 여는 순간）
+- <strong>평균 수렴점：58%</strong> → ⭐⭐⭐（중간 난이도이지만 '남작 부인이 금고 안에 있다'는 진실은 미리 추론하기가 거의 불가능하다）</p>
+<hr>
+<h4 id="etna">진실 하나：암호 신호 ETNA와 금고 비밀번호</h4>
+<ul>
+<li><strong>단서 수렴점：약 12%</strong></li>
+<li>답：라프르노가 햇빛 신호로 보낸 메시지에는 의도적으로 틀린 영어 단어가 포함되어 있었다——"necessery"（e 하나 추가）, "atack"（t 하나 빠짐）, "ennemy"（n 하나 추가）, "prudance"（e 대신 a）——이 네 개의 오자에서 첫 번째 오류 철자를 모으면 ETNA가 된다. ETNA는 남작이 소유한 경주마의 이름이자, 금고의 비밀번호이다.</li>
+</ul>
+<h5 id="_5">핵심 단서</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（%）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>메시지 속 비정상적인 철자 오류："necessery", "atack", "ennemy", "prudance"</td>
+<td>약 6%</td>
+<td>남작의 개인 비서인 라프르노가 이런 초보적인 오류를 범할 리 없다. 오류는 의도적으로 만들어진 암호다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>뤼팽이 즉시 이 오류들을 알아채고 깊은 생각에 잠긴다</td>
+<td>약 8%</td>
+<td>서술자가 명확히 서술한다 "그의 표정이 바뀌었다, 그 작은 십자 모양의 미간 주름이 나타났다"——독자에게 이것이 핵심 발견임을 알린다</td>
+</tr>
+<tr>
+<td>3</td>
+<td>남작은 경마계에서 ETNA라는 명마를 소유하고 있다. 그해 더비와 그랑프리 우승마</td>
+<td>약 10%（배경 정보）</td>
+<td>ETNA = 네 오자의 핵심 철자이자, 남작의 가장 중요한 재산 상징</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_6">보조 단서</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（%）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>라프르노가 주머니 거울로 빛 신호를 만들고 있었다. 분명히 창밖으로 긴급 메시지를 전달하려는 것이다</td>
+<td>약 4%</td>
+<td>그가 감금되어 있어 비밀스러운 수단으로 도움을 요청해야 했음을 보여준다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>영국 친구 하그로프가 신호를 받은 후 즉시 경찰서로 달려간다</td>
+<td>약 16%</td>
+<td>뤼팽이 가로챈 내용 이상의 정보가 메시지에 포함되어 있음을 보여준다. 그 미완성 문장에는 더 많은 정보가 담겨 있었다</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_7">가짜 단서 (페이크)</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（%）</th>
+<th>오도 방향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>라프르노의 '의사' 신분</td>
+<td>약 22%</td>
+<td>독자가 라프르노를 단순한 환자로 생각하게 만들고, 강제로 감금된 인질이라는 사실을 가린다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>남작이 20만 프랑 현상금을 걸고 실종된 아내를 찾는 모습, 피해자 이미지를 연출</td>
+<td>전편 전반부</td>
+<td>남작을 아내에게 배신당한 피해자로 묘사해 그가 배후 주모자일 가능성을 완전히 가린다</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="_8">진실 둘：진범과 남작 부인의 행방</h4>
+<ul>
+<li><strong>단서 수렴점：약 88%</strong></li>
+<li>답：레프스타인 남작은 의사로 변장해 라프르노를 감금하고 넥타이핀으로 찔러 죽였다. 그는 이미 아내를 살해하고 시신을 금고에 숨겨두었으며, 공모한 여성에게 남작 부인 행세를 하며 달아나게 해 유럽 전역의 경찰이 그녀를 추적하도록 만들어, 자신이 돈을 챙겨 도주하는 것을 은폐했다.</li>
+</ul>
+<h5 id="_9">핵심 단서</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（%）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>'노의사'가 외출한 시간이 정확히 라프르노의 사망 시간과 일치한다</td>
+<td>약 20%</td>
+<td>의사답지 않다：그는 라프르노의 사망이 발견되기 20분 전에 떠났다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>상처가 바늘구멍처럼 가늘고, 칼에 찔린 것이 아니다——"매우 긴 바늘이 심장에 꽂혔다"</td>
+<td>약 22%</td>
+<td>이런 종류의 무기는 드물어 특정 인물을 가리킨다</td>
+</tr>
+<tr>
+<td>3</td>
+<td>남작의 넥타이핀：매우 길고, 삼각형 단면이며, 정교한 단검처럼 생겼다. 진주의 가치는 극히 높다</td>
+<td>약 60%</td>
+<td>뤼팽이 핀이 양복 조끼 밖으로 나온 길이를 주목하고, 이것이 바로 그 '바늘'이라고 판단한다</td>
+</tr>
+<tr>
+<td>4</td>
+<td>남작이 서재에서 뤼팽에게 인정한 사실들의 연결고리, 그리고 권총을 꺼내 반격하는 행동이 지목을 입증한다</td>
+<td>약 75%</td>
+<td>진정으로 무고한 사람은 이 순간에 총을 꺼내지 않는다</td>
+</tr>
+<tr>
+<td>5</td>
+<td>금고가 열리고 남작 부인의 시신이 나타난다</td>
+<td>약 88%</td>
+<td>마지막이자 가장 충격적인 확인：모든 수수께끼가 이 순간 하나로 모인다</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_10">보조 단서</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（%）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>남작이 경마장, 파리 저택, 별장을 팔아 도주를 준비한다</td>
+<td>약 12%</td>
+<td>도주를 준비하는 사람만이 모든 재산을 현금화할 필요가 있다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>남작이 "정직한 사람처럼 보인다"——뤼팽 자신도 "당신은 정직한 사람의 얼굴을 갖고 있군요"라고 말한다</td>
+<td>약 75%</td>
+<td>르블랑이 뤼팽의 입을 빌려 독자에게 일깨운다：외모가 최고의 위장이다</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_11">가짜 단서 (페이크)</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（%）</th>
+<th>오도 방향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>벨기에에서 체포된 '남작 부인'</td>
+<td>약 10%</td>
+<td>독자가 진짜 남작 부인이 유럽 각지를 떠돌고 있다고 생각하게 만들어, 그녀를 추적하는 것이 주선인 것처럼 여기게 한다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>남작의 '슬픔'과 '촉촉한 눈가'</td>
+<td>약 62%</td>
+<td>감정적인 연기가 뤼팽（과 독자）으로 하여금 잠시 의심하게 만든다——그가 정말 나쁜 사람인가?</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="3-the-sign-of-the-shadow">3편：〈그림자의 표식〉（The Sign of the Shadow）</h3>
+<p><strong>미스터리 유형</strong>：보물 수수께끼（Where is it?）</p>
+<p><strong>각 측면 단서 수렴점</strong>：
+- '2'가 '공화력 2년'이 아니라 '오후 2시'를 의미한다는 것：약 <strong>90%</strong>（뤼팽이 밝힐 때）
+- 다이아몬드가 해시계 균열 속에 있다：약 <strong>95%</strong>
+- <strong>평균 수렴점：92%</strong> → ⭐⭐⭐⭐⭐（극도로 높은 난이도：밝혀지기 전에 스스로 풀어내는 것은 거의 불가능하다）</p>
+<hr>
+<h4 id="18">진실：해시계 균열 속 18개의 다이아몬드</h4>
+<ul>
+<li><strong>단서 수렴점：약 92%</strong></li>
+<li>답：날짜 '15.4.2'에서 '2'는 '오후 2시'를 의미하며, 공화력 2년이 아니다. 매년 4월 15일 오후 2시에, 해시계의 그림자가 대리석 면의 균열 위에 정확히 떨어진다. 세금 징수원 데르느몽은 체포되기 전 정원에서, 그 순간에 18개의 다이아몬드를 균열 속에 채워 넣었다. 미치광이 샤를의 '순례'도 오후 5시 27분에 끝났는데——그것이 바로 그해 햇빛이 사라지고 해시계가 기능을 잃는 시각이었다.</li>
+</ul>
+<h5 id="_12">핵심 단서</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（%）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>그림 속 날짜 '15. 4. 2'에서 '2'를 사용했고, 올바른 형식인 'Year II'나 '1794'가 아니다</td>
+<td>약 30%（그림 발견 시）</td>
+<td>뤼팽은 나중에 지적한다：당시 사람들은 이런 혼합 표기 방식을 쓰지 않았다, '2'에는 다른 의미가 있을 것이다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>미치광이 샤를이 매년 4월 15일 같은 시각에 정원에 도착하고, 같은 시각에（오후 5시 27분에） 떠난다</td>
+<td>약 50%（변호사 서술）</td>
+<td>떠나는 시각은 태양의 위치에 의해 결정된다. '시간'이 수수께끼를 푸는 핵심 차원임을 강조한다</td>
+</tr>
+<tr>
+<td>3</td>
+<td>뤼팽이 도착해 해시계의 조각 형태를 주목하고, 오후 2시에 태양이 마침 대리석 면의 균열 방향에 떨어지는 것을 확인한다</td>
+<td>약 92%</td>
+<td>행동이 설명에 앞선다：독자는 뤼팽이 칼로 균열을 긁어내는 것을 보지만, 아직 그 이유를 모른다</td>
+</tr>
+<tr>
+<td>4</td>
+<td>균열 속에서 18개의 다이아몬드를 하나씩 꺼낸다</td>
+<td>약 94%</td>
+<td>최종 확인</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_13">보조 단서</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（%）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>데르느몽이 체포되기 전 잠시 정원으로 도망쳤다가 '6~7분 후' 침착하게 나와 체포를 받아들인다</td>
+<td>약 50%</td>
+<td>그 6~7분이면 18개의 다이아몬드를 숨기기에 충분했다——하지만 균열의 존재를 알아야만 그 의도를 이해할 수 있다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>재산은 한 번도 발견된 적이 없으며, 세 점의 '그림'은 늙은 하녀가 임종 전에 밝힌 유언이다</td>
+<td>약 50%</td>
+<td>세 점의 그림 = 세 가지 메시지：아내, 아들, 딸에게 각각 대응한다. 해시계는 단서의 공통 핵심이다</td>
+</tr>
+<tr>
+<td>3</td>
+<td>햇빛, 해시계, 그림자가 세 점의 그림 모두에서 중심 물체로 등장한다</td>
+<td>약 30%</td>
+<td>'그림자의 표식'이라는 제목이 바로 이것이다：태양과 그림자가 암호의 매개체이다</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_14">가짜 단서 (페이크)</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（%）</th>
+<th>오도 방향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>백 년에 걸친 사람들의 발굴（땅 파기, 우물 조사, 벽 뚫기）</td>
+<td>약 50-70%</td>
+<td>독자도 따라서 '아래에서 찾으려' 하게 만들고, '위에서 해시계를 보는' 시각을 갖지 못하게 한다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>변호사가 보물은 애초에 존재하지 않으며 늙은 하녀의 환상이라고 생각한다</td>
+<td>약 65%</td>
+<td>수수께끼에 대한 독자의 기대를 낮춰 밝혀짐의 충격을 더 크게 만든다</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="9-the-invisible-prisoner">9편：〈보이지 않는 죄수〉（The Invisible Prisoner）</h3>
+<p><strong>미스터리 유형</strong>：은신 수수께끼（Where is he hiding?）</p>
+<p><strong>각 측면 단서 수렴점</strong>：
+- 늙은 부랑자의 은신처（허수아비）：약 <strong>93%</strong>
+- 음수의 수수께끼（서로 연결된 세 개의 밀짚）：약 <strong>90%</strong>
+- <strong>평균 수렴점：91%</strong> → ⭐⭐⭐⭐⭐（극도로 높은 난이도：밝혀지기 전에 답을 추론하는 것은 거의 불가능하다）</p>
+<hr>
+<h4 id="_15">진실：부랑자가 허수아비로 변장해 나무 위에 숨어 있다</h4>
+<ul>
+<li><strong>단서 수렴점：약 93%</strong></li>
+<li>답：트래이나드는 농장 아들이 허수아비를 쏘아 떨어뜨린 그 순간의 혼란을 틈타 허수아비 복장을 입고, 원래의 나무 위로 올라가 한 달 내내 나뭇가지 위에 허수아비 자세로 엎드려 있었다. 밤에는 서로 연결된 세 개의 밀짚을 물통 속에 넣어 밀크셰이크를 마시듯 원거리에서 물을 마시며, 밤새 지키는 사람에게 한 번도 발각되지 않았다.</li>
+</ul>
+<h5 id="_16">핵심 단서</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（%）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>처음에 허수아비가 농장 맏아들에게 쏘여 큰 가지 위에 걸린 채 내려오지 않았다</td>
+<td>약 3%</td>
+<td>허수아비가 '쓰러진 후 나무에 걸린' 상태로 현장에 남겨졌다——독자는 이것을 보았지만 '그 후에는 어떻게 되었는가'를 묻지 않았다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>농장 주인이 말한다 "저 허수아비가 정말 짜증나, 밥 먹을 때마다 창문으로 저 멍청한 게 보여"</td>
+<td>약 5%</td>
+<td>이 말은 허수아비가 줄곧 거기 걸려 있었음을 암시한다——하지만 과연 원래의 허수아비인지, 아니면 이미 교체된 것인지 아무도 묻지 않는다</td>
+</tr>
+<tr>
+<td>3</td>
+<td>뤼팽이 방문한 후 물통 근처에서 서로 연결된 세 개의 밀짚으로 만든 빨대를 발견한다</td>
+<td>약 90%</td>
+<td>"저 먼 곳에서 물을 마신다"——뤼팽이 즉시 깨닫고 나무를 향해 총을 쏜다</td>
+</tr>
+<tr>
+<td>4</td>
+<td>총성 하나, '허수아비'가 나무에서 떨어져 몸부림치며 달아난다</td>
+<td>약 93%</td>
+<td>최종 확인</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_17">보조 단서</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（%）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>농장 전체의 담장이 극도로 높아 넘을 수 없다. 수일간의 수색에도 아무것도 찾지 못했다</td>
+<td>전편</td>
+<td>트래이나드가 반드시 아직 뜰 안에 있으며, 도주하지 않았음을 확인시켜 준다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>뜰 안에는 수원이 하나뿐：그 물통</td>
+<td>약 40%</td>
+<td>사람이 이곳에 있다면 물을 마시기 위해 물 근처에 가야 한다——하지만 야경꾼은 어떤 인기척도 발견하지 못했다</td>
+</tr>
+<tr>
+<td>3</td>
+<td>14일간의 수색이 모두 '지상'에서 이루어졌다</td>
+<td>약 40-85%</td>
+<td>모두가 지상을 보았고, 아무도 위를 쳐다보지 않았다</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_18">가짜 단서 (페이크)</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（%）</th>
+<th>오도 방향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>농장 사람들이 그가 어딘가 땅굴이나 나무 구멍에 숨어 있다고 믿는다</td>
+<td>약 25%</td>
+<td>독자가 '지하 은신'의 방향으로 상상하게 만든다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>허수아비가 처음부터 쓰러져 나무에 걸린다</td>
+<td>약 5%</td>
+<td>독자는 '허수아비가 쓰러졌다'는 것만 기억하고, 그것이 나중에 '다시 세워졌다'는 것을 인식하지 못한다</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="10-edith-swan-neck">10편：〈백조목의 에디스〉（Edith Swan-Neck）</h3>
+<p><strong>미스터리 유형</strong>：신분 기만 + 보험 사기（Who is Sparmiento?）</p>
+<p><strong>각 측면 단서 수렴점</strong>：
+- 스파르만토 대령 = 아르센 뤼팽：약 <strong>88%</strong>（가니마르 경감이 상관에게 설명할 때）
+- '에디스' = 뤼팽의 공모자 소냐：약 <strong>93%</strong>
+- 그 '시신'이 릴 영안실에서 온 것：약 <strong>92%</strong>
+- <strong>평균 수렴점：91%</strong> → ⭐⭐⭐⭐⭐（극도로 높은 난이도：전편 중 가장 복잡한 신분 수수께끼）</p>
+<hr>
+<h4 id="_19">진실：대령이 곧 뤼팽이며, 비극 전체가 보험 사기 연극이었다</h4>
+<ul>
+<li><strong>단서 수렴점：약 91%</strong></li>
+<li>답：'스파르만토 대령'은 뤼팽의 또 다른 변장이었다. 그는 먼저 기차에서 태피스트리 한 점을 훔쳐 세간의 이목을 끌고, 이어서 대령 신분으로 '12점 전체'에 80만 프랑의 보험을 요란하게 들었으며, 세심하게 보안 장치를 설치하고 파티를 열었다. 그날 밤 모두를 놀라게 하는 신고 소동을 연출해——이 모든 것이 주의를 분산시키기 위한 것이었다. 모두가 '뤼팽이 들어왔다'고 생각하게 하는 동안, 실제로는 스파르만토 대령 자신이 몰래 2층 창문으로 태피스트리를 내보냈다. 그런 다음 시신을 바꿔치기해 죽음을 위장하고 '실의에 빠진 자살'이라는 유서를 남겨, 아내（사실은 뤼팽의 옛 연인 소냐）가 '무고한 과부'로서 80만 프랑의 보험금을 분할하여 받아가도록 했다.</li>
+</ul>
+<h5 id="_20">핵심 단서</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（%）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>뤼팽이 한 점을 훔친 후 보낸 편지에 "다음에는 12점 전부를 가져가겠다"고 위협한다——그리고 실제로 그 일이 일어난다</td>
+<td>약 5%</td>
+<td>만약 뤼팽이 12점 전부를 '훔쳤다'면, 동시에 그는 '도둑맞은' 대령이기도 하다. 이 모순을 포착하면 신분을 추론할 수 있다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>대령이 설치한 각종 보안 장치가 비정상적으로 치밀하여 '자신만이 각 경보의 위치를 알고 있다'</td>
+<td>약 20%</td>
+<td>진정으로 도둑을 걱정하는 사람은 보험회사조차 장치 위치를 모르게 할 필요가 없다——직접 끄기 위해서가 아니라면</td>
+</tr>
+<tr>
+<td>3</td>
+<td>경감이 주목한다：Lupin은 "절대 자신의 행동으로 누가 죽게 내버려두지 않는다"——대령의 죽음은 따라서 의심스럽다</td>
+<td>약 82%</td>
+<td>가니마르의 핵심 논리：Lupin이 한 일이라면 대령이 진짜 죽어서는 안 된다</td>
+</tr>
+<tr>
+<td>4</td>
+<td>릴 영안실의 신원 불명 시신 하나가 사건 발생 당일 밤 신비롭게 사라진다</td>
+<td>약 90%（가니마르가 신문 스크랩에서 발견）</td>
+<td>이 시신이 비예르다프레이로 옮겨져, 대령의 옷을 입히고 철로 옆에 놓였다</td>
+</tr>
+<tr>
+<td>5</td>
+<td>'집사'（하인）가 Lupin의 유모 빅투아르에 의해 "내 심장"이라고 불린다——가니마르가 그 말버릇을 알아챈다</td>
+<td>약 95%</td>
+<td>최종 확인：이 '하인'이 바로 뤼팽 본인이다</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_21">보조 단서</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（%）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>태피스트리 도난 후 대령의 반응이 '이상할 정도로 침착하며', 오히려 서둘러 '중요한 약속'을 지키러 나간다</td>
+<td>약 65%</td>
+<td>귀중한 재산을 잃은 사람은 이렇게 침착할 수 없다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>에디스（'과부'）와 태피스트리 속 백조목의 에디스 이미지가 완벽하게 일치한다</td>
+<td>약 12%</td>
+<td>작가가 심어둔 시각적 대응——하지만 결말 전에는 독자가 이 은유를 감상만 할 뿐, 그것이 정교하게 설계된 기만임을 알지 못한다</td>
+</tr>
+<tr>
+<td>3</td>
+<td>대령의 서재와 침실에는 모두 Rue Dufresnoy로 통하는 창문이 있으며, 그 거리의 창문들은 '벽돌로 막혀 있다'</td>
+<td>약 15%</td>
+<td>'막힌' 창문이 감시받지 않는 출구가 되었다——태피스트리는 거기서 반출되었다</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_22">가짜 단서 (페이크)</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（%）</th>
+<th>오도 방향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>신고 소동（모든 조명이 갑자기 꺼지고 경보가 울린다）이 "뤼팽이 침입했다"는 가상의 상황을 만들어낸다</td>
+<td>약 40%</td>
+<td>모든 사람（독자 포함）이 이것이 표준적인 뤼팽식 연막이라고 생각하게 만든다. 대령 자신이 만들어낸 교란이 아니라</td>
+</tr>
+<tr>
+<td>2</td>
+<td>세 명의 사설탐정이 밤마다 아래층에 주둔한다</td>
+<td>약 20-60%</td>
+<td>'외부 침입'의 프레임을 강화하여, '내부자 범행'의 가능성을 간과하게 만든다</td>
+</tr>
+<tr>
+<td>3</td>
+<td>'에디스'의 창백하고 슬프며 동정심을 자아내는 외모</td>
+<td>전편 후반</td>
+<td>완벽한 무고한 피해자 이미지가 보험회사와 독자 모두의 경계심을 내려놓게 만든다</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_23">추리 경로 재구성</h2>
+<h3 id="_24">각 작품 추리 경로 요약</h3>
+<p><strong>1편〈20만 프랑 현상금〉의 추리 경로：</strong></p>
+<p>주의 깊은 독자라면 6%（암호 해독 완료 후）에서 "비서가 범할 수 있는 철자 오류가 아니다"라는 것을 눈치챘어야 한다——이것이 전편에서 독자가 스스로 추론할 수 있는 최초의 실질적 단서다. ETNA의 해독 난이도는 높지 않으며, 문맥（"남작의 경주마"）과 연결하면 된다.</p>
+<p>진정으로 어려운 것은 '남작이 범인이다'라는 추론이다. 72%（뤼팽의 지목）이전에 독자가 수집할 수 있는 방증은 극히 제한적이다：핀의 세부 사항은 60%에 이르러서야 등장하며, '남작 부인의 시신이 금고 안에 있다'는 사실은 어떠한 초기 암시도 없다. 르블랑이 남작을 완벽한 피해자로 만들어놓은 탓에, 뤼팽이 갑작스러운 지목을 발동하기 전까지 독자는 "아, 그렇구나"라는 충격 속으로 끌려들어간다.</p>
+<p><strong>3편〈그림자의 표식〉의 추리 경로：</strong></p>
+<p>핵심 돌파구는 '2의 의미'이다. 독자가 프랑스 혁명력에 충분히 익숙하다면 30%에서 의구심을 느낄 수도 있다——하지만 만약 이 2가 '연도'를 의미한다면 표기 방식이 달라야 한다는 것을 더 나아가 인식해야만, '2시'라는 결론으로 나아갈 수 있다. 다시 '2시'에서 '4월 15일 오후 2시에 해시계 그림자가 균열 위에 떨어진다'로 도약하기 위해서는 여러 번의 논리적 비약이 필요하며, 실제로는 밝혀지기 전에 완성하기가 거의 불가능하다.</p>
+<p><strong>9편〈보이지 않는 죄수〉의 추리 경로：</strong></p>
+<p>'허수아비'는 이야기 서두에서 희극적인 방식으로 등장하지만（쏘여 쓰러지고 나무에 걸린다）, 그 이후로는 독자의 시야에서 완전히 사라진다. '물통 옆의 서로 연결된 세 개의 밀짚'이 유일한 유효 단서이며, 이야기의 90% 이후에야 등장한다. 그 이전의 어떤 '추론'도 단서에 근거한 추리가 아닌 추측일 뿐이다.</p>
+<p><strong>10편〈백조목의 에디스〉의 추리 경로：</strong></p>
+<p>전편 중 가장 어려운 추리다. 뤼팽의 "12점 전부를 가져가겠다"는 위협（5%）과 대령의 "방음 처리된 두 번째 창문"（15%）이 이론적으로는 독자가 의심하게 할 수 있다. 하지만 "대령이 문제가 있을 수 있다"에서 "대령이 곧 뤼팽이다"로 도약하려면 거의 황당한 전제를 받아들여야 한다. 가니마르 자신도 이렇게 말한다："이건 Lupin의 방식이 아니다——누군가를 이로 인해 목숨을 잃게 하다니." 이 도덕적 논리（Lupin은 사람을 해치지 않는다）가 오히려 사건 해결의 열쇠이며, 물리적 단서가 아니었다.</p>
+<hr>
+<h2 id="_25">보충 설명</h2>
+<h3 id="_26">르블랑 작품군에서 《고백록》의 위치</h3>
+<p>이 책은 뤼팽 시리즈 중 '뤼팽이 곧 탐정'이라는 측면을 가장 잘 보여주는 작품집이다. 초기 시리즈에서 뤼팽은 주로 도둑으로 등장하고, 탐정은 대립 역할（가니마르, 홈즈）이었다. 《고백록》에 이르러 르블랑은 과감하게 뤼팽을 수수께끼의 해답자로 세웠다. 외부 수수께끼를 해결할 뿐 아니라, 자신의 범죄 행위를 수수께끼로 포장해 독자가 체험하게 한다.</p>
+<h3 id="_27">르블랑의 '정보 통제' 기법</h3>
+<p>에드거 앨런 포, 코난 도일과 비교할 때, 르블랑의 추리 설계에는 근본적인 차이가 있다：<strong>그는 뤼팽이 추리 과정을 감추게 하는 것을 즐긴다</strong>.</p>
+<ul>
+<li>포의 뒤팽（Dupin）은 추리 사슬을 제시한다（〈도둑맞은 편지〉의 단계적 연역).</li>
+<li>도일의 홈즈는 밝히기 전에 단서를 단계적으로 설명한다（"이 진흙을 주목하세요……"）.</li>
+<li>르블랑의 뤼팽은 결말에 이르러서야 소급해서 설명하는 경우가 많다："아, 사실 저는 진작 알고 있었답니다, 들어보시겠어요?"</li>
+</ul>
+<p>이런 '사후 설명형' 서사는 독자가 읽는 과정에서 아예 동시에 추리할 방법이 없게 하여, 결말에서 뤼팽의 광채만을 감상할 수밖에 없게 만든다. 추리 문학의 관점에서 보면, 이것은 서스펜스 오락성을 최우선으로, 퀴즈의 공정성을 그 아래에 두는 선택이다.</p>
+<h3 id="7">7편과의 특별한 경의 표시</h3>
+<p>〈모구 숲의 비극〉（7편）은 에드거 앨런 포의 〈모르그 가의 살인〉을 명확히 인용한다："비인간 범인". 뤼팽 자신도 이야기 속에서 이 수수께끼가 자신에게는 '식은 죽 먹기'라고 인정한다. 포가 이미 원형을 확립했기 때문이다. 르블랑은 이를 통해 고도의 자기 의식을 드러낸다：자신의 수수께끼 설계가 선인 거인들의 어깨 위에 세워진 것임을 알고 있으며, 뤼팽은 홈즈가 아니라 "홈즈보다 사건을 더 잘 알면서도 의도적으로 숨기는" 그 인물이라는 것을.</p>
+<h3 id="_28">대만 독자를 위한 문화 보충</h3>
+<p>책 속 〈그림자의 표식〉에는 프랑스 혁명사의 배경이 대거 등장한다（대혁명에서 '세금 징수원'의 운명, 혁명력의 사용 방식）, 그리고 파리 파시 지구의 지리적 환경이 담겨 있다. 뤼팽 시리즈 전반에는 프랑스 귀족 문화의 세부 사항이 풍부하며, 《고백록》 중 〈뤼팽의 결혼〉（8편）은 특히 구귀족의 오만함을 풍자하는 것을 즐기며, 르블랑의 사회 계급에 대한 비판적 관점을 반영한다——뤼팽이 공작의 딸과 결혼할 수 있었던 것은 정확히 귀족이 너무 수구적이어서 자신들의 방어선을 스스로 무너뜨렸기 때문이다.</p>
+<h3 id="_29">각 편 난이도 일람표</h3>
+<table>
+<thead>
+<tr>
+<th>편목</th>
+<th>미스터리 유형</th>
+<th>평균 수렴점</th>
+<th>추리 난이도</th>
+<th>안개 등급</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1편 20만 프랑 현상금</td>
+<td>whodunit + howdunit</td>
+<td>58%</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>2편 결혼반지</td>
+<td>howdunit</td>
+<td>40%</td>
+<td>⭐⭐</td>
+<td>⭐⭐</td>
+</tr>
+<tr>
+<td>3편 그림자의 표식</td>
+<td>보물 수수께끼</td>
+<td>92%</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>4편 지옥의 함정</td>
+<td>반전 서스펜스</td>
+<td>—</td>
+<td>—</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>5편 붉은 스카프</td>
+<td>추리 시연</td>
+<td>50%</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>6편 죽음의 그림자</td>
+<td>whodunit</td>
+<td>65%</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>7편 모구 숲의 비극</td>
+<td>오마주 편</td>
+<td>80%</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>8편 뤼팽의 결혼</td>
+<td>기만 희극</td>
+<td>—</td>
+<td>—</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>9편 보이지 않는 죄수</td>
+<td>은신 수수께끼</td>
+<td>91%</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>10편 백조목의 에디스</td>
+<td>신분 사기</td>
+<td>91%</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td><strong>전체 평균</strong></td>
+<td></td>
+<td><strong>78%</strong></td>
+<td><strong>⭐⭐⭐⭐</strong></td>
+<td><strong>⭐⭐⭐⭐</strong></td>
+</tr>
+</tbody>
+</table>
+    <a href="../index.html" class="back-link">← 홈으로</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">추리해부실</p>
+    <p>다섯 작가 · 여든여덟 작품 · 135년에 걸친 추리문학 난이도의 진화.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>亞森·羅賓的懺悔錄（The Confessions of Arsène Lupin） — 推理解剖室</title>
+<meta name="description" content="《亞森·羅賓的懺悔錄》是盧布朗為羅賓系列編選的10篇短篇集，由假設中的「敘述者」將羅賓親口講述的冒險記錄下來。全書呈現一個特殊的羅賓形象——他既是竊賊，也是偵探；既犯罪，也破案；時而化身騎士拯救弱女子，時而以騙術榨乾偽善者。 10篇的基本面貌： - 卷一〈二十萬法郎懸賞〉：從密碼訊號起步，揭開一樁謀殺兼詐騙案，真凶藏在">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-confessions-of-arsene-lupin.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-confessions-of-arsene-lupin.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-confessions-of-arsene-lupin.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-confessions-of-arsene-lupin.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-confessions-of-arsene-lupin.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-confessions-of-arsene-lupin.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-confessions-of-arsene-lupin.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-confessions-of-arsene-lupin.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif TC', serif;
+  --font-sans: 'Noto Sans TC', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">推理解剖室</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">首頁</a>
+        <a href="../index.html#latest">最新分析</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="語言" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 繁體中文</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item active" data-lang="zh-TW" href="/Detective-Analysis/articles/the-confessions-of-arsene-lupin.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-confessions-of-arsene-lupin.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-confessions-of-arsene-lupin.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/the-confessions-of-arsene-lupin.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/the-confessions-of-arsene-lupin.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/the-confessions-of-arsene-lupin.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/the-confessions-of-arsene-lupin.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/the-confessions-of-arsene-lupin.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">莫里斯·盧布朗 · </div>
+    <h1>亞森·羅賓的懺悔錄（The Confessions of Arsène Lupin）</h1>
+    <div class="subtitle">莫里斯·盧布朗（Maurice Leblanc） · 短篇集（10篇）</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">推理難度</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">迷霧等級</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="the-confessions-of-arsene-lupin">亞森·羅賓的懺悔錄（The Confessions of Arsène Lupin）— 推理分析</h1>
+<h2 id="_1">基本資訊</h2>
+<ul>
+<li>作者：莫里斯·盧布朗（Maurice Leblanc）</li>
+<li>出版年：1913年</li>
+<li>類型：短篇集（10篇）</li>
+<li>偵探角色：亞森·羅賓（Arsène Lupin）——兼職紳士俠盜與業餘偵探</li>
+<li>核心謎團類型：whodunit / howdunit / 藏身謎題 / 身分欺騙</li>
+</ul>
+<hr>
+<h2 id="_2">推理難度總評</h2>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星等</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難度（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>平均收斂點約 78% — 各篇關鍵線索均在後段方才齊備，讀者需要極強的記憶力與耐心；部分篇目近乎不可能提前推導</td>
+</tr>
+<tr>
+<td>迷霧等級（Fog Rating）</td>
+<td>⭐⭐⭐⭐</td>
+<td>盧布朗慣於讓羅賓作為第一人稱資訊控制者，主動隱藏推理過程；真相往往在最後一刻才以「魔術師揭幕」方式公開，讀者長期處於信息不對稱狀態</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_3">故事大綱</h2>
+<p>《亞森·羅賓的懺悔錄》是盧布朗為羅賓系列編選的10篇短篇集，由假設中的「敘述者」將羅賓親口講述的冒險記錄下來。全書呈現一個特殊的羅賓形象——他既是竊賊，也是偵探；既犯罪，也破案；時而化身騎士拯救弱女子，時而以騙術榨乾偽善者。</p>
+<p>10篇的基本面貌：
+- <strong>卷一〈二十萬法郎懸賞〉</strong>：從密碼訊號起步，揭開一樁謀殺兼詐騙案，真凶藏在懸賞者本人。
+- <strong>卷二〈結婚戒指〉</strong>：羅賓（化名 Horace Velmont）拯救遭丈夫迫害的伯爵夫人，以魔術師手法替換戒指。
+- <strong>卷三〈影子的記號〉</strong>：解開百年家族謎團，18顆鑽石藏在日晷裂縫中。
+- <strong>卷四〈地獄陷阱〉</strong>：羅賓反被寡婦設計俘虜，然後又被俘虜者的侄女（侄兒偽裝）神秘救出。
+- <strong>卷五〈紅絲巾〉</strong>：羅賓從一包扔入塞納河的廢棄物，重建整場謀殺案。
+- <strong>卷六〈死亡的陰影〉</strong>：羅賓查出幕後黑手——偽裝臥病的繼父正企圖謀殺女兒。
+- <strong>卷七〈莫古森林的悲劇〉</strong>：致敬愛倫·坡〈莫爾格街兇殺案〉，兇手是一頭人猿。
+- <strong>卷八〈羅賓的婚姻〉</strong>：羅賓假扮貴族表兄，強迫公爵將女兒嫁給自己，結局卻出人意料地充滿浪漫悲情。
+- <strong>卷九〈隱形囚犯〉</strong>：老流浪漢化裝成稻草人躲藏一個月，羅賓以「三根麥稈」破解謎題。
+- <strong>卷十〈天鵝頸的伊迪絲〉</strong>：最大的局——斯帕曼圖上校本人就是羅賓，連死亡都是偽造。</p>
+<p>本分析重點解剖其中推理含量最高的四篇：<strong>卷一、卷三、卷九、卷十</strong>。</p>
+<hr>
+<h2 id="_4">精選篇目深度分析</h2>
+<hr>
+<h3 id="two-hundred-thousand-francs-reward">篇一：〈二十萬法郎懸賞〉（Two Hundred Thousand Francs Reward!）</h3>
+<p><strong>謎團類型</strong>：whodunit + howdunit（誰殺了拉弗諾？男爵夫人在哪裡？保險箱密碼是什麼？）</p>
+<p><strong>各面向線索收斂點</strong>：
+- 密碼「ETNA」的發現：約 <strong>12%</strong>（故意拼錯的字母）
+- 真兇身分（雷普斯坦男爵）：約 <strong>72%</strong>（羅賓在男爵書房正面指控時）
+- 男爵夫人已死、遺體在保險箱：約 <strong>90%</strong>（羅賓打開保險箱一刻）
+- <strong>平均收斂點：58%</strong> → ⭐⭐⭐（中等難度，但「男爵夫人在保險箱」這一真相幾乎不可能提前推導）</p>
+<hr>
+<h4 id="etna">真相一：密碼訊號 ETNA 與保險箱密碼</h4>
+<ul>
+<li><strong>線索收斂點：約 12%</strong></li>
+<li>答案：拉弗諾用陽光訊號發出的訊息含有故意拼錯的英文字——"necessery"（多一個 e）、"atack"（少一個 t）、"ennemy"（多一個 n）、"prudance"（a 代替 e）——四個錯字的第一個錯誤字母拼成 ETNA，即男爵賽馬的名字，也是保險箱的密碼。</li>
+</ul>
+<h5 id="_5">關鍵線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>訊息中出現異常的拼字錯誤："necessery"、"atack"、"ennemy"、"prudance"</td>
+<td>約 6%</td>
+<td>身為男爵私人秘書的拉弗諾，英語水準不可能犯這種低級錯誤；錯誤是刻意為之的密碼</td>
+</tr>
+<tr>
+<td>2</td>
+<td>羅賓立刻注意到這些錯誤，陷入沉思</td>
+<td>約 8%</td>
+<td>敘述者明言「他的表情變了，那個小小的十字眉頭出現了」——告知讀者這是關鍵發現</td>
+</tr>
+<tr>
+<td>3</td>
+<td>男爵在賽馬界擁有名馬 ETNA，本年度德比與大獎賽冠軍</td>
+<td>約 10%（背景資訊）</td>
+<td>ETNA = 四個錯字的關鍵字母，又是男爵最重要的財產象徵</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_6">輔助線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>拉弗諾用口袋鏡製造閃光訊號，顯然是在向窗外傳遞緊急訊息</td>
+<td>約 4%</td>
+<td>說明他被禁閉，必須用隱秘手段求助</td>
+</tr>
+<tr>
+<td>2</td>
+<td>英國朋友哈格洛夫在收到訊號後立刻衝去警察局</td>
+<td>約 16%</td>
+<td>說明訊息中有超出羅賓所截獲的部分，那個未完成的句子包含更多資訊</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_7">假線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>拉弗諾的「醫生」身分</td>
+<td>約 22%</td>
+<td>讓讀者以為拉弗諾只是一個病人，而非被強制關押的人質</td>
+</tr>
+<tr>
+<td>2</td>
+<td>男爵懸賞20萬尋找失蹤妻子，表現出受害者形象</td>
+<td>全篇前半</td>
+<td>將男爵塑造成被妻子背叛的苦主，完全遮蔽他才是幕後主謀的可能性</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="_8">真相二：真兇與男爵夫人的下落</h4>
+<ul>
+<li><strong>線索收斂點：約 88%</strong></li>
+<li>答案：雷普斯坦男爵偽裝成醫生關押拉弗諾，以領帶別針刺殺之。他早已殺死妻子，將遺體藏入保險箱，並讓一名合謀女孩假扮男爵夫人出逃，引警察全歐追蹤，掩護自己捲款潛逃。</li>
+</ul>
+<h5 id="_9">關鍵線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>那位「老醫生」外出的時間，正好對應拉弗諾的死亡時間</td>
+<td>約 20%</td>
+<td>醫生不像是真醫生：他在拉弗諾被發現死亡前二十分鐘才離開</td>
+</tr>
+<tr>
+<td>2</td>
+<td>傷口細如針孔，而非刀傷——「很長的針刺入心臟」</td>
+<td>約 22%</td>
+<td>此類武器不常見，指向特定人物</td>
+</tr>
+<tr>
+<td>3</td>
+<td>男爵的領帶別針：超長、三角形截面，形如一把精巧匕首，珍珠價值極高</td>
+<td>約 60%</td>
+<td>羅賓注意到別針露出西裝背心的長度，判斷這正是那根「針」</td>
+</tr>
+<tr>
+<td>4</td>
+<td>男爵在書房向羅賓承認的事實鏈、並拔出手槍反擊，行為印證指控</td>
+<td>約 75%</td>
+<td>真正無辜之人不會在這個時刻拔槍</td>
+</tr>
+<tr>
+<td>5</td>
+<td>保險箱被打開，男爵夫人遺體出現</td>
+<td>約 88%</td>
+<td>最後且最震撼的確認：所有謎題至此匯聚</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_10">輔助線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>男爵賣掉賽馬場、巴黎宅邸與別墅，準備潛逃</td>
+<td>約 12%</td>
+<td>準備潛逃的人才需要變現所有資產</td>
+</tr>
+<tr>
+<td>2</td>
+<td>男爵「看起來像個誠實人」——羅賓自己也說「你有一副誠實人的臉」</td>
+<td>約 75%</td>
+<td>盧布朗借羅賓之口提醒讀者：外表是最佳偽裝</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_11">假線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>比利時被逮捕的「男爵夫人」</td>
+<td>約 10%</td>
+<td>讓讀者以為真正的男爵夫人正在歐洲各地流亡，把追蹤她當成主線</td>
+</tr>
+<tr>
+<td>2</td>
+<td>男爵的「難過」與「溼潤的眼眶」</td>
+<td>約 62%</td>
+<td>煽情的演技讓羅賓（與讀者）短暫產生懷疑——他真的是壞人嗎？</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="the-sign-of-the-shadow">篇三：〈影子的記號〉（The Sign of the Shadow）</h3>
+<p><strong>謎團類型</strong>：藏寶謎題（Where is it?）</p>
+<p><strong>各面向線索收斂點</strong>：
+- 「2」到底代表「2點鐘」而非「共和曆二年」：約 <strong>90%</strong>（羅賓揭曉時）
+- 鑽石藏在日晷裂縫：約 <strong>95%</strong>
+- <strong>平均收斂點：92%</strong> → ⭐⭐⭐⭐⭐（極高難度：幾乎不可能在揭曉前自行破解）</p>
+<hr>
+<h4 id="18">真相：日晷裂縫中的18顆鑽石</h4>
+<ul>
+<li><strong>線索收斂點：約 92%</strong></li>
+<li>答案：日期「15.4.2」中的「2」代表「下午兩點」，而非共和曆二年。每年4月15日下午2點，日晷箭影恰好落在大理石台面的裂縫上。稅吏 d'Ernemont 被捕前在花園裡，在那一刻將18顆鑽石填入裂縫。瘋子查爾斯的「朝聖」也在下午五點二十七分結束——那是當年日光消失、日晷失效的時刻。</li>
+</ul>
+<h5 id="_12">關鍵線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>畫上的日期「15. 4. 2」，用了「2」而非正確格式的「Year II」或「1794」</td>
+<td>約 30%（畫作發現時）</td>
+<td>羅賓後來指出：當時代的人不會這樣混合書寫格式，「2」應有其他意義</td>
+</tr>
+<tr>
+<td>2</td>
+<td>瘋子查爾斯每年4月15日同一時刻到達花園，同一時刻離去（5點27分）</td>
+<td>約 50%（律師敘述）</td>
+<td>離去時刻由太陽位置決定，強調「時間」是破解謎題的核心維度</td>
+</tr>
+<tr>
+<td>3</td>
+<td>羅賓抵達時，注意到日晷的雕塑形制，以及太陽剛好在下午2點落在台面裂縫的方向</td>
+<td>約 92%</td>
+<td>行動先於說明：讀者看到羅賓用刀劃開裂縫，卻還不明白為什麼</td>
+</tr>
+<tr>
+<td>4</td>
+<td>從裂縫中逐一取出18顆鑽石</td>
+<td>約 94%</td>
+<td>最終確認</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_13">輔助線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>d'Ernemont 被捕前曾短暫逃入花園，「6至7分鐘後」才冷靜出來就逮</td>
+<td>約 50%</td>
+<td>那6至7分鐘足以藏起18顆鑽石——但需要知道裂縫才能理解其用意</td>
+</tr>
+<tr>
+<td>2</td>
+<td>財產從未找到，三幅「圖畫」是老女僕臨死前透露的遺言</td>
+<td>約 50%</td>
+<td>三幅畫 = 三份訊息：對應妻子、兒子、女兒；日晷是線索的共同核心</td>
+</tr>
+<tr>
+<td>3</td>
+<td>陽光、日晷、影子在三幅畫中都以中心物件身分出現</td>
+<td>約 30%</td>
+<td>「影子的記號」即標題：太陽與影子才是密碼的載體</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_14">假線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>眾人長達百年的挖掘（翻土、探水井、鑿牆壁）</td>
+<td>約 50-70%</td>
+<td>引導讀者也跟著「往地下找」，而非「往上看日晷」</td>
+</tr>
+<tr>
+<td>2</td>
+<td>律師認為財寶根本不存在、是老女僕的幻想</td>
+<td>約 65%</td>
+<td>降低讀者對謎題的期待，讓揭曉更加震撼</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="the-invisible-prisoner">篇九：〈隱形囚犯〉（The Invisible Prisoner）</h3>
+<p><strong>謎團類型</strong>：藏身謎題（Where is he hiding?）</p>
+<p><strong>各面向線索收斂點</strong>：
+- 老流浪漢的藏身地點（稻草人）：約 <strong>93%</strong>
+- 飲水之謎（三根相連的麥稈）：約 <strong>90%</strong>
+- <strong>平均收斂點：91%</strong> → ⭐⭐⭐⭐⭐（極高難度：答案在揭曉前幾乎不可能推導）</p>
+<hr>
+<h4 id="_15">真相：流浪漢扮成稻草人藏在樹上</h4>
+<ul>
+<li><strong>線索收斂點：約 93%</strong></li>
+<li>答案：Trainard 利用農莊兒子射落稻草人後留下的那一刻，趁亂套上稻草服裝，爬回原來的那棵樹，整整一個月以稻草人姿態趴在樹枝上。夜間他用三根相連的麥稈伸入水槽，像喝奶昔一樣遠距離飲水，始終沒有被守夜的人發現。</li>
+</ul>
+<h5 id="_16">關鍵線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>最初稻草人被農家長子射落，落在大枝上懸掛著，並沒有移除</td>
+<td>約 3%</td>
+<td>稻草人以「拍打落下後掛在樹上」的姿態留在現場——讀者看了，卻沒有追問「後來呢？」</td>
+</tr>
+<tr>
+<td>2</td>
+<td>農家父說「那稻草人真惱我，吃飯時老是從窗口看到那蠢貨」</td>
+<td>約 5%</td>
+<td>此話暗示稻草人一直掛在那裡——但究竟是原來的稻草人，還是已被替換，無人追問</td>
+</tr>
+<tr>
+<td>3</td>
+<td>羅賓來訪後，在水槽附近發現三根麥稈相連的吸管</td>
+<td>約 90%</td>
+<td>「從那麼遠的地方喝水」——羅賓立刻明白，向樹上射去</td>
+</tr>
+<tr>
+<td>4</td>
+<td>一聲槍響，「稻草人」從樹上跌落，掙扎著逃跑</td>
+<td>約 93%</td>
+<td>最終確認</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_17">輔助線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>整個農莊的牆壁極高、無法翻越；搜索多日毫無所獲</td>
+<td>全篇</td>
+<td>確認Trainard必然還在院子裡，而非已逃脫</td>
+</tr>
+<tr>
+<td>2</td>
+<td>院內只有一個水源：那口水槽</td>
+<td>約 40%</td>
+<td>若人在此地，必然需要靠近水源飲水——但守夜人沒有發現任何動靜</td>
+</tr>
+<tr>
+<td>3</td>
+<td>14天的搜索均在「地面」進行</td>
+<td>約 40-85%</td>
+<td>所有人都往地上看，沒有人抬頭</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_18">假線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>農家人相信他藏在某個地洞或樹洞裡</td>
+<td>約 25%</td>
+<td>引導讀者往「地下藏身」的方向設想</td>
+</tr>
+<tr>
+<td>2</td>
+<td>稻草人一開始就掉落並掛在樹上</td>
+<td>約 5%</td>
+<td>讀者只記住「稻草人倒下了」，沒有意識到它後來「又豎起來了」</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="edith-swan-neck">篇十：〈天鵝頸的伊迪絲〉（Edith Swan-Neck）</h3>
+<p><strong>謎團類型</strong>：身分欺騙 + 保險詐騙（Who is Sparmiento?）</p>
+<p><strong>各面向線索收斂點</strong>：
+- 斯帕曼圖上校 = 亞森·羅賓：約 <strong>88%</strong>（加尼瑪探長向上司說明時）
+- 「伊迪絲」= 羅賓的同夥索尼亞：約 <strong>93%</strong>
+- 那具「屍體」來自里爾停屍間：約 <strong>92%</strong>
+- <strong>平均收斂點：91%</strong> → ⭐⭐⭐⭐⭐（極高難度：全書最複雜的身分謎局）</p>
+<hr>
+<h4 id="_19">真相：上校即羅賓，整場悲劇是詐保戲法</h4>
+<ul>
+<li><strong>線索收斂點：約 91%</strong></li>
+<li>答案：「斯帕曼圖上校」是羅賓的又一個偽裝。他先在火車上偷走一幅掛毯製造聲勢，再以上校身分將「全套12幅」大張旗鼓地保了80萬法郎的保險，精心設置安全機關、舉辦派對，並在當晚演出一場全員驚嚇的報警鬧劇——以上種種不過是分散注意力，讓所有人以為是「羅賓進來了」，而實際上斯帕曼圖上校自己悄悄從二樓窗口把掛毯送出去，再偷換一具屍體偽裝死亡，留下「失意自殺」的遺書，讓妻子（其實是羅賓的舊情人索尼亞）以「無辜寡婦」身分分批領走80萬法郎保險金。</li>
+</ul>
+<h5 id="_20">關鍵線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>羅賓在竊走一幅後的信上威脅「下次我要拿走全部十二幅」——而這正是後來發生的事</td>
+<td>約 5%</td>
+<td>若羅賓「偷走」全部十二幅，他同時也是「被偷走」的那個上校，這個矛盾若被捕捉則可推導身分</td>
+</tr>
+<tr>
+<td>2</td>
+<td>上校設置的種種安全機關，反常地精密到「只有自己知道每個警報的位置」</td>
+<td>約 20%</td>
+<td>一個真正擔心被偷的人不需要連保險公司都不知道機關位置——除非他需要親自關閉它</td>
+</tr>
+<tr>
+<td>3</td>
+<td>探長注意到：Lupin「絕不會讓人因自己的行動而死」——上校之死因此可疑</td>
+<td>約 82%</td>
+<td>加尼瑪的核心邏輯：若Lupin做的，上校就不該真的死</td>
+</tr>
+<tr>
+<td>4</td>
+<td>里爾驗屍所一具無名屍體在案發當晚神秘失蹤</td>
+<td>約 90%（加尼瑪從報紙剪報中發現）</td>
+<td>這具屍體被送往維爾達夫賴，穿上上校衣服放在鐵路邊</td>
+</tr>
+<tr>
+<td>5</td>
+<td>「管家」（僕人）被Lupin的奶媽Victoire喚作「心肝寶貝」——加尼瑪認出口頭禪</td>
+<td>約 95%</td>
+<td>最終確認：這個「僕人」就是羅賓本人</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_21">輔助線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>上校在掛毯失竊後的反應「異常沉著」，反而急著出去「參加重要約會」</td>
+<td>約 65%</td>
+<td>失去價值連城財產的人，不該這樣冷靜</td>
+</tr>
+<tr>
+<td>2</td>
+<td>伊迪絲（「寡婦」）與掛毯中的天鵝頸伊迪絲形象完全契合</td>
+<td>約 12%</td>
+<td>這是作者埋下的視覺對應——但在結局前，讀者只會欣賞這個隱喻，而不知道它是精心設計的欺騙</td>
+</tr>
+<tr>
+<td>3</td>
+<td>上校的書房與臥房都有通往Rue Dufresnoy的窗口，而那條街的窗戶「被砌磚封死」</td>
+<td>約 15%</td>
+<td>「封死」的窗口成了不被監視的出口——掛毯就是從那裡搬走的</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_22">假線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>報警鬧劇（所有燈光突然熄滅、警鈴大作）製造出「羅賓入侵」的假象</td>
+<td>約 40%</td>
+<td>讓所有人（包括讀者）以為這是標準的羅賓式煙霧彈，而非上校自己製造的干擾</td>
+</tr>
+<tr>
+<td>2</td>
+<td>三名私家偵探夜夜駐守樓下</td>
+<td>約 20-60%</td>
+<td>強化「外部入侵」的框架，讓人忽略「內部人員作案」的可能性</td>
+</tr>
+<tr>
+<td>3</td>
+<td>「伊迪絲」蒼白、悲戚、令人同情的外形</td>
+<td>全篇後半</td>
+<td>完美的無辜受害者形象，讓保險公司與讀者都放下戒心</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_23">推理路徑重建</h2>
+<h3 id="_24">各篇路徑摘要</h3>
+<p><strong>卷一〈二十萬法郎懸賞〉的推理路徑：</strong></p>
+<p>仔細的讀者在6%（密碼轉譯完成後）就應注意到「不可能是秘書犯的拼字錯誤」——這是整本書中最早出現的可供讀者自行推導的實質線索。ETNA的解讀難度不高，只需要配合上下文（「男爵的賽馬」）即可。</p>
+<p>真正困難的是「男爵就是兇手」的推導。即使在72%（羅賓指控）之前，讀者能收集到的旁證十分有限：別針的細節是在60%才出現的，而「男爵夫人遺體在保險箱」這個事實完全沒有任何早期暗示。盧布朗把男爵打造成一個完美的受害者，直到羅賓發動突然性指控，讀者才被拉進「啊，原來如此」的震撼中。</p>
+<p><strong>卷三〈影子的記號〉的推理路徑：</strong></p>
+<p>關鍵突破點是「2的意義」。若讀者足夠熟悉法國大革命曆法，可能會在30%就感到疑惑——但需要進一步意識到，如果這個2代表「年份」，書寫格式應該不同，才能推進到「2點鐘」的結論。再從「2點鐘」跳到「4月15日下午2點，日晷影子落在裂縫上」，需要多次邏輯跳躍，實際上接近不可能在揭曉前完成。</p>
+<p><strong>卷九〈隱形囚犯〉的推理路徑：</strong></p>
+<p>「稻草人」在故事開篇即以喜劇方式出場（被射落、掛在樹上），但其後完全消失於讀者視野。「水槽旁的三根相連麥稈」是唯一的有效線索，而且只出現在故事的90%之後。任何在這之前的「推導」都只能是猜測，而非基於線索的推理。</p>
+<p><strong>卷十〈天鵝頸的伊迪絲〉的推理路徑：</strong></p>
+<p>全書最難的推理。羅賓的「偷走全部十二幅」威脅（5%）與上校「隔音的第二層窗口」（15%）理論上可以讓讀者懷疑，但要從「上校可能有問題」跳到「上校就是羅賓」，需要接受一個幾乎荒謬的前提。加尼瑪自己也說：「這不像是Lupin的作風——讓人因此送命。」這個道德邏輯（Lupin不會害死人）反而是破案的關鍵，而非物理線索。</p>
+<hr>
+<h2 id="_25">補充說明</h2>
+<h3 id="_26">《懺悔錄》在盧布朗作品群中的定位</h3>
+<p>本書是羅賓系列中最能展現「羅賓即偵探」面向的作品集。在早期系列中，羅賓主要以竊賊身分出場，偵探是對立角色（加尼瑪、福爾摩斯）。到了《懺悔錄》，盧布朗大膽讓羅賓成為謎題的解答者，不僅解破外部謎題，更把自己的犯罪行為包裝成謎題讓讀者體驗。</p>
+<h3 id="_27">盧布朗的「資訊控制」技法</h3>
+<p>與愛倫·坡、柯南·道爾相比，盧布朗的推理設計有一個根本性的差異：<strong>他習慣讓羅賓藏住推理過程</strong>。</p>
+<ul>
+<li>坡的杜邦（Dupin）會展示推理鏈（〈竊信案〉中的逐步演繹）。</li>
+<li>道爾的福爾摩斯會在揭曉前逐步說明線索（「請注意這個泥巴……」）。</li>
+<li>盧布朗的羅賓則往往在結尾才回溯解釋：「哦，其實我早就知道了，你想聽嗎？」</li>
+</ul>
+<p>這種「後設解釋型」敘事，讓讀者在閱讀過程中根本無從同步推理，只能在最後欣賞羅賓的光輝。從推理文學的角度看，這是一種懸疑娛樂性至上、競猜公平性從屬的選擇。</p>
+<h3 id="_28">與卷七的特殊致敬</h3>
+<p>〈莫古森林的悲劇〉（卷七）明確引用愛倫·坡的〈莫爾格街兇殺案〉：「非人類的兇手」。羅賓本人在故事中也承認這個謎題對他而言只是「小菜」，因為坡已經建立了原型。盧布朗藉此展現一種高度的自我意識：他知道自己的謎題設計是建立在前人巨人肩膀上的，羅賓並非福爾摩斯，而是那個「比福爾摩斯更瞭解案情卻刻意隱藏」的人。</p>
+<h3 id="_29">本書對台灣讀者的文化補充</h3>
+<p>書中〈影子的記號〉涉及大量法國大革命史背景（「稅吏」在大革命中的命運、革命曆法的使用方式），以及巴黎帕西地區的地理環境。羅賓系列普遍充滿法國貴族文化細節，而《懺悔錄》中的〈羅賓的婚姻〉（卷八）尤其以風刺舊貴族傲慢為樂，呼應了盧布朗對社會階級的批判觀點——羅賓能嫁給公爵之女，正是因為貴族守舊到讓自己的安全防線崩潰。</p>
+<h3 id="_30">各篇難度一覽表</h3>
+<table>
+<thead>
+<tr>
+<th>篇目</th>
+<th>謎團類型</th>
+<th>平均收斂點</th>
+<th>推理難度</th>
+<th>迷霧等級</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>卷一 二十萬法郎懸賞</td>
+<td>whodunit + howdunit</td>
+<td>58%</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>卷二 結婚戒指</td>
+<td>howdunit</td>
+<td>40%</td>
+<td>⭐⭐</td>
+<td>⭐⭐</td>
+</tr>
+<tr>
+<td>卷三 影子的記號</td>
+<td>藏寶謎題</td>
+<td>92%</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>卷四 地獄陷阱</td>
+<td>逆轉懸疑</td>
+<td>—</td>
+<td>—</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>卷五 紅絲巾</td>
+<td>推理演示</td>
+<td>50%</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>卷六 死亡的陰影</td>
+<td>whodunit</td>
+<td>65%</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>卷七 莫古森林的悲劇</td>
+<td>致敬篇</td>
+<td>80%</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>卷八 羅賓的婚姻</td>
+<td>欺騙喜劇</td>
+<td>—</td>
+<td>—</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>卷九 隱形囚犯</td>
+<td>藏身謎題</td>
+<td>91%</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>卷十 天鵝頸的伊迪絲</td>
+<td>身分詐騙</td>
+<td>91%</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td><strong>整體平均</strong></td>
+<td></td>
+<td><strong>78%</strong></td>
+<td><strong>⭐⭐⭐⭐</strong></td>
+<td><strong>⭐⭐⭐⭐</strong></td>
+</tr>
+</tbody>
+</table>
+    <a href="../index.html" class="back-link">← 回到首頁</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">推理解剖室</p>
+    <p>五位作者 · 八十八部作品 · 一百三十五年推理文學的難度演化</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
