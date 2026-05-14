@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Triángulo de Oro (The Golden Triangle) — Sala de Disección Detectivesca</title>
+<meta name="description" content="En 1917, la Primera Guerra Mundial todavía está en curso. Patrice Belval, capitán convaleciente en París, ha sostenido una larga correspondencia con una mujer q">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-golden-triangle.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-golden-triangle.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-golden-triangle.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-golden-triangle.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-golden-triangle.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-golden-triangle.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-golden-triangle.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-golden-triangle.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Sala de Disección Detectivesca</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Inicio</a>
+        <a href="../index.html#latest">Recientes</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Idioma" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 Español</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-golden-triangle.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-golden-triangle.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-golden-triangle.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/the-golden-triangle.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/the-golden-triangle.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/the-golden-triangle.html">Deutsch</a>
+      <a class="lang-item active" data-lang="es" href="/Detective-Analysis/es/articles/the-golden-triangle.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/the-golden-triangle.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">Maurice Leblanc · 1917</div>
+    <h1>El Triángulo de Oro (The Golden Triangle)</h1>
+    <div class="subtitle">Maurice Leblanc（莫里斯·盧布朗） · Novela</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Deducibilidad</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Nivel de niebla</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="el-triangulo-de-oro-the-golden-triangle-analisis-deductivo">El Triángulo de Oro (The Golden Triangle) — Análisis deductivo</h1>
+<h2 id="informacion-basica">Información básica</h2>
+<ul>
+<li>Autor: Maurice Leblanc（莫里斯·盧布朗）</li>
+<li>Año: 1917</li>
+<li>Género: Novela</li>
+<li>Detective: Arsène Lupin（亞森·羅蘋）（aparece bajo el nombre «Don Luis Perenna»; solo hace acto de presencia en el capítulo final）；perspectiva de acción principal: Patrice Belval（帕特里斯·貝爾瓦）</li>
+<li>Tipo de misterio central: whodunit + whydunit + where（identidad del verdadero culpable + paradero del oro oculto + misterio del origen del protagonista）</li>
+</ul>
+<hr>
+<h2 id="evaluacion-general-de-dificultad-deductiva">Evaluación general de dificultad deductiva</h2>
+<table>
+<thead>
+<tr>
+<th>Indicador</th>
+<th>Estrellas</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deducibilidad（Deducibility）</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>Punto de convergencia promedio: aprox. 90% — Los tres hilos del misterio（identidad del falso Siméon, ubicación exacta del oro, secreto sobre los padres）no proporcionan indicios suficientes para sostener una deducción completa hasta los capítulos XVIII–XIX</td>
+</tr>
+<tr>
+<td>Nivel de niebla（Fog Rating）</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>Leblanc emplea en esta obra las técnicas de distracción más intensas de la literatura detectivesca: «el muerto que resucita con otra cara», «el protector que en realidad es el perseguidor», «la fotografía de infancia con atribución deliberadamente errónea» — la propia estructura narrativa es el mayor dispositivo de engaño</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="sinopsis">Sinopsis</h2>
+<p>En 1917, la Primera Guerra Mundial todavía está en curso. Patrice Belval, capitán convaleciente en París, ha sostenido una larga correspondencia con una mujer que se hace llamar Coralie, a quien ama sin haber llegado a conocer en persona. Cuando, por casualidad, la ve en la calle siendo arrastrada a la fuerza hacia un carruaje, su instinto de combate se despierta de inmediato: la sigue, interviene y destapa un enorme secreto que abarca décadas enteras.</p>
+<p>Coralie es la esposa del acaudalado comerciante Essarès Bey, confinada en su mansión a orillas del Sena. Essarès controla una inmensa reserva de oro — mil ochocientas bolsas de monedas de procedencia dudosa — que diversas facciones rivales codician. Al mismo tiempo, un anciano griego llamado Siméon Diodokis aparece continuamente al lado de Patrice, afirmando ser el viejo criado y guardián de Coralie; su actitud resulta enigmática y esquiva.</p>
+<p>La trama da un giro brusco tras la «muerte» de Essarès: es declarado muerto, pero su cadáver desaparece; Siméon empieza a dar señales de perturbación mental, aunque en momentos clave revela una lucidez que ningún anciano debería poseer; el paradero del oro se vuelve cada vez más nebuloso, y Patrice se ve varias veces al borde de la muerte. En el capítulo final, Arsène Lupin（bajo el nombre de «Don Luis Perenna）hace su entrada y revela todas las respuestas de un solo golpe: el «Siméon» que conocemos no es ningún viejo criado — es el propio Essarès Bey, disfrazado de anciano para seguir ejecutando sus maquinaciones; el verdadero Siméon era en realidad Armand Belval（阿爾芒·貝爾瓦）, padre biológico de Patrice, asesinado la mañana descrita en el capítulo VI. Las mil ochocientas bolsas de oro yacen enterradas bajo un montón de arena de aspecto anodino en el muelle de Berthou（Berthou's Wharf）, dispuestas en forma triangular y ocultas a plena vista — nadie imaginó que «el triángulo de oro» fuera literalmente una forma geométrica.</p>
+<hr>
+<h2 id="diseccion-de-la-verdad">Disección de la verdad</h2>
+<h3 id="verdad-primera-la-identidad-real-del-falso-simeonwhodunit">Verdad primera: la identidad real del falso Siméon（whodunit）</h3>
+<ul>
+<li><strong>Punto de convergencia: aprox. 88%</strong></li>
+<li>Respuesta: el «Siméon» que el lector observa tras la «muerte» de Essarès Bey en el capítulo VI es, en realidad, el propio Essarès disfrazado. El verdadero Siméon Diodokis era Armand Belval, padre de Patrice, asesinado a las 7:19 del capítulo VI. Essarès se apropió de su aspecto físico, su nombre y su posición social, adoptando la figura de un anciano para seguir manipulando la disputa por el oro.</li>
+</ul>
+<h4 id="indicios-clave">Indicios clave</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido del indicio</th>
+<th>Ubicación（capítulo/porcentaje）</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Tras la «muerte» de Essarès, el cadáver no puede ser hallado ni identificado</td>
+<td>Cap. VI / aprox. 32%</td>
+<td>Establece la premisa fundamental del cambio de identidad: sin cuerpo, la muerte puede ser una ficción</td>
+</tr>
+<tr>
+<td>2</td>
+<td>La conducta de Siméon cambia bruscamente «tras la muerte de Essarès»: alterna entre aparente demencia y una agilidad que contrasta con su imagen de anciano</td>
+<td>Caps. VII–XI / aprox. 37–58%</td>
+<td>Dos personalidades se filtran alternativamente, aunque el lector tiende a atribuirlo a «la inestabilidad de un viejo»</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Siméon conoce cada rincón de la mansión de Essarès, incluidos pasajes secretos que Patrice jamás le reveló</td>
+<td>Cap. X / aprox. 53%</td>
+<td>Un simple «criado» no podría conocer la geografía íntima que solo corresponde al dueño de la casa</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Una fotografía hallada por Patrice muestra que el verdadero Siméon（Armand Belval）no se parece al anciano que tiene ante sus ojos, aunque la narración oscurece este detalle</td>
+<td>Cap. XV / aprox. 79%</td>
+<td>Prueba material clave, aunque en este punto aún falta el nexo completo de identidad</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Lupin（Don Luis）confirma directamente: coteja rasgos faciales, cicatrices y los detalles que el sujeto conoce sobre el escondite del oro para señalar que el «Siméon» presente es Essarès</td>
+<td>Cap. XVIII / aprox. 95%</td>
+<td><strong>Punto de convergencia final</strong> — solo aquí el lector dispone de confirmación completa</td>
+</tr>
+</tbody>
+</table>
+<h4 id="indicios-secundarios">Indicios secundarios</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido del indicio</th>
+<th>Ubicación（capítulo/porcentaje）</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Siméon demuestra en ciertas ocasiones un conocimiento del oro que excede el rol que se atribuye</td>
+<td>Caps. IX–XII / aprox. 47–63%</td>
+<td>Un «viejo criado guardián» no debería manejar información de ese nivel</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Algunos rasgos físicos de Essarès（gestos habituales de las manos, cualidad de la voz）aparecen esporádicamente en «Siméon»</td>
+<td>Caps. X y XIII / aprox. 53% y 68%</td>
+<td>Fisuras en el disfraz, pero cada una queda enseguida eclipsada por el ritmo de la trama</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ya-Bon（亞博）, el guardaespaldas senegalés de Patrice, muestra una desconfianza inusual hacia «Siméon»</td>
+<td>Desde el cap. VIII / aprox. 42% en adelante</td>
+<td>Desconfianza de índole casi instintiva; primera advertencia emocional temprana</td>
+</tr>
+<tr>
+<td>4</td>
+<td>La actitud de Siméon hacia Coralie mezcla el afán de control con el miedo; no parece un protector, sino más bien un vigilante</td>
+<td>A lo largo de los caps. VII–XVI</td>
+<td>La ambigüedad entre «guardián» y «carcelero» anticipa sus verdaderas motivaciones</td>
+</tr>
+</tbody>
+</table>
+<h4 id="falsas-pistas">Falsas pistas</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido del indicio</th>
+<th>Ubicación（capítulo/porcentaje）</th>
+<th>Dirección del engaño</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>La actuación completa de «ancianidad» de Siméon: manos temblorosas, mirada turbia, memoria fallida</td>
+<td>Primera mitad de la novela</td>
+<td>Fija en el lector la imagen de un anciano inofensivo, reduciendo el umbral de sospecha</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Varios transeúntes y policías «vieron y confirmaron» la muerte de Essarès</td>
+<td>Cap. VI / aprox. 32%</td>
+<td>Hace creer al lector que la confirmación oficial descarta la posibilidad de que Essarès siga vivo</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Siméon «arriesgó su vida» para alertar a Patrice, adoptando la pose de aliado ajeno al conflicto</td>
+<td>Cap. XI / aprox. 58%</td>
+<td>Refuerza la imagen de «hombre bueno» y lleva al lector a atribuir los peligros que acechan a Patrice a otras fuerzas</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="verdad-segunda-el-paradero-del-triangulo-de-orowhere">Verdad segunda: el paradero del Triángulo de Oro（where）</h3>
+<ul>
+<li><strong>Punto de convergencia: aprox. 95%</strong></li>
+<li>Respuesta: las mil ochocientas bolsas de monedas de oro están dispuestas en forma triangular bajo un montón de arena de aspecto completamente ordinario en el muelle de Berthou（Berthou's Wharf）. El nombre «triángulo de oro» alude exactamente al contorno triangular que forma el montón sobre el terreno — la fortuna lleva años durmiendo a orillas del Sena, en pleno París, a la vista de todo el mundo, sin que nadie le haya prestado la menor atención.</li>
+</ul>
+<h4 id="indicios-clave_1">Indicios clave</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido del indicio</th>
+<th>Ubicación（capítulo/porcentaje）</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Los documentos secretos de Essarès mencionan el topónimo «Berthou»</td>
+<td>Cap. IX / aprox. 47%</td>
+<td>Primera aparición del nombre del lugar, aunque el lector aún no puede calibrar su importancia</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Patrice observa repetidamente actividad nocturna en los alrededores del muelle, sin lograr averiguar su propósito</td>
+<td>Caps. XII–XIV / aprox. 63–74%</td>
+<td>El muelle se va consolidando como «escenario», pero la ubicación exacta sigue siendo vaga</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Un fragmento de mapa deteriorado muestra una marca triangular que coincide con el contorno del montón de arena</td>
+<td>Cap. XVI / aprox. 84%</td>
+<td>Aparece la pista geométrica, pero falta aún el razonamiento de que «el montón de arena es la cobertura»</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Lupin（Don Luis）realiza una inspección in situ y confirma que el contorno triangular del montón no es de origen natural</td>
+<td>Caps. XVIII–XIX / aprox. 95%</td>
+<td><strong>Punto de convergencia</strong> — el montón de arena es la cámara del tesoro: lo expuesto es lo oculto; revelación completa</td>
+</tr>
+</tbody>
+</table>
+<h4 id="indicios-secundarios_1">Indicios secundarios</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido del indicio</th>
+<th>Ubicación（capítulo/porcentaje）</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Los trabajadores del muelle dan versiones contradictorias e imprecisas sobre el origen de ese montón de arena</td>
+<td>Cap. XIII / aprox. 68%</td>
+<td>Sugiere una intervención artificial, aunque el lector tiende a pasarlo por alto</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Las bolsas de oro llevan un sello especial que coincide con las marcas estampadas en ciertos materiales del almacén del muelle</td>
+<td>Cap. XV / aprox. 79%</td>
+<td>Pista logística que vincula físicamente el oro con la zona del muelle</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Essarès / el falso Siméon insinúa veladamente que «los lugares públicos son los más seguros»</td>
+<td>Cap. XI / aprox. 58%</td>
+<td>Pista sobre la lógica del escondite: cuanto más a la vista, menos probable es que alguien lo registre</td>
+</tr>
+</tbody>
+</table>
+<h4 id="falsas-pistas_1">Falsas pistas</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido del indicio</th>
+<th>Ubicación（capítulo/porcentaje）</th>
+<th>Dirección del engaño</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Patrice sospecha durante mucho tiempo que el oro está escondido en los sótanos o cámaras secretas de la mansión</td>
+<td>Caps. VIII–XV / a lo largo de la parte central</td>
+<td>El lector sigue la mirada de Patrice y cae en la trampa de que «la cámara secreta es la respuesta»</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Una pista que apunta hacia una embarcación en el Sena（Patrice la investiga durante medio capítulo）</td>
+<td>Cap. XII / aprox. 63%</td>
+<td>Desvía la atención hacia un objeto en movimiento, alejándola de la verdad estática</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Las facciones rivales（espías alemanes, consorcio de comerciantes egipcios）dirigen su búsqueda hacia las afueras de la ciudad</td>
+<td>Caps. X y XIV / aprox. 53% y 74%</td>
+<td>La acumulación de «desinformación» de múltiples fuentes genera un consenso colectivo erróneo</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="verdad-tercera-el-verdadero-origen-de-patrice-y-coraliewhydunit">Verdad tercera: el verdadero origen de Patrice y Coralie（whydunit）</h3>
+<ul>
+<li><strong>Punto de convergencia: aprox. 92%</strong></li>
+<li>Respuesta: el padre de Patrice, Armand Belval, y la madre de Coralie fueron amantes apasionados que perecieron víctimas de la misma conspiración veinte años atrás. El verdadero Siméon（Armand Belval）adoptó durante años una identidad falsa para proteger a Coralie, aguardando el momento de vengar su propia vida y la de su amada. El amor predestinado entre Patrice y Coralie es la continuación de la historia inconclusa de sus padres.</li>
+</ul>
+<h4 id="indicios-clave_2">Indicios clave</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido del indicio</th>
+<th>Ubicación（capítulo/porcentaje）</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Patrice encuentra en la habitación de Coralie una fotografía antigua en la que aparece una pareja sosteniendo a un niño pequeño</td>
+<td>Cap. IV / aprox. 21%</td>
+<td>La fotografía es la prueba material central del misterio de los orígenes, pero en este momento no es posible identificar a los retratados</td>
+</tr>
+<tr>
+<td>2</td>
+<td>El medallón（locket）de Coralie contiene la fotografía en miniatura de un niño que coincide con la apariencia de Patrice en su infancia</td>
+<td>Cap. VII / aprox. 37%</td>
+<td>Comienza a aflorar el vínculo de veinte años atrás, aunque el lector no puede determinar si es una coincidencia o algo premeditado</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Entre los objetos personales de Armand Belval hay una carta en la que se lee: «Le dejé el niño a ella; ella me dejó a mí a la niña»</td>
+<td>Cap. XVII / aprox. 89%</td>
+<td><strong>Carta clave próxima al punto de convergencia</strong>: establece el contexto sentimental de la generación de los padres</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Lupin averigua que la madre de Coralie y Armand Belval fueron asesinados el mismo año por la red de Essarès; el oro fue reunido conjuntamente por ambos con fines patrióticos durante la guerra</td>
+<td>Cap. XIX / aprox. 97%</td>
+<td><strong>Punto de convergencia final</strong> — la cadena completa de los orígenes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="indicios-secundarios_2">Indicios secundarios</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido del indicio</th>
+<th>Ubicación（capítulo/porcentaje）</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>En su primera correspondencia, Patrice y Coralie experimentan una «familiaridad» que supera toda lógica</td>
+<td>Cap. I / aprox. 5%</td>
+<td>Prefiguración del destino; el parentesco se insinúa a través del sentimiento más que de la razón</td>
+</tr>
+<tr>
+<td>2</td>
+<td>La mirada del verdadero Siméon（Armand）hacia Coralie refleja a veces la ternura de un padre, no la sumisión de un criado</td>
+<td>Caps. III y V / aprox. 16% y 26%</td>
+<td>El indicio emocional más fácil de ignorar, pues la imagen de «hombre bondadoso» ya está asentada en el lector</td>
+</tr>
+<tr>
+<td>3</td>
+<td>El matrimonio de Coralie con Essarès es para este último un mecanismo de vigilancia, no una relación amorosa: la necesita cerca del oro</td>
+<td>Cap. II / aprox. 10%</td>
+<td>Insinuación temprana a nivel de motivación: ella no es solo una esposa, sino también una pieza en el tablero</td>
+</tr>
+</tbody>
+</table>
+<h4 id="falsas-pistas_2">Falsas pistas</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido del indicio</th>
+<th>Ubicación（capítulo/porcentaje）</th>
+<th>Dirección del engaño</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>En la primera mitad de la novela, se lleva deliberadamente al lector a creer que las fotografías de Coralie documentan su historia familiar con Essarès</td>
+<td>Caps. III–VII</td>
+<td>La interpretación de la prueba material central se encauza hacia «la historia del bando de Essarès», alejándola del romance de los padres</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Patrice recibe un informe anónimo «sobre el paradero de su padre» que señala a una persona completamente equivocada</td>
+<td>Cap. IX / aprox. 47%</td>
+<td>Dispersa el impulso investigador de Patrice（y del lector）sobre el verdadero misterio de identidad</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="reconstruccion-del-camino-deductivo">Reconstrucción del camino deductivo</h2>
+<p><strong>Primer camino deductivo: la identidad real del falso Siméon</strong></p>
+<p>Este es el enigma más meticulosamente construido de toda la novela. Tras la «muerte» de Essarès en el capítulo VI（aprox. 32%）, Leblanc traslada de inmediato la atención del lector hacia las amenazas externas, dejando que los cambios de comportamiento de Siméon se escurran inadvertidos bajo el ritmo frenético de la acción. Existen tres umbrales reales de sospecha: el primero（aprox. 42%）, cuando Ya-Bon muestra una desconfianza fuera de lo común hacia Siméon — el lector atento puede albergar entonces su primera duda; el segundo（aprox. 53%）, cuando Siméon demuestra conocer los pasajes secretos de la mansión, detalle que resulta fácil de racionalizar a posteriori（«lleva tantos años al servicio de la casa…»）, aunque si se compara con precisión el control que Essarès ejercía sobre esos pasajes en vida, la lógica empieza a tambalearse; el tercero（aprox. 79%）, cuando la fotografía aporta el último material para el razonamiento, aunque saltar de ahí a «el anciano que tenemos delante es el propio Essarès» exige asumir una hipótesis de suplantación de identidad que en la vida real resulta inverosímil — y ese es precisamente el núcleo del diseño que hace tan difícil de descifrar este enigma. La mayoría de los lectores, aun teniendo en mano todos los elementos, no se atreve a formular una conclusión tan teatral hasta que Lupin la pronuncia abiertamente en el capítulo XVIII.</p>
+<p><strong>Segundo camino deductivo: el paradero del oro</strong></p>
+<p>La paradoja del enigma del oro reside en que su respuesta es demasiado «correcta»: un montón de arena a plena vista es una variante del principio de «el lugar más peligroso es el más seguro»（la misma lógica que Poe empleó en «La carta robada»）. Un lector que rastreara conscientemente los topónimos vería que «Berthou» aparece en el capítulo IX y reaparece con insistencia en los capítulos XII–XIV, lo que debería bastar para establecerlo como lugar relevante; pero reconocer «el montón de arena» como dispositivo de ocultamiento exige aceptar simultáneamente la hipótesis contraintuitiva de «camuflado en un espacio público al aire libre». Sin ese salto mental, los indicios no convergen. Solo cuando Lupin lo demuestra físicamente in situ en el capítulo final la mayoría de los lectores lo comprende de golpe.</p>
+<p><strong>Tercer camino deductivo: el origen de los padres</strong></p>
+<p>Este camino es casi «emocional» más que puramente lógico. La fotografía, el medallón, la mirada de Siméon, la intimidad inexplicable entre Patrice y Coralie — todos estos indicios apuntan conjuntamente hacia un marco narrativo de «destino». Para que un lector dedujera por su cuenta, antes de que apareciera la carta testamentaria en el capítulo XVII, que «Armand es el verdadero Siméon y además es el padre de Patrice», habría necesitado dar por ciertas tres hipótesis simultáneas: que el verdadero Siméon está muerto, que el falso Siméon es Essarès, y que Armand es el padre. Las tres son necesarias e inseparables, y ninguna de ellas cuenta con respaldo textual definitivo antes del capítulo final.</p>
+<hr>
+<h2 id="notas-complementarias">Notas complementarias</h2>
+<p><strong>El lugar singular de <em>El Triángulo de Oro</em> en la serie de Leblanc</strong></p>
+<p>Publicada en 1917, en el momento decisivo del final de la Primera Guerra Mundial, esta novela integra la atmósfera bélica en el propio diseño del enigma: detrás de la disputa por el oro hay espionaje internacional, control de recursos de guerra y efervescencia nacionalista, elementos que confieren al libro la doble estructura de novela de espionaje y relato de detectives clásico. La figura de Patrice Belval — veterano de guerra convaleciente en un hospital — tenía una resonancia muy directa con los lectores franceses de la época.</p>
+<p>Conviene señalar que en esta novela Arsène Lupin aparece casi como una «máquina resolutora de enigmas» más que como protagonista. Esta es una estructura experimental dentro de la serie de Leblanc: el lector avanza a tientas siguiendo a un «hombre corriente» — Patrice —, y solo al final el superdetective despeja todo el escenario de un golpe. Este diseño intensifica la tensión dramática, pero al mismo tiempo reduce las posibilidades del lector para razonar por sí mismo: como el lector no posee las capacidades de Lupin, todo lo que este ve y resuelve permanece prácticamente fuera del alcance del lector. Esto es lo que explica directamente el altísimo grado de dificultad deductiva y el elevado nivel de niebla de la novela.</p>
+<p><strong>«Lo expuesto es lo oculto» — el homenaje de Leblanc a Poe</strong></p>
+<p>El oro enterrado bajo un montón de arena a la vista de todos hace eco de la lógica central de «La carta robada»（The Purloined Letter）de Edgar Allan Poe, publicado en 1844: lo más importante se coloca en el lugar más visible, precisamente porque nadie piensa en buscar en los lugares obvios. En esta novela, Leblanc extiende esa lógica desde «una carta» hasta «mil ochocientas bolsas de oro» y amplía el «lugar visible» desde la superficie de una mesa interior hasta toda la ribera de una ciudad, con una audacia que resulta asombrosa.</p>
+<p><strong>Comparación con la serie de «Los crímenes de la calle Morgue»: el secreto es un «espacio», no un «personaje»</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>La carta robada（Poe）</th>
+<th>El Triángulo de Oro（Leblanc）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lógica del ocultamiento</td>
+<td>Lo expuesto es lo oculto</td>
+<td>Lo expuesto es lo oculto</td>
+</tr>
+<tr>
+<td>Objeto ocultado</td>
+<td>Una carta</td>
+<td>Mil ochocientas bolsas de oro</td>
+</tr>
+<tr>
+<td>Escala de «lo visible»</td>
+<td>Interior de una habitación</td>
+<td>Paisaje urbano</td>
+</tr>
+<tr>
+<td>Modo de revelación</td>
+<td>Análisis deductivo</td>
+<td>Inspección física in situ</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Análisis técnico del enigma del cambio de identidad</strong></p>
+<p>El recurso por el que Essarès suplanta la identidad de Siméon era, en 1917, una técnica extraordinariamente vanguardista. Leblanc no recurre a una identidad falsa o a un nombre inventado — hace que una persona viva ocupe por completo el lugar social de otra persona muerta, incluyendo su apariencia, sus recuerdos y sus relaciones personales. Este tipo de enigma basado en la «sustitución del vivo por el muerto» no sería desarrollado como técnica narrativa plena hasta veinte años después, cuando Agatha Christie lo llevaría a su culminación en varias obras（como el intercambio de identidades en <em>Un crimen dormido</em>）. La contribución de Leblanc reside en haber utilizado el método de mayor efecto dramático pero de menor «deducibilidad justa» posible para el lector: el momento del cambio de identidad（capítulo VI）queda sepultado en la densidad de la acción, de modo que cuando el lector está ocupado persiguiendo la siguiente crisis, le resulta imposible detenerse a preguntarse si «ese anciano es otra persona».</p>
+<p><strong>Nota para los lectores hispanohablantes</strong></p>
+<p>Si en «El tonel de amontillado» el vino de jerez escaso sirve como cebo, en <em>El Triángulo de Oro</em> es el oro — símbolo eterno del deseo humano — el núcleo del enigma. Vale la pena subrayar que el oro de la novela tiene una «finalidad patriótica»: según la trama, fue reunido en secreto para financiar el esfuerzo bélico de los aliados, lo que eleva la búsqueda del oro desde la pura codicia hasta una misión teñida de tragedia política. En las ruinas de la Gran Guerra, las monedas de oro duermen en silencio bajo un montón de arena junto al río: el patrimonio que los padres conquistaron con sus vidas espera a orillas del agua a que la siguiente generación venga a heredarlo. Leblanc convierte «el triángulo de oro» — símbolo duro y material — en una metáfora final del amor filial y de las heridas que la historia deja abiertas.</p>
+    <a href="../index.html" class="back-link">← Volver al inicio</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Sala de Disección Detectivesca</p>
+    <p>Cinco autores · ochenta y ocho obras · 135 años de evolución de la dificultad en la narrativa policíaca.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

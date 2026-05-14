@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>黄金の三角形（The Golden Triangle） — 推理解剖室</title>
+<meta name="description" content="1917年、第一次世界大戦はなお続いていた。パトリス・ベルヴァル大尉（Captain Patrice Belval）はパリで療養中の軍人である。長い待機の日々の中、彼は「コラリー」（Coralie）と名乗る女性と文通を重ね、恋心を抱くようになるが、二人は一度も会ったことがなかった。ある日、ふとした街中でコラリーが何者か">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-golden-triangle.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-golden-triangle.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-golden-triangle.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-golden-triangle.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-golden-triangle.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-golden-triangle.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-golden-triangle.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-golden-triangle.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif JP', serif;
+  --font-sans: 'Noto Sans JP', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">推理解剖室</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">ホーム</a>
+        <a href="../index.html#latest">最新</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="言語" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 日本語</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-golden-triangle.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-golden-triangle.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-golden-triangle.html">English</a>
+      <a class="lang-item active" data-lang="ja" href="/Detective-Analysis/ja/articles/the-golden-triangle.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/the-golden-triangle.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/the-golden-triangle.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/the-golden-triangle.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/the-golden-triangle.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">モーリス・ルブラン · </div>
+    <h1>黄金の三角形（The Golden Triangle）</h1>
+    <div class="subtitle">モーリス・ルブラン（Maurice Leblanc） · 長編</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">推理難易度</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">霧の濃度</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="the-golden-triangle">黄金の三角形（The Golden Triangle）— 推理分析</h1>
+<h2 id="_1">基本資訊</h2>
+<ul>
+<li>著者：モーリス・ルブラン（Maurice Leblanc）</li>
+<li>発表年：1917年</li>
+<li>ジャンル：長編</li>
+<li>探偵：アルセーヌ・ルパン（「ドン・ルイス・ペレナ」として登場し、最終章で正体を現す）；主な行動視点：パトリス・ベルヴァル（Patrice Belval）</li>
+<li>核心謎団の種類：whodunit + whydunit + where（真犯人の正体 + 黄金の隠し場所 + 主人公の出生の秘密）</li>
+</ul>
+<hr>
+<h2 id="_2">推理難易度総評</h2>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星評価</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難易度（Deducibility）</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>平均収束点は約90% — 三本の主要謎（偽シメオンの真の正体・黄金の正確な場所・親世代の秘密）はすべて第XVIII〜XIX章まで読まなければ完全な推論を支えるに足る手がかりが揃わない</td>
+</tr>
+<tr>
+<td>霧の濃度（Fog Rating）</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>ルブランは本書において推理文学における最高強度の煙幕技法を駆使している：「死者の復活と顔の入れ替え」「保護者こそが迫害者」「幼少期の写真の意図的な誤帰属」——物語の構造そのものが最大の欺瞞装置となっている</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_3">あらすじ</h2>
+<p>1917年、第一次世界大戦はなお続いていた。パトリス・ベルヴァル大尉（Captain Patrice Belval）はパリで療養中の軍人である。長い待機の日々の中、彼は「コラリー」（Coralie）と名乗る女性と文通を重ね、恋心を抱くようになるが、二人は一度も会ったことがなかった。ある日、ふとした街中でコラリーが何者かに馬車に押し込まれるのを目撃した彼は、戦士としての本能に従って追跡・介入し、数十年にわたる巨大な秘密を暴くことになる。</p>
+<p>コラリーは富裕な商人エサレス・ベイ（Essarès Bey）の妻であり、セーヌ川沿いの豪邸に幽閉されていた。エサレスは膨大な黄金の備蓄を掌握していた——合計千八百袋の金貨で、その出所は謎に包まれており、各方面の勢力がその財を奪い合っていた。そんな中、シメオン・ディオドキス（Siméon Diodokis）というギリシャ系の老人がパトリスの周囲に繰り返し現れ、コラリーの老僕かつ守護者を自称しながらも、謎めいた態度を崩さなかった。</p>
+<p>物語はエサレスの「死亡」を境に急展開する。彼は死亡したと宣告されるが、遺体は行方不明となった。シメオンは精神錯乱の兆候を示すようになるが、肝心な瞬間には老人としての能力をはるかに超えた鋭敏さを見せる。黄金の行方は霧の中に沈み、パトリスも幾度となく命の危険に晒される。最終章で、アルセーヌ・ルパン（「ドン・ルイス・ペレナ」として）が姿を現し、すべての謎を一挙に解き明かす。眼前の「シメオン」は老僕などではなく——エサレス・ベイ本人が老人に扮して、陰謀を継続していたのだ。そして本物のシメオンこそが、アルマン・ベルヴァル（Armand Belval）——パトリスの実の父親であり、第六章のあの朝にすでに殺害されていた。千八百袋の黄金は、ベルトゥ埠頭（Berthou's Wharf）の一見ありふれた砂山の下に、三角形の配置で隠されていた——衆人環視の場所に堂々と眠っていた。「黄金の三角形」とは、文字通りの形状を指していたのだ。</p>
+<hr>
+<h2 id="_4">真相の解剖</h2>
+<h3 id="whodunit">真相一：偽シメオンの真の正体（whodunit）</h3>
+<ul>
+<li><strong>手がかり収束点：約88%</strong></li>
+<li>答え：第六章でエサレス・ベイが「死亡」した後、読者が目にする「シメオン」はエサレス本人の変装である。本物のシメオン・ディオドキスはアルマン・ベルヴァル——パトリスの父親であり、第六章の7時19分に殺害されていた。エサレスはその直後に彼の外見・名前・社会的立場を奪い取り、老人として黄金争奪戦を裏から操り続けた。</li>
+</ul>
+<h4 id="_5">関鍵手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（章／割合）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>エサレスの「死亡」後、遺体が一向に発見・確認されない</td>
+<td>第六章 / 約32%</td>
+<td>顔の入れ替えの根本的な伏線——死体がなければ本当に死んでいない可能性が生じる</td>
+</tr>
+<tr>
+<td>2</td>
+<td>「エサレス死亡後」のシメオンの行動が一変する：精神錯乱を装う一方で、時に老人としてあり得ない機敏さを見せ、それ以前の老人像との乖離が生じる</td>
+<td>第七〜十一章 / 約37〜58%</td>
+<td>二つの人格が繰り返し滲み出るが、読者は「老人の反応」として片付けてしまいがち</td>
+</tr>
+<tr>
+<td>3</td>
+<td>シメオンがエサレスの豪邸のあらゆる隅々に精通しており、パトリスが決して教えていない秘密の通路まで知っている</td>
+<td>第十章 / 約53%</td>
+<td>「使用人」が主人のみ知るべき秘密の地理的情報を持っているはずがない</td>
+</tr>
+<tr>
+<td>4</td>
+<td>パトリスが見つけた写真に、本物のシメオン（アルマン・ベルヴァル）の顔が写っており、目の前の老人とは明らかに異なるが、物語の叙述によって覆い隠されている</td>
+<td>第十五章 / 約79%</td>
+<td>重要な物証だが、この時点ではまだ完全な身元の繋がりが欠けている</td>
+</tr>
+<tr>
+<td>5</td>
+<td>ルパン（ドン・ルイス）が直接確認する：顔の特徴・傷跡・黄金の隠し場所に関する知識を照合し、目の前の「シメオン」こそエサレスであると指摘</td>
+<td>第十八章 / 約95%</td>
+<td><strong>最終収束点</strong>——ここで初めて読者は完全な確証を得る</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_6">補助手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（章／割合）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>シメオンが場合によっては黄金に関して、自称する役割を超えた知識を持っている</td>
+<td>第九〜十二章 / 約47〜63%</td>
+<td>「護衛の老僕」がこのレベルの情報を持っているはずがない</td>
+</tr>
+<tr>
+<td>2</td>
+<td>エサレスの身体的な特徴（手の癖・声の質感）が「シメオン」に時折現れる</td>
+<td>第十章・第十三章 / 約53%・68%</td>
+<td>変装の細部の綻びだが、その都度物語の流れに紛れ込んでしまう</td>
+</tr>
+<tr>
+<td>3</td>
+<td>ヤ・ボン（Ya-Bon、パトリスのセネガル人護衛）が「シメオン」に対して異常なまでの警戒心を示す</td>
+<td>第八章以降 / 約42%以降</td>
+<td>動物的な直感による不信——感情レベルでの早期警告</td>
+</tr>
+<tr>
+<td>4</td>
+<td>シメオンのコラリーへの態度が支配欲と恐怖の混在であり、保護者というより監視者に近い</td>
+<td>第七〜十六章を通じて</td>
+<td>「守護者」と「牢番」の間の曖昧さが、彼の真の動機を予告している</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_7">偽の手がかり（ミスリード）</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（章／割合）</th>
+<th>誤誘導の方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>シメオンの「老い」の完璧な演技：震える手・濁った眼差し・記憶力の衰え</td>
+<td>前半全体</td>
+<td>読者に彼を無害な老人として固定観念を植え付け、疑いの閾値を下げる</td>
+</tr>
+<tr>
+<td>2</td>
+<td>複数の通行人と警官が「エサレスの死亡を目撃・確認した」</td>
+<td>第六章 / 約32%</td>
+<td>公式の確認によってエサレスがまだ生きている可能性を排除したと読者に思わせる</td>
+</tr>
+<tr>
+<td>3</td>
+<td>シメオンが「危険を冒して」パトリスに情報を伝え、部外者の味方として振る舞う</td>
+<td>第十一章 / 約58%</td>
+<td>彼が「善人」という印象を強化し、パトリスが遭遇する危険を別の勢力のせいにさせる</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="where">真相二：黄金の三角形の隠し場所（where）</h3>
+<ul>
+<li><strong>手がかり収束点：約95%</strong></li>
+<li>答え：千八百袋の金貨は三角形に配置され、ベルトゥ埠頭（Berthou's Wharf）のありふれた砂山の下に隠されていた。「黄金の三角形」という名はまさに砂山が地上に形作る三角形の輪郭を指している——財宝はパリの市街地の、川岸の衆人環視の場所で、誰にも気づかれることなく静かに眠り続けていたのだ。</li>
+</ul>
+<h4 id="_8">関鍵手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（章／割合）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>エサレスの秘密文書に「ベルトゥ」という地名が記されている</td>
+<td>第九章 / 約47%</td>
+<td>地名の初出だが、読者にはその重要性を判断することが難しい</td>
+</tr>
+<tr>
+<td>2</td>
+<td>パトリスが埠頭付近で夜間に人影が動くのを何度も目撃するが、目的を突き止められない</td>
+<td>第十二〜十四章 / 約63〜74%</td>
+<td>埠頭が「現場」としての意味を蓄積し始めるが、具体的な場所はまだ曖昧</td>
+</tr>
+<tr>
+<td>3</td>
+<td>断片的な地図の破片に三角形の印があり、砂山の輪郭と一致する</td>
+<td>第十六章 / 約84%</td>
+<td>幾何学的な手がかりが登場するが、「砂山が隠れ蓑」という認識はまだ欠けている</td>
+</tr>
+<tr>
+<td>4</td>
+<td>ルパン（ドン・ルイス）が現地を踏査し、砂山の三角形の輪郭が自然のものではないと確認</td>
+<td>第十八〜十九章 / 約95%</td>
+<td><strong>収束点</strong>——砂山こそ金庫であり、公開こそが隠蔽であると完全に明らかになる</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_9">補助手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（章／割合）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>埠頭の作業員がこの砂山の由来について曖昧な説明しかできず、前後で矛盾がある</td>
+<td>第十三章 / 約68%</td>
+<td>砂山に人為的な介入があることを示唆するが、読者には見落とされやすい</td>
+</tr>
+<tr>
+<td>2</td>
+<td>黄金袋に特殊な封印があり、埠頭倉庫の一部の資材に付いた印と一致する</td>
+<td>第十五章 / 約79%</td>
+<td>物流追跡の手がかりで、黄金と埠頭地区を物理的に結びつける</td>
+</tr>
+<tr>
+<td>3</td>
+<td>エサレス／偽シメオンが「公開の場所こそ最も安全だ」という趣旨の言葉を含みを持たせて述べる</td>
+<td>第十一章 / 約58%</td>
+<td>隠匿の論理についての暗示：目立つ場所ほど誰も調べない</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_10">偽の手がかり（ミスリード）</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（章／割合）</th>
+<th>誤誘導の方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>パトリスが黄金は豪邸の地下室や秘密の部屋に隠されていると長く疑う</td>
+<td>第八〜十五章 / 前中盤を通じて</td>
+<td>読者がパトリスの視線を追うことで「密室こそが答え」と誤信する</td>
+</tr>
+<tr>
+<td>2</td>
+<td>セーヌ川の船舶を指し示す手がかり（パトリスが半章かけて追跡する）</td>
+<td>第十二章 / 約63%</td>
+<td>読者の注意を動く船に向けさせ、固定された場所という真実から遠ざける</td>
+</tr>
+<tr>
+<td>3</td>
+<td>競合勢力（ドイツのスパイ・エジプトの商人集団）の捜索が一貫して郊外を指している</td>
+<td>第十章・第十四章 / 約53%・74%</td>
+<td>各方面の「誤情報」が積み重なり、誤った集団的合意を形成する</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="whydunit">真相三：パトリスとコラリーの真の出生（whydunit）</h3>
+<ul>
+<li><strong>手がかり収束点：約92%</strong></li>
+<li>答え：パトリスの父アルマン・ベルヴァル（Armand Belval）とコラリーの母はかつて深く愛し合っていたが、二十年前に同じ陰謀によって相次いで命を落とした。本物のシメオン（アルマン・ベルヴァル）は長年の偽りの身分でコラリーを守り続け、自分と旧愛の敵に復讐する機会を待っていた。パトリスとコラリーが運命的に惹かれ合うのは、親世代の未完の物語の続きに他ならない。</li>
+</ul>
+<h4 id="_11">関鍵手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（章／割合）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>パトリスがコラリーの部屋で古い写真を見つける。そこには男女が幼子を抱いている姿が写っている</td>
+<td>第四章 / 約21%</td>
+<td>写真は出生の謎の核心的な物証だが、この時点では身元を確認できない</td>
+</tr>
+<tr>
+<td>2</td>
+<td>コラリーのロケットの中に男の子の小さな写真があり、パトリスの幼少期の姿と一致する</td>
+<td>第七章 / 約37%</td>
+<td>二十年前の繋がりが浮かび上がり始めるが、偶然か意図的なものかの判断が難しい</td>
+</tr>
+<tr>
+<td>3</td>
+<td>アルマン・ベルヴァルの遺品の中に手紙があり、「私は彼女のために息子を遺し、彼女は私のために娘を遺した」と書かれている</td>
+<td>第十七章 / 約89%</td>
+<td><strong>収束点に近い重要な手紙</strong>——親世代の感情的な繋がりを確立する</td>
+</tr>
+<tr>
+<td>4</td>
+<td>ルパンが突き止める：コラリーの母とアルマン・ベルヴァルは同じ年にエサレス一味に殺され、黄金は二人が協力して戦時の愛国活動のために集めたものだった</td>
+<td>第十九章 / 約97%</td>
+<td><strong>最終収束点</strong>——完全な出生の連鎖</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_12">補助手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（章／割合）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>パトリスとコラリーが初めて文通した時から、両者の間に論理を超えた「既知感」がある</td>
+<td>第一章 / 約5%</td>
+<td>運命の伏線——感情的に血縁の呼応を暗示する</td>
+</tr>
+<tr>
+<td>2</td>
+<td>シメオン（本物のアルマン）がコラリーを見る目に、時として使用人の従順さではなく父親の優しさが宿る</td>
+<td>第三章・第五章 / 約16%・26%</td>
+<td>最も見落とされやすい感情的手がかり。読者はすでに「彼は善人だ」という認識を確立しているため</td>
+</tr>
+<tr>
+<td>3</td>
+<td>エサレスにとってコラリーとの結婚は愛情ではなく監視の手段であり、黄金に近づけておく必要があった</td>
+<td>第二章 / 約10%</td>
+<td>動機面での早期示唆：彼女は妻であるだけでなく駒でもある</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_13">偽の手がかり（ミスリード）</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（章／割合）</th>
+<th>誤誘導の方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>前半、コラリーの写真がエサレスとの家族の歴史を記録したものだと読者に思わせる</td>
+<td>第三〜七章</td>
+<td>核心物証の解釈を「エサレス陣営」の物語へと誘導し、親世代の恋愛という真実から遠ざける</td>
+</tr>
+<tr>
+<td>2</td>
+<td>パトリスが「父の行方に関する」匿名の情報を受け取るが、完全に見当違いの人物を指している</td>
+<td>第九章 / 約47%</td>
+<td>パトリス（と読者）の本当の身元の謎への追跡力を分散させる</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_14">推理経路の再構築</h2>
+<p><strong>第一の推理経路：偽シメオンの真の正体</strong></p>
+<p>これは本書で最も精巧な謎局である。第六章（約32%）でエサレスが「死亡」した後、ルブランはすぐさま読者の注意を外部の脅威に向け、シメオンの行動の変化を忙しないアクションの流れの中に紛れ込ませる。真の疑惑を抱かせる閾値には三段階ある。第一の関門（約42%）はヤ・ボンがシメオンに異常な警戒心を示す場面で、注意深い読者はここで初めて疑問を持つかもしれない。第二の関門（約53%）はシメオンが豪邸の秘密通路を知りすぎているという綻びであり、事後的に合理化されやすい（「長年仕えてきたのだから当然知っているはず」）が、エサレスが生前これらの通路を掌握していたことと精確に照合すれば論理が揺らぎ始める。第三の関門（約79%）は写真という物証の登場であり、最後の推理材料を提供するが、「目の前の老人こそエサレス本人」という結論に飛躍するには、現実にはまず起こらないような身元の入れ替えという仮説が必要だ——これがまさにルブランがこの謎を解かせまいとした核心的な設計である。大半の読者はすべての材料を手にしていてもそれほど劇的な推論を下す勇気が持てず、第十八章でルパンが直接答えを告げるまで待つことになる。</p>
+<p><strong>第二の推理経路：黄金の隠し場所</strong></p>
+<p>黄金の謎の逆説は、その答えがあまりにも「正しすぎる」ことにある——衆人環視の下に置かれた砂山は、推理文学における「最も危険な場所こそ最も安全な場所」（ポーが「盗まれた手紙」で用いた論理と同じ）の変奏だ。読者が意識的に地名の手がかりを追っていれば、「ベルトゥ」が第九章に登場し、第十二〜十四章に繰り返し現れることで、重要な場所として確立できるはずだ。しかし「砂山」を隠匿装置として理解するには、「屋外の公共の場所に偽装する」という直感に反した仮定を同時に受け入れる必要がある。この思考の飛躍がなければ、手がかりは収束しない。ルパンが終章で現地を示してみせて初めて、大半の読者は膝を打つことになる。</p>
+<p><strong>第三の推理経路：親世代の出生の秘密</strong></p>
+<p>この経路はほぼ「感情的」なものであり、純粋な論理によるものではない。写真・ロケット・シメオンの眼差し・パトリスとコラリーの間の言いようのない親密さ——これらの手がかりはすべて「運命」という物語的枠組みを指し示している。読者が第十七章の遺書が登場する前に「アルマンこそ本物のシメオンであり、パトリスの父である」と自力で推論するには、三つの仮定を同時に成立させる必要がある：本物のシメオンはすでに死んでいる、偽シメオンはエサレスである、アルマンが父親だ。この三つは互いに欠かせないが、終章以前にはいずれも決定的なテキスト上の裏付けを持たない。</p>
+<hr>
+<h2 id="_15">補足説明</h2>
+<p><strong>『黄金の三角形』がルブランのシリーズに占める特別な位置</strong></p>
+<p>本書は1917年、第一次世界大戦が終盤を迎えつつある重要な時期に刊行された。ルブランは戦時の雰囲気を謎局の設計に織り込んでいる——黄金争奪の背後には国際スパイ活動・戦時物資管制・ナショナリズムの感情があり、これらの要素が本書にスパイ小説と伝統的な推理という二重構造を持たせている。パリの病院で療養する退役軍人というパトリス・ベルヴァルの姿は、当時のフランスの読者に強いリアリティをもって響いたことだろう。</p>
+<p>注目すべきは、本書においてアルセーヌ・ルパンがほぼ「謎解き機械」として登場し、主人公の座にはないことだ。これはルブランのシリーズの中で実験的な構造に属する：「普通の人間」パトリスを闇の中で手探りさせ、最後に超人的な探偵が一気に場を清める。この設計は緊張感と謎を高める一方で、読者が自力で推論できる可能性を削いでもいる——読者にはルパンの能力がないので、彼が見えない・分からない部分は、我々にも知る術がほとんどない。これが本書の推理難易度と霧の濃度が極めて高くなる直接の原因である。</p>
+<p><strong>「公開こそが隠蔽」——ルブランのポーへのオマージュ</strong></p>
+<p>黄金が公開の砂山の下に隠されているという趣向は、エドガー・アラン・ポーが1844年に書いた短編「盗まれた手紙」（The Purloined Letter）の核心的論理を呼び起こす：最も重要なものは最も目立つ場所に置かれている、なぜなら誰も目立つ場所は捜索しないからだ。ルブランは本書においてこの論理を「一通の手紙」から「千八百袋の黄金」へと拡大し、「目立つ場所」を室内の机上から都市全体の川岸へと広げている。その規模の拡張ぶりは、読む者を驚嘆させずにはおかない。</p>
+<p><strong>「モルグ街の殺人」シリーズとの比較：謎の答えが「空間」であり「人物」ではない</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>盗まれた手紙（ポー）</th>
+<th>黄金の三角形（ルブラン）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>隠匿の論理</td>
+<td>目立つ場所こそが隠し場所</td>
+<td>目立つ場所こそが隠し場所</td>
+</tr>
+<tr>
+<td>隠されたもの</td>
+<td>一通の手紙</td>
+<td>千八百袋の黄金</td>
+</tr>
+<tr>
+<td>「目立つ」の規模</td>
+<td>室内</td>
+<td>都市の景観</td>
+</tr>
+<tr>
+<td>解明の方法</td>
+<td>推論分析</td>
+<td>現地踏査</td>
+</tr>
+</tbody>
+</table>
+<p><strong>顔の入れ替えという謎局の技術的分析</strong></p>
+<p>エサレスがシメオンに成りすます設計は、1917年には非常に先鋭的な手法だった。ルブランは偽名・偽身分といった平凡な変装を使わず——生きている人間が死んだ別の人間の社会的立場を完全に乗っ取り、外見・記憶・人間関係まで引き継ぐという手法を用いた。この「生きた者が死んだ者と入れ替わる」という謎局は、二十年後にアガサ・クリスティーが複数の作品（例えば『予告殺人』の身元の入れ替わり）において完全な物語手法として発展させることになる。ルブランの功績は、演劇的効果は最大だが読者に「公平に推論させる」ことが最も難しい方法を選んだことにある：入れ替わりの時点（第六章）を密度の高いアクションの中に埋め込み、読者が次の危機を追うのに夢中になっている間に「あの老人が別人に入れ替わった」という可能性を自問する余裕を与えない。</p>
+<p><strong>日本の読者への補足</strong></p>
+<p>「アモンティリャードの樽」が希少な酒を誘惑の道具とするなら、『黄金の三角形』は「黄金」という永遠の欲望の象徴を謎局の核心に据えている。注目に値するのは、物語の中の黄金が「愛国的な目的」のためのものだという点だ——設定では連合軍の戦費を支援するために秘密裡に集められたものであり、黄金の追求を純粋な強欲から政治的悲劇の色彩を帯びた使命へと昇華させている。第一次世界大戦の廃墟の中で、金貨は砂山の下に静かに眠る：親世代が命と引き換えに得た資産が、川のほとりで次の世代が受け継ぐのを待ち続けている。ルブランは「黄金の三角形」という冷徹な物質的象徴を、最終的に親子の絆と歴史の傷跡の隠喩へと変えてみせるのだ。</p>
+    <a href="../index.html" class="back-link">← ホームに戻る</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">推理解剖室</p>
+    <p>五人の作家・八十八の作品・135年にわたる推理文学の難易度の進化。</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
