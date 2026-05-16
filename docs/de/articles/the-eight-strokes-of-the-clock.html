@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Achtmal schlägt die Uhr（The Eight Strokes of the Clock）— Deduktionsanalyse — Detektivanalyse</title>
+<meta name="description" content="Die Sammlung ist um das Motiv des „achtmaligen Glockenschlags" aufgebaut: Eine alte Uhr in einem verfallenen Schloss schlägt plötzlich acht Mal, woraufhin der D">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-eight-strokes-of-the-clock.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-eight-strokes-of-the-clock.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-eight-strokes-of-the-clock.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-eight-strokes-of-the-clock.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-eight-strokes-of-the-clock.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-eight-strokes-of-the-clock.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-eight-strokes-of-the-clock.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-eight-strokes-of-the-clock.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Detektivanalyse</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Start</a>
+        <a href="../index.html#latest">Neueste</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Sprache" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 Deutsch</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-eight-strokes-of-the-clock.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-eight-strokes-of-the-clock.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-eight-strokes-of-the-clock.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/the-eight-strokes-of-the-clock.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/the-eight-strokes-of-the-clock.html">한국어</a>
+      <a class="lang-item active" data-lang="de" href="/Detective-Analysis/de/articles/the-eight-strokes-of-the-clock.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/the-eight-strokes-of-the-clock.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/the-eight-strokes-of-the-clock.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">Maurice Leblanc · 1923</div>
+    <h1>Achtmal schlägt die Uhr（The Eight Strokes of the Clock）— Deduktionsanalyse</h1>
+    <div class="subtitle">Maurice Leblanc（莫里斯·盧布朗） · Kurzgeschichtensammlung（acht Erzählungen）</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Deduzierbarkeit</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Nebelgrad</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="achtmal-schlagt-die-uhrthe-eight-strokes-of-the-clock-deduktionsanalyse">Achtmal schlägt die Uhr（The Eight Strokes of the Clock）— Deduktionsanalyse</h1>
+<h2 id="grundinformationen">Grundinformationen</h2>
+<ul>
+<li>Autor：Maurice Leblanc（莫里斯·盧布朗）</li>
+<li>Erscheinungsjahr：1923</li>
+<li>Typ：Kurzgeschichtensammlung（acht Erzählungen）</li>
+<li>Detektiv：Prinz Renine（Prince Renine）——tritt als Pseudonym für Arsène Lupin auf</li>
+<li>Art des zentralen Rätsels：whodunit / howdunit（variiert je nach Erzählung）</li>
+</ul>
+<hr>
+<h2 id="gesamtbewertung-der-deduzierbarkeit">Gesamtbewertung der Deduzierbarkeit</h2>
+<table>
+<thead>
+<tr>
+<th>Indikator</th>
+<th>Bewertung</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deduzierbarkeit（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>Durchschnittlicher Konvergenzpunkt ca. 75% — die entscheidenden Hinweise für die Lösung jeder Erzählung tauchen meist erst in der zweiten Hälfte vollständig auf und erfordern erhebliche logische Sprünge</td>
+</tr>
+<tr>
+<td>Nebelgrad（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>Mittlere Irreführung: Leblancs Nebel beruht nicht auf falschen Spuren, sondern auf „selektiver Erzählung" — der Detektiv weiß weit mehr als der Leser, und das eigentlich Entscheidende wird stets als letzter Schlag enthüllt</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Zum besonderen Charakter dieser Sammlung:</strong> Renine（Lupin）ist Handelnder, nicht Beobachter. Er setzt in großem Maße psychologischen Druck, List und Improvisation ein; viele „Lösungen" werden im Text nicht schrittweise durch Hinweise aufgebaut, sondern von ihm durch übermächtigen Willen erzwungen. Das macht die Sammlung eher zum „Kriminalthriller" als zur reinen Detektivgeschichte. Dennoch hat Leblanc in einigen Erzählungen Hinweise versteckt, die ein aufmerksamer Leser selbst entschlüsseln kann. Im Folgenden werden die vier Erzählungen mit dem höchsten Detektivgehalt eingehend analysiert.</p>
+</blockquote>
+<hr>
+<h2 id="zusammenfassung">Zusammenfassung</h2>
+<p>Die Sammlung ist um das Motiv des „achtmaligen Glockenschlags" aufgebaut: Eine alte Uhr in einem verfallenen Schloss schlägt plötzlich acht Mal, woraufhin der Detektiv Renine（also Lupin）mit der Protagonistin Hortense Daniel eine Wette eingeht — acht Abenteuer, bei denen jeweils ein Rätsel gelöst werden muss; als Abschluss soll ein gestohlenes Amulett zurückgebracht werden. Gelingt alles, schuldet Hortense ihm eine „angemessene Gegenleistung".</p>
+<p>Die acht Geschichten kreisen um Mord, Serienmord, vorgetäuschten Tod, Entführung und versteckte Beute; die Schauplätze reichen von der normannischen Landschaft über Paris bis zu bretonischen Gütern und den Ufern der Seine. Renine löst jeden Fall mit überlegener Logik und Entschlossenheit — gelegentlich auch mit List — und entwickelt dabei eine wachsende Zuneigung zu Hortense. Die Sammlung endet damit, dass die Uhr zum achten Mal schlägt und die beiden ein Paar werden.</p>
+<hr>
+<h2 id="analyse-der-einzelnen-erzahlungen">Analyse der einzelnen Erzählungen</h2>
+<hr>
+<h3 id="zweite-erzahlung-die-wasserflaschethe-water-bottle">Zweite Erzählung: Die Wasserflasche（The Water-Bottle）</h3>
+<h4 id="grundinformationen_1">Grundinformationen</h4>
+<ul>
+<li>Art des zentralen Rätsels：whodunit + howdunit（Ursache des Brandes）</li>
+<li>Äußerer Rahmen：Jacques Aubrieux wurde zum Tod verurteilt, weil er angeblich seinen Cousin erschlagen und 60.000 Francs gestohlen hat; die Hinrichtung ist für den nächsten Morgen angesetzt.</li>
+</ul>
+<hr>
+<h4 id="wahrheit-eins-wer-ist-der-wahre-taterwhodunit">Wahrheit Eins: Wer ist der wahre Täter?（whodunit）</h4>
+<ul>
+<li><strong>Konvergenzpunkt: ca. 38%</strong></li>
+<li>Antwort: Der Jugendfreund Gaston Dutreuil. Er ist der Einzige, der gleichzeitig zwei Dinge wusste: dass der Cousin 60.000 Francs bei sich hatte und dass Jacques an jenem Tag nicht ausreiten würde. Während er im Kino angeblich „fehlte", fuhr er zwei Stunden lang mit Jacques' Motorrad nach Suresnes, beging dort den Mord und tauchte danach seelenruhig am Kinoausgang auf.</li>
+</ul>
+<h5 id="schlusselhinweise">Schlüsselhinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Madame Aubrieux teilte Dutreuil telefonisch mit, dass der Cousin soeben 60.000 Francs erhalten hatte und dass Jacques heute nicht ausreiten werde</td>
+<td>ca. 20%</td>
+<td>Der Einzige, der beide Bedingungen gleichzeitig erfüllte, war Dutreuil — das ist der entscheidendste Hinweis der gesamten Erzählung, doch er ist so beiläufig eingebettet, dass der Leser aktiv auf die „Einzigartigkeit" achten muss</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Zwei Damen sahen Dutreuil die gesamte Zeit über nicht im Kino</td>
+<td>ca. 40%</td>
+<td>Ein Zeitfenster von zwei Stunden — genug, um mit dem Motorrad nach Suresnes und zurück zu fahren; ein direkter Hinweis, der sein Alibi widerlegt</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Dutreuils Dachgeschoss-Zimmer fing ausgerechnet am Tag des Mordes Feuer</td>
+<td>ca. 68%</td>
+<td>Der Zeitpunkt ist zu auffällig; das Feuer bestätigt mit hoher Wahrscheinlichkeit, dass er dort die Geldscheine versteckt hatte</td>
+</tr>
+</tbody>
+</table>
+<h5 id="hilfshinweise">Hilfshinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Dutreuil erbleichte, als er im Restaurant die Zeitung las, und verließ eilig das Lokal</td>
+<td>ca. 8%</td>
+<td>Seine Reaktion geht weit über „Sorge um einen Freund" hinaus — sie deutet auf persönliche Betroffenheit hin</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Dutreuils Wohnung war auffallend ordentlich und jeder Gegenstand hatte seinen festen Platz</td>
+<td>ca. 43%</td>
+<td>Charaktermerkmal: extremes Kontrollbedürfnis — ein solcher Mensch würde niemals tatenlos zusehen, wie sein „Zelt" zusammenbricht</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Als die Feuermeldung eintraf, huschte ein kurzes Lächeln über Dutreuils Lippen</td>
+<td>ca. 69%</td>
+<td>Derjenige, der lächelt, ist der Brandstifter — ein entscheidender Bestätigungsmoment</td>
+</tr>
+</tbody>
+</table>
+<h5 id="falsche-fahrten">Falsche Fährten</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Irreführungsrichtung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Am Tatort fanden sich Motorradspuren, ein Taschentuch und eine Pistole von Jacques</td>
+<td>Hintergrundinformation</td>
+<td>Lassen Gericht（und Leser）glauben, Jacques sei der Täter</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Dutreuil zeigt gegenüber seinem Freund Jacques tiefe Zuneigung und echten Schmerz</td>
+<td>ca. 10–30%</td>
+<td>Der Leser schließt ihn daher als möglichen Täter aus</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="wahrheit-zwei-wie-konnte-das-feuer-ohne-menschliche-hilfe-entstehenhowdunit">Wahrheit Zwei: Wie konnte das Feuer ohne menschliche Hilfe entstehen?（howdunit）</h4>
+<ul>
+<li><strong>Konvergenzpunkt: ca. 90%</strong></li>
+<li>Antwort: Dutreuil tränkte den Hutkarton, die Geldscheine und dünnes Papier mit Brennflüssigkeit. Bevor er die Wohnung verließ, stellte er eine bauchige Kristallwasserflasche auf die sonnenbeschienene Fensterbank — die Flasche wirkte als Brennglas und entzündete das Material ohne menschliches Zutun.</li>
+</ul>
+<h5 id="schlusselhinweise_1">Schlüsselhinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Dutreuil öffnete die Wasserflasche neben der Fensterbank, trank einige Schlucke und ließ sie dort stehen</td>
+<td>ca. 56%</td>
+<td>Der Autor beschreibt diese Geste bewusst, betont sie aber nicht — der Leser kann ihre Bedeutung in diesem Moment kaum erkennen</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Vor der Durchsuchung stand Dutreuil lange mit dem Rücken zur Menge am Fenster und ließ sich von der Sonne bescheinen</td>
+<td>ca. 55%</td>
+<td>Er berechnet offenbar den Winkel und den Zeitpunkt des Sonnenlichts</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Nach dem Löschen des Feuers fanden sich nur der verkohlte Hutkarton und dünnes Papier — kein Zünder war zu sehen</td>
+<td>ca. 72%</td>
+<td>Die einzige schlüssige Erklärung ist „Fernzündung", und im Raum stand genau eine bauchige Wasserflasche</td>
+</tr>
+</tbody>
+</table>
+<h5 id="falsche-fahrten_1">Falsche Fährten</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Irreführungsrichtung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Dutreuil verließ die Wohnung vor aller Augen — es sei „unmöglich", dass er das Feuer gelegt habe</td>
+<td>ca. 65%</td>
+<td>Lässt alle（einschließlich der Polizei）ihn als Brandstifter ausschließen</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="rekonstruktion-des-deduktionswegs">Rekonstruktion des Deduktionswegs</h4>
+<p><strong>whodunit-Pfad:</strong></p>
+<p>Der Leser sollte bereits bei ca. 20% aufhorchen: Madame Aubrieux teilte am Telefon drei Personen gleichzeitig beide Informationen mit（60.000 Francs, Jacques bleibt zu Hause）, und Dutreuil war eine davon. Bei 40% — dem „zweistündigen Verschwinden im Kino" — lässt sich die Logik bereits schließen: Er ist der Einzige mit Gelegenheit, Motiv und Mittel（das Motorrad stand im Schuppen）. Renine benennt das Ergebnis vor dem 70%-Punkt deutlich, aber ein aufmerksamer Leser kann es vor dem 40%-Punkt selbst ableiten.</p>
+<p><strong>howdunit（Wasserflasche）-Pfad:</strong></p>
+<p>Diesen Weg kann der Leser nicht selbst zurückverfolgen — das Detail der Wasserflasche auf der Fensterbank ist so unauffällig wie eine gewöhnliche Szenerienotiz eingebettet. Das ist Leblancs bewusstes „faires Verstecken": Der Hinweis ist vorhanden, doch die Verbindung zum Brennglas-Prinzip ist vor der Enthüllung nahezu unvorstellbar. Dieses Rätsel gleicht eher einem „hinterher staune ich, wie einfach das war" als einem „das hätte ich eigentlich selbst wissen müssen".</p>
+<hr>
+<h4 id="anmerkungen">Anmerkungen</h4>
+<p>Das Glanzstück dieser Erzählung ist das „Räsonieren unter moralischem Zwang": Renine besitzt keinerlei handfeste Beweise, nur Intuition und logische Schlussfolgerungen, muss aber noch in der Nacht vor der Hinrichtung die Wahrheit erzwingen. Er täuscht vor, den Versteck der Geldscheine zu kennen, lockt den Verdächtigen so hervor, vertauscht den Hutkarton, um eine gefälschte Szene zu schaffen, und bringt ihn schließlich durch die Illusion „Sie haben sich bereits verraten" zur schriftlichen Geständnisabgabe — das ist Strategie, keine Beweisführung. Leblanc fragt damit implizit: Ist Täuschung gerechtfertigt, wenn die Wahrheit feststeht, aber der Beweis fehlt?</p>
+<hr>
+<hr>
+<h3 id="funfte-erzahlung-therese-und-germainetherese-and-germaine">Fünfte Erzählung: Thérèse und Germaine（Thérèse and Germaine）</h3>
+<h4 id="grundinformationen_2">Grundinformationen</h4>
+<ul>
+<li>Art des zentralen Rätsels：howdunit（Verbrechen im geschlossenen Raum）+ whydunit</li>
+<li>Äußeres Rätsel：Jacques d'Ormeval betritt vor aller Augen eine geschlossene Strandhütte, schließt sich ein und wird kurz darauf mit einem Stich in den Rücken tot aufgefunden — niemand ist eingetreten, niemand hat die Hütte verlassen, die Tatwaffe ist verschwunden. Wer ist der Mörder?</li>
+</ul>
+<hr>
+<h4 id="wahrheit-eins-das-ratsel-des-geschlossenen-raums-wie-wurde-dormeval-in-der-verschlossenen-hutte-getotethowdunit">Wahrheit Eins: Das Rätsel des geschlossenen Raums — wie wurde d'Ormeval in der verschlossenen Hütte getötet?（howdunit）</h4>
+<ul>
+<li><strong>Konvergenzpunkt: ca. 72%</strong></li>
+<li>Antwort: Es gibt keinen geschlossenen Raum. D'Ormeval war bereits verletzt, bevor er die Hütte betrat — während er unten an der Treppe nach dem Schlüssel bückte, stieß ihm seine Frau Thérèse von hinten ein Messer in den Rücken. Er richtete sich auf, tat so, als ob nichts wäre, ging zur Hütte und starb dort still. Die physikalische Grundlage dieses Rätsels ist die Tatsache, dass ein Mensch nach einer Stichverletzung noch kurze Zeit handlungsfähig bleibt.</li>
+</ul>
+<h5 id="schlusselhinweise_2">Schlüsselhinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Das Ehepaar bückte sich gemeinsam am Fuß der Treppe nach dem Schlüssel — für einen kurzen Moment bestand kein direkter Sichtkontakt zwischen ihnen und den Umstehenden</td>
+<td>ca. 30%</td>
+<td>Wer sich fragt, ob in diesem Moment etwas hätte geschehen können, erhält die Antwort „Ja" — das ist das Zeitfenster für den Mord</td>
+</tr>
+<tr>
+<td>2</td>
+<td>D'Ormeval ging danach normal zur Hütte und winkte sogar den Kartenspielern zu</td>
+<td>ca. 32%</td>
+<td>Dieses Detail soll betonen, dass „niemand nach einem Mord noch laufen kann" — doch tatsächlich muss eine Stichverletzung nicht sofort tödlich sein</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Die Hütte hat keine Fenster; von außen ist nichts einsehbar</td>
+<td>ca. 40%</td>
+<td>Das verstärkt den „Zimmer-ist-geschlossen"-Anschein, bedeutet aber im Umkehrschluss, dass ein Außenstehender nach seinem Eintreten unmöglich hätte zustechen können</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Renine fragt: „Wenn niemand hineingegangen ist, muss der Mord stattgefunden haben, bevor er hineinging"</td>
+<td>ca. 75%</td>
+<td>Das ist die logische Hauptachse der Erzählung; Renine löst das Rätsel des geschlossenen Raums durch Ausschlussverfahren</td>
+</tr>
+</tbody>
+</table>
+<h5 id="hilfshinweise_1">Hilfshinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Thérèse beobachtete danach „ruhig" von der Terrasse aus die Szene, bis die Nachricht kam und sie zusammenbrach</td>
+<td>ca. 35%</td>
+<td>Diese unnatürliche Ruhe steht im Gegensatz zu einer hysterischen Reaktion — sie verrät innere Anspannung und Schuldbewusstsein</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Germaine sagt: „Ich habe es in diesem Moment geahnt" — sie hat offenbar früh eine Verdächtige</td>
+<td>ca. 60%</td>
+<td>Germaine weiß mehr als der Leser; ihre Reaktion ist ein Zeiger auf den entscheidenden Hinweis</td>
+</tr>
+</tbody>
+</table>
+<h5 id="falsche-fahrten_2">Falsche Fährten</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Irreführungsrichtung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Das gesamte Rätsel wird als „Mord im geschlossenen Raum" gerahmt</td>
+<td>erste 70% der Erzählung</td>
+<td>Lässt den Leser nach Geheimgängen oder versteckten Mechanismen im Inneren suchen, anstatt außerhalb der Hütte zu denken</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Die Geschwister Astaing werden in der ersten Hälfte als Verschwörer dargestellt, die Thérèse töten wollen</td>
+<td>ca. 20%</td>
+<td>Lässt den Leser vermuten, sie hätten jemanden mit dem Mord beauftragt — das Gegenteil ist der Fall</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="wahrheit-zwei-woher-stammt-die-tatwaffe-und-wer-ist-die-taterinwhodunit">Wahrheit Zwei: Woher stammt die Tatwaffe, und wer ist die Täterin?（whodunit）</h4>
+<ul>
+<li><strong>Konvergenzpunkt: ca. 82%</strong></li>
+<li>Antwort: Die Ehefrau Thérèse hat zugestochen. Am Morgen fand sie zufällig ein Foto in der Tasche ihres Mannes — ihr eigenes Gesicht war durch das Gesicht von Germaine ersetzt worden, und ihre beiden Töchter schmiegten sich an die Nebenbuhlerin. Das löste ihren Zusammenbruch aus; mit einem Messer, das sie ursprünglich zur Selbstverteidigung bei sich trug, handelte sie in einem impulsiven Moment.</li>
+</ul>
+<h5 id="schlusselhinweise_3">Schlüsselhinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Germaine sagt: „Das Messer ist in Ihrer Tasche — es trägt das Blut Ihres Mannes"</td>
+<td>ca. 82%</td>
+<td>Das ist eine direkte und eindeutige Anklage; zum ersten Mal erfährt der Leser, wer die Tatwaffe besaß</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Nach Bekanntwerden des Falls tastete Frédéric Astaing unauffällig nach Thérèses Tasche</td>
+<td>ca. 58%</td>
+<td>Im Nachhinein klar: Er überprüfte das Messer, stahl nicht — das zeigt, dass die Geschwister die Wahrheit kannten</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Thérèse gesteht: Sie fand das Foto in der Jackentasche ihres Mannes, auf dem ihr eigenes Gesicht durch Germaines Gesicht ersetzt worden war</td>
+<td>ca. 88%</td>
+<td>Das Motiv wird endlich offenbart; der Leser erhält das vollständige psychologische Profil</td>
+</tr>
+</tbody>
+</table>
+<h5 id="falsche-fahrten_3">Falsche Fährten</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Irreführungsrichtung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Renine belauschte im Zug ein Gespräch, aus dem hervorging, „jemand plane, eine bestimmte Person zu töten"</td>
+<td>ca. 5%</td>
+<td>Der Leser nimmt an, das Opfer sei Thérèse und die Geschwister seien die Täter — in Wirklichkeit ist es genau umgekehrt</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Das Bild der trauernden Thérèse</td>
+<td>ca. 40–65%</td>
+<td>Ihr Schmerz wirkt zu echt, als dass der Leser sie für die Täterin halten würde</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="rekonstruktion-des-deduktionswegs_1">Rekonstruktion des Deduktionswegs</h4>
+<p><strong>howdunit-Pfad:</strong></p>
+<p>Diese Erzählung ist ein Logikrätsel, das sich auf einen einzigen Satz reduziert: „Niemand ist in die Hütte eingetreten" → „Der Mord geschah vor dem Eintreten". Bei 32% hat der Leser alle nötigen Voraussetzungen（niemand betrat oder verließ die Hütte nach d'Ormeval, kurzer blinder Winkel）, doch kaum jemand denkt in diesem Moment in diese Richtung, weil der Rahmen „geschlossener Raum" bereits fest gesetzt ist. Wer bei ca. 40% — als er liest, dass die Hütte völlig abgeschlossen war und man von außen nichts sehen konnte — aktiv nachfragt: „Aber wie ist er dann hineingekommen … Moment, könnte er beim Eintreten bereits verletzt gewesen sein?", kann das Rätsel vor dem 72%-Punkt selbst lösen.</p>
+<p><strong>whodunit-Pfad:</strong></p>
+<p>Wer Gelegenheit hatte und wer das Messer besaß, sind die entscheidenden Fragen. Thérèse ist die einzige Person, die im blinden Winkel bei ihrem Mann war（30%），und Germaines Reaktion — „Ich wusste es sofort"（60%）— ist so gut wie ein direkter Fingerzeig. Die Bestätigung folgt erst bei 82% durch den Hinweis auf das Messer.</p>
+<hr>
+<h4 id="anmerkungen_1">Anmerkungen</h4>
+<p>Diese Erzählung ist die strukturell dichteste der gesamten Sammlung. Leblanc verpackt in der „geschlossener Raum"-Hülle eine Familientragödie, die aus Liebe und Hass geboren ist, und macht „das Opfer schützt den Täter"（d'Ormeval weigert sich sterbend, seine Frau zu belasten）zum moralischen Kern. Die eigentliche Frage ist tiefer als das Rätsel selbst: Gilt die Gerechtigkeit noch, wenn der Mensch sich zum Schweigen entschließt? Renine entscheidet sich am Ende dafür, Thérèse laufen zu lassen — um der beiden Kinder willen. Das ist „Gerechtigkeit nach Lupin-Art": weder Gesetz noch Moral, sondern sein persönliches Gefühlsurteil.</p>
+<hr>
+<hr>
+<h3 id="sechste-erzahlung-die-dame-mit-der-axtthe-lady-with-the-hatchet">Sechste Erzählung: Die Dame mit der Axt（The Lady with the Hatchet）</h3>
+<h4 id="grundinformationen_3">Grundinformationen</h4>
+<ul>
+<li>Art des zentralen Rätsels：whodunit（Identität des Serienmörders）+ whydunit（Motiv）</li>
+<li>Hintergrund：Innerhalb von achtzehn Monaten verschwanden in den Pariser Vororten sechs Frauen; eine Woche später tauchten ihre Leichen auf — jede mit einer vertikalen Axtwunde in der Stirnmitte, Hände und Füße gefesselt, Kutschenspuren in der Nähe. Ein hinterlassenes Notizbuch enthüllt den Namen des nächsten Opfers: Hortense — die Protagonistin.</li>
+</ul>
+<hr>
+<h4 id="wahrheit-eins-wer-ist-der-morderwhodunit">Wahrheit Eins: Wer ist der Mörder?（whodunit）</h4>
+<ul>
+<li><strong>Konvergenzpunkt: ca. 85%</strong></li>
+<li>Antwort: Hermance, die frühere Ehefrau von M. de Lourtier-Vaneau — eine Frau, die ihr Mann heimlich in einer Privatklinik in Ville d'Avray unterbringen ließ. Er lebte mit einer anderen Frau zusammen und zahlte ihr unter dem Deckmantel einer Altersrente die Unterbringung, ohne sich zwanzig Jahre lang um sie zu kümmern.</li>
+</ul>
+<h5 id="schlusselhinweise_4">Schlüsselhinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Die Namen der sechs Opfer: Honorine, Hermione, Hilairie, Hortense … — alle beginnen mit H und haben acht Buchstaben</td>
+<td>ca. 30%</td>
+<td>Das Namensmuster ist der wichtigste Hinweis der Erzählung und vollständig öffentlich zugänglich. Ein aufmerksamer Leser kann dieses Detail vor Renine entdecken</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Die Tatwaffe ist ein „hatchet"（Axt）— ebenfalls mit H beginnend, wie die Namen der Opfer</td>
+<td>ca. 30%</td>
+<td>Bestätigt weiter: Der Mörder hat eine Obsession mit dem Buchstaben H / der Zahl 8</td>
+</tr>
+<tr>
+<td>3</td>
+<td>De Lourtier erbleichte und schwitzte, als er vom H-Namensmuster hörte</td>
+<td>ca. 78%</td>
+<td>Er erkennt etwas — der Leser sollte jetzt ahnen, dass er mit dem Mörder in Verbindung steht</td>
+</tr>
+<tr>
+<td>4</td>
+<td>De Lourtier enthüllt: Seine frühere Frau heiße Hermance, und sie sei geisteskrank</td>
+<td>ca. 88%</td>
+<td>Die vollständige Wahrheit tritt zutage: Hermance = H + 8 Buchstaben, und sie ist eine isoliert lebende Irrsinnige</td>
+</tr>
+</tbody>
+</table>
+<h5 id="hilfshinweise_2">Hilfshinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Die technische Ausführung aller Morde ist identisch: dieselben Stricke, dieselbe Stelle der Axthiebe, exakt gleiche Zeitabstände</td>
+<td>ca. 15%</td>
+<td>Mechanische Wiederholung ist ein Merkmal obsessiver Geisteskranker — das deutet darauf hin, dass der Täter ein Fanatiker ist, kein rationaler Krimineller</td>
+</tr>
+<tr>
+<td>2</td>
+<td>De Lourtiers alte Amme Felicienne ruft an, um für „Hermance" eine Haushälterin mit H-Namen zu finden</td>
+<td>ca. 72%</td>
+<td>Das zeigt, dass die Klinikumgebung Hermance den Kontakt zur Außenwelt und die Auswahl von Opfern ermöglicht</td>
+</tr>
+</tbody>
+</table>
+<h5 id="falsche-fahrten_4">Falsche Fährten</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Irreführungsrichtung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Der Mörder handelt nach präzisem Plan（Notizbuch, feste Zeitabstände, vorbereitete Leichenverstecke）— das wirkt wie rational geplante Kriminalität</td>
+<td>erste 60% der Erzählung</td>
+<td>Lässt Leser（und Polizei）glauben, der Mörder sei ein organisierter Verbrecher, kein pathologisch Wahnsinniger</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="wahrheit-zwei-das-motiv-des-morders-warum-totet-siewhydunit">Wahrheit Zwei: Das Motiv des Mörders — warum tötet sie?（whydunit）</h4>
+<ul>
+<li><strong>Konvergenzpunkt: ca. 90%</strong></li>
+<li>Antwort: Hermances zwei Kinder starben in ihrer Kindheit vor ihren Augen unter den Rädern einer Kutsche. Seitdem leidet sie an extremer Schlaflosigkeit — vierundzwanzig Stunden am Tag sieht sie den Tod ihrer Kinder vor sich und kann nicht schlafen. Als sie zufällig entdeckte, dass sie nach dem Erwürgen von Tieren einschlafen kann, entwickelte sich eine fixe Idee: Eine Frau mit einem ähnlichen Namen（H-Anfangsbuchstabe, 8 Buchstaben）zu töten bedeutet, ihr den Schlaf zu „stehlen" — das verschafft ihr für etwa hundert Tage Erholung.</li>
+</ul>
+<h5 id="schlusselhinweise_5">Schlüsselhinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Hermance konnte nach dem Erwürgen von Tieren schlafen — eine Beobachtung de Lourtiers aus früheren Jahren</td>
+<td>ca. 90%</td>
+<td>Enthüllt die wahnsinnige Logik „Töten = Schlaf stehlen" als Kern des Motivs</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Die Zahlen im Notizbuch（132, 118, 128 …）geben an, wie viele Nächte jedes Opfer ihr Schlaf brachte</td>
+<td>ca. 90%</td>
+<td>Jedes Opfer bringt unterschiedlich viele Schlafonächte — Hermance hat ihr eigenes irrsinniges Berechnungssystem</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="rekonstruktion-des-deduktionswegs_2">Rekonstruktion des Deduktionswegs</h4>
+<p><strong>whodunit-Pfad:</strong></p>
+<p>Das Glanzstück dieser Erzählung ist der „Namensmuster"-Hinweis. Wenn die Opferliste bei 30% erscheint und der Leser bemerkt, dass Honorine（8 Buchstaben）, Hermione（8 Buchstaben）, Hortense（8 Buchstaben），Hilairie（8 Buchstaben）— und auch die Tatwaffe hatchet（H-Anfang）— alle dasselbe Muster aufweisen, kann er fast eigenständig ableiten: „Der Mörder hat eine H/8-Obsession." Vom Obsessionsmerkmal zur „wahnsinnigen Frau" und weiter zur „in einer Klinik versteckten Frau" zu kommen, erfordert jedoch Renines Logik bis zum 88%-Punkt.</p>
+<p><strong>whydunit-Pfad:</strong></p>
+<p>Das Motiv kann vom Leser praktisch nicht vorausgeahnt werden. Die wahnsinnige These „Schlaf durch Töten stehlen" hat keine textlichen Hinweise, ist ein Produkt irrer Logik und kann nur mitgeteilt, nicht hergeleitet werden. Das lässt den whydunit-Konvergenzpunkt auf 90% ansteigen — das schwierigste Rätsel der gesamten Sammlung.</p>
+<hr>
+<h4 id="anmerkungen_2">Anmerkungen</h4>
+<p>Diese Erzählung hat ihren eigenen Platz in der Geschichte des Detektivromans: Sechs Morde, identische Methode, keinerlei konventionelles Motiv — alle gängigen Rahmen für „rationale Motivation" versagen vollständig. Renines Durchbruch besteht nicht darin, Spuren zu verfolgen, sondern zunächst festzustellen: „Der Täter muss wahnsinnig sein" — um dann mit der Logik des Wahnsinnigen rückwärts zu schließen, wie die Opfer ausgewählt wurden. Diese Methode, „Wahnsinn mit Wahnsinn zu brechen", war 1923 ein recht avantgardistischer Ansatz.</p>
+<p>Noch bemerkenswerter: Hortense selbst wird als nächstes Opfer auserkoren, weil ihr Name Hermances Kriterien entspricht. Das verwandelt eine abstrakte Namensregel schlagartig in eine unmittelbare Frage auf Leben und Tod — die stärkste erzählerische Wendung der Erzählung.</p>
+<hr>
+<hr>
+<h3 id="siebte-erzahlung-fuspuren-im-schneefootprints-in-the-snow">Siebte Erzählung: Fußspuren im Schnee（Footprints in the Snow）</h3>
+<h4 id="grundinformationen_4">Grundinformationen</h4>
+<ul>
+<li>Art des zentralen Rätsels：howdunit（physikalisch scheinbar unmögliches Rätsel）</li>
+<li>Hintergrund：Nach einem nächtlichen Schneefall fallen auf dem Gut von Mathias de Gorne drei Schüsse; am nächsten Morgen zeigt der Hof nur Fußspuren, die herführen, aber keine, die wegführen. Am Brunnen gibt es Spuren eines Kampfes; in der Nähe findet sich die Pistole von Jérôme Vignal（drei Schüsse abgefeuert）. Mathias ist spurlos verschwunden, und Jérôme sowie dessen Frau Nathalie stehen unter Hauptverdacht.</li>
+</ul>
+<hr>
+<h4 id="wahrheit-eins-wo-ist-mathias-hingegangenhowdunit">Wahrheit Eins: Wo ist Mathias hingegangen?（howdunit）</h4>
+<ul>
+<li><strong>Konvergenzpunkt: ca. 78%</strong></li>
+<li>Antwort: Mathias ist nicht tot. Nachdem Jérôme gegangen war, fasste Mathias einen hinterhältigen Plan: Er wollte eine gefälschte „Mordszene" inszenieren und seinen Rivalen belasten. Er ging rückwärts durch seine eigenen Fußspuren, trat Fuß für Fuß in die bereits vorhandenen Abdrücke — so hinterließen Hin- und Rückweg dasselbe Bild: „Ankommende Spuren". Danach versteckte er sich in der Kutsche seines Vaters und floh zum Bahnhof. Die drei Schüsse hatte er selbst abgefeuert, um einen Kampf vorzutäuschen.</li>
+</ul>
+<h5 id="schlusselhinweise_6">Schlüsselhinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Nathalie bestand darauf, ihr Mann sei bei seiner Heimkehr vollkommen nüchtern gewesen, doch der alte Vater und die Fußspuren（unregelmäßig, schlingernd）sagten, er sei betrunken gewesen</td>
+<td>ca. 60%</td>
+<td>Dieser Widerspruch ist der Schlüssel der gesamten Erzählung: Wenn er nicht betrunken war, warum schlängeln die Spuren dann so? Antwort: Sie wurden absichtlich so angelegt</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Die Schneespuren zeigen, dass Mathias „nur hinkam, aber nicht wegging", obwohl er im Haus nicht zu finden ist</td>
+<td>ca. 20%</td>
+<td>„Kommen ohne Gehen" ist physikalisch unmöglich — doch der Schnee lügt nicht; also muss es eine andere Erklärung geben</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Einige Fußspuren zeigen auffällige Merkmale: zu tiefer Absatz, schiefe Zehenpartie, unnatürlicher Rhythmus</td>
+<td>ca. 83%</td>
+<td>Renine weist darauf hin: Diese Merkmale entsprechen dem rückwärtigen Gehen, nicht einem Betrunkenen</td>
+</tr>
+</tbody>
+</table>
+<h5 id="hilfshinweise_3">Hilfshinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Der alte Vater de Gorne fuhr an jenem Morgen wie gewöhnlich zum Markt, die Kutsche war mit einem Tuch verhüllt, und er wich der Befragung aus</td>
+<td>ca. 25%</td>
+<td>Sein „Gleichmut" steht in keinem Verhältnis zum Verschwinden seines Sohnes; unter dem Tuch könnte jemand versteckt gewesen sein</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Mathias und sein Vater hatten beide eine Lebensversicherung abgeschlossen, bei der jeweils der andere Begünstigter war</td>
+<td>ca. 85%</td>
+<td>Wenn der Vater die „Todesentschädigung" kassiert, kann er sie dem Sohn weitergeben — das ist das finanzielle Motiv für den vorgetäuschten Tod</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Jérôme gab an, Mathias im Haus gefesselt zurückgelassen und seine Pistole dort gelassen zu haben</td>
+<td>ca. 52%</td>
+<td>Wenn Jérôme die Wahrheit sagt, hat Mathias die Pistole selbst an sich genommen, um die Szene zu inszenieren</td>
+</tr>
+</tbody>
+</table>
+<h5 id="falsche-fahrten_5">Falsche Fährten</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Irreführungsrichtung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Kampfspuren am Brunnen + drei abgefeuerte Schüsse aus der Pistole</td>
+<td>ca. 18%</td>
+<td>Legt nahe, im Brunnen liege eine Leiche, und Jérôme sei der Mörder</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Die schlängelnden Fußspuren werden vom alten Vater als „er war betrunken" erklärt</td>
+<td>ca. 26%</td>
+<td>Lässt den Leser die Erklärung „betrunkener Gang" akzeptieren, ohne die Anomalie der Spuren zu hinterfragen</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="wahrheit-zwei-ist-jerome-schuldigwhodunit">Wahrheit Zwei: Ist Jérôme schuldig?（whodunit）</h4>
+<ul>
+<li><strong>Konvergenzpunkt: ca. 72%</strong></li>
+<li>Antwort: Jérôme ist unschuldig. Seine Schilderung der Ereignisse ist vollständig wahr — er kam zu Mathias, um zu verhandeln, bot Geld für das Gut im Tausch gegen eine Scheidungsvereinbarung, die Verhandlung geriet in eine Sackgasse, es kam zum Kampf, er fesselte Mathias und verließ das Haus, danach nahm er die bewusstlose Nathalie mit. Seine Aussage ist in sich widerspruchsfrei, und die Tatsache, dass „alle Beweise auf denselben Mann zeigen", ist für sich genommen ein Warnsignal.</li>
+</ul>
+<h5 id="schlusselhinweise_7">Schlüsselhinweise</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Jérômes Aussage und Nathalies Aussage stimmen vollständig überein（die Befragungen erfolgten getrennt）</td>
+<td>ca. 62%</td>
+<td>Echte Verschwörer liefern in Verhören meist widersprüchliche Aussagen; Übereinstimmung deutet darauf hin, dass die Ereignisse so stattfanden wie beschrieben</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Renine sagt: „Wenn alle Beweise auf dieselbe Person zeigen, wurde das oft absichtlich arrangiert"</td>
+<td>ca. 68%</td>
+<td>Das ist das zentrale Denkprinzip der Erzählung</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="rekonstruktion-des-deduktionswegs_3">Rekonstruktion des Deduktionswegs</h4>
+<p>Das Elegante an der Lösung dieser Erzählung ist ein „blinder Fleck des gesunden Menschenverstands": Wir nehmen instinktiv an, Fußspuren hätten nur eine Richtung — vorwärts. Doch wer rückwärts geht, hinterlässt im Schnee Spuren, die wie „ankommende Schritte" aussehen.</p>
+<p>Wann hätte der Leser es bemerken können?</p>
+<ul>
+<li>20%: „Spuren, die nur hinkommen, aber nicht weggehen" ist bereits ein Widerspruch, doch der Leser neigt dazu, „Leiche liegt im Brunnen" zu glauben, anstatt die Richtung der Spuren zu hinterfragen.</li>
+<li>60%: Nathalie sagt, ihr Mann war nicht betrunken, aber die Spuren schlängeln — wenn der Leser jetzt aktiv fragt: „Warum schlängeln die Spuren dann?", liegt die Antwort „rückwärtiges Gehen zur Nachahmung eines Betrunkenen" auf der Hand.</li>
+<li>78%: Renine erklärt vor allen die Logik des rückwärtigen Gehens und legt die vollständige Lösung dar.</li>
+</ul>
+<p>Der frühestmögliche Zeitpunkt zum selbstständigen Lösen ist 60%（wenn der Widerspruch auftaucht），aber der Leser muss in diesem Moment aktiv die Richtungsannahme der Fußspuren in Frage stellen.</p>
+<hr>
+<h4 id="anmerkungen_3">Anmerkungen</h4>
+<p>„Fußspuren im Schnee" ist die Erzählung der Sammlung, die der klassischen Detektivgeschichte am nächsten kommt, und ihre Lösung beruht vollständig auf einer „offen daliegenden" physikalischen Tatsache: Ein Mensch kann rückwärts gehen. Bei der Enthüllung sagt Leblanc: „Ich weiß nicht, warum wir nicht früher darauf gekommen sind." Dieser Satz trifft den gemeinsamen Geist aller erfolgreichen Unmöglichkeitsrätsel — einmal enthüllt, erscheint die Lösung offensichtlich; vor der Enthüllung fällt sie kaum jemandem ein.</p>
+<p>Diese Lösung wurde von vielen späteren Krimiautoren aufgegriffen und variiert und gilt als einer der klassischen Archetypen des „Fußspuren-Rätsels".</p>
+<hr>
+<h2 id="gesamtubersicht-der-konvergenzpunkte">Gesamtübersicht der Konvergenzpunkte</h2>
+<table>
+<thead>
+<tr>
+<th>Erzählung</th>
+<th>Zentrales Rätsel</th>
+<th>Konvergenzpunkt</th>
+<th>Bewertung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2. Erzählung: Die Wasserflasche</td>
+<td>whodunit（Dutreuil）</td>
+<td>38%</td>
+<td>⭐⭐</td>
+</tr>
+<tr>
+<td>2. Erzählung: Die Wasserflasche</td>
+<td>howdunit（Brennglas-Methode）</td>
+<td>90%</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>5. Erzählung: Thérèse und Germaine</td>
+<td>howdunit（kein geschlossener Raum）</td>
+<td>72%</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>5. Erzählung: Thérèse und Germaine</td>
+<td>whodunit（Ehefrau tötet Mann）</td>
+<td>82%</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>6. Erzählung: Die Dame mit der Axt</td>
+<td>whodunit（Patientin der Nervenheilanstalt）</td>
+<td>85%</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>6. Erzählung: Die Dame mit der Axt</td>
+<td>whydunit（Schlaf stehlen）</td>
+<td>90%</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>7. Erzählung: Fußspuren im Schnee</td>
+<td>howdunit（rückwärtige Spuren）</td>
+<td>78%</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Durchschnittlicher Konvergenzpunkt der vier Erzählungen: 73,9% → ⭐⭐⭐⭐</strong></p>
+<hr>
+<h2 id="anmerkungen_4">Anmerkungen</h2>
+<p><strong>Stellung von „Achtmal schlägt die Uhr" im Werk Leblancs</strong></p>
+<p>Dies ist eine der reifsten Kurzgeschichtensammlungen aus Leblancs Spätwerk und eine der wenigen, in denen Lupin（unter dem Namen „Renine"）offen als Detektiv auftritt. Anders als in den frühen Arsène-Lupin-Bänden, die mit dem Verkaufsargument „Dieb und Detektiv in einem" aufwarteten, ähnelt Renine hier eher einem mächtigen Amateurdetektiv: Er stiehlt nicht, sondern hilft mit List und Willenskraft Leidenden und überführt Verbrecher, wobei er die intellektuelle Konfrontation genießt.</p>
+<p><strong>Das Problem der „unfairen Hinweise" bei Leblanc</strong></p>
+<p>Die Sammlung hat einen durchgängigen Streitpunkt: Renine verfügt meist über weit mehr Informationen als der Leser（er hat recherchiert, Voraussetzungen geschaffen），doch diese „Vorbereitungen" werden erst am Ende der Geschichte enthüllt. In „Die Dame mit der Axt" etwa verbrachte Renine vier Tage damit, in Einsamkeit nachzudenken und selbst den gedanklichen Ansatz für die Zeitungsanzeige zu entwickeln — der Leser sieht nur, wie er plötzlich handelt. Das bedeutet: Leblancs Nebel beruht nicht auf falschen Spuren, sondern darauf, dass „der Erzähler Renines Denkprozess selektiv auslässt" — der Leser kommt nicht mit, nicht weil er irregeführt wird, sondern weil er ausgeschlossen ist.</p>
+<p>Diese Methode ist in der Kriminalgeschichte umstritten; Kritiker der Goldenen Ära（wie Knox mit seinen „Zehn Geboten"）ordnen sie häufig den „unfairen Regeln" zu. Andererseits ist das Leblancs Markenzeichen: Sein Detektiv ist ein Held, und Helden erklären nicht — Helden zeigen nur Ergebnisse. Die Befriedigung des Lesers kommt vom nachträglichen „Ah, so war das!", nicht vom sportlichen Gleichschritt des Mitdenkens.</p>
+<p><strong>Vergleich mit Arthur Conan Doyles Sherlock Holmes</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Holmes-Kurzgeschichten</th>
+<th>Renine-Kurzgeschichten（Achtmal schlägt die Uhr）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Haltung des Detektivs</td>
+<td>analytisch, kühl</td>
+<td>willensorientiert, aktiv eingreifend</td>
+</tr>
+<tr>
+<td>Leserpartizipation</td>
+<td>vergleichsweise hoch（beobachtet parallel）</td>
+<td>geringer（folgt hinterher）</td>
+</tr>
+<tr>
+<td>Herkunft des Rätsels</td>
+<td>Hilfesuchende bringen es mit</td>
+<td>Detektiv greift es aktiv auf</td>
+</tr>
+<tr>
+<td>Lösungsmethode</td>
+<td>logische Deduktion</td>
+<td>Logik + psychologischer Kampf + List</td>
+</tr>
+<tr>
+<td>Gerechtigkeit am Ende</td>
+<td>meist dem Gesetz überlassen</td>
+<td>Detektiv entscheidet selbst, umgeht oft das Gesetz</td>
+</tr>
+</tbody>
+</table>
+<p>Dieser Unterschied spiegelt das unterschiedliche Bild des „Gerechtigkeitsvertreters" in der englischen und französischen Kultur wider: Holmes ist Helfer der Rechtsordnung, Lupin（Renine）ist deren Ersatz.</p>
+    <a href="../index.html" class="back-link">← Zur Startseite</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Detektivanalyse</p>
+    <p>Fünf Autoren · achtundachtzig Werke · 135 Jahre Entwicklung der Schwierigkeit im Kriminalroman.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
