@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>수수께끼의 여인（The Woman of Mystery）— 추리 분석 — 추리해부실</title>
+<meta name="description" content="1916년, 제1차 세계대전의 포화가 맹렬히 타오르던 시절, 폴 델로즈와 엘리자베트 당드빌은 룩셈부르크 국경의 고성 오르네캥（Château d'Ornequin）에서 결혼식을 올린다. 밤이 깊어지자 신랑은 고성 화랑에서 한 초상화를 발견한다——그것은 엘리자베트의 고인이 된 어머니, 당드빌">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-woman-of-mystery.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-woman-of-mystery.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-woman-of-mystery.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-woman-of-mystery.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-woman-of-mystery.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-woman-of-mystery.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-woman-of-mystery.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-woman-of-mystery.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif KR', serif;
+  --font-sans: 'Noto Sans KR', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">추리해부실</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">홈</a>
+        <a href="../index.html#latest">최신</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="언어" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 한국어</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-woman-of-mystery.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-woman-of-mystery.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-woman-of-mystery.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/the-woman-of-mystery.html">日本語</a>
+      <a class="lang-item active" data-lang="ko" href="/Detective-Analysis/ko/articles/the-woman-of-mystery.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/the-woman-of-mystery.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/the-woman-of-mystery.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/the-woman-of-mystery.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">모리스 르블랑 · </div>
+    <h1>수수께끼의 여인（The Woman of Mystery）— 추리 분석</h1>
+    <div class="subtitle">모리스 르블랑（Maurice Leblanc） · 장편</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">추리 난이도</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">안개 등급</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="the-woman-of-mystery">수수께끼의 여인（The Woman of Mystery）— 추리 분석</h1>
+<h2 id="_1">기본 정보</h2>
+<ul>
+<li>저자：모리스 르블랑（Maurice Leblanc）</li>
+<li>출판년도：1916년</li>
+<li>장르：장편</li>
+<li>탐정：폴 델로즈（Paul Delroze）——군인으로, 직접 경험한 당사자로서 진실을 추적함</li>
+<li>핵심 미스터리 유형：whodunit + howdunit + 신원 미스터리（identity mystery）</li>
+</ul>
+<hr>
+<h2 id="_2">추리 난이도 총평</h2>
+<table>
+<thead>
+<tr>
+<th>지표</th>
+<th>별점</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>추리 난이도（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>평균 수렴점 약 80%——세 가지 진실 경로의 수렴점은 각각 67%, 85%, 88%로, 핵심 미스터리는 후반부에야 확인되지만 중반부에 이미 세심한 독자가 추리할 수 있는 충분한 복선이 존재함</td>
+</tr>
+<tr>
+<td>안개 등급（Fog Rating）</td>
+<td>⭐⭐⭐⭐</td>
+<td>전편에 걸쳐 성별 위장을 핵심 오도 축으로 삼고 있음; 거짓 단서가 정밀하게 심어져 있고, 서술자의 시점이 제한되어 독자는 항상 단편적인 정보만으로 진실을 조합해야 함</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_3">줄거리</h2>
+<p>1916년, 제1차 세계대전의 포화가 맹렬히 타오르던 시절, 폴 델로즈와 엘리자베트 당드빌은 룩셈부르크 국경의 고성 오르네캥（Château d'Ornequin）에서 결혼식을 올린다. 밤이 깊어지자 신랑은 고성 화랑에서 한 초상화를 발견한다——그것은 엘리자베트의 고인이 된 어머니, 당드빌 백작부인 에르민（Comtesse Hermine d'Andeville）의 초상화였다. 폴은 그 자리에 굳어버렸다: 그는 그 얼굴을 결코 잊지 못했다——열여섯 해 전, 어느 여인이 오르네캥 숲 속 예배당 근처에서 직접 그의 아버지를 칼로 찔러 죽였고, 어린 그의 두 눈은 그 여인의 얼굴을 또렷이 기억하고 있었던 것이다.</p>
+<p>이튿날 동원령이 내려지자 폴은 전선으로 달려가고, 엘리자베트는 고성에 남아 어머니의 진실을 밝혀 가문의 오명을 씻겠다고 맹세한다. 독일군이 진격하고 고성이 함락되면서 두 사람의 운명은 전화에 의해 완전히 갈라진다: 엘리자베트는 독일군에게 포로로 잡혀 처형 직전까지 내몰리고; 폴은 참호 사이를 누비며 군사 작전을 명목 삼아 십칠 년에 걸친 거대한 음모를 단계적으로 복원해 나간다.</p>
+<p>음모의 핵심은 「헤르만 소령（Major Hermann）」이라는 암호명을 지닌 독일 간첩이었다: 이 인물은 에르민 백작부인의 초상화와 외모가 놀랍도록 닮았고, 「H.E.R.M.」이라는 문자가 새겨진 단도를 지니고 있었으며, 포로가 된 독일 첩보원 카를（Karl）은 직접 「헤르만이 당신의 아버지를 죽였다」고 자백했다. 폴은 점차 깨닫기 시작한다——눈앞의 이 남성 장교는 어쩌면 전혀 남자가 아닐 수도 있으며, 열여섯 해 전의 그 여성 살인자, 그리고 엘리자베트의 「어머니」와 동일 인물일지도 모른다고.</p>
+<p>그와 동시에, 오르네캥 지하에 잠복한 또 다른 비밀이 서서히 수면 위로 떠오른다: 독일군이 포화 사정거리 밖에서 코르비니（Corvigny）를 함락시킬 수 있었던 것은 독일령 이브르쿠르에서 고성 지하까지 이어지는, 총 길이 7마일에 공사 기간 17년의 비밀 지하도 덕분이었다. 폴은 이 지하도를 이용해 독일 친왕을 납치하여 협상 카드로 삼고, 마침내 엘리자베트의 자유를 되찾는다.</p>
+<p>결말에서 「에르민」의 진짜 신원은 군사법정에서 완전히 밝혀진다: 그녀는 호엔촐레른 가문의 간첩 에르민 폰 호엔촐레른（Hermine von Hohenzollern）으로, 열아홉 해 전 진짜 에르민 백작부인으로 위장해 당드빌 가문에 침투한 뒤 진짜 백작부인을 살해했다. 그녀는 여성의 신분으로 귀족 사회에 잠입하는 한편, 남성 「헤르만 소령」의 신분으로 군사 임무를 수행하면서, 평화와 전쟁이라는 두 시대를 가로질러 1인 2역을 연기했다.</p>
+<hr>
+<h2 id="_4">진실 분석</h2>
+<h3 id="1-whodunit-identity-mystery">진실 1：아버지를 죽인 범인의 신원——헤르만 소령은 누구인가？（whodunit + identity mystery）</h3>
+<ul>
+<li><strong>단서 수렴점：약 67%</strong></li>
+<li>정답：헤르만 소령은 당드빌 백작부인 에르민으로 위장한 독일 여성 간첩 에르민 폰 호엔촐레른이다. 그녀는 폴의 아버지를 살해한 여성（여성 신분으로 행동）이기도 하고, 군사 임무를 수행하는 「남성」 독일군 소령（남장 위장）이기도 하다. 진짜 당드빌 백작부인은 이미 그녀에게 살해되어 대체되었으며, 고성 화랑의 초상화는 사실 그녀 자신의 얼굴이다.</li>
+</ul>
+<h4 id="_5">핵심 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/백분율）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>폴이 결혼식 밤 초상화의 얼굴을 알아본다——열여섯 해 전, 그 얼굴은 자신의 아버지를 죽인 여인의 것이었다</td>
+<td>제2장 / 약 13%</td>
+<td><strong>이야기 핵심 미스터리의 출발점</strong>. 어린 시절의 기억이 「얼굴」이라는 주된 실마리를 고정하고, 독자는 폴과 함께 범인 추적의 여정에 동참한다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>폴이 범인이 특이한 모양의 브로치（brooch）를 달고 있었다고 묘사하며, 지금도 그 기억이 생생하다고 말한다</td>
+<td>제1장 / 약 5%</td>
+<td>최초의 시각적 식별 근거로, 후속에서 「동일한 브로치가 반복 등장」하는 식별 체계를 구축하는 복선</td>
+</tr>
+<tr>
+<td>3</td>
+<td>코르비니 가는 길의 늙은 농촌 여인이 초상화 속 인물과 완전히 동일한 카메오 브로치（cameo brooch）를 달고 있다</td>
+<td>제5장 / 약 23%</td>
+<td>독자가 처음으로 「농촌 여인」과 「초상화」의 연결을 목격하는 장면——이 인물은 누구인가? 농촌 여인 변장은 여성 간첩의 여성 신분이다</td>
+</tr>
+<tr>
+<td>4</td>
+<td>헤르만 소령의 필체가 「여성적인 섬세한 글씨체」로 묘사된다</td>
+<td>제7장 / 약 32%</td>
+<td>세심한 독자를 위한 핵심 신호: 남성 장교가 어떻게 여성적인 필체를 가질 수 있는가? 성별 위장의 가장 이른 균열</td>
+</tr>
+<tr>
+<td>5</td>
+<td>노획한 단도에 「H.E.R.M.」이라는 이니셜이 새겨져 있으며, 「에르민（Hermine）」과 「헤르만（Hermann）」의 이니셜과 동시에 일치한다</td>
+<td>제8장 / 약 35%</td>
+<td>이중 신원의 기호학적 단서——동일한 철자 조합이 두 이름에 대응된다: 여성 하나, 남성 하나, 죽은 자 하나, 살아있는 자 하나</td>
+</tr>
+<tr>
+<td>6</td>
+<td>베를린에서 입수한 1902년 사진에 에르민 백작부인이 여전히 생존해 있음이 나타난다（공식 사망 연도는 1898년）</td>
+<td>제11장 / 약 52%</td>
+<td>에르민이 죽지 않았다는 실증; 그녀의 「죽음」은 날조된 것이며, 그녀는 여전히 어떤 형태로든 활동하고 있다——진짜 백작부인인가, 아니면 가짜인가?</td>
+</tr>
+<tr>
+<td>7</td>
+<td>포로 카를이 폴에게 직접 말한다: 「헤르만이 당신의 아버지를 죽였다」, 그리고 폴은 헤르만의 손, 발의 윤곽과 얼굴의 털이 모두 여성적 특징을 나타낸다는 것을 관찰한다</td>
+<td>제12장 / 약 53%</td>
+<td><strong>결정적 증거의 이중 조합</strong>: 자백이 살인자가 헤르만임을 확인하고, 신체 관찰이 헤르만이 여성임을 확인한다——두 단서가 동시에 수렴하여, 독자는 이 시점에서 「헤르만＝에르민（여성）」을 추론할 수 있다</td>
+</tr>
+<tr>
+<td>8</td>
+<td>고성 침실에서 농촌 여인 옷과 헤르만 소령의 군복이 함께 발견된다; 베르나르가 「농촌 여인」과 「소령」이 같은 얼굴임을 목격한다</td>
+<td>제14장 / 약 65%</td>
+<td><strong>최종 시각적 확인</strong>: 두 신원의 물증과 인증이 동시에 등장하여, 독자는 이 시점에서 「농촌 여인＝소령＝에르민＝당드빌 백작부인」이라는 등식을 확신할 수 있다</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_6">보조 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/백분율）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>엘리자베트는 어린 시절부터 어머니에 대한 기억이 희미하며, 「어머니」는 냉담하고 감정적으로 거리가 있었다</td>
+<td>제3장 / 약 18%</td>
+<td>진짜 어머니는 이미 살해되었고, 위장자는 진짜 애정을 구축할 수 없었다——이 소원함은 침투 작전의 부산물이다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>폴은 헤르만 소령과 농촌 여인이 나타날 때 두 사람이 결코 동시에 등장하지 않는다는 것을 눈치챈다</td>
+<td>제9장 / 약 42%</td>
+<td>셜록 홈즈식의 「동시 부재」 추론과 유사하며, 둘이 동일인임을 암시한다</td>
+</tr>
+<tr>
+<td>3</td>
+<td>헤르만 소령이 심문 상황에서 보여주는 언어 능력과 외교적 수완은 보통 장교 수준을 훨씬 초월한다</td>
+<td>제10장 / 약 48%</td>
+<td>그의 훈련과 배경이 군사에 국한되지 않음을 암시하며, 오랜 기간 잠복한 간첩의 신원 특성과 부합한다</td>
+</tr>
+<tr>
+<td>4</td>
+<td>고성 지하실 깊은 곳에 잠긴 밀실이 있으며, 외부에는 고인이 된 백작부인의 유물실이라고 알려져 있다</td>
+<td>제4장 / 약 19%</td>
+<td>밀실 자체가 하나의 신호다: 무슨 비밀이 물리적으로 잠겨 있어야 하는가?</td>
+</tr>
+<tr>
+<td>5</td>
+<td>당드빌 백작（아버지）이 에르민의 사진을 앞에 두고 표정이 이상해지며, 무언가를 알고 있는 듯 보인다</td>
+<td>제11장 / 약 52%</td>
+<td>백작이 사정을 알고 있거나, 혹은 대체 사실을 눈치채고 강제로 침묵을 지켰을 가능성을 암시——「대체가 실제로 일어났다」는 가능성을 강화한다</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_7">허위 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/백분율）</th>
+<th>오도 방향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>카를의 정부가 폴에게 밝힌다: 「헤르만 소령은 에르민 백작부인의 남동생이다」</td>
+<td>제15장 / 약 75%</td>
+<td><strong>가장 정교하게 설계된 레드 헤링</strong>. 독자가 이미 「두 사람의 외모가 닮았다」는 의혹을 느낄 때, 이 단서는 「합리적인」 친척 관계라는 설명을 제공하여, 독자가 「동일인」이라는 결론에 도달하는 것을 의도적으로 지연시킨다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>당드빌 백작의 태도가 애매——독자는 이를 쉽게 공모자로 해석할 수 있다</td>
+<td>제11장–제15장</td>
+<td>독자가 백작이 음모의 일부라고 의심하게 하여 주의를 분산시키고, 「백작부인이 이미 대체되었다」는 핵심 수수께끼에 대한 추궁을 회피하게 한다</td>
+</tr>
+<tr>
+<td>3</td>
+<td>고성의 늙은 하인 제롬（Jérôme）과 로잘리（Rosalie）의 충직한 이미지</td>
+<td>제2장에서 제8장까지</td>
+<td>두 사람은 실제로 독일 측 정보원이지만, 「충실한 늙은 하인」이라는 외양 때문에 독자들은 그들의 신뢰성에 거의 의심을 품지 않는다</td>
+</tr>
+<tr>
+<td>4</td>
+<td>엘리자베트가 포격 중 「사망」——남겨진 머리카락과 파편이 그녀가 이미 죽었다는 가상의 인상을 만들어낸다</td>
+<td>제13장 / 약 62%</td>
+<td>폴（과 독자）로 하여금 엘리자베트가 죽었다고 생각하게 하여, 거짓 이야기의 종결감을 만들어내고, 그녀가 실제로는 여전히 생포되어 있다는 사실을 은폐한다</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="2-howdunit">진실 2：코르비니의 함락——비밀 지하도（howdunit）</h3>
+<ul>
+<li><strong>단서 수렴점：약 85%</strong></li>
+<li>정답：독일군은 오르네캥 고성 지하에 길이 7마일, 공사 기간 17년의 비밀 지하도를 건설했으며, 독일령 이브르쿠르에서 고성 지하까지 이어진다. 전쟁이 발발한 후 독일군 부대는 이 지하도를 통해 프랑스군 포화의 사정거리 밖에서 조용히 코르비니 성 아래까지 접근하여, 지도상으로는 완전히 불가능한 기습을 실현했다.</li>
+</ul>
+<h4 id="_8">핵심 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/백분율）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>코르비니가 독일군 포병 사정거리 밖에 있음에도 불구하고 미스터리하게 함락되었으며, 프랑스군 지휘관은 이를 설명할 수 없다</td>
+<td>제6장 / 약 24%</td>
+<td>수수께끼의 설정: 「불가능한 함락」은 초상규격의 해답을 요구한다——적군은 어떻게 그곳에 도달했는가?</td>
+</tr>
+<tr>
+<td>2</td>
+<td>엘리자베트가 일기에 기록한다: 고성의 말라비틀어진 넝쿨 담 근처에서 오랫동안 지하에서 들리는 둔탁한 소리가 들렸으며, 밤에 특히 뚜렷했다</td>
+<td>제8장 일기 / 약 37%</td>
+<td><strong>지하도 존재의 청각적 단서</strong>——소리는 지하에서 들려오며, 공사는 수년간 계속되었음을 암시하여 대규모 지하 공사가 있었음을 나타낸다</td>
+</tr>
+<tr>
+<td>3</td>
+<td>독일군이 고성을 점령한 후, 프랑스군 군복을 입은 독일 포로 일부가 미스터리하게 사라졌으며, 나중에 그들의 군복이 고성 근처에 버려진 것이 발견된다</td>
+<td>제8장 / 약 37%</td>
+<td>독일군이 지하도를 이용한 침투 작전의 흔적: 지하도를 통과한 후 변장하여 프랑스군 신분으로 계속 깊숙이 침투</td>
+</tr>
+<tr>
+<td>4</td>
+<td>폴이 엘리자베트의 일기, 고성 테라스의 지리적 위치와 독일군 진격 경로를 근거로 지하도의 입구 방향과 노선을 추산해낸다</td>
+<td>제14장 / 약 85%</td>
+<td><strong>추리의 정점</strong>: 폴이 텍스트 자료（일기）와 공간 추산을 통해 지하도의 물리적 실체를 재구성——독자는 이 시점에서야 비로소 동일한 추론을 완성할 충분한 단서를 갖게 된다</td>
+</tr>
+<tr>
+<td>5</td>
+<td>지하도 입구가 고성의 버려진 주류 창고 깊은 곳에서 실제로 발견된다</td>
+<td>제14장 / 약 86%</td>
+<td>지하도의 물리적 확인, 수수께끼의 답이 공식적으로 밝혀진다</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_9">보조 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/백분율）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>당드빌 백작이 수십 년에 걸쳐 외국 구매자들의 고성 매입을 여러 차례 거부하며, 태도가 이상할 정도로 완고하다</td>
+<td>제3장 / 약 15%</td>
+<td>되돌아보면: 독일 측은 지하도 공사가 발각되지 않도록 항상 고성을 통제할 필요가 있었으며, 백작은 협박을 받았거나 매수되었을 가능성이 있다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>고성 주변의 독일 측 공사 인부들이 「고성 수리」를 명목으로 오랫동안 머물러 있다</td>
+<td>제4장 / 약 20%</td>
+<td>지하도 공사의 위장 명목; 독자가 오랫동안 떠나지 않는 이 「장인들」에 주목한다면 이상함을 눈치챌 수 있다</td>
+</tr>
+<tr>
+<td>3</td>
+<td>엘리자베트가 고성의 일부 바닥 구역에서 속이 빈 공명음이 난다는 것을 눈치챈다</td>
+<td>제5장 / 약 22%</td>
+<td>추가 음향 단서로, 「지하에 대형 공동이 있다」는 추측을 강화한다</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_10">허위 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/백분율）</th>
+<th>오도 방향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>프랑스군 장교들이 코르비니 내부에 배반자가 길을 안내하여 함락되었다고 의심한다</td>
+<td>제7장 / 약 30%</td>
+<td>조사 방향을 「내부 반역자」라는 전통적 수수께끼 틀로 유도하여, 독자들이 「독일군이 어디에서 나타났는가」라는 지리적 문제를 생각하지 못하게 한다</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="3-whydunit">진실 3：에르민의 완전한 신원——호엔촐레른 첩보원（whydunit + 신원 미스터리）</h3>
+<ul>
+<li><strong>단서 수렴점：약 88%</strong></li>
+<li>정답：「에르민 백작부인」은 처음부터 사칭이었다. 진짜 당드빌 백작부인은 열아홉 해 전에 이미 살해되었으며, 호엔촐레른 가문의 여성 간첩 에르민 폰 호엔촐레른에 의해 대체되었다. 이 침투 작전의 목적은 독일 측 간첩이 프랑스 귀족 사회 내에서 장기적이고 합법적인 잠복 지위를 획득하고, 오르네캥 고성 지하도 공사의 진행 상황을 감시하는 것이었다. 그녀는 동시에 농촌 여인으로 변장하여 마을에서 정보를 수집하고, 헤르만 소령의 신분으로 군사 임무를 수행했다——한 사람이 세 역할을 연기하며 거의 20년을 가로질렀다.</li>
+</ul>
+<h4 id="_11">핵심 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/백분율）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>군사법정 공개 심리에서 에르민 폰 호엔촐레른의 완전한 신원, 임무, 대체 계획이 전부 밝혀진다</td>
+<td>제19장 / 약 88%</td>
+<td>르블랑은 법정 장면을 선택하여 모든 패를 한꺼번에 드러낸다——이것이 수수께끼의 최종적이고 가장 완전한 형태이다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>에르민이 수아송에서 프랑스군 최고 지휘관 암살을 시도한다（그의 별장 지하에 폭발물을 설치），이는 그녀의 임무가 최종 행동 단계에 이르렀음을 보여준다</td>
+<td>제20장 / 약 93%</td>
+<td>그녀의 행동 목표가 정보 수집에 그치지 않고, 전략적 수준의 고가치 암살임을 드러낸다——수년간의 침투 계획 전체의 궁극적 의도를 설명한다</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_12">보조 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/백분율）</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>엘리자베트의 유년 시절 기억에서 「어머니」는 딸에게 진정한 감정적 애착을 결코 보여주지 않았다</td>
+<td>제3장 / 약 18%</td>
+<td>간첩은 진짜 친정을 위장할 수 없다——이 감정적 공허함은 가장 인간적인 신원 파탄이다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>고성의 사적인 편지와 유물이 체계적으로 파기되거나 대체된 것이 발견된다</td>
+<td>제4장 / 약 20%</td>
+<td>대체자가 진짜 백작부인의 신원 흔적을 정리하여, 비교를 통해 정체가 드러나는 것을 방지한다</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_13">허위 단서</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>단서 내용</th>
+<th>등장 위치（장/백분율）</th>
+<th>오도 방향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>도입부에서 당드빌 가문의 「고귀한 명성」을 대량으로 묘사하여, 백작부인을 프랑스 명문 귀부인의 긍정적 이미지로 형성한다</td>
+<td>제1장에서 제3장까지</td>
+<td>독자들이 선입견으로 「에르민은 진짜 백작부인이다」를 받아들이게 하고, 그녀의 신원 진실성을 의심하지 않게 한다</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_14">추리 경로 재구성</h2>
+<h3 id="_15">첫 번째 경로：아버지를 죽인 범인은 누구인가？（신원 미스터리）</h3>
+<p>독자의 추리 출발점은 제2장（약 13%）이다: 폴이 초상화가 범인의 얼굴임을 알아본다. 이 시점에서 수수께끼는 명확하게 설정되었지만, 해답으로 향하는 경로는 아직 펼쳐지지 않았다.</p>
+<p>첫 번째 핵심 절점은 약 23%（농촌 여인의 브로치）: 관찰력 있는 독자라면 이 시점에서 「농촌 여인」에 대한 의심을 품어야 한다——그녀와 초상화의 시각적 연결이 너무 강해서 우연일 수 없다.</p>
+<p>두 번째 핵심 절점은 약 32~35%（여성적 필체 + H.E.R.M. 단도）: 이 시점에서 「헤르만은 여성이다」라는 추측이 텍스트의 지지를 받기 시작하며, 「에르민＝헤르만」의 자모 공명이 기호학적 단서가 된다.</p>
+<p>세 번째이자 가장 중요한 절점은 약 53%（카를의 자백 + 폴의 헤르만 체형 특징 관찰）: 이 시점에서 꼼꼼한 독자라면 「헤르만은 여성이며, 바로 그 살인을 저지른 에르민이다」를 추론할 충분한 근거를 갖추게 된다. 하지만 <strong>확실성</strong>은 65%（농촌 여인 옷 + 군복 공존, 베르나르의 목격）까지 기다려야 공식적으로 확립된다.</p>
+<p>수렴점은 약 67%로 설정된다: 이것이 독자가 「추측이 아닌 확신」을 가질 수 있는 가장 이른 시점이다.</p>
+<h3 id="_16">두 번째 경로：코르비니는 왜 함락되었는가？（지하도 미스터리）</h3>
+<p>이 경로의 단서는 극도로 분산되어 있으며, 「한 여인의 일기」와 전장 전술 분석의 교차점에 묻혀 있다.</p>
+<p>약 24%（코르비니 함락 자체）에서 수수께끼를 제기하지만, 아무런 해답 방향을 제시하지 않는다.</p>
+<p>약 37%（지하 둔탁음, 포로 실종）에서 각각 두 가지 간접 단서를 제공하지만, 명확한 「지하도」 프레임이 없으면 독자들은 이 단편들을 스스로 연결하기 어렵다.</p>
+<p>독자가 지하도의 존재를 스스로 추론하려면, 85% 이전에 폴이 제14장에서 수행한 3차원 공간 추산을 직접 완성해야 한다——이는 일반 독자에게는 거의 불가능하다. 르블랑은 여기서 「주인공이 밝히는」 서사 전략을 선택했으며, 「독자가 먼저 밝히는」 방식이 아니어서, 이 경로의 실제 난도는 첫 번째 경로보다 훨씬 높다.</p>
+<h3 id="_17">세 번째 경로：에르민의 진짜 임무（동기 미스터리）</h3>
+<p>이 경로는 책 전체 수준의 수수께끼로, 독자들이 독립적으로 추론할 충분한 단서를 제공하지 않는다——법정 공개를 기다려야만 한다. 르블랑은 앞의 열여덟 장을 통해 수수께끼의 윤곽을 구축했지만, 의도적으로 퍼즐의 마지막 조각을 남겨두었다가 제19장에 이르러서야 전부 내어놓는다. 이것은 추리 소설 전통의 「대공개」（grand reveal） 기법으로, 독자에게 대한 추리 초대장이 아니다.</p>
+<hr>
+<h2 id="_18">보충 설명</h2>
+<p><strong>르블랑의 창작사에서 《수수께끼의 여인》의 위치</strong></p>
+<p>1916년, 르블랑은 이미 프랑스에서 가장 잘 팔리는 대중소설 작가였으며, 아르센 뤼팽（Arsène Lupin） 시리즈는 그의 추리 문학계에서의 지위를 일찌감치 확립해 놓았다. 하지만 《수수께끼의 여인》（《수수께끼의 여인》이라고도 번역된다）은 색다른 작품이다: 뤼팽이 없고, 전통적인 의미의 「탐정」도 거의 없다. 주인공 폴은 평범한 군인으로, 그의 수사 능력은 초인적인 지식이 아닌 사랑과 집념에서 비롯된다——이것이 이 책을 르블랑 작품 중 보기 드문 감정적 깊이를 지닌 작품으로 만든다.</p>
+<p><strong>전쟁을 서사 엔진으로</strong></p>
+<p>제1차 세계대전의 배경은 단순한 무대 장치가 아니라, 수수께끼의 핵심 메커니즘이다. 전쟁이 만들어낸 혼란, 정보의 단편성, 전장의 예측 불가능성은 독자들로 하여금 평화로운 장면에서는 성립하기 어려운 많은 이야기 전환을 수용하게 만든다. 지하도의 17년 공사, 귀족 사회 침투 첩보 작전, 군사법정의 최종 공개——이러한 요소들은 전쟁의 맥락 안에서 모두 신뢰성을 얻는다. 르블랑은 시사（이 책을 집필할 당시 제1차 세계대전이 한창 격렬하게 벌어지고 있었다）를 추리 구조 속에 자연스럽게 엮어 넣을 수 있었던 소수의 작가 중 한 명이다.</p>
+<p><strong>성별 위장의 문학적 선례와 후계</strong></p>
+<p>에르민 폰 호엔촐레른의 「여장한 남장 군인」은 추리 문학에서 비교적 초기의 체계적인 성별 신원 수수께끼 중 하나이다. 르블랑은 이 점에서 크리스티의 많은 복잡한 신원 수수께끼보다 거의 20년 앞섰지만, 동일하게 정밀한 방식으로 독자의 성별 전제를 이용했다: 우리는 「헤르만 소령은 남자다」를 받아들인다, 왜냐하면 그는 군복을 입고 군계급을 가지고 있기 때문이다——그리고 이 수용 자체가 작가가 미리 설정한 인지적 함정이다.</p>
+<p><strong>아르센 뤼팽 시리즈와의 비교</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>뤼팽 시리즈（대표작 《괴도 신사》）</th>
+<th>《수수께끼의 여인》</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>핵심 영웅</td>
+<td>천재 범죄자 겸 탐정</td>
+<td>사랑 때문에 싸우는 평범한 사람</td>
+</tr>
+<tr>
+<td>수수께끼 유형</td>
+<td>절도 + 신원 수수께끼</td>
+<td>살인 + 간첩 + 전쟁</td>
+</tr>
+<tr>
+<td>감정 동력</td>
+<td>지적 우월감의 쾌감</td>
+<td>육친을 잃은 슬픔과 부부간의 사랑</td>
+</tr>
+<tr>
+<td>정치적 시각</td>
+<td>국가를 초월한 개인주의</td>
+<td>강렬한 애국주의 서사</td>
+</tr>
+<tr>
+<td>추리 주도자</td>
+<td>주인공 자신이 수수께끼의 설계자</td>
+<td>주인공은 수수께끼의 피해자이자 복원자</td>
+</tr>
+</tbody>
+</table>
+<p><strong>논란이 될 수 있는 구조적 선택</strong></p>
+<p>이 책에서 가장 논의할 만한 서사적 선택은: 르블랑이 독자들로 하여금 약 65% 지점에서 「헤르만＝에르민（여성）」을 대략 확인할 수 있게 해 놓고, 후속 장들에서 법정 공개 방식으로 이 답을 다시 이야기한다는 점이다——이것은 「이중 공개」 구조이다. 첫 번째 공개（65%）는 세심한 독자에 대한 보상이고, 두 번째 공개（88%）는 모든 독자를 위한 확인이다. 이 선택은 일부 서스펜스를 희생하지만, 대신 이야기 전개의 명확성을 얻었으니, 이는 전형적인 대중문학의 취사선택이다.</p>
+<p><strong>한국 독자를 위한 보충</strong></p>
+<p>이 책은 제1차 세계대전이 격렬하게 진행되던 시기에 쓰였으며, 책 속의 지하도 전략은 순전히 허구가 아니다——제1차 세계대전 서부 전선에는 대량의 지하 작전 기록이 있으며, 여기에는 영국군이 솜 전투（1916년）에 앞서 지하도에 폭발물을 매설한 유명한 전례도 포함된다. 르블랑이 묘사한 7마일 지하도는 과장된 것이지만, 당시 독자들에게 그 기술적 전제는 허황된 것이 아니었으며, 이것이 바로 그가 전시에 이 책을 출판하기로 선택한 이유 중 하나이다: 허구의 수수께끼의 신뢰성을 독자들이 현실 전장에 대해 품고 있는 상상에 닻으로 고정시키기 위해서였다.</p>
+    <a href="../index.html" class="back-link">← 홈으로</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">추리해부실</p>
+    <p>다섯 작가 · 여든여덟 작품 · 135년에 걸친 추리문학 난이도의 진화.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
