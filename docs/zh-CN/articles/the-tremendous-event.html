@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>惊天大事件（The Tremendous Event） — 推理解剖室</title>
+<meta name="description" content="1922年，英法海峡因古地质断层（卢布朗称之为「卢昂断层」）突然上升，形成一片连接法国迪耶普（Dieppe）到英格兰黑斯廷斯（Hastings）的新陆地——「诺曼底地峡」。这是改变欧洲政治地理的世纪大事。 法国青年 Simon Dubosc 正在追求英国贵族女儿 Isabel Bakefield，却遭其父以「先成就英雄">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-tremendous-event.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-tremendous-event.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-tremendous-event.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-tremendous-event.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-tremendous-event.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-tremendous-event.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-tremendous-event.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-tremendous-event.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif SC', serif;
+  --font-sans: 'Noto Sans SC', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">推理解剖室</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">首页</a>
+        <a href="../index.html#latest">最新分析</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="语言" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 简体中文</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-tremendous-event.html">繁體中文</a>
+      <a class="lang-item active" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-tremendous-event.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-tremendous-event.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/the-tremendous-event.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/the-tremendous-event.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/the-tremendous-event.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/the-tremendous-event.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/the-tremendous-event.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">莫里斯·勒布朗 · </div>
+    <h1>惊天大事件（The Tremendous Event）</h1>
+    <div class="subtitle">莫里斯·卢布朗（Maurice Leblanc） · 长篇冒险推理小说</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">推理难度</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">迷雾等级</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="the-tremendous-event">惊天大事件（The Tremendous Event）— 推理分析</h1>
+<h2 id="_1">基本信息</h2>
+<ul>
+<li>作者：莫里斯·卢布朗（Maurice Leblanc）</li>
+<li>出版年：1922年</li>
+<li>类型：长篇冒险推理小说</li>
+<li>侦探角色：无（主角 Simon Dubosc 兼具行动英雄与业余推理者的角色）</li>
+<li>核心谜团类型：whodunit + howdunit + whydunit（三重谜团交织于大地壳灾难背景中）</li>
+</ul>
+<hr>
+<h2 id="_2">推理难度总评</h2>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>星等</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理难度（Deducibility）</td>
+<td>⭐⭐⭐</td>
+<td>平均收敛点 53% — 三条谜线分别在 41%、55%、64% 达到可推论状态</td>
+</tr>
+<tr>
+<td>迷雾等级（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>核心假线索设计精妙（同姓名的表兄弟混淆），但作者也给了读者足够的反驳线索；Dolores 的动机虽有伏笔却刻意被隐藏</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_3">故事梗概</h2>
+<p>1922年，英法海峡因古地质断层（卢布朗称之为「卢昂断层」）突然上升，形成一片连接法国迪耶普（Dieppe）到英格兰黑斯廷斯（Hastings）的新陆地——「诺曼底地峡」。这是改变欧洲政治地理的世纪大事。</p>
+<p>法国青年 Simon Dubosc 正在追求英国贵族女儿 Isabel Bakefield，却遭其父以「先成就英雄伟业再谈婚事」拒绝。大地震当夜，Simon 沿着浮出海面的新陆地徒步走到了英格兰，成为「第一个徒步跨越海峡的人」。</p>
+<p>然而就在这趟征途中，一连串谋杀事件随之展开：
+- 印裔演员 Badiarinos 在新土地上遭人刺背身亡，身旁留下橡胶底鞋印与一枚拿破仑金币
+- Isabel 给 Simon 的密信遭人拦截，信使（侍女）将信交给了自称是 Simon 传话人的「Rolleston 先生」
+- 持信者试图刺杀 Simon，却刺错了隔壁房间（44 号而非 43 号）的无辜房客</p>
+<p>嫌疑人指向 Simon 的英格兰朋友 Edward Rolleston——他酗酒成性、行迹不定。但 Simon 直觉无法相信老友是凶手。</p>
+<p>真相是：那个人不是 Edward，而是他的表兄弟 Wilfred Rolleston——一个外貌相似、已堕落为酒精中毒偏执狂的罪犯。Wilfred 垂涎 Isabel，招募匪帮、劫持 Lord Bakefield 父女、在新土地的废弃轮船上称王，用黄金喷泉统治一支亡命之徒军团。</p>
+<p>Simon 联合印裔半血演员 Antonio（Lynx-Eye）展开救援；途中又与神秘的墨西哥裔女演员 Dolores 纠缠，她因爱慕 Simon 而故意误导追踪路线。最终 Simon 修复坠毁飞机飞抵战场，在 Antonio 的配合下解救了 Isabel，并阻止了一场法英两国军队的冲突，成为「新领土高级专员」。</p>
+<hr>
+<h2 id="_4">真相拆解</h2>
+<h3 id="wilfred-rolleston-edward-rollestonwhodunit">真相一：杀手身份——Wilfred Rolleston 而非 Edward Rolleston（whodunit）</h3>
+<ul>
+<li><strong>线索收敛点：约 55%</strong></li>
+<li>答案：凶手是 Wilfred Rolleston，Edward 的表兄弟，二人外貌极为相似，但性格截然相反。Wilfred 已沦为酒精中毒的偏执狂罪犯，以刺背方式杀人（高挑身材让他可以从上方俯角插刀）。</li>
+</ul>
+<h4 id="_5">关键线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>新土地谋杀现场：橡胶花纹鞋底脚印（bathing-shoes or tennis-shoes with patterned rubber soles），指向计划性犯罪</td>
+<td>Part 1 Ch.6 / 约 31%</td>
+<td>后来在 Queen Mary 残骸附近再度出现，确认同一人的足迹</td>
+</tr>
+<tr>
+<td>2</td>
+<td>谋杀现场旁留有一枚拿破仑金币（1807年版），而拦截信件的「Rolleston」付给侍女的小费，正是同年份的同款金币</td>
+<td>Part 1 Ch.7 / 约 41%</td>
+<td>连结了新土地谋杀案与酒店廊道刺杀事件，确认为同一人所为</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Antonio 描述廊道刺客外貌：「非常高挑，能弯腰从肩上方俯刺；消瘦……略微驼背……面色极苍白」</td>
+<td>Part 1 Ch.7 / 约 42%</td>
+<td>此描述一字不差符合 Edward Rolleston（作者精心设计的同形误导）——然而这恰恰也是 Wilfred 的描述</td>
+</tr>
+<tr>
+<td>4</td>
+<td>受伤的 Edward Rolleston 躺在 Queen Mary 残骸旁，Antonio 正式确认：「此人不是我在酒店走廊见到的那个人」</td>
+<td>Part 2 Ch.1 / 约 55%</td>
+<td><strong>最后关键线索</strong>：确认 Edward 无辜，凶手另有其人</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Edward 亲口说出：「我有一个表兄 Wilfred Rolleston，一个十足的恶棍，偶尔发狂……他外貌和我相像」</td>
+<td>Part 2 Ch.1 / 约 55%</td>
+<td>解释了一切身份谜团的根源</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_6">辅助线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Simon 多次提及 Edward「酗酒、流连酒吧、靠小聪明度日」，但同时坚持「他对我有真诚的情谊」</td>
+<td>Part 1 Ch.1 / 约 5%</td>
+<td>读者最初会把 Edward 的恶习与犯罪嫌疑挂钩，但 Simon 的信任本身是一条反向提示</td>
+</tr>
+<tr>
+<td>2</td>
+<td>酒保报告说「Rolleston 刚才在此喝过威士忌，招募了六个匪徒准备去 Queen Mary」</td>
+<td>Part 1 Ch.7 / 约 44%</td>
+<td>强化「Rolleston = 凶手」的假设，但这个 Rolleston 是 Wilfred 而非 Edward</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Simon 即使在一切表象都指向 Edward 之际，仍一再声称「Rolleston 绝对不可能做这种事」</td>
+<td>Part 1 Ch.7–8 / 约 42–45%</td>
+<td>Simon 的直觉本身是一条隐性线索，暗示读者不应轻易接受表面答案</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_7">假线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>误导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Antonio 描述廊道刺客「高挑、消瘦、驼背、极度苍白」——这是 Edward Rolleston 的外貌</td>
+<td>Part 1 Ch.7 / 约 42%</td>
+<td>让读者（和 Simon）以为凶手就是 Edward，因为这个描述完全符合他在第一章的外貌描述</td>
+</tr>
+<tr>
+<td>2</td>
+<td>酒保说「Rolleston 是常客，常来喝威士忌」——读者知道 Edward 爱喝威士忌</td>
+<td>Part 1 Ch.7 / 约 44%</td>
+<td>把 Edward 的生活习惯与 Wilfred 的行动记录叠合，强化错误判断</td>
+</tr>
+<tr>
+<td>3</td>
+<td>侍女说她「在 Lord Bakefield 家多次见过这个男人」——让读者以为凶手是家里的常客，即 Edward</td>
+<td>Part 1 Ch.7 / 约 43%</td>
+<td>Wilfred 同样是 Bakefield 家的访客（他曾向 Isabel 求婚），读者未必能分辨</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="simon-howdunit">真相二：信件如何遭拦截，Simon 如何被误刺（howdunit）</h3>
+<ul>
+<li><strong>线索收敛点：约 41%</strong></li>
+<li>答案：Isabel 的信由侍女送至酒店，Wilfred Rolleston 拦截侍女，谎称 Simon 在睡觉、他是传话人，收下信件并付给侍女一枚金币（同款拿破仑 1807 年版）。读完信后，他去敲 44 号房的门（误认为是 Simon 的房间），刺伤了开门的无辜房客。Simon 其实住在 43 号房。</li>
+</ul>
+<h4 id="_8">关键线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Simon 进入酒店廊道时，发现有人被刺倒在地，且受伤地点是 44 号房而非 43 号房</td>
+<td>Part 1 Ch.7 / 约 40%</td>
+<td>说明攻击者误判房号</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Antonio 拾到信封碎片，封蜡印有 Lord Bakefield 家徽</td>
+<td>Part 1 Ch.7 / 约 41%</td>
+<td>确认信件确实存在，且已遭拦截</td>
+</tr>
+<tr>
+<td>3</td>
+<td>侍女的供词：有人在楼梯口拦截她，说「Simon 在睡觉，让我转交」，并付了一枚 louis 金币作小费</td>
+<td>Part 1 Ch.7 / 约 41%</td>
+<td>清楚还原拦截过程；同款金币成为连结凶手的铁证</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Simon 确认他住在 43 号房，而非 44 号</td>
+<td>Part 1 Ch.7 / 约 40%</td>
+<td>这个细节解释了为何凶手没刺死 Simon</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_9">辅助线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Isabel 的信中提到在 Queen Mary 残骸失去了一只嵌满珍珠的微型肖像，希望 Simon 去找回来</td>
+<td>Part 1 Ch.7 / 约 42%</td>
+<td>解释了 Wilfred 为何拦截信件——他从中得知微型肖像的存在（财物动机）与 Simon 是 Isabel 的情人（嫉妒动机）</td>
+</tr>
+<tr>
+<td>2</td>
+<td>微型肖像是 Isabel 的珍贵遗物（外祖母所留，镶嵌名贵珍珠，价值连城）</td>
+<td>Part 1 Ch.2 / 约 14%</td>
+<td>建立财物动机</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_10">假线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>误导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Simon 从未收到信件，第一反应是 Isabel 没有写信</td>
+<td>Part 1 Ch.7 / 约 40%</td>
+<td>读者可能和 Simon 一起跳过信件拦截这个可能性</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="dolores-whydunit">真相三：Dolores 的秘密——为爱误导（whydunit）</h3>
+<ul>
+<li><strong>线索收敛点：约 64%</strong></li>
+<li>答案：Dolores 在清晨独自探索时发现了 Rolleston 的足迹，清楚知道追踪方向——但她故意隐瞒，改而带领 Simon 沿「海底电缆」走向法国（相反方向），以延长她与 Simon 独处的时间。她深深爱上了 Simon，从第一眼见到他便如此。</li>
+</ul>
+<h4 id="_11">关键线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Simon 在河岸发现 Rolleston 足迹，其中也有 Dolores 的凉鞋印迹，且她的脚印出现在 Rolleston 之后——意味着她事先已来过这里</td>
+<td>Part 2 Ch.2 / 约 63%</td>
+<td><strong>物证</strong>：她的脚印覆盖在敌人足迹上，说明她先到此地探查过</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Simon 直接对质：「你知道真相！你看见了他们的足迹——但你却带我往错误的方向走！」Dolores 沉默低头，不否认</td>
+<td>Part 2 Ch.2 / 约 64%</td>
+<td><strong>行为确认</strong>：她的沉默即是承认</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Dolores 亲口坦白：「我没有想到别的……只想到你和我。从遇见你的第一刻起，就被一种前所未有的感情席卷……」</td>
+<td>Part 2 Ch.2 / 约 64%</td>
+<td><strong>自我供认</strong>：解释了她所有行动背后的动机</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_12">辅助线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Dolores 曾多次夜入 Simon 酒店房间（一次在白天、一次在深夜）——理由是「我不安心，得来保护你」</td>
+<td>Part 1 Ch.8 / 约 46%</td>
+<td>她对 Simon 的强烈关注远超救恩报答的合理范围，已是迷恋的征兆</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Antonio 警告 Simon：「小心 Dolores，见过许多男人因她神魂颠倒」</td>
+<td>Part 1 Ch.8 / 约 47%</td>
+<td>作者借 Antonio 之口暗示 Dolores 对 Simon 有不寻常的感情</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Dolores 主动要求与 Simon 单独行动，不顾 Antonio 明令禁止——她偷换成另一个印第安人的马混入队伍</td>
+<td>Part 1 Ch.8 / 约 45%</td>
+<td>她费尽心机只为与 Simon 同行</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_13">假线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>误导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Dolores 解释夜访是出于「对 Simon 安危的忧虑，是感恩救命之恩的自然反应」</td>
+<td>Part 1 Ch.8 / 约 46%</td>
+<td>她的解释表面合理，读者不易立即怀疑她有隐藏动机</td>
+</tr>
+<tr>
+<td>2</td>
+<td>她似乎积极协助追踪——熟练辨识足迹、机敏判断方向——给人「尽心尽力的伙伴」印象</td>
+<td>Part 2 Ch.1-2 / 约 54–62%</td>
+<td>让人误以为她一直在协助搜救，而非暗中拖延</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_14">推理路径重建</h2>
+<p><strong>第一条路径：识破「Rolleston」真正身份</strong></p>
+<p>读者在 41% 左右（Antonio 揭示金币的连结，凶手描述完整）已掌握两个相互矛盾的信息：
+1. 凶手是「Rolleston」（物证：金币、橡胶鞋底）
+2. Simon 坚信 Edward Rolleston 无辜（性格线索：他对 Simon 的真诚情谊）</p>
+<p>这两个信息本身是一条重要的推理路口：<strong>如果 Simon 的判断正确，那么必然存在另一个「Rolleston」</strong>。此时仔细的读者若注意到 Antonio 对凶手的描述（高、苍白、驼背）与 Edward 的外貌一致，应能察觉：外貌如此相似的人，在英格兰很可能是近亲。</p>
+<p>到 55% 处（受伤的 Edward 在残骸旁，Antonio 确认「他不是那个人」）线索完整收敛，表兄弟 Wilfred 的身份才算确定可推论。</p>
+<p><strong>第二条路径：信件拦截之谜</strong></p>
+<p>金币是最关键的实物连结。当 Antonio 展示侍女收到的小费金币（拿破仑 1807 年版）与 Simon 在谋杀现场拾到的金币完全一致，读者在 41% 左右已能推导：</p>
+<blockquote>
+<p>谋杀者 = 拦截信件的人 = 刺伤了错误房间住客的人</p>
+</blockquote>
+<p>拦截信件的动机（知道微型肖像的存在 + 知道 Simon 是情敌）也一并清晰。</p>
+<p><strong>第三条路径：Dolores 的背叛</strong></p>
+<p>这条路径最难破解，因为作者刻意将她的情感伏笔以「奉献与保护」的外衣包裹。关键节点在于她的脚印——Simon 从物理证据推断她「曾单独到过 Rolleston 的露宿地点，却没有告诉他」。这个推理在 63% 才具备可操作性，因为需要读者记住早先她说过「今早我已探查了附近地形」（Part 2 Ch.2 开头），再对照稍后的脚印发现，才能拼出她知情不报的事实。</p>
+<hr>
+<h2 id="_15">补充说明</h2>
+<p><strong>这不是一本纯推理小说——而是推理包装的冒险史诗</strong></p>
+<p>《惊天大事件》在类型上更接近爱德华时代的冒险小说（adventure novel），而非古典推理小说。卢布朗把推理元素（谋杀、身份误导、阴谋）嵌入一个地壳大灾难的宏观背景中，产生了一种独特的阅读体验：读者同时需要应对「谁是凶手」和「整个英法海峡正在天崩地裂」两个维度的紧张感。</p>
+<p>这种设计使谜团的推理压力相对较低——因为读者的注意力被奇景（新土地、黄金喷泉、废船王国）分散了——但也因此让谜团的揭露更具情感冲击力。</p>
+<p><strong>身份替换：双 Rolleston 的设计</strong></p>
+<p>卢布朗在《亚森·罗宾》系列中以「完美伪装」闻名；在本书中，他用了一个更优雅的手法——<strong>根本不需要伪装</strong>。Wilfred 和 Edward 的外貌天然相似，让所有目击者（Antonio、侍女）的描述都指向 Edward，却偏偏是另一个人。这个「先天误导」的设计比任何精心化妆更有说服力，因为目击者的描述是真实的，只是对象被搞混了。</p>
+<p>这个手法日后在推理文学中被广泛使用，但本书作为 1922 年的作品，其先见之明值得肯定。</p>
+<p><strong>Dolores 这个角色：推理之外的文学意义</strong></p>
+<p>Dolores 是全书最复杂的人物，比反派 Wilfred 更立体。她的「背叛」其实只是爱情的盲目，而她最终选择牺牲自我利益、独自赶去向法国军队求援，救了 Simon 和 Isabel 的性命——这个结局让她的「自私」获得了升华。</p>
+<p>她在最后无声骑马离去、连眼神都不给 Simon 的那一幕，是卢布朗在 1920 年代罕见的现代女性书写：她付出了一切，但拒绝成为任何男人的附属品。</p>
+<p><strong>与卢布朗其他作品的比较</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>亚森·罗宾系列</th>
+<th>惊天大事件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>核心谜团</td>
+<td>诈骗 / 盗窃 / 身份谜题</td>
+<td>谋杀 / 身份误导</td>
+</tr>
+<tr>
+<td>主角性质</td>
+<td>绅士怪盗（亦正亦邪）</td>
+<td>正直英雄（纯粹善良）</td>
+</tr>
+<tr>
+<td>世界观</td>
+<td>巴黎上流社会</td>
+<td>后地质灾难的无政府荒原</td>
+</tr>
+<tr>
+<td>叙事野心</td>
+<td>精妙的情节机关</td>
+<td>地缘政治寓言 + 个人英雄主义</td>
+</tr>
+</tbody>
+</table>
+<p>本书是卢布朗罕见的「正面英雄」作品——Simon Dubosc 没有任何道德模糊，是一个完全正派的人物。这让推理的惊喜感降低（没有亚森·罗宾式的「谁是好人谁是坏人」反转），但故事的情感重心更为清晰。</p>
+<p><strong>对读者的时代补充</strong></p>
+<p>本书出版于 1922 年，彼时英法「跨海峡隧道」的设想已流传数十年（最终在 1994 年建成）。卢布朗把「人工海底隧道」的梦想转化为「自然地质灾难造就的陆桥」，是一个聪明的科幻转化。书中对新土地的描写（海底沉积物、古老贝壳层、远古人类遗迹）显示卢布朗认真研究了地质学，而他借「老沙石教授」之口对断层构造的解说，在 1920 年代是相当通俗精准的科学科普。</p>
+<p>黄金喷泉的设定（古代沉船宝藏被地热喷泉从海底冲出）更是带有一种豪气的浪漫主义——这在严肃的推理小说中几乎是不可能出现的元素，但卢布朗就是能把它写得让人信服。</p>
+    <a href="../index.html" class="back-link">← 回到首页</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">推理解剖室</p>
+    <p>五位作者 · 八十八部作品 · 一百三十五年推理文学的难度演化</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

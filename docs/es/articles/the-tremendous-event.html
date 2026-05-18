@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Acontecimiento Tremendo（The Tremendous Event） — Sala de Disección Detectivesca</title>
+<meta name="description" content="En 1922, el Canal de la Mancha se eleva súbitamente debido a una falla geológica antigua（que Leblanc denomina la «falla de Ruán»），formando una nueva masa de tie">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-tremendous-event.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-tremendous-event.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-tremendous-event.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-tremendous-event.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-tremendous-event.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-tremendous-event.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-tremendous-event.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-tremendous-event.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Sala de Disección Detectivesca</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Inicio</a>
+        <a href="../index.html#latest">Recientes</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Idioma" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 Español</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-tremendous-event.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-tremendous-event.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-tremendous-event.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/the-tremendous-event.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/the-tremendous-event.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/the-tremendous-event.html">Deutsch</a>
+      <a class="lang-item active" data-lang="es" href="/Detective-Analysis/es/articles/the-tremendous-event.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/the-tremendous-event.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">Maurice Leblanc · 1922</div>
+    <h1>El Acontecimiento Tremendo（The Tremendous Event）</h1>
+    <div class="subtitle">Maurice Leblanc · Novela de aventuras y misterio（formato largo）</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Deducibilidad</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Nivel de niebla</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="el-acontecimiento-tremendothe-tremendous-event-analisis-de-deducibilidad">El Acontecimiento Tremendo（The Tremendous Event）— Análisis de Deducibilidad</h1>
+<h2 id="informacion-basica">Información Básica</h2>
+<ul>
+<li>Autor：Maurice Leblanc</li>
+<li>Año：1922</li>
+<li>Género：Novela de aventuras y misterio（formato largo）</li>
+<li>Detective：Ninguno（el protagonista Simon Dubosc combina las funciones de héroe de acción y detective aficionado）</li>
+<li>Tipo de misterio central：whodunit + howdunit + whydunit（tres hilos de misterio entrelazados sobre el fondo de una catástrofe geológica de proporciones épicas）</li>
+</ul>
+<hr>
+<h2 id="evaluacion-global-de-deducibilidad">Evaluación Global de Deducibilidad</h2>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Estrellas</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deducibilidad（Deducibility）</td>
+<td>⭐⭐⭐</td>
+<td>Punto de convergencia promedio 53% — los tres hilos de misterio alcanzan el umbral de deducibilidad en aproximadamente 41%, 55% y 64% respectivamente</td>
+</tr>
+<tr>
+<td>Nivel de niebla（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>La pista falsa central está ingeniosamente diseñada（primos con el mismo apellido generan confusión），pero el autor también proporciona al lector suficientes contra-indicios. El motivo de Dolores tiene presagios pero está deliberadamente oculto</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="sinopsis">Sinopsis</h2>
+<p>En 1922, el Canal de la Mancha se eleva súbitamente debido a una falla geológica antigua（que Leblanc denomina la «falla de Ruán»），formando una nueva masa de tierra que conecta Dieppe en Francia con Hastings en Inglaterra: el «Istmo de Normandía». Este es un acontecimiento histórico mundial que transforma la geografía política de Europa.</p>
+<p>El joven francés Simon Dubosc corteja a Isabel Bakefield, hija de un aristócrata inglés, pero su padre lo rechaza con la condición: «Primero consigue una gesta heroica, luego hablaremos de matrimonio.» En la noche del gran terremoto, Simon recorre a pie la nueva tierra emergida del mar hasta llegar a Inglaterra, convirtiéndose en «el primer hombre que cruzó el Canal a pie».</p>
+<p>Sin embargo, a lo largo de este viaje se desata una serie de crímenes:
+- El actor de origen indio Badiarinos es apuñalado por la espalda en la nueva tierra; junto a él se encuentran huellas de suelas de goma y una moneda de oro napoleónica
+- La carta secreta de Isabel a Simon es interceptada; la mensajera（una doncella）entrega la carta al «Sr. Rolleston», que afirma ser el enviado de Simon
+- El portador de la carta intenta asesinar a Simon, pero apuñala por error al huésped del cuarto contiguo（número 44 en lugar del 43）</p>
+<p>Las sospechas recaen sobre el amigo inglés de Simon, Edward Rolleston — un borracho de conducta errática. Pero el instinto de Simon no puede creer que su viejo amigo sea el asesino.</p>
+<p>La verdad: ese hombre no es Edward, sino su primo Wilfred Rolleston — de apariencia similar pero hundido en la criminalidad como un paranoico alcohólico. Wilfred codicia a Isabel, ha reclutado una banda, secuestrado a Lord Bakefield y su hija, y se ha establecido como señor en un barco abandonado en la nueva tierra, gobernando una legión de forajidos con una fuente de oro.</p>
+<p>Simon se une al actor mestizo indio Antonio（Lynx-Eye）para llevar a cabo el rescate. En el camino se enreda con la misteriosa actriz mexicana Dolores, quien deliberadamente desvía la ruta de seguimiento porque está enamorada de Simon. Finalmente Simon repara un avión accidentado, vuela al campo de batalla, y con la colaboración de Antonio rescata a Isabel y evita un enfrentamiento entre los ejércitos francés y británico, convirtiéndose en «Alto Comisionado del Nuevo Territorio».</p>
+<hr>
+<h2 id="desmontaje-de-la-verdad">Desmontaje de la Verdad</h2>
+<h3 id="verdad-primera-la-identidad-del-asesino-wilfred-rolleston-no-edward-rollestonwhodunit">Verdad Primera: La Identidad del Asesino — Wilfred Rolleston, no Edward Rolleston（whodunit）</h3>
+<ul>
+<li><strong>Punto de convergencia de pistas: aproximadamente 55%</strong></li>
+<li>Respuesta: El asesino es Wilfred Rolleston, primo de Edward. Los dos se parecen físicamente de forma asombrosa, pero tienen caracteres diametralmente opuestos. Wilfred ha degenerado en un criminal paranoico alcohólico que mata apuñalando por la espalda（su gran estatura le permite clavar el cuchillo desde arriba hacia abajo）.</li>
+</ul>
+<h4 id="pistas-clave">Pistas Clave</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Pista</th>
+<th>Ubicación（capítulo/porcentaje）</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Escena del crimen en la nueva tierra: huellas de suelas de goma con diseño（bathing-shoes or tennis-shoes with patterned rubber soles），que señalan a un crimen premeditado</td>
+<td>Part 1 Cap. 6 / ~31%</td>
+<td>Reaparecen posteriormente junto a los restos del Queen Mary, confirmando que pertenecen al mismo individuo</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Junto al cadáver se encuentra una moneda de oro napoleónica（edición de 1807）; el «Rolleston» que interceptó la carta pagó a la doncella con una moneda idéntica del mismo año</td>
+<td>Part 1 Cap. 7 / ~41%</td>
+<td>Conecta el asesinato en la nueva tierra con el ataque en el corredor del hotel, confirmando un único perpetrador</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Antonio describe al atacante del corredor: «extremadamente alto, capaz de inclinarse para clavar desde la altura del hombro; delgado… ligeramente encorvado… de tez extremadamente pálida»</td>
+<td>Part 1 Cap. 7 / ~42%</td>
+<td>Esta descripción coincide palabra por palabra con Edward Rolleston（una maniobra de desorientación por semejanza física deliberadamente diseñada）— pero también describe a Wilfred con igual precisión</td>
+</tr>
+<tr>
+<td>4</td>
+<td>El herido Edward Rolleston yace junto a los restos del Queen Mary; Antonio confirma oficialmente: «Este hombre no es el que vi en el corredor del hotel»</td>
+<td>Part 2 Cap. 1 / ~55%</td>
+<td><strong>Pista clave final</strong>: confirma la inocencia de Edward; el asesino es otra persona</td>
+</tr>
+<tr>
+<td>5</td>
+<td>El propio Edward dice: «Tengo un primo, Wilfred Rolleston — un auténtico canalla que a veces enloquece… se parece a mí en apariencia»</td>
+<td>Part 2 Cap. 1 / ~55%</td>
+<td>Explica el origen de todos los enigmas de identidad</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-de-apoyo">Pistas de Apoyo</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Pista</th>
+<th>Ubicación（capítulo/porcentaje）</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Simon menciona repetidamente que Edward «bebe demasiado, frecuenta los bares y vive de su astucia», pero insiste al mismo tiempo en que «él me guarda una amistad sincera»</td>
+<td>Part 1 Cap. 1 / ~5%</td>
+<td>Los lectores inicialmente relacionan los vicios de Edward con la sospecha criminal, pero la confianza de Simon es en sí misma una señal contraria</td>
+</tr>
+<tr>
+<td>2</td>
+<td>El barman informa: «Rolleston estuvo aquí hace un momento bebiendo whisky y reclutó a seis forajidos para dirigirse al Queen Mary»</td>
+<td>Part 1 Cap. 7 / ~44%</td>
+<td>Refuerza la hipótesis «Rolleston = asesino», pero este Rolleston es Wilfred, no Edward</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Incluso cuando todas las apariencias señalan a Edward, Simon afirma repetidamente: «Rolleston es absolutamente incapaz de hacer algo así»</td>
+<td>Part 1 Cap. 7–8 / ~42–45%</td>
+<td>El propio instinto de Simon es una pista encubierta que señala al lector que no debe aceptar precipitadamente la respuesta superficial</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-falsas">Pistas Falsas</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Pista</th>
+<th>Ubicación（capítulo/porcentaje）</th>
+<th>Dirección del engaño</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Antonio describe al atacante del corredor como «alto, delgado, encorvado, extremadamente pálido» — esta es la apariencia de Edward Rolleston</td>
+<td>Part 1 Cap. 7 / ~42%</td>
+<td>Induce a los lectores（y a Simon）a creer que el asesino es Edward, ya que la descripción coincide exactamente con su aspecto del primer capítulo</td>
+</tr>
+<tr>
+<td>2</td>
+<td>El barman dice que «Rolleston es cliente habitual, viene frecuentemente a tomar whisky» — y los lectores saben que Edward bebe whisky</td>
+<td>Part 1 Cap. 7 / ~44%</td>
+<td>Superpone los hábitos conocidos de Edward con los movimientos reales de Wilfred, reforzando el error de juicio</td>
+</tr>
+<tr>
+<td>3</td>
+<td>La doncella dice que «ha visto a este hombre muchas veces en casa de Lord Bakefield» — llevando a los lectores a suponer que el asesino es un habitual de la casa, es decir, Edward</td>
+<td>Part 1 Cap. 7 / ~43%</td>
+<td>Wilfred también era visitante de los Bakefield（había propuesto matrimonio a Isabel）, pero los lectores no pueden distinguirlos fácilmente</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="verdad-segunda-como-fue-interceptada-la-carta-y-como-fue-apunalado-simon-por-errorhowdunit">Verdad Segunda: Cómo Fue Interceptada la Carta y Cómo Fue Apuñalado Simon Por Error（howdunit）</h3>
+<ul>
+<li><strong>Punto de convergencia de pistas: aproximadamente 41%</strong></li>
+<li>Respuesta: La carta de Isabel es llevada por la doncella al hotel. Wilfred Rolleston intercepta a la doncella, miente diciendo que Simon está dormido y que él es el mensajero, toma la carta y da a la doncella una moneda de oro（el mismo Napoleón edición 1807）como propina. Tras leer la carta, va a llamar a la puerta de la habitación 44（confundiéndola con la de Simon）y apuñala al inocente huésped que abre la puerta. Simon en realidad vive en la habitación 43.</li>
+</ul>
+<h4 id="pistas-clave_1">Pistas Clave</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Pista</th>
+<th>Ubicación（capítulo/porcentaje）</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Al entrar Simon al corredor del hotel, encuentra a alguien apuñalado en el suelo, y el lugar de la herida es la habitación 44, no la 43</td>
+<td>Part 1 Cap. 7 / ~40%</td>
+<td>Muestra que el atacante confundió el número de habitación</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Antonio recoge fragmentos del sobre con el sello de lacre de la familia Bakefield</td>
+<td>Part 1 Cap. 7 / ~41%</td>
+<td>Confirma que la carta existía y fue interceptada</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Testimonio de la doncella: alguien la detuvo en la escalera, dijo «Simon está durmiendo, déjame entregar yo el mensaje», y le dio un louis de oro como propina</td>
+<td>Part 1 Cap. 7 / ~41%</td>
+<td>Reconstruye claramente el proceso de interceptación; la moneda idéntica se convierte en prueba irrefutable que vincula al asesino</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Simon confirma que vive en la habitación 43, no en la 44</td>
+<td>Part 1 Cap. 7 / ~40%</td>
+<td>Este detalle explica por qué el asesino no logró matar a Simon</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-de-apoyo_1">Pistas de Apoyo</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Pista</th>
+<th>Ubicación（capítulo/porcentaje）</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>La carta de Isabel menciona que perdió un retrato en miniatura incrustado de perlas junto a los restos del Queen Mary y pide a Simon que lo busque</td>
+<td>Part 1 Cap. 7 / ~42%</td>
+<td>Explica por qué Wilfred interceptó la carta — se enteró de la existencia del retrato en miniatura（motivo de codicia）y de que Simon es el amante de Isabel（motivo de celos）</td>
+</tr>
+<tr>
+<td>2</td>
+<td>El retrato en miniatura es un valioso legado de Isabel（dejado por su abuela materna, engastado con finas perlas, de gran valor）</td>
+<td>Part 1 Cap. 2 / ~14%</td>
+<td>Establece el motivo económico</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-falsas_1">Pistas Falsas</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Pista</th>
+<th>Ubicación（capítulo/porcentaje）</th>
+<th>Dirección del engaño</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Simon nunca recibió la carta; su primera reacción es que Isabel no escribió</td>
+<td>Part 1 Cap. 7 / ~40%</td>
+<td>Los lectores pueden pasar por alto junto a Simon la posibilidad de la interceptación de la carta</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="verdad-tercera-el-secreto-de-dolores-desorientacion-por-amorwhydunit">Verdad Tercera: El Secreto de Dolores — Desorientación por Amor（whydunit）</h3>
+<ul>
+<li><strong>Punto de convergencia de pistas: aproximadamente 64%</strong></li>
+<li>Respuesta: Dolores explora sola al amanecer y descubre las huellas de Rolleston, sabiendo exactamente en qué dirección seguir — pero lo oculta deliberadamente y en cambio conduce a Simon a lo largo del «cable submarino» hacia Francia（dirección contraria），para prolongar el tiempo a solas con Simon. Está profundamente enamorada de él desde el primer momento en que lo vio.</li>
+</ul>
+<h4 id="pistas-clave_2">Pistas Clave</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Pista</th>
+<th>Ubicación（capítulo/porcentaje）</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Simon encuentra en la orilla del río las huellas de Rolleston — entre ellas también están las de las sandalias de Dolores, apareciendo después de las de Rolleston — lo que significa que ella ya había estado allí previamente</td>
+<td>Part 2 Cap. 2 / ~63%</td>
+<td><strong>Evidencia física</strong>: sus huellas cubren las del enemigo, demostrando que exploró este lugar con anterioridad</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Simon la confronta directamente: «¡Sabía la verdad! Vio sus huellas — ¡y sin embargo me condujo en la dirección equivocada!» Dolores agacha la cabeza en silencio sin negar nada</td>
+<td>Part 2 Cap. 2 / ~64%</td>
+<td><strong>Confirmación conductual</strong>: su silencio es admisión</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Dolores confiesa en voz alta: «No pensé en otra cosa… solo en usted y en mí. Desde el primer instante en que lo conocí, fui arrastrada por un sentimiento que nunca había experimentado…»</td>
+<td>Part 2 Cap. 2 / ~64%</td>
+<td><strong>Autoconfesión</strong>: explica el motivo detrás de todas sus acciones</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-de-apoyo_2">Pistas de Apoyo</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Pista</th>
+<th>Ubicación（capítulo/porcentaje）</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Dolores ha entrado sin permiso en la habitación del hotel de Simon varias veces（una durante el día, una en plena noche）— con la excusa de «estoy inquieta y debo venir a protegerlo»</td>
+<td>Part 1 Cap. 8 / ~46%</td>
+<td>Su intensa atención hacia Simon supera con creces lo que la gratitud por un rescate podría justificar; ya son señales de obsesión</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Antonio advierte a Simon: «Tenga cuidado con Dolores — he visto a muchos hombres perder el juicio por ella»</td>
+<td>Part 1 Cap. 8 / ~47%</td>
+<td>El autor usa la voz de Antonio para insinuar que Dolores alberga sentimientos inusuales hacia Simon</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Dolores insiste en actuar a solas con Simon, desatendiendo la prohibición explícita de Antonio — cambia secretamente su caballo por el de otro indio para unirse al grupo</td>
+<td>Part 1 Cap. 8 / ~45%</td>
+<td>Se esfuerza al máximo solo para estar al lado de Simon</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-falsas_2">Pistas Falsas</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Pista</th>
+<th>Ubicación（capítulo/porcentaje）</th>
+<th>Dirección del engaño</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Dolores explica sus visitas nocturnas como «preocupación por la seguridad de Simon, una reacción natural de gratitud por haberle salvado la vida»</td>
+<td>Part 1 Cap. 8 / ~46%</td>
+<td>Su explicación es superficialmente plausible; los lectores no pueden sospechar de inmediato que ella tenga un motivo oculto</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Parece ayudar activamente en el rastreo — leyendo habilidosamente las huellas, juzgando con agudeza las direcciones — dando la impresión de una «compañera dedicada»</td>
+<td>Part 2 Cap. 1–2 / ~54–62%</td>
+<td>Hace creer que ha estado ayudando en el rescate todo el tiempo, ocultando que en realidad estaba dilando secretamente</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="reconstruccion-del-camino-deductivo">Reconstrucción del Camino Deductivo</h2>
+<p><strong>Primer Camino: Desvelar la Verdadera Identidad del «Rolleston»</strong></p>
+<p>Alrededor del 41%（Antonio revela la conexión de las monedas; la descripción del asesino está completa），los lectores poseen dos informaciones mutuamente contradictorias:
+1. El asesino es «Rolleston»（evidencia física: monedas, suelas de goma）
+2. Simon cree firmemente que Edward Rolleston es inocente（evidencia de carácter: su sincera amistad con Simon）</p>
+<p>Estas dos informaciones constituyen por sí mismas una importante bifurcación deductiva: <strong>si el juicio de Simon es correcto, debe existir otro «Rolleston»</strong>. En este momento, un lector atento que note que la descripción del asesino por parte de Antonio（alto, pálido, encorvado）coincide con el aspecto de Edward debería poder deducir: alguien con un parecido físico tan grande en Inglaterra es casi con toda seguridad un pariente cercano.</p>
+<p>En el punto del 55%（el herido Edward junto a los restos del barco; Antonio confirma «él no es ese hombre»），las pistas convergen completamente, y la identidad del primo Wilfred se vuelve definitivamente deducible.</p>
+<p><strong>Segundo Camino: El Misterio de la Interceptación de la Carta</strong></p>
+<p>La moneda de oro es el eslabón físico más crucial. Cuando Antonio muestra que la moneda de propina recibida por la doncella（Napoleón edición 1807）es idéntica a la que Simon encontró en la escena del crimen, los lectores alrededor del 41% pueden deducir:</p>
+<blockquote>
+<p>El asesino = la persona que interceptó la carta = la persona que apuñaló al huésped de la habitación equivocada</p>
+</blockquote>
+<p>El motivo para interceptar la carta（conocer la existencia del retrato en miniatura + saber que Simon es su rival amoroso）también queda claro simultáneamente.</p>
+<p><strong>Tercer Camino: La Traición de Dolores</strong></p>
+<p>Este es el camino más difícil de descifrar, porque el autor envuelve deliberadamente sus presagios emocionales en el manto de la «devoción y protección». El nodo clave son sus huellas — Simon deduce de las pruebas físicas que ella «había visitado el campamento de Rolleston a solas sin decírselo». Esta deducción solo se vuelve operativa alrededor del 63%, porque requiere que los lectores recuerden su declaración anterior: «Esta mañana ya exploré el terreno circundante»（inicio de Part 2 Cap. 2）, y luego la comparen con el posterior descubrimiento de las huellas para reconstruir el hecho de que ella sabía y no lo comunicó.</p>
+<hr>
+<h2 id="notas-adicionales">Notas Adicionales</h2>
+<p><strong>Esto No Es una Novela Policíaca Pura — Es una Epopeya de Aventuras Vestida de Misterio</strong></p>
+<p>En cuanto al género, <em>El Acontecimiento Tremendo</em> está más cerca de la novela de aventuras edwardiana que de la novela policíaca clásica. Leblanc inserta los elementos de misterio（asesinato, desorientación de identidad, conspiración）dentro del grandioso fondo de una catástrofe geológica, produciendo una experiencia lectora singular: los lectores deben afrontar simultáneamente «quién es el asesino» y «todo el Canal de la Mancha está derrumbándose».</p>
+<p>Este diseño mantiene la presión deductiva del misterio relativamente baja — porque la atención de los lectores se desvía hacia maravillas espectaculares（la nueva tierra, la fuente de oro, el reino del barco naufragado）— pero también hace que la revelación del misterio tenga un mayor impacto emocional.</p>
+<p><strong>Sustitución de Identidad: El Diseño del Doble Rolleston</strong></p>
+<p>Leblanc es famoso en la serie de Arsène Lupin por el «disfraz perfecto»; en esta novela emplea una técnica aún más elegante — <strong>no hace falta ningún disfraz en absoluto</strong>. El parecido físico entre Wilfred y Edward es natural, lo que hace que todas las descripciones de los testigos（Antonio, la doncella）señalen a Edward cuando en realidad se trata de otra persona. Este diseño de «desorientación congénita» es más convincente que cualquier maquillaje elaborado, porque las descripciones de los testigos son verídicas — simplemente el sujeto ha sido confundido.</p>
+<p>Esta técnica sería ampliamente utilizada en la literatura detectivesca posterior, pero como obra de 1922 este libro merece reconocimiento por su visión de futuro.</p>
+<p><strong>Dolores como Personaje: Significado Literario más allá del Misterio</strong></p>
+<p>Dolores es el personaje más complejo de toda la novela — más tridimensional que el villano Wilfred. Su «traición» no es sino la ceguera del amor, y su elección final de sacrificar sus propios intereses, yendo sola a pedir ayuda al ejército francés y salvando así las vidas de Simon e Isabel, redime lo que parecía «egoísmo».</p>
+<p>La escena final — Dolores cabalgando en silencio y sin conceder ni una mirada a Simon — es la rara escritura moderna de Leblanc sobre las mujeres en la década de 1920: ella lo dio todo, pero se negó a convertirse en el apéndice de ningún hombre.</p>
+<p><strong>Comparación con Otras Obras de Leblanc</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Serie de Arsène Lupin</th>
+<th>El Acontecimiento Tremendo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Misterio central</td>
+<td>Fraude / robo / enigmas de identidad</td>
+<td>Asesinato / desorientación de identidad</td>
+</tr>
+<tr>
+<td>Tipo de protagonista</td>
+<td>Ladrón de guante blanco（moralmente ambiguo）</td>
+<td>Héroe íntegro（puramente bondadoso）</td>
+</tr>
+<tr>
+<td>Visión del mundo</td>
+<td>Alta sociedad parisina</td>
+<td>Yerma anárquica post-catástrofe geológica</td>
+</tr>
+<tr>
+<td>Ambición narrativa</td>
+<td>Mecanismos de trama refinados</td>
+<td>Alegoría geopolítica + heroísmo individual</td>
+</tr>
+</tbody>
+</table>
+<p>Esta novela es una de las raras obras de Leblanc con un «héroe positivo» — Simon Dubosc no tiene ninguna ambigüedad moral y es un personaje absolutamente íntegro. Esto reduce el factor sorpresa de la deducción（no hay inversión al estilo Lupin de «quién es el bueno y quién es el malo»），pero el centro emocional de la historia es correspondiente más claro.</p>
+<p><strong>Contexto Histórico para los Lectores</strong></p>
+<p>El libro fue publicado en 1922, cuando la idea de un «túnel del Canal» franco-británico llevaba décadas circulando（finalmente construido en 1994）. Leblanc transforma el sueño de «un túnel submarino artificial» en «un puente terrestre creado por una catástrofe geológica natural» — una ingeniosa transposición de ciencia ficción. Sus descripciones de la nueva tierra（sedimentos submarinos, antiguas capas de conchas, vestigios humanos primordiales）demuestran que Leblanc había estudiado seriamente la geología, y sus explicaciones sobre la estructura de las fallas geológicas, puestas en boca del «viejo Profesor Piedra Arenisca», eran una divulgación científica notablemente comprensible y precisa para los años veinte.</p>
+<p>La ambientación de la fuente de oro（tesoros de naufragios antiguos impulsados desde el fondo del mar por manantiales geotérmicos）está impregnada de un romanticismo grandilocuente — un elemento que sería casi imposible encontrar en una novela policíaca seria, pero que Leblanc logra hacer completamente creíble, lo cual es en sí mismo una proeza.</p>
+    <a href="../index.html" class="back-link">← Volver al inicio</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Sala de Disección Detectivesca</p>
+    <p>Cinco autores · ochenta y ocho obras · 135 años de evolución de la dificultad en la narrativa policíaca.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
