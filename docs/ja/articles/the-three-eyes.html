@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>三つの目（The Three Eyes） — 推理解剖室</title>
+<meta name="description" content="パリ郊外のオー＝ムードン（Haut-Meudon）。発明家Noel Dorgeroux は自宅の庭に特製の暗灰色の塗料を塗った壁を作り、そこに不可思議な現象を発見する。夕暮れ時になると、壁面には生きた歴史的映像が自動的に映し出されるのだ——英国人看護師Edith Cavellがドイツ人の手によって銃殺される現場、モンゴ">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-three-eyes.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-three-eyes.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-three-eyes.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-three-eyes.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-three-eyes.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-three-eyes.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-three-eyes.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-three-eyes.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif JP', serif;
+  --font-sans: 'Noto Sans JP', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">推理解剖室</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">ホーム</a>
+        <a href="../index.html#latest">最新</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="言語" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 日本語</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-three-eyes.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-three-eyes.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-three-eyes.html">English</a>
+      <a class="lang-item active" data-lang="ja" href="/Detective-Analysis/ja/articles/the-three-eyes.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/the-three-eyes.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/the-three-eyes.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/the-three-eyes.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/the-three-eyes.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">モーリス・ルブラン · </div>
+    <h1>三つの目（The Three Eyes）</h1>
+    <div class="subtitle">モーリス・ルブラン（Maurice Leblanc） · 長編</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">推理難易度</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">霧の濃度</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="the-three-eyes">三つの目（The Three Eyes）— 推理分析</h1>
+<h2 id="_1">基本情報</h2>
+<ul>
+<li>著者：モーリス・ルブラン（Maurice Leblanc）</li>
+<li>発表年：1921年</li>
+<li>ジャンル：長編</li>
+<li>探偵：なし（語り手は目撃者兼当事者；工学者Benjamin Prevotelle が後半に登場し謎を解明）</li>
+<li>核心謎題の種類：whatdunit（映像はどこから来るのか）+ whodunit（殺人者の正体）+ 隠された真実（Berangereの真の役割と出自）</li>
+</ul>
+<hr>
+<h2 id="_2">推理難易度総評</h2>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星等</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難易度（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>平均収束点74% — 三つの真実の手がかりが分散しており、最難の一つ（Berangereの出自）は95%まで浮上しない；核心謎題（金星投影）はPrevotelle の正式な解明よりも早く推断するためには天文学的直感を必要とする</td>
+</tr>
+<tr>
+<td>霧の濃度（Fog Rating）</td>
+<td>⭐⭐⭐⭐</td>
+<td>作者は複数の疑似科学的説明、死者の遺言の誤読、Berangereの不審な行動という三重の手法で意図的に霧を張る；さらに稀有なことに、語り手自身が第3章で「謎を解こうとするな」と公言し、メタ物語構造そのものを誤誘導として利用している</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_3">あらすじ</h2>
+<p>パリ郊外のオー＝ムードン（Haut-Meudon）。発明家Noel Dorgeroux は自宅の庭に特製の暗灰色の塗料を塗った壁を作り、そこに不可思議な現象を発見する。夕暮れ時になると、壁面には生きた歴史的映像が自動的に映し出されるのだ——英国人看護師Edith Cavellがドイツ人の手によって銃殺される現場、モンゴルフィエ兄弟の気球の初飛行、ランスの大聖堂への砲撃、そして老発明家の息子ドミニク（Dominique）が空中戦で戦死する瞬間まで。</p>
+<p>映像が現れる前には必ず、壁面に三つの奇妙な幾何学的図形——三つの「三角形の目」が現れる。それぞれの目は、やがて登場する主人公の目の表情と同じ眼差しを放ち、まるで予告編のようだ。</p>
+<p>Dorgeroux の甥Victorien Beaugrandは唯一の目撃者であり、老人の養女Berangereに恋をしている。老発明家はこの奇跡を公衆に示すべく千人を収容できる円形劇場の建設を決意し、二人の結婚を約束する。</p>
+<p>しかし、この秘密を狙う陰謀はすでに静かに動き始めていた。Velmotという名の狡猾な男が冬の間ずっとBerangereに近づき、庭に侵入していた。彼の共謀者はDorgeroux の研究報告を盗み出し、チョッキの裏地に隠された鋼板（核心の配合式が刻まれている）を強奪した。やがてDorgeroux は自宅の庭で殺害され、Berangereは行方不明となり、庭の相続権は大きな笑顔の見知らぬ男の手に渡る——彼はBerangereの父、商人Theodore Massignacを名乗った。</p>
+<p>Massignacは大胆にも円形劇場を公開し、人々に壁の奇景を見せた。若い工学者Prevotelle はすべての現象を分析し、最終的にその報告書でこう宣告する。これらの映像はトリックではなく、金星（Venus、すなわち「牧羊人の星」l'Étoile du Berger）からの「重力光線」による投影である——金星の知的生命体が、人類の技術をはるかに超える方法で地球を観察し、映像を送り届けているのだと。</p>
+<p>すべては三度目の公開展示の時に崩壊する。壁面にはDorgeroux が殺された一部始終が映し出され、千人の証人の前で殺人者の顔が暴かれた。激怒した群衆は殺人者を八つ裂きにし、殺人者は死の間際に装置を起動させ、腐食液体を壁面に浴びせた——配合式は永遠に失われた。Berangereは記憶の中に配合式を保持していたが、悪漢との格闘の衝撃の中でそれを忘れてしまった。金星からの信号は、それ以来二度と現れなかった。</p>
+<hr>
+<h2 id="_4">真相解析</h2>
+<h3 id="venus">真実その一：三つの目の映像の出所——金星（Venus）の重力光線投影</h3>
+<ul>
+<li><strong>手がかり収束点：約68%</strong></li>
+<li>答え：金星（Venus、フランス語で「l'Étoile du Berger」、牧羊人の星）の知的生命体が、「重力光線」（B-ray of gravitation、光速の三倍で伝播する）を用いて地球の歴史的事件の映像を遠距離投射し、Dorgeroux の特製化学塗料の壁面に映し出している。三つの幾何学的な「目」は金星人の「制作者の商標」であり、同時にやがて登場する主人公の目の表情を示している——金星人の身体構造は三つの目と三本の腕を持つ「三角対称性」を有しており、人間の「左右対称性」と対応している。</li>
+</ul>
+<h4 id="_5">重要手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（章／百分率）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>壁の基部が「わずかに傾いた平面」に改造されており、Dorgeroux は庭の反対側に第二劇場を建設して同じ壁の裏面を使う計画を持っていた</td>
+<td>第2章・第6章 / 約10%・30%</td>
+<td>傾斜面の意図は直感的には読み解きにくい；しかし壁の両面はちょうど東西方向を向いており、金星の明けの明星（東向き）と宵の明星（西向き）の位置に対応している——これはPrevotelle が電話でVictorienに確認を求めた「決定的な細部」である</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Dorgeroux が死の間際に壁面に刻んだ「B-ray… B E R G E…」</td>
+<td>第8章 / 約42%</td>
+<td>「B-ray」＝重力光線（NoelがPrevotelle の小冊子で読んだ理論）；「BERGE」＝牧羊人（Berger）、「牧羊人の星」すなわち金星を指す——しかしこの手がかりは人々に「Bergeronnette」（Berangereの愛称）と誤読され、霧の源となる</td>
+</tr>
+<tr>
+<td>3</td>
+<td>二度目の公開展示で、映像が「雲が西の地平線を流れる」たびに繰り返し霞んで消える；Prevotelle が「空を見上げて」から突然悟る</td>
+<td>第12章 / 約57%</td>
+<td>雲が金星から届く重力光線を遮断し、投影が中断される——本書で最も重要な科学的手がかり</td>
+</tr>
+<tr>
+<td>4</td>
+<td>「形態映像」（Shapes）：奇妙な生物が「三本の触手」で「垂直な都市の街路」を移動し、同種の「頭」を引き裂く；三つの幾何学的な目を含んでいる</td>
+<td>第12章 / 約57%</td>
+<td>これは金星人の生活映像である——三手・三眼の身体構造、および逆転した重力環境；Prevotelle の報告によれば、この映像が金星起源を確認する核心的証拠である</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Prevotelle が電話で問う：「壁の裏面にも同じ傾斜角があるか？」Victorienが確認：「はい。」Prevotelle が答える「では証拠は完全だ」</td>
+<td>第13章 / 約65%</td>
+<td>最後の重要手がかり：金星（明けの明星／宵の明星）が東西から交互に投射し、壁の両面傾斜の設計はまさに両方向の光線を受け取るためのものである</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_6">補助手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（章／百分率）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>展示は晴天の日にしか行われず、「特定の時刻」（夕暮れの前後）に限られる——Dorgeroux は時計を見ながら待つ</td>
+<td>第5章以降／全編</td>
+<td>投影が特定の時間にのみ見える光源から来ていることを示唆する——金星は毎日地平線に近い時間帯にしか現れない</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Dorgeroux がPrevotelle の小冊子『万有引力論』を読んでいたと言及し、Victorienは遺品の中にPrevotelle の名前を見つける</td>
+<td>第13章 / 約63%</td>
+<td>Dorgeroux がすでに重力光線の理論を知っていたことを示す；彼の「B-ray」はまさにこれを指している</td>
+</tr>
+<tr>
+<td>3</td>
+<td>三つの目の映像は毎回、やがて登場する主人公の目の表情をあらかじめ示す（Cavellの毅然とした目、ドミニクの恐怖の目、Berangereの柔らかな目、Massignacの残忍な目）</td>
+<td>第2〜17章／全編</td>
+<td>投影者が地球の人物について高度な情報を把握しており、映像の主人公を選択的に「予告」していることを示唆する</td>
+</tr>
+<tr>
+<td>4</td>
+<td>庭から盗み出された廃教会の壁の破片にも三つの目の映像が現れるが、ぼやけている</td>
+<td>第7章 / 約35%</td>
+<td>特製塗料が必要条件であり、壁の場所ではないことを示す——「光線＋塗料の化学反応」の組み合わせであることをさらに確認する</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_7">偽手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（章／百分率）</th>
+<th>誤導の方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Dorgeroux の「B光線」理論：人体が放射する「魅力粒子」で、Berangereにちなんでついた名前のB-ray</td>
+<td>第1〜5章 / 約5〜25%</td>
+<td>読者に映像が人体の何らかの神秘的な放射力によって作られるという印象を与え、脳内投影とさえ思わせる</td>
+</tr>
+<tr>
+<td>2</td>
+<td>「太陽熱利用」理論：Dorgeroux が「太陽光の化学作用」で自分の研究方向を説明する</td>
+<td>第2章 / 約10%</td>
+<td>読者は星間投影ではなく、何らかの先進的な太陽エネルギー変換技術だと思い込む可能性がある</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Victorienの「脳内投影」理論：Dorgeroux の脳裏に想像した場面が壁に記録されているという説</td>
+<td>第5章 / 約24%</td>
+<td>この説が成立すれば、ドミニクの死（老人が心に抱いていた息子）を説明できるが、モンゴルフィエの場面は説明できない</td>
+</tr>
+<tr>
+<td>4</td>
+<td>作者が第3章で読者に直接「謎を解こうとしないでください、すべての理論を捨てなさい、どれも行き止まりです」と告げる</td>
+<td>第3章 / 約14%</td>
+<td>これは最も稀有なメタ物語的誤導——作者が語り手の口を借りて「答えを教えてもらうのを待てばいい」と宣言し、読者の能動的な推理意欲を完全に封じ込める</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="dorgeroux-massignac">真実その二：Dorgeroux の殺人者——Massignac</h3>
+<ul>
+<li><strong>手がかり収束点：約58%</strong></li>
+<li>答え：「Berangereの父」として登場した商人Massignacこそが、つるはしでDorgeroux を殺した犯人である。彼は共謀者Velmot（Velmot）と共謀した：Velmotが文書の盗み出し、研究の断片による映像の試作、犯行後の自動車による逃走の接応を担当し；Massignacは直接犯罪という「最終手段」を用いて、Dorgeroux のチョッキの裏地から鋼板の配合式を奪い取った。</li>
+</ul>
+<h4 id="_8">重要手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（章／百分率）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Victorienが廃墓地で足跡を追い、「塀を乗り越えてきた男」と格闘する——相手の手には血がついており、野獣のような残忍な眼差しをしていた</td>
+<td>第7章 / 約35%</td>
+<td>Victorienはその時顔を確認できず、あの「凶猛な目」だけを記憶する；格闘の中で相手は鋼板を持ったまま逃走する</td>
+</tr>
+<tr>
+<td>2</td>
+<td>廃教会の「形態映像」の中に、特別に残忍で冷酷な眼差しが現れ、Victorienを全身不安にさせる</td>
+<td>第7章 / 約35%</td>
+<td>これは金星の投影がやがて登場する重要人物（Massignac）を予告しているものである——三つの目の映像は殺人者の目の表情を忠実に再現する</td>
+</tr>
+<tr>
+<td>3</td>
+<td>ホテルでMassignacと格闘した際、Victorienが彼の下半顔を覆い、目だけを見る——「あの目だ！教会の壁で見た、森で私を押し倒したあの目だ！」と確認する</td>
+<td>第9章 / 約47%</td>
+<td>これは作者が提供した「人為的に解読可能な」手がかりである；注意深い読者はこの時点でMassignacが殺人者であると確認できる</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Massignacが展示の際に「鉄の籠」に座り、12人の警官に守られているにもかかわらず、ますます神経質になり笑顔を失っていく</td>
+<td>第10章・第16章 / 約50%・78%</td>
+<td>良心に疚しい犯人の行動パターン：彼が最も恐れているのは観客の暴動ではなく、スクリーンが彼の罪を暴露することだ</td>
+</tr>
+<tr>
+<td>5</td>
+<td>壁面の映像がMassignacが上着を脱ぎ、素顔を現し、Dorgeroux の背後から不意打ちする一部始終を映し出す</td>
+<td>第18章 / 約90%</td>
+<td>最終確認、もはや疑いの余地はない</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_9">補助手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（章／百分率）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Massignacが突然現れ、「合法的な後見人」として庭の遺産を掌握し、「昨夜見知らぬ人物から文書を購入した」と主張する</td>
+<td>第9章 / 約45%</td>
+<td>この話は荒唐無稽である——彼の登場のタイミングは配合式の盗難と完璧に一致しており、これはすべて彼が仕組んだ計謀の一部だ</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Massignacが意図的にBerangereを関与させ、肉親の情を人質に使う；VictorienがBerangereを愛していることを知っているため、彼が告発に踏み切れないようにしている</td>
+<td>第10章 / 約52%</td>
+<td>Massignacの全体的な計謀の設計を示す——「娘」を人質的な道具として使うことを含む</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Dorgeroux が庭で遺言を刻もうとするが、「B-ray… BERGE…」と書くのが精一杯だった</td>
+<td>第8章 / 約42%</td>
+<td>司法関係者も読者も「Bergeronnette」と誤解するが、老人は「重力光線（B-ray）」と「牧羊人の星（Berger＝Venus）」を伝えようとしていた</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_10">偽手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（章／百分率）</th>
+<th>誤導の方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>「BERGE…」を判事とメディアが一致して「Dorgeroux が死の間際にBerangereを告発した」と解釈する</td>
+<td>第8章 / 約42%</td>
+<td>読者と劇中の人物全員にBerangereが共謀者だという印象を与え、アリバイの提示を迫られる</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Velmot（眼鏡をかけた男）が常に前景の容疑者として描かれる——Berangereに近づき、庭に侵入し、Victorienの手から鋼板を奪った</td>
+<td>第5〜8章 / 約25〜40%</td>
+<td>Velmotは主謀の陰謀の実行者だが、最終的な殺人者ではない；読者は自然に彼を疑う</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Massignacが「病床に伏していた」と主張し、看護師が証言できるとする</td>
+<td>第9章 / 約47%</td>
+<td>看護師は後にMassignacが何度もこっそり外出していたと認める；その一度はDorgeroux が殺された時刻と一致する</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="berangeredorgeroux">真実その三：Berangereの真の役割と出自——無実の被害者、Dorgeroux の娘</h3>
+<ul>
+<li><strong>手がかり収束点：約95%</strong></li>
+<li>答え：BerangereはMassignacの娘ではなく、Dorgeroux とMassignacの妻との間に生まれた私生児である（Massignacの結婚から五ヶ月後に生まれた）。彼女の「不審な行動」はすべて恐怖から来ている：Velmotが「Victorienを殺す」と脅して彼女を沈黙させ、彼女は強制的に周辺の受動的な道具にされた。Victorienへの愛を一時も忘れず、決定的な瞬間にはMassignacの命を救う行動を取った（それにより配合式が保全された）。</li>
+</ul>
+<h4 id="_11">重要手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（章／百分率）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>壁面の映像が密かなキスの場面を再生し、その後Berangereが一人で倒れたVictorienをじっと見つめる時に、隠しきれない幸福の笑みを浮かべているのが映し出される</td>
+<td>第5章 / 約28%</td>
+<td>金星の映像は彼女が認めたくない秘密を暴露する——彼女はずっとVictorienを愛しており、「憤慨」は隠れ蓑に過ぎない；彼女は両手でVictorienの目を覆いながら「あれは私ではない」と言う</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Berangereは事件当日にVelmotに拳で殴り倒されて縛られ、車に隠されて連れ去られた——彼女は誘拐されたのだ</td>
+<td>第19章（彼女の陳述）/ 約94%</td>
+<td>彼女が自発的に姿を消したのではなく、共謀して逃亡したのでもないことを示す</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Massignacが死の間際にVictorienに残した手紙：「Berangereは配合式を知っている、彼女は私の娘ではなく、Noel Dorgeroux の娘だ」</td>
+<td>第19章 / 約95%</td>
+<td>Berangereの「真の正体」を指し示す唯一の手がかり。登場が非常に遅く、読者が推理できる範囲というよりもほぼ作者から与えられる答えに等しい</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_12">補助手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（章／百分率）</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>BerangereはDorgeroux のそばで育ち、Massignacに対してはほとんど父娘の感情を持たず、自分から彼について語ることもない</td>
+<td>全編</td>
+<td>心理的には常にDorgeroux を「父」と認識しており、実の生物学的父への感情的なつながりを欠いている</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Dorgeroux の遺言は「庭」を直接Berangereに残す（Massignacではなく）</td>
+<td>第8章 / 約42%</td>
+<td>法律上はMassignacが後見人として相続するが、Dorgeroux の意図は明確だ：彼は彼女を最も近しい肉親として見ていた</td>
+</tr>
+<tr>
+<td>3</td>
+<td>彼女はVelmotに殺されるリスクを冒してボートで孤島に向かい、Massignacを救出する（彼女の義父を殺した人物）</td>
+<td>第14章 / 約68%</td>
+<td>動機として考えられるのはただ一つ：Massignacが配合式を知る唯一の人物であり、彼を生かし続けなければDorgeroux の遺産を残せないということを彼女は知っていた</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_13">偽手がかり</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>手がかりの内容</th>
+<th>登場位置（章／百分率）</th>
+<th>誤導の方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>冬に森の中でVelmotと「熱心に話している」様子——Victorienに目撃され、BerangereはVelmotを知らないと嘘をつく</td>
+<td>第5章 / 約22%</td>
+<td>読者（Victorienも含む）にBerangereとVelmotの間に関係があるか、または彼女が自発的に陰謀に加担したという印象を与える</td>
+</tr>
+<tr>
+<td>2</td>
+<td>「BERGE…」が「死の間際のDorgeroux がBerangereを告発している」と解釈される</td>
+<td>第8章 / 約42%</td>
+<td>語り手を含む全員に彼女を疑わせる</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Berangereが深夜にDorgeroux の部屋に忍び込み、ダランベールの肖像画の裏に隠された「バックアップの指示文書」を取り出す</td>
+<td>第9章 / 約45%</td>
+<td>表面上は陰謀集団のために最後の手がかりを回収しているように見える；しかし彼女の真の動機はこの文書を自分で保管しようとしていたことだ</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_14">推理経路の再構築</h2>
+<p><strong>第一の推理経路：金星投影の謎</strong></p>
+<p>約<strong>10%</strong>（第2章）を読んだ時点で、注意深い読者は壁の基部が「傾いた平面」に改造されており、Dorgeroux が庭の反対側に第二劇場を建てる計画を持っていることに気づく。しかしこの細部はあまりにも控えめで、この時点では意味を見出すのが難しい。</p>
+<p>約<strong>42%</strong>（第8章）になると、Dorgeroux が死の間際に「B-ray… B E R G E…」を刻む。ここには言語的な暗号が潜んでいる：フランス語で読めば「Berger」は「牧羊人」を意味し、「牧羊人の星」（l'Étoile du Berger）はまさに金星の別名である。しかしこれには読者にフランス語の天文俗語の知識が必要であり、かつ「Bergeronnette」という誤読に汚染されていないことが条件だ。</p>
+<p>約<strong>57%</strong>（第12章）になると、「形態映像」の中に三本の手と三つの目を持つ非人間的な生物が現れ、垂直の都市を移動する——これは金星の生命の正面的な描写である。同じ章の中で、映像は雲が流れる時に消える。この二つの手がかりが並ぶことで、本書中で最も明確な「科学的手がかりの組み合わせ」が形成される；「三角形の生物の三つの目の商標」・「雲の干渉」・「西向きの傾いた壁面」の三点を結びつけることができた読者は、この時点で謎の扉の前に立っている。</p>
+<p>約<strong>65%</strong>（第13章）になると、Prevotelle が電話で「壁の裏面にも同じ傾斜角があるか」と尋ね、Victorienが確認する。これで推理経路は完成する：金星（明けの明星／宵の明星、東西交替）→ 重力光線 → 特製塗料 → 映像。</p>
+<p><strong>第二の推理経路：殺人者の正体</strong></p>
+<p>約<strong>35%</strong>（第7章）を読んだ時点で、Victorienが森の中で殺人者と肉弾戦を繰り広げ、相手の「凶残な眼差し」が深く刻まれる。同じ章の廃教会の壁面映像の中で、三つの目が同じ凶残な表情を示す（これは金星人が「主人公の眼差しを予告する」機能である）。</p>
+<p>約<strong>47%</strong>（第9章）になると、MassignacがホテルでVictorienを不意打ちし、二人が格闘する際にVictorienが彼の下半顔を覆い、目だけを見る——「あの目だ！教会の壁にあった、森で私を押し倒したあの目だ！」これは明確な「目による識別の瞬間」（Eye-recognition moment）であり、注意深く読んでいた読者はこの時点で推断するのに十分な手がかりを得る：Massignacは殺人者であり、Velmotの共謀者でもある。</p>
+<p>約<strong>90%</strong>（第18章）になると、壁面の映像がDorgeroux が殺される過程を直接映し出し、すべての疑いが確認に変わる。</p>
+<p><strong>第三の推理経路：Berangereの真の役割</strong></p>
+<p>Berangereの心理的なプロフィールは全編を通じて繰り返し矛盾する——彼女はVelmotを知っているように見えながら嘘をつき；深夜に庭に現れ；展示の場で再び姿を現してVictorienと抱擁する。作者が提供する唯一の「疑わしさへの反証」となる正面の手がかりは第5章（28%）の壁面映像だ：彼女が倒れたVictorienにこっそり本心の愛の微笑みを向ける。この細部が、彼女が冷酷な共謀者ではないことを示唆する。しかし彼女の真の出自（Dorgeroux の娘）は「隠された事実」であり、Massignacの臨死の告白（95%）まで明かされない。それ以前には、読者がテキストの論理から能動的に推断することはほぼ不可能だ。</p>
+<hr>
+<h2 id="_15">補足説明</h2>
+<p><strong>『三つの目』が推理文学史において持つ異質性</strong></p>
+<p>この作品は一つの逆説である。ルブランは第8章で語り手の口を借りて明確に宣言する：「これは探偵小説でも恋愛小説でもない」——これは作者が「推理の外衣を自ら脱ぎ捨てる」という極めて稀有な宣言だ。しかし構造的には、完全な犯罪の筋書き（殺人、窃盗、共謀）、手がかりのシステム（示唆、誘導、目による識別）、そして最終的な謎の解明を含んでいる。自ら推理小説ではないと称するのは、その核心的な謎題が「人間が何をしたか」ではなく「宇宙が何をしているか」だからだ。</p>
+<p><strong>三重の謎題の入れ子構造</strong></p>
+<p>『三つの目』の謎題は珍しい入れ子の設計を示している：科学的謎題（金星投影）→ 犯罪的謎題（殺人者の正体）→ 感情的謎題（Berangereの真心）。三者の手がかりは同一の核心装置を共有する——「三つの目の映像」は科学的謎題の現象そのものであり、犯罪的謎題の手がかりシステムでもあり（金星人は忠実に人間の善悪を記録し予告する）、さらに第5章でBerangereの感情的な真実を明かす。同一の「神秘的な現象」を用いて、三種の異なる性質の謎題を同時に機能させている小説は他に存在しない。</p>
+<p><strong>ルブランの SF的視野と推理技法の稀有な融合</strong></p>
+<p>ルブランはArsene Lupin（アルセーヌ・ルパン）で知られている。礼儀正しい紳士泥棒兼素人探偵だ。しかし『三つの目』は彼の最も野心的な「非ルパン」作品であり、推理小説の外殻の中に完全な金星宇宙論を詰め込もうとしている。推理の難易度はそのため極めて不均等な様相を呈する：犯罪部分の手がかり（目による識別）は伝統的な推理で解ける範囲に属する（58%収束）；科学部分の核心的な答え（金星投影）は手がかりがあるものの（雲、傾いた壁、dying clue）、Prevotelle の報告以前に自力で推断するには特定の知識が必要だ（68%収束）；そしてBerangereの出自はほとんど作者からの贈り物であり、読者の成果とは言い難い（95%）。</p>
+<p><strong>「死者の遺言の二重読解」として最も精巧な謎題設計</strong></p>
+<p>「B-ray… B E R G E…」は本書で最も巧みに設計された謎題の核心だ。それは同時に以下を意味している：</p>
+<ol>
+<li><strong>科学的答え</strong>：重力光線（B-ray of gravitation）＋ 牧羊人の星（l'Étoile du Berger = Venus）</li>
+<li><strong>最大の誤導</strong>：「BERGE」＝「Bergeronnette」＝ Berangere、本書の後半全体を彼女への疑惑の霧で覆い尽くす</li>
+</ol>
+<p>この「二言語二義」の暗号設計（フランス語「Berger」が天文俗語として持つ特殊性）は、ルブランが本書の中でブラウン神父やポワロの水準に最も近づいた純粋な謎題の職人芸だ——大量の SF的哲学思想の中に埋もれているため、それがいっそう控えめに映るとしても。</p>
+<p><strong>ルブランが描く星際倫理学</strong></p>
+<p>Prevotelle の報告は金星人が映し出すのがランダムな映像ではないことを明かす：人類の歴史上最も重要な愛（キスの歴史）、最も重要な争い（革命、戦争）、最も重要な苦難（キリストの受難）、そして最も重要な善と悪（様々な殺人）——最終的にDorgeroux の死を「連作の末尾」として選んでいる。この入念な「主題的展覧」は、金星人がただ観察しているのではなく「評定している」ことを示唆する——何が伝えるに値するかを選んでいる。ルブランはそれによって推理謎題を形而上学的な問いへと高める：宇宙は我々を見ている、我々は見られるに値するか？</p>
+    <a href="../index.html" class="back-link">← ホームに戻る</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">推理解剖室</p>
+    <p>五人の作家・八十八の作品・135年にわたる推理文学の難易度の進化。</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

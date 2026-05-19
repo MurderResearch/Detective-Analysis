@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>三只眼（The Three Eyes） — 推理解剖室</title>
+<meta name="description" content="巴黎郊区默东（Haut-Meudon），发明家诺埃尔·多尔傑胡（Noel Dorgeroux）在自家庭院一堵特制的墙壁上，以某种神秘的暗灰色涂料发现了一个不可思议的现象：墙面能在黄昏时分自动放映出活生生的历史影像——英国护士艾迪丝·卡维尔（Edith Cavell）在德国人手下被枪决的现场、蒙哥菲耶兄弟的气球首飞、兰斯">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-three-eyes.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-three-eyes.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-three-eyes.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-three-eyes.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-three-eyes.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-three-eyes.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-three-eyes.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-three-eyes.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif SC', serif;
+  --font-sans: 'Noto Sans SC', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">推理解剖室</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">首页</a>
+        <a href="../index.html#latest">最新分析</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="语言" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 简体中文</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-three-eyes.html">繁體中文</a>
+      <a class="lang-item active" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-three-eyes.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-three-eyes.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/the-three-eyes.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/the-three-eyes.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/the-three-eyes.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/the-three-eyes.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/the-three-eyes.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">莫里斯·勒布朗 · </div>
+    <h1>三只眼（The Three Eyes）</h1>
+    <div class="subtitle">莫里斯·卢布朗（Maurice Leblanc） · 长篇</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">推理难度</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">迷雾等级</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="the-three-eyes">三只眼（The Three Eyes）— 推理分析</h1>
+<h2 id="_1">基本资讯</h2>
+<ul>
+<li>作者：莫里斯·卢布朗（Maurice Leblanc）</li>
+<li>出版年：1921年</li>
+<li>类型：长篇</li>
+<li>侦探角色：无（叙述者为目击者兼当事人；工程师班杰明·普雷沃泰尔〔Benjamin Prevotelle〕后期客串揭谜）</li>
+<li>核心谜团类型：whatdunit（影像从何而来）+ whodunit（杀手身分）+ 隐藏真相（贝宏傑的真实角色与身世）</li>
+</ul>
+<hr>
+<h2 id="_2">推理难度总评</h2>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>星等</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理难度（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>平均收敛点 74% — 三条真相线索分散，最难一条（贝宏傑身世）直到95%才浮现；核心谜题（金星投影）需要天文学直觉才能在普雷沃泰尔正式揭示前提早推断</td>
+</tr>
+<tr>
+<td>迷雾等级（Fog Rating）</td>
+<td>⭐⭐⭐⭐</td>
+<td>作者刻意以多重假科学解释、误读死者遗言、贝宏傑的可疑行为三管齐下；更罕见的是叙述者本人在第3章公然宣告「不要尝试猜谜」，利用元叙事结构本身作为误导</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_3">故事梗概</h2>
+<p>巴黎郊区默东（Haut-Meudon），发明家诺埃尔·多尔傑胡（Noel Dorgeroux）在自家庭院一堵特制的墙壁上，以某种神秘的暗灰色涂料发现了一个不可思议的现象：墙面能在黄昏时分自动放映出活生生的历史影像——英国护士艾迪丝·卡维尔（Edith Cavell）在德国人手下被枪决的现场、蒙哥菲耶兄弟的气球首飞、兰斯大教堂的炮击，乃至老发明家之子多明尼克（Dominique）在空战中阵亡的瞬间。</p>
+<p>影像出现之前，墙面必定先亮起三个奇异的几何图形——三个「三角形眼睛」，每个眼睛都散发出与即将登场的主角眼神相同的表情，彷佛预告片一般。</p>
+<p>多尔傑胡的侄子维克托·博格朗（Victorien Beaugrand）是唯一的目击者，他爱上了老人的义女贝宏傑（Berangere）。老发明家决定兴建一座能容纳千人的圆形剧场向公众展示这奇迹，并许诺让两人完婚。</p>
+<p>然而，觊觎这秘密的阴谋已悄然成形。一个名叫费尔莫特（Velmot）的油滑男子整个冬天都在接近贝宏傑、侵入庭院；他的同伙盗走了多尔傑胡的研究报告，劫走了藏在背心内衬的钢板（上面刻着核心配方）。不久后，多尔傑胡在自己的庭院中遇害，贝宏傑失踪，庭院的继承人之位落入了一个大嘴笑脸的陌生人手中——他自称是贝宏傑之父、商贩马斯尼亚克（Theodore Massignac）。</p>
+<p>马斯尼亚克大胆地开放了圆形剧场，让公众目睹墙壁的奇景。年轻工程师普雷沃泰尔分析了所有现象，最终在报告中宣告：那些影像并非骗术，而是来自金星（Venus，即「牧羊人之星」l'Étoile du Berger）的「引力射线」投影——金星上的智慧生命以远超人类科技的方式，正在观察地球并向我们传递影像。</p>
+<p>一切在第三次公开展示时崩溃：墙面映出了多尔傑胡之死的全过程，在千人见证下揭示了凶手的面孔。愤怒的群众将凶手撕碎，而凶手临死前启动了装置，让腐蚀液体淋灭了墙面——配方永远失传。贝宏傑虽然靠记忆保存了配方，却在与歹徒搏斗的创伤中将它遗忘。金星的信号，从此再也没有出现。</p>
+<hr>
+<h2 id="_4">真相拆解</h2>
+<h3 id="venus">真相一：三眼影像的来源——金星（Venus）的引力射线投影</h3>
+<ul>
+<li><strong>线索收敛点：约 68%</strong></li>
+<li>答案：金星（Venus，即法语「l'Étoile du Berger」，牧羊人之星）上的智慧生命，以「引力射线」（B-ray of gravitation，传播速度为光速三倍）将地球历史事件的影像远距投射到多尔傑胡特制的化学涂层墙面上。三个几何「眼睛」是金星人的「制作人商标」，同时也展示了即将登场的主角的眼神表情——因为金星人的身体构造拥有三个眼睛和三条手臂的「三角对称性」，与人类的「左右对称性」相对应。</li>
+</ul>
+<h4 id="_5">关键线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>墙壁基座被改建成「略微倾斜的平面」，且多尔傑胡计划在花园另一侧建第二剧场使用同一堵墙的背面</td>
+<td>第2章、第6章 / 约10%、30%</td>
+<td>倾斜面的用意难以直觉解读；但两面墙朝向恰好是东西方向，对应金星的晨星（朝东）和昏星（朝西）位置——这是普雷沃泰尔在电话中要求维克托确认的「决定性细节」</td>
+</tr>
+<tr>
+<td>2</td>
+<td>多尔傑胡临死前在墙面刻下「B-ray… B E R G E …」</td>
+<td>第8章 / 约42%</td>
+<td>「B-ray」= 引力射线（Noel在普雷沃泰尔的小册子中读到的理论）；「BERGE」= 牧羊人（Berger），指「牧羊人之星」即金星——但此线索被众人误读为「Bergeronnette」（贝宏傑的昵称），成为迷雾的源头</td>
+</tr>
+<tr>
+<td>3</td>
+<td>第二次公开展示中，影像在「云彩飘过西方地平线」时反复模糊消失；普雷沃泰尔「举目望天」后顿悟</td>
+<td>第12章 / 约57%</td>
+<td>云彩拦截了从金星射来的引力射线，导致投影中断——这是整本书最关键的科学线索</td>
+</tr>
+<tr>
+<td>4</td>
+<td>「形状影像」（Shapes）：奇异的生物用「三条触手」、在「垂直的城市街道」移动，并撕下一个同类的「头」，其中包含三个几何眼睛</td>
+<td>第12章 / 约57%</td>
+<td>这是金星人的生活影像——三手/三眼的生理构造，以及倒置的重力环境；普雷沃泰尔报告说此影像是确认金星起源的核心证据</td>
+</tr>
+<tr>
+<td>5</td>
+<td>普雷沃泰尔电话中问：「墙壁背面是否也有相同倾角？」维克托确认：「是的。」普雷沃泰尔答「那么证据完整了」</td>
+<td>第13章 / 约65%</td>
+<td>此为最后一条关键线索：金星（晨星/昏星）从东西两方交替投射，墙壁的双倾角设计正是为了接收两个方向的射线</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_6">辅助线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>展示只能在晴天进行，且需要在「特定时刻」（黄昏前后）——多尔傑胡看表等待</td>
+<td>第5章起/全书</td>
+<td>暗示投影来自某个在特定时间才可见的光源——金星每天在接近地平线时才出现</td>
+</tr>
+<tr>
+<td>2</td>
+<td>多尔傑胡提到曾阅读普雷沃泰尔的小册子《万有引力论》，维克托在遗物中见到普雷沃泰尔的名字</td>
+<td>第13章 / 约63%</td>
+<td>说明多尔傑胡已知晓引力射线理论；他的「B-ray」指的正是此</td>
+</tr>
+<tr>
+<td>3</td>
+<td>三眼影像每次都预先呈现即将出现的主角眼神（卡维尔的坚毅、多明尼克的惊恐、贝宏傑的温柔、马斯尼亚克的凶残）</td>
+<td>第2–17章/全书</td>
+<td>暗示投影者对地球人物有高度的情报掌握，且会选择性地「预告」影片主角</td>
+</tr>
+<tr>
+<td>4</td>
+<td>废弃教堂的墙面碎片（从庭院盗取）也能出现三眼影像，但模糊不清</td>
+<td>第7章 / 约35%</td>
+<td>说明特制涂料是必要条件，不是墙壁位置——进一步确认是「射线+涂料化学反应」的组合</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_7">假线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>误导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>多尔傑胡的「B射线」理论：人体辐射出的「魅力粒子」，以贝宏傑命名为B-ray</td>
+<td>第1–5章 / 约5–25%</td>
+<td>让读者以为影像是由人体的某种神秘放射力制造，甚至是大脑投影</td>
+</tr>
+<tr>
+<td>2</td>
+<td>「太阳热利用」理论：多尔傑胡以「太阳光的化学作用」解释自己的研究方向</td>
+<td>第2章 / 约10%</td>
+<td>读者可能以为是某种先进太阳能转化技术，而非星际投影</td>
+</tr>
+<tr>
+<td>3</td>
+<td>维克托的「大脑放映」理论：多尔傑胡的脑海中想象的场景被墙壁记录下来</td>
+<td>第5章 / 约24%</td>
+<td>若此说成立，可解释多明尼克之死（老人心中惦记的儿子），但无法解释蒙哥菲耶场景</td>
+</tr>
+<tr>
+<td>4</td>
+<td>作者在第3章中直接告知读者「请不要尝试猜谜，请放下所有理论，那些都是死路」</td>
+<td>第3章 / 约14%</td>
+<td>这是最罕见的元叙事误导——作者借由叙述者之口宣告「等着被告知答案就好」，彻底压制读者的主动推理意志</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_8">真相二：多尔傑胡的杀手——马斯尼亚克</h3>
+<ul>
+<li><strong>线索收敛点：约 58%</strong></li>
+<li>答案：以「贝宏傑之父」身分登场的商贩马斯尼亚克，正是持鹤嘴锄杀死多尔傑胡的凶手。他与同伙费尔莫特（Velmot）合谋：费尔莫特负责盗取文件、以研究碎片试制影像，并在犯案后以汽车接应逃离；马斯尼亚克则动用了亲身犯罪的「最终手段」，从多尔傑胡背心内衬取走钢板配方。</li>
+</ul>
+<h4 id="_9">关键线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>维克托在废弃墓地追踪足迹，与「从围墙翻出的男子」搏斗——后者手上有血，眼神凶残如野兽</td>
+<td>第7章 / 约35%</td>
+<td>维克托此时无法看清脸，只记住那双「凶猛的眼睛」；搏斗中对方持钢板逃脱</td>
+</tr>
+<tr>
+<td>2</td>
+<td>在废弃教堂的「形状影像」中，出现一双特别残忍、冷酷的眼神，令维克托浑身不安</td>
+<td>第7章 / 约35%</td>
+<td>这是金星投影预告即将出现的重要人物（马斯尼亚克）——三眼影像忠实再现了凶手的眼神表情</td>
+</tr>
+<tr>
+<td>3</td>
+<td>与马斯尼亚克在旅馆搏斗时，维克托遮住他的下半脸，只看到眼睛——确认「就是那双眼睛！在教堂墙上看到的、在森林中压制我的那双眼睛！」</td>
+<td>第9章 / 约47%</td>
+<td>这是作者提供的「人为可解」线索；细心的读者此时已能确认马斯尼亚克是凶手</td>
+</tr>
+<tr>
+<td>4</td>
+<td>马斯尼亚克在展示中坐进「铁笼」、身边有12名警察保护，却显得愈来愈神经紧张、失去笑容</td>
+<td>第10、16章 / 约50%、78%</td>
+<td>心虚的凶手行为模式：他最怕的不是观众暴动，而是屏幕揭露他的罪行</td>
+</tr>
+<tr>
+<td>5</td>
+<td>墙面影像直接映出马斯尼亚克摘下外套、现出真脸、向多尔傑胡背后偷袭的全过程</td>
+<td>第18章 / 约90%</td>
+<td>最终确认，不再有任何悬疑空间</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_10">辅助线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>马斯尼亚克突然登场，以「合法监护人」身份掌控庭院遗产，声称「昨晚从陌生人手中购得文件」</td>
+<td>第9章 / 约45%</td>
+<td>这个故事荒诞不堪——他的出现时机与配方被盗完美吻合，是他安排的整套计谋</td>
+</tr>
+<tr>
+<td>2</td>
+<td>马斯尼亚克故意让贝宏傑参与，以亲情为要挟；他知道维克托爱她，因此确保维克托不敢举报他</td>
+<td>第10章 / 约52%</td>
+<td>说明马斯尼亚克的整体计谋设计——包括以「女儿」作为人质型道具</td>
+</tr>
+<tr>
+<td>3</td>
+<td>多尔傑胡在庭院试图刻下遗言，却只来得及写下「B-ray… BERGE…」</td>
+<td>第8章 / 约42%</td>
+<td>司法人员和读者都误解为「Bergeronnette」，但老人是在传达「引力射线（B-ray）」加上「牧羊人之星（Berger＝Venus）」</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_11">假线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>误导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>「BERGE…」被法官与媒体一致解读为多尔傑胡在临死前「指控贝宏傑」</td>
+<td>第8章 / 约42%</td>
+<td>让读者与剧中众人都以为贝宏傑是共谋，并要求她提供不在场证明</td>
+</tr>
+<tr>
+<td>2</td>
+<td>费尔莫特（戴眼镜的男子）始终是前景嫌疑人——他接近贝宏傑、侵入庭院、抢走了维克托手中的钢板</td>
+<td>第5–8章 / 约25–40%</td>
+<td>费尔莫特是主谋阴谋中的执行者，却不是最终的杀手；读者自然倾向于他</td>
+</tr>
+<tr>
+<td>3</td>
+<td>马斯尼亚克声称自己「病在床上」，有护工可以作证</td>
+<td>第9章 / 约47%</td>
+<td>护工后来承认马斯尼亚克多次偷偷外出；其中一次与多尔傑胡被杀的时间吻合</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_12">真相三：贝宏傑的真实角色与身世——无辜的受害者，多尔傑胡之女</h3>
+<ul>
+<li><strong>线索收敛点：约 95%</strong></li>
+<li>答案：贝宏傑并非马斯尼亚克的女儿，而是多尔傑胡与马斯尼亚克之妻的私生女（马斯尼亚克婚后五个月出生）。她的「可疑行为」完全是出于恐惧：费尔莫特以「杀死维克托」威胁她保持沉默，她被迫成为外围的被动工具。从未停止爱着维克托，并在关键时刻以行动拯救了马斯尼亚克的性命（进而保全了配方）。</li>
+</ul>
+<h4 id="_13">关键线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>墙壁影像重播偷吻事件，映出贝宏傑事后独自凝视倒地的维克托时，脸上露出了无法遮掩的幸福笑容</td>
+<td>第5章 / 约28%</td>
+<td>金星的影像揭示了她不愿承认的秘密——她一直爱着维克托，「愤慨」只是掩护；她用双手遮住维克托的眼睛说「那不是我」</td>
+</tr>
+<tr>
+<td>2</td>
+<td>贝宏傑在案发日即被费尔莫特用拳头打昏后捆绑藏入车内带走——她是被绑架的</td>
+<td>第19章（她的陈述）/ 约94%</td>
+<td>说明她并非自愿失踪，亦非共谋逃亡</td>
+</tr>
+<tr>
+<td>3</td>
+<td>马斯尼亚克临死前给维克托的信：「贝宏傑知道配方，她不是我的女儿，是诺埃尔·多尔傑胡的女儿」</td>
+<td>第19章 / 约95%</td>
+<td>这是唯一一条指向贝宏傑「真实身分」的线索，出现极晚，几乎等于作者说话而非读者可推理的范畴</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_14">辅助线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>贝宏傑在多尔傑胡身边长大，对马斯尼亚克几乎没有父女感情，从未主动提到他</td>
+<td>全书</td>
+<td>心理上始终认同多尔傑胡为「父亲」，对真实的生理父亲缺乏感情连结</td>
+</tr>
+<tr>
+<td>2</td>
+<td>多尔傑胡的遗嘱将「庭院」直接留给贝宏傑（而非马斯尼亚克）</td>
+<td>第8章 / 约42%</td>
+<td>虽然法律上马斯尼亚克以监护人身份继承，但多尔傑胡的意图清晰：他视她为至亲</td>
+</tr>
+<tr>
+<td>3</td>
+<td>她冒着被费尔莫特杀死的危险，划船前往孤岛救出马斯尼亚克（一个谋杀了她义父的人）</td>
+<td>第14章 / 约68%</td>
+<td>动机只能是：她知道马斯尼亚克是唯一掌握配方的人，必须保全他才能留下多尔傑胡的遗产</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_15">假线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（章节/百分比）</th>
+<th>误导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>冬天在森林中与费尔莫特「热烈交谈」——被维克托目击且贝宏傑谎称不认识他</td>
+<td>第5章 / 约22%</td>
+<td>让读者（包括维克托）以为贝宏傑与费尔莫特之间有暧昧，或是她主动配合了阴谋</td>
+</tr>
+<tr>
+<td>2</td>
+<td>「BERGE…」被解读为临死的多尔傑胡在「指控贝宏傑」</td>
+<td>第8章 / 约42%</td>
+<td>让所有人包括叙述者都不得不怀疑她</td>
+</tr>
+<tr>
+<td>3</td>
+<td>贝宏傑深夜潜入多尔傑胡的房间，取走了藏在德朗贝尔画像背后的「备份指示文件」</td>
+<td>第9章 / 约45%</td>
+<td>表面看来她是在替阴谋集团取回最后的线索；但她的真实动机是试图独自保存这份文件</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_16">推理路径重建</h2>
+<p><strong>第一条推理路径：金星投影之谜</strong></p>
+<p>读到约 <strong>10%</strong>（第2章），细心的读者注意到墙壁基座被改建成「倾斜面」且多尔傑胡计划在花园另一侧建第二剧场。但这个细节太过隐晦，此时难以赋予意义。</p>
+<p>到约 <strong>42%</strong>（第8章），多尔傑胡临死前刻下「B-ray… B E R G E…」。此处存在一个语言暗码：若读者以法语解读，「Berger」即「牧羊人」，而「牧羊人之星」（l'Étoile du Berger）正是金星的别称。但这需要读者具备法文天文俗语知识，且不受「Bergeronnette」谬误的污染。</p>
+<p>到约 <strong>57%</strong>（第12章），「形状影像」中出现了三手、三眼的非人类生物，在垂直城市中移动——这是金星生命的正面呈现。同一章中，影像在云彩飘过时消失。这两个线索并列，是整本书中最清晰的「科学线索组合」；能将「三角形生物的三眼商标」、「云彩干扰」、「朝西的倾斜墙面」三点连结起来的读者，此刻已站在谜题的门口。</p>
+<p>到约 <strong>65%</strong>（第13章），普雷沃泰尔电话中询问「墙背面是否也有相同倾角」，维克托确认。至此，推理路径完全成形：金星（晨星/昏星，东西交替）→ 引力射线 → 特制涂料 → 影像。</p>
+<p><strong>第二条推理路径：杀手身分</strong></p>
+<p>读到约 <strong>35%</strong>（第7章），维克托在森林中与杀手肉搏，对方的「凶残眼神」留下深刻印象。同章在废弃教堂的墙面影像中，三眼呈现出同样凶残的表情（这是金星人「预告主角眼神」的机制）。</p>
+<p>到约 <strong>47%</strong>（第9章），马斯尼亚克在旅馆中偷袭维克托，两人肉搏之际，维克托遮住他的下半脸，只看到眼睛——「就是那双眼睛！在教堂墙壁上的、在森林里压制我的那双眼睛！」这是明确的「眼部辨识时刻」（Eye-recognition moment），仔细阅读的读者此时已有足够线索做出推断：马斯尼亚克既是杀手，也是费尔莫特的共谋。</p>
+<p>到约 <strong>90%</strong>（第18章），墙面影像直接放映了多尔傑胡被杀的过程，所有怀疑化为确认。</p>
+<p><strong>第三条推理路径：贝宏傑的真实角色</strong></p>
+<p>贝宏傑的心理侧写贯穿全书却反复矛盾——她似乎认识费尔莫特却说谎；深夜出现在庭院；在展示现场重新出现并拥吻维克托。作者提供的唯一「反驳可疑性」的正面线索是第5章（28%）的墙面影像：她偷偷对倒地的维克托露出真实的爱意微笑。这个细节暗示她并非冷酷的同谋。但她的真实身世（多尔傑胡之女）属于「隐藏事实」，直到马斯尼亚克临死的告白（95%）才揭晓，在此之前读者几乎无法从文本逻辑中主动推断。</p>
+<hr>
+<h2 id="_17">补充说明</h2>
+<p><strong>《三只眼》在推理文学史上的异质性</strong></p>
+<p>这部作品是一个悖论。卢布朗在第8章借叙述者之口明确宣告：「这不是侦探小说，也不是爱情小说」——这是一个极为罕见的作者「自剥推理外衣」的宣言。然而就结构而言，它包含了完整的犯罪情节（谋杀、盗窃、共谋）、线索系统（暗示、误导、眼神辨识）和最终揭谜。它之所以自称不是推理小说，是因为它的核心谜题不是「人做了什么」，而是「宇宙在做什么」。</p>
+<p><strong>三重谜题的巢套结构</strong></p>
+<p>《三只眼》的谜题呈现出少见的巢套设计：科学谜题（金星投影）→ 犯罪谜题（杀手身分）→ 情感谜题（贝宏傑的真心）。三者的线索共享同一个核心装置——「三眼影像」既是科学谜题的现象本身，也是犯罪谜题的线索系统（金星人忠实地记录和预告了人间的善恶），更在第5章揭示了贝宏傑的情感真相。没有另一部小说用同一个「神秘现象」来同时服务三种不同性质的谜题。</p>
+<p><strong>卢布朗的科幻视野与推理技术的罕见融合</strong></p>
+<p>卢布朗以亚森·罗宾（Arsene Lupin）闻名，那是一个彬彬有礼的绅士贼兼业余侦探。《三只眼》却是他最具野心的「非罗宾」作品，试图在推理小说的外壳中塞入一套完整的金星宇宙论。推理难度因此呈现出极不均衡的面貌：犯罪部分的线索（眼神辨识）属于传统推理可解的范畴（58%收敛）；科学部分的核心解答（金星投影）虽有线索（云彩、倾斜墙面、dying clue），但需要特定知识才能在普雷沃泰尔报告之前自行推断（68%收敛）；而贝宏傑身世几乎等于作者的礼物而非读者的成就（95%）。</p>
+<p><strong>「死者遗言的双重解读」作为最精彩的谜题设计</strong></p>
+<p>「B-ray… B E R G E…」是本书设计最精妙的谜题核心。它同时是：</p>
+<ol>
+<li><strong>科学答案</strong>：引力射线（B-ray of gravitation）+ 牧羊人之星（l'Étoile du Berger = Venus）</li>
+<li><strong>最大的误导</strong>：「BERGE」= 「Bergeronnette」= 贝宏傑，让整本书的后半段笼罩在怀疑她的迷雾中</li>
+</ol>
+<p>这个「双语双义」的密码设计（法语「Berger」作为天文俗语的特殊性）是卢布朗在本书中最接近布朗神父或波洛水准的纯粹谜题工艺——即便它藏在大量科幻哲思之中，显得格外低调。</p>
+<p><strong>卢布朗笔下的星际伦理学</strong></p>
+<p>普雷沃泰尔的报告揭示金星人展示的并非随机影像：他们展示了人类历史上最重要的爱（亲吻的历史）、最重要的冲突（革命、战争）、最重要的苦难（耶稣受难）和最重要的善恶（各种谋杀），最终以多尔傑胡之死作为「序列之末」。这种精心的「主题展览」暗示金星人不只是在观察，而是在「评判」——选择什么值得传递。卢布朗借此将推理谜题提升为一个形而上的问题：宇宙看着我们，我们够格被看见吗？</p>
+    <a href="../index.html" class="back-link">← 回到首页</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">推理解剖室</p>
+    <p>五位作者 · 八十八部作品 · 一百三十五年推理文学的难度演化</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Les trois yeux (The Three Eyes) — Salle de Dissection Policière</title>
+<meta name="description" content="Dans la banlieue parisienne de Haut-Meudon, l'inventeur Noel Dorgeroux découvre un phénomène extraordinaire sur un mur spécialement enduit d'une peinture gris s">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-three-eyes.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-three-eyes.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-three-eyes.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-three-eyes.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-three-eyes.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-three-eyes.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-three-eyes.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-three-eyes.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Salle de Dissection Policière</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Accueil</a>
+        <a href="../index.html#latest">Récents</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Langue" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 Français</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-three-eyes.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-three-eyes.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-three-eyes.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/the-three-eyes.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/the-three-eyes.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/the-three-eyes.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/the-three-eyes.html">Español</a>
+      <a class="lang-item active" data-lang="fr" href="/Detective-Analysis/fr/articles/the-three-eyes.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">Maurice Leblanc · 1921</div>
+    <h1>Les trois yeux (The Three Eyes)</h1>
+    <div class="subtitle">Maurice Leblanc · Roman</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Déductibilité</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Indice de brume</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="les-trois-yeux-the-three-eyes-analyse-deductive">Les trois yeux (The Three Eyes) — Analyse déductive</h1>
+<h2 id="informations-de-base">Informations de base</h2>
+<ul>
+<li>Auteur : Maurice Leblanc</li>
+<li>Année : 1921</li>
+<li>Genre : Roman</li>
+<li>Détective : Aucun (le narrateur est témoin et protagoniste ; l'ingénieur Benjamin Prevotelle intervient en fin d'ouvrage pour élucider l'énigme)</li>
+<li>Type d'énigme centrale : whatdunit (d'où proviennent les images) + whodunit (identité du meurtrier) + vérité cachée (le vrai rôle et l'origine de Berangere)</li>
+</ul>
+<hr>
+<h2 id="evaluation-globale-de-la-difficulte-deductive">Évaluation globale de la difficulté déductive</h2>
+<table>
+<thead>
+<tr>
+<th>Indicateur</th>
+<th>Étoiles</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Déductibilité</td>
+<td>⭐⭐⭐⭐</td>
+<td>Point de convergence moyen à 74 % — les trois fils de vérité sont dispersés ; le plus difficile (l'origine de Berangere) n'émerge qu'à 95 % ; l'énigme centrale (la projection vénusienne) exige une intuition astronomique pour être devinée avant la révélation officielle de Prevotelle</td>
+</tr>
+<tr>
+<td>Indice de brume</td>
+<td>⭐⭐⭐⭐</td>
+<td>L'auteur brouille délibérément les pistes par trois moyens simultanés : de multiples explications pseudo-scientifiques, une mauvaise lecture des dernières paroles du défunt, et le comportement suspect de Berangere ; plus remarquable encore, le narrateur lui-même, au chapitre 3, déclare ouvertement « n'essayez pas de deviner », utilisant la structure méta-narrative elle-même comme moyen d'égarer le lecteur</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="resume">Résumé</h2>
+<p>Dans la banlieue parisienne de Haut-Meudon, l'inventeur Noel Dorgeroux découvre un phénomène extraordinaire sur un mur spécialement enduit d'une peinture gris sombre dans sa propriété : au crépuscule, la surface projette spontanément des images vivantes tirées de l'histoire — l'exécution par les Allemands de l'infirmière britannique Edith Cavell, le premier vol en ballon des frères Montgolfier, le bombardement de la cathédrale de Reims, et même l'instant où Dominique, le fils du vieil inventeur, trouve la mort dans un combat aérien.</p>
+<p>Avant chaque apparition d'images, trois étranges figures géométriques s'allument sur le mur — trois « yeux triangulaires », chacun rayonnant de la même expression que celle du personnage sur le point d'apparaître, comme une annonce préliminaire.</p>
+<p>Victorien Beaugrand, le neveu de Dorgeroux, est le seul témoin de ces prodiges ; il tombe amoureux de Berangere, la fille adoptive du vieil homme. Dorgeroux décide de faire construire un amphithéâtre pouvant accueillir mille personnes pour révéler ce miracle au public, et promet d'unir les deux jeunes gens.</p>
+<p>Mais un complot convoitant ce secret prend silencieusement forme. Un individu retors du nom de Velmot passe tout l'hiver à se rapprocher de Berangere et à s'introduire dans la propriété ; ses complices dérobent les notes de recherche de Dorgeroux et s'emparent d'une plaque d'acier dissimulée dans la doublure de son gilet, sur laquelle est gravée la formule essentielle. Peu après, Dorgeroux est assassiné dans sa propre propriété, Berangere disparaît, et la succession de la demeure échoit à un inconnu au sourire goguenard — lequel prétend être le père de Berangere, un colporteur nommé Theodore Massignac.</p>
+<p>Massignac ouvre hardiment l'amphithéâtre au public afin que tous puissent contempler les merveilles du mur. Le jeune ingénieur Prevotelle analyse l'ensemble des phénomènes et annonce dans son rapport que ces images ne sont pas le fruit d'un subterfuge, mais la projection de « rayons de gravitation » émanant de Vénus (l'Étoile du Berger) — des êtres intelligents habitant Vénus, disposant d'une technologie infiniment supérieure à la nôtre, observent la Terre et nous transmettent ces images.</p>
+<p>Tout s'effondre lors de la troisième présentation publique : le mur reproduit en entier le meurtre de Dorgeroux, révélant le visage du meurtrier devant mille témoins. La foule en furie met le coupable en pièces ; avant de mourir, celui-ci actionne un mécanisme qui fait se répandre un liquide corrosif sur le mur, détruisant à jamais la formule. Berangere, qui en avait conservé le souvenir, la perd au cours du traumatisme causé par sa lutte contre ses ravisseurs. Le signal de Vénus ne se manifesta plus jamais.</p>
+<hr>
+<h2 id="decryptage-de-la-verite">Décryptage de la vérité</h2>
+<h3 id="verite-premiere-lorigine-des-images-a-trois-yeux-les-rayons-de-gravitation-de-venus">Vérité première : l'origine des images à trois yeux — les rayons de gravitation de Vénus</h3>
+<ul>
+<li><strong>Point de convergence des indices : environ 68 %</strong></li>
+<li>Réponse : Des êtres intelligents habitant Vénus (l'Étoile du Berger) projettent à distance, au moyen de « rayons de gravitation » (B-ray of gravitation, se propageant à trois fois la vitesse de la lumière), des images d'événements historiques terrestres sur le mur enduit d'une couche chimique spéciale par Dorgeroux. Les trois « yeux » géométriques constituent la « signature de producteur » des Vénusiens et reproduisent simultanément l'expression du regard du personnage sur le point d'apparaître — car les Vénusiens possèdent une anatomie dotée de trois yeux et de trois bras, une « symétrie triangulaire » en miroir de la « symétrie bilatérale » humaine.</li>
+</ul>
+<h4 id="indices-cles">Indices clés</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Localisation (chapitre/pourcentage)</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Le socle du mur a été reconverti en « plan légèrement incliné », et Dorgeroux projette de construire un second amphithéâtre de l'autre côté du jardin, utilisant le revers du même mur</td>
+<td>Ch. 2 et 6 / environ 10 % et 30 %</td>
+<td>L'utilité de la surface inclinée est difficile à deviner intuitivement ; or les deux faces du mur sont orientées respectivement à l'est et à l'ouest, correspondant aux positions de Vénus étoile du matin (vers l'est) et étoile du soir (vers l'ouest) — c'est précisément le « détail décisif » que Prevotelle demande à Victorien de confirmer par téléphone</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Avant de mourir, Dorgeroux grave sur le mur « B-ray… B E R G E… »</td>
+<td>Ch. 8 / environ 42 %</td>
+<td>« B-ray » désigne les rayons de gravitation (la théorie lue par Noel dans la brochure de Prevotelle) ; « BERGE » renvoie à « Berger », c'est-à-dire l'Étoile du Berger, autrement dit Vénus — mais cet indice est mal interprété par tous comme « Bergeronnette » (le surnom de Berangere), devenant ainsi la principale source de brouillard</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Lors de la deuxième présentation publique, les images se brouillent et disparaissent à plusieurs reprises au passage de nuages devant l'horizon occidental ; Prevotelle « lève les yeux vers le ciel » et comprend soudainement</td>
+<td>Ch. 12 / environ 57 %</td>
+<td>Les nuages interceptent les rayons de gravitation émanant de Vénus, interrompant la projection — c'est l'indice scientifique le plus crucial de tout le livre</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Les « images de formes » : d'étranges créatures se déplacent dans des rues verticales à l'aide de « trois tentacules » et arrachent la « tête » d'un de leurs semblables ; on y distingue trois yeux géométriques</td>
+<td>Ch. 12 / environ 57 %</td>
+<td>Ce sont des images de la vie sur Vénus — une physiologie à trois membres et trois yeux, et un environnement gravitationnel inversé ; Prevotelle signale que cette image constitue la preuve centrale de l'origine vénusienne</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Prevotelle demande au téléphone : « Le revers du mur présente-t-il la même inclinaison ? » Victorien confirme : « Oui. » Prevotelle répond : « Alors la preuve est complète. »</td>
+<td>Ch. 13 / environ 65 %</td>
+<td>C'est le dernier indice clé : Vénus (étoile du matin/étoile du soir) projette alternativement depuis l'est et depuis l'ouest, et la double inclinaison du mur est précisément conçue pour capter les rayons des deux directions</td>
+</tr>
+</tbody>
+</table>
+<h4 id="indices-secondaires">Indices secondaires</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Localisation (chapitre/pourcentage)</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Les présentations ne peuvent avoir lieu que par temps clair, et uniquement à « un moment précis » (aux alentours du crépuscule) — Dorgeroux consulte sa montre en attendant</td>
+<td>À partir du ch. 5 / tout le livre</td>
+<td>Laisse entendre que la projection provient d'une source lumineuse seulement visible à certaines heures — Vénus n'apparaissant chaque jour que lorsqu'elle est proche de l'horizon</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Dorgeroux mentionne avoir lu la brochure de Prevotelle sur la théorie de la gravitation universelle ; Victorien trouve le nom de Prevotelle parmi les effets personnels du défunt</td>
+<td>Ch. 13 / environ 63 %</td>
+<td>Montre que Dorgeroux connaissait déjà la théorie des rayons de gravitation ; son « B-ray » y renvoie précisément</td>
+</tr>
+<tr>
+<td>3</td>
+<td>À chaque fois, les trois yeux reproduisent par avance l'expression du regard du personnage qui va apparaître (la fermeté de Cavell, l'effroi de Dominique, la douceur de Berangere, la cruauté de Massignac)</td>
+<td>Ch. 2–17 / tout le livre</td>
+<td>Suggère que les projecteurs possèdent une connaissance approfondie des personnages terrestres et choisissent délibérément d'« annoncer » les protagonistes</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Des fragments de mur provenant d'une église abandonnée (volés dans la propriété) font également apparaître des images à trois yeux, mais floues</td>
+<td>Ch. 7 / environ 35 %</td>
+<td>Montre que l'enduit spécial est une condition nécessaire, non l'emplacement du mur — ce qui confirme que le phénomène résulte de la combinaison « rayon + réaction chimique de l'enduit »</td>
+</tr>
+</tbody>
+</table>
+<h4 id="fausses-pistes">Fausses pistes</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Localisation (chapitre/pourcentage)</th>
+<th>Direction trompeuse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>La théorie des « rayons B » de Dorgeroux : des « particules de charme » émises par le corps humain, baptisées B-ray en référence à Berangere</td>
+<td>Ch. 1–5 / environ 5–25 %</td>
+<td>Amène le lecteur à croire que les images sont produites par une mystérieuse force rayonnante du corps humain, voire par une projection cérébrale</td>
+</tr>
+<tr>
+<td>2</td>
+<td>La théorie de « l'exploitation de la chaleur solaire » : Dorgeroux explique sa recherche par « l'action chimique de la lumière solaire »</td>
+<td>Ch. 2 / environ 10 %</td>
+<td>Le lecteur peut croire qu'il s'agit d'une technologie avancée de conversion de l'énergie solaire, et non d'une projection interstellaire</td>
+</tr>
+<tr>
+<td>3</td>
+<td>La théorie de la « projection cérébrale » de Victorien : les scènes imaginées dans l'esprit de Dorgeroux seraient enregistrées par le mur</td>
+<td>Ch. 5 / environ 24 %</td>
+<td>Si cette hypothèse était exacte, elle expliquerait la mort de Dominique (le fils que le vieil homme avait constamment à l'esprit), mais pas la scène des Montgolfier</td>
+</tr>
+<tr>
+<td>4</td>
+<td>L'auteur déclare directement au lecteur au chapitre 3 : « N'essayez pas de deviner, abandonnez toutes vos théories, ce sont autant d'impasses »</td>
+<td>Ch. 3 / environ 14 %</td>
+<td>C'est la manipulation méta-narrative la plus rare du livre — l'auteur, par la voix du narrateur, annonce « attendez simplement qu'on vous donne la réponse », brisant totalement la volonté de raisonnement actif du lecteur</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="verite-deuxieme-le-meurtrier-de-dorgeroux-massignac">Vérité deuxième : le meurtrier de Dorgeroux — Massignac</h3>
+<ul>
+<li><strong>Point de convergence des indices : environ 58 %</strong></li>
+<li>Réponse : Le colporteur Massignac, apparu sous l'identité du « père de Berangere », est bien l'assassin qui a tué Dorgeroux à coups de pioche. Il a agi de concert avec son complice Velmot : Velmot s'est chargé de dérober les documents, de tenter de reproduire les images à partir de fragments de formule, et d'assurer la fuite en voiture après le crime ; Massignac a eu recours au « dernier moyen », le crime en personne, pour s'emparer de la plaque d'acier dissimulée dans la doublure du gilet de Dorgeroux.</li>
+</ul>
+<h4 id="indices-cles_1">Indices clés</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Localisation (chapitre/pourcentage)</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Victorien suit des traces dans un cimetière abandonné et se bat avec un homme qui enjambe le mur d'enceinte — celui-ci a du sang sur les mains et un regard d'une brutalité animale</td>
+<td>Ch. 7 / environ 35 %</td>
+<td>Victorien ne peut distinguer le visage à ce moment ; il ne retient que ces « yeux féroces » ; dans la lutte, l'adversaire s'échappe avec la plaque d'acier</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Dans les images apparaissant sur le mur de l'église abandonnée, une paire d'yeux d'une cruauté et d'un froid particulièrement marqués trouble profondément Victorien</td>
+<td>Ch. 7 / environ 35 %</td>
+<td>C'est la projection vénusienne qui annonce le prochain personnage important (Massignac) — les images à trois yeux reproduisent fidèlement l'expression du regard du meurtrier</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Lors de la lutte à l'hôtel avec Massignac, Victorien lui couvre le bas du visage et n'aperçoit que ses yeux — il confirme : « C'est bien ce regard ! Celui que j'ai vu sur le mur de l'église, celui qui m'a maîtrisé dans la forêt ! »</td>
+<td>Ch. 9 / environ 47 %</td>
+<td>C'est l'indice « humainement déductible » fourni par l'auteur ; le lecteur attentif peut désormais confirmer que Massignac est le meurtrier</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Massignac s'installe dans une « cage de fer » lors de la présentation, entouré de douze policiers pour le protéger, mais apparaît de plus en plus nerveux et perd son sourire</td>
+<td>Ch. 10 et 16 / environ 50 % et 78 %</td>
+<td>Comportement d'un meurtrier rongé par la culpabilité : ce qu'il redoute par-dessus tout, ce n'est pas l'émeute du public, mais que l'écran révèle son crime</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Le mur projette directement toute la scène au cours de laquelle Massignac enlève sa veste, découvre son vrai visage et attaque Dorgeroux par derrière</td>
+<td>Ch. 18 / environ 90 %</td>
+<td>Confirmation définitive, sans aucun doute subsistant</td>
+</tr>
+</tbody>
+</table>
+<h4 id="indices-secondaires_1">Indices secondaires</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Localisation (chapitre/pourcentage)</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Massignac surgit de nulle part en tant que « tuteur légal », prend le contrôle de l'héritage de la propriété et prétend « avoir acheté les documents à un inconnu la veille »</td>
+<td>Ch. 9 / environ 45 %</td>
+<td>Cette histoire est absurde — le moment de son apparition coïncide parfaitement avec le vol de la formule, car il est l'instigateur de toute l'intrigue</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Massignac veille à ce que Berangere participe, l'utilisant comme otage affectif ; sachant que Victorien l'aime, il s'assure ainsi que ce dernier n'osera pas le dénoncer</td>
+<td>Ch. 10 / environ 52 %</td>
+<td>Révèle la conception d'ensemble du complot de Massignac — notamment l'usage de sa « fille » comme instrument de pression</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Dorgeroux tente de graver un message sur le mur de la propriété avant de mourir, mais n'a que le temps d'écrire « B-ray… BERGE… »</td>
+<td>Ch. 8 / environ 42 %</td>
+<td>Les autorités judiciaires et les lecteurs interprètent mal ce message comme « Bergeronnette », alors que le vieil homme voulait transmettre « rayons de gravitation (B-ray) » et « Étoile du Berger (Berger = Vénus) »</td>
+</tr>
+</tbody>
+</table>
+<h4 id="fausses-pistes_1">Fausses pistes</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Localisation (chapitre/pourcentage)</th>
+<th>Direction trompeuse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>« BERGE… » est unanimement interprété par le juge et les médias comme le signe que Dorgeroux, à l'agonie, « accusait Berangere »</td>
+<td>Ch. 8 / environ 42 %</td>
+<td>Amène le lecteur et tous les personnages à croire que Berangere est complice, et à exiger qu'elle fournisse un alibi</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Velmot (l'homme aux lunettes) reste le principal suspect au premier plan — il se rapproche de Berangere, s'introduit dans la propriété et arrache la plaque d'acier des mains de Victorien</td>
+<td>Ch. 5–8 / environ 25–40 %</td>
+<td>Velmot est l'exécutant dans le complot du cerveau de l'affaire, mais non le meurtrier final ; le lecteur a naturellement tendance à se focaliser sur lui</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Massignac affirme avoir été « alité malade » et dispose du témoignage d'un infirmier</td>
+<td>Ch. 9 / environ 47 %</td>
+<td>L'infirmier admet par la suite que Massignac s'est absenté à plusieurs reprises en secret ; l'une de ces sorties coïncide avec l'heure du meurtre de Dorgeroux</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="verite-troisieme-le-vrai-role-et-lorigine-de-berangere-victime-innocente-fille-de-dorgeroux">Vérité troisième : le vrai rôle et l'origine de Berangere — victime innocente, fille de Dorgeroux</h3>
+<ul>
+<li><strong>Point de convergence des indices : environ 95 %</strong></li>
+<li>Réponse : Berangere n'est pas la fille de Massignac, mais la fille illégitime de Dorgeroux et de la femme de Massignac (née cinq mois après le mariage de celui-ci). Ses « comportements suspects » s'expliquent entièrement par la peur : Velmot la contraint au silence en menaçant de tuer Victorien, et elle se retrouve malgré elle à jouer le rôle d'un instrument passif périphérique. Elle n'a jamais cessé d'aimer Victorien et, au moment crucial, prend des mesures pour sauver la vie de Massignac (préservant ainsi la formule).</li>
+</ul>
+<h4 id="indices-cles_2">Indices clés</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Localisation (chapitre/pourcentage)</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>La projection murale rejoue la scène du baiser volé et montre Berangere, seule, contemplant Victorien étendu à terre, un sourire de bonheur irrépressible sur le visage</td>
+<td>Ch. 5 / environ 28 %</td>
+<td>Les images de Vénus révèlent le secret qu'elle refuse d'avouer — elle a toujours aimé Victorien, son « indignation » n'était que façade ; elle couvre les yeux de Victorien en disant « ce n'était pas moi »</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Le jour du meurtre, Berangere est assommée d'un coup de poing par Velmot, ligotée et emmenée dissimulée dans une voiture — elle a été kidnappée</td>
+<td>Ch. 19 (son témoignage) / environ 94 %</td>
+<td>Prouve qu'elle n'a pas disparu de son plein gré et n'est pas complice de la fuite</td>
+</tr>
+<tr>
+<td>3</td>
+<td>La lettre que Massignac, à l'agonie, remet à Victorien : « Berangere connaît la formule ; elle n'est pas ma fille, elle est la fille de Noel Dorgeroux »</td>
+<td>Ch. 19 / environ 95 %</td>
+<td>C'est le seul indice pointant vers la « véritable identité » de Berangere ; il apparaît si tardivement qu'il relève davantage d'une révélation de l'auteur que d'une déduction possible du lecteur</td>
+</tr>
+</tbody>
+</table>
+<h4 id="indices-secondaires_2">Indices secondaires</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Localisation (chapitre/pourcentage)</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Berangere a grandi auprès de Dorgeroux ; elle n'éprouve pratiquement aucun sentiment filial pour Massignac et ne le mentionne jamais spontanément</td>
+<td>Tout le livre</td>
+<td>Psychologiquement, elle a toujours considéré Dorgeroux comme son « père » et ne ressent aucun lien affectif avec son géniteur biologique</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Le testament de Dorgeroux lègue la « propriété » directement à Berangere (et non à Massignac)</td>
+<td>Ch. 8 / environ 42 %</td>
+<td>Bien que Massignac en hérite légalement en tant que tuteur, l'intention de Dorgeroux est claire : il la considère comme sa proche</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Elle risque sa vie en bravant Velmot pour ramener en bateau Massignac d'une île isolée — l'homme qui a assassiné son père adoptif</td>
+<td>Ch. 14 / environ 68 %</td>
+<td>La seule motivation plausible est qu'elle sait que Massignac est le seul à posséder la formule et qu'il faut le préserver pour sauvegarder l'héritage de Dorgeroux</td>
+</tr>
+</tbody>
+</table>
+<h4 id="fausses-pistes_2">Fausses pistes</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Localisation (chapitre/pourcentage)</th>
+<th>Direction trompeuse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>En hiver, Victorien la surprend dans la forêt en train d'avoir une « conversation animée » avec Velmot — et Berangere prétend ne pas le connaître</td>
+<td>Ch. 5 / environ 22 %</td>
+<td>Amène le lecteur (Victorien inclus) à croire qu'il existe une liaison entre Berangere et Velmot, ou qu'elle participe activement au complot</td>
+</tr>
+<tr>
+<td>2</td>
+<td>« BERGE… » est interprété comme la dénonciation in extremis de Berangere par Dorgeroux moribond</td>
+<td>Ch. 8 / environ 42 %</td>
+<td>Oblige tout le monde, narrateur compris, à la soupçonner</td>
+</tr>
+<tr>
+<td>3</td>
+<td>En pleine nuit, Berangere s'introduit dans la chambre de Dorgeroux et subtilise les « documents de sauvegarde » cachés derrière le portrait de d'Alembert</td>
+<td>Ch. 9 / environ 45 %</td>
+<td>En apparence, elle récupère le dernier indice pour le compte des conspirateurs ; mais sa véritable motivation est de tenter de conserver seule ce document</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="reconstruction-du-parcours-deductif">Reconstruction du parcours déductif</h2>
+<p><strong>Premier fil déductif : l'énigme de la projection vénusienne</strong></p>
+<p>Vers <strong>10 %</strong> (chapitre 2), le lecteur attentif remarque que le socle du mur a été transformé en surface inclinée et que Dorgeroux projette de construire un second amphithéâtre de l'autre côté du jardin. Mais ce détail est trop discret pour être interprété à ce stade.</p>
+<p>Vers <strong>42 %</strong> (chapitre 8), Dorgeroux grave avant de mourir « B-ray… B E R G E… ». Il y a ici un code linguistique : si le lecteur déchiffre ce message en français, « Berger » signifie bien « berger », et l'« Étoile du Berger » est précisément le nom populaire de Vénus. Encore faut-il que le lecteur possède cette connaissance de l'astronomie populaire française et ne soit pas contaminé par la méprise sur « Bergeronnette ».</p>
+<p>Vers <strong>57 %</strong> (chapitre 12), des images de créatures non humaines dotées de trois bras et de trois yeux se déplacent dans une cité verticale — c'est une représentation directe de la vie sur Vénus. Dans le même chapitre, les images disparaissent au passage des nuages. Ces deux indices juxtaposés constituent l'ensemble d'indices scientifiques le plus explicite du livre ; le lecteur capable de relier « la signature à trois yeux des créatures triangulaires », « l'interférence des nuages » et « le mur incliné orienté vers l'ouest » se trouve à ce moment aux portes de l'énigme.</p>
+<p>Vers <strong>65 %</strong> (chapitre 13), Prevotelle demande au téléphone si « le revers du mur présente la même inclinaison » et Victorien le confirme. Le parcours déductif est dès lors complet : Vénus (étoile du matin/étoile du soir, alternant est et ouest) → rayons de gravitation → enduit chimique spécial → images.</p>
+<p><strong>Deuxième fil déductif : l'identité du meurtrier</strong></p>
+<p>Vers <strong>35 %</strong> (chapitre 7), Victorien se bat corps à corps avec le meurtrier dans la forêt ; le « regard bestial » de ce dernier lui laisse une impression indélébile. Dans le même chapitre, les images sur le mur de l'église abandonnée affichent les trois yeux arborant la même expression cruelle (c'est le mécanisme par lequel les Vénusiens « annoncent le regard du protagoniste »).</p>
+<p>Vers <strong>47 %</strong> (chapitre 9), Massignac attaque Victorien par surprise à l'hôtel ; dans la lutte, Victorien lui couvre le bas du visage et ne voit que ses yeux — « C'est bien ce regard ! Celui que j'ai vu sur le mur de l'église, celui qui m'a maîtrisé dans la forêt ! » C'est le moment de « reconnaissance oculaire » (Eye-recognition moment) ; le lecteur attentif dispose désormais de suffisamment d'indices pour conclure que Massignac est à la fois le meurtrier et le complice de Velmot.</p>
+<p>Vers <strong>90 %</strong> (chapitre 18), le mur projette directement la scène du meurtre de Dorgeroux, transformant tous les soupçons en certitude.</p>
+<p><strong>Troisième fil déductif : le vrai rôle de Berangere</strong></p>
+<p>Le portrait psychologique de Berangere traverse tout le livre dans une contradiction persistante — elle semble connaître Velmot mais le nie ; elle apparaît de nuit dans la propriété ; elle réapparaît sur les lieux de la présentation et embrasse Victorien. Le seul indice positif « réfutant ses apparences suspectes » que l'auteur fournit est l'image murale du chapitre 5 (28 %) : elle laisse involontairement transparaître son amour sincère pour Victorien étendu à terre. Ce détail suggère qu'elle n'est pas une complice sans scrupules. Mais sa véritable identité (fille de Dorgeroux) relève de la « vérité cachée » ; elle n'est révélée qu'à la confession posthume de Massignac (95 %), et le lecteur ne peut pratiquement pas la déduire de la logique textuelle avant ce moment.</p>
+<hr>
+<h2 id="remarques-complementaires">Remarques complémentaires</h2>
+<p><strong>La singularité des <em>Trois Yeux</em> dans l'histoire du roman policier</strong></p>
+<p>Cette œuvre est un paradoxe. Au chapitre 8, Leblanc fait déclarer par son narrateur : « Ce n'est pas un roman policier, ce n'est pas un roman d'amour » — c'est une proclamation extrêmement rare par laquelle un auteur « se dépouille lui-même du manteau policier ». Et pourtant, sur le plan structurel, le livre contient une intrigue criminelle complète (meurtre, vol, complot), un système d'indices (suggestions, fausses pistes, reconnaissance d'un regard) et une révélation finale. S'il se défend d'être un roman policier, c'est parce que son enigme centrale n'est pas « ce qu'un homme a fait », mais « ce que l'univers est en train de faire ».</p>
+<p><strong>La structure gigogne des trois énigmes</strong></p>
+<p>Les énigmes des <em>Trois Yeux</em> présentent un emboîtement peu commun : l'énigme scientifique (la projection vénusienne) → l'énigme criminelle (l'identité du meurtrier) → l'énigme sentimentale (le vrai cœur de Berangere). Les indices des trois sont partagés par le même dispositif central — les « images à trois yeux » sont à la fois le phénomène de l'énigme scientifique elle-même, le système d'indices de l'énigme criminelle (les Vénusiens enregistrent et annoncent fidèlement le bien et le mal humains), et révèlent au chapitre 5 la vérité sentimentale de Berangere. Aucun autre roman n'utilise le même « phénomène mystérieux » pour servir simultanément trois types d'énigmes de nature différente.</p>
+<p><strong>La rare fusion de la vision de science-fiction de Leblanc et de la technique policière</strong></p>
+<p>Leblanc est célèbre pour Arsene Lupin, ce gentleman cambrioleur et détective amateur. Les <em>Trois Yeux</em> constituent pourtant son œuvre « non-Lupin » la plus ambitieuse, tentant d'insérer une cosmologie vénusienne complète dans l'enveloppe d'un roman policier. La difficulté déductive présente en conséquence un profil très inégal : les indices de la partie criminelle (reconnaissance du regard) appartiennent au domaine du déductible par le roman policier traditionnel (convergence à 58 %) ; la réponse centrale de la partie scientifique (projection vénusienne) possède bien des indices (les nuages, le mur incliné, le dying clue), mais exige des connaissances spécifiques pour être devinée avant le rapport de Prevotelle (convergence à 68 %) ; quant à l'origine de Berangere, elle équivaut presque à un cadeau de l'auteur plutôt qu'à un accomplissement du lecteur (95 %).</p>
+<p><strong>Le « double sens du message du mourant » comme pièce maîtresse de la construction énigmatique</strong></p>
+<p>« B-ray… B E R G E… » est le noyau énigmatique le plus finement conçu du livre. Il est simultanément :</p>
+<ol>
+<li><strong>La réponse scientifique</strong> : les rayons de gravitation (B-ray of gravitation) + l'Étoile du Berger (l'Étoile du Berger = Vénus)</li>
+<li><strong>La plus grande des fausses pistes</strong> : « BERGE » = « Bergeronnette » = Berangere, plongeant la seconde moitié du livre entier dans le brouillard du soupçon contre elle</li>
+</ol>
+<p>Ce code « bilinguistique à double sens » (exploitant la particularité du mot « Berger » comme terme astronomique populaire en français) est le travail de pure construction énigmatique le plus proche du niveau du Père Brown ou de Poirot que Leblanc ait accompli dans ce livre — même s'il est enfoui au milieu d'une profusion de réflexions philosophico-scientifiques, ce qui lui confère une discrétion remarquable.</p>
+<p><strong>L'éthique interstellaire selon Leblanc</strong></p>
+<p>Le rapport de Prevotelle révèle que les Vénusiens ne projettent pas des images au hasard : ils ont montré les actes d'amour les plus importants de l'histoire humaine (des baisers historiques), les conflits les plus importants (révolutions, guerres), les souffrances les plus importantes (la Passion du Christ) et les manifestations du bien et du mal les plus importantes (divers meurtres), concluant la série par la mort de Dorgeroux. Cette « exposition thématique » soigneusement orchestrée suggère que les Vénusiens ne se contentent pas d'observer, mais qu'ils « jugent » — qu'ils choisissent ce qui mérite d'être transmis. Leblanc élève ainsi l'énigme policière au rang d'une question métaphysique : l'univers nous regarde — sommes-nous dignes d'être vus ?</p>
+    <a href="../index.html" class="back-link">← Retour à l'accueil</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Salle de Dissection Policière</p>
+    <p>Cinq auteurs · quatre-vingt-huit œuvres · 135 ans d'évolution de la difficulté du roman policier.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
