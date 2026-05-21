@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>*Die Grenze* (The Frontier) — Deduzierbarkeits — Detektivanalyse</title>
+<meta name="description" content="An der deutsch-französischen Grenze, in den Vogesen. Der alte Morestal ist ein sturköpfiger Patriot, der die Schmach der Niederlage im Deutsch-Französischen Kri">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-frontier.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-frontier.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-frontier.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-frontier.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-frontier.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-frontier.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-frontier.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-frontier.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Detektivanalyse</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Start</a>
+        <a href="../index.html#latest">Neueste</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Sprache" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 Deutsch</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-frontier.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-frontier.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-frontier.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/the-frontier.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/the-frontier.html">한국어</a>
+      <a class="lang-item active" data-lang="de" href="/Detective-Analysis/de/articles/the-frontier.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/the-frontier.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/the-frontier.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">Maurice Leblanc · </div>
+    <h1>*Die Grenze* (The Frontier) — Deduzierbarkeits</h1>
+    <div class="subtitle">Maurice Leblanc · Politisch-psychologischer Thriller（Langform）</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Deduzierbarkeit</div>
+        <div class="rating-badge-stars">⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Nebelgrad</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="die-grenze-the-frontier-deduzierbarkeits-analyse"><em>Die Grenze</em> (The Frontier) — Deduzierbarkeits-Analyse</h1>
+<h2 id="grundinformationen">Grundinformationen</h2>
+<ul>
+<li>Autor：Maurice Leblanc</li>
+<li>Erscheinungsjahr：1912（französisches Original <em>La Frontière</em>，englische Übersetzung im gleichen Jahr）</li>
+<li>Übersetzer：Alexander Teixeira de Mattos</li>
+<li>Typ：Politisch-psychologischer Thriller（Langform）</li>
+<li>Detektiv：Kein fester Detektiv；der alte Morestal ermittelt aus Leidenschaft und Intuition；Philippe ist die zentrale Figur, die gezwungen ist, „sich selbst zu ermitteln"</li>
+<li>Kern-Rätseltyp：whodunit（Konstrukteur der Falle）＋ whydunit（Motiv für die Falschaussage）＋ Wahrheitsstreit（deutsch-französischer Streit über den Verhaftungsort）</li>
+</ul>
+<hr>
+<h2 id="deduzierbarkeits-bewertung">Deduzierbarkeits-Bewertung</h2>
+<table>
+<thead>
+<tr>
+<th>Indikator</th>
+<th>Sterne</th>
+<th>Anmerkungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deduzierbarkeit（Deducibility）</td>
+<td>⭐⭐</td>
+<td>Durchschnittlicher Konvergenzpunkt ca. 30% — der Leser erhält früh durch eine privilegierte Perspektive Zugang zur zentralen Wahrheit；die Spannung liegt nicht im „Wer hat es getan", sondern im „Was kostet es"</td>
+</tr>
+<tr>
+<td>Nebelgrad（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>Mittlere Irreführung：Dourlowskis Doppelidentität，die vielschichtigen diplomatischen Lügen und die gestapelten Verdeckungen von Philippes Falschaussage verweben sich zu einem Netz aus Nebel</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Besonderer Hinweis：</strong> <em>Die Grenze</em> ist das literarisch anspruchsvollste Werk Leblans und unterscheidet sich grundlegend von den cleveren Abenteuern der Arsène-Lupin-Reihe. Das „Rätsel" dieses Buches liegt nicht in einem verschlossenen Zimmer oder einem Diebstahl, sondern in der Frage：Darf ein Mensch lügen, um einen Krieg zu verhindern？Und wer trägt den Preis dieser Lüge？Eine Analyse der Deduzierbarkeit muss stets den grundlegenden Unterschied zwischen der <strong>privilegierten Leserperspektive</strong> und der <strong>inneren Perspektive der Figuren</strong> berücksichtigen.</p>
+</blockquote>
+<hr>
+<h2 id="zusammenfassung">Zusammenfassung</h2>
+<p>An der deutsch-französischen Grenze, in den Vogesen. Der alte Morestal ist ein sturköpfiger Patriot, der die Schmach der Niederlage im Deutsch-Französischen Krieg von 1870 persönlich erlebt hat und seitdem an der Grenze ein Haus gebaut, sich bewaffnet und auf den Tag der Wiedereroberung gewartet hat. Sein Sohn Philippe ist Geschichtsprofessor in Paris；dem Namen nach Erbe des väterlichen Vermächtnisses, hat er sich heimlich zum radikalen Pazifisten gewandelt und schreibt anonym aufrührerische Friedensschriften unter dem Titel <em>Der Friede über alles</em>.</p>
+<p>Philippe kehrt mit seiner Frau Marthe an das Grenzhaus des Vaters zurück, um ihm reinen Wein einzuschenken — seinen Gesinnungswandel und seinen Entschluss zur Kündigung zu offenbaren. Auch Suzanne, die Tochter des Grenzinspektors Jorancé, hält sich zu dieser Zeit dort auf；sie liebt Philippe, was zu weiteren Verwicklungen führt.</p>
+<p>Am Montagabend kehren der alte Morestal und Jorancé auf einem Grenzpfad nach Hause zurück, als sie in eine von deutschen Agenten inszenierte Falle geraten：Ein angeblich desertierwilliger deutscher Soldat lockt die beiden heraus, woraufhin die deutsche Polizei sie in der Nähe der Grenze verhaftet. Die entscheidende Frage lautet：Befand sich der Verhaftungsort auf französischem oder deutschem Gebiet？</p>
+<p>Ausgerechnet zu diesem kritischen Zeitpunkt hat Philippe ein Alibi — er war in jener Nacht mit Suzanne zusammen und nicht in der Nähe der Grenze. Um Suzannes Ruf zu schützen, wählt er die falsche Aussage：Er behauptet, Jorancés Protest „gehört" zu haben. Doch als der diplomatische Sturm immer heftiger wird, bröckelt Philippes Lüge immer mehr, bis schließlich in einem Verhörszelt eines gemeinsamen deutsch-französischen Untersuchungsausschusses alles aufgedeckt wird. Während der Kanonendonner an der Grenze ertönt, wird Philippes letztes Ringen zwischen persönlichem Glauben und nationalem Instinkt zum Abgesang des Romans.</p>
+<hr>
+<h2 id="wahrheitsanalyse">Wahrheitsanalyse</h2>
+<h3 id="wahrheit-einsder-autor-des-anonymen-pamphlets-der-friede-uber-alles">Wahrheit Eins：Der Autor des anonymen Pamphlets <em>Der Friede über alles</em></h3>
+<ul>
+<li><strong>Konvergenzpunkt：ca. 30%</strong></li>
+<li>Antwort：Philippe Morestal — Geschichtsprofessor in Paris, Sohn des alten Morestal</li>
+</ul>
+<h4 id="schlusselhinweise">Schlüsselhinweise</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Der alte Morestal holt ein violettes Heftchen hervor und sagt：„Der Autor heißt Morestal … ein entfernter Verwandter wohl"，woraufhin Philippe sofort „blass wird" und fragt：„Bist du sicher？Woher weißt du das？"</td>
+<td>ca. 14%</td>
+<td>Ton und Reaktion verraten die Identität unmittelbar；aufmerksame Leser können die Wahrheit hier bereits bestätigen</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Philippe gesteht Marthe：„Diese Pamphlete, die ich anonym geschrieben habe … ich habe ein Jahr lang daran geschrieben, doch ich wage nicht, sie dem Verleger zu übergeben"</td>
+<td>ca. 17%</td>
+<td>Direktes Geständnis；die Wahrheit liegt hier vollständig offen</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Der alte Morestal berichtet von einem falsch zugestellten Brief mit dem Inhalt „Mein Glückwunsch zum Erfolg Ihres Pamphlets, mein lieber Morestal" — der Brief war ursprünglich für Philippe in Paris bestimmt</td>
+<td>ca. 14%</td>
+<td>Gegenständlicher Beweis：Der falsch adressierte Brief bestätigt Philippe als Autor</td>
+</tr>
+</tbody>
+</table>
+<h4 id="unterstutzende-hinweise">Unterstützende Hinweise</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Philippes zweites Buch <em>Der Begriff des Vaterlandes</em> löst Kontroversen aus；der alte Morestal schreibt ihm empört：„Du scheinst zu glauben, dass der Patriotismus nur eine vorübergehende Erscheinung der Zivilisation ist"</td>
+<td>ca. 7%</td>
+<td>Legt Philippes intellektuellen Werdegang fest und deutet an, dass er bereits mit der Weltanschauung seines Vaters gebrochen hat</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Philippe beabsichtigt zu kündigen mit der Begründung：„Ich habe kein Recht, Kindern das zu lehren, was ich heute glaube"</td>
+<td>ca. 18%</td>
+<td>Entspricht der konsequenten Logik des anonymen Schreibens und bestätigt sein Doppelleben</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Auf dem Bücherregal des alten Morestal stehen Philippes Bücher，deren Seiten mit wütenden Bleistiftanmerkungen bedeckt sind</td>
+<td>ca. 9%</td>
+<td>Symbolisches Detail：Der Riss zwischen Vater und Sohn reicht tief in die Seiten der Bücher</td>
+</tr>
+</tbody>
+</table>
+<h4 id="falsche-fahrten">Falsche Fährten</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Richtung der Irreführung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Der alte Morestal sagt：„Er scheint auch Morestal zu heißen … ein entfernter Verwandter vermutlich, diese Familie ist sehr groß"</td>
+<td>ca. 14%</td>
+<td>Lässt den flüchtigen Leser glauben, es handele sich um einen unbekannten entfernten Verwandten und nicht um den anwesenden Philippe</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Philippe erklärt selbst：„Professoren brauchen im Krieg nicht einzurücken … sie dienen in Regierungsbüros"</td>
+<td>ca. 82%</td>
+<td>Erweckt den Anschein, er werde nicht an die Front gehen；am Ende greift er doch zur Waffe und schließt sich den Verteidigern an</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="wahrheit-zweider-konstrukteur-der-falle-dourlowski-und-weisslicht">Wahrheit Zwei：Der Konstrukteur der Falle — Dourlowski und Weisslicht</h3>
+<ul>
+<li><strong>Konvergenzpunkt：ca. 43%</strong></li>
+<li>Antwort：Der deutsche Inspektor Weisslicht hat die Falle geplant；Dourlowski（der vorgibt, ein Informant der französischen Seite zu sein, in Wirklichkeit aber ein Doppelagent ist）hat sie ausgeführt. Sie benutzten den deutschen Soldaten Baufeld als Köder und inszenierten an der Grenze absichtlich eine Situation, in der Morestal und Jorancé scheinbar einem Deserteur halfen, um den französischen Inspektor verhaften zu können</li>
+</ul>
+<h4 id="schlusselhinweise_1">Schlüsselhinweise</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Dourlowski fischt heimlich im Salon Morestals den zerknüllten Zettel mit der Fluchtroute aus dem Papierkorb</td>
+<td>ca. 22%</td>
+<td><strong>Der wichtigste Hinweis</strong> — der Leser beobachtet diese Handlung unmittelbar und weiß, dass das zentrale Utensil der Falle in Position gebracht wurde</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Marthe erwähnt, dass jemand Dourlowski zusammen mit dem deutschen Inspektor Weisslicht gesehen hat</td>
+<td>ca. 22%</td>
+<td>Dourlowskis Doppelidentität wird hier zum ersten Mal indirekt enthüllt</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Jorancé teilt Morestal mit：„Dourlowski ist seit sechs Monaten nicht mehr in unserem Dienst … er hat wahrscheinlich die Seiten gewechselt"</td>
+<td>ca. 32%</td>
+<td>Bestätigt offiziell Dourlowskis Überläufertum</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Der alte Morestal schlussfolgert：„Baufelds Flucht war ein vorgeplanter Köder … Dourlowski hatte den Zettel in der Hand … und führte mich und Jorancé in die Falle"</td>
+<td>ca. 43%</td>
+<td>Morestals vollständige Schlussfolgerung；der Fallenmechanismus wird hier vollständig enthüllt</td>
+</tr>
+</tbody>
+</table>
+<h4 id="unterstutzende-hinweise_1">Unterstützende Hinweise</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Dourlowski behauptet：„Ich gehe jedes Mal durch den Teufelspass und an der Fabrik vorbei"，bittet Morestal aber trotzdem, ihm einen anderen Weg einzuzeichnen</td>
+<td>ca. 22%</td>
+<td>Deutet darauf hin, dass er den alten Weg bereits kennt；er fordert einen neuen, um ihn dem deutschen Soldaten zu geben</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Der Bauer Saboureux hat Weisslicht und Dourlowski beim Gehen und Verstecken im Wald gesehen</td>
+<td>ca. 52%</td>
+<td>Bestätigt durch räumliche Kontakte die gemeinsame Verschwörung der beiden</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Die deutschen Ermittler verweigern die Anerkennung von Saboureux' Aussage；später widerruft Saboureux sein Zeugnis, nachdem es in deutschen Zeitungen erschienen ist</td>
+<td>ca. 53%</td>
+<td>Demonstriert, wie das gesamte Ereignis unter politischem Druck von allen Seiten verzerrt wird</td>
+</tr>
+</tbody>
+</table>
+<h4 id="falsche-fahrten_1">Falsche Fährten</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Richtung der Irreführung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Dourlowski wirkt wie ein drolliger Wanderhändler, der mit patriotischen Phrasen einem deutschen Deserteur hilft, „auf die französische Seite zu wechseln"</td>
+<td>ca. 6%，22%</td>
+<td>Lässt den Leser und Morestal gleichermaßen glauben, er sei nur ein redegewandter Vermittler und kein Drahtzieher</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Der alte Morestal weigert sich, Dourlowski zu helfen, zerknüllt den Zettel und wirft ihn in den Papierkorb — als hätte er die Gefahr damit gebannt</td>
+<td>ca. 22%</td>
+<td>Lässt den Leser glauben, die Bedrohung sei abgewendet；in Wirklichkeit holt Dourlowski den Zettel unmittelbar danach aus dem Papierkorb</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="wahrheit-dreiphilippes-aufenthaltsort-in-jener-nacht-er-war-nicht-an-der-grenze-sondern-bei-suzanne">Wahrheit Drei：Philippes Aufenthaltsort in jener Nacht — er war nicht an der Grenze, sondern bei Suzanne</h3>
+<ul>
+<li><strong>Konvergenzpunkt（Leserperspektive）：ca. 32%</strong></li>
+<li><strong>Konvergenzpunkt（Figurenperspektive）：ca. 73%</strong></li>
+<li>Antwort：In der Nacht, in der Morestal und Jorancé verhaftet wurden, befand sich Philippe im Haus Jorancés in Saint-Élophe, verbrachte die Nacht mit Suzanne und kehrte erst im Morgengrauen zurück. Sein Alibi führt unmittelbar dazu, dass seine anfängliche Aussage eine Lüge ist.</li>
+</ul>
+<h4 id="schlusselhinweisefur-den-leser-sichtbar">Schlüsselhinweise（für den Leser sichtbar）</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Suzanne gesteht Philippe ihre Gefühle bei der Aphrodite-Statue im Garten und lässt ihn sich küssen</td>
+<td>ca. 32%</td>
+<td>Der Leser beobachtet den Kuss direkt；danach bleibt Philippe in Saint-Élophe und befindet sich nicht in der Nähe der Grenze</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Philippes Bett ist am nächsten Morgen unberührt und zeigt, dass er nicht nach Hause zurückgekehrt ist</td>
+<td>ca. 38%</td>
+<td>Physischer Beweis；der Leser kennt den Grund bereits, doch dies ist das Signal, das Marthe zu zweifeln beginnt</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Suzanne fleht Philippe an：„Du wirst beim Verhör nicht gezwungen sein, es zu gestehen, oder？"</td>
+<td>ca. 56%</td>
+<td>Bestätigt durch Suzannes Worte, dass zwischen ihnen etwas Geheimnisvolles vorgefallen ist</td>
+</tr>
+</tbody>
+</table>
+<h4 id="unterstutzende-hinweisespur-des-verdachts-aus-figurensicht">Unterstützende Hinweise（Spur des Verdachts aus Figurensicht）</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Marthe bemerkt, dass Philippes öffentliche Reaktion auf Suzanne „übertrieben aufgewühlt" ist</td>
+<td>ca. 36%</td>
+<td>Marthe ist die aufmerksamste Beobachterin im Buch；ihr Verdacht kommt später als der des Lesers, weist aber in die richtige Richtung</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Philippe sagt：„Ich war in der Nähe … aber ich habe nichts gesehen"，wobei er „eine Sekunde zögert"</td>
+<td>ca. 42%</td>
+<td>Kleine Risse in der Aussage；Marthe bemerkt, dass seine Formulierung „unsicherer" ist als bei der ersten Aussage</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Marthes Verhör — „Du hast nicht in der alten Mühle geschlafen … wo warst du dann？" — ist ein unerbittliches Kreuzverhör, das Schritt für Schritt enger wird</td>
+<td>ca. 66–73%</td>
+<td>Marthes Befragung bündelt alle Widersprüche in einer einzigen unvermeidlichen Frage</td>
+</tr>
+</tbody>
+</table>
+<h4 id="falsche-fahrten_2">Falsche Fährten</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Richtung der Irreführung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Suzanne lügt Marthe an：„Philippe ist den direkten Heimweg gegangen"</td>
+<td>ca. 38%</td>
+<td>Versucht, Philippes Lüge zu stützen, macht diese aber noch brüchiger</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Philippe sagt：„Ich war so erschöpft, dass ich sofort einschlief und den Schuss überhaupt nicht gehört habe"</td>
+<td>ca. 39%</td>
+<td>Klingt plausibel, steht aber im direkten Widerspruch zur Tatsache des unberührten Bettes</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="wahrheit-vierin-welchem-land-befand-sich-der-verhaftungsort">Wahrheit Vier：In welchem Land befand sich der Verhaftungsort？</h3>
+<ul>
+<li><strong>Konvergenzpunkt：Im gesamten Werk ungeklärt</strong></li>
+<li>Antwort：Der Autor lässt dies bewusst offen；der Leser hat jedoch guten Grund zu glauben, dass <strong>der alte Morestal sich korrekt erinnert</strong> — die Verhaftung fand auf französischem Boden statt. Diese Wahrheit wird jedoch durch Politik, widersprüchliche Aussagen und den Druck beider Seiten gemeinsam begraben und wird schließlich zu einer politischen Tatsache, die davon abhängt, „wer wen überzeugen kann"，und nicht zu einer objektiven Tatsache.</li>
+</ul>
+<h4 id="schlusselhinweise_2">Schlüsselhinweise</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Der alte Morestal sagt：„Ich lebe seit vierzig Jahren auf diesem Land，ich kenne jeden Wegweiser und jede Biegung so gut, dass ich mich nicht irren kann"</td>
+<td>ca. 34%</td>
+<td>Sein Ortskenntnis ist das stärkste subjektive Beweismittel</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Die deutsche Seite setzt im Laufe der Untersuchung Markierungspfähle und behauptet, der Verhaftungsort liege 20 Yards östlich der Grenzlinie — doch Morestal und Jorancé widersprechen dem einstimmig</td>
+<td>ca. 53%</td>
+<td>Beide Seiten beharren auf ihrer Version；die Wahrheit wird zum politischen Einsatz</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Der alte Morestal kehrt am Freitagmorgen an den Ort zurück und fragt sich：„Was, wenn ich mich geirrt habe？ … Angenommen, ich bin nach rechts abgewichen …" — verwirft diesen Gedanken aber sogleich</td>
+<td>ca. 55%</td>
+<td>Dieser kurze Moment des Selbstzweifels ist einer der ehrlichsten Augenblicke des gesamten Buches；Philippe greift genau diesen Moment auf, um die Gewissheit seines Vaters in Frage zu stellen</td>
+</tr>
+</tbody>
+</table>
+<h4 id="unterstutzende-hinweise_2">Unterstützende Hinweise</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Erläuterung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Saboureux sagt zunächst aus, er habe Weisslicht und Dourlowski beim Komplottieren im Wald beobachtet, widerruft dies später aber aus Angst</td>
+<td>ca. 52–54%</td>
+<td>Wie politische Kräfte die Beweise selbst unwirksam machen</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Der deutsche Soldat Baufeld teilt Philippe kurz vor seinem Tod mit, er sei in eine Falle gelockt worden, und erwähnt die Fluchtroute</td>
+<td>ca. 40%</td>
+<td>Stützt indirekt die französische Position；da Baufeld ein Deserteur ist, verweigert die deutsche Seite jedoch die Anerkennung</td>
+</tr>
+</tbody>
+</table>
+<h4 id="falsche-fahrten_3">Falsche Fährten</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hinweis</th>
+<th>Position（Prozent）</th>
+<th>Richtung der Irreführung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Staatssekretär Lecorbeiller sagt：„Fast wünschte ich, ihr hättet euch geirrt" — was andeutet：„Wenn Frankreich um einen kleinen Abschnitt über die Grenzlinie hinaus war, wäre es leichter zu lösen"</td>
+<td>ca. 67%</td>
+<td>Lässt den Leser kurzzeitig zweifeln：Hat sich der alte Morestal vielleicht doch geirrt？</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="rekonstruktion-des-schlussfolgerungswegs">Rekonstruktion des Schlussfolgerungswegs</h2>
+<p><strong>Die privilegierte Position des Lesers und der verblendete Zustand der Figuren</strong></p>
+<p>Das erstaunlichste Erzählkonzept von <em>Die Grenze</em> besteht darin, dass der Leser von Anfang an fast alle wichtigen Wahrheiten des Buches kennt, aber hilflos zusehen muss, wie die Figuren Schritt für Schritt in die Selbstzerstörung treiben. Dieses „Tragödie aus der Vogelperspektive" steht in krassem Gegensatz zum „Triumph aus der Detektivperspektive" des klassischen Kriminalromans.</p>
+<p><strong>Weg Eins：Die Falle verstehen（Whodunit）</strong></p>
+<p>Bei ca. 22%（Kapitel fünf, <em>Der Zettel</em>）beobachtet der Leser persönlich, wie Dourlowski den Zettel aus dem Papierkorb stiehlt. Dies ist eine der bedeutendsten Szenen des gesamten Buches — der Leser „weiß", dass eine Falle im Begriff ist, zuzuschnappen, während der alte Morestal nichts ahnt. Als die Verhaftung in der Nacht von Montag auf Dienstag stattfindet, hat der Leser längst verstanden, wie der zerknüllte Zettel verwendet wurde. Morestals Schlussfolgerung（ca. 43%）vervollständigt nur das Puzzle, das der Leser bereits zu sieben oder acht Zehnteln gelegt hatte.</p>
+<p><strong>Weg Zwei：Philippes Lüge verfolgen（Whydunit）</strong></p>
+<p>Bei ca. 32% beobachtet der Leser direkt Philippes und Suzannes Kuss und folgt Philippe, der im Morgengrauen zur alten Mühle zurückgeht und den sterbenden Baufeld findet. Als Philippe danach lügt, er sei frühmorgens aufgestanden und weggegangen, durchschaut der Leser diese Lüge sofort und beginnt, mit wachsender Beklemmung zu beobachten, wie Philippe in einer falschen Aussage immer tiefer versinkt.</p>
+<p><strong>Weg Drei：Die Wandlung von Philippes Falschaussage</strong></p>
+<p>Nach ca. 57% verändert sich das Motiv von Philippes Lüge：Zunächst log er, um Suzannes Ruf zu schützen；doch als die diplomatische Krise eskaliert, beginnt er aktiv, seine Aussage „zurückzuziehen"，um die Erklärung seines Vaters zu unterhöhlen und der französischen Regierung eine Hintertür zu öffnen. Dies ist ein elegantes Konstrukt, bei dem „eine Lüge für neue Zwecke umgebaut wird" — der Leser muss den Schichtungen der Motive folgen und verstehen, dass Philippe jetzt nicht mehr mit einer Lüge operiert, sondern versucht, durch den „Widerruf der Lüge" den Krieg zu verhindern.</p>
+<p><strong>Weg Vier：Marthes Ermittlung</strong></p>
+<p>Unter den Figuren des Buches kommt Marthe dem Detektiv am nächsten. Sie bedient sich keinerlei externer Ressourcen, sondern verlässt sich ausschließlich auf präzise Beobachtung und unerbittliche Logik —„Du sagst, du hast geschlafen, aber das Bett ist gemacht. Du sagst, du hast den Schuss nicht gehört, aber du gibst zu, in der Nähe gewesen zu sein. Du sagst, du wolltest mit dem Vater reden, aber hast es immer wieder aufgeschoben." Sie häuft alle Widersprüche aufeinander und treibt schließlich im Zelt diese eine Frage heraus：„Wo warst du also？"</p>
+<hr>
+<h2 id="zusatzliche-hinweise">Zusätzliche Hinweise</h2>
+<p><strong>Leblans unleblanischstes Werk</strong></p>
+<p><em>Die Grenze</em> erschien 1912, am Vorabend der sich über Europa zusammenbrauenden Kriegswolken. Zu dieser Zeit war Leblans Arsène-Lupin-Reihe bereits außerordentlich beliebt；doch er entschied sich in diesem Werk, den eleganten Diebeshelden vollständig zu verwerfen und stattdessen einen gewöhnlichen Menschen zu schildern, der zwischen Überzeugung, Liebe, Familienpflicht und nationalem Schicksal zerrissen wird. Dies ist Leblans literarisch ambitioniertester Roman und zugleich eines seiner am wenigsten diskutierten Werke.</p>
+<p><strong>„Die Lüge" als Erzählmotor</strong></p>
+<p>In diesem Buch ist die Lüge keine kriminelle Handlung, sondern die Lösung eines ethischen Dilemmas — doch jede Lüge schafft ein tieferes Problem als das, das sie zu lösen versucht. Philippe lügt, um Suzanne zu schützen；die Lüge vertieft die diplomatische Krise；der Widerruf der Lüge wiederum erfordert, Suzanne zu opfern. Der Roman zeigt, wie Lügen wie ein Schneeball wachsen, bis niemand mehr unschuldig und unbeschadet hervorgehen kann.</p>
+<table>
+<thead>
+<tr>
+<th>Lüge</th>
+<th>Zweck</th>
+<th>Preis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>„Ich bin direkt nach Hause gegangen"</td>
+<td>Verbergen, dass er mit Suzanne zusammen war</td>
+<td>Zieht den Widerspruch des Alibis nach sich</td>
+</tr>
+<tr>
+<td>„Ich habe Jorancés Protest gehört"</td>
+<td>Den Vater schützen, die diplomatische Lage stabilisieren</td>
+<td>Er wird gezwungen, als diplomatischer Zeuge aufzutreten；die Verantwortung wächst</td>
+</tr>
+<tr>
+<td>„Ich weiß nichts, ich war nicht dabei"</td>
+<td>Versuchen, die Aussage des Vaters zu untergraben, um den Krieg zu verhindern</td>
+<td>Entblößt den Verdacht seiner Frau und löst eine Familienkrise aus</td>
+</tr>
+<tr>
+<td>„Es war eine Frau …"（Andeutung）</td>
+<td>Eine andere Erklärung liefern, ohne Namen zu nennen</td>
+<td>Wird von Marthe und Jorancé zugleich durchschaut；die Lage bricht zusammen</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Die Politisierung der Hinweise：Wenn Beweise zu Einsätzen werden</strong></p>
+<p>Ein weiterer Reiz von <em>Die Grenze</em> liegt darin, dass alle physischen Beweise von politischen Zwecken „verschluckt" werden. Der Zettel, den Dourlowski aus dem Papierkorb gefischt hat, wäre der eindeutige Beweis für die Falle；er ist aber auch der Beweis dafür, dass der alte Morestal einem Deserteur geholfen hat. Saboureux' Augenzeugenaussage könnte die Existenz der Falle belegen；doch er widerruft sie aus Angst vor dem Krieg. Der genaue Ort des Verhaftungsgeländes ist die von beiden Seiten beanspruchte „objektive Tatsache"；doch keine neutrale Vermessung kann diesen Streit lösen. All dies ergibt eine brutalere Mahnung als ein gewöhnlicher Kriminalfall：Beweise haben nur dann Bedeutung, wenn eine Macht vorhanden ist, die bereit ist, ihnen zu glauben.</p>
+<p><strong>Vergleich mit anderen Werken Leblans</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Arsène-Lupin-Reihe</th>
+<th><em>Die Grenze</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Charakter des Protagonisten</td>
+<td>Kühl，schlagfertig，gelassen</td>
+<td>Philippe：aufrichtig，widersprüchlich，oft außer sich</td>
+</tr>
+<tr>
+<td>Art der Rätsel</td>
+<td>Diebstähle，Identitätsrätsel，mechanische Tricks</td>
+<td>Politische Fallen，diplomatische Lügen，Gewissensnot</td>
+</tr>
+<tr>
+<td>Erzählspannung</td>
+<td>Leser und Detektiv lösen das Rätsel gemeinsam</td>
+<td>Leser ist den Figuren voraus；er bezeugt die Tragödie</td>
+</tr>
+<tr>
+<td>Tenor des Endes</td>
+<td>Heroischer Triumph（oder lächelnde Flucht）</td>
+<td>Tragische Kapitulation — ein vermeidbarer Krieg bricht aus</td>
+</tr>
+<tr>
+<td>Natur der „Wahrheit"</td>
+<td>Objektiv vorhanden，wartet auf Enthüllung</td>
+<td>Subjektiv konstruiert，durch politische Kräfte geformt</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Philippes letztes „Je viens, père"（„Ich komme, Vater"）</strong></p>
+<p>Die letzte Szene des Buches zeigt Philippe, der seinen Plan zur Flucht in die Schweiz aufgibt, das Gewehr ergreift und sich neben seinen Vater kniet, um auf die einmarschierenden deutschen Soldaten zu schießen. Er sagt „Ich komme, Vater" — dies ist der wichtigste Satz des gesamten Romans, zugleich der vielschichtigste. Er hat seinen Glauben nicht geändert；er glaubt nach wie vor, dass dieser Krieg töricht und grausam ist. Aber er bleibt zurück — nicht weil er sich geirrt hat, sondern weil „es Dinge gibt, die man selbst nicht ablehnen kann".</p>
+<p>Leblanc lässt Philippe mit dem letzten Satz des Buches einen Menschen töten — „einen großen Mann in Uniform, der langsam fiel, als wolle er einschlafen". Das ist keine Heldengeste, sondern die Tränen eines Besiegten. Die eigentliche Wahrheit ist：Dieser Krieg hat jeden verlieren lassen.</p>
+    <a href="../index.html" class="back-link">← Zur Startseite</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Detektivanalyse</p>
+    <p>Fünf Autoren · achtundachtzig Werke · 135 Jahre Entwicklung der Schwierigkeit im Kriminalroman.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

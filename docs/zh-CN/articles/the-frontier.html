@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>《边境》（The Frontier） — 推理解剖室</title>
+<meta name="description" content="法德边境，孚日山脉。老摩雷斯塔尔是一位顽固的爱国者，亲历1870年普法战争的战败耻辱，此后在边境修屋、备武，等待收复失地的那一天。他的儿子菲利普则是巴黎的历史教授，名义上继承父志，实则已悄悄转型为激进的反战主义者，匿名写作煽动性的和平小册子《和平高于一切》。 菲利普携妻子玛特（Marthe）回到边境故居，准备向父亲摊牌">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-frontier.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-frontier.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-frontier.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-frontier.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-frontier.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-frontier.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-frontier.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-frontier.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif SC', serif;
+  --font-sans: 'Noto Sans SC', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">推理解剖室</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">首页</a>
+        <a href="../index.html#latest">最新分析</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="语言" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 简体中文</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-frontier.html">繁體中文</a>
+      <a class="lang-item active" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-frontier.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-frontier.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/the-frontier.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/the-frontier.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/the-frontier.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/the-frontier.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/the-frontier.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">莫里斯·勒布朗 · </div>
+    <h1>《边境》（The Frontier）</h1>
+    <div class="subtitle">莫里斯·卢布朗（Maurice Leblanc） · 长篇政治心理惊悚小说</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">推理难度</div>
+        <div class="rating-badge-stars">⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">迷雾等级</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="the-frontier">《边境》（The Frontier）— 推理分析</h1>
+<h2 id="_1">基本信息</h2>
+<ul>
+<li>作者：莫里斯·卢布朗（Maurice Leblanc）</li>
+<li>出版年：1912年（法文原版 <em>La Frontière</em>，英译版同年）</li>
+<li>译者：Alexander Teixeira de Mattos</li>
+<li>类型：长篇政治心理惊悚小说</li>
+<li>侦探角色：无固定侦探；老摩雷斯塔尔（Morestal）凭激情与直觉推理；菲利普（Philippe）是被迫「侦探自己」的核心人物</li>
+<li>核心谜团类型：whodunit（陷阱设计者）＋ whydunit（伪证动机）＋ 真相争议（逮捕地点的法德之争）</li>
+</ul>
+<hr>
+<h2 id="_2">推理难度总评</h2>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>星等</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理难度（Deducibility）</td>
+<td>⭐⭐</td>
+<td>平均收敛点约 30% — 读者早早便以特权视角掌握核心真相，悬念不在「谁做了」而在「代价几何」</td>
+</tr>
+<tr>
+<td>迷雾等级（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>中度误导：Dourlowski 的双面身份、外交层层谎言、菲利普伪证的层叠掩护，共同织成一张迷雾之网</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>特别说明：</strong> 《边境》是卢布朗最具文学野心的作品，与亚森·罗蘋系列的智计冒险截然不同。本书的「谜」不在密室或窃案，而在于：一个人能否为阻止战争而说谎？谎言的代价又由谁来承担？推理层面的分析必须同时考量<strong>读者特权视角</strong>与<strong>人物内部视角</strong>的根本落差。</p>
+</blockquote>
+<hr>
+<h2 id="_3">故事梗概</h2>
+<p>法德边境，孚日山脉。老摩雷斯塔尔是一位顽固的爱国者，亲历1870年普法战争的战败耻辱，此后在边境修屋、备武，等待收复失地的那一天。他的儿子菲利普则是巴黎的历史教授，名义上继承父志，实则已悄悄转型为激进的反战主义者，匿名写作煽动性的和平小册子《和平高于一切》。</p>
+<p>菲利普携妻子玛特（Marthe）回到边境故居，准备向父亲摊牌——揭露自己的思想转变与辞职计划。边境督察若朗塞（Jorancé）的女儿苏珊（Suzanne）也恰在此时逗留，她深爱着菲利普，由此引发纠缠。</p>
+<p>周一晚间，老摩雷斯塔尔与若朗塞沿边境小径返家，遭遇了一场由德国特工策动的陷阱：一名声称想脱逃的德军士兵引诱两人出面援助，德方警察随即在边境附近逮捕了他们。问题的核心是：逮捕地点究竟在法国还是德国境内？</p>
+<p>就在这个危急时刻，菲利普却有不在场证明——那晚他与苏珊在一起，而非在边境附近。为了保护苏珊的名誉，他选择伪造证词，声称自己「听见」若朗塞的抗议。但随着外交风波愈演愈烈，菲利普的谎言逐渐崩塌，最终在法德两国联合调查的帐篷里，一切被逐一揭穿。战争的炮声在边境响起，菲利普在个人信仰与民族本能之间的最后挣扎，成为小说的绝响。</p>
+<hr>
+<h2 id="_4">真相拆解</h2>
+<h3 id="_5">真相一：匿名小册子《和平高于一切》的作者</h3>
+<ul>
+<li><strong>线索收敛点：约 30%</strong></li>
+<li>答案：菲利普·摩雷斯塔尔——巴黎历史教授、老摩雷斯塔尔之子</li>
+</ul>
+<h4 id="_6">关键线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>老摩雷斯塔尔拿出紫色封面小册子，说「作者姓摩雷斯塔尔……远房亲戚吧」，菲利普立刻「脸色苍白」，问「你确定吗？你怎么知道的？」</td>
+<td>约 14%</td>
+<td>语气和反应已直接泄露身份；仔细阅读的读者在此即可确认</td>
+</tr>
+<tr>
+<td>2</td>
+<td>菲利普对玛特坦承：「那些我匿名写的小册子……我出版了一年的书稿却迟迟不敢交给出版商」</td>
+<td>约 17%</td>
+<td>直接自白，此时真相完整浮现</td>
+</tr>
+<tr>
+<td>3</td>
+<td>老摩雷斯塔尔说有封误寄信件，上面写「恭贺你的小册子大卖，我的摩雷斯塔尔」——那封信原本是寄给巴黎的菲利普的</td>
+<td>约 14%</td>
+<td>物件证据：误寄信件确认作者正是菲利普</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_7">辅助线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>菲利普的第二本书《祖国概念》引发争议，老摩雷斯塔尔去信批评「你似乎认为爱国主义只是暂时的文明现象」</td>
+<td>约 7%</td>
+<td>奠定菲利普思想轨迹，暗示他已与父亲的世界观决裂</td>
+</tr>
+<tr>
+<td>2</td>
+<td>菲利普打算辞职，理由是「我没有权利把我现在的信仰教给孩子们」</td>
+<td>约 18%</td>
+<td>与匿名写作的一贯逻辑相符，进一步确认他的双重生活</td>
+</tr>
+<tr>
+<td>3</td>
+<td>老摩雷斯塔尔书架上放着菲利普的书，书页上密密麻麻都是愤怒的铅笔批注</td>
+<td>约 9%</td>
+<td>象征性细节：父子之间的裂缝早已深入书页</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_8">假线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>误导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>老摩雷斯塔尔说「他似乎也姓摩雷斯塔尔……远房亲戚吧，这个家族很大」</td>
+<td>约 14%</td>
+<td>让初读者以为是某个不知名远亲，而非眼前的菲利普</td>
+</tr>
+<tr>
+<td>2</td>
+<td>菲利普自称「教授在战时不用从军……在政府办公室服役」</td>
+<td>约 82%</td>
+<td>制造他不会上战场的假象，最终他却取枪加入守卫</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="dourlowskiweisslicht">真相二：陷阱的设计者——道洛夫斯基（Dourlowski）与威斯利希特（Weisslicht）</h3>
+<ul>
+<li><strong>线索收敛点：约 43%</strong></li>
+<li>答案：德方督察威斯利希特策划、道洛夫斯基（假装是法方的情报线人，实为双面间谍）执行。他们利用德军士兵鲍菲尔德（Baufeld）作诱饵，预谋在边境附近制造摩雷斯塔尔父子「协助逃兵」的现场，进而逮捕法国督察</li>
+</ul>
+<h4 id="_9">关键线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>道洛夫斯基在摩雷斯塔尔的客厅秘密从废纸篓里捡走那张被揉皱的、记有逃跑路线的纸条</td>
+<td>约 22%</td>
+<td><strong>最关键的线索</strong>——读者直接目睹这一行为，知道陷阱的核心道具已到位</td>
+</tr>
+<tr>
+<td>2</td>
+<td>玛特提及有人见过道洛夫斯基与德国督察威斯利希特在一起</td>
+<td>约 22%</td>
+<td>道洛夫斯基的双面身份首次被间接揭示</td>
+</tr>
+<tr>
+<td>3</td>
+<td>若朗塞告知摩雷斯塔尔：「道洛夫斯基六个月前已不再为我们服务……他大概投靠了对方」</td>
+<td>约 32%</td>
+<td>正式确认道洛夫斯基的变节</td>
+</tr>
+<tr>
+<td>4</td>
+<td>老摩雷斯塔尔推理出：「鲍菲尔德的逃亡是预谋的诱饵……道洛夫斯基手中握着那张纸条……把我和若朗塞引入陷阱」</td>
+<td>约 43%</td>
+<td>老摩雷斯塔尔的完整推理，陷阱机制在此全部曝光</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_10">辅助线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>道洛夫斯基声称「我每次都走魔鬼隘口和工厂那条路」，却要摩雷斯塔尔画另一条路</td>
+<td>约 22%</td>
+<td>暗示他已知旧路，索取新路线是为了给德国士兵用</td>
+</tr>
+<tr>
+<td>2</td>
+<td>萨布罗（Saboureux）农夫见过威斯利希特和道洛夫斯基在树林中行走并躲藏</td>
+<td>约 52%</td>
+<td>用地理上的接触证实双方的合谋关系</td>
+</tr>
+<tr>
+<td>3</td>
+<td>德方调查人员拒绝承认萨布罗的证词，后来萨布罗也在德国报纸刊出后收回证词</td>
+<td>约 53%</td>
+<td>示范整个事件如何在政治压力下被各方扭曲</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_11">假线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>误导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>道洛夫斯基看似是一个逗趣的流浪小贩，说着爱国情怀帮助德军逃兵「投奔法国」</td>
+<td>约 6%、22%</td>
+<td>让读者和摩雷斯塔尔都以为他只是个油嘴滑舌的中间人，而非主谋</td>
+</tr>
+<tr>
+<td>2</td>
+<td>老摩雷斯塔尔拒绝帮助道洛夫斯基，把那张纸揉成一团扔进废纸篓——似乎已截断了危险</td>
+<td>约 22%</td>
+<td>让读者以为威胁已解除，实则道洛夫斯基紧跟着从废纸篓里取走了那张纸</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_12">真相三：菲利普当晚的下落——他不在边境，而是与苏珊在一起</h3>
+<ul>
+<li><strong>线索收敛点（读者视角）：约 32%</strong></li>
+<li><strong>线索收敛点（书中人物视角）：约 73%</strong></li>
+<li>答案：菲利普在摩雷斯塔尔父子与若朗塞被捕的那个夜晚，留在了圣艾洛夫的若朗塞家，与苏珊共度夜晚，直到清晨才离开。他的不在场证明直接导致他的初始证词是谎言。</li>
+</ul>
+<h4 id="_13">关键线索（读者可见）</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>苏珊在花园的阿非洛蒂雕像前，向菲利普忏情并让他吻她</td>
+<td>约 32%</td>
+<td>读者直接目睹接吻发生，此后菲利普留在圣艾洛夫，不在边境附近</td>
+</tr>
+<tr>
+<td>2</td>
+<td>菲利普的床第二天早晨未曾折叠，证明他未曾回房</td>
+<td>约 38%</td>
+<td>物理证据；读者已知原因，但这是玛特开始起疑的信号</td>
+</tr>
+<tr>
+<td>3</td>
+<td>苏珊向菲利普求情：「在询问中，你不会被迫坦白吧？」</td>
+<td>约 56%</td>
+<td>从苏珊口中确认两人之间发生了需要保密的事</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_14">辅助线索（书中人物的怀疑轨迹）</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>玛特注意到菲利普对苏珊当众的反应「过于激动」</td>
+<td>约 36%</td>
+<td>玛特是书中最敏锐的观察者，她的怀疑比读者晚，但方向准确</td>
+</tr>
+<tr>
+<td>2</td>
+<td>菲利普说「我当时在附近……但没有看到什么」，说话时「犹豫了一秒钟」</td>
+<td>约 42%</td>
+<td>证词中的微小裂缝；玛特注意到他的措辞比第一次证词「更不确定」</td>
+</tr>
+<tr>
+<td>3</td>
+<td>玛特的追问——「你没有睡在老磨坊……那你在哪里？」——宛如盘问，步步紧逼</td>
+<td>约 66-73%</td>
+<td>玛特的诘问把所有矛盾收拢到一个无法回避的问题</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_15">假线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>误导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>苏珊向玛特撒谎说「菲利普走的是直接回家的路」</td>
+<td>约 38%</td>
+<td>试图帮菲利普圆谎，却使谎言更脆弱</td>
+</tr>
+<tr>
+<td>2</td>
+<td>菲利普说「我因为太累，立刻就睡着了，完全没听到枪声」</td>
+<td>约 39%</td>
+<td>听来合理，却与床铺未曾整理的事实直接矛盾</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_16">真相四：逮捕地点究竟在哪一国境内？</h3>
+<ul>
+<li><strong>线索收敛点：全篇悬而未决</strong></li>
+<li>答案：作者有意保持模糊，但读者有充分理由相信<strong>老摩雷斯塔尔的记忆正确</strong>——逮捕在法国境内。然而这个真相被政治、证词矛盾与双方压力共同淹没，最终成为一个由「谁能说服谁」决定的政治事实，而非客观事实。</li>
+</ul>
+<h4 id="_17">关键线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>老摩雷斯塔尔说：「我已在这片土地上生活四十年，我对每一个路标、每一个转角都如此熟悉，我不可能搞错」</td>
+<td>约 34%</td>
+<td>他的在地知识是最有力的主观证据</td>
+</tr>
+<tr>
+<td>2</td>
+<td>德方在调查中插上标记桩，声称逮捕地点在边境线以东20码——但老摩雷斯塔尔和若朗塞的证词一致否认</td>
+<td>约 53%</td>
+<td>两国各执一词，真相成为政治筹码</td>
+</tr>
+<tr>
+<td>3</td>
+<td>老摩雷斯塔尔在周五早晨重返现场，扪心自问「如果我走偏了呢？……假设我往右偏了……」——但随即否定了这个念头</td>
+<td>约 55%</td>
+<td>那一瞬间的自我怀疑，是全书最诚实的时刻之一；菲利普正是抓住这个片刻质疑父亲的确定性</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_18">辅助线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>萨布罗最初作证说他看到威斯利希特和道洛夫斯基在树林中谋划，后来又因恐惧收回</td>
+<td>约 52-54%</td>
+<td>政治力量如何让证据本身失效</td>
+</tr>
+<tr>
+<td>2</td>
+<td>德军士兵鲍菲尔德临死前告诉菲利普是被陷害，并提到逃亡路线</td>
+<td>约 40%</td>
+<td>间接支持法方立场，但因鲍菲尔德是逃兵，德方拒绝采信</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_19">假线索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>线索内容</th>
+<th>出现位置（百分比）</th>
+<th>误导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>副国务卿勒科尔比耶说「我几乎希望你们说错了」——暗示「如果法国在边境线错了一点，反而更容易解决」</td>
+<td>约 67%</td>
+<td>让读者短暂怀疑：也许老摩雷斯塔尔真的搞错了？</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_20">推理路径重建</h2>
+<p><strong>读者的特权位置与人物的蒙蔽状态</strong></p>
+<p>《边境》最惊人的叙事设计是：读者几乎从一开始就拥有书中所有重要真相，却只能眼睁睁看着人物一步步走向自我毁灭。这种「上帝视角的悲剧」与传统推理小说的「侦探视角的胜利」形成了鲜明对照。</p>
+<p><strong>路径一：理解陷阱（Whodunit）</strong></p>
+<p>读者在约22%（第五章《那张便条》）就亲眼目睹道洛夫斯基从废纸篓里偷走纸条。这是全书最重要的场景之一——读者「知道」一场陷阱即将展开，而老摩雷斯塔尔浑然不觉。当周一深夜的逮捕发生时，读者早已准备好理解那张废纸是如何被利用的。老摩雷斯塔尔的推理（约43%）只是「补全」了读者已拼好七八成的拼图。</p>
+<p><strong>路径二：追踪菲利普的谎言（Whydunit）</strong></p>
+<p>约32%时，读者直接目睹菲利普与苏珊的拥吻，并跟着他在清晨步行返回老磨坊、找到垂死的鲍菲尔德。此后菲利普撒谎说自己一早就起床外出，读者立刻识穿这个谎言，并开始焦急地观察他如何在错误的证词下愈陷愈深。</p>
+<p><strong>路径三：菲利普伪证的意图转化</strong></p>
+<p>约57%后，菲利普的谎言动机出现转变：起初他说谎是为了保护苏珊的名誉；但随着外交危机升温，他开始主动「收回」证词，试图拆解父亲的声明，给法国政府一个台阶。这是一个「谎言因新目的而被重组」的精彩设计——读者必须跟上动机的叠加，理解此时菲利普并非用谎言，而是在用「撤销谎言」来试图阻止战争。</p>
+<p><strong>路径四：玛特的侦查</strong></p>
+<p>在书中人物中，玛特是最接近侦探角色的人。她没有使用任何外部资源，只靠精准的观察与无情的逻辑——「你说你睡了，但床是整理过的。你说你没听到枪声，但你承认当时就在附近。你说要和父亲谈，但一直推迟。」她把所有矛盾叠在一起，最终在帐篷里逼出了那个问题：「那你在哪里？」</p>
+<hr>
+<h2 id="_21">补充说明</h2>
+<p><strong>卢布朗最不像卢布朗的作品</strong></p>
+<p>《边境》出版于1912年，正是欧洲战云密布的前夜。此时卢布朗的亚森·罗蘋系列已大受欢迎，但他选择在这部作品中彻底抛弃优雅的盗贼英雄，转而书写一个在信仰、爱情、家族义务与国家命运之间被撕裂的普通人。这是卢布朗最具文学企图心的长篇，也是他最少被讨论的作品之一。</p>
+<p><strong>「谎言」作为叙事引擎</strong></p>
+<p>本书中，谎言不是犯罪行为，而是伦理两难的解决方案——但每一个谎言都制造了比它试图解决的问题更深的困境。菲利普为保护苏珊而说谎；说谎加深了外交危机；收回谎言又必须牺牲苏珊。小说展示了谎言如何像滚雪球般增大，直到没有人能无辜地全身而退。</p>
+<table>
+<thead>
+<tr>
+<th>谎言</th>
+<th>目的</th>
+<th>代价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>「我直接回家了」</td>
+<td>掩盖与苏珊同在</td>
+<td>牵扯出不在场证明的矛盾</td>
+</tr>
+<tr>
+<td>「我听到若朗塞的抗议」</td>
+<td>保护父亲，稳定外交局势</td>
+<td>被迫成为外交证人，责任加重</td>
+</tr>
+<tr>
+<td>「我什么都不知道，我不在场」</td>
+<td>试图拆解父亲的证词以阻止战争</td>
+<td>暴露了妻子的怀疑，引爆家庭危机</td>
+</tr>
+<tr>
+<td>「是一个女人……」（暗示）</td>
+<td>在不具名的情况下提供另一种解释</td>
+<td>被玛特与若朗塞双双识破，局面崩溃</td>
+</tr>
+</tbody>
+</table>
+<p><strong>线索的政治化：当证据成为筹码</strong></p>
+<p>《边境》的另一个推理趣味在于：所有物理证据都被政治目的「吞噬」了。那张道洛夫斯基从废纸篓捡走的纸条，本可成为陷阱的铁证；但它也是老摩雷斯塔尔「协助逃兵」的证明。萨布罗的目击陈述，可证明陷阱的存在；但他因恐惧战争而收回证词。逮捕现场的地面位置，是法德双方共同声索的「客观事实」；但没有任何中立的测量能解决这场争议。这一切构成了一个比一般推理案件更残酷的提醒：证据只有在有意愿相信它的权力面前才有意义。</p>
+<p><strong>与卢布朗其他作品的比较</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>亚森·罗蘋系列</th>
+<th>《边境》</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主角性格</td>
+<td>冷静、机智、不动声色</td>
+<td>菲利普：真挚、矛盾、常常失控</td>
+</tr>
+<tr>
+<td>谜题类型</td>
+<td>窃案、身份谜团、机关诡计</td>
+<td>政治陷阱、外交谎言、良心困境</td>
+</tr>
+<tr>
+<td>叙事张力</td>
+<td>读者与侦探一同追谜</td>
+<td>读者超前人物、见证悲剧</td>
+</tr>
+<tr>
+<td>结局基调</td>
+<td>英雄式的胜利（或带笑的逃脱）</td>
+<td>悲剧式的妥协——一场本可避免的战争开打</td>
+</tr>
+<tr>
+<td>「真相」的性质</td>
+<td>客观存在、等待揭露</td>
+<td>主观建构、被政治力量塑造</td>
+</tr>
+</tbody>
+</table>
+<p><strong>菲利普最后的「I'm coming, father」（「我来了，父亲」）</strong></p>
+<p>全书的最后一幕是菲利普放弃逃往瑞士的计划，拿起步枪跪在父亲身旁，对准越境的德军扣下了扳机。他说「我来了，父亲」——这是他整部小说中最重要的一句话，也是最复杂的一句话。他并没有改变信仰；他仍然相信这场战争是愚蠢的、残酷的。但他留下来了，不是因为他错了，而是因为「有些事，连你自己也无法拒绝」。</p>
+<p>卢布朗让菲利普用最后一行文字杀死了一个人——一个「穿制服的大汉，慢慢地倒下，彷佛要入睡」。那不是英雄的姿态，而是败北者的眼泪。真正的真相，是这场战争让每一个人都输了。</p>
+    <a href="../index.html" class="back-link">← 回到首页</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">推理解剖室</p>
+    <p>五位作者 · 八十八部作品 · 一百三十五年推理文学的难度演化</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

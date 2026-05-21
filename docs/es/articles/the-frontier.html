@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>*La Frontera* (The Frontier) — Sala de Disección Detectivesca</title>
+<meta name="description" content="Frontera franco-alemana, macizo de los Vosgos. El anciano Morestal es un patriota obstinado que vivió en carne propia la vergonzosa derrota de la guerra franco-">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-frontier.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-frontier.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-frontier.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-frontier.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-frontier.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-frontier.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-frontier.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-frontier.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Sala de Disección Detectivesca</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Inicio</a>
+        <a href="../index.html#latest">Recientes</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Idioma" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 Español</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-frontier.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-frontier.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-frontier.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/the-frontier.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/the-frontier.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/the-frontier.html">Deutsch</a>
+      <a class="lang-item active" data-lang="es" href="/Detective-Analysis/es/articles/the-frontier.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/the-frontier.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">Maurice Leblanc · </div>
+    <h1>*La Frontera* (The Frontier)</h1>
+    <div class="subtitle">Maurice Leblanc · </div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Deducibilidad</div>
+        <div class="rating-badge-stars">⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Nivel de niebla</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="la-frontera-the-frontier-analisis-de-deducibilidad"><em>La Frontera</em> (The Frontier) — Análisis de Deducibilidad</h1>
+<h2 id="informacion-basica">Información básica</h2>
+<ul>
+<li>Autor：Maurice Leblanc</li>
+<li>Año：1912（original en francés <em>La Frontière</em>; traducción al inglés del mismo año）</li>
+<li>Traductor：Alexander Teixeira de Mattos</li>
+<li>Tipo：Novela política y psicológica de suspense（formato largo）</li>
+<li>Detective：Ningún detective fijo; el anciano Morestal razona movido por la pasión y la intuición; Philippe es el personaje central que se ve obligado a «investigarse a sí mismo»</li>
+<li>Tipo de misterio central：whodunit（diseñador de la trampa）＋ whydunit（motivo del falso testimonio）＋ controversia sobre la verdad（disputa franco-alemana sobre el lugar del arresto）</li>
+</ul>
+<hr>
+<h2 id="calificacion-de-deducibilidad">Calificación de deducibilidad</h2>
+<table>
+<thead>
+<tr>
+<th>Indicador</th>
+<th>Estrellas</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deducibilidad（Deducibility）</td>
+<td>⭐⭐</td>
+<td>Punto de convergencia promedio: aproximadamente 30% — el lector obtiene muy pronto la verdad central desde una posición privilegiada; el suspense no reside en «quién lo hizo» sino en «cuál será el precio»</td>
+</tr>
+<tr>
+<td>Nivel de niebla（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>Engaño moderado: la doble identidad de Dourlowski, las capas de mentiras diplomáticas y la cobertura superpuesta del falso testimonio de Philippe tejen conjuntamente una red de niebla</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Nota especial:</strong> <em>La Frontera</em> es la obra de mayor ambición literaria de Leblanc, radicalmente distinta de las aventuras de ingenio de la serie Arsène Lupin. El «misterio» de esta novela no reside en una habitación cerrada ni en un robo, sino en la siguiente pregunta: ¿puede una persona mentir para impedir una guerra? ¿Y quién paga el precio de esa mentira? El análisis desde el plano deductivo debe considerar simultáneamente la diferencia fundamental entre la <strong>posición privilegiada del lector</strong> y la <strong>perspectiva interna de los personajes</strong>.</p>
+</blockquote>
+<hr>
+<h2 id="sinopsis">Sinopsis</h2>
+<p>Frontera franco-alemana, macizo de los Vosgos. El anciano Morestal es un patriota obstinado que vivió en carne propia la vergonzosa derrota de la guerra franco-prusiana de 1870. Desde entonces ha construido su casa en la frontera, acumulado armas y aguardado el día de la reconquista. Su hijo Philippe es profesor de Historia en París; aunque nominalmente ha heredado los ideales de su padre, en secreto se ha transformado en un radical pacifista y escribe de forma anónima el panfleto provocador <em>La paz por encima de todo</em>.</p>
+<p>Philippe regresa a la casa familiar en la frontera acompañado de su esposa Marthe, con la intención de confesar a su padre su cambio de convicciones y sus planes de dimisión. En ese mismo momento se encuentra de visita Suzanne, hija del inspector de frontera Jorancé, quien está profundamente enamorada de Philippe, lo que añade una complicación más a la situación.</p>
+<p>El lunes por la noche, el anciano Morestal y Jorancé regresan a casa por el sendero fronterizo y caen en una trampa tendida por agentes alemanes: un soldado alemán que afirma querer desertar los atrae para que acudan en su ayuda, momento en que la policía alemana los detiene cerca de la frontera. El nudo central del problema es: ¿el arresto tuvo lugar en territorio francés o alemán?</p>
+<p>Precisamente en ese momento crítico, Philippe tiene una coartada: aquella noche estaba con Suzanne, no en las inmediaciones de la frontera. Para proteger el honor de Suzanne, decide falsificar su declaración y afirmar que «oyó» la protesta de Jorancé. Pero a medida que el escándalo diplomático se agrava, la mentira de Philippe se desmorona progresivamente hasta que, en la tienda de campaña donde se celebra la investigación conjunta franco-alemana, todo queda al descubierto. Los cañones de la guerra retumban en la frontera, y el último debate interno de Philippe —entre sus convicciones personales y su instinto nacional— se convierte en el acorde final de la novela.</p>
+<hr>
+<h2 id="analisis-de-la-verdad">Análisis de la verdad</h2>
+<h3 id="verdad-uno-el-autor-del-panfleto-anonimo-la-paz-por-encima-de-todo">Verdad uno: el autor del panfleto anónimo <em>La paz por encima de todo</em></h3>
+<ul>
+<li><strong>Punto de convergencia de las pistas: aproximadamente 30%</strong></li>
+<li>Respuesta: Philippe Morestal — profesor de Historia en París e hijo del anciano Morestal</li>
+</ul>
+<h4 id="pistas-clave">Pistas clave</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Posición en la obra（porcentaje）</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El anciano Morestal saca un panfleto de cubierta morada y dice «el autor se apellida Morestal… algún pariente lejano, supongo»; Philippe se queda inmediatamente «pálido» y pregunta: «¿Estás seguro? ¿Cómo lo sabes?»</td>
+<td>Aprox. 14%</td>
+<td>El tono y la reacción revelan directamente su identidad; el lector atento puede confirmarlo en este punto</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Philippe confiesa a Marthe: «Esos panfletos que escribí de forma anónima… llevo un año con el manuscrito listo pero sin atreverme a dárselo al editor»</td>
+<td>Aprox. 17%</td>
+<td>Confesión directa; la verdad aflora de manera completa en este momento</td>
+</tr>
+<tr>
+<td>3</td>
+<td>El anciano Morestal menciona una carta entregada por error, en la que se lee «Te felicito por el éxito de tu panfleto, querido Morestal» — una carta originalmente dirigida a Philippe en París</td>
+<td>Aprox. 14%</td>
+<td>Prueba material: la carta mal entregada confirma que el autor es precisamente Philippe</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-de-apoyo">Pistas de apoyo</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Posición en la obra（porcentaje）</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El segundo libro de Philippe, <em>El concepto de patria</em>, levanta controversia; el anciano Morestal le escribe criticándolo: «Pareces considerar el patriotismo como un fenómeno civilizatorio transitorio»</td>
+<td>Aprox. 7%</td>
+<td>Establece la trayectoria intelectual de Philippe y sugiere que ya ha roto con la visión del mundo de su padre</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Philippe tiene intención de dimitir con el argumento de que «no tengo derecho a enseñar a los niños lo que creo actualmente»</td>
+<td>Aprox. 18%</td>
+<td>Coherente con la lógica de su escritura anónima; confirma aún más su doble vida</td>
+</tr>
+<tr>
+<td>3</td>
+<td>En la estantería del anciano Morestal hay libros de Philippe con anotaciones a lápiz, densas y airadas, en sus páginas</td>
+<td>Aprox. 9%</td>
+<td>Detalle simbólico: la grieta entre padre e hijo ya ha penetrado hasta las páginas de sus libros</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-falsas">Pistas falsas</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Posición en la obra（porcentaje）</th>
+<th>Dirección del engaño</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El anciano Morestal dice «parece que también se apellida Morestal… algún pariente lejano, este apellido es muy común en la familia»</td>
+<td>Aprox. 14%</td>
+<td>Lleva al lector novel a pensar que se trata de algún pariente desconocido, no del Philippe que tiene delante</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Philippe afirma que «los profesores no tienen que incorporarse a filas en tiempo de guerra… sirven en oficinas gubernamentales»</td>
+<td>Aprox. 82%</td>
+<td>Crea la falsa impresión de que no irá al frente; al final, sin embargo, coge un fusil y se une a los defensores</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="verdad-dos-los-disenadores-de-la-trampa-dourlowski-y-weisslicht">Verdad dos: los diseñadores de la trampa — Dourlowski y Weisslicht</h3>
+<ul>
+<li><strong>Punto de convergencia de las pistas: aproximadamente 43%</strong></li>
+<li>Respuesta: el inspector alemán Weisslicht la planeó; Dourlowski（que se hacía pasar por confidente del servicio de inteligencia francés, cuando en realidad era un espía doble）la ejecutó. Utilizaron al soldado alemán Baufeld como cebo y premeditaron fabricar una escena en la que el anciano Morestal y Jorancé «ayudaban a un desertor» cerca de la frontera, para así poder detener al inspector francés.</li>
+</ul>
+<h4 id="pistas-clave_1">Pistas clave</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Posición en la obra（porcentaje）</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Dourlowski recoge en secreto, de la papelera del salón de Morestal, el papel arrugado que contiene la ruta de escape</td>
+<td>Aprox. 22%</td>
+<td><strong>La pista más importante</strong> — el lector presencia directamente este acto y sabe que el elemento central de la trampa ya está en su sitio</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Marthe menciona que alguien ha visto a Dourlowski en compañía del inspector alemán Weisslicht</td>
+<td>Aprox. 22%</td>
+<td>La doble identidad de Dourlowski queda revelada indirectamente por primera vez</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Jorancé informa a Morestal: «Dourlowski dejó de trabajar para nosotros hace seis meses… probablemente se pasó al otro bando»</td>
+<td>Aprox. 32%</td>
+<td>Confirma oficialmente la traición de Dourlowski</td>
+</tr>
+<tr>
+<td>4</td>
+<td>El anciano Morestal razona: «La huida de Baufeld era una trampa premeditada… Dourlowski tenía ese papel en su poder… nos llevó a Jorancé y a mí a la emboscada»</td>
+<td>Aprox. 43%</td>
+<td>El razonamiento completo del anciano Morestal; el mecanismo de la trampa queda aquí totalmente al descubierto</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-de-apoyo_1">Pistas de apoyo</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Posición en la obra（porcentaje）</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Dourlowski afirma «yo siempre tomo el camino del Desfiladero del Diablo y la fábrica», pero pide a Morestal que dibuje otra ruta</td>
+<td>Aprox. 22%</td>
+<td>Sugiere que ya conoce el camino antiguo; pedir la ruta nueva es para dársela al soldado alemán</td>
+</tr>
+<tr>
+<td>2</td>
+<td>El campesino Saboureux ha visto a Weisslicht y a Dourlowski caminando juntos y escondiéndose en el bosque</td>
+<td>Aprox. 52%</td>
+<td>Certifica la relación de complicidad entre ambos mediante un contacto geográfico comprobado</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Los investigadores alemanes se niegan a reconocer el testimonio de Saboureux; posteriormente, Saboureux también retira su declaración tras la publicación en un periódico alemán</td>
+<td>Aprox. 53%</td>
+<td>Ilustra cómo el conjunto del incidente es distorsionado por las presiones políticas de cada bando</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-falsas_1">Pistas falsas</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Posición en la obra（porcentaje）</th>
+<th>Dirección del engaño</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Dourlowski parece un vendedor ambulante simpático y gracioso que habla de sentimientos patrióticos mientras ayuda al desertor alemán a «pasarse a Francia»</td>
+<td>Aprox. 6% y 22%</td>
+<td>Lleva al lector y a Morestal a pensar que es solo un intermediario charlatán, no el cerebro de la operación</td>
+</tr>
+<tr>
+<td>2</td>
+<td>El anciano Morestal rechaza ayudar a Dourlowski, arruga el papel y lo tira a la papelera — parece que el peligro ha quedado conjurado</td>
+<td>Aprox. 22%</td>
+<td>Hace creer al lector que la amenaza se ha eliminado, cuando en realidad Dourlowski inmediatamente después recupera el papel de la papelera</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="verdad-tres-el-paradero-de-philippe-aquella-noche-no-estaba-en-la-frontera-sino-con-suzanne">Verdad tres: el paradero de Philippe aquella noche — no estaba en la frontera, sino con Suzanne</h3>
+<ul>
+<li><strong>Punto de convergencia de las pistas（perspectiva del lector）：aproximadamente 32%</strong></li>
+<li><strong>Punto de convergencia de las pistas（perspectiva de los personajes）：aproximadamente 73%</strong></li>
+<li>Respuesta: Philippe pasó la noche en casa de Jorancé en Saint-Élophe, en compañía de Suzanne, durante la misma noche en que el anciano Morestal, Jorancé y los demás fueron arrestados, y no regresó hasta el amanecer. Su coartada implica directamente que su declaración inicial es una mentira.</li>
+</ul>
+<h4 id="pistas-clavevisibles-para-el-lector">Pistas clave（visibles para el lector）</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Posición en la obra（porcentaje）</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Ante la estatua de Afrodita en el jardín, Suzanne le confiesa sus sentimientos a Philippe y lo deja que la bese</td>
+<td>Aprox. 32%</td>
+<td>El lector presencia directamente el beso; Philippe se queda después en Saint-Élophe, lejos de la frontera</td>
+</tr>
+<tr>
+<td>2</td>
+<td>A la mañana siguiente la cama de Philippe no ha sido deshecha, lo que demuestra que no volvió a su habitación</td>
+<td>Aprox. 38%</td>
+<td>Evidencia física; el lector ya sabe la razón, pero esta es la señal que hace que Marthe empiece a sospechar</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Suzanne le ruega a Philippe: «En el interrogatorio, no te verás obligado a confesar, ¿verdad?»</td>
+<td>Aprox. 56%</td>
+<td>Confirma de boca de Suzanne que entre ellos sucedió algo que debe mantenerse en secreto</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-de-apoyorastro-de-sospechas-de-los-personajes">Pistas de apoyo（rastro de sospechas de los personajes）</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Posición en la obra（porcentaje）</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Marthe advierte que la reacción de Philippe ante Suzanne en público es «excesivamente agitada»</td>
+<td>Aprox. 36%</td>
+<td>Marthe es la observadora más perspicaz del libro; sus sospechas llegan más tarde que las del lector, pero van en la dirección correcta</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Philippe dice «yo estaba por los alrededores… pero no vi nada», y al hablar «dudó un segundo»</td>
+<td>Aprox. 42%</td>
+<td>Una pequeña grieta en su declaración; Marthe repara en que sus palabras son «más imprecisas» que en su primer testimonio</td>
+</tr>
+<tr>
+<td>3</td>
+<td>El interrogatorio de Marthe — «No dormiste en el molino viejo… entonces ¿dónde estabas?» — avanza como un interrogatorio formal, paso a paso</td>
+<td>Aprox. 66-73%</td>
+<td>Las preguntas de Marthe concentran todas las contradicciones en una única pregunta que no puede eludirse</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-falsas_2">Pistas falsas</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Posición en la obra（porcentaje）</th>
+<th>Dirección del engaño</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Suzanne le miente a Marthe diciendo que «Philippe tomó el camino directo a casa»</td>
+<td>Aprox. 38%</td>
+<td>Intenta apuntalar la mentira de Philippe, pero solo la hace más frágil</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Philippe dice «estaba tan cansado que me dormí al instante y no oí los disparos en absoluto»</td>
+<td>Aprox. 39%</td>
+<td>Suena razonable, pero contradice directamente el hecho de que la cama no fue deshecha</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="verdad-cuatro-en-que-territorio-tuvo-lugar-exactamente-el-arresto">Verdad cuatro: ¿en qué territorio tuvo lugar exactamente el arresto?</h3>
+<ul>
+<li><strong>Punto de convergencia de las pistas: no se resuelve en toda la obra</strong></li>
+<li>Respuesta: el autor mantiene deliberadamente la ambigüedad, pero el lector tiene sobradas razones para creer que <strong>la memoria del anciano Morestal es correcta</strong> — el arresto se produjo en territorio francés. Sin embargo, esta verdad queda sepultada por la política, las contradicciones en los testimonios y las presiones de ambos bandos, convirtiéndose finalmente en un hecho político determinado por «quién convence a quién», no por la realidad objetiva.</li>
+</ul>
+<h4 id="pistas-clave_2">Pistas clave</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Posición en la obra（porcentaje）</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El anciano Morestal dice: «Llevo cuarenta años viviendo en estas tierras; conozco cada mojón y cada recodo; es imposible que me haya equivocado»</td>
+<td>Aprox. 34%</td>
+<td>Su conocimiento local es la prueba subjetiva más poderosa</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Los alemanes clavan estacas de demarcación durante la investigación y afirman que el arresto tuvo lugar veinte yardas al este de la línea fronteriza — pero los testimonios del anciano Morestal y de Jorancé lo niegan de forma unánime</td>
+<td>Aprox. 53%</td>
+<td>Cada bando defiende su versión; la verdad se convierte en moneda de cambio política</td>
+</tr>
+<tr>
+<td>3</td>
+<td>El anciano Morestal regresa al lugar el viernes por la mañana y se pregunta a sí mismo: «¿Y si me desvié?… ¿Y si giré demasiado a la derecha?…» — pero de inmediato descarta esa idea</td>
+<td>Aprox. 55%</td>
+<td>Ese instante de autoduda es uno de los momentos más honestos de toda la novela; Philippe aprovecha precisamente ese instante para cuestionar la certeza de su padre</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-de-apoyo_2">Pistas de apoyo</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Posición en la obra（porcentaje）</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Saboureux testifica inicialmente que vio a Weisslicht y a Dourlowski conspirando en el bosque, pero más tarde retira su declaración por miedo a la guerra</td>
+<td>Aprox. 52-54%</td>
+<td>Muestra cómo la fuerza política puede hacer inoperante la propia evidencia</td>
+</tr>
+<tr>
+<td>2</td>
+<td>El soldado alemán Baufeld le dice a Philippe en su lecho de muerte que fue una trampa tendida contra él y menciona la ruta de huida</td>
+<td>Aprox. 40%</td>
+<td>Apoya indirectamente la posición francesa, pero como Baufeld es un desertor, los alemanes se niegan a aceptar su testimonio</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pistas-falsas_3">Pistas falsas</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenido de la pista</th>
+<th>Posición en la obra（porcentaje）</th>
+<th>Dirección del engaño</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El subsecretario de Estado Lecorbeiller dice «casi desearía que ustedes estuvieran equivocados» — insinuando que «si Francia se equivocó un poco en la línea fronteriza, sería más fácil resolver el asunto»</td>
+<td>Aprox. 67%</td>
+<td>Lleva al lector a dudar momentáneamente: ¿tal vez el anciano Morestal se equivocó de verdad?</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="reconstruccion-del-camino-deductivo">Reconstrucción del camino deductivo</h2>
+<p><strong>La posición privilegiada del lector y el estado de ceguera de los personajes</strong></p>
+<p>El diseño narrativo más asombroso de <em>La Frontera</em> es el siguiente: el lector posee casi desde el principio todas las verdades importantes de la novela, pero solo puede observar impotente cómo los personajes avanzan paso a paso hacia su propia destrucción. Esta «tragedia desde la perspectiva de Dios» forma un contraste llamativo con el «triunfo desde la perspectiva del detective» que caracteriza a la novela de misterio tradicional.</p>
+<p><strong>Camino uno: comprender la trampa（Whodunit）</strong></p>
+<p>En torno al 22%（capítulo cinco, «La nota»）el lector presencia en primera persona cómo Dourlowski roba el papel de la papelera. Esta es una de las escenas más importantes de toda la novela — el lector «sabe» que está a punto de tenderse una trampa, mientras que el anciano Morestal no tiene ni la menor sospecha. Cuando se produce el arresto en la madrugada del lunes, el lector ya está completamente preparado para entender cómo fue utilizado ese papel arrugado. El razonamiento del anciano Morestal（aprox. 43%）solo «completa» el rompecabezas que el lector ya tiene resuelto en un setenta u ochenta por ciento.</p>
+<p><strong>Camino dos: rastrear la mentira de Philippe（Whydunit）</strong></p>
+<p>En torno al 32%, el lector presencia directamente el abrazo y el beso entre Philippe y Suzanne, y lo sigue mientras regresa a pie al molino viejo al amanecer y encuentra a Baufeld agonizante. A partir de entonces Philippe miente diciendo que se levantó temprano y salió; el lector descifra de inmediato esa mentira y empieza a observar ansiosamente cómo Philippe se va hundiendo cada vez más profundo en el lodazal de un testimonio falso.</p>
+<p><strong>Camino tres: la transformación de la intención tras el falso testimonio de Philippe</strong></p>
+<p>Pasado el 57%, el motivo de la mentira de Philippe experimenta un cambio: al principio mintió para proteger el honor de Suzanne; pero a medida que la crisis diplomática se agrava, comienza a «retirar» activamente su testimonio, intentando desmantelar la declaración de su padre para dar al gobierno francés una salida airosa. Se trata de un diseño brillante en el que «la mentira es reorganizada al servicio de un nuevo propósito» — el lector debe mantenerse al ritmo de la acumulación de motivos y comprender que Philippe, en este punto, no está usando una mentira, sino que está usando «la revocación de la mentira» para intentar impedir la guerra.</p>
+<p><strong>Camino cuatro: la investigación de Marthe</strong></p>
+<p>Entre todos los personajes del libro, Marthe es quien más se acerca al papel de detective. Sin recurrir a ningún recurso externo, actúa únicamente con una observación precisa y una lógica implacable: «Dices que dormiste, pero la cama estaba hecha. Dices que no oíste los disparos, pero admites que estabas cerca. Dices que querías hablar con tu padre, pero lo has ido posponiendo.» Apila una contradicción sobre otra hasta que, en la tienda de campaña, la obliga a salir: «¿Entonces dónde estabas?»</p>
+<hr>
+<h2 id="notas-adicionales">Notas adicionales</h2>
+<p><strong>La obra de Leblanc menos parecida a Leblanc</strong></p>
+<p><em>La Frontera</em> se publicó en 1912, en vísperas del oscurecimiento de los cielos de Europa. La serie Arsène Lupin de Leblanc ya gozaba entonces de un gran éxito, pero el autor eligió en esta obra abandonar completamente al elegante héroe ladrón y dar vida en cambio a un hombre corriente desgarrado entre sus convicciones, el amor, las obligaciones familiares y el destino de la nación. Es la novela de mayor ambición literaria de Leblanc y también una de sus obras menos estudiadas.</p>
+<p><strong>La «mentira» como motor narrativo</strong></p>
+<p>En este libro, la mentira no es un acto criminal sino la solución a un dilema ético — pero cada mentira crea una encrucijada más profunda que el problema que pretendía resolver. Philippe miente para proteger a Suzanne; la mentira agrava la crisis diplomática; retirar la mentira implica sacrificar a Suzanne. La novela muestra cómo la mentira crece como una bola de nieve hasta que nadie puede salir indemne.</p>
+<table>
+<thead>
+<tr>
+<th>Mentira</th>
+<th>Propósito</th>
+<th>Precio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>«Volví directamente a casa»</td>
+<td>Ocultar que estuvo con Suzanne</td>
+<td>Crea la contradicción de la coartada</td>
+</tr>
+<tr>
+<td>«Oí la protesta de Jorancé»</td>
+<td>Proteger a su padre, estabilizar la situación diplomática</td>
+<td>Lo convierte en testigo diplomático; la responsabilidad se multiplica</td>
+</tr>
+<tr>
+<td>«No sé nada, yo no estaba»</td>
+<td>Intentar desmantelar el testimonio de su padre para impedir la guerra</td>
+<td>Pone al descubierto las sospechas de su esposa y detona la crisis familiar</td>
+</tr>
+<tr>
+<td>«Fue una mujer…»（insinuado）</td>
+<td>Ofrecer otra explicación sin dar nombres</td>
+<td>Tanto Marthe como Jorancé lo descifran; la situación se derrumba</td>
+</tr>
+</tbody>
+</table>
+<p><strong>La politización de las pistas: cuando la evidencia se convierte en moneda de cambio</strong></p>
+<p>Otro de los grandes intereses deductivos de <em>La Frontera</em> reside en que todas las pruebas físicas son «absorbidas» por los propósitos políticos. El papel que Dourlowski rescató de la papelera podría ser la prueba irrefutable de la trampa, pero también es la demostración de que el anciano Morestal «ayudó a un desertor». El testimonio ocular de Saboureux podría certificar la existencia de la trampa, pero él lo retira por miedo a la guerra. El lugar exacto del arresto es el «hecho objetivo» que ambos países reclaman como suyo, pero ninguna medición neutral puede resolver la disputa. Todo ello constituye un recordatorio más cruel que el de cualquier caso de misterio ordinario: la evidencia solo tiene significado cuando existe un poder dispuesto a creerla.</p>
+<p><strong>Comparación con otras obras de Leblanc</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Serie Arsène Lupin</th>
+<th><em>La Frontera</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Carácter del protagonista</td>
+<td>Sereno, ingenioso, imperturbable</td>
+<td>Philippe: sincero, contradictorio, frecuentemente fuera de control</td>
+</tr>
+<tr>
+<td>Tipo de enigma</td>
+<td>Robo, misterio de identidad, trampas mecánicas</td>
+<td>Trampa política, mentira diplomática, dilema de conciencia</td>
+</tr>
+<tr>
+<td>Tensión narrativa</td>
+<td>El lector persigue el misterio junto al detective</td>
+<td>El lector va por delante de los personajes y es testigo de la tragedia</td>
+</tr>
+<tr>
+<td>Tono del desenlace</td>
+<td>Triunfo heroico（o huida con una sonrisa）</td>
+<td>Compromiso trágico — una guerra que podría haberse evitado estalla</td>
+</tr>
+<tr>
+<td>Naturaleza de la «verdad»</td>
+<td>Existencia objetiva que aguarda ser revelada</td>
+<td>Construcción subjetiva moldeada por las fuerzas políticas</td>
+</tr>
+</tbody>
+</table>
+<p><strong>El último «I'm coming, father»（«Voy contigo, padre»）de Philippe</strong></p>
+<p>La última escena de la novela muestra a Philippe abandonando su plan de huir a Suiza, cogiendo un fusil y arrodillándose junto a su padre, apuntando contra los soldados alemanes que cruzan la frontera. Dice «Voy contigo, padre» — es la frase más importante de toda la novela y también la más compleja. No ha cambiado de convicciones; sigue creyendo que esta guerra es estúpida y cruel. Pero se queda, no porque se haya equivocado, sino porque «hay cosas que ni tú mismo puedes rechazar».</p>
+<p>Leblanc hace que Philippe, con la última línea de la obra, mate a un hombre — «un hombre corpulento con uniforme, que cae lentamente, como si fuera a dormirse». No es el gesto de un héroe, sino las lágrimas de un hombre derrotado. La verdad más profunda es que esta guerra hizo perder a todo el mundo.</p>
+    <a href="../index.html" class="back-link">← Volver al inicio</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Sala de Disección Detectivesca</p>
+    <p>Cinco autores · ochenta y ocho obras · 135 años de evolución de la dificultad en la narrativa policíaca.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
