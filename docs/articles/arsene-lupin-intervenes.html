@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>亞森羅蘋現身（Arsène Lupin Intervenes） — 推理解剖室</title>
+<meta name="description" content="《亞森羅蘋現身》是盧布朗晚期的短篇集，以「偵探公司」敘事框架包裝羅蘋的真實身分。全書設計了一個精妙的後設謎題：私家偵探「吉姆·巴奈特」究竟是什麼人？他在前言中就被半隱半現地暗示——其思路、手法、對警察的戲謔態度，無不指向那個令全巴黎警察局頭疼的名字：亞森羅蘋。 巴奈特與警探貝秋（Inspector Béchoux）組成">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/arsene-lupin-intervenes.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/arsene-lupin-intervenes.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/arsene-lupin-intervenes.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/arsene-lupin-intervenes.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/arsene-lupin-intervenes.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/arsene-lupin-intervenes.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/arsene-lupin-intervenes.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/arsene-lupin-intervenes.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif TC', serif;
+  --font-sans: 'Noto Sans TC', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">推理解剖室</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">首頁</a>
+        <a href="../index.html#latest">最新分析</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="語言" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 繁體中文</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item active" data-lang="zh-TW" href="/Detective-Analysis/articles/arsene-lupin-intervenes.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/arsene-lupin-intervenes.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/arsene-lupin-intervenes.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/arsene-lupin-intervenes.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/arsene-lupin-intervenes.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/arsene-lupin-intervenes.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/arsene-lupin-intervenes.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/arsene-lupin-intervenes.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">莫里斯·盧布朗 · </div>
+    <h1>亞森羅蘋現身（Arsène Lupin Intervenes）</h1>
+    <div class="subtitle">莫里斯·盧布朗（Maurice Leblanc） · 短篇集（8篇故事 + 序言與後記）</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">推理難度</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">迷霧等級</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="arsene-lupin-intervenes">亞森羅蘋現身（Arsène Lupin Intervenes）— 推理分析</h1>
+<h2 id="_1">基本資訊</h2>
+<ul>
+<li>作者：莫里斯·盧布朗（Maurice Leblanc）</li>
+<li>出版年：1929年</li>
+<li>類型：短篇集（8篇故事 + 序言與後記）</li>
+<li>偵探角色：吉姆·巴奈特（Jim Barnett）——即亞森羅蘋本人</li>
+<li>核心謎團類型：whodunit / howdunit / 假相破解（alibi trick）</li>
+</ul>
+<hr>
+<h2 id="_2">推理難度總評（全集）</h2>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星等</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難度（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>平均收斂點約 78% — 每篇故事的關鍵機關均深埋至後段，讀者難以在揭曉前自行推導</td>
+</tr>
+<tr>
+<td>迷霧等級（Fog Rating）</td>
+<td>⭐⭐⭐⭐</td>
+<td>盧布朗慣用「可信假嫌犯」策略：每案皆有表面合理的嫌疑方向，且物證往往支持誤導方向</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_3">故事大綱</h2>
+<p>《亞森羅蘋現身》是盧布朗晚期的短篇集，以「偵探公司」敘事框架包裝羅蘋的真實身分。全書設計了一個精妙的後設謎題：私家偵探「吉姆·巴奈特」究竟是什麼人？他在前言中就被半隱半現地暗示——其思路、手法、對警察的戲謔態度，無不指向那個令全巴黎警察局頭疼的名字：亞森羅蘋。</p>
+<p>巴奈特與警探貝秋（Inspector Béchoux）組成奇特搭檔：貝秋帶來案件，巴奈特解開謎團，而每次結案後巴奈特總以某種迂迴手法為自己「索取報酬」——有時是珍珠項鍊，有時是皇室情書，有時是古典家具，有時是一名迷人的前妻。</p>
+<p>全書共八個故事，本分析選取四篇推理設計最為精密者深入剖析：</p>
+<hr>
+<h2 id="_4">選篇分析</h2>
+<h3 id="drops-that-trickle-away">第一篇：滴水流逝（"Drops That Trickle Away"，第二章）</h3>
+<h4 id="_5">基本資訊</h4>
+<ul>
+<li>核心謎團類型：howdunit + 隱藏手法</li>
+<li>受害者：蕾妮男爵夫人（被丈夫報復）</li>
+</ul>
+<h4 id="_6">推理難度總評</h4>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星等</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難度（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>平均收斂點約 72% — 可以早期懷疑丈夫（25%），但機關本身（廢水管藏珠）幾乎無從推導</td>
+</tr>
+<tr>
+<td>迷霧等級（Fog Rating）</td>
+<td>⭐⭐⭐</td>
+<td>水管工人的出逃是最大紅鯡魚，但線索也算公平埋設</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_7">真相拆解</h4>
+<h5 id="howdunit">真相一：珍珠在哪裡？（howdunit）</h5>
+<ul>
+<li><strong>線索收斂點：約 70%</strong></li>
+<li>答案：男爵事先請水管工人改造浴室廢水管，製造一個「口袋」，並鑽孔可插入橡皮塞。他趁夜取出真珍珠放入管中，以假珠替換。臨死前要求妻子從水龍頭倒水，讓珍珠順水流走——這是他精心設計的最終懲罰。</li>
+</ul>
+<h5 id="_8">關鍵線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>水管工人「修理」男爵浴室的龍頭，隨後立刻出逃布魯塞爾</td>
+<td>約 15%</td>
+<td>表面是紅鯡魚，實則是機關核心：水管工受命改造廢水管</td>
+</tr>
+<tr>
+<td>2</td>
+<td>男爵雖病重但未完全臥床；他熟知保險箱密碼（多年觀察）</td>
+<td>約 20%</td>
+<td>說明丈夫具備實施替換的能力</td>
+</tr>
+<tr>
+<td>3</td>
+<td>項鍊複製品是男爵四年前命人製作的</td>
+<td>約 35%</td>
+<td>說明計畫蓄謀已久，並非臨時起意</td>
+</tr>
+<tr>
+<td>4</td>
+<td>臨終時男爵要求「從水龍頭取水」，而非用水壺</td>
+<td>約 80%</td>
+<td><strong>關鍵線索</strong>：非理性的堅持暗示水龍頭開啟有特殊後果</td>
+</tr>
+<tr>
+<td>5</td>
+<td>男爵喃喃說「你聽到了嗎……它們在滴落……消逝……」</td>
+<td>約 85%</td>
+<td>收斂點——「滴落」明確指向珍珠順水管流走，至此機關完全浮現</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_9">輔助線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>展示櫃傾倒、陶瓷碎裂但沒有強行撬開保險箱的痕跡</td>
+<td>約 18%</td>
+<td>說明入侵者知道密碼，縮小至「家人或熟識者」範圍</td>
+</tr>
+<tr>
+<td>2</td>
+<td>男爵財力雄厚，排除財務動機的偷竊</td>
+<td>約 30%</td>
+<td>暗示報復才是目的</td>
+</tr>
+<tr>
+<td>3</td>
+<td>男爵夫人多年來行為不檢，丈夫早有怨恨</td>
+<td>約 22%</td>
+<td>提供動機背景，讓「丈夫為報復而計謀」的假說成立</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_10">假線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>水管工人逃往安特衛普、揮霍金錢</td>
+<td>約 18%</td>
+<td>讓讀者相信工人才是盜賊，甚至共謀者</td>
+</tr>
+<tr>
+<td>2</td>
+<td>陳舊工具（錐子）和蠟燭殘留物</td>
+<td>約 16%</td>
+<td>像是外來竊賊留下的，實則是男爵借用後遺留</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_11">推理路徑重建</h5>
+<p>讀到約 15%（水管工修洗臉台→出逃），細心讀者應察覺水管維修與盜竊案之間有意外的時間關聯。讀到 25%（巴奈特提示丈夫可能是嫌犯），聰明讀者可開始假設男爵是幕後黑手。然而「珍珠藏在哪裡」的問題直到 80% 男爵臨終的「水龍頭」堅持才真正給出線索；85% 的「滴落」呢喃是收斂點。此謎的高難度在於：機關的物理設計（廢水管改造）需要讀者事先對管道結構有一定的想像力，且盧布朗幾乎不給物理細節的伏筆。</p>
+<h5 id="_12">補充說明</h5>
+<p>本篇最精彩之處在於「完美的無聲復仇」：男爵的計謀是讓妻子親手打開水龍頭，讓珍珠流走，同時讓自己帶著這份知識死去。這種「讓受害者親手執行懲罰」的設計，在道德層面極具震懾力。巴奈特/羅蘋最終挾持這個秘密，以項鍊換取遺囑——是對男爵夫人的二次勒索，也是羅蘋一貫「以正義之名行竊盜之事」的完美示範。</p>
+<hr>
+<h3 id="the-royal-love-letter">第二篇：皇室情書（"The Royal Love Letter"，第三章）</h3>
+<h4 id="_13">基本資訊</h4>
+<ul>
+<li>核心謎團類型：whodunit + 假不在場證明（fake alibi）</li>
+<li>被害者：書商沃希勒（Vaucherel），遭人刺殺</li>
+</ul>
+<h4 id="_14">推理難度總評</h4>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星等</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難度（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>平均收斂點約 80% — 勒伯克的繪畫窗口詭計近乎無從猜測</td>
+</tr>
+<tr>
+<td>迷霧等級（Fog Rating）</td>
+<td>⭐⭐⭐⭐</td>
+<td>多位可疑人物（高杜三兄弟 vs 勒伯克），物證皆指向無辜者，敘述刻意製造「惡相者無辜，善相者有罪」的假象</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_15">真相拆解</h4>
+<h5 id="whodunit">真相一：殺人者是誰？（whodunit）</h5>
+<ul>
+<li><strong>線索收斂點：約 82%</strong></li>
+<li>答案：退休官員勒伯克（Leboc）殺死了書商沃希勒。他事先雇人繪製一幅「自己在窗邊抽菸」的全身人像油畫，安裝於窗框內，製造完美的不在場證明，讓五名目擊者誤以為他整個下午都在家中。</li>
+</ul>
+<h5 id="_16">關鍵線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>死者沃希勒的房間掛著一幅全身肖像畫（業餘畫風但神似本人）</td>
+<td>約 38%</td>
+<td><strong>最重要的伏筆</strong>：同一畫風的勒伯克肖像必然存在，暗示同一畫家也畫過勒伯克</td>
+</tr>
+<tr>
+<td>2</td>
+<td>巴奈特觀察到勒伯克悄悄用靴子踩住地板上的名片，離開後偷偷收入口袋</td>
+<td>約 45%</td>
+<td>說明勒伯克刻意隱瞞他與伊莉莎白·洛文戴爾的關聯——他知道那張名片的存在對自己不利</td>
+</tr>
+<tr>
+<td>3</td>
+<td>靴底四個鑽釘排列成菱形，恰好對應名片上的四個孔洞</td>
+<td>約 50%</td>
+<td>巴奈特由此推導出名片在口袋中：勒伯克為掩蓋聯繫而留下了更大的破綻</td>
+</tr>
+<tr>
+<td>4</td>
+<td>勒伯克將情書藏書放入高杜家壁爐後（被巴奈特親眼目睹）</td>
+<td>約 70%</td>
+<td>說明勒伯克才是真兇，且他蓄意栽贓高杜兄弟</td>
+</tr>
+<tr>
+<td>5</td>
+<td>巴奈特提前進入勒伯克家，在窗口重新掛上收起的畫布</td>
+<td>約 85%</td>
+<td>收斂點——窗口繪畫的詭計被迫現形，全部線索於此匯聚</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_17">輔助線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>目擊者所見的「勒伯克」在窗口從未移動、從未回應呼喊</td>
+<td>約 65%</td>
+<td>事後回想，「不動的人」本應引起懷疑</td>
+</tr>
+<tr>
+<td>2</td>
+<td>勒伯克從容不迫、毫不激動的表現</td>
+<td>全篇</td>
+<td>真正有罪且準備周全的人，反而最容易表現得「理所當然」</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_18">假線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>高杜三兄弟的惡棍外形與可疑行蹤</td>
+<td>約 30%</td>
+<td>外貌偏見引導讀者將他們視為天然嫌疑人</td>
+</tr>
+<tr>
+<td>2</td>
+<td>受害者臨死呼喊「勒伯克！勒伯克！」</td>
+<td>約 40%</td>
+<td>表面像是控訴，卻被勒伯克陣營解讀為受害者向鄰居呼救</td>
+</tr>
+<tr>
+<td>3</td>
+<td>伊莉莎白·洛文戴爾的情書故事</td>
+<td>約 55%</td>
+<td>檢察官（福梅里）認為找到了殺人動機（高杜竊書），但這是勒伯克佈下的煙幕</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_19">推理路徑重建</h5>
+<p>本案的正確推理路徑極為艱難。讀到 38%（沃希勒肖像畫的出現），讀者若對「肖像畫」格外敏感，可能留意到這幅具象性的業餘作品；但此時尚無法聯想到同一畫家為勒伯克畫了窗口畫布。45-50%（名片與靴底鑽釘）是巴奈特唯一公開展示的推理過程，仔細的讀者可由此推導勒伯克刻意隱瞞某事，但仍無法確認犯案。直到85%的真相揭示，整個謎底方才完整呈現。</p>
+<p>關鍵難題在於：「一個人能同時出現在兩處」在現實中是不可能的——正因如此，讀者的理性會自動排除「勒伯克是真兇」的假設，落入作者的陷阱。</p>
+<h5 id="_20">補充說明</h5>
+<p>「繪畫不在場證明」在偵探小說史上是極罕見的技巧。本篇可能是最早使用「靜態圖像偽造人物動態」的正式謀殺謎題之一（1929年）。值得一提的是，這個詭計的前提是「目擊者的距離」——遠距觀看者無法分辨真人與逼真油畫之差異，這在視覺上是完全成立的欺騙。</p>
+<p>巴奈特在案末悄悄竊走了皇室情書，三個月後以十萬法郎賣回給洛文戴爾家族——再加順手帶走一整車食品雜貨。這種「以偵探為名、以私利為實」的結局，是盧布朗為羅蘋量身定制的道德幽默。</p>
+<hr>
+<h3 id="the-man-with-the-gold-teeth">第三篇：黃金牙的男人（"The Man with the Gold Teeth"，第五章）</h3>
+<h4 id="_21">基本資訊</h4>
+<ul>
+<li>核心謎團類型：whodunit + 嫁禍手法（身分混淆）</li>
+<li>被害者：村莊教堂的宗教珍寶（九件金銀聖器）</li>
+</ul>
+<h4 id="_22">推理難度總評</h4>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星等</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難度（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>平均收斂點約 80% — 真兇（男爵）是「帶來幫助的鄰居」，反常識角色；金箔紙來源是唯一可循線索</td>
+</tr>
+<tr>
+<td>迷霧等級（Fog Rating）</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>系統性的嫁禍設計：從腳印、穿著到黃金牙，全套證據皆為指向無辜商人而精心佈置</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_23">真相拆解</h4>
+<h5 id="whodunit_1">真相一：誰偷了教堂珍寶？（whodunit）</h5>
+<ul>
+<li><strong>線索收斂點：約 80%</strong></li>
+<li>答案：德·格哈維爾男爵（Baron de Gravières），教堂司鐸的鄰居兼「好友」，是真正的竊賊。他多年觀察旅行商人維尼松的年度朝聖規律，刻意模仿其穿著（灰帽、棕色大衣），並以金箔紙貼在牙齒上，製造「黃金牙在左側」的鏡像混淆，將自己的犯罪記憶嫁禍於維尼松。</li>
+</ul>
+<h5 id="howdunit_1">真相二：為何神父「看錯」了黃金牙的方位？（howdunit）</h5>
+<ul>
+<li><strong>線索收斂點：約 75%</strong></li>
+<li>答案：神父半夜驚醒後，因睡眠慣性，在黑暗中其實面向壁爐（背對窗口）。他打開手電筒照到的不是竊賊本人，而是竊賊在衣鏡中的倒影——鏡像使左右顛倒，所以「右側的黃金牙」看起來在「左側」。</li>
+</ul>
+<h5 id="_24">關鍵線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>沃希勒書房中的全身肖像畫（業餘風格）與教堂竊案中的相似情況類比</td>
+<td>—</td>
+<td>本案另一關鍵：豆腐渣油畫連結了兩個地點</td>
+</tr>
+<tr>
+<td>2</td>
+<td>神父臥室的鏡子位置（衣鏡正對床鋪方向）</td>
+<td>約 55%</td>
+<td>巴奈特指出神父在混亂中背對窗口、對著壁爐，手電筒光線打在鏡子上</td>
+</tr>
+<tr>
+<td>3</td>
+<td>巴奈特拿起金箔紙放在自己牙齒上，復現「黃金牙」效果</td>
+<td>約 78%</td>
+<td>直接揭示詭計：金箔紙可輕易模擬金牙外觀</td>
+</tr>
+<tr>
+<td>4</td>
+<td>村中某商店曾售出整張金箔紙，買主是男爵</td>
+<td>約 80%</td>
+<td><strong>收斂點</strong>：唯一將真兇與作案工具直接連結的客觀線索</td>
+</tr>
+<tr>
+<td>5</td>
+<td>男爵的房屋完整俯瞰教堂與神父住所，且男爵了解神父所有防盜習慣</td>
+<td>約 35%</td>
+<td>早期出現，但讀者在發現其「好友」身分後容易忽略此點的犯罪涵義</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_25">輔助線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>維尼松每年定期秘密來訪，行跡神秘，拒絕說明原因</td>
+<td>約 20%</td>
+<td>讓他成為天然嫌疑人（行為可疑本身就是誘餌）</td>
+</tr>
+<tr>
+<td>2</td>
+<td>維尼松的鞋印與現場腳印吻合</td>
+<td>約 30%</td>
+<td>男爵事先觀察並複製了維尼松的鞋型或直接使用其鞋子</td>
+</tr>
+<tr>
+<td>3</td>
+<td>男爵最近財務困難，已將值錢古董家具存放車庫</td>
+<td>約 70%</td>
+<td>提供了犯罪動機</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_26">假線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>維尼松每年在固定日期神秘造訪（真正原因是祭拜亡故戀人）</td>
+<td>全篇</td>
+<td>讓所有人相信他是準備多年的教堂竊賊</td>
+</tr>
+<tr>
+<td>2</td>
+<td>現場找到符合維尼松特徵的腳印、穿著描述</td>
+<td>約 25-30%</td>
+<td>系統性物證全部指向無辜者</td>
+</tr>
+<tr>
+<td>3</td>
+<td>神父明確指出黃金牙在左側，而維尼松的牙在右側</td>
+<td>約 55%</td>
+<td>本是揭穿嫁禍的關鍵，卻被貝秋「非得讓人認罪」的急切心態所忽視</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_27">推理路徑重建</h5>
+<p>讀到 35%（男爵的房屋俯瞰教堂），讀者若記住「嫌疑人是最不可疑的人」這個推理原則，理論上可開始考慮男爵；但這個想法幾乎不可能在此時形成，因為男爵正是「提供幫助的人」、「把警探帶到現場的人」。</p>
+<p>55-60%（黃金牙位置矛盾）是本案最重要的謎點，也是巴奈特最終破案的核心。仔細的讀者可在此疑惑「若維尼松不是竊賊，真兇是誰」，並由此倒推男爵的可能性。但「金箔紙詭計」和「鏡像錯覺」這兩個謎底，幾乎需要到 75-80% 才能確認。</p>
+<h5 id="_28">補充說明</h5>
+<p>本篇的雙層詭計（嫁禍身分 + 鏡像感知錯誤）在技術上相當罕見。特別是「鏡子左右顛倒」的解謎，利用了神父半夢半醒的感知混亂，是一種巧妙的「認知科學謎題」，在1920年代的偵探文學中極為前衛。</p>
+<p>維尼松的愛情故事（年年秘密祭拜亡故戀人「安潔麗克」）是全書最動人的側寫——無辜者之所以顯得可疑，正是因為他最深的秘密是最純粹的情感。這種對「善行被誤解為惡意」的道德哀愁，讓本篇超越了一般謎題的框架。</p>
+<hr>
+<h3 id="a-game-of-baccarat">第四篇：百家樂遊戲（"A Game of Baccarat"，第四章）</h3>
+<h4 id="_29">基本資訊</h4>
+<ul>
+<li>核心謎團類型：whodunit + 動機重建</li>
+<li>被害者：賭徒保羅·埃斯坦（Paul Erstein），遭人以指節銅器擊打致死</li>
+</ul>
+<h4 id="_30">推理難度總評</h4>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星等</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難度（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>平均收斂點約 75% — 主嫌（杜揚 vs 福傑萊）早期即可鎖定，但最終凶手杜維列有足夠的遮蔽</td>
+</tr>
+<tr>
+<td>迷霧等級（Fog Rating）</td>
+<td>⭐⭐⭐⭐</td>
+<td>物證全部指向嫌疑最弱的人（福傑萊），三位「共謀」的緘默製造了集體掩護</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_31">真相拆解</h4>
+<h5 id="whodunit_2">真相一：誰殺死了埃斯坦？（whodunit）</h5>
+<ul>
+<li><strong>線索收斂點：約 75%</strong></li>
+<li>答案：馬克西姆·杜維列（Maxime Tuillier），四名玩家之一，在百家樂失去所有積蓄後跟蹤埃斯坦進入圓形室，以指節銅器將其擊斃，隨後偽造死者手錶時間，竊取贏得的鈔票，並謊稱是「埃斯坦主動退還輸家損失」。</li>
+</ul>
+<h5 id="whydunit">真相二：三名製造廠主是否構成共謀？（whydunit）</h5>
+<ul>
+<li><strong>線索收斂點：約 85%</strong></li>
+<li>答案：三人並不知道謀殺的發生，但他們高度懷疑杜維列使用了暴力手段，且在接受退還的鈔票後刻意維持緘默，以保護自己的名譽與財務利益。</li>
+</ul>
+<h5 id="_32">關鍵線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>埃斯坦贏得大額賭注後，突然「慷慨退還」——這在職業賭徒中極不尋常</td>
+<td>約 30%</td>
+<td>所謂「退還」根本是謊言，是杜維列殺人後偽造的情節</td>
+</tr>
+<tr>
+<td>2</td>
+<td>杜維列的財務處於破產邊緣，月底無法償還債務</td>
+<td>約 55%</td>
+<td>確認殺人動機：失去的不只是賭注，而是整個財務崩潰的壓力</td>
+</tr>
+<tr>
+<td>3</td>
+<td>謀殺武器（指節銅器）埋在緊鄰凶案陽台的花盆中——但那是福傑萊太太的陽台</td>
+<td>約 35%</td>
+<td>最大的誤導物證：竟出現在離案發地最近的相鄰建築</td>
+</tr>
+<tr>
+<td>4</td>
+<td>三位製造廠主在驅車回家的路上一言不發（車伕作證）</td>
+<td>約 60%</td>
+<td>說明他們心知肚明，但不敢開口的心理已被植入</td>
+</tr>
+<tr>
+<td>5</td>
+<td>百家樂重建：貝秋繼續贏牌（未如原版「失去」），杜維列的臉色出賣他</td>
+<td>約 75%</td>
+<td>收斂點——場景重建迫使杜維列在心理上重演犯罪，進而崩潰認罪</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_33">輔助線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>死者手錶指針被人為撥動（顯示的時間是「四時五十五分」，但其實死於更早）</td>
+<td>約 28%</td>
+<td>說明殺人後有人刻意製造時間差以建立「出門後才死」的假象</td>
+</tr>
+<tr>
+<td>2</td>
+<td>圓形室通向俱樂部陽台，可跳越至鄰棟（福傑萊家）陽台</td>
+<td>約 32%</td>
+<td>解釋武器的去向——作案者從鄰棟陽台把凶器藏入花盆</td>
+</tr>
+<tr>
+<td>3</td>
+<td>福傑萊太太曾與埃斯坦有書信往來，信中提及丈夫「嫉妒心強，可能失控」</td>
+<td>約 40%</td>
+<td>加強對福傑萊的誤導，卻是無辜者的自白式描述</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_34">假線索</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>凶器埋在福傑萊家的花盆，且福傑萊深夜不在場</td>
+<td>約 35-40%</td>
+<td>讓警方（包括貝秋）堅信福傑萊是兇手</td>
+</tr>
+<tr>
+<td>2</td>
+<td>福傑萊太太的情書中「丈夫非常嫉妒，可能採取極端行動」</td>
+<td>約 40%</td>
+<td>完美地補完了「妒夫殺情敵」的動機敘事</td>
+</tr>
+<tr>
+<td>3</td>
+<td>福傑萊自己說「我是殺人兇手」（初到現場時）</td>
+<td>約 25%</td>
+<td>誤以為妻子被殺，驚慌失措的自責被誤解為認罪</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_35">推理路徑重建</h5>
+<p>讀到 30-35%（凶器在福傑萊家陽台、福傑萊深夜外出、妻子的情書），讀者幾乎不可能不鎖定福傑萊為主嫌——因為物證太過完整。</p>
+<p>若讀者對「太過完整的物證」產生懷疑，可在 30% 注意到「埃斯坦突然退還賭注」的異常，並在 60% 看出「三名廠主的集體沉默」是掩護共謀者的跡象。但要鎖定杜維列（而非三人中任一），需要到 75% 的場景重建才能確認。</p>
+<p>本篇的推理挑戰在於：讀者必須同時「排除物證過強的主嫌」並「在五名玩家中定位真兇」，這是雙重排除的高難度推理。</p>
+<h5 id="_36">補充說明</h5>
+<p>「百家樂重建」是本篇最精彩的戲劇手法：巴奈特偽裝成杜維列重演謀殺前的心理狀態，利用舞台的視覺力量讓真兇自行崩潰認罪。這比傳統的「指控→辯解→物證」模式更具舞台感，也是盧布朗「從不正面攻擊嫌疑人，而是透過場景重現讓其心理瓦解」的獨特審問哲學。</p>
+<p>值得注意的是，三名廠主的「道德共謀」並未受到法律制裁，卻受到巴奈特的口頭審判。盧布朗藉此討論了一個更深的道德問題：沉默的縱容是否構成犯罪？</p>
+<hr>
+<h2 id="_37">全集推理路徑重建</h2>
+<p>《亞森羅蘋現身》的核心「謎中謎」是貫穿全書的身分謎題：吉姆·巴奈特到底是誰？</p>
+<p>前言第一頁就暗示「他的手法令人想起那個讓巴黎警察頭疼的人」，末尾明確指出「那就是亞森羅蘋！」——但這個揭示在序言就已完成，並非謎題，而是後設框架。</p>
+<p>真正有趣的推理在於：讀者何時能從「巴奈特收取報酬的方式」推導出他的真實意圖？每一篇故事的結尾，他都以某種巧妙方式為自己「索取」某物：珍珠項鍊、皇室情書、古典家具、一份工業配方……這些「收費」的模式，本身就是識別亞森羅蘋身分的線索。</p>
+<hr>
+<h2 id="_38">補充說明</h2>
+<p><strong>盧布朗晚期的技法轉型</strong></p>
+<p>相較於早期的羅蘋故事（如《亞森羅蘋 vs 荷姆斯》），《亞森羅蘋現身》顯示了盧布朗的一個重要轉型：羅蘋不再以「劫富濟貧的英雄」出現，而是以「私家偵探」的偽裝介入案件，同時謀取私利。這種設計讓每篇故事都有雙重結局——明面上的「正義得伸」，與暗面的「羅蘋順手牽羊」。</p>
+<p><strong>詭計的類型多樣性</strong></p>
+<p>本集的技術亮點在於詭計的多樣：
+- 第二章：藏贓地點（廢水管）
+- 第三章：假不在場證明（繪畫）
+- 第四章：集體緘默製造誤導
+- 第五章：嫁禍身分（金箔牙 + 鏡像錯覺）
+- 第六章：物品的「同時在內又在外」（部長公事包）
+- 第七章：女性罪犯 + 意外殺錯人
+- 第八章：切斷繩索的隱形殺人法
+- 第九章：「雙胞胎」替換的入室手法</p>
+<p>這種多樣性使全集不易被歸類，也讓每篇故事都有獨立的技術貢獻。</p>
+<p><strong>與同時代的比較</strong></p>
+<p>1929年，阿嘉莎·克莉絲蒂正在撰寫《謀殺在東方快車》的構思，愛倫坡的傳統已演進為「黃金時代」的規則體系。盧布朗的路線始終是「娛樂性 &gt; 公平性」——他的謎題不必然遵循所有線索都提前埋設的規則，但每個謎底都有足夠的情節邏輯。</p>
+<p>巴奈特/羅蘋不是偵探，他是一個玩弄系統的藝術家；而《亞森羅蘋現身》不是嚴格意義的推理小說，它是一部以謎題為外衣的道德諷刺劇——笑著問你：正義與私利，究竟能否共存？</p>
+<p><strong>對台灣讀者的補充</strong></p>
+<p>「百家樂（Baccarat）」在本集第四章是謀殺案的核心道具。這是十九至二十世紀法國上流社會極為流行的賭博遊戲，以「莊家對上閒家」的對賭結構為主，勝負很大程度依賴運氣，但也有心理操控的空間。盧布朗選擇百家樂作為謀殺的背景，精準地捕捉了「一夜翻盤→情緒失控→謀殺」的心理弧度。</p>
+    <a href="../index.html" class="back-link">← 回到首頁</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">推理解剖室</p>
+    <p>五位作者 · 八十八部作品 · 一百三十五年推理文學的難度演化</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
