@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Wisdom of Father Brown — Detective Analysis</title>
+<meta name="description" content="In a seaside town, a young woman named Maggie MacNab grows uneasy about the mysterious behavior of her boyfriend James Todhunter, and asks the renowned criminol">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-wisdom-of-father-brown.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-wisdom-of-father-brown.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-wisdom-of-father-brown.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-wisdom-of-father-brown.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-wisdom-of-father-brown.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-wisdom-of-father-brown.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-wisdom-of-father-brown.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-wisdom-of-father-brown.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Detective Analysis</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#latest">Latest</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Language" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 English</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-wisdom-of-father-brown.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-wisdom-of-father-brown.html">简体中文</a>
+      <a class="lang-item active" data-lang="en" href="/Detective-Analysis/en/articles/the-wisdom-of-father-brown.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/the-wisdom-of-father-brown.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/the-wisdom-of-father-brown.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/the-wisdom-of-father-brown.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/the-wisdom-of-father-brown.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/the-wisdom-of-father-brown.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">G.K. Chesterton · 1914</div>
+    <h1>The Wisdom of Father Brown</h1>
+    <div class="subtitle">Gilbert Keith Chesterton (G.K. Chesterton) · Short story collection (12 stories)</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Deducibility</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Fog Rating</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="the-wisdom-of-father-brown-deducibility-analysis">The Wisdom of Father Brown — Deducibility Analysis</h1>
+<h2 id="basic-information">Basic Information</h2>
+<ul>
+<li>Author: Gilbert Keith Chesterton (G.K. Chesterton)</li>
+<li>Year: 1914</li>
+<li>Type: Short story collection (12 stories)</li>
+<li>Detective: Father Brown</li>
+<li>Core mystery types: whodunit / howdunit / identity puzzle / impossible crime</li>
+</ul>
+<hr>
+<h2 id="overall-deducibility-rating-composite-of-four-selected-stories">Overall Deducibility Rating (Composite of Four Selected Stories)</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Rating</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deducibility</td>
+<td>⭐⭐⭐⭐</td>
+<td>Average convergence point ~79% — all clues are present in the text, but Chesterton conceals the truth through "anti-common-sense" structures; readers must invert every assumption to see the correct answer</td>
+</tr>
+<tr>
+<td>Fog Rating</td>
+<td>⭐⭐⭐⭐</td>
+<td>Highly misleading: the "expert's erroneous analysis" is itself the greatest red herring; three reliable eyewitnesses are simultaneously wrong; the most conspicuous suspect is almost never the true culprit</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note on this collection:</strong> Of the twelve stories, this analysis selects four with the most complete puzzle structures for in-depth examination: "The Absence of Mr Glass," "The Duel of Dr Hirsch," "The Man in the Passage," and "The Head of Caesar." The remaining eight stories each have their own merits, but their mystery structures lean more toward thriller-adventure or moral allegory, with somewhat weaker deductive elements.</p>
+</blockquote>
+<hr>
+<hr>
+<h1 id="story-one-the-absence-of-mr-glass">Story One: The Absence of Mr Glass</h1>
+<h2 id="synopsis">Synopsis</h2>
+<p>In a seaside town, a young woman named Maggie MacNab grows uneasy about the mysterious behavior of her boyfriend James Todhunter, and asks the renowned criminologist Dr Orion Hood to investigate. Todhunter has long kept his door shut, two different voices have been heard within, and a mysterious tall figure called "Mr Glass" frequently appears. When the group breaks in, they find playing cards scattered about, a wine glass shattered, a blood-tipped short sword on the floor, and Todhunter bound with ropes in a corner.</p>
+<p>Dr Hood confidently analyzes the scene: Mr Glass is a blackmailer, Todhunter his victim; the two came to blows, Todhunter killed Mr Glass and staged himself as a victim. At this point, Father Brown — who has been silent throughout — smiles and offers an entirely different explanation.</p>
+<h2 id="deducibility-rating">Deducibility Rating</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Rating</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deducibility</td>
+<td>⭐⭐⭐⭐</td>
+<td>Average convergence point ~72% — all physical clues are in place by 70%, but readers must break free of the "crime framework" to read the correct answer</td>
+</tr>
+<tr>
+<td>Fog Rating</td>
+<td>⭐⭐⭐⭐</td>
+<td>The primary source of fog is Dr Hood himself: the erroneous deductions of a composed, authoritative criminologist are more misleading than any planted false clue</td>
+</tr>
+</tbody>
+</table>
+<h2 id="truth-breakdown">Truth Breakdown</h2>
+<p><strong>The Truth: Todhunter's Secret Profession and the Non-Existence of "Mr Glass"</strong>
+- <strong>Clue convergence point: ~72%</strong>
+- Answer: James Todhunter is a professional magician in training, with skills including juggling, ventriloquism, and escapology. "Mr Glass" does not exist — the name comes from Todhunter's self-commentary as he practised throwing and catching wine glasses: "One, two, three — missed a glass; one, two — missed a glass again." What Maggie heard through the door-crack was his ventriloquism practice; both "voices" were produced by him alone.</p>
+<h3 id="key-clues">Key Clues</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Approximate Position</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>One of the three wine glasses shattered on a shelf near the ceiling</td>
+<td>~30%</td>
+<td>A glass falling onto a table could not fly up to a high shelf; only a glass thrown upward and broken in mid-air could send shards to that height — the trace of a juggling accident</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The silk top hat was completely wrong for Todhunter's head size, with no hair residue inside</td>
+<td>~30%</td>
+<td>Dr Hood interprets this as "Mr Glass is an elderly bald man"; Father Brown sees it differently: a hat never actually worn by anyone is a magician's prop, not a killer's abandoned possession</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Playing cards scattered across the floor</td>
+<td>~30%</td>
+<td>Traces of practising the "card throw" technique</td>
+</tr>
+<tr>
+<td>4</td>
+<td>The tip of the short sword bears blood, yet Todhunter has no wounds on his body</td>
+<td>~55%</td>
+<td>Hood interprets this as "Mr Glass left the scene injured"; Father Brown perceives: the wound is not <em>on</em> Todhunter but <em>in</em> him — a slight cut to the throat from sword-swallowing practice, "a wound in him, not upon him"</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Every knot binding Todhunter can be self-released</td>
+<td>~65%</td>
+<td>This is Hood's own stated key finding — he interprets it as "self-binding to fake victimhood"; Father Brown sees it as: <strong>escapology practice</strong>, Todhunter honing the Davenport Brothers-style rope-escape technique</td>
+</tr>
+</tbody>
+</table>
+<h3 id="supporting-clues">Supporting Clues</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Approximate Position</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Todhunter is punctual, never behind on rent, and very patient with children</td>
+<td>Throughout</td>
+<td>A man who can hold children's fascination all day — the temperament of a born performer</td>
+</tr>
+<tr>
+<td>2</td>
+<td>When onlookers finally notice Todhunter's eyes, those eyes are "laughing"</td>
+<td>~80%</td>
+<td>Father Brown is the first to read this signal: he is suppressing a grin, because he knows everyone has been fooled</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Todhunter "has considerable money in his pockets, but nobody knows his trade"</td>
+<td>~8%</td>
+<td>It is normal for a magician not to reveal their profession before their public debut — the answer is buried here from the very beginning</td>
+</tr>
+</tbody>
+</table>
+<h3 id="false-clues">False Clues</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Approximate Position</th>
+<th>Misleading Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>A mysterious tall man in a silk top hat once emerged from the sea-mist, quarrelled violently with Todhunter, then vanished</td>
+<td>~15%</td>
+<td>Establishes in the reader's mind the core assumption that "Mr Glass is a real person" — in truth he was merely a curious passerby whom Todhunter sent away</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Dr Hood's complete analysis (blackmailer and victim, murder, staged victimhood)</td>
+<td>~40–65%</td>
+<td><strong>This is the story's greatest false clue</strong>: the author has a highly respected criminologist construct an elaborate, internally consistent false narrative at length; his very authority is the most effective tool of misdirection</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Mrs MacNab's story about "another person hidden in the large box"</td>
+<td>~20%</td>
+<td>Reinforces the sense of mystery that Todhunter is concealing some dangerous secret</td>
+</tr>
+</tbody>
+</table>
+<h2 id="reconstruction-of-the-reasoning-path">Reconstruction of the Reasoning Path</h2>
+<p>Upon entering the scene, an attentive reader should first notice several critical <strong>physical inconsistencies</strong>: shards of a wine glass on a high shelf (requiring an upward throwing motion), a prop hat that fits no one's head (no hair inside), and the strange short sword with blood but no wound. All three of these clues appear by ~30–55% of the text.</p>
+<p>The pivotal turning point comes when Dr Hood himself states that "all the knots can be self-released" (~65%). Spoken by Hood, this is interpreted as "Todhunter faked being a victim" — but it is precisely the key to the puzzle. A person who ties themselves up to deceive others has no need for knots that can be self-released; only someone <strong>practising escapology</strong> would require such a design.</p>
+<p>By ~70%, all physical clues are in place. A reader who can break through the assumption that "a crime occurred" can at this point reasonably conclude: there was no crime, only a misunderstood magician.</p>
+<p>The origin of the name "Mr Glass" (~90%) is the final confirmatory detail: in ventriloquism practice, "missed a glass" was misheard through the door by Maggie as the name "Mr Glass." This is the most elegant wordplay in the collection, but even without this layer, the core of the puzzle can be solved by ~70%.</p>
+<h2 id="additional-notes">Additional Notes</h2>
+<p>The central design concept of this story is <strong>"the expert as the greatest red herring."</strong> Dr Hood is a figure representing the arrogance of late-nineteenth-century scientific rationalism: he uses systematic thinking to construct a perfectly self-consistent but entirely wrong theory, and the more precise it is, the further it strays from the truth. Chesterton uses this to satirize the idea that a scientific detective who over-relies on deductive frameworks and ignores "common-sense intuition" is actually more prone to self-reinforcing error than an ordinary person.</p>
+<p>Father Brown's insight lies not in superior reasoning, but in his willingness to ask the most basic question: <strong>"Why is this man laughing?"</strong> — the details of human nature, not physical clues, are his true detective tools.</p>
+<hr>
+<hr>
+<h1 id="story-two-the-duel-of-dr-hirsch">Story Two: The Duel of Dr Hirsch</h1>
+<h2 id="synopsis_1">Synopsis</h2>
+<p>In Paris, a document intercepted from a German spy reveals that Dr Hirsch — a scientist trusted by the French Republic and inventor of a new silent explosive — has leaked the hiding place of the explosive formula to the Germans. Colonel Dubosc, bearing this document, publicly accuses him, inflaming nationalist crowds. Dr Hirsch refuses to meet Dubosc in person, delegating the duel arrangements through intermediaries.</p>
+<p>Father Brown's friend Flambeau serves as Dubosc's second, but discovers that every single detail in the spy document is <strong>systematically wrong</strong> — left and right are reversed, the ink colour is reversed, the envelope colour is reversed. Father Brown silently eats his small fish and ponders a strange question: <strong>"Who could be precisely wrong about every detail?"</strong></p>
+<h2 id="deducibility-rating_1">Deducibility Rating</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Rating</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deducibility</td>
+<td>⭐⭐⭐⭐</td>
+<td>Average convergence point ~78% — the "systematic error" clue appears at ~55%, but the visual confirmation that Hirsch is Dubosc does not arrive until ~90%</td>
+</tr>
+<tr>
+<td>Fog Rating</td>
+<td>⭐⭐⭐⭐</td>
+<td>Three layers of fog: the Dreyfus Affair overtones of the French political climate; the "opposing camps" imagery of the two men; and the "wrong theory" that Father Brown himself voices</td>
+</tr>
+</tbody>
+</table>
+<h2 id="truth-breakdown_1">Truth Breakdown</h2>
+<p><strong>Truth One: The Author of the Spy Document</strong>
+- <strong>Clue convergence point: ~55%</strong>
+- Answer: The document "leaking state secrets" was written by Dr Hirsch himself. He deliberately reversed every detail so that German spies following the document would never find the real formula. This is a strategy of "feeding lies to the enemy" — he believed he was protecting France, but in reality he had become deeply entangled in the espionage world, sinking ever deeper.</p>
+<h3 id="key-clues_1">Key Clues</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Approximate Position</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The document's description of the formula's hiding place is the exact opposite of reality in three details (left vs right, red ink vs black ink, grey envelope vs white envelope)</td>
+<td>~55%</td>
+<td>Father Brown's insight: "A man who lies by chance will sometimes tell the truth by accident. To be wrong about every single thing with such precision, you must know every single thing exactly." Systematic error can only come from a systematically informed person</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The handwriting closely resembles Dr Hirsch's, with no discernible sign of forgery</td>
+<td>~45%</td>
+<td>This feature of "not looking forged" is a clue toward the truth rather than evidence against it: because the document was simply written by Hirsch himself</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><strong>Truth Two: Hirsch Is Dubosc — One Man Playing Two Roles</strong>
+- <strong>Clue convergence point: ~90%</strong>
+- Answer: Dr Hirsch and Colonel Dubosc are the same person. Hirsch removes his disguise in his hotel room: the broad shoulders are padding, the black beard is false, the brown complexion is makeup; he removes the wig to reveal a bald head, puts on blue spectacles and a wide black coat, steps onto the balcony to receive the crowd's acclaim — and becomes "Dr Hirsch." He created "Dubosc" to publicly accuse himself, manufacturing a sensational false injustice, then accepting public sympathy and heroic vindication as "Hirsch." His motive is ambition: "Not treason — only ambition. Like Caesar."</p>
+<h3 id="key-clues_2">Key Clues</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Approximate Position</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Hirsch refuses to meet Dubosc in person, with the peculiar phrasing that "according to the rules of a gentleman, they should not meet"</td>
+<td>~40%</td>
+<td>In dueling culture, a challenged party can refuse without such a roundabout explanation — unless he "cannot" meet the man, because he <em>is</em> that man</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Father Brown observes: "They are so exactly opposite, like a face and a mask, like a lock and a key… things that fit each other perfectly cannot fight each other."</td>
+<td>~85%</td>
+<td>One is a broad-shouldered, heavy-bearded man with a covered neck; the other is a lean man with a long neck, bearded but clean-shaven above — their appearances precisely complement each other rather than merely contrast, a deliberately engineered disguise</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Dubosc suddenly abandons the duel and plans to "go on a journey" — and is fleeing to a hotel</td>
+<td>~75%</td>
+<td>"For a short journey — a very short journey," Father Brown implies death (if discovered) or the completion of the disguise and return</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Flambeau personally watches Dubosc in the hotel room remove his padded shoulders, wash off the brown makeup, put on a red wig and blue spectacles, and walk out as Hirsch</td>
+<td>~90%</td>
+<td>Visual confirmation: the two men are the same person</td>
+</tr>
+</tbody>
+</table>
+<h3 id="supporting-clues_1">Supporting Clues</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Approximate Position</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Hirsch "handles everything himself" and intensely dislikes anyone coming close to him</td>
+<td>~80%</td>
+<td>Implies he must manage everything personally, unable to let any assistant see his "true face"</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Father Brown says "I entirely doubt everything that has happened today"</td>
+<td>~75%</td>
+<td>The priest has already seen through the entire event as a staged performance</td>
+</tr>
+</tbody>
+</table>
+<h3 id="false-clues_1">False Clues</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Approximate Position</th>
+<th>Misleading Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The Dreyfus Affair allusions and the broader French nationalist political climate</td>
+<td>Throughout</td>
+<td>Leads readers to interpret the conflict in political terms (nationalism vs internationalism, military vs intellectuals), entirely obscuring the fundamental question of whether these two men actually exist</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Father Brown's own "double agent" theory (a traitor deliberately providing false intelligence)</td>
+<td>~70%</td>
+<td>This theory is itself correct — Hirsch did deliberately write a false document — but it conceals the larger truth: Dubosc is not a genuinely separate person</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The existence of Armaniac and Brun as Dubosc's representatives</td>
+<td>From ~35%</td>
+<td>Makes the entire dueling arrangement appear authentic and plausible, deepening the misapprehension that the two men are distinct individuals</td>
+</tr>
+</tbody>
+</table>
+<h2 id="reconstruction-of-the-reasoning-path_1">Reconstruction of the Reasoning Path</h2>
+<p><strong>First Path: The Author of the Document</strong>
+When Flambeau tells Father Brown that "the document is wrong in three details" (~55%), an attentive reader can already reach the first conclusion: this document was not written by an uninformed forger, but by someone with complete knowledge who deliberately got everything wrong. Only a person who knows the correct answer can be precisely wrong about every single detail. This line of reasoning can be completed at this point.</p>
+<p><strong>Second Path: The Two Men Are the Same Person</strong>
+This path requires a greater leap of imagination. Father Brown's "lock and key" metaphor (~85%) is the strongest textual clue: the two men's appearances so precisely complement each other that it resembles not a natural contrast but a deliberately engineered disguise designed to prevent recognition. Father Brown says "they will never meet," because they are not two people but two faces of one. Yet the visual confirmation does not come until ~90% (Flambeau watching from a tree through the hotel window).</p>
+<h2 id="additional-notes_1">Additional Notes</h2>
+<p>This story is the most "thought-experiment" in nature among the Father Brown series. Its central trick — one person playing two roles, acting as each other's "enemy" — is an exceedingly rare construction in the history of detective fiction. Chesterton's design is especially ingenious: he makes the entire society and political environment the backdrop of the deception, making it difficult for readers even to ask the right question. People are busy debating "who is the traitor" without anyone asking: "These two men — are they actually different people?"</p>
+<p>Father Brown's methodology is most clearly embodied here: he does not trust mechanical deduction, but rather "the sense of human inconsistency" — when things are "too tidy," when two people are "too perfectly opposite," when a secret document "reads too much like a fairy tale," these are all signals of falseness.</p>
+<hr>
+<hr>
+<h1 id="story-three-the-man-in-the-passage">Story Three: The Man in the Passage</h1>
+<h2 id="synopsis_2">Synopsis</h2>
+<p>Backstage at the Apollo Theatre, the actress Aurora Rome is beautiful and admired, entangling several men emotionally: her devotee Sir Wilson Seymour, the heroic soldier Captain Cutler, her fellow actor Isidore Bruno, and the silent elderly make-up artist Parkinson.</p>
+<p>Aurora artfully uses diplomatic skill to dismiss all the men one by one, keeping only the Father Brown she has summoned. But at that moment, a cry comes from the passage — Aurora is found dead in the corridor, stabbed in the chest, while three men have each rushed back from opposite ends of the passage, all claiming to have seen a dark figure within it.</p>
+<p>The giant actor Bruno is arrested; the accusation comes from eyewitnesses: the figure in the passage looked large and dangerous. But the three witnesses give completely different descriptions of the figure, and Father Brown says: "I know that man. He is myself."</p>
+<h2 id="deducibility-rating_2">Deducibility Rating</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Rating</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deducibility</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>Average convergence point ~85% — the mirror clue is buried very deep; the revelation of the murder weapon (the stage spear) comes almost at the moment the solution is given</td>
+</tr>
+<tr>
+<td>Fog Rating</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>Three reliable, disinterested eyewitnesses simultaneously give false testimony; the most obvious suspect (Bruno) fits almost all surface evidence perfectly; the window of the crime is extremely short and chaotic</td>
+</tr>
+</tbody>
+</table>
+<h2 id="truth-breakdown_2">Truth Breakdown</h2>
+<p><strong>Truth One: Who Was the Figure in the Passage (Solution to the Impossible Crime)</strong>
+- <strong>Clue convergence point: ~85%</strong>
+- Answer: The "dark figure" the three men saw in the passage was each of their own reflections in a mirror. The dressing room has several looking-glass panels that can slide out into the corridor; due to the angle of the light in the corridor, each person standing at the far end of the passage and looking down saw their own silhouette reflected and magnified by the mirror — Seymour saw "a man with somewhat feminine curves and long hair" (because his own appearance is so elegant); Cutler saw "a monster like a chimpanzee, with bristles like a pig" (because his own build is stocky and square); Father Brown saw "a squat figure with two curved protrusions on top" (those were the curved corners of his own clerical wide-brimmed hat).</p>
+<h3 id="key-clues_3">Key Clues</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Approximate Position</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>While alone in the dressing room, Father Brown is "calculating the angles of the mirrors… at what angle each mirror must be set into the wall"</td>
+<td>~35%</td>
+<td>This is a visualization of Father Brown's mind at work — he is mentally simulating how the mirrors would reflect figures in the corridor back into the room; those panels that "could slide out from the wall" are the physical mechanism of the solution</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The three witnesses give completely different descriptions of the figure, each closely matching the witness's own appearance</td>
+<td>~75–80%</td>
+<td>Seymour's "tall man with feminine curves" = Seymour himself; Cutler's "creature with shoulders hunched like an ape, bristles like a pig" = Cutler himself; Father Brown's "squat shadow with two curved horn-like projections" = Father Brown wearing his clerical hat</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Father Brown answers in court when asked "what shape did you see?": "The man I saw was myself."</td>
+<td>~85%</td>
+<td>The solution revealed: each person saw their own reflection in the mirror, not the killer</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><strong>Truth Two: Who Was the Killer and How Was It Done</strong>
+- <strong>Clue convergence point: ~85%</strong>
+- Answer: The elderly make-up artist Parkinson is the killer. Aurora had asked Father Brown to come and mediate a "domestic trouble" between herself and Parkinson (who had long harboured an obsessive love for her); she dismissed everyone else precisely so she could speak with Parkinson alone. Parkinson was holding the stage spear he had been keeping for her (Oberon's hunting spear — a short head on a long shaft). Aurora's skirt became caught on one of the sliding mirror panels; as she struggled, Parkinson thrust the spear through the gap in the mirror panel and pierced her heart. After seeing the body, Parkinson immediately collapsed in a chair and died — he died of remorse.</p>
+<h3 id="key-clues_4">Key Clues</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Approximate Position</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Aurora "sent away all the men" — she deliberately dismissed all her admirers, keeping only Father Brown</td>
+<td>~40%</td>
+<td>She summoned the priest to "resolve a domestic trouble" — that "domestic trouble" was Parkinson; she wanted to calm him down with the priest as a witness</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The wound is on the "other side" of the chest — the dress is torn at the right shoulder, but the fatal wound is near the left heart</td>
+<td>~50%</td>
+<td>In a frontal struggle with a knife, the wound position should correspond more closely with the tear; only a spear thrust diagonally from a distance could produce such an angular discrepancy</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Medical testimony: "some kind of short-bladed weapon, with a short point" — yet the presumed murder weapon is the Greek bronze dagger</td>
+<td>~60%</td>
+<td>"Short blade but a very long handle" — Father Brown reveals in court: this description fits not a dagger but a stage spear with a short head</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Parkinson "takes Oberon's spear" and leaves the dressing room for Bruno's suite</td>
+<td>~45%</td>
+<td>He carried the weapon away; yet after the crime he is found in the chair in Bruno's suite — he never chased Aurora; he thrust from the mirror panel gap in the corridor</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Father Brown rushes to Parkinson's side rather than watching the struggle between Bruno and Cutler</td>
+<td>~82%</td>
+<td>The priest's instinct has already fixed on Parkinson — while everyone else is in chaos, he goes alone to tend to the elderly make-up artist collapsed in the chair</td>
+</tr>
+<tr>
+<td>6</td>
+<td>"Two deaths" — Parkinson has also died; "he died of remorse, he could not bear what he had done"</td>
+<td>~85%</td>
+<td>This sentence simultaneously reveals the killer's identity and motive: genuine love, destroying itself in remorse</td>
+</tr>
+</tbody>
+</table>
+<h3 id="supporting-clues_2">Supporting Clues</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Approximate Position</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Parkinson "followed her all around the room, watching her go with the silent worship of a dog"</td>
+<td>~40%</td>
+<td>His obsession is described early, no less intense than that of the other admirers, only manifested in a more suppressed form</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Aurora asks Father Brown to come because "she has some domestic trouble to settle"</td>
+<td>~40%</td>
+<td>Explicitly points toward the "old feeling" between her and Parkinson that needs to be mediated</td>
+</tr>
+</tbody>
+</table>
+<h3 id="false-clues_2">False Clues</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Approximate Position</th>
+<th>Misleading Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Isidore Bruno — a six-foot-six giant, found on the scene holding the presumed murder weapon (a bloodied dagger) in the same space as the body</td>
+<td>Throughout</td>
+<td>All surface evidence points to him: his massive build matches witness descriptions of "a tall man," his dagger is bloodied, he has a jealousy motive</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sir Wilson Seymour — returns to the scene "white as ivory" after the crime, says "I saw a man in the passage," with a strange expression</td>
+<td>~65%</td>
+<td>Leads readers to suspect he may be the real killer and is pretending to be a witness</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Captain Cutler — excitedly picks up the murder weapon, rushes in to physically attack Bruno, and "happens" to cut his own hand</td>
+<td>~70%</td>
+<td>His behaviour is highly suspicious; Father Brown specifically warns him in court that "the blood has contaminated the evidence"</td>
+</tr>
+</tbody>
+</table>
+<h2 id="reconstruction-of-the-reasoning-path_2">Reconstruction of the Reasoning Path</h2>
+<p><strong>Reasoning Path for the Mirror Puzzle</strong>
+The earliest key foreshadowing appears at ~35%: Father Brown sits alone in the dressing room "calculating the angles of the mirrors, at what angle each mirror must be set into the wall." This is not casual scene description but a direct rendering of Father Brown's mental activity. A reader who notices this sentence, and knows that some dressing-room mirror panels can slide, has a chance — after all three witnesses have described their version of the "figure" (~75–80%) — to understand that what they saw were reflections.</p>
+<p>The three witnesses' descriptions of the "figure" contradict each other and each closely matches the speaker's own appearance — this is the most legible solvable clue in the story, but it can only be assembled after all three have completed their testimony (the courtroom section, ~80%).</p>
+<p><strong>Reasoning Path for the Method of Murder</strong>
+The medical description "short-bladed weapon" (~60%) should be a point of doubt, but it is easily overlooked in the overflowing courtroom drama. Parkinson taking the spear (~45%) and Father Brown rushing toward Parkinson rather than Bruno (~82%) are two more decisive behavioural clues, but they require readers to simultaneously remember Parkinson's existence — and the author keeps Parkinson as a background character with minimal presence throughout most of the story.</p>
+<h2 id="additional-notes_2">Additional Notes</h2>
+<p>"The Man in the Passage" is the most intricately designed puzzle in this collection, and one of the earliest and most elegant "mirror" puzzles in the history of detective fiction. Chesterton's design has a double ingenuity: first, the "figures" the three witnesses see are all different, and each corresponds to the witness's own appearance — so a reader who has the chance to compare all three descriptions simultaneously will realize they each saw themselves; second, each person's description of "the shadow" is actually a subjective projection of their own external image, carrying a layer of meaning about psychological self-perception.</p>
+<p>The reason Father Brown can recognize his own reflection (when the judge asks "why could you recognize yourself in the mirror when the two gentlemen could not?", the priest replies: "I think, perhaps, because I do not often look in mirrors") — this answer is not mere modest wit; it is Chesterton's deepest philosophical statement: <strong>true self-knowledge comes from not being attached to one's self-image</strong>.</p>
+<p>The killer Parkinson is the most tragic character in the entire collection. He is not a wicked man; he is only an old man who spent his whole life silently loving the same woman, and at some unbearable moment did that thing — and then immediately died of remorse. "He could not bear what he had done" is the murder motive in Chesterton's writing that comes closest to the Catholic theology of sin and redemption.</p>
+<hr>
+<hr>
+<h1 id="story-four-the-head-of-caesar">Story Four: The Head of Caesar</h1>
+<h2 id="synopsis_3">Synopsis</h2>
+<p>A red-haired woman named Christabel Carstairs hides from a stranger with a twisted nose in a small pub. She confesses to Father Brown: as a young woman, on impulse, she stole a precious Roman coin from the family collection and gave it to her boyfriend Philip Hawker. Since then, the man with the twisted nose has appeared and blackmails her with his knowledge of this deed.</p>
+<p>The puzzle: at the moment she handed over the coin on the beach, only she and Philip were present; a distant black dot on a sand dune could not possibly have made out what she was holding. How could the stranger have known?</p>
+<p>After hearing her story, Father Brown sends Flambeau to track the man, and himself muses: "A blackmailer can threaten his victim with himself."</p>
+<h2 id="deducibility-rating_3">Deducibility Rating</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Rating</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deducibility</td>
+<td>⭐⭐⭐⭐</td>
+<td>Average convergence point ~82% — key clues are scattered between ~45–75%, but the concept of "self-blackmail" requires a leap of imagination from the reader</td>
+</tr>
+<tr>
+<td>Fog Rating</td>
+<td>⭐⭐⭐⭐</td>
+<td>Brother Giles, recently returned from Australia, is naturally constructed as the prime suspect; the "impossibly distant knowledge" creates a near-supernatural mystery</td>
+</tr>
+</tbody>
+</table>
+<h2 id="truth-breakdown_3">Truth Breakdown</h2>
+<p><strong>The Truth: The Identity of the Blackmailer</strong>
+- <strong>Clue convergence point: ~82%</strong>
+- Answer: The blackmailer with the twisted nose is Christabel's brother Arthur Carstairs. Arthur has secretly sold off the entire Carstairs family collection of ancient Roman coins and filled those brown paper packages with modern British coins, maintaining their outward appearance. Disguised as a stranger with a false twisted nose, he blackmails his brother Giles for his Australian past (as revealed by the destination of "the cab to Wagga Wagga, Putney"), and blackmails his sister Christabel as well.</p>
+<p>He is the only person who could have known that Christabel stole the coin — that afternoon, he was moving coins into the study, and Christabel, after confirming he had shut the heavy door, immediately took one and ran. But Arthur had not entirely withdrawn his attention: from the distant sand dune he recognized his sister's figure and gait, and though he could not make out what she was holding, he guessed.</p>
+<p>Philip, on the beach, had already recognized the "stranger with the twisted nose" as Arthur, which is why he let the man fall "a little lightly" — he did not strike with full force.</p>
+<h3 id="key-clues_5">Key Clues</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Approximate Position</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>"A cab to 379 Wagga Wagga Street, Putney, Mafeking Avenue" — the note Flambeau sends back after trailing the man</td>
+<td>~60%</td>
+<td>Wagga Wagga is an Australian place name, corresponding to the background of Giles being sent to Australia; the blackmailer going to that address is to blackmail Giles about his Australian past — demonstrating that he holds the secrets of the entire family</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Philip says, out of nowhere: "You know Giles has come back from Australia?"</td>
+<td>~45%</td>
+<td>When Philip says this seemingly unrelated line, he is in fact giving Christabel a hint: he suspects, or has confirmed, that the blackmailer is connected to Giles's Australian past — and the only person who could know this is one specific person</td>
+</tr>
+<tr>
+<td>3</td>
+<td>That afternoon, Arthur moved coins into the study; Christabel "confirmed he had shut the heavy door before she acted" — but she did not know whether he had fully left</td>
+<td>~55%</td>
+<td>Arthur may never have gone to the deepest part of the study, but observed her departure from some angle</td>
+</tr>
+<tr>
+<td>4</td>
+<td>"The gait and bearing of a person, even at a distance, remind us of someone more readily than a carefully disguised face."</td>
+<td>~87%</td>
+<td>Father Brown's explanation: what Arthur recognized from the sand dune was his sister's walk, not the details of what she held</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Philip "let him fall a little lightly" — when he knocked the man down the sand dune, he deliberately held back</td>
+<td>~65%</td>
+<td>If the stranger were merely a hostile blackmailer, Philip would have no reason to spare him; the fact that he did indicates he had already recognized the person as someone he knew</td>
+</tr>
+<tr>
+<td>6</td>
+<td>The man is found in Arthur's empty study, sitting in Arthur's chair reading Arthur's book while wearing the false nose — this "unfamiliarity" looks more like "excessive ease"</td>
+<td>~70%</td>
+<td>This detail suggests he is too comfortable in the space to be someone entering it for the first time</td>
+</tr>
+<tr>
+<td>7</td>
+<td>"Why shouldn't a blackmailer threaten his victim with himself?… Three persons are needed as a concept, but only two are needed as actors."</td>
+<td>~85%</td>
+<td>Father Brown voices the logical core of the solution</td>
+</tr>
+</tbody>
+</table>
+<h3 id="supporting-clues_3">Supporting Clues</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Approximate Position</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Beneath Arthur's brown dressing gown are found boxes upon boxes of modern British coins, not Roman antiquities</td>
+<td>~90% (ending)</td>
+<td>Direct confirmation that the family collection had long since been sold off by him</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The father's will left Arthur the collection rather than wealth, and he "grew to hate the Roman coins more and more and to love the real money he was being cheated of"</td>
+<td>~85%</td>
+<td>Father Brown identifies the motive: an unjust will turned Arthur into a pretend guardian and a real plunderer</td>
+</tr>
+</tbody>
+</table>
+<h3 id="false-clues_3">False Clues</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Approximate Position</th>
+<th>Misleading Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Brother Giles "has just come back from Australia"</td>
+<td>~45% (mentioned in passing)</td>
+<td>Leads readers to naturally associate: the brother who once had a criminal record in Australia is most likely connected to a "morally compromised blackmailer" — in truth Giles is the victim being blackmailed, not the perpetrator</td>
+</tr>
+<tr>
+<td>2</td>
+<td>"How could he possibly know?" — the "impossibly distant knowledge" of someone who could not have seen what she held from so far away on the beach</td>
+<td>Throughout</td>
+<td>Creates a near-supernatural fog; Christabel herself says "Was I being punished by a miracle?" — the truth is the most ordinary method of recognition imaginable (gait recognition)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Philip's ambiguous reactions (blushing, avoiding eye contact)</td>
+<td>~55%</td>
+<td>Leads readers to suspect Philip may be a co-conspirator</td>
+</tr>
+</tbody>
+</table>
+<h2 id="reconstruction-of-the-reasoning-path_3">Reconstruction of the Reasoning Path</h2>
+<p>This story has a central puzzle of "impossible knowledge": how did the blackmailer know that Christabel, on a beach far from anyone, had handed a small coin to Philip? The answer unfolds in two layers:</p>
+<p>First layer (~60%): The cab's destination "Wagga Wagga" points to Australia, connecting to Giles's background of being sent there. Someone who holds compromising secrets about every member of a family must be inside that family.</p>
+<p>Second layer (~75%): Philip "holding back" is a clear behavioural clue — he recognized the person. Combined with the traces of Arthur's activity in the study that afternoon, and Father Brown's explanation of "gait recognition," the complete truth surfaces here.</p>
+<p>"Three persons as a concept, two persons as actors" (~85%) is the final logical summation: the blackmailer, the victim, the threatened secret — these three roles are performed by only two people in this case, because Arthur simultaneously plays the "blackmailer" and "the holder of the threatened secret (what he knows about Christabel)" simultaneously.</p>
+<h2 id="additional-notes_3">Additional Notes</h2>
+<p>The central trick of this story — "self-blackmail," in which a blackmailer uses knowledge of a secret, disguised, to terrify a victim — is an extraordinarily rare criminal construction in the history of detective fiction. Its logic is supremely simple; once understood it seems obvious; yet in the course of reading it is nearly impossible to arrive at independently, because it requires the reader to dismantle the assumption that "the blackmailer" and "the victim's family member" are two different people.</p>
+<p>Through this, Chesterton expresses his characteristic philosophical theme: <strong>the complexity of human nature far exceeds categorical classification</strong>. Arthur is simultaneously the guardian of the family legacy and the plunderer of it; simultaneously "the respected elder brother" and "the stranger in a false nose who blackmails his own sister." This split of identity reaches its peak at the story's end in the absurd image of Arthur in his own chair, wearing a false nose, reading his own book, waiting for a sister he himself has driven away to return — he is in his own home, playing a stranger to himself.</p>
+<hr>
+<hr>
+<h1 id="overall-additional-notes">Overall Additional Notes</h1>
+<h2 id="core-characteristics-of-father-browns-detective-method">Core Characteristics of Father Brown's Detective Method</h2>
+<p>The twelve stories in this collection display Chesterton's consistent philosophy of "counter-deduction." Father Brown's detective method forms a direct contrast with his contemporaries' scientific detection (Holmes, the scientific criminologist Dr Hood):</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Scientific Detective School</th>
+<th>Father Brown School</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Basis of trust</td>
+<td>Physical evidence, logical deduction</td>
+<td>Human intuition, psychological observation</td>
+</tr>
+<tr>
+<td>Greatest weakness</td>
+<td>Once a framework is established, it resists updating</td>
+<td>(Virtually no weaknesses are shown)</td>
+</tr>
+<tr>
+<td>Type of error</td>
+<td>Drawing wrong conclusions from correct clues</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Method of solution</td>
+<td>Outside-in (physical evidence → conclusion)</td>
+<td>Inside-out (person → behaviour → physical)</td>
+</tr>
+</tbody>
+</table>
+<p>Every "conclusive piece of evidence" Dr Hood states in "The Absence of Mr Glass" is a correctly observed physical reality — his only error is the assumption that "a crime occurred." Father Brown instead asks first: "Why are those eyes laughing?"</p>
+<h2 id="chestertons-puzzle-philosophy">Chesterton's Puzzle Philosophy</h2>
+<p>Chesterton's puzzles have one consistent design principle: <strong>the truth is common sense, but it is hidden inside an "unusual appearance."</strong> Todhunter is simply a magician; Hirsch's secret is simply ambition; the shadow in the passage is simply each person themselves; Arthur's disguise is simply a false nose plus a warped moral motive. Not one puzzle's answer is supernatural, but before it is revealed, every puzzle is packaged as a seemingly insoluble miracle.</p>
+<p>Father Brown himself puts it most clearly: "If the devil tells you that something is too terrible to look at, look at it." — Chesterton's entire detective series is the deductive version of this sentence.</p>
+<h2 id="comparison-with-father-browns-first-collection-the-innocence-of-father-brown">Comparison with Father Brown's First Collection, <em>The Innocence of Father Brown</em></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Innocence (First Collection)</th>
+<th>Wisdom (Second Collection)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Puzzle style</td>
+<td>More "identity revelation" (killers impersonating others)</td>
+<td>More "cognitive inversion" (reality is not what it appears to be)</td>
+</tr>
+<tr>
+<td>Social setting</td>
+<td>English country towns, monasteries</td>
+<td>Various locations across Europe, courts, theatres</td>
+</tr>
+<tr>
+<td>Representative technique</td>
+<td>Counter-intuitive identity (false priest, etc.)</td>
+<td>Mirror illusions, systematic lies, self-blackmail</td>
+</tr>
+<tr>
+<td>Father Brown's role</td>
+<td>Sometimes central, sometimes peripheral</td>
+<td>Almost always the central solver in every story</td>
+</tr>
+</tbody>
+</table>
+<h2 id="supplementary-note-for-taiwanese-readers">Supplementary Note for Taiwanese Readers</h2>
+<p>When Chesterton wrote this collection (1914), it was on the eve of the First World War, and "The Duel of Dr Hirsch" carries a strong resonance with the period's context of German-French espionage. The Dreyfus Affair (1894–1906) was a watershed political event in European intellectual circles at the time; Chesterton uses it to construct a satirical allegory between "political correctness" and "personal ambition."</p>
+<p>Additionally, the mirror puzzle in "The Man in the Passage" deserves special mention: it predates Agatha Christie's celebrated mirror technique by roughly twenty years, and is one of the most underappreciated pioneering ideas in the history of detective literature.</p>
+    <a href="../index.html" class="back-link">← Back to home</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Detective Analysis</p>
+    <p>Five authors · eighty-eight works · 135 years of evolving detective difficulty.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
