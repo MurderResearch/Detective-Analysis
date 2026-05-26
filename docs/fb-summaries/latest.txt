@@ -1,10 +1,10 @@
-📖 【推理解剖室】亞森·羅蘋，超級偵探（Arsène Lupin, Super-Sleuth）
-✍️ 莫里斯·盧布朗（Maurice Leblanc） · 
+📖 【推理解剖室】布朗神父的天真（The Innocence of Father Brown）
+✍️ 卻斯特頓（G.K. Chesterton） · 
 
-推理難度 ★★★☆☆ | 迷霧等級 ★★★★☆
+推理難度 ★★★★☆ | 迷霧等級 ★★★★☆
 
-四月底的巴黎，探險家「拉爾夫男爵」（Ralph de Limézy）在大道上偶然注意到一名英國女子 Constance Bakersfield 與一名香髮法國女子（後來知道是 Aurelie d'Asteux），這兩名女子的命運就此與他交纏。 當晚他搭乘馬賽特快車南下，與 Bakersfield 小姐同車。半夜，三名蒙面劫匪突然出現，將 Ralph 打昏綑綁，掐死了英國女子，又殺害了後節車廂中的兩名男子（Loubeaux 兄弟）。逃竄時，其中一名劫匪的面具滑落——竟是那名 Ralph 在下午甜點店裡見過的翠眼法國女子。 Ralph 憑著機智逃離現場，一路護著這名他口中的「翠眼女」逃過了偵探 M…
+《布朗神父的天真》是布朗神父系列的首部作品集，收錄十二篇短篇故事。全書以弗蘭博（Flambeau）這位天才罪犯的「被馴服」為暗線——從第一篇〈藍寶石十字架〉中布朗智勝弗蘭博，到第四篇〈飛天星鑽〉弗蘭博因布朗的道德感召而金盆洗手，隨後弗蘭博轉為布朗的搭檔協助破案。十二篇故事涵蓋了各類謎題：密室殺人、不在場證明、身分偽裝、不可能犯罪，但每個謎底的核心都不在物理層面的詭計，而在人性層面的洞察。 ---
 
-🔗 完整分析 → https://murderresearch.github.io/Detective-Analysis/articles/arsene-lupin-super-sleuth.html
+🔗 完整分析 → https://murderresearch.github.io/Detective-Analysis/articles/the-innocence-of-father-brown.html
 
-#推理小說 #推理解剖室 #莫里斯盧布朗
+#推理小說 #推理解剖室 #卻斯特頓
