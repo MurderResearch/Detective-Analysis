@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Club of Queer Trades — Detective Analysis</title>
+<meta name="description" content="This book is a loosely linked collection of short stories, unified by the concept of the Club of Queer Trades: a mysterious organisation whose sole membership r">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-club-of-queer-trades.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-club-of-queer-trades.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-club-of-queer-trades.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-club-of-queer-trades.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-club-of-queer-trades.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-club-of-queer-trades.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-club-of-queer-trades.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-club-of-queer-trades.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Detective Analysis</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#latest">Latest</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Language" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 English</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-club-of-queer-trades.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-club-of-queer-trades.html">简体中文</a>
+      <a class="lang-item active" data-lang="en" href="/Detective-Analysis/en/articles/the-club-of-queer-trades.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/the-club-of-queer-trades.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/the-club-of-queer-trades.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/the-club-of-queer-trades.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/the-club-of-queer-trades.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/the-club-of-queer-trades.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">G.K. Chesterton · 1905</div>
+    <h1>The Club of Queer Trades</h1>
+    <div class="subtitle">Gilbert Keith Chesterton (G. K. Chesterton) · Short story collection (six linked stories)</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Deducibility</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Fog Rating</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="the-club-of-queer-trades-deducibility-analysis">The Club of Queer Trades — Deducibility Analysis</h1>
+<h2 id="basic-information">Basic Information</h2>
+<ul>
+<li>Author: Gilbert Keith Chesterton (G. K. Chesterton)</li>
+<li>Year: 1905</li>
+<li>Type: Short story collection (six linked stories)</li>
+<li>Detective: Basil Grant (former judge, "spiritual atmosphere" reasoner); Rupert Grant (amateur detective, Basil's younger brother, perpetually wrong in his deductions)</li>
+<li>Core mystery type: whydunit + whatdunit (the heart of each mystery is always "what on earth is actually happening" rather than "who did it")</li>
+</ul>
+<hr>
+<h2 id="deducibility-rating">Deducibility Rating</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Stars</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deducibility</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>Average convergence point 88% — in virtually every one of the six stories the answer cannot be pieced together until the very end; Chesterton deliberately withholds the critical information until the final 10% of each tale</td>
+</tr>
+<tr>
+<td>Fog Rating</td>
+<td>⭐⭐⭐⭐</td>
+<td>The misdirection is not conventional red herrings but rather structurally imposed "over-rational wrong reasoning paths" — the reader is led astray by following the author's planted "failing detective" Rupert into every trap</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Editorial note on this collection:</strong> Four of the most representative stories are analysed in depth (Chapters One, Two, Three, and Five); the remaining two (Chapters Four and Six) are covered in the Additional Notes. The collection is presented as a linked cycle, and the grand revelation of Chapter Six — that Basil Grant is not merely a private investigator but the founding president of the Club of Queer Trades itself, and that his own "queer trade" is the book's greatest single mystery — crowns the entire structure.</p>
+<hr>
+<h2 id="synopsis">Synopsis</h2>
+<p>This book is a loosely linked collection of short stories, unified by the concept of the Club of Queer Trades: a mysterious organisation whose sole membership requirement is that each member must earn a living by a profession of his own invention, entirely unprecedented. The narrator Swinburne follows two brothers — former judge Basil Grant and amateur detective Rupert Grant — into a series of bizarre cases scattered across London, each of whose solutions points to some outlandish yet entirely lawful new occupation.</p>
+<p>The six stories unveil the following "queer trades" one by one:
+1. <strong>Adventure and Romance Agency</strong> — sells scripted "real adventure experiences" to paying clients
+2. <strong>Organizer of Repartee</strong> — plays the fool so that a client may appear brilliantly witty; a paid service
+3. <strong>Professional Detainer</strong> — hired to detain a person for several hours by any excuse necessary
+4. <strong>Arboreal House-Agent</strong> — specialises in renting dwellings built in trees
+5. <strong>Inventor of a Gesture Language</strong> — replaces spoken language with a complete system of bodily movements
+6. <strong>Voluntary Criminal Court</strong> — tries moral offences that fall outside the reach of the law</p>
+<p>The ending reveals that all the club's members were gathered by Basil, and that his own "queer trade" is the last item on the list: a private moral tribunal that relies entirely on gentlemanly honour for its enforcement, has no coercive power whatsoever, yet is obeyed more scrupulously than any court of law.</p>
+<hr>
+<h2 id="in-depth-analysis-of-each-story">In-Depth Analysis of Each Story</h2>
+<hr>
+<h3 id="chapter-one-the-tremendous-adventures-of-major-brown">Chapter One: The Tremendous Adventures of Major Brown</h3>
+<h4 id="story-summary">Story Summary</h4>
+<p>Retired army officer Major Brown, while out for a stroll, is lured by a mysterious street vendor into climbing a garden wall, where he discovers that the pansies have been arranged to spell out "DEATH TO MAJOR BROWN." He then receives a cryptic summons, is attacked in a coal cellar, and eventually traces the thread to 14 Tanner's Court — where he finds only a quietly working little clerk named P. G. Northover and a bill demanding fourteen pounds from the Major.</p>
+<h4 id="truth-one-the-identity-of-the-attackers-and-their-purpose">Truth One: The Identity of the Attackers and Their Purpose</h4>
+<ul>
+<li><strong>Convergence point: approximately 90%</strong></li>
+<li>Answer: The entire episode is a scripted adventure carefully designed by the Adventure and Romance Agency for its client Gurney-Brown. A mix-up between the names "Gurney-Brown" and "Major Brown" caused the Major to be accidentally swept into an adventure that was never meant for him.</li>
+</ul>
+<h5 id="key-clues">Key Clues</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Basil says the letter's "atmosphere" is not that of a criminal document, and refuses to accept the surface reading of a murder conspiracy</td>
+<td>~40%</td>
+<td>The only meta-clue telling the reader "do not take this at face value," but the reasoning is vague and hard to credit at the time</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Northover's office is an ordinary place of business; the man himself is entirely unruffled and offers a perfectly reasonable account of the "bill"</td>
+<td>~70%</td>
+<td>No genuine criminal organisation would behave with such cool composure</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Basil suddenly asks the Major: "What was the name of your previous tenant?" → "Gurney-Brown"</td>
+<td>~90%</td>
+<td><strong>The final decisive clue:</strong> the name confusion is the root of everything, yet no earlier hint directs the reader to think of this question</td>
+</tr>
+</tbody>
+</table>
+<h5 id="supporting-clues">Supporting Clues</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Northover's card bears the initials "C.Q.T." (a mark of membership in the Club of Queer Trades)</td>
+<td>~75%</td>
+<td>Flags him as belonging to a special organisation without explaining what the organisation does</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The word "arrangements" in the letter is commercial language, not criminal instruction</td>
+<td>~35%</td>
+<td>Basil points this out; the reader can check, but most will overlook the difference in register</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The attacker in the coal cellar breaks out and flees rather than pressing the assault to a lethal conclusion</td>
+<td>~20%</td>
+<td>Hints that the purpose is not murder, though at this point the reader has no idea what the "purpose" is</td>
+</tr>
+</tbody>
+</table>
+<h5 id="red-herrings">Red Herrings</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Misdirection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The death-threat spelled out in pansies: "DEATH TO MAJOR BROWN"</td>
+<td>~10%</td>
+<td>Strongly implies someone intends to kill the Major; immediately plants the assumption of a murder plot</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The mysterious cry of "jackal" in the street — sounds like a secret code word</td>
+<td>~15%</td>
+<td>Creates an atmosphere of underground conspiracy and steers the reader toward gangs and secret societies</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The elaborately decorated mystery room and the red-haired woman (actually a hired actress)</td>
+<td>~12%</td>
+<td>Suggests a romantically complex intrigue rather than a commercial service</td>
+</tr>
+<tr>
+<td>4</td>
+<td>The physical assault in the coal cellar</td>
+<td>~18%</td>
+<td>Implies that someone is determined to harm the Major by force — but this is merely the "dramatic conflict" element written into the script</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="chapter-two-the-painful-fall-of-a-great-reputation">Chapter Two: The Painful Fall of a Great Reputation</h3>
+<h4 id="story-summary_1">Story Summary</h4>
+<p>On a tram, Basil spots a well-dressed man with silver hair and an Oriental complexion, and declares him "the most dangerous man in England" — on appearance alone, before the man has done anything. They follow the man (named Wimpole) to Lord Beaumont's salon, where Wimpole dazzles the assembled guests with sharp wit, repeatedly demolishing an irate old nobleman, Sir Walter Cholmondeliegh. At a dinner party later, however, Wimpole sits in total silence. Finally, Basil pounces on Sir Walter and pulls a piece of paper from his pocket.</p>
+<h4 id="truth-wimpoles-brilliance-is-entirely-fabricated">Truth: Wimpole's "Brilliance" Is Entirely Fabricated</h4>
+<ul>
+<li><strong>Convergence point: approximately 90%</strong></li>
+<li>Answer: Sir Walter Cholmondeliegh is an "Organizer of Repartee" — he is paid to play the fool, to deliver scripted straight lines that set up Wimpole's pre-rehearsed witty replies, thus making his client appear dazzling. At the dinner party Wimpole falls silent because his "script" has been exhausted, or because the two men were unable to co-ordinate in advance.</li>
+</ul>
+<h5 id="key-clues_1">Key Clues</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Wimpole passes a note through a crack in a door in a poor street, saying "Go at once, take a cab"</td>
+<td>~22%</td>
+<td>This is the delivery of a secret commission; at the time the reader has no idea what it contains and will likely read it as gang communication</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sir Walter's outbursts of fury at Wimpole erupt at almost exactly the same rhythmic intervals each time — like a performance</td>
+<td>~45%</td>
+<td>A genuinely enraged man's anger does not follow such regular timing; this hints that he is playing a role</td>
+</tr>
+<tr>
+<td>3</td>
+<td>At the dinner party Wimpole is completely silent, even when the perfect moment to speak arises</td>
+<td>~85%</td>
+<td><strong>Decisive supporting clue</strong> — his "brilliance" depends on preparation; without a script he cannot perform</td>
+</tr>
+<tr>
+<td>4</td>
+<td>The slip of paper Basil tears from Sir Walter's pocket shows a pre-written question-and-answer script (C. says…; W. replies…)</td>
+<td>~92%</td>
+<td><strong>The final key clue:</strong> the written script exposes the entire deception in black and white</td>
+</tr>
+</tbody>
+</table>
+<h5 id="supporting-clues_1">Supporting Clues</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Secretary Drummond observes that Wimpole was quite quiet when he first arrived, and only "came alive" once Sir Walter appeared</td>
+<td>~48%</td>
+<td>Suggests Wimpole's performance depends on Sir Walter's presence, though at the time most readers will take this for coincidence</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Basil's "spiritual atmosphere" judgment: at a glance he determines Wimpole's "wickedness" consists in "performing himself rather than being himself"</td>
+<td>~5%</td>
+<td>In retrospect a precise insight, but at the time it has no concrete support and the reader cannot follow it</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Sir Walter's enraged remarks fall, almost every time, into exactly the context that is easiest for Wimpole to parry</td>
+<td>Throughout</td>
+<td>If the reader notices how well he "cooperates," this is a significant signal</td>
+</tr>
+</tbody>
+</table>
+<h5 id="red-herrings_1">Red Herrings</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Misdirection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Sir Walter's obvious fury and contempt toward Wimpole</td>
+<td>Throughout</td>
+<td>Leads the reader to take Sir Walter as a pure victim rather than a co-conspirator</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Basil's "reading people by appearance" sounds like mystical nonsense — prompting rational readers to dismiss his conclusions instinctively</td>
+<td>~5%</td>
+<td>Chesterton sets a "counter-intuitive trap" here: the more "rational" the reader, the less willing he is to follow Basil's intuition</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Wimpole's visit to the poor street implies a criminal background or a shady connection</td>
+<td>~22%</td>
+<td>Steers the reader toward criminality rather than toward "professional service commission"</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="chapter-three-the-awful-reason-of-the-vicars-visit">Chapter Three: The Awful Reason of the Vicar's Visit</h3>
+<h4 id="story-summary_2">Story Summary</h4>
+<p>An elderly vicar, Ellis Shorter, bursts into Swinburne's home late at night and claims that at a "Ladies' Charitable Sewing Society" meeting he was seized by five villains disguised as old women, forced into old-woman's clothing, and made to impersonate the aged mother of reclusive Colonel Hawker (because Shorter happens to look remarkably like the Colonel's mother) in order to assist a fraud. Having escaped, he has come to beg Basil's help. Basil hears the story out and then asks a seemingly nonsensical question: "Do you know Captain Fraser?" — and demands to see Shorter's false beard.</p>
+<h4 id="truth-one-the-vicar-himself-is-also-false">Truth One: The Vicar Himself Is Also False</h4>
+<ul>
+<li><strong>Convergence point: approximately 90%</strong></li>
+<li>Answer: The "elderly vicar" standing before them is a Professional Detainer, commissioned by Captain Fraser to visit Swinburne and spin a sufficiently gripping tale to prevent him from keeping a social engagement in time, leaving Fraser free to monopolise the company of the woman he is courting. Basil's own room, it turns out, has also been infiltrated by a second Professional Detainer disguised as yet another vicar.</li>
+</ul>
+<h5 id="key-clues_2">Key Clues</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The vicar's narrative has a deliberate, unnaturally precise rhythm — exact times down to the minute — as though a skilled actor were working hard to comply with every convention of the detective-story testimony</td>
+<td>~20%</td>
+<td>A genuinely frightened person does not recount details with such systematic precision; but the clue is so subtle that nearly every reader will pass over it</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Basil suddenly asks: "Do you know Captain Fraser?" — a question that has no logical connection to anything established so far</td>
+<td>~85%</td>
+<td>Basil has already reasoned from some "atmosphere" invisible to us, but at this moment the reader still has absolutely no idea how Fraser relates to the scene</td>
+</tr>
+<tr>
+<td>3</td>
+<td>When asked about Fraser, Shorter's manner instantly reverts to the "nervous shrinking" of his initial entrance — a marked contrast to the fluency of his storytelling</td>
+<td>~86%</td>
+<td>A genuine victim would not become nervous at the mention of a stranger's name</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Basil says directly: "Let me see your false beard" — and Shorter's response is flight (not panic, but a chase that has an almost pleasurable quality)</td>
+<td>~88%</td>
+<td><strong>The final key clue:</strong> reveals that this is a performance, not a genuine crisis</td>
+</tr>
+</tbody>
+</table>
+<h5 id="supporting-clues_2">Supporting Clues</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The old vicar's nimbleness in running away and being caught is entirely inconsistent with "an elderly parish priest"</td>
+<td>~88%</td>
+<td>Advanced age and frailty are part of the disguise; once it is stripped away, his body betrays his true age</td>
+</tr>
+<tr>
+<td>2</td>
+<td>At the story's end, Basil's own bedroom conceals a second "false vicar" of exactly the same type, sent to detain Basil himself</td>
+<td>~93%</td>
+<td>Confirms the double-commission pattern of the Professional Detainer trade</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The hostess of the dinner party in question is the woman Captain Fraser loves — this explains why he needed to clear the field</td>
+<td>~95%</td>
+<td>Completes the logic of the motive and makes the whole scheme internally consistent</td>
+</tr>
+</tbody>
+</table>
+<h5 id="red-herrings_2">Red Herrings</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Misdirection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Shorter's elaborate account of his abduction — the cross-dressing, the criminal gang's argot, Colonel Hawker's "secret"</td>
+<td>~15–65%</td>
+<td>The entire body of the story is a red herring; the reader is absorbed by the ingeniously constructed "case" and never stops to question the truthfulness of the narrator himself</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The embedded "real crime" — the mystery of Colonel Hawker's reclusive existence and his mother's presence</td>
+<td>~40–65%</td>
+<td>Keeps the reader's attention on Hawker's supposed predicament rather than on suspecting the person telling the story</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The old vicar's trembling hands, fearful expression, and neat, careful appearance — the perfect image of a "traumatised victim"</td>
+<td>Throughout</td>
+<td>A complete visual and behavioural disguise, aimed precisely at any reader who relies on "observation of appearances"</td>
+</tr>
+</tbody>
+</table>
+<h4 id="truth-two-nested-the-criminal-gangs-real-plan">Truth Two (Nested): The Criminal Gang's Real Plan</h4>
+<ul>
+<li><strong>Convergence point: approximately 60%</strong></li>
+<li>Answer: The five figures disguised as old women intended to use Shorter as a stand-in for Colonel Hawker's mother (on account of his resemblance to her) to trick their way into the Colonel's sealed residence. This answer, however, is disclosed mid-story by the criminals themselves.</li>
+</ul>
+<hr>
+<h3 id="chapter-five-the-noticeable-conduct-of-professor-chadd">Chapter Five: The Noticeable Conduct of Professor Chadd</h3>
+<h4 id="story-summary_3">Story Summary</h4>
+<p>The morning after linguistics professor Chadd receives good news (an appointment at the British Museum), he suddenly begins making continuous strange gestures with his limbs and refuses to speak a word. His family, assuming he has gone mad, immediately summons a doctor and Basil. The doctor, however, declares that Chadd's mental state is perfectly normal. Basil begins imitating Chadd's movements in the garden, and the two seem to converse by dancing.</p>
+<h4 id="truth-the-professor-is-conducting-a-scientific-experiment-using-his-invented-movement-language">Truth: The Professor Is Conducting a Scientific Experiment Using His Invented "Movement Language"</h4>
+<ul>
+<li><strong>Convergence point: approximately 85%</strong></li>
+<li>Answer: Professor Chadd's academic theory holds that language is a system developed by an individual organism and then acquired by others through observation and imitation. The previous evening, Basil had taunted him — "Your understanding of the Zulus is intellectual, not instinctive" — and Chadd resolved to refute this by action. He invented a complete movement language and vowed that he would use no old language until someone had managed to understand the new one. He has not gone mad; he is conducting a deliberate experiment in communication.</li>
+</ul>
+<h5 id="key-clues_3">Key Clues</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The previous evening Basil challenged Chadd: "Your knowledge of the Zulus is scholarly, not savage," and threw his umbrella away as a demonstration</td>
+<td>~5% (retrospective)</td>
+<td>This is the root of the motive, but the reader cannot possibly connect this challenge to the subsequent "madness" before it happens</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Chadd's eyes remain clear and alert throughout; his manner is calm; he responds to external stimuli normally — only his legs are moving; his mind is visibly intact</td>
+<td>~50%</td>
+<td>The strange split between "detective's head and clown's limbs"; a reader who notices this dissociation should begin to doubt that this is genuine madness</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The doctor formally declares: "There are no clinical signs of mental disorder whatsoever"</td>
+<td>~75%</td>
+<td><strong>Key turning point:</strong> eliminates "nervous breakdown" — the most intuitive explanation — and forces the reader to seek another answer</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Basil begins copying Chadd's movements, and the two fall into a rhythmic give-and-take — each responding to the other</td>
+<td>~80%</td>
+<td>A communicative structure exists between the movements; this is not random madness but some kind of language system</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Basil explains: Chadd has invented a "movement language," put his language-origins theory into practice, and taken a vow to use it</td>
+<td>~90%</td>
+<td><strong>Final revelation:</strong> the full truth is laid out, though to reconstruct it the reader must remember the academic discussion from the first evening</td>
+</tr>
+</tbody>
+</table>
+<h5 id="supporting-clues_3">Supporting Clues</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Chadd is a leading scholar of the relationship between language and primitive peoples — his strange behaviour happens to align perfectly with his own academic field</td>
+<td>Throughout</td>
+<td>A reader who keeps this background in mind will find it easier, once the doctor has said "he is not mad," to reason toward the correct answer</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The commonplace explanation — "good news drove him mad" — is dismissed by Basil from the outset: "The remarkable thing is that he has not gone mad because of it"</td>
+<td>~30%</td>
+<td>Basil makes plain that the answer does not lie there, without saying where it does lie</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The "dance conversation" between Chadd and Basil shocks Bingham but also allows Basil to transmit a message on Chadd's behalf</td>
+<td>~82%</td>
+<td>Genuine communication is taking place, confirming that the movements are a meaningful language rather than meaningless frenzy</td>
+</tr>
+</tbody>
+</table>
+<h5 id="red-herrings_3">Red Herrings</h5>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue</th>
+<th>Position (%)</th>
+<th>Misdirection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The "joy-madness" reading — the excitement of the new appointment has overwhelmed a fragile nervous system</td>
+<td>~25–70%</td>
+<td>The first reaction of every character in the story except Basil, and of virtually every reader; it is the most "reasonable" wrong answer</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The doctor's initial diagnostic leaning (first asking "Drink? Delusions?")</td>
+<td>~75%</td>
+<td>Leads the reader to expect the answer is some specific psychiatric condition</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Chadd's face is entirely expressionless, mask-like — suggesting complete withdrawal from the outer world</td>
+<td>Throughout</td>
+<td>A "mask" implies "loss of consciousness"; but this is in fact the deliberately neutral expression of a man conducting a rational experiment</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="reasoning-path-reconstruction">Reasoning Path Reconstruction</h2>
+<h3 id="major-brown-how-does-that-letter-not-look-like-a-criminal-document">Major Brown: How Does That Letter Not Look Like a Criminal Document?</h3>
+<p>At <strong>40%</strong>, when Basil says "This is not a letter written by a criminal," the reader should feel the first genuine doubt: if not a crime, then what? That doubt ought to prompt a closer re-reading of the letter's language — "arrangements" (commercial scheduling) rather than "orders" (criminal commands); the word "account" (a bill); Northover's title of "B.A." (a Bachelor of Arts) rather than anonymity. At <strong>70%</strong> Northover's unruffled composure in his office should deepen the suspicion further. Yet the final piece needed to complete the deduction — that the previous tenant was named Gurney-Brown — is impossible for the reader to find independently anywhere in the text, because there is no prior hint pointing in the direction of a name confusion. Even the most attentive reader cannot, before the <strong>85%</strong> mark, do better than "I suspect this is not a real crime" — and cannot supply the correct answer.</p>
+<p><strong>The point where the rational reader fails:</strong> Side by side with Rupert, the reader finds it almost impossible to resist the criminal picture assembled from "death threat + cellar assault + mysterious letter," especially when the physical attack on the Major actually happened.</p>
+<hr>
+<h3 id="the-organizer-of-repartee-what-does-wimpoles-silence-tell-us">The Organizer of Repartee: What Does Wimpole's Silence Tell Us?</h3>
+<p>The best moment for the reader to approach the truth is the dinner-party silence at <strong>85%</strong>. A genuinely witty man ought to shine brightest in the most favourable conditions; Wimpole's silence admits only two explanations: he is nervous, or he has no "material." If the reader also remembers Drummond's observation (Wimpole was quite quiet at first, and only glittered once Sir Walter appeared), the hypothesis "he needs Sir Walter as his straight man" can begin to take shape. Even so, the leap from "needs a straight man" to "the two rehearsed their lines in advance" requires the final confirmation of the written script to complete it.</p>
+<p><strong>The special misdirection of this story:</strong> The reader is guided to ask "Why does Basil call Wimpole a bad man?" and expects the "badness" to be wickedness in the conventional moral sense. But Wimpole's "evil" amounts only to deception (counterfeiting intelligence); Basil's judgment is correct, but the reason is entirely unlike what the reader anticipates.</p>
+<hr>
+<h3 id="the-vicars-visit-why-does-the-detective-puzzle-point-back-at-the-storyteller-himself">The Vicar's Visit: Why Does the "Detective Puzzle" Point Back at the Storyteller Himself?</h3>
+<p>The supreme difficulty of this story is that the reader is designed to believe the narrator implicitly (Shorter's viewpoint is relayed through Swinburne's). This is a meta-level misdirection — the real mystery is not "who did it" but "who is lying." In theory, a reader might notice at <strong>20%</strong> that Shorter's account is "too deliberate, too detailed," but this feeling is extremely hard to convert into a reasoned deduction. Harder still: even if the reader suspects Shorter of performing, guessing the existence of a "Professional Detainer" as a trade is nearly impossible.</p>
+<p><strong>This is the most heavily fogged story in the entire collection:</strong> the answer requires the reader to challenge the entire narrative frame, not merely to interpret the events within it.</p>
+<hr>
+<h3 id="professor-chadd-once-the-doctor-says-he-is-not-mad-where-is-the-answer">Professor Chadd: Once the Doctor Says "He Is Not Mad," Where Is the Answer?</h3>
+<p>The doctor's declaration at <strong>75%</strong> is the single most important turning point. Before it, any explanation can be a mental illness; after it, the reader is forced to ask: why would a perfectly sane man refuse to speak and choose only to dance? If the reader remembers the first evening's linguistics discussion — particularly Chadd's theory that language can be invented by one individual and then acquired by others through imitation — the answer is at hand. This story contains the most "fair" puzzle in the collection: the decisive clue (the language-origins theory) is given at <strong>5%</strong> in plain direct statement, without any signal that "this is the key to solving the mystery."</p>
+<p><strong>The reasoning path to this solution:</strong>
+1. Notice the strange dissociation — "lucid mind, moving legs" (50%)
+2. Accept the doctor's verdict: "He is not mad" (75%)
+3. Ask: why would a rational man voluntarily abandon language?
+4. Recall the previous evening's linguistics debate and Basil's challenge
+5. Connect: Chadd is enacting his own theory, refuting Basil through action</p>
+<p>This path is theoretically achievable, making this chapter the <strong>least difficult puzzle</strong> in the entire book, with an estimated convergence point of <strong>78%</strong> — readers who remember the theory have a genuine chance to deduce the answer after the doctor's declaration.</p>
+<hr>
+<h2 id="additional-notes">Additional Notes</h2>
+<h3 id="the-club-of-queer-trades-and-its-singular-place-in-the-history-of-detective-fiction">The Club of Queer Trades and Its Singular Place in the History of Detective Fiction</h3>
+<p>This 1905 short-story collection is one of the earliest "anti-detective" works in the history of the genre — not anti-detective in the sense of opposing detectives, but anti-methodological in opposing a particular kind of detective reasoning. The book's central argument is personified by two brothers:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Rupert Grant</th>
+<th>Basil Grant</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Method</td>
+<td>Logical deduction, accumulation of facts</td>
+<td>"Spiritual atmosphere," overall impression</td>
+</tr>
+<tr>
+<td>Detective archetype</td>
+<td>Sherlock Holmes (Conan Doyle style)</td>
+<td>No clear archetype (Chestertonian)</td>
+</tr>
+<tr>
+<td>Deductive record</td>
+<td>Wrong every time</td>
+<td>Right every time</td>
+</tr>
+<tr>
+<td>Effect on the reader</td>
+<td>Leads the reader toward the wrong answer</td>
+<td>Mysterious and nearly impossible to follow</td>
+</tr>
+</tbody>
+</table>
+<p>This design is Chesterton's systematic satire of "pure rational reasoning." Basil delivers one line in the book that is almost its manifesto: "Facts point in all directions, it seems to me, like the thousands of twigs on a tree. It's only the life of the tree that has unity and goes up."</p>
+<p>This philosophical position is a rare counter-current in the history of detective fiction.</p>
+<h3 id="the-double-structure-puzzle-and-puzzle-container">The Double Structure: Puzzle and Puzzle-Container</h3>
+<p>The book is not merely six puzzles; it has an "outer puzzle" that contains the six inner ones: <strong>What is the Club of Queer Trades? Who are its members? Who is its president?</strong></p>
+<p>The answer to this outer puzzle is revealed only at the very end of Chapter Six: Basil Grant himself is the president. His own "queer trade" is a Voluntary Criminal Court — a tribunal that tries not legal offences (murder, theft) but moral ones (spreading scandal, jealousy, selfishness). Its verdicts carry no coercive power whatever, resting entirely on the honour of the defendant for their execution — yet they are obeyed more strictly than any law.</p>
+<p>The old woman's mystery in Chapter Six is the finest illustration of this system: she sits weeping in her cellar, crying "Let me out," yet when her rescuer arrives she refuses to leave — because she is serving out the sentence Basil imposed on her of solitary reflection in confinement, punishment for the gossip with which she had destroyed a marriage.</p>
+<p>This design gives the entire book the architecture of a "who is the final mystery" structure: each "queer trade" in the six stories is a clue pointing toward a larger question — how has a former judge constructed, at the margins of society, a moral order more effective than the law itself?</p>
+<h3 id="comparison-with-the-father-brown-series">Comparison with the Father Brown Series</h3>
+<p>The Club of Queer Trades predates the Father Brown stories (begun 1911) by six years and can be read as the proving ground for Chesterton's detective philosophy. Basil's "spiritual atmosphere" method of reasoning develops into something far more mature in Father Brown — whose "I understand the murderer because I too possess that sinful impulse" is a deeper expression of the same philosophy.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Basil Grant</th>
+<th>Father Brown</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Appearance</td>
+<td>Tall, imposing, former judge</td>
+<td>Short, plain, country priest</td>
+</tr>
+<tr>
+<td>Basis of reasoning</td>
+<td>"Spiritual atmosphere," overall impression</td>
+<td>Understanding the nature of sin (theological perspective)</td>
+</tr>
+<tr>
+<td>Contrasting failure</td>
+<td>Younger brother Rupert (the logician)</td>
+<td>Occasional rationalist characters</td>
+</tr>
+<tr>
+<td>Core message</td>
+<td>Facts are not the same as truth</td>
+<td>Knowing the human heart is where reasoning begins</td>
+</tr>
+</tbody>
+</table>
+<h3 id="assessment-of-fairness-in-this-collection">Assessment of Fairness in This Collection</h3>
+<p>In candour, The Club of Queer Trades is quite weak in the spirit of fair play. In almost every story, the answer depends on the reader's "happening to know some highly specific piece of background information" — the name of the previous tenant, the existence of a commissioning party, the professor's academic theory — and these pieces of information are either too oblique or simply not signposted with sufficient clarity.</p>
+<p>Chesterton's evident aim is not for the reader to "work out the solution" but to provoke, once the answer is revealed, the response: "Ah — so that was it. How extraordinary." This is an aesthetic of surprise rather than an aesthetic of puzzle-solving. In that sense the book is closer to parable or light philosophical fiction, wearing the costume of a detective story.</p>
+<p>And that is precisely why it stood so conspicuously apart in 1905: at a time when Conan Doyle's logical-deduction aesthetic already dominated the market, Chesterton deliberately wrote a book that makes you think you are reading detection while in fact feeding you philosophy.</p>
+    <a href="../index.html" class="back-link">← Back to home</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Detective Analysis</p>
+    <p>Five authors · eighty-eight works · 135 years of evolving detective difficulty.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
