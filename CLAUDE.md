@@ -57,16 +57,17 @@ Analysis files follow a strict structure defined in `ANALYSIS_FRAMEWORK.md`: 基
 
 ## 每日自動化架構（2026-04-19 起）
 
-每天清晨 05:06（Taipei）全自動發布，流程完全在雲端跑，本機不需要開著。
+每天清晨 03:06（Taipei）全自動發布，流程完全在雲端跑，本機不需要開著。
 
 **執行順序：**
 
-1. **05:06 Taipei** — Claude Code RemoteTrigger `trig_01Q39kqQ8n7oJ5JEigK73ZR6` 觸發遠端 agent（Sonnet 4.6）
+1. **03:06 Taipei** — Claude Code RemoteTrigger `trig_01Q39kqQ8n7oJ5JEigK73ZR6` 觸發遠端 agent（Sonnet 4.6）
 2. Agent clone repo → 判斷下一本書 → 寫 `_analysis.md` + 7 語翻譯 → `python3 build.py` → `git push`
 3. Push 觸發兩條 GitHub Actions：
    - `.github/workflows/deploy.yml` → 部署 `docs/` 到 GitHub Pages
    - `.github/workflows/post-to-fb.yml` → 讀 repo secrets 發 FB + 發 Telegram「✅ 已發布」到「謀殺研究室」群組
-4. **07:00 Taipei** — `.github/workflows/daily-check.yml` 守衛檢查 fb-posted.json 的 date 是否 = 今日；若否，發 Telegram「⚠️ 今日尚未發布」
+4. **06:00 Taipei** — 本機 fallback crontab（若 CCR 失敗才會實際執行）
+5. **05:00 Taipei** — `.github/workflows/daily-check.yml` 守衛檢查 fb-posted.json 的 date 是否 = 今日；若否，發 Telegram「⚠️ 今日尚未發布」
 
 **排程管理頁：** https://claude.ai/code/scheduled/trig_01Q39kqQ8n7oJ5JEigK73ZR6
 
@@ -103,7 +104,7 @@ Analysis files follow a strict structure defined in `ANALYSIS_FRAMEWORK.md`: 基
 
 - 憑證走 GitHub Repo Secrets：`TELEGRAM_BOT_TOKEN`（@MurderResearchBot）、`TELEGRAM_CHAT_ID`（`-5160768597` = 謀殺研究室群組）
 - 成功通知在 `post-to-fb.yml` 的 `Notify Telegram (success)` step
-- 失敗通知：`post-to-fb.yml` 的 `Notify Telegram (failure)` step + `daily-check.yml` 守衛（07:00 Taipei）
+- 失敗通知：`post-to-fb.yml` 的 `Notify Telegram (failure)` step + `daily-check.yml` 守衛（05:00 Taipei）
 - 重要：**agent 本身無法發 Telegram**（CCR 網路 allowlist），所有通知必經 GH Actions
 
 ### 給人類使用者（Letranger）
@@ -118,7 +119,7 @@ bash publish.sh
 
 ### 常見失敗與除錯
 
-- **Agent 雲端失敗（整個 session crashed）** → 07:00 Taipei 守衛發 ⚠️ 告警
+- **Agent 雲端失敗（整個 session crashed）** → 05:00 Taipei 守衛發 ⚠️ 告警
 - **Agent 跑了但 git push 失敗** → 同上，守衛抓得到
 - **GH Actions FB 發文失敗（token 過期等）** → `post-to-fb.yml` failure branch 發 ❌ + run 連結
 - **FB token 過期** → `python3 scripts/post-to-fb.py` 會拋 HTTP 190；需 rotate token 後更新 repo secret `FB_PAGE_ACCESS_TOKEN`

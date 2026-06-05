@@ -2,9 +2,9 @@ name: Daily publish watchdog
 
 on:
   schedule:
-    # 07:00 Taipei = 23:00 UTC （前一天的 23:00 UTC）
-    # agent 於 05:06 Taipei 觸發，給 ~2 小時 buffer
-    - cron: '0 23 * * *'
+    # 05:00 Taipei = 21:00 UTC
+    # agent 於 03:06 Taipei 觸發，給 ~2 小時 buffer
+    - cron: '0 21 * * *'
   workflow_dispatch:
 
 jobs:

@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-# 每日自動分析 + 發布腳本（v2 — 分階段、有 timeout、可斷點續跑）
-# crontab: 6 5 * * * /Users/letranger/Code/MurderResearch/scripts/daily-publish.sh
+# 每日自動分析 + 發布腳本（v3 — CCR fallback、短 timeout + 重試）
+# crontab: 0 6 * * * /Users/letranger/Code/MurderResearch/scripts/daily-publish.sh
+# 本機腳本定位為 CCR 雲端觸發器的 fallback（CCR 03:06，本機 06:00）
 set -euo pipefail
 
 # cron 不會自動 source shell config，手動載入 PATH 等設定
@@ -12,8 +13,11 @@ REPO_DIR="$HOME/Code/MurderResearch"
 LOG_DIR="$HOME/.murder-research/logs"
 LOG_FILE="$LOG_DIR/daily-$(TZ=Asia/Taipei date '+%Y-%m-%d').log"
 CLAUDE="/opt/homebrew/bin/claude"
-PHASE1_TIMEOUT=5400   # 分析稿最多 90 分鐘（秒）
-PHASE2_TIMEOUT=5400   # 翻譯最多 90 分鐘（秒）
+PHASE1_TIMEOUT=1200   # 分析稿最多 20 分鐘（成功案例皆 <10 分鐘，掛住則快速 fail）
+PHASE2_TIMEOUT=3600   # 翻譯最多 60 分鐘
+PHASE1_RETRIES=3      # Phase 1 重試次數
+PHASE2_RETRIES=2      # Phase 2 重試次數
+RETRY_DELAY=60        # 重試間隔（秒）
 LANGS="en zh-CN ja ko de es fr"
 
 mkdir -p "$LOG_DIR"
@@ -116,12 +120,14 @@ if [ ! -f "$TXT_PATH" ]; then
     exit 1
 fi
 
-# ── Phase 1: 寫分析稿 ──
+# ── Phase 1: 寫分析稿（含重試）──
 if [ -f "$ANALYSIS_PATH" ]; then
     log "Phase 1 跳過：分析稿已存在"
 else
-    log "Phase 1: 寫分析稿..."
-    run_with_timeout "$PHASE1_TIMEOUT" $CLAUDE -p "你是推理解剖室的分析 agent。
+    PHASE1_OK=false
+    for attempt in $(seq 1 "$PHASE1_RETRIES"); do
+        log "Phase 1: 寫分析稿（第 ${attempt}/${PHASE1_RETRIES} 次, timeout=${PHASE1_TIMEOUT}s）..."
+        run_with_timeout "$PHASE1_TIMEOUT" $CLAUDE -p "你是推理解剖室的分析 agent。
 
 任務：為 ${TXT_PATH} 寫分析稿，存為 ${ANALYSIS_PATH}。
 
@@ -134,19 +140,28 @@ else
 
 品質底線：深度分析，不能只是摘要。文風參考上述範例稿。
 完成後不需要做其他事（不需翻譯、不需 build、不需 push）。" \
-        --allowedTools "Bash,Read,Write,Edit,Glob,Grep" \
-        --model sonnet \
-        --max-turns 30 \
-        --verbose 2>&1 || {
-        log "ERROR: Phase 1 失敗 (exit=$?)"
-        exit 1
-    }
+            --allowedTools "Bash,Read,Write,Edit,Glob,Grep" \
+            --model sonnet \
+            --max-turns 30 \
+            --verbose 2>&1 && RESULT=0 || RESULT=$?
 
-    if [ ! -f "$ANALYSIS_PATH" ]; then
-        log "ERROR: Phase 1 完成但分析稿不存在"
+        if [ -f "$ANALYSIS_PATH" ]; then
+            PHASE1_OK=true
+            log "Phase 1 完成：$(wc -l < "$ANALYSIS_PATH") 行"
+            break
+        fi
+
+        log "WARNING: Phase 1 第 ${attempt} 次失敗 (exit=${RESULT})"
+        if [ "$attempt" -lt "$PHASE1_RETRIES" ]; then
+            log "等待 ${RETRY_DELAY}s 後重試..."
+            sleep "$RETRY_DELAY"
+        fi
+    done
+
+    if ! $PHASE1_OK; then
+        log "ERROR: Phase 1 經 ${PHASE1_RETRIES} 次嘗試仍失敗"
         exit 1
     fi
-    log "Phase 1 完成：$(wc -l < "$ANALYSIS_PATH") 行"
 fi
 
 # ── Phase 2: 寫 7 語翻譯 ──
@@ -165,8 +180,19 @@ MISSING_LANGS=$(echo "$MISSING_LANGS" | xargs)  # trim
 if [ -z "$MISSING_LANGS" ]; then
     log "Phase 2 跳過：7 語翻譯皆已存在"
 else
-    log "Phase 2: 翻譯缺少的語系: ${MISSING_LANGS}"
-    run_with_timeout "$PHASE2_TIMEOUT" $CLAUDE -p "你是推理解剖室的翻譯 agent。
+    for attempt in $(seq 1 "$PHASE2_RETRIES"); do
+        # 每次重試前重新檢查缺哪些語系
+        MISSING_LANGS=""
+        for lang in $LANGS; do
+            if [ ! -f "${TRANS_DIR}/${SLUG}.${lang}.md" ]; then
+                MISSING_LANGS="${MISSING_LANGS} ${lang}"
+            fi
+        done
+        MISSING_LANGS=$(echo "$MISSING_LANGS" | xargs)
+        [ -z "$MISSING_LANGS" ] && break
+
+        log "Phase 2: 翻譯缺少的語系: ${MISSING_LANGS}（第 ${attempt}/${PHASE2_RETRIES} 次, timeout=${PHASE2_TIMEOUT}s）"
+        run_with_timeout "$PHASE2_TIMEOUT" $CLAUDE -p "你是推理解剖室的翻譯 agent。
 
 任務：將 ${ANALYSIS_PATH} 翻譯成以下語系：${MISSING_LANGS}
 輸出路徑：${TRANS_DIR}/${SLUG}.{lang}.md
@@ -182,12 +208,17 @@ else
 - metadata 標籤用該語系對應詞（參考 build.py 的 META_LABELS）
 - 檔名格式：${SLUG}.{lang}.md（lang = en, zh-CN, ja, ko, de, es, fr）
 - 完成後不需要做其他事（不需 build、不需 push）" \
-        --allowedTools "Bash,Read,Write,Edit,Glob,Grep,Agent" \
-        --model sonnet \
-        --max-turns 50 \
-        --verbose 2>&1 || {
-        log "WARNING: Phase 2 翻譯未全部完成 (exit=$?)"
-    }
+            --allowedTools "Bash,Read,Write,Edit,Glob,Grep,Agent" \
+            --model sonnet \
+            --max-turns 50 \
+            --verbose 2>&1 || {
+            log "WARNING: Phase 2 第 ${attempt} 次翻譯未全部完成 (exit=$?)"
+        }
+
+        if [ "$attempt" -lt "$PHASE2_RETRIES" ]; then
+            sleep "$RETRY_DELAY"
+        fi
+    done
 
     # 報告翻譯結果
     STILL_MISSING=""
