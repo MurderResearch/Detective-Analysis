@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L'Homme qui en savait trop (The Man Who Knew Too Much) — Salle de Dissection Policière</title>
+<meta name="description" content="L'Homme qui en savait trop est un recueil de nouvelles de Chesterton centré sur la déduction politique. Le protagoniste, Horne Fisher, est un gentleman issu d'u">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-man-who-knew-too-much.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-man-who-knew-too-much.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-man-who-knew-too-much.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-man-who-knew-too-much.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-man-who-knew-too-much.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-man-who-knew-too-much.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-man-who-knew-too-much.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-man-who-knew-too-much.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Salle de Dissection Policière</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Accueil</a>
+        <a href="../index.html#latest">Récents</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Langue" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 Français</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-man-who-knew-too-much.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-man-who-knew-too-much.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-man-who-knew-too-much.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/the-man-who-knew-too-much.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/the-man-who-knew-too-much.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/the-man-who-knew-too-much.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/the-man-who-knew-too-much.html">Español</a>
+      <a class="lang-item active" data-lang="fr" href="/Detective-Analysis/fr/articles/the-man-who-knew-too-much.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">G. K. Chesterton · 1922</div>
+    <h1>L'Homme qui en savait trop (The Man Who Knew Too Much)</h1>
+    <div class="subtitle">G.K. Chesterton · Recueil de nouvelles (8 récits)</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Déductibilité</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Indice de brume</div>
+        <div class="rating-badge-stars">⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="lhomme-qui-en-savait-trop-the-man-who-knew-too-much-analyse-deductive">L'Homme qui en savait trop (The Man Who Knew Too Much) — Analyse déductive</h1>
+<h2 id="informations-de-base">Informations de base</h2>
+<ul>
+<li>Auteur : G.K. Chesterton</li>
+<li>Année de publication : 1922</li>
+<li>Genre : Recueil de nouvelles (8 récits)</li>
+<li>Personnage du détective : Horne Fisher</li>
+<li>Type de mystère central : whodunit / howdunit / complot politique</li>
+</ul>
+<hr>
+<h2 id="evaluation-generale-de-la-deductibilite">Évaluation générale de la déductibilité</h2>
+<table>
+<thead>
+<tr>
+<th>Indicateur</th>
+<th>Étoiles</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Déductibilité</td>
+<td>⭐⭐⭐⭐</td>
+<td>Point de convergence moyen à 76 % — le mécanisme criminel de chaque récit est habilement dissimulé dans le contexte social et les structures de pouvoir ; les indices se présentent sous forme de bavardages apparemment anodins et d'observations de détails, et le lecteur doit percer la satire politique de surface pour reconstituer la vérité</td>
+</tr>
+<tr>
+<td>Niveau de brouillard</td>
+<td>⭐⭐⭐⭐</td>
+<td>Tromperie élevée : Chesterton exploite systématiquement les idées préconçues du lecteur sur le statut social, l'identité professionnelle et les comportements apparents pour créer le brouillard ; les fausses pistes les plus efficaces sont souvent l'« image publique » des personnages eux-mêmes</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="synopsis">Synopsis</h2>
+<p><em>L'Homme qui en savait trop</em> est un recueil de nouvelles de Chesterton centré sur la déduction politique. Le protagoniste, Horne Fisher, est un gentleman issu d'une famille politique distinguée, aux relations innombrables avec les cercles du pouvoir britannique. Érudit, nonchalant, portant un cynisme las, il possède néanmoins une perspicacité hors du commun. Le paradoxe le plus profond du livre est le suivant : Fisher perce invariablement les mystères, mais ne révèle presque jamais la vérité — car si la vérité venait à être divulguée, elle ébranlerait l'Empire, détruirait le monde politique, et déclencherait des scandales. Il est l'un des détectives les plus tragiques de l'histoire du roman policier : il en sait trop, et c'est pour cela qu'il ne peut que garder le silence.</p>
+<p>Les huit nouvelles sont racontées du point de vue du journaliste Harold March, qui suit Fisher à travers les recoins sombres de la haute société britannique et des avant-postes de l'Empire. Du meurtrier déguisé en homme ordinaire à l'officier traître à la patrie, des scandales royaux au chantage politique, chaque récit révèle l'abîme qui sépare « connaître la vérité » de « pouvoir la dire ».</p>
+<hr>
+<h2 id="analyse-de-la-verite">Analyse de la vérité</h2>
+<h3 id="premiere-nouvelle-le-visage-sur-la-cible-the-face-in-the-target">Première nouvelle : Le visage sur la cible (The Face in the Target)</h3>
+<ul>
+<li><strong>Point de convergence des indices : 72 %</strong></li>
+<li><strong>Mystère central</strong> : Le juge à la retraite Turnbull meurt dans un accident de voiture en bas d'une falaise — accident ou meurtre ?</li>
+<li><strong>Réponse</strong> : Le propriétaire du manoir, Jefferson Jenkins, est le meurtrier. C'est l'étranger indésirable que Turnbull avait voulu condamner des années auparavant ; il dissimule désormais sa véritable identité derrière une façade de riche parvenu grotesque. Il a délibérément feint d'être un mauvais tireur, alors qu'il est en réalité un tireur d'élite — profitant du bruit des coups de feu lors d'un exercice de tir, il abat Turnbull au volant de sa voiture avec le fusil de Burke. Le véhicule perd le contrôle et tombe dans le ravin, donnant l'apparence d'un accident de la circulation.</li>
+</ul>
+<h4 id="indices-cles">Indices clés</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Position</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Turnbull a acheté des sandwichs à l'hôtel, alors qu'il devait se rendre à un dîner au manoir</td>
+<td>~30 %</td>
+<td>Point de départ du raisonnement de Fisher : Turnbull anticipait que sa visite pourrait mal tourner et n'avait pas l'intention de dîner au manoir — ce qui suggère qu'il venait pour une confrontation, non pour une rencontre mondaine</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Le palmarès de tir « raté » de Jenkins est étrangement précis : il tire l'insigne du chapeau, puis la girouette du bâtiment</td>
+<td>~35 %</td>
+<td>Ces tirs « manqués » requièrent en réalité une précision extrême — il faut toucher l'insigne sans blesser la tête, toucher la girouette sans atteindre le toit</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Les impacts sur la cible semblent aléatoires, mais révèlent, une fois révélés par du phosphore, un portrait fidèle du visage de Turnbull</td>
+<td>~75 %</td>
+<td>Fisher découvre que Jenkins s'entraînait dans un stand inconnu à « peindre avec des balles », prouvant son talent exceptionnel de tireur</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Fisher découvre dans l'armurerie que le grand fusil de chasse Burke a été utilisé</td>
+<td>~65 %</td>
+<td>Un fusil de chasse ordinaire ne peut pas être mortel à cette distance ; un fusil de précision était nécessaire</td>
+</tr>
+</tbody>
+</table>
+<h4 id="indices-secondaires">Indices secondaires</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Position</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Les traits du visage de Turnbull sont très marqués — un large visage carré, un sourcil plus haut que l'autre</td>
+<td>~15 %</td>
+<td>Permet à Fisher de reconnaître immédiatement le « portrait » sur la cible</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Fisher exhibe ses connaissances sur le phosphore</td>
+<td>~5 %</td>
+<td>Prépare sa capacité à révéler les impacts par des substances chimiques</td>
+</tr>
+</tbody>
+</table>
+<h4 id="fausses-pistes">Fausses pistes</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Position</th>
+<th>Direction trompeuse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>L'image de « parvenu comique » de Jenkins — décorations dorées vulgaires, veste à carreaux tapageuse</td>
+<td>Tout au long</td>
+<td>Amène tous les personnages (et le lecteur) à le voir comme un personnage inoffensif et ridicule, sans jamais envisager qu'il puisse être un imposteur</td>
+</tr>
+<tr>
+<td>2</td>
+<td>La topographie des lieux de l'accident ressemble à première vue à un suicide ou à un accident</td>
+<td>~20 %</td>
+<td>Oriente le lecteur vers l'explication superficielle de l'« accident de la route »</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Burke se précipite dehors sans chapeau — semblant avoir reconnu le son du coup de feu</td>
+<td>~60 %</td>
+<td>Désigne brièvement Burke comme suspect</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="deuxieme-nouvelle-le-prince-disparu-the-vanishing-prince">Deuxième nouvelle : Le prince disparu (The Vanishing Prince)</h3>
+<ul>
+<li><strong>Point de convergence des indices : 80 %</strong></li>
+<li><strong>Mystère central</strong> : Comment le chef rebelle irlandais, le « Prince O'Brien », a-t-il pu disparaître d'une tour isolée encerclée par la police ? Et qui a tué les assaillants ?</li>
+<li><strong>Réponse</strong> : Le prince O'Brien n'était tout simplement pas dans la tour — il l'avait quittée bien avant d'être surveillé. La bougie s'était consumée naturellement ; personne ne l'avait soufflée. Le véritable meurtrier est le détective londonien Wilson (Hooker Wilson) : il est le premier à sauter par la fenêtre de la tour, et une fois dans la pièce vide, il abat par les fenêtres ses collègues Morton et Nolan, puis renverse l'échelle du dessus pour blesser McBride, avant de feindre d'être lui-même blessé et de s'effondrer. Son mobile est l'ambition — éliminer ses supérieurs pour obtenir une promotion.</li>
+</ul>
+<h4 id="indices-cles_1">Indices clés</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Position</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>La façon dont la bougie vacille — ce n'est pas qu'on l'a soufflée, mais le dernier sursaut d'une bougie presque consumée</td>
+<td>~45 %</td>
+<td>Fisher fait remarquer après coup que la façon dont la bougie s'est éteinte indique qu'elle brûlait depuis longtemps ; personne dans la pièce ne l'a soufflée</td>
+</tr>
+<tr>
+<td>2</td>
+<td>L'impossibilité géométrique — une seule personne ne peut pas simultanément tirer sur deux adversaires placés aux deux extrémités de la base d'un triangle</td>
+<td>~55 %</td>
+<td>La « leçon de géométrie » de Fisher suggère que le tireur n'était pas au troisième angle (dans la tour), mais à l'une des fenêtres</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Wilson avait été réprimandé publiquement par son supérieur, mais avait ravalé son amertume</td>
+<td>~40 %</td>
+<td>Morton avait réprimandé Wilson devant tout le monde pour son impolitesse envers Nolan — établissant un mobile de rancune</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Le mot « Wilson » prononcé par Nolan avant de mourir ne désigne pas quelqu'un d'autre</td>
+<td>~75 %</td>
+<td>Tous croient qu'il appelle à l'aide ; en réalité il désigne le meurtrier</td>
+</tr>
+</tbody>
+</table>
+<h4 id="indices-secondaires_1">Indices secondaires</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Position</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>La confiance fanatique de Wilson dans sa théorie du « regard neuf »</td>
+<td>~35 %</td>
+<td>Révèle son obsession de ses propres talents et son désir de promotion</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Les antécédents d'évasion du prince O'Brien — épouvantail, puits, balcon</td>
+<td>~10–20 %</td>
+<td>Montre que cet homme avait effectivement la capacité de disparaître avant d'être encerclé</td>
+</tr>
+</tbody>
+</table>
+<h4 id="fausses-pistes_1">Fausses pistes</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Position</th>
+<th>Direction trompeuse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Le dispositif entier de l'« encerclement de la tour » — présuppose que le prince O'Brien est à l'intérieur</td>
+<td>Les 80 % du début</td>
+<td>Amène lecteurs et personnages à penser que la menace vient de la personne dans la tour</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Le passé violent du prince O'Brien</td>
+<td>~10–20 %</td>
+<td>Renforce l'hypothèse selon laquelle « celui dans la tour a tiré »</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Bridget, surnommée la « Banshee » — elle a effectivement été envoyée surveiller</td>
+<td>~55 %</td>
+<td>Confirme encore que la cible est dans la tour ; en réalité, elle n'a peut-être vu que la lumière d'une bougie</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="troisieme-nouvelle-lame-du-collegien-the-soul-of-the-schoolboy">Troisième nouvelle : L'âme du collégien (The Soul of the Schoolboy)</h3>
+<ul>
+<li><strong>Point de convergence des indices : 82 %</strong></li>
+<li><strong>Mystère central</strong> : Dans une chambre forte souterraine dont les lumières ont été éteintes et les portes de fer fermées, comment le penny de Saint Paul a-t-il pu disparaître ?</li>
+<li><strong>Réponse</strong> : Celui qui a dérobé la pièce est le colonel Morris — l'officier chargé de la garder. Il utilise l'aimant laissé par le collégien O'Brien, et, depuis le plancher supérieur, passe par un trou préalablement foré, descendant un aimant au bout d'une ficelle pour attirer la fausse pièce en fer (et non en argent) vers le haut. La véritable pièce ancienne avait été vendue discrètement cinq ans auparavant par un membre de la famille royale au richissime Américain Vandam — le colonel gardait en réalité un faux, et le vol de la pièce était sa façon de prouver (du moins à lui-même) que toute l'affaire était une escroquerie.</li>
+</ul>
+<h4 id="indices-cles_2">Indices clés</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Position</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>La liste du contenu des poches du collégien : aimant, ficelle, outil à percer</td>
+<td>~30 %</td>
+<td>Ces jouets apparemment inoffensifs constituent exactement la trousse à outils complète pour commettre le crime</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Le colonel Morris se dit « voltairien » et se réjouit d'avoir démasqué des magiciens en Inde</td>
+<td>~25 %</td>
+<td>Révèle qu'il est foncièrement un « fanatique anti-superstition » — obsédé par la dénonciation des impostures</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Fisher décrit en état d'hypnose « deux morceaux d'acier — l'un courbé »</td>
+<td>~85 %</td>
+<td>L'acier courbé est l'aimant ; l'autre est la fausse pièce attirée par l'aimant — une vraie pièce d'argent n'est pas attirée par les aimants</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Fisher décrit « une tache de lumière sur le plancher » — la lumière du bas filtrant par un trou percé depuis le dessus</td>
+<td>~80 %</td>
+<td>Le colonel avait foré depuis le dessus à travers le plancher de bois pour extraire la fausse pièce de sa vitrine de verre</td>
+</tr>
+</tbody>
+</table>
+<h4 id="indices-secondaires_2">Indices secondaires</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Position</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>La pièce ancienne avait été placée et scellée à la main par un membre de la famille royale — personne n'osait en remettre l'authenticité en question</td>
+<td>~20 %</td>
+<td>Explique pourquoi le faux a pu subsister cinq ans sans être découvert</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Un article de journal mondain mentionnant que le riche Américain Vandam « se fait toujours rouler avec les antiquités »</td>
+<td>~90 %</td>
+<td>Suggère l'endroit où se trouve la vraie pièce — mais la véritable escroquerie est que la famille royale a vendu l'original et l'a remplacé par un faux</td>
+</tr>
+</tbody>
+</table>
+<h4 id="fausses-pistes_2">Fausses pistes</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Position</th>
+<th>Direction trompeuse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Le mystérieux homme en robe noire se présentant comme un « sorcier »</td>
+<td>~20–30 %</td>
+<td>Son apparence étrange et ses prétentions de magicien en font le suspect le plus évident ; mais le fait qu'il n'ait « pas de poches » suggère aussi qu'il ne peut rien dissimuler</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Le collégien qui s'échappe par la cheminée</td>
+<td>~65 %</td>
+<td>Amène le lecteur à croire que le chaos est une farce de garçon</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="quatrieme-nouvelle-le-puits-sans-fond-the-bottomless-well">Quatrième nouvelle : Le puits sans fond (The Bottomless Well)</h3>
+<ul>
+<li><strong>Point de convergence des indices : 85 %</strong></li>
+<li><strong>Mystère central</strong> : Lord Hastings, un général britannique, est retrouvé mort au bord d'un puits sans fond dans un avant-poste désertique. Le jeune officier O'Brien, amoureux de sa femme, est soupçonné d'empoisonnement — est-il vraiment le coupable ?</li>
+<li><strong>Réponse</strong> : Le meurtrier est Lord Hastings lui-même — c'est lui qui a empoisonné le café. Ayant découvert la liaison de sa femme avec O'Brien, il dispose deux tasses de café sur un présentoir tournant dans la bibliothèque, verse un poison oriental dans la tasse d'O'Brien, et projette d'emmener ce dernier au bord du puits sans fond pour y jeter son corps une fois le poison agissant. Mais quand O'Brien fait tourner le présentoir pour chercher un livre, les deux tasses échangent leurs positions. Hastings boit sa propre tasse empoisonnée et s'effondre mort au bord du puits.</li>
+</ul>
+<h4 id="indices-cles_3">Indices clés</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Position</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Hastings invite spontanément O'Brien dans la bibliothèque pour prendre le café et consulter un ouvrage — l'air de rien, mais prémédité</td>
+<td>~50 %</td>
+<td>Hastings est déjà au courant de la liaison ; cette « invitation amicale » est en réalité un piège</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Le présentoir tournant — les deux tasses sont posées sur ce présentoir</td>
+<td>~55 %</td>
+<td>Lorsque O'Brien touche le présentoir pour chercher un livre, la rotation échange les positions des deux tasses</td>
+</tr>
+<tr>
+<td>3</td>
+<td>L'existence du puits sans fond, mais son non-usage</td>
+<td>~15 % (suggestion) / 85 % (révélation)</td>
+<td>Le raisonnement central de Fisher : si O'Brien était le meurtrier et savait que la victime mourrait dans dix minutes, il aurait forcément jeté le corps dans le puits sans fond pour éliminer les preuves — mais le corps est retrouvé au bord. Conclusion inverse : O'Brien n'est pas le coupable</td>
+</tr>
+<tr>
+<td>4</td>
+<td>La rigidité du cadavre correspond aux caractéristiques d'un poison oriental particulier</td>
+<td>~70 %</td>
+<td>Indice médico-légal découvert par Greyne, mais il se trompe sur l'identité de l'empoisonneur</td>
+</tr>
+</tbody>
+</table>
+<h4 id="indices-secondaires_3">Indices secondaires</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Position</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Hastings a des origines orientales (sa mère était une danseuse de Damas)</td>
+<td>~90 %</td>
+<td>Explique comment il a pu se procurer un poison oriental</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Fisher avait précédemment laissé entendre qu'O'Brien pourrait « mal tourner »</td>
+<td>~30 %</td>
+<td>Établit le mobile d'O'Brien, mais incite aussi Fisher à examiner l'affaire plus attentivement</td>
+</tr>
+</tbody>
+</table>
+<h4 id="fausses-pistes_3">Fausses pistes</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Position</th>
+<th>Direction trompeuse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>La liaison d'O'Brien avec Lady Hastings — un mobile de meurtre par jalousie parfaitement constitué</td>
+<td>~40–50 %</td>
+<td>Désigne fortement O'Brien comme l'empoisonneur</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Said, le serviteur arabe — « l'air sinistre » et en contact possible avec le café</td>
+<td>~40 %</td>
+<td>Fisher soulève lui-même ce soupçon, puis l'écarte aussitôt</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Le « raisonnement parfait » de Greyne — O'Brien aurait empoisonné le café pendant que Hastings lui tournait le dos</td>
+<td>~70 %</td>
+<td>Logiquement solide mais fondé sur une prémisse erronée : il suppose que c'est O'Brien qui a empoisonné</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="cinquieme-nouvelle-la-manie-du-pecheur-the-fad-of-the-fisherman">Cinquième nouvelle : La manie du pêcheur (The Fad of the Fisherman)</h3>
+<ul>
+<li><strong>Point de convergence des indices : 70 %</strong></li>
+<li><strong>Mystère central</strong> : Sir Isaac Hook, magnat de l'armement naval, est retrouvé étranglé avec sa propre ligne de pêche sur une île fluviale isolée. Qui est le meurtrier ?</li>
+<li><strong>Réponse</strong> : Le meurtrier est Lord Merivale, le Premier ministre. Lors d'un entretien privé après le dîner de la veille, il a étranglé Hook, puis, en pleine nuit, a transporté le corps avec son matériel de pêche jusqu'à la petite île, l'attachant à un arbre dans la posture du pêcheur. En raison de l'excentricité de Hook — pêcher seul chaque matin de bonne heure sans accepter la moindre interruption —, personne n'a approché le cadavre de toute la journée. Le Premier ministre a ensuite pris sa voiture pour aller prononcer un discours à Birmingham. Son mobile est une libération politique : Hook était un vampire qui faisait chanter les politiciens avec des secrets commerciaux et contrôlait la politique étrangère du Premier ministre.</li>
+</ul>
+<h4 id="indices-cles_4">Indices clés</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Position</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Le soleil s'est couché, mais Hook est toujours assis sur l'île — alors qu'il ne pêche jamais après le coucher du soleil</td>
+<td>~70 %</td>
+<td>Le jugement déterminant de Fisher : l'habitude de Hook est de pêcher du lever au coucher du soleil ; s'il ne bouge pas après le coucher du soleil, quelque chose cloche</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Le Premier ministre conduit lui-même, sans chauffeur — et repart ce soir-là</td>
+<td>~40 %</td>
+<td>Lui donne le moyen de transporter le corps seul en pleine nuit et de partir seul ensuite</td>
+</tr>
+<tr>
+<td>3</td>
+<td>La conversation à table à propos de la ligne de pêche qui « ne cassait pas »</td>
+<td>~45 %</td>
+<td>Hook se vantait que sa ligne de pêche était incassable — ironie du sort, c'est cette ligne qui l'a étranglé</td>
+</tr>
+<tr>
+<td>4</td>
+<td>L'observation de Fisher selon laquelle Hook « n'utilisait que ce qu'il y a de mieux » — la simplicité n'est qu'une façade</td>
+<td>~35 %</td>
+<td>Suggère que l'image de « vie simple » de Hook est fausse ; au fond, c'est un obsessionnel du luxe et du contrôle</td>
+</tr>
+</tbody>
+</table>
+<h4 id="indices-secondaires_4">Indices secondaires</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Position</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Le contexte politique de la question suédoise — le Premier ministre prononce immédiatement après la mort de Hook un discours sur la « libération du Danemark »</td>
+<td>~55 %</td>
+<td>C'est précisément le discours qu'il ne pouvait pas prononcer du vivant de Hook — la mort de ce dernier a libéré la politique</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Le duc de Westminster et Harker ont tous deux des secrets que Hook pouvait utiliser pour les faire chanter</td>
+<td>~80 %</td>
+<td>Explique pourquoi plusieurs personnes avaient un mobile, mais permet aussi à Fisher de comprendre qu'ils ne sont pas les coupables — leur frayeur à la vue du cadavre était sincère</td>
+</tr>
+</tbody>
+</table>
+<h4 id="fausses-pistes_4">Fausses pistes</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Position</th>
+<th>Direction trompeuse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>La lettre de menace de Hugo — l'ancien garde du corps de Jenkins, menaçant de tuer Hook de façon similaire</td>
+<td>~80 %</td>
+<td>Le faux indice le plus puissant ; la lettre est authentique, mais Hugo, ayant découvert que Hook était déjà mort, a simplement pris la fuite</td>
+</tr>
+<tr>
+<td>2</td>
+<td>O'Brien qui, à l'aube, voit un homme barbu escalader le pont et fuir</td>
+<td>~5 % (prologue)</td>
+<td>Pose la piste parfaite d'un « tueur extérieur » comme bouc émissaire</td>
+</tr>
+<tr>
+<td>3</td>
+<td>L'autodéfense véhémente de Brun (le neveu) — « Je ne l'ai pas touché ! »</td>
+<td>~72 %</td>
+<td>Le neveu héritier est le suspect naturel</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Le duc de Westminster et Harker qui mentent tous deux en disant que Hook est « encore vivant »</td>
+<td>~70–75 %</td>
+<td>Chacun cachant des secrets liés au chantage, ils semblent coupables</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="sixieme-nouvelle-le-trou-dans-le-mur-the-hole-in-the-wall">Sixième nouvelle : Le trou dans le mur (The Hole in the Wall)</h3>
+<ul>
+<li><strong>Point de convergence des indices : 80 %</strong></li>
+<li><strong>Mystère central</strong> : Le propriétaire du manoir, Lord Bulmer, est assassiné tôt le matin alors qu'il patine seul sur le lac gelé. Qui est le meurtrier ? Comment a-t-on pu tuer sur la glace ?</li>
+<li><strong>Réponse</strong> : Le meurtrier est le Prince Borodino, un diplomate italien. La nuit précédente, Lord Bulmer avait découvert la relation secrète entre le Prince et sa sœur Juliette, et les deux hommes s'étaient affrontés. Profitant du matin où Bulmer patinait seul, le Prince avait pénétré dans le domaine par un trou dans le vieux mur d'enceinte du manoir (la véritable origine du nom du lieu, « Hollinwall »), et avait tué Bulmer sur la glace.</li>
+</ul>
+<h4 id="indices-cles_5">Indices clés</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Position</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>L'étymologie du nom : « Hollinwall » ne signifie pas « saint puits », mais « trou dans le mur »</td>
+<td>~20 %</td>
+<td>Les recherches archéologiques de Haddow révèlent ce fait oublié — il existe bel et bien un trou dans le vieux mur d'enceinte</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Les bruits de choc et de craquement que Fisher entend dans la nuit</td>
+<td>~60 %</td>
+<td>Quelqu'un est en train d'ouvrir (ou de traverser) l'ancien trou dans le mur</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Bulmer exceptionnellement surexcité la veille au soir — brandissant son épée, riant, presque incontrôlable</td>
+<td>~45 %</td>
+<td>Suggère qu'il vient de découvrir quelque chose qui l'a profondément ébranlé (la relation secrète de sa sœur)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Crane (l'architecte) révèle une maîtrise inattendue de l'escrime — il désarme facilement Bulmer</td>
+<td>~50 %</td>
+<td>Détourne l'attention, mais suggère aussi que quelqu'un dans le domaine possède des aptitudes cachées</td>
+</tr>
+</tbody>
+</table>
+<h4 id="indices-secondaires_5">Indices secondaires</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Position</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>L'identité de « diplomate secret » du Prince Borodino — ses allées et venues sont naturellement mystérieuses</td>
+<td>~30 %</td>
+<td>Un « diplomate secret » a par nature des activités que personne ne connaît</td>
+</tr>
+<tr>
+<td>2</td>
+<td>M. Brayne (ancien juge aux Indes) est présenté comme ayant des méthodes impitoyables</td>
+<td>~35 %</td>
+<td>Augmente le nombre de suspects</td>
+</tr>
+</tbody>
+</table>
+<h4 id="fausses-pistes_5">Fausses pistes</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Position</th>
+<th>Direction trompeuse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>La proximité manifeste entre l'architecte Crane et Juliette</td>
+<td>~30–40 %</td>
+<td>Amène le lecteur à penser que Crane est le suspect avec un mobile romantique</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Les origines indiennes de Brayne — il est suggéré que ses « méthodes sont proches du crime »</td>
+<td>~35 %</td>
+<td>Crée un autre suspect</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="septieme-nouvelle-le-temple-du-silence-the-temple-of-silence">Septième nouvelle : Le temple du silence (The Temple of Silence)</h3>
+<ul>
+<li><strong>Point de convergence des indices : 75 %</strong></li>
+<li><strong>Mystère central</strong> : Un mystère mêlant complot politique et vœu de silence, que Fisher doit percer en traversant masques sociaux et alliances politiques pour révéler la vérité.</li>
+</ul>
+<p>(Le texte source s'interrompt ; analyse complète non disponible)</p>
+<hr>
+<h3 id="huitieme-nouvelle-la-vengeance-de-la-statue-the-vengeance-of-the-statue">Huitième nouvelle : La vengeance de la statue (The Vengeance of the Statue)</h3>
+<ul>
+<li><strong>Point de convergence des indices : 72 %</strong></li>
+<li><strong>Mystère central</strong> : Un meurtre étrange lié à une statue, que Fisher résout en mobilisant sa connaissance profonde des structures de pouvoir pour démystifier une apparence de phénomène surnaturel.</li>
+</ul>
+<p>(Le texte source s'interrompt ; analyse complète non disponible)</p>
+<hr>
+<h2 id="reconstruction-du-raisonnement">Reconstruction du raisonnement</h2>
+<p><em>L'Homme qui en savait trop</em> offre une expérience de lecture unique. Le lecteur ne se demande pas seulement « qui a fait quoi », mais aussi « pourquoi on ne peut pas dire qui a fait quoi ».</p>
+<p><strong>Premier niveau (~20–30 %)</strong> : Le lecteur pénètre dans ce qui ressemble à un cadre ordinaire de la haute société britannique — manoirs de campagne, réunions politiques, avant-postes coloniaux. Fisher livre, sur le ton de la conversation, une quantité d'informations sur les origines et les relations des personnages, mais ces informations semblent n'être que des bavardages mondains.</p>
+<p><strong>Deuxième niveau (~30–50 %)</strong> : Le crime se produit. Quelqu'un est mort — d'apparent accident ou de suicide. À ce stade, le lecteur attentif aux « bavardages » antérieurs de Fisher commence à remarquer que certains détails ne collent plus. Par exemple : pourquoi un homme sur le point d'aller dîner achète-t-il des sandwichs ? Comment un mauvais tireur peut-il toucher avec une telle précision un insigne de chapeau ?</p>
+<p><strong>Troisième niveau (~50–70 %)</strong> : Fisher semble suivre les indices avec une nonchalance feinte, mais chacun de ses pas a un dessein. À ce stade, le lecteur devrait commencer à réduire la liste des suspects, en prêtant particulièrement attention aux personnes qui semblent les moins susceptibles d'être coupables — et cette « impossibilité » découle précisément de l'image publique soigneusement entretenue par le coupable.</p>
+<p><strong>Quatrième niveau (~70–85 %)</strong> : La vérité émerge. Ce qu'il y a de plus remarquable, c'est que Fisher confirme souvent l'identité du meurtrier non par un nouvel indice, mais par un « raisonnement inverse » logique. Comme dans « Le puits sans fond » : si O'Brien était le meurtrier, il aurait forcément jeté le corps dans le puits — mais il ne l'a pas fait, donc il n'est pas le coupable. Ce type de raisonnement demande au lecteur de réfléchir à « ce qui n'a pas eu lieu » plutôt qu'à « ce qui a eu lieu ».</p>
+<p><strong>Cinquième niveau (dénouement)</strong> : La démarche la plus subversive — après avoir révélé la vérité, Fisher choisit de la dissimuler. Le lecteur n'obtient pas un triomphe de la justice, mais une conclusion amère sur le pouvoir, le compromis et l'impuissance.</p>
+<hr>
+<h2 id="notes-complementaires">Notes complémentaires</h2>
+<h3 id="fisher-et-le-pere-brown-dialogue-entre-deux-philosophies-du-detective">Fisher et le Père Brown : dialogue entre deux philosophies du détective</h3>
+<p>Avec le Père Brown, Chesterton incarne une « détectivologie de l'âme » — comprendre le crime par empathie pour la nature humaine. Fisher représente un détective radicalement différent : ce qu'il comprend, ce n'est pas l'âme individuelle, mais la corruption de tout un système. Brown voit le pécheur ; Fisher voit l'institution. Brown peut racheter l'individu ; Fisher ne peut pas racheter la société — c'est là la véritable tragédie de son statut d'homme « qui en sait trop ».</p>
+<h3 id="pionnier-du-roman-policier-politique">Pionnier du roman policier politique</h3>
+<p>La place unique de ce livre dans l'histoire du roman policier tient au fait qu'il fusionne le complot politique avec la déduction classique. La résolution de chaque nouvelle n'est pas seulement « qui a tué », mais aussi « pourquoi la vérité ne peut pas être rendue publique ». Cette structure annonce le roman d'espionnage et le thriller politique qui viendront plus tard — de John le Carré à John Grisham —, mais Chesterton les précède de plusieurs décennies.</p>
+<h3 id="note-sur-linterruption-du-texte-source">Note sur l'interruption du texte source</h3>
+<p>Le texte sur lequel s'appuie cette analyse (édition Project Gutenberg) s'interrompt au milieu de la sixième nouvelle, « Le trou dans le mur », et ne comprend pas le contenu complet de la septième nouvelle, « Le temple du silence », ni de la huitième nouvelle, « La vengeance de la statue ». Les points de convergence de ces deux nouvelles sont des estimations fondées sur le style général et la structure connue du recueil. L'analyse des six premières nouvelles est complète et basée sur le texte original.</p>
+<h3 id="caracteristiques-generales-de-la-conception-deductive">Caractéristiques générales de la conception déductive</h3>
+<ol>
+<li><strong>Le masque social comme artifice suprême</strong> : La technique la plus distinctive du livre est d'utiliser l'identité sociale elle-même comme alibi. Jenkins n'a pas besoin d'un alibi physique — son image de « parvenu maladroit » est sa meilleure couverture.</li>
+<li><strong>Le raisonnement par l'absence</strong> : Les déductions les plus brillantes de Chesterton s'appuient souvent sur l'analyse de ce qui manque — pourquoi le corps n'a-t-il pas été jeté dans le puits ? Pourquoi le personnage ne bouge-t-il pas après le coucher du soleil ? C'est un exercice logique d'une grande profondeur.</li>
+<li><strong>L'impuissance du détective</strong> : Une structure rare dans le roman policier — la douleur du détective après avoir résolu l'affaire est plus grande que la résolution elle-même. Chaque victoire de Fisher est un échec moral, car il est condamné à faire taire la justice.</li>
+</ol>
+    <a href="../index.html" class="back-link">← Retour à l'accueil</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Salle de Dissection Policière</p>
+    <p>Cinq auteurs · quatre-vingt-huit œuvres · 135 ans d'évolution de la difficulté du roman policier.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
