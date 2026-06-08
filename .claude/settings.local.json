@@ -41,7 +41,9 @@
       "Read(//tmp/**)",
       "Read(//Users/letranger/**)",
       "Bash(gh auth *)",
-      "Bash(rsync -a --exclude='.git' --exclude='node_modules' --exclude='.DS_Store' /Users/letranger/Dropbox/Working/MurderResearch/ /Users/letranger/Code/MurderResearch/)"
+      "Bash(rsync -a --exclude='.git' --exclude='node_modules' --exclude='.DS_Store' /Users/letranger/Dropbox/Working/MurderResearch/ /Users/letranger/Code/MurderResearch/)",
+      "Bash(gh run *)",
+      "Bash(gh api *)"
     ]
   }
 }
