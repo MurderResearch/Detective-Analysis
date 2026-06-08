@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Les Arbres de l'Orgueil (The Trees of Pride) — Salle de Dissection Policière</title>
+<meta name="description" content="Sur la côte de Cornouailles, au sud-ouest de l'Angleterre, trois arbres exotiques ramenés d'Afrique du Nord se dressent sur la falaise du domaine du châtelain V">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/the-trees-of-pride.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-trees-of-pride.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/the-trees-of-pride.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/the-trees-of-pride.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/the-trees-of-pride.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/the-trees-of-pride.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/the-trees-of-pride.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/the-trees-of-pride.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Salle de Dissection Policière</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Accueil</a>
+        <a href="../index.html#latest">Récents</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Langue" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 Français</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/the-trees-of-pride.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/the-trees-of-pride.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/the-trees-of-pride.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/the-trees-of-pride.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/the-trees-of-pride.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/the-trees-of-pride.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/the-trees-of-pride.html">Español</a>
+      <a class="lang-item active" data-lang="fr" href="/Detective-Analysis/fr/articles/the-trees-of-pride.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">G. K. Chesterton · 1922</div>
+    <h1>Les Arbres de l'Orgueil (The Trees of Pride)</h1>
+    <div class="subtitle">Gilbert Keith Chesterton (G.K. Chesterton) · Roman court (novella)</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Déductibilité</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Indice de brume</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="les-arbres-de-lorgueil-the-trees-of-pride-analyse-policiere">Les Arbres de l'Orgueil (The Trees of Pride) — Analyse Policière</h1>
+<h2 id="informations-de-base">Informations de base</h2>
+<ul>
+<li>Auteur : Gilbert Keith Chesterton (G.K. Chesterton)</li>
+<li>Année : 1922</li>
+<li>Genre : Roman court (novella)</li>
+<li>Détective : Cyprian Paynter (critique d'art américain) et Andrew Ashe (avocat local)</li>
+<li>Type de mystère central : whodunit + howdunit + whydunit (triple mystère, et le « meurtre » lui-même fait partie de l'énigme)</li>
+</ul>
+<hr>
+<h2 id="evaluation-generale-de-la-deductibilite">Évaluation générale de la déductibilité</h2>
+<table>
+<thead>
+<tr>
+<th>Indicateur</th>
+<th>Étoiles</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Déductibilité</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>Point de convergence moyen à environ 92 % — les trois fils de vérité convergent tous dans les dix derniers pour cent du livre ; la méta-vérité selon laquelle « le meurtre n'a jamais eu lieu » ne peut être confirmée qu'à la toute fin</td>
+</tr>
+<tr>
+<td>Indice de brume</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>Tromperie extrême : le docteur fabrique de ses propres mains tous les faux indices qui le désignent lui-même — les ossements, c'est lui qui les a déposés ; la hache, c'est lui qui l'a enveloppée — un hareng rouge de type « auto-incrimination » rarissime dans l'histoire littéraire ; auquel s'ajoutent le brouillard surnaturel, la multiplicité des suspects, et la tromperie méta-narrative selon laquelle « l'affaire n'a tout simplement pas eu lieu », portant la densité du brouillard à son paroxysme</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="resume">Résumé</h2>
+<p>Sur la côte de Cornouailles, au sud-ouest de l'Angleterre, trois arbres exotiques ramenés d'Afrique du Nord se dressent sur la falaise du domaine du châtelain Vane (Squire Vane) — que les villageois appellent les « arbres-paon » (peacock trees). Depuis des siècles, les habitants sont convaincus que ces arbres portent une malédiction : ceux qui en approchent tombent malades, et ceux qui s'y attardent disparaissent. Vane, pourtant, est un rationaliste convaincu qui tourne en dérision toutes les superstitions rurales.</p>
+<p>Un dîner de jardin change tout. Le critique d'art américain Paynter vient d'arriver en visite, et le poète local Treherne est également présent. La conversation dérive vers les vieilles légendes des arbres-paon, et le poète ténébreux et mystérieux laisse entendre, sur un ton légèrement provocateur, que même le sceptique le plus résolu n'oserait passer la nuit seul dans ce bosquet. Le vieux Vane entre dans une colère noire et, sans plus attendre, s'enfonce dans les ténèbres du bosquet ; les autres l'attendent toute la nuit.</p>
+<p>Au matin, les recherches ne donnent rien : le châtelain Vane a disparu sans laisser de trace.</p>
+<p>Personnages principaux :
+- <strong>Le châtelain Vane</strong> : propriétaire terrien rationaliste, d'ascendance irlandaise, au tempérament irascible
+- <strong>Barbara Vane</strong> : sa fille, calme et belle, secrètement mariée en secret au poète
+- <strong>John Treherne</strong> : poète cornouaillais, mystérieux et incisif, représentant la vieille culture celtique locale
+- <strong>Cyprian Paynter</strong> : critique d'art américain, point de vue principal du « détective » tout au long du livre
+- <strong>Andrew Ashe</strong> : avocat local, perspicace et froid, doué pour l'analyse
+- <strong>Le Dr. Burton Brown</strong> : médecin de village, à l'esprit scientifique, peu loquace
+- <strong>Miles</strong> : le majordome au teint jaune des Vane
+- <strong>Martin</strong> : bûcheron dont la fille vient de mourir d'une fièvre mystérieuse, nourrit une haine obsessionnelle envers les arbres-paon</p>
+<p>Après la disparition, les recherches piétinent longtemps. L'avocat Ashe soupçonne rapidement et fortement le poète Treherne : c'est lui qui a provoqué le châtelain pour qu'il entre dans le bosquet, il rôdait mystérieusement ce soir-là, et Ashe l'a de ses propres yeux vu sortir furtivement du bosquet. Paynter, pour défendre son ami, fouille le bosquet lui-même, et découvre en haut de la canopée le chapeau de panama blanc de Vane (percé d'un trou au sommet), puis dans le bosquet un « puits » qui semble sans fond, d'où il remonte un tas d'ossements humains — la position d'un trou dans les ossements correspond parfaitement au trou du chapeau, confirmant l'identité du mort.</p>
+<p>Mais alors que l'affaire semble s'éclaircir, un phénomène terrifiant se révèle : <strong>tous les ossements sont parfaitement secs</strong> — dans un puits rempli d'eau, pas la moindre trace d'humidité.</p>
+<p>Les soupçons se tournent vers le Dr. Brown : il a empêché le bûcheron de récupérer sa hache, puis est allé la prendre lui-même ; il a enveloppé le manche de la hache de sa propre main avec des bandages médicaux portant ses initiales (T.B.B.) ; il s'était violemment disputé avec le châtelain ; il avait fourni les outils pour remonter les ossements... Presque toutes les preuves désignent ce médecin. Alors que la police s'apprête à l'arrêter, l'histoire se retourne deux fois.</p>
+<p><strong>Premier retournement</strong> : le châtelain Vane apparaît, bien vivant.</p>
+<p><strong>Second retournement</strong> : le Dr. Brown révèle l'intégralité de son plan — il n'est pas le meurtrier, mais un scientifique qui a comploté pendant quatorze ans pour détruire de véritables arbres toxiques et sauver la vie des villageois. Les trois arbres-paon sont bel et bien toxiques, et sont la véritable cause de la mystérieuse fièvre qui afflige les villageois depuis des années ; le docteur l'a confirmé par des méthodes scientifiques, mais parce que la vérité s'emmêlait dans les habits de la superstition, il n'a jamais pu convaincre l'entêté châtelain. Sa méthode : laisser la superstition se répandre largement, puis y mettre fin d'un coup par une « révélation » spectaculaire. La « disparition du châtelain » était une supercherie soigneusement orchestrée — le meurtre n'a jamais eu lieu.</p>
+<hr>
+<h2 id="decryptage-de-la-verite">Décryptage de la vérité</h2>
+<h3 id="verite-1-ou-est-alle-le-chatelain-vane-howdunit">Vérité 1 : Où est allé le châtelain Vane ? (howdunit)</h3>
+<ul>
+<li><strong>Point de convergence des indices : environ 91 %</strong></li>
+<li>Réponse : Vane a volontairement participé au plan du Dr. Brown, passant par le « puits » du bosquet (en réalité un évent de la grotte souterraine des contrebandiers) pour tomber dans la caverne souterraine, traverser les tunnels jusqu'à une gare de chemin de fer à plusieurs kilomètres de là, partir voyager en Méditerranée pendant un ou deux mois, et revenir au moment prévu selon le plan.</li>
+</ul>
+<h4 id="indices-cles">Indices clés</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement (chapitre/pourcentage)</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Tous les ossements sont parfaitement secs, sans la moindre humidité dans un « puits » rempli d'eau</td>
+<td>Fin du chapitre 2 / environ 57 %</td>
+<td><strong>L'anomalie précoce la plus importante</strong> : des ossements immergés depuis longtemps ne pourraient pas être aussi secs, suggérant que les ossements ont été placés après coup</td>
+</tr>
+<tr>
+<td>2</td>
+<td>L'eau du « puits » disparaît en une nuit (Paynter trouve de l'eau lors de sa première inspection, mais plus rien le lendemain)</td>
+<td>Début du chapitre 3 / environ 51 %</td>
+<td>Suggère que le « puits » est connecté à l'extérieur ; un puits ordinaire ne peut pas s'assécher en une nuit</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Treherne entend la voix du docteur dans le bosquet, conversant avec le châtelain</td>
+<td>Fin du chapitre 3 / environ 77 %</td>
+<td><strong>L'indice direct le plus important</strong> : le docteur et le châtelain s'entretiennent secrètement la nuit du crime, prouvant qu'il y a un arrangement privé entre eux, et non que le docteur est l'auteur du crime</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Le docteur explique lui-même que le « puits » est l'évent au sommet de la grotte des contrebandiers, relié à une sortie à plusieurs kilomètres de là</td>
+<td>Chapitre 4 / environ 89 %</td>
+<td>Confirme la voie physique par laquelle le châtelain a disparu ; c'est le point de convergence final des indices</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Le docteur avoue que les ossements proviennent de spécimens médicaux et ont été placés dans la grotte après la première inspection de Paynter</td>
+<td>Chapitre 4 / environ 92 %</td>
+<td>Explique le mystère de la sécheresse des ossements — la grotte était déjà sèche quand ils ont été déposés</td>
+</tr>
+</tbody>
+</table>
+<h4 id="indices-secondaires">Indices secondaires</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement (chapitre/pourcentage)</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Le châtelain avait joué dans les tunnels souterrains de cette côte dans son enfance et connaissait bien le terrain</td>
+<td>Chapitre 4 / environ 90 %</td>
+<td>Explique qu'il pouvait traverser seul le système de cavernes</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Vane est descendu précipitamment de l'arbre et son chapeau a été accroché par une branche, qu'il n'a pas pu emporter</td>
+<td>Chapitre 4 / environ 90 %</td>
+<td>Explique pourquoi le chapeau est resté en haut de la canopée — il n'a pas été laissé là après sa mort</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Le docteur habitait depuis longtemps dans une cabane de pêcheur près de l'entrée de la grotte</td>
+<td>Chapitre 3 / environ 55 %</td>
+<td>Suggère une relation géographique étroite entre le docteur et les grottes de contrebandiers en bord de mer</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Le détective (déguisé en policier) révèle finalement que toutes les « preuves » désignant le docteur ont été fournies par le docteur lui-même</td>
+<td>Chapitre 4 / environ 85 %</td>
+<td>Met en évidence la stratégie d'auto-révélation du docteur — c'est la logique clé pour percer toute l'énigme</td>
+</tr>
+</tbody>
+</table>
+<h4 id="fausses-pistes">Fausses pistes</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement (chapitre/pourcentage)</th>
+<th>Direction de la tromperie</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>La légende selon laquelle les arbres-paon « dévorent les humains », et de nombreuses disparitions historiques dans les environs du bosquet</td>
+<td>Tout le livre / tout au long</td>
+<td>Amène le lecteur à croire que le châtelain a été emporté par une force surnaturelle ou un mécanisme mystérieux</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Le trou au sommet du chapeau correspond parfaitement au trou dans le crâne</td>
+<td>Fin du chapitre 2 / environ 59 %</td>
+<td>Semble être une preuve irréfutable de meurtre (balle ou objet tranchant), mais c'est en réalité une correspondance fabriquée après coup par le docteur</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Le « puits » avait de l'eau lors de la première inspection de Paynter, et la surface de l'eau palpitait comme si elle était vivante</td>
+<td>Début du chapitre 3 / environ 51 %</td>
+<td>Amène le lecteur à croire qu'il s'agit d'un puits ordinaire profond — les sons impressionnants suggèrent une activité inconnue plutôt qu'un phénomène naturel de marée</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="verite-2-linstigateur-whodunit">Vérité 2 : L'instigateur (whodunit)</h3>
+<ul>
+<li><strong>Point de convergence des indices : environ 88 %</strong></li>
+<li>Réponse : Le Dr. Brown a orchestré toute la mise en scène de la « disparition » et a délibérément fabriqué toutes les fausses preuves pointant vers lui-même — parce qu'il est le seul à pouvoir, au moment crucial, ramener le châtelain vivant et proclamer que « l'affaire n'a tout simplement pas eu lieu ».</li>
+</ul>
+<h4 id="indices-cles_1">Indices clés</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement (chapitre/pourcentage)</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Le docteur a empêché Martin de récupérer sa hache, puis a été vu la prenant seul</td>
+<td>Chapitre 3 / environ 75 %</td>
+<td>Comportement anormal de contrôle des preuves matérielles — c'est la première étape de la fabrication délibérée par le docteur d'indices auto-incriminants</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Le manche de la hache a été enveloppé de bandages médicaux portant les initiales T.B.B., que le docteur a lui-même marqués, enveloppés et montrés aux autres</td>
+<td>Chapitre 4 / environ 83 %</td>
+<td>Un vrai meurtrier ne pourrait pas délibérément créer une auto-incrimination aussi évidente — cela ne peut être qu'intentionnel</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Le docteur a fourni à Paynter les outils de récupération et l'a guidé vers les ossements dans le « puits »</td>
+<td>Chapitre 3 / environ 73 %</td>
+<td>Si le docteur était le meurtrier, il n'aiderait jamais à découvrir le cadavre ; mais s'il met en scène sa propre culpabilité, il doit s'assurer que le « cadavre » est trouvé</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Le majordome Miles a entendu une violente dispute entre le docteur et le châtelain, où le docteur a dit que la mort du châtelain serait « une bonne chose pour tout le monde »</td>
+<td>Chapitre 4 / environ 82 %</td>
+<td>Ce qui ressemble à l'expression d'un mobile de meurtre est en réalité la véritable colère du docteur, accumulée au fil des ans, contre le refus du châtelain d'abattre les arbres</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Treherne entend la voix du docteur dans le bosquet la nuit du crime</td>
+<td>Fin du chapitre 3 / environ 77 %</td>
+<td>Le docteur est sur place, mais pour persuader le châtelain de coopérer avec le plan, non pour commettre un crime</td>
+</tr>
+</tbody>
+</table>
+<h4 id="indices-secondaires_1">Indices secondaires</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement (chapitre/pourcentage)</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Le docteur apparaît en tenue de deuil complète à la lisière du bosquet (juste après que Paynter vient de quitter les abords du « puits »)</td>
+<td>Chapitre 3 / environ 57 %</td>
+<td>Une tenue et un lieu inhabituels suggèrent que son lien avec l'affaire est bien plus profond qu'il n'y paraît</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Le docteur montre une insistance pressante à faire déclarer le châtelain mort</td>
+<td>Chapitre 2 / environ 40 %</td>
+<td>Son empressement à faire déclarer le châtelain décédé (pour que sa fille hérite) est une manifestation latérale de son mobile</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ashe dit : « Je n'ai jamais vu un meurtrier discuter d'un meurtre, le nier et le défendre simultanément » — excluant ainsi Treherne</td>
+<td>Fin du chapitre 3 / environ 74 %</td>
+<td>Ce critère s'applique ensuite parfaitement au docteur : c'est précisément lui qui « discute du meurtre tout en le niant et en l'expliquant »</td>
+</tr>
+</tbody>
+</table>
+<h4 id="fausses-pistes_1">Fausses pistes</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement (chapitre/pourcentage)</th>
+<th>Direction de la tromperie</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Le poète Treherne — sorti furtivement du bosquet de nuit, ayant provoqué le châtelain à y entrer, au comportement mystérieux et aux allées et venues insaisissables</td>
+<td>Fin du chapitre 2 / environ 44 %</td>
+<td>Ashe est convaincu que Treherne est le meurtrier — mobile (opposition de classe) et occasion sont suffisants</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Le bûcheron Martin — haine obsessionnelle des arbres-paon, sa hache est l'arme du crime, sa fille vient de mourir, il est au bord de la folie</td>
+<td>Chapitre 3 / environ 50 %</td>
+<td>Mobile fanatique, arme en sa possession, comportement bizarre — image typique du suspect de meurtre passionnel</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Le majordome Miles — apparence sombre et mystérieuse, premier sujet d'investigation du détective</td>
+<td>Début du chapitre 4 / environ 80 %</td>
+<td>Amène le lecteur à penser que le majordome est au courant ou impliqué — en réalité un hareng rouge de surface sans substance réelle</td>
+</tr>
+<tr>
+<td>4</td>
+<td>L'ensemble des « preuves » fabriquées par le docteur — les initiales sur les bandages, le contrôle de la hache, la correspondance entre le trou dans les ossements et le trou dans le chapeau</td>
+<td>Chapitre 3 / environ 70–83 %</td>
+<td>Amène tout le monde à croire que le docteur est le meurtrier, sans que personne n'imagine que ces « preuves » ont été délibérément laissées par lui comme une « mise en accusation » de sa propre conception</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="verite-3-lenigme-du-mobile-whydunit">Vérité 3 : L'énigme du mobile (whydunit)</h3>
+<ul>
+<li><strong>Point de convergence des indices : environ 97 %</strong></li>
+<li>Réponse : Les arbres-paon sont bel et bien toxiques, et sont la véritable cause de la mystérieuse fièvre qui afflige les villageois depuis des années. Le Dr. Brown l'a étudié et confirmé scientifiquement pendant quatorze ans ; mais parce que la vérité s'emmêlait dans les habits de la superstition, le châtelain a systématiquement refusé de l'accepter. Le docteur savait que le seul moyen d'abattre ces arbres empoisonnés était que Barbara — secrètement mariée au poète Treherne — hérite du domaine.</li>
+</ul>
+<h4 id="indices-cles_2">Indices clés</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement (chapitre/pourcentage)</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>La légende paysanne : les arbres-paon provoquent la fièvre, ceux qui en approchent tombent malades ou disparaissent</td>
+<td>Chapitre 1 / environ 5 %</td>
+<td>Un fait scientifique exprimé dans le langage du mythe par la sagesse populaire — cette « superstition » est finalement intégralement confirmée</td>
+</tr>
+<tr>
+<td>2</td>
+<td>La fille du bûcheron Martin est morte d'une fièvre inexpliquée, et il en attribue instinctivement la cause aux arbres-paon</td>
+<td>Chapitre 1 / environ 25 %</td>
+<td>Le docteur connaît la vérité — la « superstition » des villageois est entièrement cohérente avec les faits scientifiques, seul le langage diffère</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Barbara révèle qu'elle a secrètement épousé Treherne et qu'elle fera abattre les arbres-paon dès qu'elle héritera du domaine</td>
+<td>Chapitre 3 / environ 67 %</td>
+<td>Explique la logique centrale du plan du docteur : faire hériter la fille est la seule voie pour éliminer les arbres empoisonnés</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Le docteur désigne la falaise — les arbres-paon ont été abattus, la côte est vide</td>
+<td>Chapitre 4 / environ 94 %</td>
+<td>Confirmation visuelle du succès du plan — l'objectif de quatorze ans du docteur est accompli</td>
+</tr>
+<tr>
+<td>5</td>
+<td>La confession du docteur : « J'ai travaillé à cela pendant quatorze ans », détaillant comment la toxicité des arbres-paon a été confirmée scientifiquement</td>
+<td>Chapitre 4 / environ 95–97 %</td>
+<td>Point de convergence final des indices de mobile — et révélation philosophique la plus profonde de tout le livre</td>
+</tr>
+</tbody>
+</table>
+<h4 id="indices-secondaires_2">Indices secondaires</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement (chapitre/pourcentage)</th>
+<th>Explication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Le docteur a été vu assistant aux funérailles d'innombrables villageois, impuissant face à la fièvre mystérieuse mais toujours fidèle au poste</td>
+<td>Tout au long du livre</td>
+<td>Il se soucie véritablement de la santé des villageois, renforçant son sens de la mission et la légitimité de son plan</td>
+</tr>
+<tr>
+<td>2</td>
+<td>La violente dispute entre le docteur et le châtelain trouve sa source dans les multiples tentatives de persuasion qui ont toutes échoué</td>
+<td>Chapitre 4 / environ 82 %</td>
+<td>« La mort du châtelain serait une bonne chose » est l'expression sincère d'une colère, non une intention meurtrière préméditée</td>
+</tr>
+</tbody>
+</table>
+<h4 id="fausses-pistes_2">Fausses pistes</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contenu de l'indice</th>
+<th>Emplacement (chapitre/pourcentage)</th>
+<th>Direction de la tromperie</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Les origines « surnaturelles » des arbres-paon — un saint d'Afrique du Nord, l'arbre de la tentation, la malédiction des plumes de paon</td>
+<td>Chapitre 1 / environ 18 %</td>
+<td>Encadre le « problème des arbres empoisonnés » dans un registre religieux/mystique, amenant lecteurs et personnages à ignorer la possibilité scientifique</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Le rationalisme du châtelain lui-même — il tourne en dérision tous les avertissements concernant les arbres-paon</td>
+<td>Tout le livre / tout au long</td>
+<td>Le lecteur a souvent tendance à suivre le point de vue rationnel du châtelain et à traiter toutes les intuitions paysannes comme de simples « superstitions », plutôt que comme des indices potentiellement fondés</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="reconstruction-du-chemin-deductif">Reconstruction du chemin déductif</h2>
+<p><strong>Premier chemin : le « meurtre » n'a jamais eu lieu</strong></p>
+<p>Les premiers signaux susceptibles d'éveiller le soupçon apparaissent à environ 51 % (l'eau du puits disparaît en une nuit) et 57 % (les ossements sont totalement secs). Un lecteur averti devrait comprendre qu'il est impossible que des ossements dans un puits rempli d'eau soient parfaitement secs — il n'y a que deux explications possibles : soit les ossements ont été placés après coup, soit ce n'est tout simplement pas un puits ordinaire. Combiné au phénomène étrange qui précède — la surface de l'eau palpitait puis a disparu (suggérant que le puits est connecté à un espace extérieur) — à environ 57 % il est déjà possible de commencer à remettre en question l'hypothèse de base selon laquelle « un meurtre a eu lieu ».</p>
+<p>Pourtant, immergé dans le cadre narratif d'un « meurtre survenu », ces anomalies ne seront interprétées que comme « une énigme encore plus difficile à résoudre », et non comme « le meurtre n'existe tout simplement pas ». La véritable confirmation n'arrive qu'à environ 89 %, quand le docteur explique la vérité de l'évent de la grotte, et à environ 91 %, quand le châtelain Vane sort par la fissure de la falaise.</p>
+<p><strong>Deuxième chemin : le docteur est l'instigateur</strong></p>
+<p>À partir d'environ 55 %, le docteur commence à paraître suspect (apparaissant en tenue de deuil dans un lieu inhabituel, insistant avec empressement pour faire déclarer le mort). À environ 73–75 %, la découverte de la hache et des initiales sur les bandages constitue l'accusation la plus forte — et aussi le piège le plus profond — car un vrai meurtrier n'agirait pas ainsi ; toutes ces « preuves » sont des auto-révélations délibérément laissées par le docteur.</p>
+<p>Le saut logique crucial se situe à environ 85 % : le détective fait remarquer que « toutes les preuves désignant le docteur proviennent du docteur lui-même ». Si le lecteur peut, à ce moment-là, se demander « pourquoi un meurtrier se dénoncerait lui-même », il peut percer l'énigme avant la fin. Mais cela exige de briser la convention déductive la plus fondamentale : un suspect cherche habituellement à dissimuler les preuves, non à fabriquer des auto-accusations.</p>
+<p><strong>Troisième chemin : les paysans avaient raison</strong></p>
+<p>C'est le chemin déductif le plus ironique de tout le livre. Dès le premier chapitre, les avertissements des paysans — les arbres-paon sont toxiques, ceux qui en approchent tombent malades — sont clairement exposés, mais rejetés sans exception par tous les personnages « rationnels » à cause de leur emballage linguistique (mythes, malédictions religieuses). Un lecteur prêt à mettre momentanément de côté ses préjugés rationalistes et à prendre au sérieux les récits paysans aurait en réalité saisi, dès le début, les indices les plus proches de la vérité. Et c'est précisément là le plus grand obstacle à franchir dans le roman policier : la convention du genre nous dit que « le folklore est un hareng rouge », et Chesterton fait de cette convention du genre elle-même le plus grand hareng rouge.</p>
+<hr>
+<h2 id="notes-complementaires">Notes complémentaires</h2>
+<p><strong>L'« auto-incrimination » comme mécanisme d'énigme</strong></p>
+<p>La stratégie du Dr. Brown est extrêmement rare dans l'histoire de la littérature policière : il se prend lui-même pour cible, conçoit méticuleusement une fausse affaire de meurtre et fait pointer toutes les preuves matérielles vers lui-même — parce qu'il est le seul à pouvoir, au moment opportun, ramener le châtelain vivant et proclamer que « l'affaire n'existe tout simplement pas ». Extraire des ossements de spécimens médicaux, percer dans le crâne un trou correspondant à celui du chapeau, envelopper le manche de la hache avec des bandages portant ses propres initiales, fournir personnellement les outils de récupération — chacun de ces actes constituerait, dans un roman policier traditionnel, une « preuve accablante », alors qu'ici chacun est un « piège auto-destructeur » délibérément conçu par le docteur.</p>
+<p>La remarque de l'avocat Ashe prend alors toute son ironie : « Je n'ai jamais vu un meurtrier discuter d'un meurtre, le nier et le défendre simultanément. » Cette phrase a exclu Treherne sur le moment, mais elle est précisément la description exacte du comportement final du docteur. Les niveaux du langage font de ce détail le plus élaboré des messages codés de tout le livre.</p>
+<p><strong>La dialectique philosophique entre sagesse populaire et rationalisme</strong></p>
+<p>Chesterton tend dans ce roman un piège philosophique dans lequel les rationalistes — le châtelain, l'avocat, et même le lecteur — sont les victimes les plus profondes. Les paysans disent « les arbres-paon sont toxiques » — c'est vrai, simplement le langage manque de précision. Le châtelain dit « c'est de la superstition » — et c'est cette posture elle-même qui est fatale, empêchant la vérité scientifique d'être acceptée.</p>
+<p>La dernière remarque du docteur est particulièrement cinglante : « Mais vous étiez prêts à m'envoyer à la potence sur la foi de leur témoignage. » — Vous ne croyez pas ce que disent les paysans, mais vous êtes prêts à condamner quelqu'un sur la base des indices qu'ils ont fournis. Les rationalistes n'acceptent les témoignages des classes inférieures que de manière sélective ; ce double standard est la critique profonde que Chesterton adresse aux intellectuels de son époque.</p>
+<p><strong>Comparaison avec la série Père Brown</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Série Père Brown</th>
+<th>Les Arbres de l'Orgueil</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Identité du détective</td>
+<td>Prêtre catholique (perspicacité spirituelle)</td>
+<td>Critique d'art américain + sens juridique</td>
+</tr>
+<tr>
+<td>Question centrale</td>
+<td>Pourquoi les gens biens font-ils le mal ?</td>
+<td>Comment la vérité scientifique peut-elle être enfouie sous l'emballage du langage ?</td>
+</tr>
+<tr>
+<td>Éléments surnaturels</td>
+<td>Surnaturel en surface, avec explication rationnelle finale</td>
+<td>Rationnel en surface (point de vue du châtelain), mais l'intuition paysanne est finalement confirmée comme exacte</td>
+</tr>
+<tr>
+<td>Mécanisme d'énigme</td>
+<td>Renversement de genre (meurtrier ou victime inattendu)</td>
+<td>Renversement méta-narratif (le crime lui-même n'existe pas)</td>
+</tr>
+<tr>
+<td>Noyau moral</td>
+<td>Les ténèbres de l'âme et la rédemption</td>
+<td>L'arrogance du savoir face à la sagesse populaire</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Les grottes de contrebandiers en Cornouailles</strong></p>
+<p>La solution de l'énigme du « puits » dans le roman — le système de grottes souterraines — existait bel et bien historiquement dans les Cornouailles, au sud-ouest de l'Angleterre. Cette côte, composée de calcaire et de granit entremêlés, formait grâce aux grottes marines naturelles et aux tunnels creusés artificiellement pour le commerce de contrebande un réseau souterrain extrêmement complexe. Aux XVIIIe et XIXe siècles, la contrebande y était particulièrement florissante, et les passages souterrains étaient les principaux outils pour transporter l'alcool de contrebande et échapper aux agents des douanes. Chesterton a intégré cette véritable caractéristique géographique et culturelle dans son énigme, offrant pour la « disparition » physique un mécanisme plausible qui ne nécessite aucune magie, et maintenant dans le roman une ancre dans la réalité malgré l'atmosphère fantastique.</p>
+<p><strong>Les bases scientifiques des arbres-paon</strong></p>
+<p>Les « arbres-paon » sont des plantes fictives inventées pour le roman. Le docteur les décrit comme rendant malades les personnes proches à la manière d'un « effet pollinique », ce qui était encore une intuition scientifique en avance sur son temps en 1922. La médecine actuelle confirme effectivement que de nombreuses plantes peuvent influencer leur environnement par des composés organiques volatils, et que certaines plantes exotiques dans certaines conditions climatiques peuvent même devenir des habitats favorables à des vecteurs de maladies. La légende populaire attribuant aux arbres-paon la transmission de la fièvre et la confirmation scientifique du docteur expliquent pourquoi cette intuition n'avait jamais été sérieusement étudiée : elle était enveloppée dans trop d'habits mystérieux, amenant tous ceux qui se targuaient d'être « rationnels » à abandonner leur enquête avant même de la commencer.</p>
+<p><strong>Un roman policier sans détective</strong></p>
+<p>Les Arbres de l'Orgueil est structurellement un récit de résolution d'énigme à double sens : le lecteur suit Paynter et Ashe qui creusent vers la « vérité du meurtre », pour découvrir en bout de course qu'ils ont creusé un trou vide. Le véritable « raisonnement » se passe dans l'esprit du seul docteur — sa déduction porte sur : comment sauver les habitants d'une région, un objectif bien plus vaste et bien plus secret que l'élucidation d'une quelconque affaire. Chesterton crée ici un paradoxe : le plus grand « détective » est précisément celui qui a fabriqué toutes les apparences du « crime ».</p>
+    <a href="../index.html" class="back-link">← Retour à l'accueil</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Salle de Dissection Policière</p>
+    <p>Cinq auteurs · quatre-vingt-huit œuvres · 135 ans d'évolution de la difficulté du roman policier.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
