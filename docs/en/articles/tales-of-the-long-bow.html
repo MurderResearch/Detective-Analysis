@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tales of the Long Bow — Detective Analysis — Detective Analysis</title>
+<meta name="description" content="Tales of the Long Bow is the most socially allegorical of Chesterton's linked short-story collections. The book comprises eight interconnected stories about a g">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/tales-of-the-long-bow.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/tales-of-the-long-bow.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/tales-of-the-long-bow.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/tales-of-the-long-bow.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/tales-of-the-long-bow.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/tales-of-the-long-bow.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/tales-of-the-long-bow.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/tales-of-the-long-bow.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Detective Analysis</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#latest">Latest</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Language" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 English</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/tales-of-the-long-bow.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/tales-of-the-long-bow.html">简体中文</a>
+      <a class="lang-item active" data-lang="en" href="/Detective-Analysis/en/articles/tales-of-the-long-bow.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/tales-of-the-long-bow.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/tales-of-the-long-bow.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/tales-of-the-long-bow.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/tales-of-the-long-bow.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/tales-of-the-long-bow.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">G.K. Chesterton · 1925</div>
+    <h1>Tales of the Long Bow — Detective Analysis</h1>
+    <div class="subtitle">G. K. Chesterton · Linked short story collection (8 stories)</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Deducibility</div>
+        <div class="rating-badge-stars">⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Fog Rating</div>
+        <div class="rating-badge-stars">⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="tales-of-the-long-bow-detective-analysis">Tales of the Long Bow — Detective Analysis</h1>
+<h2 id="basic-information">Basic Information</h2>
+<ul>
+<li>Author: G. K. Chesterton</li>
+<li>Publication Year: 1925</li>
+<li>Type: Linked short story collection (8 stories)</li>
+<li>Detective: No fixed detective — the ensemble protagonists are members of the "League of the Long Bow": Colonel Crane, Owen Hood, Captain Hilary Pierce, and others</li>
+<li>Core mystery type: howdunit / variant on the impossible crime — the heart of each story is "how to accomplish something universally acknowledged to be impossible"</li>
+</ul>
+<hr>
+<h2 id="deducibility-summary">Deducibility Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Rating</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deducibility</td>
+<td>⭐⭐</td>
+<td>Average convergence point 42% — this is not traditional detective fiction but rather "reverse impossibility": the reader is first told that some absurd thing will happen, then watches the characters accomplish it with ingenuity. Clues tend to appear openly; the reader need only match the literal meaning of everyday proverbs to the plot to crack each puzzle</td>
+</tr>
+<tr>
+<td>Fog Rating</td>
+<td>⭐⭐</td>
+<td>Mild misdirection: Chesterton's technique is not to conceal clues but to exploit the established impression of "impossibility" so that readers impose their own limitations. The real fog arises from the reader's ability (or inability) to interpret English idioms and proverbs at face value</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="synopsis">Synopsis</h2>
+<p><em>Tales of the Long Bow</em> is the most socially allegorical of Chesterton's linked short-story collections. The book comprises eight interconnected stories about a group of eccentrically varied English gentlemen who band together to accomplish a series of "universally acknowledged impossibilities" — each derived from the literal enactment of an English proverb or idiom. Beginning with individually absurd acts (attending church with a cabbage on one's head, setting the Thames on fire) they escalate step by step into a genuine land revolution, pitting themselves against great landowners and the bureaucratic establishment, and ultimately founding an ideal community of self-sufficient smallholders.</p>
+<p>The book's mystery structure is highly unusual: it asks not "who did it" but "how was it done." The title of each chapter hints at an impossible thing (for instance, "The Unpresentable Appearance of Colonel Crane" hints that a gentleman has gone out without his hat), and the reader's challenge is to guess how the characters will make the literal impossibility a reality.</p>
+<hr>
+<h2 id="truth-breakdown">Truth Breakdown</h2>
+<h3 id="story-one-the-unpresentable-appearance-of-colonel-crane">Story One: The Unpresentable Appearance of Colonel Crane</h3>
+<ul>
+<li><strong>Convergence point: 35%</strong></li>
+<li><strong>Core mystery</strong>: How does a respectable retired colonel do something "unpresentable" in full public view?</li>
+<li><strong>Answer</strong>: After receiving a mysterious note, Colonel Crane deliberately smashes his top hat, places it on a scarecrow, then plucks a cabbage from his kitchen garden and wears it on his head to church — literally enacting the preamble to the English expression "eat his hat" (to do something impossible / to go back on one's word). This seemingly mad gesture is in fact the opening move of a carefully planned social experiment.</li>
+</ul>
+<h4 id="key-clues">Key Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue Content</th>
+<th>Location</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The word "Unpresentable Appearance" in the title hints at a problem of appearance / dress</td>
+<td>Title / 0%</td>
+<td>Directly signals that the mystery concerns looks or clothing</td>
+</tr>
+<tr>
+<td>2</td>
+<td>After reading the note, the Colonel paces repeatedly and shows "the sense of humour known only to his intimates"</td>
+<td>~10%</td>
+<td>Suggests he is about to perform some deliberate, humorously unconventional act</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The Colonel discusses the problem of the scarecrow's hat and introduces the word "philosophy"</td>
+<td>~20%</td>
+<td>Plants the clue that a hat is about to be exchanged</td>
+</tr>
+<tr>
+<td>4</td>
+<td>The Colonel smashes his top hat and places it on the scarecrow</td>
+<td>~30%</td>
+<td>Makes explicit that the hat is destroyed — so what will he wear when he goes out?</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supporting-clues">Supporting Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue Content</th>
+<th>Location</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Old servant Archer's expression of astonishment when asked about "the cabbage"</td>
+<td>~25%</td>
+<td>Hints that a cabbage is about to be used in a non-culinary context</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The Colonel insists "it is disrespectful to attend church without a hat"</td>
+<td>~35%</td>
+<td>Logical inference: hat destroyed + must wear something = a substitute will be used</td>
+</tr>
+</tbody>
+</table>
+<h4 id="red-herrings">Red Herrings</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue Content</th>
+<th>Location</th>
+<th>Misdirection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The South Sea idol stone — suggestive of paganism or mysterious ritual</td>
+<td>~25%</td>
+<td>Leads the reader to expect the story to turn toward the supernatural or exotic adventure</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Hints at the Colonel's taste for "tropical travel"</td>
+<td>~25%</td>
+<td>Misleads the reader into expecting a story about overseas experience</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="story-two-the-improbable-success-of-mr-owen-hood">Story Two: The Improbable Success of Mr. Owen Hood</h3>
+<ul>
+<li><strong>Convergence point: 45%</strong></li>
+<li><strong>Core mystery</strong>: How does a self-styled "Robin Hood" bookworm genuinely "rob the rich to give to the poor"?</li>
+<li><strong>Answer</strong>: Owen Hood is a scholar buried in books; he contrives to "set the Thames on fire" — literally enacting the proverb <em>set the Thames on fire</em> (to do the impossible / to take the world by storm). Using his knowledge of chemistry he produces a spectacular blaze on the surface of the Thames, employing it as a rallying signal for a peasant protest and drawing nationwide attention.</li>
+</ul>
+<h4 id="key-clues_1">Key Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue Content</th>
+<th>Location</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The name "Owen Hood" directly echoes "Robin Hood"</td>
+<td>Character introduction / ~5%</td>
+<td>Signals that this person will play some kind of "outlaw hero" role</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Hood's obsessive reading — chemistry and history in particular</td>
+<td>~15%</td>
+<td>Establishes that he possesses the knowledge needed to produce fire</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The geographical description of the Thames valley and the character of the river's surface</td>
+<td>~30%</td>
+<td>Hints that the river itself will become the "stage"</td>
+</tr>
+</tbody>
+</table>
+<h4 id="red-herrings_1">Red Herrings</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue Content</th>
+<th>Location</th>
+<th>Misdirection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Hood's bookish, unworldly image — he seems the last person to take direct action</td>
+<td>First half throughout</td>
+<td>Leads the reader to conclude he will only theorise, never act</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="story-three-the-unobtrusive-traffic-of-captain-pierce">Story Three: The Unobtrusive Traffic of Captain Pierce</h3>
+<ul>
+<li><strong>Convergence point: 40%</strong></li>
+<li><strong>Core mystery</strong>: How does Pierce smuggle pigs through a district where keeping pigs is prohibited by law?</li>
+<li><strong>Answer</strong>: Pierce conveys the pigs under a series of farcical disguises — first as a fashionable lady's pet dog (the pig wrapped in a dog's blanket), then as a circus consignment of dangerous wild animals (so the police dare not open the crate), and finally under the label of a "convalescent's private railway carriage." Literally enacting the proverb <em>when pigs fly</em> (when something impossible happens), he ultimately builds a pig-shaped airship and delivers the pig to the beloved girl's farm by parachute from the sky.</li>
+</ul>
+<h4 id="key-clues_2">Key Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue Content</th>
+<th>Location</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The Windy family's predicament: they are forbidden to keep pigs</td>
+<td>~10%</td>
+<td>Establishes the central problem: the pig must return</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Pierce's background as an aviator (former Flying Corps)</td>
+<td>~5%</td>
+<td>Establishes that he has the skills to operate an aircraft</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Newspaper report of the curious incident of an old lady speeding along with a pet</td>
+<td>~50%</td>
+<td>Explicitly hints that someone is using an absurd method to convey something</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Pierce states directly: "I shall do something that every book says is impossible"</td>
+<td>~60%</td>
+<td>Directly signals that the proverb <em>when pigs fly</em> is about to be enacted literally</td>
+</tr>
+</tbody>
+</table>
+<h4 id="red-herrings_2">Red Herrings</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue Content</th>
+<th>Location</th>
+<th>Misdirection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Layer upon layer of accumulating legal prohibitions</td>
+<td>~30–50%</td>
+<td>Leads the reader to assume this is a story about a legal struggle rather than a physically airborne pig</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="story-four-the-elusive-companion-of-parson-white">Story Four: The Elusive Companion of Parson White</h3>
+<ul>
+<li><strong>Convergence point: 50%</strong></li>
+<li><strong>Core mystery</strong>: Who is Parson White's "invisible companion"? How can a man have a friend no one can see?</li>
+<li><strong>Answer</strong>: Parson White's "companion" is his wife — she has always lived in the country and takes no part in London social life, which means that to everyone in the city circle she effectively does not exist. This is a sociological interpretation of the concept of the "invisible man": within the barriers of class and geography, a person may be entirely real yet entirely invisible to metropolitan society.</li>
+</ul>
+<h4 id="key-clues_3">Key Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue Content</th>
+<th>Location</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The title's choice of "Elusive" rather than "Invisible"</td>
+<td>Title</td>
+<td>Hints that the companion is "hard to find" rather than non-existent</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Parson White's habitual pattern of travelling back and forth to the country</td>
+<td>~20%</td>
+<td>Hints that he has ties in the countryside</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The other members' complete ignorance of White's private life</td>
+<td>~30%</td>
+<td>Exposes the blind spots of the social circle</td>
+</tr>
+</tbody>
+</table>
+<h4 id="red-herrings_3">Red Herrings</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue Content</th>
+<th>Location</th>
+<th>Misdirection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The ambiguity of the word "companion"</td>
+<td>Throughout</td>
+<td>Invites the reader to imagine all manner of mysterious figures — spies, criminals, ghosts</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="story-five-the-exclusive-luxury-of-enoch-oates">Story Five: The Exclusive Luxury of Enoch Oates</h3>
+<ul>
+<li><strong>Convergence point: 45%</strong></li>
+<li><strong>Core mystery</strong>: What is the "exclusive luxury" of American millionaire Enoch Oates?</li>
+<li><strong>Answer</strong>: Oates is ultimately persuaded to abandon monopoly capitalism and divide the great English estate he has purchased among smallholders — his "exclusive luxury" turns out to be "possessing a true home" (rather than a commercial empire). At the literal level he completes the transformation from "pork baron" (a financial abstraction) to a genuine understanding of the value of real pigs (smallholder husbandry). Pierce's central argument to convince him is: your phantom financial "pork" nearly destroyed the real pigs that actually feed people.</li>
+</ul>
+<h4 id="key-clues_4">Key Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue Content</th>
+<th>Location</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Oates's sincere devotion to his wife — "She believes in your star, Enoch"</td>
+<td>~40%</td>
+<td>Hints that what he truly values is family, not wealth</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Pierce points out: "Your phantom pig nearly killed our real pig"</td>
+<td>~55%</td>
+<td>Directly names the conflict between financial speculation and the real economy</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Crane defends Oates — "His heart is in the right place"</td>
+<td>~35%</td>
+<td>Prepares the ground for Oates's eventual conversion</td>
+</tr>
+</tbody>
+</table>
+<h4 id="red-herrings_4">Red Herrings</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue Content</th>
+<th>Location</th>
+<th>Misdirection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Oates's poker face and business jargon</td>
+<td>First half</td>
+<td>Leads the reader to assume he is a stereotypical cold-blooded capitalist</td>
+</tr>
+<tr>
+<td>2</td>
+<td>His interest in "medieval architecture"</td>
+<td>~10%</td>
+<td>Misleads the reader into thinking he wishes to plunder England's cultural heritage</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="story-six-the-unthinkable-theory-of-professor-green">Story Six: The Unthinkable Theory of Professor Green</h3>
+<ul>
+<li><strong>Convergence point: 40%</strong></li>
+<li><strong>Core mystery</strong>: What is the "unthinkable theory" of taciturn scientist Professor Green?</li>
+<li><strong>Answer</strong>: Professor Green's "unthinkable theory" is — that he believes in love. In an age that worships reason and science, a serious scientist who openly confesses he is driven by love is more shocking than any scientific heresy. He has fallen in love with a country woman and, for her sake, abandons his academic position to throw himself into rural life.</li>
+</ul>
+<h4 id="key-clues_5">Key Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue Content</th>
+<th>Location</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Professor Green's silence at every social gathering — yet his gaze consistently follows a particular direction</td>
+<td>~20%</td>
+<td>Hints that he carries an unspoken preoccupation</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The passage in which Pierce congratulates himself on "manufacturing a confessing millionaire" mentions a change coming to the countryside</td>
+<td>~15%</td>
+<td>Prepares the ground for the arrival of a new resident in the country</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The title's use of "Unthinkable" rather than "Impossible"</td>
+<td>Title</td>
+<td>Hints that the theory is not absurd in itself, merely "unimaginable" in its particular context</td>
+</tr>
+</tbody>
+</table>
+<h4 id="red-herrings_5">Red Herrings</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue Content</th>
+<th>Location</th>
+<th>Misdirection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Green's identity as a scientist</td>
+<td>Throughout</td>
+<td>Leads the reader to expect some mad-science theory or invention</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="story-seven-the-unprecedented-architecture-of-commander-blair">Story Seven: The Unprecedented Architecture of Commander Blair</h3>
+<ul>
+<li><strong>Convergence point: 45%</strong></li>
+<li><strong>Core mystery</strong>: What "unprecedented architecture" has military engineer Blair constructed in the mountains?</li>
+<li><strong>Answer</strong>: Blair has built in the highlands a network of underground fortresses and laboratories — on the surface a set of agricultural research facilities, in reality defensive works prepared for the coming land war. What is "unprecedented" about his "architecture" is that it is entirely concealed underground, a complete inversion of the traditional notion of "building upward." This is also a reversal of the proverb <em>castles in the air</em> (pie-in-the-sky schemes / wishful thinking): what Blair builds is a "castle underground."</li>
+</ul>
+<h4 id="key-clues_6">Key Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue Content</th>
+<th>Location</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Blair's background in military engineering</td>
+<td>~10%</td>
+<td>Establishes that he has the ability to construct defensive works</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Descriptions of "quarries" and "tunnels" in the highland terrain</td>
+<td>~30%</td>
+<td>Hints at the existence of subterranean space</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The Earl of Eden's threat — implying that conflict is about to turn violent</td>
+<td>~50%</td>
+<td>Explains why military preparations are necessary</td>
+</tr>
+</tbody>
+</table>
+<h4 id="red-herrings_6">Red Herrings</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue Content</th>
+<th>Location</th>
+<th>Misdirection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The word "architecture" implies a visible surface structure</td>
+<td>Title</td>
+<td>Leads the reader to imagine some unusual building above ground</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="story-eight-the-ultimate-ultimatum-of-the-league-of-the-long-bow">Story Eight: The Ultimate Ultimatum of the League of the Long Bow</h3>
+<ul>
+<li><strong>Convergence point: 40%</strong></li>
+<li><strong>Core mystery</strong>: How does the League of the Long Bow prevail in its final showdown with the great landowners and the government?</li>
+<li><strong>Answer</strong>: All seven "impossible achievements" from the preceding stories converge here into a complete peasant revolution. The history Hood reads from his books is a history his own group has created. The ultimate victory comes from the economic self-sufficiency of the smallholder class — they can feed themselves and the cities, and the cities cannot survive without them. This is a bloodless victory won not by violence but by the power of self-reliance.</li>
+</ul>
+<h4 id="key-clues_7">Key Clues</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue Content</th>
+<th>Location</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The "history book" Hood reads aloud — which is, in fact, their own story</td>
+<td>~10%</td>
+<td>Frame established: the reader sees the preceding seven stories in a new light</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The scene of "disappearing milk churns" — farmers stop supplying the cities</td>
+<td>~30%</td>
+<td>Demonstrates the core weapon of smallholder economic power</td>
+</tr>
+<tr>
+<td>3</td>
+<td>All members and their wives / partners gathered together</td>
+<td>~5%</td>
+<td>Hints that individual stories have converged into collective action</td>
+</tr>
+</tbody>
+</table>
+<h4 id="red-herrings_7">Red Herrings</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Clue Content</th>
+<th>Location</th>
+<th>Misdirection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>"Ultimatum" implies armed conflict</td>
+<td>Title</td>
+<td>Leads the reader to expect a war; in reality the victory is economic and moral</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Blair's underground fortress seems to foreshadow armed confrontation</td>
+<td>Previous story</td>
+<td>Leads the reader to expect a military clash at the end</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="reasoning-path-reconstruction">Reasoning Path Reconstruction</h2>
+<p>The reasoning path in <em>Tales of the Long Bow</em> is entirely unlike that of conventional detective fiction. The reader is not searching for "who did it" but guessing "how they will accomplish this impossible thing."</p>
+<p><strong>The master key to the puzzle: the literalisation of English proverbs</strong></p>
+<p>Once a reader perceives that the core structure of each story is "the literal enactment of an English proverb," most of the answers become predictable in advance:</p>
+<ol>
+<li>In Story One, the Colonel discusses hats and cabbages in the opening pages → association with "eat one's hat" → prediction that he will use a cabbage as a substitute hat</li>
+<li>In Story Three, the title mentions Pierce's "traffic" + his aviation background + the pig issue → association with "when pigs fly" → prediction of an airborne pig</li>
+<li>In Story Eight, the "ultimatum" + the groundwork of the preceding seven stories → understanding that this is a peasant revolution waged with self-sufficiency as its weapon</li>
+</ol>
+<p><strong>Reasoning nodes:</strong>
+- <strong>~15%</strong> (mid-Story One): the reader should be able to notice the strange juxtaposition of cabbage and hat
+- <strong>~35%</strong> (end of Story One): the core structure of the book — "literalised proverbs" — is confirmed
+- <strong>Thereafter, at the opening of each story</strong>: having grasped the pattern, the reader may attempt to identify the corresponding proverb from the very first pages</p>
+<hr>
+<h2 id="additional-notes">Additional Notes</h2>
+<p><em>Tales of the Long Bow</em> is the least detective-like of all Chesterton's works, yet it is also one of the works that most fully embodies his detective philosophy. He always believed in "the paradox of common sense" — the most impossible thing is often merely the most familiar thing seen anew.</p>
+<p><strong>Literary features:</strong>
+- Every chapter title is a carefully designed cipher, decoded by a single method: find the corresponding English proverb
+- The book as a whole is a complete political allegory — from individual absurdity escalating into collective social revolution
+- Each member of the ensemble cast represents one facet of English society: the soldier's discipline, the scholar's knowledge, the aviator's courage, the parson's faith, the scientist's reason, the engineer's practicality, the American capitalist's capital</p>
+<p><strong>Comparison with the author's other works:</strong>
+- Compared with the Father Brown series, which employs "psychological insight" detection, this book employs "linguistic puzzle" detection
+- Unlike the philosophical thriller <em>The Man Who Was Thursday</em>, this book is pitched in a comic and satirical register
+- The puzzle difficulty is lower than either of the above, but the depth of social criticism is no less considerable</p>
+<p><strong>The unique detective value of this book:</strong> it proves that the essence of detection need not be the solution of a crime — it can equally be the solution of an "impossibility." And the finest solution is often the discovery that the impossibility was nothing more than a habit of language.</p>
+    <a href="../index.html" class="back-link">← Back to home</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Detective Analysis</p>
+    <p>Five authors · eighty-eight works · 135 years of evolving detective difficulty.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
