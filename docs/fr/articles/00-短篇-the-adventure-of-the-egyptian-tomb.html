@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>埃及古墓奇案（The Adventure of the Egyptian Tomb） — Salle de Dissection Policière</title>
+<meta name="description" content="倫敦，1923年。在埃及吉薩附近的法老古墓發掘現場，接連爆發一連串死亡：發掘領隊約翰·威拉德爵士心臟衰竭暴斃，美國富商贊助者布萊伯納先生死於急性血液中毒，緊接著他在紐約的姪子魯珀特·布萊伯納以一紙自責「我是麻瘋病患」的遺書開槍自盡。「門一赫爾──拉王的詛咒」成了報紙頭版的騷動，遠古埃及的神祕力量被炒作到了狂熱程度。 威">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/00-短篇-the-adventure-of-the-egyptian-tomb.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/00-短篇-the-adventure-of-the-egyptian-tomb.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/00-短篇-the-adventure-of-the-egyptian-tomb.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/00-短篇-the-adventure-of-the-egyptian-tomb.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/00-短篇-the-adventure-of-the-egyptian-tomb.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/00-短篇-the-adventure-of-the-egyptian-tomb.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/00-短篇-the-adventure-of-the-egyptian-tomb.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/00-短篇-the-adventure-of-the-egyptian-tomb.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Salle de Dissection Policière</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Accueil</a>
+        <a href="../index.html#latest">Récents</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Langue" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 Français</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/00-短篇-the-adventure-of-the-egyptian-tomb.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/00-短篇-the-adventure-of-the-egyptian-tomb.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/00-短篇-the-adventure-of-the-egyptian-tomb.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/00-短篇-the-adventure-of-the-egyptian-tomb.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/00-短篇-the-adventure-of-the-egyptian-tomb.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/00-短篇-the-adventure-of-the-egyptian-tomb.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/00-短篇-the-adventure-of-the-egyptian-tomb.html">Español</a>
+      <a class="lang-item active" data-lang="fr" href="/Detective-Analysis/fr/articles/00-短篇-the-adventure-of-the-egyptian-tomb.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">Agatha Christie · </div>
+    <h1>埃及古墓奇案（The Adventure of the Egyptian Tomb）</h1>
+    <div class="subtitle">阿嘉莎·克莉絲蒂（Agatha Christie） · 短篇</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Déductibilité</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Indice de brume</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    <div style="background:#2a2a35;border:1px solid #d4a853;color:#d4a853;padding:14px 20px;border-radius:8px;margin:20px 0;font-size:0.9rem;">ℹ️ Cette version linguistique est encore en préparation. Le texte original en chinois traditionnel est affiché pour le moment.</div>
+    <h1 id="the-adventure-of-the-egyptian-tomb">埃及古墓奇案（The Adventure of the Egyptian Tomb）— 推理分析</h1>
+<h2 id="_1">基本資訊</h2>
+<ul>
+<li>作者：阿嘉莎·克莉絲蒂（Agatha Christie）</li>
+<li>出版年：1923年（收錄於短篇集《白羅出擊》Poirot Investigates）</li>
+<li>類型：短篇</li>
+<li>偵探角色：赫丘勒·白羅（Hercule Poirot）</li>
+<li>核心謎團類型：whodunit + howdunit + whydunit</li>
+</ul>
+<hr>
+<h2 id="_2">推理難度總評</h2>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星等</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難度（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>平均收斂點 84% — 兇手身分約 70%、犯案手法約 85%、動機（遺囑）約 97%，三層真相環環相扣，最後一環幾乎不可能在揭曉前自行推出</td>
+</tr>
+<tr>
+<td>迷霧等級（Fog Rating）</td>
+<td>⭐⭐⭐⭐</td>
+<td>以「法老詛咒」作為核心煙幕彈，四起死亡肇因各異、無從連結；黑斯廷斯的錯誤理論、神經質的秘書、哈珊的可疑行徑，多重假線索層層疊加</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_3">故事大綱</h2>
+<p>倫敦，1923年。在埃及吉薩附近的法老古墓發掘現場，接連爆發一連串死亡：發掘領隊約翰·威拉德爵士心臟衰竭暴斃，美國富商贊助者布萊伯納先生死於急性血液中毒，緊接著他在紐約的姪子魯珀特·布萊伯納以一紙自責「我是麻瘋病患」的遺書開槍自盡。「門一赫爾──拉王的詛咒」成了報紙頭版的騷動，遠古埃及的神祕力量被炒作到了狂熱程度。</p>
+<p>威拉德夫人登門求助白羅，請他保護她的兒子蓋伊爵士——那個執意要繼承父業、深入古墓繼續挖掘的年輕人。白羅收下委託，表示相信超自然之力，讓黑斯廷斯大感詫異。兩人啟程前往埃及。</p>
+<p>抵達沙漠營地的第一天，噩耗再度傳來：美國大都會博物館代表施耐德先生死於破傷風。四起死亡，四種截然不同的死法，全在古墓開啟後一個月之內。白羅盤問探險隊成員：博物館代表托斯維爾博士、隊醫艾姆斯醫生、秘書哈珀先生、以及威拉德家族的老僕哈珊。</p>
+<p>入夜後，營地出現了手持權杖的阿努比斯（埃及冥界之神）幻影，眾人追趕卻無影無蹤。白羅煞有其事地在帳篷四周畫下驅邪符文，更接受哈珊送來的甘菊茶。片刻後，帳篷內傳來白羅昏倒的消息。黑斯廷斯衝去找艾姆斯醫生。</p>
+<p>兩人急忙趕回，卻見白羅安然坐起——他根本沒喝那杯茶，而是將其倒入藥瓶保存。就在此刻，艾姆斯醫生意識到自己已經露餡，迅速將什麼東西放入口中，空氣中瀰漫苦杏仁的氣味，轟然倒地。</p>
+<p>白羅宣告：兇手是艾姆斯醫生，手上沾有三條人命。</p>
+<hr>
+<h2 id="_4">真相拆解</h2>
+<h3 id="whodunit">真相一：兇手身分（whodunit）</h3>
+<ul>
+<li><strong>線索收斂點：約 70%</strong></li>
+<li>答案：探險隊隨隊醫生艾姆斯（Dr. Ames）。他是魯珀特·布萊伯納的舊友，早在魯珀特醉醺醺立下一份玩笑性質的遺書時便已知情，而這份遺囑正是讓他謀財的動機所在。</li>
+</ul>
+<h4 id="_5">關鍵線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>魯珀特·布萊伯納聲稱「在埃及有個好朋友可以借錢」，而他後來拿到了回紐約的船票錢</td>
+<td>約 20%</td>
+<td>若指的是伯父，他應該會直說「伯父」；說「好朋友」暗示別的人——後來證實是艾姆斯，他確實借了錢</td>
+</tr>
+<tr>
+<td>2</td>
+<td>哈珊轉達警告「這裡有邪惡」，白羅指出這是警告而非指控</td>
+<td>約 65%</td>
+<td>直接關注點不在哈珊本人，而是他所服務的圈子内部</td>
+</tr>
+<tr>
+<td>3</td>
+<td>哈珀告訴白羅：艾姆斯（還有施耐德）與魯珀特·布萊伯納相識，而非只認識老布萊伯納</td>
+<td>約 55%</td>
+<td><strong>關鍵轉折</strong>——白羅明確指出「只有醫生才能執行且掩蓋這些罪行」，而這條線索是他確認目標的關鍵</td>
+</tr>
+<tr>
+<td>4</td>
+<td>艾姆斯對超自然詛咒的過度駁斥——在一位「科學人」眼中，此番強調近乎表演</td>
+<td>約 45%</td>
+<td>對比其他人的不安，艾姆斯的確定性太刻意；他知道那不是詛咒，因為是他自己布置的</td>
+</tr>
+<tr>
+<td>5</td>
+<td>白羅演出昏倒，艾姆斯被傳來後立刻伸手探確認——其後在走投無路時就地服毒</td>
+<td>約 90%</td>
+<td>真正有罪之人的暴露點：無辜者不會在此刻選擇毒殺自己</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_6">輔助線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>艾姆斯起初沒有備好破傷風抗毒血清，需遠從開羅取得</td>
+<td>約 40%</td>
+<td>一名深知野外風險的隨隊醫生，不備抗毒血清本身就不正常</td>
+</tr>
+<tr>
+<td>2</td>
+<td>艾姆斯在托斯維爾博士指責白羅「不懂古埃及迷信」時，反應明顯比其他人更激烈</td>
+<td>約 72%</td>
+<td>他最積極想讓所有人相信詛咒說法——因為這正是掩護他的煙幕</td>
+</tr>
+<tr>
+<td>3</td>
+<td>白羅觀察到哈珀「徹底在邊緣」，但隨即意味深長地說「別忘了，他也有一個受害者在紐約」</td>
+<td>約 60%</td>
+<td>白羅此語的弦外之音：他此刻懷疑的已不是哈珀，而是在暗中觀察艾姆斯的反應</td>
+</tr>
+<tr>
+<td>4</td>
+<td>阿努比斯幻影其實是白羅命令哈珊扮演的，目的是測試兇手是否真的相信超自然</td>
+<td>約 80%</td>
+<td>艾姆斯衝出去「抓住那個偽裝的人」——這正是白羅所說「他沒有被我的神秘主義戲碼嚇到」的佐證</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_7">假線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>哈珀先生極度緊張、急著離開埃及</td>
+<td>約 60%</td>
+<td>讓讀者懷疑哈珀是兇手，白羅自己也說「我的懷疑一開始分散在哈珀和艾姆斯之間」</td>
+</tr>
+<tr>
+<td>2</td>
+<td>哈珊送來甘菊茶</td>
+<td>約 82%</td>
+<td>讓讀者懷疑忠心老僕哈珊是艾姆斯的共犯（實為無辜傳遞者）</td>
+</tr>
+<tr>
+<td>3</td>
+<td>黑斯廷斯的「魯珀特誤殺爵士」理論</td>
+<td>約 22%</td>
+<td>一個表面上邏輯完整的替代解釋，誤導讀者認為伯父的死才是核心謎團，而魯珀特的自殺動機是悔恨</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="howdunit">真相二：犯案手法（howdunit）</h3>
+<ul>
+<li><strong>線索收斂點：約 85%</strong></li>
+<li>答案：艾姆斯以醫學知識執行三起謀殺，並借助「詛咒」掩蓋犯行。他將血液中毒菌接種到布萊伯納老先生身上；對舊友魯珀特診斷出「麻瘋病」（利用他在南太平洋島嶼的生活史，讓謊言可信），逼其絕望自盡；再以破傷風菌殺死施耐德。</li>
+</ul>
+<h4 id="_8">關鍵線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>魯珀特的遺書寫道：「我是麻瘋病患（I am a leper）」</td>
+<td>約 20%</td>
+<td>所有人都將此語理解為隱喻（「我是社會棄兒」），但魯珀特是字面上的意思——他相信自己罹患了麻瘋病</td>
+</tr>
+<tr>
+<td>2</td>
+<td>魯珀特曾在麻瘋病盛行的南太平洋島嶼生活過</td>
+<td>約 20%</td>
+<td>交代了謊言得以成立的條件：他確實接觸過病原環境，身上若有皮膚症狀更容易受騙</td>
+</tr>
+<tr>
+<td>3</td>
+<td>哈珀提到魯珀特說「身上好像有什麼問題，但不嚴重」</td>
+<td>約 55%</td>
+<td>魯珀特確實有輕微皮膚症狀（minor skin trouble），這是艾姆斯「診斷麻瘋病」的材料</td>
+</tr>
+<tr>
+<td>4</td>
+<td>四起死亡原因完全不同（心臟病、血液中毒、自殺、破傷風）——白羅明確指出這是問題所在</td>
+<td>約 42%</td>
+<td>反其道而行：死因各異正是人為設計，不同手法讓人無從串聯，卻讓「詛咒」說更顯神秘</td>
+</tr>
+<tr>
+<td>5</td>
+<td>艾姆斯身為隨隊醫生，具備接種病菌和接觸病患的機會與技術</td>
+<td>貫穿</td>
+<td>只有醫生能在正常診療框架下，讓接種動作不被察覺</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_9">輔助線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>艾姆斯確認布萊伯納的拇指傷口化膿是「血液中毒」，而非破傷風——兩者症狀相似但截然不同</td>
+<td>約 40%</td>
+<td>艾姆斯的醫學精確性是說服讀者的表演，但同時也是他唯一能精確操控死因的人</td>
+</tr>
+<tr>
+<td>2</td>
+<td>甘菊茶的苦杏仁氣味暗示其中含有氰化物</td>
+<td>約 90%</td>
+<td>艾姆斯在茶中下毒試圖殺掉白羅，手法與前幾起謀殺一致：利用日常媒介投毒</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_10">假線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>四起死亡的「超自然詛咒」框架</td>
+<td>全篇</td>
+<td>讓讀者陷入尋找法老詛咒邏輯，而不是追問「誰有醫學能力製造多種死法」</td>
+</tr>
+<tr>
+<td>2</td>
+<td>約翰爵士的心臟衰竭被計入「詛咒受害者」</td>
+<td>約 10%</td>
+<td>但白羅明說「約翰爵士的死，我看不出任何人能從中獲利」——這是唯一自然死亡，艾姆斯只是藉機利用了這個偶發事件</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="whydunit">真相三：動機——繼承遺產（whydunit）</h3>
+<ul>
+<li><strong>線索收斂點：約 97%</strong></li>
+<li>答案：魯珀特·布萊伯納在多年前醉酒狀態下，以玩笑口吻立下一份遺囑，將所有財產遺贈給「好友羅伯特·艾姆斯」。布萊伯納老先生死後財產按法定繼承轉給姪子魯珀特，再從魯珀特（已死）轉到遺囑受益人艾姆斯。整個計畫是為了讓這筆錢流入艾姆斯手中。</li>
+</ul>
+<h4 id="_11">關鍵線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>哈珀說：「就我們所知，布萊伯納先生並未立遺囑」</td>
+<td>約 55%</td>
+<td>表面看是法律事實，實際上是艾姆斯能從魯珀特處繼承的前提——老布萊伯納不立遺囑，遺產才能傳給姪子</td>
+</tr>
+<tr>
+<td>2</td>
+<td>布萊伯納老先生對姪子大喊「一分錢都不會給你，活著不給，死後也不給，我要把錢用於我的事業」</td>
+<td>約 55%</td>
+<td>確認老布萊伯納死後財產不會直接給魯珀特，艾姆斯的計謀必須繞道：殺死老布萊伯納（法定繼承給魯珀特），再讓魯珀特死去（遺囑繼承給艾姆斯）</td>
+</tr>
+<tr>
+<td>3</td>
+<td>魯珀特確實籌到了回紐約的船票，說明有人借了他錢——而借款者正是艾姆斯</td>
+<td>約 20%</td>
+<td>這條線索在故事早期出現，卻極難在此時讀出涵義；但回頭看，它是艾姆斯行動時機的佐證</td>
+</tr>
+<tr>
+<td>4</td>
+<td>那份醉酒立下的玩笑遺囑（全文揭曉）</td>
+<td>約 97%</td>
+<td><strong>幾乎在故事結尾才出現的決定性線索</strong>：「我將我的香煙盒……以及我死時所擁有的一切遺贈給我的好友羅伯特·艾姆斯」</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_12">輔助線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>布萊伯納老先生財富龐大，是探險的金主</td>
+<td>約 15%</td>
+<td>確立遺產規模足以成為謀殺動機</td>
+</tr>
+<tr>
+<td>2</td>
+<td>艾姆斯是魯珀特的舊友（先前曾救他一命）</td>
+<td>約 55%（白羅推斷）→ 97%（遺囑確認）</td>
+<td>解釋為何一個落魄浪子會把財產留給醫生朋友</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_13">假線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>老布萊伯納揚言要把財產留給博物館事業，且曾與施耐德討論此事</td>
+<td>約 55%</td>
+<td>讓讀者以為施耐德可能因爭奪遺產而成為嫌疑人，實則此事只是艾姆斯計畫中的干擾雜訊</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_14">推理路徑重建</h2>
+<p><strong>第一條路徑：從「好朋友」到兇手</strong></p>
+<p>故事讀到約 20% 時，有一條容易被忽視的細節：魯珀特從南太平洋輾轉趕赴埃及，說「在埃及有個好朋友可以借錢」，卻並非指他的伯父——伯父已當面拒絕他。細心讀者此刻若追問「那個人是誰」，等到 55% 時哈珀提到艾姆斯與魯珀特相識，線索便可串聯：艾姆斯是那個借錢的「好朋友」。</p>
+<p>但光憑這一點仍不足以定罪。真正讓懷疑落實的是：第一，只有醫生能不動聲色地接種致病菌（職業能力）；第二，艾姆斯對「科學無法解釋超自然」的反覆強調在眾人恐慌的氛圍中顯得過於表演（心理細節）；第三，白羅設下阿努比斯陷阱（約 75%），艾姆斯的冷靜反應——不像其他人的恐懼或敬畏，而是立即衝出去「抓住人」——確認了他知道幻影是假的，因為整個「詛咒」戲碼是他自己的布置。讀者若掌握這三條，在第 70% 左右已可合理指向艾姆斯。</p>
+<p><strong>第二條路徑：「我是麻瘋病患」的字面解讀</strong></p>
+<p>這是本篇最精緻的線索設計。黑斯廷斯在 20% 處引述了魯珀特遺書的措辭：「I am a leper」（我是麻瘋病患）。所有人——包括黑斯廷斯、讀者、甚至警方——都把這句話讀成隱喻：「我是社會的敗類，比人不如」。但克莉絲蒂玩的是語言反轉：字面上說的才是事實。</p>
+<p>能在此時讀出正確含義的讀者，必須同時注意到三個條件：（一）魯珀特確實在麻瘋病流行的南太平洋住過；（二）他身上有「輕微皮膚症狀」（約 55%）；（三）他的「好朋友」是有能力下診斷的醫生。三者交疊，才能看見艾姆斯以假診斷操控了魯珀特的心理。這條路徑的收斂點在 55%，但需要讀者主動抵抗語言的隱喻誘惑。</p>
+<p><strong>第三條路徑：遺囑的追蹤</strong></p>
+<p>這條路徑在故事中幾乎不可能獨自推出。遺囑是醉酒玩笑、口氣輕描淡寫，直到故事最後才以尾聲的形式揭曉。唯一的前置提示是：魯珀特「不知道有沒有留下遺囑」——這句話在 55% 出現，技術上可以引導讀者思考「若有遺囑受益人，這個人是誰」，但沒有任何後繼線索支撐。這層真相是克莉絲蒂為白羅保留的最後一塊拼圖，讀者幾乎無法先白羅一步推出。</p>
+<hr>
+<h2 id="_15">補充說明</h2>
+<p><strong>詛咒作為敘事武器</strong></p>
+<p>《埃及古墓奇案》寫於 1923 年，距離同年轟動全球的圖坦卡門（Tut-ankh-Amen）古墓開啟事件不過數月。報紙上正充斥著「法老詛咒」的報導，克莉絲蒂以此為素材，創作了一個「用真實社會恐慌作為犯罪掩護」的故事。她明白，當時代的超自然信仰本身就是最完美的共謀：只要讓人們相信死亡來自神明，那麼即便你在白天公開殺人，目擊者也會把它歸因於詛咒。這是社會學意義上的謀殺，也是克莉絲蒂對集體歇斯底里最犀利的一次解剖。</p>
+<p><strong>白羅的「偽裝信仰」策略</strong></p>
+<p>本篇中白羅的核心戰術是刻意偽裝成相信超自然——帶著一本《埃及與迦勒底的魔法》、在帳篷外畫五芒星、表演被詛咒嚇到。這層表演有雙重目的：一是麻痺兇手，讓他以為白羅已被迷信迷惑，不再是威脅；二是測試艾姆斯的反應——若他對神秘展示沒有真正的恐懼，便確認他知道這一切只是人為設計。</p>
+<p>黑斯廷斯一度以為白羅真的相信超自然，這本身也是克莉絲蒂對讀者施加的一層迷霧：利用敘述者的誤解，讓讀者跟著誤解偵探的真實想法。</p>
+<p><strong>四起死亡的不對稱結構</strong></p>
+<p>克莉絲蒂設計了一個引人入勝的不對稱：四起死亡中，只有三起是謀殺，而「詛咒故事」的起源——約翰爵士的心臟衰竭——反而是唯一真正的自然死亡。兇手艾姆斯沒有殺死約翰爵士；那是巧合，是天賜良機，讓他得以在現成的恐慌氛圍中插入自己的罪行。這個細節讓本案的推理難度上升了一個層次：偵探不是在四起謀殺中找兇手，而是在三起謀殺與一起意外交織的假現場中辨認真假。</p>
+<p><strong>與同期克莉絲蒂作品的比較</strong></p>
+<p>同年（1923）克莉絲蒂出版了《高爾夫球場命案》（Murder on the Links），在那本書中法官的身分是敘事核心。相較之下，本篇短篇在篇幅限制下，克莉絲蒂選擇放棄深度人物描寫，改以「一個謊言撐起整個謀殺計畫」的機關設計見長。她在這個時期正摸索自己的風格邊界：字面與隱喻的混淆、超自然恐慌作為煙幕、醫生作為最難被懷疑的罪犯——這些元素後來都在她更成熟的作品（如《東方快車謀殺案》、《無人生還》）中被深度發展。</p>
+<p><strong>對台灣讀者的補充</strong></p>
+<p>本篇成書時所借鑒的「圖坦卡門詛咒」真相至今仍有爭論：發掘隊員確實接連死亡，科學解釋包括黴菌毒素、密閉空間積累的有害氣體，以及單純的生命常態老死。克莉絲蒂的洞見在於，她認識到「詛咒的力量不在真假，而在人們相信它」——這才是本篇最現代的命題。</p>
+    <a href="../index.html" class="back-link">← Retour à l'accueil</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Salle de Dissection Policière</p>
+    <p>Cinq auteurs · quatre-vingt-huit œuvres · 135 ans d'évolution de la difficulté du roman policier.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
