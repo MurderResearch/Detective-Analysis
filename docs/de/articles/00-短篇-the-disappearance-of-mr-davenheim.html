@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>戴文漢先生的失蹤（The Disappearance of Mr. Davenheim） — Detektivanalyse</title>
+<meta name="description" content="嘉年華剛散、茶桌擺好，蘇格蘭警場的賈普探長登門拜訪白羅與黑斯廷斯。話題很快轉到全城轟動的新聞：著名銀行家達文漢先生（Davenheim）三天前從其鄉間宅邸「雪松莊」（The Cedars）步行外出、投遞信件，此後人間蒸發，再無音訊。 白羅以招牌自信立下賭約：一週之內，不離椅子，憑藉線報就能解開謎團。賈普遂詳述案情：達文">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/00-短篇-the-disappearance-of-mr-davenheim.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/00-短篇-the-disappearance-of-mr-davenheim.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/00-短篇-the-disappearance-of-mr-davenheim.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/00-短篇-the-disappearance-of-mr-davenheim.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/00-短篇-the-disappearance-of-mr-davenheim.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/00-短篇-the-disappearance-of-mr-davenheim.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/00-短篇-the-disappearance-of-mr-davenheim.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/00-短篇-the-disappearance-of-mr-davenheim.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Noto Sans', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">Detektivanalyse</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">Start</a>
+        <a href="../index.html#latest">Neueste</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="Sprache" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 Deutsch</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/00-短篇-the-disappearance-of-mr-davenheim.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/00-短篇-the-disappearance-of-mr-davenheim.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/00-短篇-the-disappearance-of-mr-davenheim.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/00-短篇-the-disappearance-of-mr-davenheim.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/00-短篇-the-disappearance-of-mr-davenheim.html">한국어</a>
+      <a class="lang-item active" data-lang="de" href="/Detective-Analysis/de/articles/00-短篇-the-disappearance-of-mr-davenheim.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/00-短篇-the-disappearance-of-mr-davenheim.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/00-短篇-the-disappearance-of-mr-davenheim.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">Agatha Christie · </div>
+    <h1>戴文漢先生的失蹤（The Disappearance of Mr. Davenheim）</h1>
+    <div class="subtitle">阿嘉莎·克莉絲蒂（Agatha Christie） · 短篇</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">Deduzierbarkeit</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">Nebelgrad</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    <div style="background:#2a2a35;border:1px solid #d4a853;color:#d4a853;padding:14px 20px;border-radius:8px;margin:20px 0;font-size:0.9rem;">ℹ️ Diese Sprachfassung ist noch in Arbeit. Es wird derzeit der Originaltext in traditionellem Chinesisch angezeigt.</div>
+    <h1 id="the-disappearance-of-mr-davenheim">戴文漢先生的失蹤（The Disappearance of Mr. Davenheim）— 推理分析</h1>
+<h2 id="_1">基本資訊</h2>
+<ul>
+<li>作者：阿嘉莎·克莉絲蒂（Agatha Christie）</li>
+<li>出版年：1923年（初刊於《速寫》雜誌，3月28日）</li>
+<li>類型：短篇</li>
+<li>偵探角色：赫克丘·白羅（Hercule Poirot）</li>
+<li>核心謎團類型：whodunit（身分謎）+ howdunit（手法謎）+ whydunit（動機謎）</li>
+</ul>
+<hr>
+<h2 id="_2">推理難度總評</h2>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星等</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難度（Deducibility）</td>
+<td>⭐⭐⭐</td>
+<td>平均收斂點約 53% — 財務動機線索收斂於 30%，逃脫手法於 52%，但核心身分謎團的決定性線索要到 77% 才完整到位；三者平均落在中等難度帶</td>
+</tr>
+<tr>
+<td>迷霧等級（Fog Rating）</td>
+<td>⭐⭐⭐⭐</td>
+<td>勞文（Lowen）被多重間接證據完美設局為嫌疑人，石灰窯「毀屍滅跡」理論補上最後一塊令人信服的拼圖，幾乎讓所有讀者走上錯誤路徑</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_3">故事大綱</h2>
+<p>嘉年華剛散、茶桌擺好，蘇格蘭警場的賈普探長登門拜訪白羅與黑斯廷斯。話題很快轉到全城轟動的新聞：著名銀行家達文漢先生（Davenheim）三天前從其鄉間宅邸「雪松莊」（The Cedars）步行外出、投遞信件，此後人間蒸發，再無音訊。</p>
+<p>白羅以招牌自信立下賭約：一週之內，不離椅子，憑藉線報就能解開謎團。賈普遂詳述案情：達文漢在離家前曾交代妻子，若一個名叫勞文（Lowen）的商人前來洽談，請引進書房等候。勞文如期而至，枯等將近一小時，卻不見主人返回，只好告辭離去。翌日，警方發現書房保險箱遭人撬開，室內窗戶卻從裡頭上了鎖，無跡可循。</p>
+<p>事件繼續升溫：達文漢的衣物在宅邸後方湖底被撈起，卻不見屍體；一個名叫比利·凱萊特（Billy Kellett）的慣犯以可疑方式典當了達文漢的鑽石戒指，聲稱在前往鎮上的路上，親眼目睹一名「深膚色紳士、留著大鬍子」將戒指扔過籬笆——此描述與勞文的外貌高度吻合。更令人毛骨悚然的是，湖泊旁的小門通往一座石灰窯，眾人對「毀屍滅跡」的推斷幾乎確信不疑。</p>
+<p>然而，白羅在這一連串聳動資訊中，只關切兩件在旁人眼中微不足道的事：達文漢近年對珠寶的狂熱收藏，以及他去年秋天前往布宜諾斯艾利斯的旅行——還有最後一個幾乎讓眾人發笑的問題：「夫妻倆睡同一間房嗎？」</p>
+<p>電報的回覆印證了白羅的推斷：自去年冬天起，夫妻分房而睡。至此，白羅宣告案情已然大白。</p>
+<p><strong>真相是：達文漢先生根本沒有失蹤，更沒有死亡。他就是比利·凱萊特本人。</strong></p>
+<p>達文漢長年挪用銀行公款，將資產轉換為可攜帶的珠寶，為自己的出走預先積累財富。去年秋天的「布宜諾斯艾利斯之旅」，實際上是他在英國某地監獄服滿三個月，親身建立起「慣犯比利·凱萊特」這個有警察前科的備用身分。案發當日，他以「達文漢」面目走入自家船屋，換上事先藏好的流浪漢衣物、除去假鬍子假髮，以「凱萊特」之姿現身賽馬場，繼而自導自演典當戒指、醉後鬥毆警察、被捕入獄——藏身在任何人都不會去搜查的地方：監牢。</p>
+<hr>
+<h2 id="_4">真相拆解</h2>
+<h3 id="_5">真相一：達文漢即是比利·凱萊特（核心身分謎）</h3>
+<ul>
+<li><strong>線索收斂點：約 77%</strong></li>
+<li>答案：達文漢事先在監獄服刑，建立了凱萊特這個有前科的化名身分；案發當日以流浪漢裝束出現，偽造目擊証詞來陷害勞文，刻意被逮捕入獄以躲避追緝。</li>
+</ul>
+<h4 id="_6">關鍵線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>達文漢近年瘋狂購買珠寶，幾乎每月都送妻子稀世寶石</td>
+<td>約 27%</td>
+<td>他在將挪用的公款轉換成高價值、高流動性的可攜式資產，為日後出走預先備妥財富</td>
+</tr>
+<tr>
+<td>2</td>
+<td>達文漢去年秋天在布宜諾斯艾利斯度過整個秋季</td>
+<td>約 30%</td>
+<td>白羅事後揭露：他並未出國，而是在英國監獄服刑三個月，親自打造「比利·凱萊特」的犯罪紀錄</td>
+</tr>
+<tr>
+<td>3</td>
+<td>白羅仔細研究達文漢的報紙照片，詳細記下外貌特徵：長鬈髮、濃鬍鬚、尖下巴鬍、濃眉、深色眼眸、鬢髮漸白</td>
+<td>約 37%</td>
+<td>白羅在比對「達文漢的外貌」與「凱萊特的真實外貌」之間的差距——這些面部特徵皆可以剃除或剪短來偽裝</td>
+</tr>
+<tr>
+<td>4</td>
+<td>凱萊特「去年秋天曾因扒竊老紳士的錶而服刑三個月」</td>
+<td>約 52%</td>
+<td>此時間點與「達文漢前往布宜諾斯艾利斯」完全重疊——這是最可以讓細心讀者產生懷疑的間接連結</td>
+</tr>
+<tr>
+<td>5</td>
+<td>電報確認：自去年冬天（即「布宜諾斯艾利斯之旅」結束後）起，達文漢夫婦便分房而睡</td>
+<td>約 77%</td>
+<td>決定性的最後一塊線索——他回國後需要在家中持續佩戴假鬍假髮以維持「達文漢」的外貌，根本無法在妻子面前就寢</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_7">輔助線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>白羅在聽聞湖泊時，立即追問：「有船屋嗎？」，且事後宣稱比湖泊更重要的是船屋</td>
+<td>約 37%</td>
+<td>他預感船屋是換裝地點——達文漢事先將流浪漢衣物藏在那裡</td>
+</tr>
+<tr>
+<td>2</td>
+<td>園丁看見一道身影朝宅邸側面、玫瑰園方向走去（書房落地窗通往玫瑰園，玫瑰園通往湖泊）</td>
+<td>約 33%</td>
+<td>此為達文漢本人前往船屋換裝的路徑，不是勞文</td>
+</tr>
+<tr>
+<td>3</td>
+<td>達文漢的衣物在湖中被發現，但衣帽間裡其他衣物分毫未動</td>
+<td>約 47%</td>
+<td>他只需要一套「凱萊特」的流浪漢衣物，事先藏在船屋，從未混入家中衣物</td>
+</tr>
+<tr>
+<td>4</td>
+<td>凱萊特所描述的「大鬍子深膚色城市紳士」，竟與勞文的外貌若合符節</td>
+<td>約 53%</td>
+<td>這是達文漢精心構造的陷阱——他捏造了這段目擊陳述，藉由勞文的相似外型來陷害對方</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_8">假線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>凱萊特聲稱目擊「大鬍子紳士」將戒指扔過籬笆</td>
+<td>約 52%</td>
+<td>讓讀者以為凱萊特只是無辜的旁觀者，實際上凱萊特本人（即達文漢）才是那個丟出戒指的人</td>
+</tr>
+<tr>
+<td>2</td>
+<td>「達文漢」消失之前，勞文恰好在場，且後來被目擊曾走入玫瑰園</td>
+<td>約 50%</td>
+<td>勞文進入玫瑰園是真實事件，但他只是出去看稀有玫瑰；被操控成指向謀殺的間接證據</td>
+</tr>
+<tr>
+<td>3</td>
+<td>石灰窯就在湖泊旁的小門外，走三分鐘即到</td>
+<td>約 58%</td>
+<td>強化「兇手用石灰毀屍滅跡、只有金屬戒指無法消滅所以取走」的理論，讓眾人徹底相信達文漢已死</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="howdunit">真相二：達文漢如何設計出逃（howdunit）</h3>
+<ul>
+<li><strong>線索收斂點：約 52%</strong></li>
+<li>答案：達文漢事先在船屋藏妥流浪漢衣物；案發當日步出門口、走到船屋換裝，將原本的紳士服丟入湖中；以凱萊特身分出現在賽馬場，返途自導自演目擊場景後典當戒指、主動鬥毆被捕，躲進最不可能被搜索的地點：監獄。同時，他事先在保險箱上鑽孔、安排勞文來訪使之成為替罪羊，確保警方視線完全轉向勞文。</li>
+</ul>
+<h4 id="_9">關鍵線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>書房保險箱遭到撬開，但室內所有窗戶均由內部上鎖</td>
+<td>約 25%</td>
+<td>這不是外來闖入者幹的——只有能自由進出書房、又能在離開前從內部鎖窗的人才辦得到，即達文漢本人</td>
+</tr>
+<tr>
+<td>2</td>
+<td>達文漢在離家前，刻意交代妻子讓勞文在書房等候</td>
+<td>約 20%</td>
+<td>他將勞文「獨處在書房」的場景列入計畫——不是巧合，而是刻意設計</td>
+</tr>
+<tr>
+<td>3</td>
+<td>白羅詢問：湖邊有船屋嗎？然後斷言「比湖更重要的是船屋」</td>
+<td>約 37%</td>
+<td>預先隱藏換裝地點是逃脫計畫的核心環節</td>
+</tr>
+<tr>
+<td>4</td>
+<td>達文漢衣物在湖中被發現，但衣帽間毫無缺漏</td>
+<td>約 47%</td>
+<td>多了一套衣物（預藏的凱萊特服）、少了一套衣物（扔進湖裡的）——完美收支平衡，沒有多餘痕跡</td>
+</tr>
+<tr>
+<td>5</td>
+<td>凱萊特「曾試圖在五個典當舖典當戒指」、隨後大醉、鬥毆警察被捕</td>
+<td>約 52%</td>
+<td>這些看似魯莽的行為，正是計畫的一部分：製造印象深刻的目擊記憶，確保「自己」被逮捕入獄</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_10">輔助線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>達文漢事前安排勞文登門拜訪，刻意在自己「失蹤」前設下這一局</td>
+<td>約 20%</td>
+<td>為警方預備好第一個嫌疑人，讓調查從一開始就走偏</td>
+</tr>
+<tr>
+<td>2</td>
+<td>白羅指出勞文不可能事先帶著撬保險箱的工具</td>
+<td>約 69%</td>
+<td>反向確認保險箱只能由屋主本人預先鑽孔，而非臨時起意的外來者</td>
+</tr>
+<tr>
+<td>3</td>
+<td>達文漢的戒指在周六夜晚就被典當</td>
+<td>約 50%</td>
+<td>如果真的被謀殺，戒指不可能當晚就出現在典當行——兇手沒有理由這麼快公開脫手</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_11">假線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>窗戶從內部鎖上 → 暗示「可能有共犯在屋內配合」</td>
+<td>約 25%</td>
+<td>讓警方思考「屋內線人」的可能，而非想到屋主本人幹的</td>
+</tr>
+<tr>
+<td>2</td>
+<td>湖泊旁有石灰窯</td>
+<td>約 57%</td>
+<td>構造出一個邏輯完整的「謀殺後毀屍」假敘事，讓眾人堅信達文漢已死</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="whydunit">真相三：達文漢挪用公款並設局詐欺（whydunit）</h3>
+<ul>
+<li><strong>線索收斂點：約 30%</strong></li>
+<li>答案：達文漢長期挪用銀行資產，將公款轉換為珠寶（並以贗品替換真品），在海外以化名秘密存放鉅額財富。銀行面臨崩潰之際，他以計畫已久的「失蹤」逃脫責任，同時捲走現金、無記名債券與珠寶。</li>
+</ul>
+<h4 id="_12">關鍵線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>保險箱內有大量現金、無記名債券，以及「相當可觀的珠寶」——皆因「近期一筆大交易剛完成」而備妥</td>
+<td>約 25%</td>
+<td>白羅事後指出：這些資產如此「方便地集中在一起」，根本是為了讓某人——也就是達文漢自己——輕鬆帶走</td>
+</tr>
+<tr>
+<td>2</td>
+<td>達文漢近年瘋狂購買珠寶，幾乎每月都買稀世珍品送妻子</td>
+<td>約 27%</td>
+<td>表面是溺愛妻子，實為以銀行公款購入珠寶後以贗品替換，將資產以可攜形式藏在保險箱中</td>
+</tr>
+<tr>
+<td>3</td>
+<td>達文漢去年秋天「在布宜諾斯艾利斯度過整個秋季」</td>
+<td>約 30%</td>
+<td>此行是建立異國化名、轉移或存放資產的一環，而非單純商務旅行</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_13">輔助線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>勞文曾數度在市場交易中占達文漢便宜</td>
+<td>約 29%</td>
+<td>達文漢選定勞文作為替罪羊，部分原因是對此抱有積怨，藉機報復</td>
+</tr>
+<tr>
+<td>2</td>
+<td>報紙報導「達文漢銀行崩潰」</td>
+<td>約 81%</td>
+<td>事後確認——銀行的財務狀況早已岌岌可危，達文漢選在最後關頭出逃</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_14">假線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>「達文漢與勞文在市場上有嫌隙」</td>
+<td>約 29%</td>
+<td>讓讀者聯想到勞文因怨恨而蓄意謀害，掩蓋了達文漢對勞文的利用是「單方面主動設局」的真相</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_15">推理路徑重建</h2>
+<p><strong>第一條路徑：財務動機（最早可察覺，約 30%）</strong></p>
+<p>最先打開缺口的，是兩條看似孤立的細節：達文漢近年異常熱衷於購買珠寶，以及他去年秋天的「布宜諾斯艾利斯之行」。這兩條線索在全文三成處便已齊備，任何嗅覺敏銳的讀者都應該在此刻停下來想：一個銀行家為什麼要瘋狂囤積珠寶？珠寶有什麼性質是存款沒有的？——答案是：可攜帶性、不記名性、難以追蹤。</p>
+<p><strong>第二條路徑：逃脫手法（約 47–52%）</strong></p>
+<p>衣物在湖中被發現的那一刻（47%），細心的讀者應該覺得哪裡不對：湖泊距離宅邸還有一段距離，達文漢若真的遭到謀殺，兇手為何要特地把衣物拖到湖裡？更奇怪的是，其他衣物分毫未動。到了凱萊特的故事（52%），白羅的反駁已給出了最關鍵的思考方向：一個真正的謀殺犯不會這麼笨地公開典當戒指。那麼，主動製造這些「笨拙」痕跡的人，目的是什麼？是要被注意，是要被逮捕。</p>
+<p><strong>第三條路徑：身分謎團（需等到 77%，才能確認）</strong></p>
+<p>凱萊特「去年秋天曾服刑三個月」這條線索出現在 52%——此刻若同時對照「達文漢去年秋天在布宜諾斯艾利斯」，兩個時間窗口的重疊是驚人的。然而僅憑這一點，仍無法確認兩者是同一人，因為布宜諾斯艾利斯有無數種解釋。</p>
+<p>決定性的轉折在 77%：「自去年冬天起，夫妻分房而睡。」白羅的邏輯是：一個長年生活規律的銀行家，為何從去年冬天起突然分房？正是因為他「從布宜諾斯艾利斯」歸來後，真實面目是剃了鬍子、剪短頭髮的凱萊特，他必須在家中持續佩戴假鬍假髮才能維持「達文漢」的外貌，而這在同床共枕之際根本無法維持。至此，三條路徑匯流——凱萊特即達文漢，毫無疑義。</p>
+<hr>
+<h2 id="_16">補充說明</h2>
+<p><strong>「不離椅子的偵探」作為推理小說的宣言</strong></p>
+<p>克莉絲蒂在這篇故事中借白羅之口，對當時流行的「現場偵查派」偵探觀提出了直接挑戰。賈普介紹能幹的米勒探長時，強調他「不會放過任何腳印、煙灰、麵包屑」；白羅的回應是：倫敦麻雀也有同樣敏銳的眼睛，但你不會讓麻雀來解謎。這個宣言在 1923 年的偵探小說讀者眼中，是一道鮮明的路線聲明：思維優先於行動，灰色腦細胞優先於放大鏡。</p>
+<p><strong>達文漢的計謀有多深思熟慮</strong></p>
+<p>克莉絲蒂讓這個罪犯展現了令人心悅誠服的長線佈局能力：</p>
+<table>
+<thead>
+<tr>
+<th>準備環節</th>
+<th>時間點</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>建立凱萊特身分</td>
+<td>去年秋天（案發前約半年）</td>
+<td>親身坐牢三個月，確保凱萊特有真實的警察紀錄</td>
+</tr>
+<tr>
+<td>持續保留珠寶（藏公款）</td>
+<td>近幾年持續進行</td>
+<td>以銀行公款購珠寶，以贗品替換，積累可攜帶資產</td>
+</tr>
+<tr>
+<td>分房（準備出逃）</td>
+<td>去年冬天（案發前約半年）</td>
+<td>回國後以「達文漢」身分生活需要假鬍假髮，無法共寢</td>
+</tr>
+<tr>
+<td>在船屋藏好服裝</td>
+<td>案發前某日</td>
+<td>流浪漢服裝及所有換裝工具預先藏妥</td>
+</tr>
+<tr>
+<td>安排勞文當日來訪</td>
+<td>案發當日下午</td>
+<td>製造「獨留嫌疑人於書房」的場景</td>
+</tr>
+<tr>
+<td>預先鑽孔保險箱</td>
+<td>案發當日</td>
+<td>離家前自行破壞，讓勞文背鍋</td>
+</tr>
+</tbody>
+</table>
+<p>這種多層預謀，在 1923 年的偵探小說中並不常見。克莉絲蒂甚至讓白羅說了一句稱讚：「此人的灰色腦細胞，或許有某種畸形，但品質屬於第一流。」這話自然也是克莉絲蒂藉白羅之口，為自己設計這個謎題而驕傲。</p>
+<p><strong>「藏身在監獄」的驚人邏輯</strong></p>
+<p>白羅向黑斯廷斯和賈普提問：「若你是逃犯，你會躲在哪裡？」二人的答案分別是「藏在倫敦人群中」和「搭遊艇逃往世界盡頭」——這兩個答案都以「遠離警察」為前提。白羅的答案則徹底顛覆這個前提：「藏進監獄——因為你們在追他進監獄，所以絕不會想到去監獄裡找他。」</p>
+<p>這個邏輯的高明之處，在於它利用了搜查本身的盲點：追捕行動產生了它自身的認知死角。現代推理作家稱此手法為「藏葉於林」或「最危險的地方即最安全的地方」。克莉絲蒂在 1923 年已將其運用得如此精準，令人驚嘆。</p>
+<p><strong>迷霧設計的對稱美學</strong></p>
+<p>本篇的紅鯡魚體系有一種近乎優雅的對稱性：真正的犯人（達文漢/凱萊特）所留下的每一道痕跡，都被設計成同時可以指向勞文。</p>
+<ul>
+<li>「大鬍子深膚色城市紳士」→ 勞文的外貌，但其實是達文漢本人</li>
+<li>「書房保險箱被撬開」→ 勞文曾獨處書房，但其實是達文漢預先鑽孔</li>
+<li>「戒指被典當」→ 凱萊特捏造目擊陳述指向勞文</li>
+<li>「玫瑰園有人影」→ 勞文確曾外出，但那不是犯罪，只是不巧被目擊</li>
+</ul>
+<p>每一塊拼圖都是真實的，每一塊卻都被扭轉了詮釋方向。這種「利用真實事件來構造虛假敘事」的手法，是克莉絲蒂日後最具代表性的技藝之一，在此短篇中已見端倪。</p>
+<p><strong>與後期克莉絲蒂的比較</strong></p>
+<p>這篇 1923 年的早期作品與克莉絲蒂後期的長篇相比，謎題構造較為直線，篇幅限制也壓縮了誤導層次的深度。但它確立了幾個日後成為克莉絲蒂招牌的手法：將「最明顯的嫌疑人」設為假目標、讓動機先於手法出現在文本中、以社會角色（此處是監獄裡的慣犯）作為偽裝。二十年後在《尼羅河謀殺案》與《東方快車謀殺案》中更加成熟的那個克莉絲蒂，她的基因在這篇故事裡已清晰可辨。</p>
+    <a href="../index.html" class="back-link">← Zur Startseite</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">Detektivanalyse</p>
+    <p>Fünf Autoren · achtundachtzig Werke · 135 Jahre Entwicklung der Schwierigkeit im Kriminalroman.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
