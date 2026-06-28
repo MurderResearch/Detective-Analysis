@@ -1,10 +1,10 @@
-📖 【推理解剖室】雙重線索（The Double Clue）
+📖 【推理解剖室】獵人小屋的疑案（The Hunter's Lodge Case）
 ✍️ 阿嘉莎·克莉絲蒂（Agatha Christie） · 
 
 推理難度 ★★★★☆ | 迷霧等級 ★★★★☆
 
-紈絝富商馬庫斯·哈德曼（Marcus Hardman）在倫敦宅邸舉辦了一場茶會，賓客中最顯眼的兩位是保加利亞伯爵梅弗洛斯（Count Mefros）與魅力四射的俄羅斯女伯爵薇拉·羅莎科夫（Countess Vera Rossakoff）。 茶會結束後，哈德曼驚覺臥室保險箱遭竊，收藏多年的珍貴珠寶悉數消失。保險箱附近留下了兩件物品：一只梅弗洛斯伯爵的菸盒，以及一只毫無疑問屬於羅莎科夫女伯爵的手套。 案情委由白羅介入調查。面對這個「雙重線索」，在場所有人——包括哈德曼本人和警方——都陷入同一個困境：究竟是伯爵偷了珠寶，還是女伯爵？抑或兩人合謀？ 白羅的視角卻截然不同。他看著這兩件物品沉默良久，然後…
+偵探白羅染上流感臥床在家，助手哈斯丁獨自奔赴德比郡處理緊急案件。委託人羅傑·哈佛林（Roger Havering）——一個有過去輕微劣跡、目前深陷債務的紈絝子弟——告知叔父哈靈頓·培斯（Harrington Pace）在他們位於荒野中的獵人小屋遭人槍殺。 案情看似清晰：當晚九時許，一名蓄黑鬍鬚、帶美國口音的陌生人上門求見培斯，雙方在槍械室交談，繼而爭吵，然後一聲槍響。管家米朵頓太太（Mrs. Middleton）與女主人佐伊（Zoe Havering）同時在場聽見槍聲，衝至槍械室門口時，陌生人已逃出窗外，留下培斯的屍體。 然而，白羅透過哈斯丁每日的詳盡報告，在病床上拼出了全然不同的真相：兇手正…
 
-🔗 完整分析 → https://murderresearch.github.io/Detective-Analysis/articles/00-短篇-the-double-clue.html
+🔗 完整分析 → https://murderresearch.github.io/Detective-Analysis/articles/00-短篇-the-hunters-lodge-case.html
 
 #推理小說 #推理解剖室 #阿嘉莎克莉絲蒂
