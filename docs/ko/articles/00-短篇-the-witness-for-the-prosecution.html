@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>控方證人（The Witness for the Prosecution） — 추리해부실</title>
+<meta name="description" content="倫敦律師梅赫恩（Mayherne）接手一樁謀殺案的辯護：年輕男子倫納德·沃爾（Leonard Vole）被控殺害艾蜜莉·法蘭奇（Emily French）——一位將全部財產留給他的孤獨老婦。沃爾的案情極為不利：財務困窘、刻意接近富婆、獨自繼承遺產，且主要辯護武器只有「同居人的不在場證明」。 最大的衝擊來自他的「妻子」羅">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/00-短篇-the-witness-for-the-prosecution.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/00-短篇-the-witness-for-the-prosecution.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/00-短篇-the-witness-for-the-prosecution.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/00-短篇-the-witness-for-the-prosecution.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/00-短篇-the-witness-for-the-prosecution.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/00-短篇-the-witness-for-the-prosecution.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/00-短篇-the-witness-for-the-prosecution.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/00-短篇-the-witness-for-the-prosecution.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif KR', serif;
+  --font-sans: 'Noto Sans KR', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">추리해부실</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">홈</a>
+        <a href="../index.html#latest">최신</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="언어" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 한국어</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/00-短篇-the-witness-for-the-prosecution.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/00-短篇-the-witness-for-the-prosecution.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/00-短篇-the-witness-for-the-prosecution.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/00-短篇-the-witness-for-the-prosecution.html">日本語</a>
+      <a class="lang-item active" data-lang="ko" href="/Detective-Analysis/ko/articles/00-短篇-the-witness-for-the-prosecution.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/00-短篇-the-witness-for-the-prosecution.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/00-短篇-the-witness-for-the-prosecution.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/00-短篇-the-witness-for-the-prosecution.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">애거사 크리스티 · </div>
+    <h1>控方證人（The Witness for the Prosecution）</h1>
+    <div class="subtitle">阿嘉莎·克莉絲蒂（Agatha Christie） · 短篇</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">추리 난이도</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">안개 등급</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    <div style="background:#2a2a35;border:1px solid #d4a853;color:#d4a853;padding:14px 20px;border-radius:8px;margin:20px 0;font-size:0.9rem;">ℹ️ 이 언어판은 아직 번역 준비 중입니다. 현재 번체 중국어 원문이 표시됩니다.</div>
+    <h1 id="the-witness-for-the-prosecution">控方證人（The Witness for the Prosecution）— 推理分析</h1>
+<h2 id="_1">基本資訊</h2>
+<ul>
+<li>作者：阿嘉莎·克莉絲蒂（Agatha Christie）</li>
+<li>出版年：1924年（初刊於《穆西雜誌》Munsey's Magazine），後收錄於《死亡獵犬》（The Hound of Death, 1933）及《控方證人及其他故事》（Witness for the Prosecution and Other Stories, 1948）</li>
+<li>類型：短篇</li>
+<li>偵探角色：梅赫恩律師（Mr. Mayherne，辯護律師，兼本故事的視角人物）</li>
+<li>核心謎團類型：whodunit（兇手身分）＋ whydunit（動機謎團）＋ 反轉型（敘事框架本身的欺騙）</li>
+</ul>
+<hr>
+<h2 id="_2">推理難度總評</h2>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星等</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難度（Deducibility）</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>平均收斂點約 92% — 三層真相各自在全文 88%、88%、99% 才給出最後一塊拼圖；最終一句話是整個推理大廈不可缺少的基石，卻在故事結束的一瞬間才出現</td>
+</tr>
+<tr>
+<td>迷霧等級（Fog Rating）</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>克莉絲蒂以「不可靠的受難者」與「義憤的情婦」構築雙重欺騙：讀者跟著梅赫恩律師的視角走，從頭到尾被一個表演者操控，而那個表演者同時是兇案的共謀者與救人的恩人；第三層翻轉在最後一行才引爆，是短篇推理小說史上最凌厲的終結句之一</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_3">故事大綱</h2>
+<p>倫敦律師梅赫恩（Mayherne）接手一樁謀殺案的辯護：年輕男子倫納德·沃爾（Leonard Vole）被控殺害艾蜜莉·法蘭奇（Emily French）——一位將全部財產留給他的孤獨老婦。沃爾的案情極為不利：財務困窘、刻意接近富婆、獨自繼承遺產，且主要辯護武器只有「同居人的不在場證明」。</p>
+<p>最大的衝擊來自他的「妻子」羅曼尼·海格爾（Romaine Heilger）——一名奧地利女演員，因真正丈夫尚在人世而無法與沃爾合法成婚。她不但拒絕作偽證保護沃爾，更以「控方證人」身份出庭，作出毀滅性的陳述：沃爾那晚拎著撬棍出門，帶血回來，並向她坦承殺人。</p>
+<p>案件看似無可挽回，審判前夕卻收到匿名信，指向一個名叫「默格森太太」的貧民窟女人，聲稱手握足以揭穿羅曼尼謊言的情書。梅赫恩冒險赴約，以二十英鎊換得一批情書——羅曼尼寫給秘密情人「馬克斯」的信，清楚顯示她計劃借謀殺案陷害沃爾，以發洩積壓已久的仇恨。信件在法庭上被公開，羅曼尼全面崩潰認罪，沃爾獲判無罪。</p>
+<p>然而，結局並不在法庭。梅赫恩追上羅曼尼，才得知令他頭皮發麻的真相：「默格森太太」正是羅曼尼本人喬裝，那批「揭露仇恨」的情書是她親手偽造的道具，整場「控方證人翻案」是她精心設計的戲，目的是讓她的「認罪」在法庭上產生最大的反應效應，確保沃爾獲釋。而她最後留下的一句話，則將整個故事再翻一次：「你以為他是無辜的——我知道他有罪。」</p>
+<hr>
+<h2 id="_4">真相拆解</h2>
+<h3 id="_5">真相一：羅曼尼的真實計劃——她始終在設法救沃爾</h3>
+<ul>
+<li><strong>線索收斂點：約 88%</strong></li>
+<li>答案：羅曼尼從未真正背叛沃爾。她清楚一個「忠心妻子的不在場證明」在陪審團眼中不可靠，於是設計了更高明的方案：以「恨透了他的情婦」身份出庭，提供毀滅性的不利證詞，再讓她親手偽造的「揭露仇恨的情書」在法庭上擊潰自己的證詞——讓無罪認定如同從敵方手中勝利奪來，遠比辯護律師的辯護更有力。</li>
+</ul>
+<h4 id="_6">關鍵線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>羅曼尼詢問「我的證詞夠嗎？還有沒有其他人可以印證？」，並強調「我要親自出手（play a lone hand）」</td>
+<td>約 23%（梅赫恩初次拜訪羅曼尼）</td>
+<td>她問的不是「我要怎麼保護丈夫」，而是在評估辯護策略的強度——這是計劃者的問句，不是受驚妻子的問句；「lone hand」一詞在結尾被羅曼尼本人點明為關鍵伏筆</td>
+</tr>
+<tr>
+<td>2</td>
+<td>梅赫恩在法庭上注意到羅曼尼「無意識地不斷握緊、鬆開右手」</td>
+<td>約 87%（庭審場景）</td>
+<td>這個手部習慣動作，在他走出法庭後突然讓他想起在默格森太太公寓裡見過同一個動作——「她」與「她」是同一人的唯一身體線索</td>
+</tr>
+<tr>
+<td>3</td>
+<td>羅曼尼被稱為「維也納女演員」（actress in Vienna）</td>
+<td>約 54%（首次拜訪羅曼尼，她說出自己婚姻狀況時）</td>
+<td>女演員意味著她具備精確的角色扮演能力；克莉絲蒂在此埋下的伏筆輕描淡寫，幾乎被「她不是合法妻子」這條更戲劇性的資訊所遮蓋</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_7">輔助線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>羅曼尼反覆低聲強調「我要知道最糟的情況（I want to know the worst）」，語氣意味深長</td>
+<td>約 21%</td>
+<td>若她真的只是憤恨，她無需這麼在意案情的可操作空間；她需要評估「最糟的情況」，才能決定計劃的精確形式</td>
+</tr>
+<tr>
+<td>2</td>
+<td>梅赫恩離開時，她說「你可憐的小人兒（you poor little man）」——語氣是憐憫，不是輕蔑</td>
+<td>約 29%</td>
+<td>這句話是對一個她正在欺騙、卻又在保護的人的感嘆；若她真的恨沃爾，「小人兒」這個帶有憐惜的稱呼不合情理</td>
+</tr>
+<tr>
+<td>3</td>
+<td>辯護律師察覺羅曼尼在法庭上的仇恨情緒「過於強烈」，試圖抑制她的激昂（「她自己的辯護律師反而想讓她更中立」）</td>
+<td>約 67%（庭審段落）</td>
+<td>控方並不需要情緒激昂——情緒激昂是表演，目的是製造戲劇張力，讓後來的「崩潰認罪」顯得更真實</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_8">假線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>羅曼尼爆發「我恨他！我恨他！我恨他！我要看他被吊死！」</td>
+<td>約 26%</td>
+<td>讀者完全相信這是真實情感的噴發，不可能是設計好的表演開場</td>
+</tr>
+<tr>
+<td>2</td>
+<td>她詳細描述「沃爾帶血回來並坦承殺人」的出庭陳詞</td>
+<td>約 65%（庭審段落概述）</td>
+<td>細節的豐富與具體讓讀者更傾向相信她——但正因為這是精心設計的假陳詞，才會如此完整、如此具殺傷力</td>
+</tr>
+<tr>
+<td>3</td>
+<td>「默格森太太」對羅曼尼的仇恨激動而真實：「我跟了她多年，監視她……現在我抓到她了！」</td>
+<td>約 48%</td>
+<td>讀者（和梅赫恩）將其解讀為真實的受害者反應，完全看不出這是羅曼尼在替自己的計劃賦予背景故事</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_9">真相二：「默格森太太」的真實身份——喬裝的羅曼尼</h3>
+<ul>
+<li><strong>線索收斂點：約 88%</strong></li>
+<li>答案：梅赫恩在貧民窟見到的「默格森太太」（Mrs. Mogson）從頭到尾是羅曼尼·海格爾喬裝扮演的角色。那批「揭露仇恨」的情書由羅曼尼親手偽造，「馬克斯」並不存在；她用這套道具在法庭上讓自己作為控方證人的「崩潰認罪」顯得更具說服力。</li>
+</ul>
+<h4 id="_10">關鍵線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>梅赫恩離開法庭後，回想羅曼尼「無意識地握緊、鬆開右手」，突然憶起在默格森太太公寓看過同一個動作</td>
+<td>約 88%（法庭結束後的走廊場景）</td>
+<td>這是整個故事中唯一一條「物理身份線索」；克莉絲蒂在法庭場景（87%）剛描述羅曼尼的手部習慣，緊接著在 88% 讓梅赫恩把兩個場景連結起來——時間差不到一頁，但足以讓第一次讀的讀者錯過</td>
+</tr>
+<tr>
+<td>2</td>
+<td>默格森太太的臉被硫酸毀容（用頭巾包覆），梅赫恩始終未能看清她的容貌</td>
+<td>約 45%（貧民窟場景）</td>
+<td>這是羅曼尼偽裝的必要道具：毀容掩護了她的真實面孔，讓「她就是羅曼尼」的判斷在視覺上不可能成立</td>
+</tr>
+<tr>
+<td>3</td>
+<td>默格森太太知道羅曼尼在法庭上說了什麼——「我聽到那賤人在法庭上說的話」</td>
+<td>約 49%</td>
+<td>她在梅赫恩到訪之前就已掌握庭審細節，表示她要嘛在場，要嘛就是當事人本身</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_11">輔助線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>匿名信在審判「前夕」出現，時機太過精準</td>
+<td>約 38%（信件段落）</td>
+<td>消息如何傳到「默格森太太」耳中？案情如此複雜，資訊鏈過於完整——除非她就是案件的局內人</td>
+</tr>
+<tr>
+<td>2</td>
+<td>默格森太太對羅曼尼的仇恨具體而私密（情人、硫酸、被搶走的男人），卻無法說出「那個男人」的名字</td>
+<td>約 48–50%</td>
+<td>「他只有一個名字」——情書裡只有「Max」，因為馬克斯根本不存在，羅曼尼不需要為一個虛構人物設計完整身份</td>
+</tr>
+<tr>
+<td>3</td>
+<td>羅曼尼事後向梅赫恩說「那張臉？噢，那很簡單——那盞煤氣燈太昏暗了，你根本看不出妝容」</td>
+<td>約 93%（結局對話）</td>
+<td>完整解釋了偽裝的技術細節，確認這是演員技巧的運用</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_12">假線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>默格森太太對梅赫恩漫天要價（兩百英鎊），被壓到二十英鎊才成交</td>
+<td>約 43–47%</td>
+<td>這場討價還價讓她看起來像一個地道的貧民窟線民，索取金錢的貪婪強化了「她不是虛構人物」的真實感</td>
+</tr>
+<tr>
+<td>2</td>
+<td>她說「我跟了她多年，監視她——現在我逮到她了！」的獨白，配合毀容的臉</td>
+<td>約 48%</td>
+<td>硫酸毀容加上多年積恨是一套完整的受害者敘事，把讀者帶進「這是個生活徹底被毀掉的真實女人」的情感框架</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_13">真相三：倫納德·沃爾確實是兇手</h3>
+<ul>
+<li><strong>線索收斂點：約 99%</strong></li>
+<li>答案：整個故事都在建構「沃爾是無辜者」的印象，最後一句話卻顛覆一切：羅曼尼告訴梅赫恩「你以為他是無辜的——我知道他是有罪的」。她不是被仇恨驅使出賣他，而是清楚知道他犯了罪、清楚知道辯護的難度、仍然選擇以最冒險的方式救了他。</li>
+</ul>
+<h4 id="_14">關鍵線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>梅赫恩問沃爾「這就是全部了嗎？」（關於他為何不帶妻子去見法蘭奇小姐），沃爾回答「是——就是這樣」，「話語之間是否有一絲遲疑？律師感覺到了」</td>
+<td>約 19%</td>
+<td>這是故事中唯一直接刺穿沃爾「誠實人」形象的文字；但它被梅赫恩以「可能是我的錯覺」帶過，讀者也跟著忽視</td>
+</tr>
+<tr>
+<td>2</td>
+<td>梅赫恩聽說羅曼尼的憤恨後，沃爾的初次震驚之後，「抗議變得缺乏誠意」；梅赫恩確信「他知道——他知道他們之間那個秘密是什麼，只是不打算說」</td>
+<td>約 39%</td>
+<td>沃爾知道羅曼尼為何恨他——因為他犯了罪，而她知道；這是唯一能解釋「他知道那個秘密卻不願說」的邏輯</td>
+</tr>
+<tr>
+<td>3</td>
+<td>羅曼尼最後對梅赫恩說：「我不敢冒那個風險。你看，你以為他是無辜的——」接著：「我知道——他是有罪的！」</td>
+<td>約 99%（最後一行）</td>
+<td>是全故事最後一句話，是整個結構的真正支點</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_15">輔助線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>沃爾的律師從一開始就說「案子黑到不能再黑，被告有罪似已成定論——但我竟然感到一絲懷疑」</td>
+<td>約 3%</td>
+<td>克莉絲蒂透過梅赫恩的「初始判斷」暗示沃爾確實有罪；只是梅赫恩自己說服了自己相信沃爾無辜</td>
+</tr>
+<tr>
+<td>2</td>
+<td>女傭珍妮特·麥肯錫（Janet Mackenzie）的全部陳述——沃爾知道遺囑內容、法蘭奇老太太不懂商業（沃爾說她懂）——最終從未被真正反駁，只是被程序壓倒</td>
+<td>全文</td>
+<td>珍妮特說的可能都是實話；法庭對她的交叉詰問僅指出她的嫉妒，沒有真正推翻她的陳述</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_16">假線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>沃爾對遺囑的「震驚反應」——他跳起來，頭埋在雙手之間，看起來完全不知情</td>
+<td>約 16%</td>
+<td>克莉絲蒂用沃爾的肢體語言讓讀者認為他的震驚是真實的，但這也可能是一個人在律師面前表演的最佳狀態</td>
+</tr>
+<tr>
+<td>2</td>
+<td>梅赫恩的主觀敘事視角——他相信沃爾，克莉絲蒂讓讀者跟著他一起相信</td>
+<td>全文</td>
+<td>本故事的最大假線索不在任何一個情節，而在於敘事視角本身：我們只看到梅赫恩所見，而梅赫恩從頭到尾都被騙了</td>
+</tr>
+<tr>
+<td>3</td>
+<td>沃爾「坦誠地配合律師調查」、「明確承認財務困難」、「拒絕律師提議的迴避策略」</td>
+<td>約 8–15%</td>
+<td>這些行為被解讀為誠實的證明——但一個聰明的兇手完全有可能計算出「部分坦白」是最有效的自保策略</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_17">推理路徑重建</h2>
+<p>本故事幾乎不可能在結局之前完整推導出三層真相，但細心的讀者可以在三個節點捕捉到裂縫：</p>
+<p><strong>節點一：「一個人出手（Lone Hand）」（23%）→ 確認（93%）</strong></p>
+<p>羅曼尼在梅赫恩初訪時說「我要親自出手（I intend to play a lone hand）」。這句話在結局場景中被克莉絲蒂特意標記為伏筆（羅曼尼「微笑，想起上次用過這幾個字的時候」）。只有當讀者在 23% 時便已感到「這個女人說這話是在計劃什麼，不是在表達憤恨」，才可能在後來的劇情發展中保持懷疑。這是最早、最難的推理節點。</p>
+<p><strong>節點二：遲疑的話語（19%）＋ 缺乏誠意的抗議（39%）</strong></p>
+<p>沃爾在被問到「這就是全部了嗎？」時的短暫遲疑，加上他對羅曼尼「仇恨」反應的真實感受被梅赫恩判斷為「缺乏誠意」——這兩條線索合在一起，暗示沃爾對羅曼尼的憤恨有先驗知識、對自己與法蘭奇的關係有不可告人之處。若能在 39% 時意識到「梅赫恩認定沃爾在撒謊」，讀者便有機會提前質疑沃爾的清白。</p>
+<p><strong>節點三：手部動作（87–88%）</strong></p>
+<p>梅赫恩在法庭上觀察到羅曼尼「不自覺握緊、鬆開右手」，走出法庭後突然與默格森太太的同一動作產生連結。這是全故事中最「公平」的一條線索：克莉絲蒂確實在兩個場景都明確描寫了這個習慣動作，讀者理論上有機會在 88% 之前比梅赫恩早一步連結——但實際上，隔著整個庭審場景的距離，幾乎沒有讀者能記住那個細節。</p>
+<p>最早「有機會懷疑羅曼尼在計劃什麼」的收斂點在約 23%（lone hand）；最早「有機會懷疑沃爾有罪」的收斂點在約 39%（缺乏誠意的抗議）；唯一一條能指向默格森太太真實身份的線索在 87–88%。三層真相的最終確認都在 93–99% 的結局對話，整個故事的「可推理性」接近極限。</p>
+<hr>
+<h2 id="_18">補充說明</h2>
+<p><strong>推理小說史上最重要的最後一句話之一</strong></p>
+<p>《控方證人》在克莉絲蒂的短篇作品中地位特殊，不是因為詭計最精巧，而是因為它在最短的篇幅內完成了最多層的翻轉，且每一層都是「道德層次」的翻轉，不只是「情節層次」的翻轉。第一層翻轉是「控方證人原來是辯護方的工具」；第二層是「默格森太太其實是羅曼尼本人」；第三層是「沃爾確實是兇手」。這三層翻轉在讀者認為故事已經結束、準備闔上書頁的一瞬間同時引爆，這正是它被後世無數改編作品（最著名的是 1957 年比利·懷德的電影版）視為推理類型片段巔峰的原因。</p>
+<p><strong>「不可靠的視角」的道德複雜性</strong></p>
+<p>與克莉絲蒂其他使用「不可靠敘述者」技巧的作品（如《羅傑艾克洛命案》）不同，《控方證人》的「不可靠視角」不是敘述者在欺騙讀者，而是敘述者本人被欺騙。梅赫恩是一個老實人，但他的老實讓他無法看穿羅曼尼的計劃；他相信沃爾無辜，是因為他相信了沃爾表演出來的誠實。克莉絲蒂在這裡提出了一個真正殘忍的問題：一個律師拯救了一個有罪的人，一個女人用謊言完成了正義，而那個有罪的人此刻是自由的——這算不算一個好的結局？</p>
+<p><strong>羅曼尼是克莉絲蒂筆下最難分類的人物</strong></p>
+<p>她不是反派，不是受害者，也不完全是英雄。她知道沃爾有罪，卻仍然救了他——可能出於愛，可能出於驕傲，可能只是因為她不允許別人決定故事的結局，只有她自己。這種曖昧的道德位置，在克莉絲蒂的作品中幾乎是獨一無二的。</p>
+<p><strong>與《蒙面女士》的對照：「被利用的偵探」的升級版</strong></p>
+<p>《蒙面女士》（The Veiled Lady）中，白羅被犯罪集團當成工具，代替他們尋找失竊的珠寶。《控方證人》走得更遠：在這裡，整個法庭程序——控方、辯方、陪審團、法官——都成了一個女人掌中的道具。如果說《蒙面女士》是「偵探被騙」，《控方證人》則是「整個司法系統被騙」——被一個完全清楚司法心理學的女演員，從頭到尾精確地騙了一遍。</p>
+    <a href="../index.html" class="back-link">← 홈으로</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">추리해부실</p>
+    <p>다섯 작가 · 여든여덟 작품 · 135년에 걸친 추리문학 난이도의 진화.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
