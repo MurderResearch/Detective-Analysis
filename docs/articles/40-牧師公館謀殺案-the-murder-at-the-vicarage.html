@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>牧師公館謀殺案（The Murder at the Vicarage） — 推理解剖室</title>
+<meta name="description" content="英格蘭鄉村聖瑪麗米德（St. Mary Mead），牧師克萊門特（Reverend Leonard Clement）在午餐時脫口說出：「任何謀殺普羅澤洛上校的人都是在替世界服務。」然而，就在當天傍晚，他回到書房，卻發現這位令人厭惡的教區長老普羅澤洛上校（Colonel Protheroe）真的被人射殺在他的書桌前——頭">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/40-牧師公館謀殺案-the-murder-at-the-vicarage.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/40-牧師公館謀殺案-the-murder-at-the-vicarage.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/40-牧師公館謀殺案-the-murder-at-the-vicarage.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/40-牧師公館謀殺案-the-murder-at-the-vicarage.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/40-牧師公館謀殺案-the-murder-at-the-vicarage.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/40-牧師公館謀殺案-the-murder-at-the-vicarage.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/40-牧師公館謀殺案-the-murder-at-the-vicarage.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/40-牧師公館謀殺案-the-murder-at-the-vicarage.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif TC', serif;
+  --font-sans: 'Noto Sans TC', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">推理解剖室</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">首頁</a>
+        <a href="../index.html#latest">最新分析</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="語言" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 繁體中文</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item active" data-lang="zh-TW" href="/Detective-Analysis/articles/40-牧師公館謀殺案-the-murder-at-the-vicarage.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/40-牧師公館謀殺案-the-murder-at-the-vicarage.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/40-牧師公館謀殺案-the-murder-at-the-vicarage.html">English</a>
+      <a class="lang-item" data-lang="ja" href="/Detective-Analysis/ja/articles/40-牧師公館謀殺案-the-murder-at-the-vicarage.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/40-牧師公館謀殺案-the-murder-at-the-vicarage.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/40-牧師公館謀殺案-the-murder-at-the-vicarage.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/40-牧師公館謀殺案-the-murder-at-the-vicarage.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/40-牧師公館謀殺案-the-murder-at-the-vicarage.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">阿嘉莎·克莉絲蒂 · </div>
+    <h1>牧師公館謀殺案（The Murder at the Vicarage）</h1>
+    <div class="subtitle">阿嘉莎·克莉絲蒂（Agatha Christie） · 長篇</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">推理難度</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">迷霧等級</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    
+    <h1 id="the-murder-at-the-vicarage">牧師公館謀殺案（The Murder at the Vicarage）— 推理分析</h1>
+<h2 id="_1">基本資訊</h2>
+<ul>
+<li>作者：阿嘉莎·克莉絲蒂（Agatha Christie）</li>
+<li>出版年：1930年</li>
+<li>類型：長篇</li>
+<li>偵探角色：珍·馬波小姐（Miss Jane Marple）——首度登場</li>
+<li>核心謎團類型：whodunit + howdunit + 雙重假自首（false confession）</li>
+</ul>
+<hr>
+<h2 id="_2">推理難度總評</h2>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星等</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難度（Deducibility）</td>
+<td>⭐⭐⭐⭐</td>
+<td>平均收斂點 82% — 動機早於 15% 即浮現，但假自首機制徹底攪亂推理；犯案手法直到 93% 才完整揭示；克莉絲蒂蓄意用「顯然最可疑之人」充當真兇，反過來讓讀者懷疑自己的直覺</td>
+</tr>
+<tr>
+<td>迷霧等級（Fog Rating）</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>七名嫌疑人、雙重假自首、偽造的遺書、精心布置的假槍聲——作者利用讀者「最可疑的人通常不是兇手」的類型慣例，讓真兇當眾自清；假自首作為推理結構本身的欺騙手法，接近敘事層面的詐術</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_3">故事大綱</h2>
+<p>英格蘭鄉村聖瑪麗米德（St. Mary Mead），牧師克萊門特（Reverend Leonard Clement）在午餐時脫口說出：「任何謀殺普羅澤洛上校的人都是在替世界服務。」然而，就在當天傍晚，他回到書房，卻發現這位令人厭惡的教區長老普羅澤洛上校（Colonel Protheroe）真的被人射殺在他的書桌前——頭部中彈，毫無掙扎痕跡，兇器不翼而飛。</p>
+<p>書房裡留下一張怪異的紙條，落款時間 6:20，內容像是上校寫給牧師說他不想再等了；但鑑識顯示這是偽造的，連時間都是後來加上去的。村裡的七個人各有動機：被上校告上法庭的偷獵者阿徹、挪用教區款項的助理牧師霍斯、神秘的女房客萊斯特朗太太、美麗卻無所事事的上校之女萊蒂絲、年輕的藝術家勞倫斯·雷丁（Lawrence Redding）……甚至連牧師本人和他年輕的妻子格里賽爾達也在嫌疑之列。</p>
+<p>勞倫斯率先衝到警察局自首；上校的妻子安妮（Anne Protheroe）隨後也聲稱是自己動的手。眾人陷入混亂。唯有看似只會在花園裡散步、打探八卦的老處女珍·馬波小姐始終不動聲色，把每一個細節都看在眼裡，慢慢拼湊出一條別人看不見的真相。</p>
+<hr>
+<h2 id="_4">真相拆解</h2>
+<h3 id="whodunit">真相一：兇手身分（Whodunit）</h3>
+<ul>
+<li><strong>線索收斂點：約 15%（懷疑）→ 80%（可邏輯確認）→ 93%（完整揭露）</strong></li>
+<li>答案：真兇是勞倫斯·雷丁（主謀）與安妮·普羅澤洛（執行者）。安妮在書房射殺了她的丈夫；勞倫斯事前布局、事後毀證、並試圖嫁禍給霍斯助理牧師。</li>
+</ul>
+<h4 id="_5">關鍵線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（章節/百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>牧師在工作室撞見勞倫斯和安妮熱烈接吻，兩人確為情侶</td>
+<td>第III章 / 約 9%</td>
+<td>建立核心動機——愛情三角，上校是兩人的障礙</td>
+</tr>
+<tr>
+<td>2</td>
+<td>勞倫斯在晚餐時提到他有一把毛瑟手槍（Mauser），留存自一戰</td>
+<td>第IV章 / 約 12%</td>
+<td><strong>兇器線索</strong>——謀殺用的正是 Mauser .25，兩者完全吻合</td>
+</tr>
+<tr>
+<td>3</td>
+<td>牧師在外出回途中遇見勞倫斯從牧師館大門走出，神色瘋狂、語無倫次，像個即將崩潰的人</td>
+<td>第V章 / 約 14%</td>
+<td>反常的情緒反應暴露一切；正常人發現朋友被殺會是震驚，勞倫斯的表現更像是剛犯下罪行</td>
+</tr>
+<tr>
+<td>4</td>
+<td>馬波小姐在茶會上，當眾人猜測勞倫斯在追求萊蒂絲時說：「我可不這麼認為——完全是另外一個人」</td>
+<td>第II章 / 約 6%</td>
+<td>馬波小姐最早的點破，暗示她一開始就看清了勞倫斯和安妮的關係</td>
+</tr>
+<tr>
+<td>5</td>
+<td>謀殺遺書被鑑識專家認定是偽造，並非普羅澤洛本人所寫</td>
+<td>第XXVII章 / 約 80%</td>
+<td>排除上校自殺的可能，並指向一個有能力模仿筆跡的有預謀兇手</td>
+</tr>
+<tr>
+<td>6</td>
+<td>安妮在案發日途經馬波小姐花園時<strong>沒有手提包</strong>——這是馬波小姐特別留意到的細節</td>
+<td>案發當日被觀察 / 約 14%（意義在 93% 揭示）</td>
+<td>沒有手提包意味著她沒有攜帶武器前往——但這反而是障眼法，真正的手槍早已由勞倫斯藏在書房的花盆裡</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_6">輔助線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（章節/百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>安妮對牧師說：「我希望他死……我走投無路」</td>
+<td>第III章 / 約 9%</td>
+<td>強化動機，安妮並非毫無殺意的受害者</td>
+</tr>
+<tr>
+<td>2</td>
+<td>勞倫斯說：「如果這是本小說，老頭子就應該死——對大家都好」</td>
+<td>第IV章 / 約 12%</td>
+<td>人物自述動機，細心讀者應留意</td>
+</tr>
+<tr>
+<td>3</td>
+<td>電話叫牧師出門是從上校莊園北門打出的，事後查出是假電話</td>
+<td>第VI-VIII章 / 約 18-22%</td>
+<td>謀殺是有計畫的——提前清場，排除目擊者</td>
+</tr>
+<tr>
+<td>4</td>
+<td>案發當天下午，勞倫斯剛去過牧師館，說要向牧師道別（決定離開此地）</td>
+<td>第IV章 / 約 13%</td>
+<td>提前勘察現場，確認時機</td>
+</tr>
+<tr>
+<td>5</td>
+<td>馬波小姐提到她「想通了」是因為看到書房窗邊那盆植物</td>
+<td>第XXVI章 / 約 92%</td>
+<td>植物的花盆就是手槍的藏匿處——勞倫斯提前到訪牧師館時藏入其中</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_7">假線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（章節/百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>勞倫斯主動走進警察局，聲稱自己殺了普羅澤洛</td>
+<td>第VI章 / 約 16%</td>
+<td>克莉絲蒂最精妙的設計——讓真兇用「假自首」來清除自己的嫌疑，利用讀者的類型直覺（「自首的人通常不是兇手」）</td>
+</tr>
+<tr>
+<td>2</td>
+<td>安妮隨後也聲稱是她殺了上校</td>
+<td>第VIII章 / 約 22%</td>
+<td>雙重假自首，讓偵查陷入死局，警方難以判斷誰說的是真話</td>
+</tr>
+<tr>
+<td>3</td>
+<td>霍斯助理牧師行為可疑：身體不適、精神緊張、在教區款項問題上有不當行為</td>
+<td>貫穿全書</td>
+<td>讀者很容易被引導認為霍斯才是真兇；勞倫斯後來更試圖毒殺霍斯並偽造他的認罪書</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="howdunit">真相二：犯案手法（Howdunit）</h3>
+<ul>
+<li><strong>線索收斂點：約 93%</strong></li>
+<li>答案：勞倫斯提前在書房窗邊的花盆裡藏好手槍（帶消音器）；安妮在 6:20 從窗口進入，從背後射殺正在書桌前寫信的上校，隨即离去。勞倫斯在離書房不遠的樹林裡以苦味酸（picric acid）和重石塊設置延時裝置，在 6:30 左右製造假槍聲，提供兩人的不在場證明。</li>
+</ul>
+<h4 id="_8">關鍵線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（章節/百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>牧師在樹林中遇見勞倫斯抱著一塊「大石頭」，勞倫斯說要給馬波小姐做假山</td>
+<td>第XVIII章前後 / 約 50%</td>
+<td>石頭是延時炸藥裝置的一部分——壓在苦味酸晶體上，由慢燃引信控制爆炸時機</td>
+</tr>
+<tr>
+<td>2</td>
+<td>馬波小姐說：「那塊石頭根本不適合做假山！就是這個讓我找到了線索」</td>
+<td>第XXX章 / 約 93%</td>
+<td>錯誤的石頭種類揭穿了勞倫斯的謊言，也讓馬波小姐把所有片段串聯起來</td>
+</tr>
+<tr>
+<td>3</td>
+<td>牧師在案發當天找到一塊晶體，醫生鑑定為苦味酸（picric acid）</td>
+<td>第XX-XXI章 / 約 60%</td>
+<td>遺留在現場的化學物質是假槍聲裝置的原料，當時卻沒人想到這個用途</td>
+</tr>
+<tr>
+<td>4</td>
+<td>鑑識推定上校死亡時間為 6:00–6:30 之間，但「聽到的槍聲」在 6:30–6:35</td>
+<td>第VI章 / 約 17%</td>
+<td>真正的槍聲在 6:20 被消音器壓制，6:30 的「槍聲」是人造假音；時間差是整個詭計的核心</td>
+</tr>
+<tr>
+<td>5</td>
+<td>書房窗邊的植物花盆（遺書謎題解開後回想）</td>
+<td>第XXVI章 / 約 92%</td>
+<td>馬波小姐注意到這盆植物久未澆水，「乾燥而需要照料」——正是因為上面的土被翻動過，手槍藏於其中</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_9">輔助線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（章節/百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>有女僕聽到一聲「像打噴嚏的聲音」從書房方向傳來，約在 6:20 前後</td>
+<td>第VI章 / 約 17%</td>
+<td>消音器擊發的聲音，被誤認為打噴嚏；真正的槍聲在此刻發生</td>
+</tr>
+<tr>
+<td>2</td>
+<td>書房時鐘被人撥快了 15 分鐘，形成「6:20 vs 6:35」的時間謎題</td>
+<td>第VI章起 / 約 17%</td>
+<td>勞倫斯留下偽造遺書後順手撥快時鐘，製造時間混亂</td>
+</tr>
+<tr>
+<td>3</td>
+<td>案發當天下午，勞倫斯曾來訪並在書房等候（說要等牧師），但只待了兩分鐘便離去</td>
+<td>第V章 / 約 14%</td>
+<td>短暫停留的真正目的是將手槍藏入花盆，而非等人</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_10">假線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（章節/百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>安妮在 6:20 途經馬波小姐花園時態度自然，完全沒有手提包</td>
+<td>約 14%</td>
+<td>讓人以為她去書房「沒有帶武器」，誤導讀者排除她是射擊者的可能性</td>
+</tr>
+<tr>
+<td>2</td>
+<td>普羅澤洛太太說遺書字跡「不像丈夫的字」，但當時被視為女性的情緒反應而遭忽視</td>
+<td>第V章 / 約 15%</td>
+<td>最重要的早期線索之一，被所有人（包括牧師）一笑置之</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="secondary-plot">真相三：後謀——嫁禍霍斯（Secondary Plot）</h3>
+<ul>
+<li><strong>線索收斂點：約 87%</strong></li>
+<li>答案：勞倫斯保留了普羅澤洛上校那封未寫完的真實信件（內容是上校打算舉報霍斯挪用教區款項），並在事後毒換了霍斯的安眠藥膠囊，再把那封信藏入霍斯的口袋——企圖讓霍斯在「認罪自殺」中背負謀殺罪名。</li>
+</ul>
+<h4 id="_11">關鍵線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（章節/百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>現場遺書被確認是偽造品，但案發現場還有另一封普羅澤洛的真實未完信件從未被找到</td>
+<td>第XXVII章 / 約 80%</td>
+<td>那封真實信件正被勞倫斯私藏作為之後的武器</td>
+</tr>
+<tr>
+<td>2</td>
+<td>霍斯近期曾邀請勞倫斯到住處造訪，勞倫斯有機會偷換藥物</td>
+<td>第XXVII-XXVIII章 / 約 83%</td>
+<td>行兇機會——親訪+調換膠囊</td>
+</tr>
+<tr>
+<td>3</td>
+<td>牧師在霍斯失去意識的椅子旁發現普羅澤洛的未完信件，揭示其指控某「教會神職人員」之財務不正</td>
+<td>第XXVIII章 / 約 87%</td>
+<td>這封信是勞倫斯計畫的核心物證，若得逞，霍斯的死將被認定為謀殺後悔恨自盡</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_12">推理路徑重建</h2>
+<p><strong>起點（0–15%）：建立嫌疑場景</strong></p>
+<p>細心的讀者在第一章午餐場景就應留意：牧師本人說了一句無心的「誰殺了普羅澤洛都是在服務世人」。這不只是敘事伏筆，更預告了一個真相——被害者本身是個幾乎無人喜歡的人，動機不缺。</p>
+<p>關鍵節點在第III章（約9%）：牧師在工作室門外撞見勞倫斯與安妮熱烈相擁——這是全書最直接的動機線索，兇手已在此刻暗示完畢。精明的讀者應在此立下旗幟：「這兩個人有充分的理由想讓上校消失。」</p>
+<p><strong>迷霧期（15–60%）：假自首大混亂</strong></p>
+<p>勞倫斯在案發後立刻衝去警察局自首，讓所有讀者（包括馬波小姐）暫時動搖。克莉絲蒂在此精準利用類型慣例——「最可疑的人通常不是兇手」——使真兇成功混入眾多嫌疑人之中。霍斯的可疑行為（借用教區款項、病態的神經質）、Dr. Stone 的假身份（其實是著名慣竊）、神秘的萊斯特朗太太（其實是萊蒂絲失散多年的親生母親）——多條副線同時開展，讀者疲於應付。</p>
+<p>在這段時間裡，有一條線索埋在不起眼處：牧師在樹林裡見到勞倫斯抱著大石頭，說是要送給馬波小姐做假山（約50%）。一個月後的重讀者會恍然大悟——這正是假槍聲裝置的關鍵零件。</p>
+<p><strong>收斂期（80–93%）：謎題收口</strong></p>
+<p>當鑑識報告確認遺書是偽造的（約80%），整個案情開始朝唯一可能的方向聚攏。偽造遺書需要有人提前進入書房、並從現場取走上校的真實未完信件。而具備這個機會的人——在案發時短暫進入書房等待、然後迅速離開的人——正是勞倫斯。</p>
+<p><strong>揭曉（93%）：馬波小姐的整合推理</strong></p>
+<p>最後的確認出現在馬波小姐注意到那盆植物的一瞬間——「啊，就是這個！我怎麼這麼笨！」那盆被忽略的乾燥植物，正是勞倫斯提前藏槍的地點。加上「安妮沒有手提包卻進入書房」的行為、「只有在消音器存在時打噴嚏的聲音才說得通」的聽覺細節，以及「假槍聲為兩人提供不在場證明」的時間計算——所有線索一齊浮現，指向同一個答案。</p>
+<hr>
+<h2 id="_13">補充說明</h2>
+<p><strong>馬波小姐的登場意義</strong></p>
+<p>《牧師公館謀殺案》是克莉絲蒂最重要的創作節點之一：珍·馬波小姐在此首度亮相，此後她將成為與白羅並駕齊驅的偵探符號。有趣的是，克莉絲蒂最初對這個角色並無長遠計畫——馬波的深度是在這部小說之後才逐漸被發掘出來的。</p>
+<p>馬波與白羅的根本差異在這部書中清晰可見：白羅靠的是「小小灰色腦細胞」的演繹推理；馬波靠的是「人類本性的觀察」——她用聖瑪麗米德村裡的芸芸眾生做類比模板，把每一個嫌疑人對應到她認識的某個鄰居。她的本質是一個社會人類學家，而非邏輯機器。</p>
+<p><strong>假自首作為推理詭計</strong></p>
+<p>本書最精彩的設計是：讓真兇「自首」。這在推理史上並非首創，但克莉絲蒂將它升級為雙重假自首——勞倫斯先自首，安妮後自首——同時利用讀者「書中自首的人通常不是真兇」的閱讀慣例，形成一個完整的後設陷阱。作者不只在故事層面設謎，更在「讀者與故事的關係」這個層面設謎。</p>
+<p><strong>七個嫌疑人的民主分配</strong></p>
+<p>馬波小姐在書末列舉她曾認真考慮過的七位嫌疑人：阿徹、瑪麗女僕、萊蒂絲、丹尼斯、霍斯、牧師本人、格里賽爾達。這種「人人都有嫌疑」的結構是克莉絲蒂設計的民主謎題——沒有一個角色是完全無辜的，每個人的動機都被認真對待。在七個人的迷霧中，真正的答案是從始至終都在台面上的兩個最顯眼的嫌疑人。</p>
+<p><strong>與《羅傑艾克洛命案》的對比</strong></p>
+<p>若說《羅傑艾克洛命案》（1926）是克莉絲蒂最顛覆性的作品，《牧師公館謀殺案》則是她最精心的「正規推理」傑作：所有線索都公平地擺在讀者面前，答案不需要欺騙敘事規則即可達成。對比兩書，可以看出克莉絲蒂的詭計設計分為兩種路徑——一種是顛覆敘事本身，另一種是讓讀者在公平的條件下自我欺騙。馬波的偵探風格，天生就屬於後者。</p>
+    <a href="../index.html" class="back-link">← 回到首頁</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">推理解剖室</p>
+    <p>五位作者 · 八十八部作品 · 一百三十五年推理文學的難度演化</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
