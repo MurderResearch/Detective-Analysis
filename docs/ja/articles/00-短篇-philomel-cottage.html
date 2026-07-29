@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>夜鶯山莊（Philomel Cottage） — 推理解剖室</title>
+<meta name="description" content="三十三歲的 Alix King 是一位辦公室速記員，在繼承遠親遺產後與風度翩翩的 Gerald Martin 閃電相識、迅速成婚，搬進兩人共同購置的偏僻村舍「夜鶯山莊」（Philomel Cottage）。婚後一個月，表面上她幸福美滿，內心卻隱隱不安：前同事 Dick Windyford 的警告縈繞耳際，加上一再重複的">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/00-短篇-philomel-cottage.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/00-短篇-philomel-cottage.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/00-短篇-philomel-cottage.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/00-短篇-philomel-cottage.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/00-短篇-philomel-cottage.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/00-短篇-philomel-cottage.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/00-短篇-philomel-cottage.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/00-短篇-philomel-cottage.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif JP', serif;
+  --font-sans: 'Noto Sans JP', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">推理解剖室</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">ホーム</a>
+        <a href="../index.html#latest">最新</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="言語" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 日本語</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/00-短篇-philomel-cottage.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/00-短篇-philomel-cottage.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/00-短篇-philomel-cottage.html">English</a>
+      <a class="lang-item active" data-lang="ja" href="/Detective-Analysis/ja/articles/00-短篇-philomel-cottage.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/00-短篇-philomel-cottage.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/00-短篇-philomel-cottage.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/00-短篇-philomel-cottage.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/00-短篇-philomel-cottage.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">アガサ・クリスティー · </div>
+    <h1>夜鶯山莊（Philomel Cottage）</h1>
+    <div class="subtitle">阿嘉莎·克莉絲蒂（Agatha Christie） · 短篇</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">推理難易度</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">霧の濃度</div>
+        <div class="rating-badge-stars">⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    <div style="background:#2a2a35;border:1px solid #d4a853;color:#d4a853;padding:14px 20px;border-radius:8px;margin:20px 0;font-size:0.9rem;">ℹ️ この言語版はまだ翻訳準備中です。現在は繁体字中国語の原文を表示しています。</div>
+    <h1 id="philomel-cottage">夜鶯山莊（Philomel Cottage）— 推理分析</h1>
+<h2 id="_1">基本資訊</h2>
+<ul>
+<li>作者：阿嘉莎·克莉絲蒂（Agatha Christie）</li>
+<li>出版年：1924年（短篇，後收錄於《野鴿》等選集）</li>
+<li>類型：短篇</li>
+<li>偵探角色：無傳統偵探；主角 Alix Martin 自行破案</li>
+<li>核心謎團類型：whodunit（偽裝者身分）+ howdunit（謀殺計畫）+ 逃脫懸疑</li>
+</ul>
+<hr>
+<h2 id="_2">推理難度總評</h2>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星等</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難度（Deducibility）</td>
+<td>⭐⭐⭐</td>
+<td>平均收斂點 61% — 真正的危險身分在故事約 59% 處確認，謀殺計畫的全貌在 63% 處揭曉</td>
+</tr>
+<tr>
+<td>迷霧等級（Fog Rating）</td>
+<td>⭐⭐⭐⭐</td>
+<td>反轉式紅鯡魚：夢境讓讀者將威脅指向 Dick Windyford，真正的危險人物反以「完美丈夫」形象出場</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_3">故事大綱</h2>
+<p>三十三歲的 Alix King 是一位辦公室速記員，在繼承遠親遺產後與風度翩翩的 Gerald Martin 閃電相識、迅速成婚，搬進兩人共同購置的偏僻村舍「夜鶯山莊」（Philomel Cottage）。婚後一個月，表面上她幸福美滿，內心卻隱隱不安：前同事 Dick Windyford 的警告縈繞耳際，加上一再重複的奇怪噩夢——夢中 Dick 殺死了 Gerald，而她竟然感到欣慰。</p>
+<p>某個星期三，園丁 George 突然提前來工作，無意間透露 Gerald 曾對他說兩人要去倫敦。Alix 在 Gerald 的日記裡發現今日（週四）僅寫著「9 p.m.」。出於嫉妒，她翻找丈夫的鎖抽，找到的不是情書，而是積滿灰塵的美國報紙剪報——關於十九世紀惡名昭彰的重婚騙子兼殺人犯 Charles Lemaitre。剪報記載此人左手腕有一顆痣，而 Gerald 的左手腕恰好有一道吻合位置的疤。</p>
+<p>Alix 確信：Gerald Martin 就是 Charles Lemaitre。她意識到「9 p.m.」是謀殺的時間表，地窖是預定的墓穴，而 Gerald 此刻帶回來的一把嶄新鐵鏟，是最後的確認。</p>
+<p>Gerald 緊隨 Alix 不肯片刻離開，Alix 趁機接通電話，以「向肉鋪訂小牛排」為掩護，藉由按放話筒的小鍵傳遞隱藏訊息：「請來……非常重要……攸關生死……盡快。」Dick Windyford 聽出異樣，帶著警察趕來。而 Alix 用一個即席編造的「我也曾是毒殺犯」的故事拖住 Gerald——Gerald 突然想起那杯苦澀的咖啡，深信自己已被毒死，被恐懼和心臟病擊倒，在椅子上斷氣。Alix 得救，Gerald 死亡，她夢遊般低語：「後來……他死了……」</p>
+<hr>
+<h2 id="_4">真相拆解</h2>
+<h3 id="gerald-martin-charles-lemaitre">真相一：Gerald Martin 的真實身分——Charles Lemaitre</h3>
+<ul>
+<li><strong>線索收斂點：約 59%</strong></li>
+<li>答案：Gerald Martin 是曾在美國被捕、以「非確定有罪」（Not Guilty）脫身後越獄的重婚慣犯兼謀殺嫌疑人 Charles Lemaitre。他故意選擇獨居的 Alix 為目標，騙取其可觀的無記名債券後準備滅口。</li>
+</ul>
+<h4 id="_5">關鍵線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Alix 的無記名債券輕易變現，由 Gerald 經手保管</td>
+<td>約 15%</td>
+<td>事後回看是財務陷阱的設計；無記名債券等於現金，無從追查</td>
+</tr>
+<tr>
+<td>2</td>
+<td>地窖中以前已找到過一具骸骨——Lemaitre 慣用的藏屍手法</td>
+<td>約 56%（剪報）</td>
+<td>確立 Lemaitre 的犯罪模式：密室、地窖、孤立的受害者</td>
+</tr>
+<tr>
+<td>3</td>
+<td>報紙剪報記載 Lemaitre 左手腕有一顆痣</td>
+<td>約 57%</td>
+<td>正式揭示可辨識的生理特徵</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Gerald 左手腕有一道外形吻合的疤</td>
+<td>約 59%（<strong>收斂點</strong>）</td>
+<td>身分確認的最後關鍵線索；疤是痣被移除後的痕跡</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_6">輔助線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Gerald 容貌與 Lemaitre 照片相似（眼睛與眉毛）</td>
+<td>約 57%</td>
+<td>輔助身分確認，但照片有鬍鬚模糊了差異</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Gerald 對女性有非凡的魅力與控制力（報紙描述）</td>
+<td>約 56%</td>
+<td>呼應 Gerald 閃電迷倒 Alix 的速度與方式</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Gerald 提到有心臟病（Lemaitre 在法庭上的暈倒被記錄在剪報）</td>
+<td>約 56%</td>
+<td>為結局的死亡方式埋下伏筆</td>
+</tr>
+<tr>
+<td>4</td>
+<td>購屋金額爭議：George 堅稱兩千英鎊，Gerald 說三千</td>
+<td>約 24%</td>
+<td>隱示 Gerald 虛報售價多索取一千英鎊；騙術的冰山一角</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_7">假線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>反覆出現的夢境：Dick Windyford 殺死 Gerald，Alix 感到欣慰</td>
+<td>約 8%</td>
+<td>引導讀者將威脅歸因於 Dick，實則是 Alix 潛意識對 Gerald 的不安警報</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Dick Windyford 的憤怒警告與「你根本不了解他」</td>
+<td>約 5–8%</td>
+<td>表面上是嫉妒情人的無理取鬧，實際上是唯一清醒的警告</td>
+</tr>
+<tr>
+<td>3</td>
+<td>鎖抽裡的神秘信件</td>
+<td>約 54%</td>
+<td>讓讀者預期會是情人的密信，揭露的卻是 Alix 自己寫的信</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="gerald-9-pm">真相二：Gerald 的謀殺計畫——「9 p.m.」的含義</h3>
+<ul>
+<li><strong>線索收斂點：約 63%</strong></li>
+<li>答案：Gerald 計畫在週四晚間九點帶 Alix 到地窖「洗照片」，在那裡殺死她，埋入地下——重演 Lemaitre 的慣技。他事先對外散布「要去倫敦」的說法製造不在場證明，並購入新鐵鏟準備掘穴。週三 George 的突然出現，在不知情的情況下打亂了計畫。</li>
+</ul>
+<h4 id="_8">關鍵線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Gerald 告訴 George 他們「明天要去倫敦」</td>
+<td>約 21%</td>
+<td>事前製造消失的說詞——謀殺計畫配套的不在場鋪墊</td>
+</tr>
+<tr>
+<td>2</td>
+<td>日記僅寫「9 p.m.」，無任何說明</td>
+<td>約 28%</td>
+<td>計畫的時間標記；Gerald 對謀殺像對商務行程一樣條列記錄</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Gerald 對 George 的突然出現反應激烈，失控憤怒</td>
+<td>約 43%</td>
+<td>事後才理解：George 的提前到來破壞了已鋪好的偽裝，使謀殺計畫當晚風險過高</td>
+</tr>
+<tr>
+<td>4</td>
+<td>剪報記載 Lemaitre 曾在地窖下藏骸骨</td>
+<td>約 56%</td>
+<td>確認 Gerald 的犯罪模式，讓「地窖」洗照片的計畫瞬間顯出殺機</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Gerald 提著嶄新鐵鏟回家</td>
+<td>約 63%（<strong>收斂點</strong>）</td>
+<td>掘地藏屍的最後確認工具</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_9">輔助線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Gerald 阻止 Alix 去村子，堅持自己去</td>
+<td>約 50%</td>
+<td>阻止她接觸外界，縮小求援機會</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Gerald 一旦計劃好時間絕不妥協（「我定好時間從不更改」）</td>
+<td>約 80%</td>
+<td>折射出他把謀殺視為精密計畫的病態心理</td>
+</tr>
+<tr>
+<td>3</td>
+<td>洗照片的暗房在地窖——與 Lemaitre 的藏屍地點一致</td>
+<td>約 35%</td>
+<td>隱藏在「攝影愛好」表象下的地窖用途</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_10">假線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>「9 p.m. 洗照片」的解釋——Gerald 用攝影作為當晚行動的掩護</td>
+<td>約 34%</td>
+<td>讀者（和 Alix）一度接受攝影說法，Gerald 說有個「和妳很像的棕髮藍眼女孩」更轉移了懷疑</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Alix 的嫉妒假設（Gerald 防止她去村子是怕她見到 Dick）</td>
+<td>約 50%</td>
+<td>讓 Alix 和讀者將 Gerald 的管控行為解讀為愛的嫉妒</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_11">推理路徑重建</h2>
+<p><strong>階段一（0–30%）：奇怪的不安</strong></p>
+<p>精明的讀者在這個階段會注意到兩個問題：Dick 的警告「你根本不了解他」被過快婚姻刷過，以及夢境的情感結構——Alix 在夢中對 Dick 殺死 Gerald 感到欣慰。這不是正常的噩夢，而是潛意識在警示某種危機。但此時線索尚不足以明確指向 Gerald。</p>
+<p><strong>階段二（21–43%）：資訊碎片開始拼合</strong></p>
+<p>George 的「倫敦」敘述（21%）是第一個真正的危機訊號——Gerald 在社交場合散布的說詞，是謀殺前的標準掩護。日記的「9 p.m.」（28%）是計畫的時間座標。Gerald 對 George 失控的憤怒（43%），在事後回看是因為 George 來得太早，親眼見到 Alix 還在家而不是「已出發去倫敦」，打亂了當晚的謀殺時機。細心讀者在 43% 前後應能感覺計畫的輪廓雖尚不清晰，但某種精密的惡意已隱然存在。</p>
+<p><strong>階段三（54–63%）：全貌揭曉</strong></p>
+<p>搜查抽屜時找到剪報（56%）是本篇最關鍵的轉折。剪報、照片相似、體貌特徵（痣/疤，59%）三者連環確認，Gerald 的偽裝被拆穿。鐵鏟的出現（63%）是謀殺計畫的物質確認——所有線索至此徹底收斂。</p>
+<hr>
+<h2 id="_12">補充說明</h2>
+<p><strong>反轉夢境的精妙設計</strong></p>
+<p>本篇最出色的敘事技巧，是對「預兆式夢境」的反轉使用。Alix 的噩夢看起來警告她 Dick 是威脅：他在夢中殺死了 Gerald。但夢境真正的含義是她潛意識的呼救——她深層的自我早已察覺 Gerald 的危險，並「看見」Dick 作為救援者出現。故事結局恰好應驗了夢境的象徵邏輯：Dick 確實「殺死」了 Gerald（以間接方式），Alix 確實重回 Dick 的懷抱。Christie 把預兆夢境從恐怖符號翻轉為希望符號，讓它同時作為紅鯡魚和真正的敘事預言運作。</p>
+<p><strong>「毒咖啡」的刻意模糊結局</strong></p>
+<p>故事最後一幕是 Christie 的刻意留白。Gerald 說咖啡「嘗起來很苦」，Alix 說是「試用新品種」。Gerald 因恐懼與心臟病倒斃椅上。Alix 夢遊般地喃喃道「後來……他死了……」，彷彿在複誦自己剛才編造的毒殺故事。</p>
+<p>克莉絲蒂從未回答：那杯咖啡是否真的有毒？</p>
+<p>有幾個跡象支持「Gerald 死於恐懼/心臟病而非真毒」的解讀：Alix 的故事是即席杜撰，沒有任何實際下毒的場景描寫；但也有跡象指向真相的模糊性——剪報提及 Gerald 本人有心臟病，Alix 刻意選了一種「無法驗出的毒」作為故事素材，而 Gerald 真的死了。Christie 讓兩種解讀都成立，將「誰更像殺手」的道德曖昧留給讀者。這與《一桶阿蒙提拉多》的不可靠敘述者策略遙相呼應——真相的最後一塊，作者故意保留在文本之外。</p>
+<p><strong>作為「Bluebeard」類型故事的深化</strong></p>
+<p>本篇是藍鬍子（Bluebeard）民間故事的現代推理變體：丈夫有可怕的秘密，妻子被禁止窺探，最終以機智而非王子得救。Christie 將救援角色從「英雄兄弟」轉化為「帶著警察的前情人」，把「禁室」從字面上的房間轉化為報紙剪報的隱藏身世，並給了被拯救的妻子主動出擊的空間——電話謊局完全是 Alix 自己設計和執行的。</p>
+<p><strong>電話解碼場景的技術分析</strong></p>
+<p>Alix 使用電話話筒的「發送鍵」（key）一按一放，在 Gerald 的監聽下傳遞隱藏訊息，是本篇最具技術含量的設計。「按下 = Gerald 聽不到另一端；放開 = Dick 能聽到」的機制，讓她在假裝叫肉鋪的正常通話中，只讓 Dick 接收「請來……非常重要……攸關生死……盡快」的片段。這個裝置同時考驗 Alix 的急智和 Dick 的理解力——兩人的默契，與故事開頭 Dick 壓制多年的情感一起被喚醒。</p>
+<p><strong>在克莉絲蒂作品序列中的位置</strong></p>
+<p>此篇寫於克莉絲蒂早期（1924），彼時她的核心偵探公式（白羅的「小灰色腦細胞」）尚未完全定型。《夜鶯山莊》展示了她另一路向的才能：不用偵探，純用心理懸疑和角色智謀推動解謎。偵探是主角自己，而且是在不能暴露的壓力下，在殺手眼皮底下解謎並自救——這比讓偵探坐在安樂椅上回顧案件更緊張，也更貼近讀者的恐懼感。</p>
+    <a href="../index.html" class="back-link">← ホームに戻る</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">推理解剖室</p>
+    <p>五人の作家・八十八の作品・135年にわたる推理文学の難易度の進化。</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
