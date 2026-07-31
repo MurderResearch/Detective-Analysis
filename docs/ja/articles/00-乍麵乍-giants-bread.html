@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>巨人的麵包（Giant's Bread） — 推理解剖室</title>
+<meta name="description" content="倫敦國家歌劇院的開幕首演夜，一部由神秘作曲家「Boris Groen」創作的劃時代音樂作品《The Giant》震驚樂壇。老評論家 Carl Bowerman 一眼看穿 Groen 其實是英國人，而歌劇院老闆 Sebastian Levinne 微笑不語——他知道這個秘密。 隨後，小說回溯到故事的真正起點：Vernon">
+<link rel="alternate" hreflang="zh-TW" href="/Detective-Analysis/articles/00-乍麵乍-giants-bread.html">
+<link rel="alternate" hreflang="zh-CN" href="/Detective-Analysis/zh-CN/articles/00-乍麵乍-giants-bread.html">
+<link rel="alternate" hreflang="en" href="/Detective-Analysis/en/articles/00-乍麵乍-giants-bread.html">
+<link rel="alternate" hreflang="ja" href="/Detective-Analysis/ja/articles/00-乍麵乍-giants-bread.html">
+<link rel="alternate" hreflang="ko" href="/Detective-Analysis/ko/articles/00-乍麵乍-giants-bread.html">
+<link rel="alternate" hreflang="de" href="/Detective-Analysis/de/articles/00-乍麵乍-giants-bread.html">
+<link rel="alternate" hreflang="es" href="/Detective-Analysis/es/articles/00-乍麵乍-giants-bread.html">
+<link rel="alternate" hreflang="fr" href="/Detective-Analysis/fr/articles/00-乍麵乍-giants-bread.html">
+<link rel="alternate" hreflang="x-default" href="/Detective-Analysis/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg-dark: #0a0a0f; --bg-card: #13131a; --bg-card-hover: #1a1a24;
+  --gold: #d4a853; --gold-dim: #a07c3a;
+  --text-primary: #e8e4dc; --text-secondary: #9a9590; --text-dim: #5a5652;
+  --border: #2a2a35;
+  --font-serif: 'Noto Serif JP', serif;
+  --font-sans: 'Noto Sans JP', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg-dark); color: var(--text-primary); font-family: var(--font-sans); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 800px; }
+.nav-logo { font-family: var(--font-serif); font-weight: 900; font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-switcher { position: relative; font-size: 0.8rem; }
+.lang-switcher-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.78rem; letter-spacing: 0.5px; font-family: inherit; transition: border-color 0.3s, color 0.3s; }
+.lang-switcher-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.lang-switcher-menu { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: 6px 0; display: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.lang-switcher-menu.open { display: block; }
+.lang-switcher-menu a { display: block; padding: 8px 14px; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; transition: background 0.2s, color 0.2s; }
+.lang-switcher-menu a:hover { background: var(--bg-card-hover); color: var(--gold); }
+.lang-switcher-menu a.active { color: var(--gold); }
+
+.article-header { padding: 140px 0 60px; border-bottom: 1px solid var(--border); }
+.article-meta { font-size: 0.8rem; color: var(--gold-dim); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.article-header h1 { font-family: var(--font-serif); font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.4; margin-bottom: 12px; }
+.article-header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px; }
+.ratings-bar { display: flex; gap: 24px; flex-wrap: wrap; }
+.rating-badge { text-align: center; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: rgba(212, 168, 83, 0.04); }
+.rating-badge-label { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+.rating-badge-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+.article-body { padding: 60px 0 80px; }
+.article-body h1 { display: none; }
+.article-body h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--gold); }
+.article-body h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; margin: 36px 0 16px; color: var(--text-primary); }
+.article-body h4 { font-size: 1rem; font-weight: 500; margin: 24px 0 12px; color: var(--gold-dim); }
+.article-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 2; margin-bottom: 16px; }
+.article-body strong { color: var(--text-primary); font-weight: 500; }
+.article-body blockquote { border-left: 3px solid var(--gold-dim); padding: 12px 20px; margin: 20px 0; background: rgba(212,168,83,0.04); border-radius: 0 8px 8px 0; }
+.article-body blockquote p { color: var(--text-secondary); margin-bottom: 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.article-body th { color: var(--gold-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+.article-body tr:hover td { background: rgba(212,168,83,0.03); }
+.article-body ul, .article-body ol { margin: 12px 0 12px 24px; color: var(--text-secondary); }
+.article-body li { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.8; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+.back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+.back-link:hover { border-bottom-color: var(--gold); }
+
+footer { padding: 60px 0 40px; border-top: 1px solid var(--border); text-align: center; }
+footer p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .ratings-bar { gap: 12px; }
+  .article-body h2 { font-size: 1.3rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+<script>
+(function() {
+  // 所有支援語系 → path_prefix 的對照
+  var LANG_PREFIX = {'zh-TW': '', 'zh-CN': 'zh-CN', 'en': 'en', 'ja': 'ja', 'ko': 'ko', 'de': 'de', 'es': 'es', 'fr': 'fr'};
+  var DEFAULT_LANG = 'zh-TW';
+  var BASE_PATH = '/Detective-Analysis';  // 例："/Detective-Analysis"；根網域則為 ""
+
+  // 將目前 pathname 中的 BASE_PATH 剝除，只保留站內相對路徑
+  var rawPath = window.location.pathname;
+  var path = rawPath;
+  if (BASE_PATH && (path === BASE_PATH || path.indexOf(BASE_PATH + '/') === 0)) {
+    path = path.substring(BASE_PATH.length) || '/';
+  }
+
+  // 決定目前頁面位於哪個語系 prefix
+  var currentPrefix = '';
+  for (var code in LANG_PREFIX) {
+    var p = LANG_PREFIX[code];
+    if (p && (path === '/' + p + '/' || path === '/' + p || path.indexOf('/' + p + '/') === 0)) {
+      currentPrefix = p;
+      break;
+    }
+  }
+  var currentLang = DEFAULT_LANG;
+  for (var code in LANG_PREFIX) {
+    if (LANG_PREFIX[code] === currentPrefix) { currentLang = code; break; }
+  }
+
+  // 已跳轉過就不再跳（防迴圈）
+  if (sessionStorage.getItem('lang_redirected')) return;
+  sessionStorage.setItem('lang_redirected', '1');
+
+  // 使用者手動選過語系？有的話尊重
+  var userLang = localStorage.getItem('user_lang');
+  var targetLang = userLang;
+
+  // 否則用瀏覽器語系自動偵測
+  if (!targetLang) {
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // 粗略匹配：zh-tw, zh-hant → zh-TW；zh-cn, zh-hans → zh-CN；en-* → en；其餘取前兩碼
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hant') === 0 || nav === 'zh-hk' || nav === 'zh-mo') targetLang = 'zh-TW';
+    else if (nav.indexOf('zh') === 0) targetLang = 'zh-CN';
+    else if (nav.indexOf('en') === 0) targetLang = 'en';
+    else if (nav.indexOf('ja') === 0) targetLang = 'ja';
+    else if (nav.indexOf('ko') === 0) targetLang = 'ko';
+    else if (nav.indexOf('de') === 0) targetLang = 'de';
+    else if (nav.indexOf('es') === 0) targetLang = 'es';
+    else if (nav.indexOf('fr') === 0) targetLang = 'fr';
+    else targetLang = DEFAULT_LANG;
+  }
+
+  if (targetLang === currentLang) return;
+
+  // 組出目標 URL：把 /<oldPrefix>/ 或 / 替換成 /<newPrefix>/
+  var newPrefix = LANG_PREFIX[targetLang];
+  var tail;
+  if (currentPrefix) {
+    tail = path.substring(('/' + currentPrefix).length) || '/';
+  } else {
+    tail = path;
+  }
+  var newPath = BASE_PATH + (newPrefix ? '/' + newPrefix : '') + (tail.indexOf('/') === 0 ? tail : '/' + tail);
+  newPath = newPath.replace(/\/{2,}/g, '/');
+  if (newPath === rawPath) return;
+  window.location.replace(newPath + window.location.search + window.location.hash);
+})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="nav-logo">推理解剖室</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html">ホーム</a>
+        <a href="../index.html#latest">最新</a>
+      </div>
+      <div class="lang-switcher" id="lang-switcher">
+    <button class="lang-switcher-btn" type="button" aria-label="言語" onclick="document.getElementById('lang-menu').classList.toggle('open')">🌐 日本語</button>
+    <div class="lang-switcher-menu" id="lang-menu">
+      <a class="lang-item" data-lang="zh-TW" href="/Detective-Analysis/articles/00-乍麵乍-giants-bread.html">繁體中文</a>
+      <a class="lang-item" data-lang="zh-CN" href="/Detective-Analysis/zh-CN/articles/00-乍麵乍-giants-bread.html">简体中文</a>
+      <a class="lang-item" data-lang="en" href="/Detective-Analysis/en/articles/00-乍麵乍-giants-bread.html">English</a>
+      <a class="lang-item active" data-lang="ja" href="/Detective-Analysis/ja/articles/00-乍麵乍-giants-bread.html">日本語</a>
+      <a class="lang-item" data-lang="ko" href="/Detective-Analysis/ko/articles/00-乍麵乍-giants-bread.html">한국어</a>
+      <a class="lang-item" data-lang="de" href="/Detective-Analysis/de/articles/00-乍麵乍-giants-bread.html">Deutsch</a>
+      <a class="lang-item" data-lang="es" href="/Detective-Analysis/es/articles/00-乍麵乍-giants-bread.html">Español</a>
+      <a class="lang-item" data-lang="fr" href="/Detective-Analysis/fr/articles/00-乍麵乍-giants-bread.html">Français</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">アガサ・クリスティー · </div>
+    <h1>巨人的麵包（Giant's Bread）</h1>
+    <div class="subtitle">阿嘉莎·克莉絲蒂（Agatha Christie，筆名 Mary Westmacott） · 長篇 / 文學小說（非推理）</div>
+    <div class="ratings-bar">
+      <div class="rating-badge">
+        <div class="rating-badge-label">推理難易度</div>
+        <div class="rating-badge-stars">⭐⭐⭐</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-badge-label">霧の濃度</div>
+        <div class="rating-badge-stars">⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+  <div class="container">
+    <div style="background:#2a2a35;border:1px solid #d4a853;color:#d4a853;padding:14px 20px;border-radius:8px;margin:20px 0;font-size:0.9rem;">ℹ️ この言語版はまだ翻訳準備中です。現在は繁体字中国語の原文を表示しています。</div>
+    <h1 id="giants-bread">巨人的麵包（Giant's Bread）— 推理分析</h1>
+<h2 id="_1">基本資訊</h2>
+<ul>
+<li>作者：阿嘉莎·克莉絲蒂（Agatha Christie，筆名 Mary Westmacott）</li>
+<li>出版年：1930年</li>
+<li>類型：長篇 / 文學小說（非推理）</li>
+<li>偵探角色：無</li>
+<li>核心謎團類型：身份謎團（敘事框架謎題）— 「Boris Groen 究竟是誰？」</li>
+</ul>
+<hr>
+<h2 id="_2">推理難度總評</h2>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>星等</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理難度（Deducibility）</td>
+<td>⭐⭐⭐</td>
+<td>平均收斂點 72% — 「Boris Groen = Vernon Deyre」的身份謎題在第五部（約70%）「George Green」出現時已可合理推導，名字語源線索早已埋下</td>
+</tr>
+<tr>
+<td>迷霧等級（Fog Rating）</td>
+<td>⭐⭐</td>
+<td>輕度謎霧：作者以「序章倒置」手法藏住結局，但並無主動誤導；名字的多重對應（Green→Groen）是唯一明顯的解謎軌跡</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_3">故事大綱</h2>
+<p>倫敦國家歌劇院的開幕首演夜，一部由神秘作曲家「Boris Groen」創作的劃時代音樂作品《The Giant》震驚樂壇。老評論家 Carl Bowerman 一眼看穿 Groen 其實是英國人，而歌劇院老闆 Sebastian Levinne 微笑不語——他知道這個秘密。</p>
+<p>隨後，小說回溯到故事的真正起點：Vernon Deyre，一個出身古老英國貴族家庭（Abbots Puissants 莊園）的男孩。他童年時對鋼琴有近乎病態的恐懼，稱之為「the Beast（那頭獸）」，卻又無法離開它的魔力。Vernon 有一個想像中的朋友叫做 <strong>Mr. Green</strong>，以及三個孩子：Poodle、Squirrel、Tree。</p>
+<p>Vernon 的童年在父親死於波爾戰爭後進入新的篇章。表妹 Josephine（Joe）來到 Abbots Puissants 與他們同住；鄰近的 Deerfields 則被俄裔猶太富商 Levinne 家族買下，Vernon 由此結識了精明的 Sebastian Levinne，兩人成為一生的摯友。</p>
+<p>青年時期，Vernon 愛上了美麗卻缺乏主見的 Nell Vereker，同時也進入叔叔 Sydney 的生意公司工作，在痛苦的日常中偷偷寫作音樂。Sebastian 帶他認識了神秘有力的女高音 Jane Harding——Vernon 對她既著迷又恐懼，像極了他童年對「那頭獸」的感受。</p>
+<p>第一次世界大戰爆發。Vernon 從軍出征，被錯誤報告陣亡。Nell 等待多年後改嫁富有的 George Chetwynd。然而 Vernon 並未死去——他在荷蘭看見了 Nell 改嫁的報紙，精神崩潰後跳到卡車前，失去了所有記憶，以「George Green」這個名字（來自他童年幻想中的玩伴）重新生活，並以「Boris Groen」（Green 的荷蘭語/德語同義詞）為名開始作曲。</p>
+<p>Sebastian 與 Jane 在奧地利發現了失憶的 Vernon，為他恢復了記憶。Vernon 回去見 Nell，發現她在奢華生活中已無法重返清貧，而 Nell 也讓 Vernon 誤以為她懷有 George 的孩子，Vernon 痛苦地選擇隱匿自己的存在，繼續「已死」。Jane 得知後怒闖 Nell 家中，以激將法刺激 Nell 承認謊言、去找Vernon——然而當 Nell 終於拿起電話，George 的歸來打斷了她，而那枚新的玫瑰色鑽石讓她終究放下了電話。</p>
+<p>Vernon 與 Jane 前往俄羅斯。在那些年裡，Jane 是 Vernon 精神與創作上最親密的伴侶，而 Vernon 卻從未直視自己對她的感情。最終，回程的船「Resplendent 號」遭遇冰山沉船；在傾斜的甲板上，Vernon 同時看見 Nell 和 Jane 向大海滑去——他抓住了 Nell，讓 Jane 淹沒在黑暗的浪中。</p>
+<p>Sebastian 趕赴紐約看顧垂死的 Joe（她在長年受難後身患肺結核），Vernon 則在那一夜的悲痛中爆發出創作的狂潮，寫下了他一生傑作《The Giant》的靈魂骨架。Nell 來找他，卻發現 Vernon 已完全活在音樂裡，對她的感情灰飛煙滅。Vernon 深愛的始終是 Jane——而她已逝去。</p>
+<p>這一切，構成了序章那個首演夜 Boris Groen 之名背後的故事。</p>
+<hr>
+<h2 id="_4">真相拆解</h2>
+<blockquote>
+<p><strong>重要前提</strong>：本書為文學小說，非傳統推理小說。核心「謎題」為序章設置的身份謎團——「Boris Groen 究竟是誰？他的音樂來自何處？」全書即是這個謎題的解答。</p>
+</blockquote>
+<h3 id="boris-groen-vernon-deyre">真相一：Boris Groen 的身份 — 即 Vernon Deyre</h3>
+<ul>
+<li><strong>線索收斂點：約 72%</strong></li>
+<li>答案：Boris Groen 即 Vernon Deyre。失憶後的他以童年幻想中的玩伴「Mr. Green」為基礎，自稱 George Green，再以 Green 的荷蘭語近似詞 Groen 為筆名，以 Boris（俄語化名）掩飾英國身份，在俄羅斯匿名創作。</li>
+</ul>
+<h4 id="_5">關鍵線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>序章中，Bowerman 一聽音樂便確定作曲家是英國人，Sebastian 默認但保密</td>
+<td>0%（序章）</td>
+<td>暗示「Boris Groen」並非其真實身份，讀者知道他是英國人但不知是誰</td>
+</tr>
+<tr>
+<td>2</td>
+<td>童年的 Vernon 最鍾愛的幻想玩伴叫做「Mr. Green」，旗下三個孩子叫 Poodle、Squirrel、Tree</td>
+<td>約 5–8%</td>
+<td><strong>關鍵伏筆</strong>：Green 這個名字在 Vernon 心中有深刻的原型意義</td>
+</tr>
+<tr>
+<td>3</td>
+<td>荷蘭女孩要 Vernon 找一個名叫 Green 的朋友，Vernon 記在小本子上</td>
+<td>約 70%</td>
+<td>解釋了 Vernon 失憶後為何選擇「George Green」——這是他意識碎片中最後殘存的文字</td>
+</tr>
+<tr>
+<td>4</td>
+<td>失憶的 Vernon 以「George Green」為名生活，以「Boris Groen」作曲</td>
+<td>約 72–85%</td>
+<td>Groen = 荷蘭語的 Green，明確點出名字的對應關係</td>
+</tr>
+<tr>
+<td>5</td>
+<td>序章中，Bowerman 提到 Groen 的音樂與在戰爭中陣亡的年輕英國作曲家「Deyre，Vernon Deyre」一脈相承</td>
+<td>0%（序章）</td>
+<td><strong>最深的伏線</strong>：整個序章其實已悄悄點出 Groen 的身份，只需讀者在讀完全書後回頭印證</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_6">輔助線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Vernon 從小就感受到音樂的特殊魔力，即使他用「恐懼」來掩蓋這份著迷</td>
+<td>全書前半</td>
+<td>說明 Boris Groen 的音樂天賦早有根基</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sebastian 在序章中說「我知道整個故事，但有原因不能說」</td>
+<td>0%</td>
+<td>暗示 Groen 的身份背後有複雜的個人因素，預告全書是一個回溯故事</td>
+</tr>
+<tr>
+<td>3</td>
+<td>失憶的 Vernon 定居俄羅斯，對機械美學和現代音樂充滿熱情</td>
+<td>約 75–90%</td>
+<td>解釋《The Giant》的創作思想來源——蘇俄革命藝術氛圍的影響</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_7">假線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>誤導方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>電報報告「Vernon Deyre 陣亡」，隨後 Nell 改嫁</td>
+<td>約 65%</td>
+<td>讓讀者以為 Vernon 真的死了，在敘事上「關閉」了這個人物</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Boris Groen 被描述為「疑似俄國人」，媒體猜測他是布爾什維克作曲家</td>
+<td>0%（序章）</td>
+<td>讓讀者也跟著媒體誤判其國籍和身份</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="the-beast-vernon">真相二：「那頭獸（The Beast）」的象徵意義 — Vernon 的心理逃避與天才本質</h3>
+<ul>
+<li><strong>線索收斂點：約 90%</strong></li>
+<li>答案：「獸」代表 Vernon 從童年就一直逃避的東西——音樂的真實力量，以及隨之而來的情感震動與人生代價。他對鋼琴的「恐懼」是天才在自我意識之前對命運的感應；他一生逃避「直視」（Jane、戰爭的真實、對 Nell 感情的本質）。最終，Jane 之死讓他無法再逃，痛苦轉化為創作能量，誕生了《The Giant》。</li>
+</ul>
+<h4 id="_8">關鍵線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Nurse Frances 告訴受傷的 Vernon：「面對你害怕的東西，背後的東西永遠比正面的更可怕」</td>
+<td>約 12%</td>
+<td><strong>全書核心主題的點題句</strong>：直視 vs. 逃避，貫穿 Vernon 整個人生</td>
+</tr>
+<tr>
+<td>2</td>
+<td>成年後的 Vernon 始終「不敢正視」對 Jane 的感情，稱自己「害怕她」</td>
+<td>約 45–70%</td>
+<td>對應童年對「那頭獸」的恐懼——越逃，越無法離開</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Vernon 在俄羅斯的信中說：「我一生都是懦夫，永遠在逃避我不敢正視的事物」</td>
+<td>約 80%</td>
+<td>Vernon 自我診斷，與 Nurse Frances 的預言呼應</td>
+</tr>
+<tr>
+<td>4</td>
+<td>沉船夜，Vernon 抓住 Nell 而非 Jane，事後說：「這不是你所知道的——是某種盲目的本能控制了你」</td>
+<td>約 93%</td>
+<td>也是一種逃避：抓住「安全的愛」而非「真實的愛」</td>
+</tr>
+<tr>
+<td>5</td>
+<td>失去 Jane 後，Vernon 說：「我終於來到我的遺產（heritage）」，音樂狂潮在悲痛中爆發</td>
+<td>約 95%</td>
+<td>「那頭獸」終於被正視——痛苦本身成為創作的燃料，獸化為麵包</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_9">輔助線索</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>線索內容</th>
+<th>出現位置（百分比）</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Bowerman 在序章說：「天才是殘忍的，它以血肉為食，磨碎他人的骨頭來製作自己的麵包」</td>
+<td>0%</td>
+<td>書名《Giant's Bread》的直接來源，預告 Jane（和其他人）將成為 Vernon 音樂的「祭品」</td>
+</tr>
+<tr>
+<td>2</td>
+<td>鄰居把鋼琴搬進森林小屋那一幕，Vernon 看見「獸」向他爬來，從牆上跌落摔斷腿</td>
+<td>約 11%</td>
+<td>逃避行為的首次後果：逃跑讓他受傷</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Vernon 反覆在信中說「音樂就是我，但我寫不出來，我是一片荒漠」</td>
+<td>約 80–88%</td>
+<td>在 Jane 死之前，與痛苦和解的力量還未來到</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_10">推理路徑重建</h2>
+<h3 id="boris-groen">「Boris Groen 是誰」的解謎路徑</h3>
+<p>讀者在序章（0%）就被給予了所有解謎所需的<strong>外部輪廓</strong>：英國人、其音樂繼承了戰死的 Vernon Deyre 的精神、Sebastian Levinne 知道真相。一個細心的讀者在讀到 Vernon 的童年玩伴叫「Mr. Green」時（~8%），可以將「Green」與「Groen」的語源連結起來，但此時距真正確認還太遠。</p>
+<p>關鍵推理節點出現在約 <strong>70%</strong>：當失憶的 Vernon 第一次以「George Green」現身，並被解釋這個名字來自他小本子上記下的荷蘭女孩委託，讀者此刻應能完成最終連線：</p>
+<p><strong>Mr. Green（幻想）→ George Green（失憶後的身份）→ Boris Groen（Green 的荷蘭語）= Vernon Deyre</strong></p>
+<h3 id="_11">「天才與犧牲」的主題路徑</h3>
+<p>序章的 Bowerman 引言（「天才磨碎他人的骨頭製作麵包」）預告了全書的命題。隨後，每一次 Vernon「逃避」一件重要的事——鋼琴、Jane、戰爭的真實、對 Nell 情感的本質——都是這個命題的具體展演。讀者若記得 Nurse Frances 在 ~12% 說的「直視你的恐懼」，便能在 95% 的 Jane 之死後清楚看見：Vernon 終於無路可逃，於是成就了《The Giant》。</p>
+<hr>
+<h2 id="_12">補充說明</h2>
+<p><strong>《巨人的麵包》在克莉絲蒂創作史上的特殊位置</strong></p>
+<p>本書是克莉絲蒂以「Mary Westmacott」筆名出版的六部文學小說之一，寫於1930年，也是她最有名的推理小說密集創作期（1920年代末–1930年代初）的同一時段。她刻意以筆名區隔，以免讀者帶著「推理女王」的期待閱讀這部作品。</p>
+<p>本書幾乎沒有任何謀殺或懸疑情節，但克莉絲蒂的「謎題意識」並未消失，而是轉化為一種<strong>敘事框架謎題</strong>：序章先展示「結果」，全書再回溯「過程」。這個結構在她的推理小說中屢見不鮮（如《羅傑艾克洛命案》的第一人稱敘述詭計），在此被用於純文學目的——讀者「已知」Boris Groen 的成功，卻不知他如何走到這一步，這份懸念驅動了整本書近五百頁的閱讀動力。</p>
+<p><strong>與推理作品的對照</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>推理小說（克莉絲蒂式）</th>
+<th>《巨人的麵包》</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>核心問題</td>
+<td>誰是兇手？</td>
+<td>誰是 Boris Groen？他如何成為他？</td>
+</tr>
+<tr>
+<td>謎題結構</td>
+<td>線索散布，結尾揭示</td>
+<td>序章給出結果，全書解釋過程</td>
+</tr>
+<tr>
+<td>「兇手」</td>
+<td>出人意料的意外之人</td>
+<td>讀者從一開始就在追蹤的主角本身</td>
+</tr>
+<tr>
+<td>受害者</td>
+<td>被謀殺的人</td>
+<td>Jane，以及 Vernon 自己未能活出的人生</td>
+</tr>
+</tbody>
+</table>
+<p><strong>「那頭獸」的象徵系統</strong></p>
+<p>鋼琴之所以令童年的 Vernon 恐懼，是因為它發出的聲音讓他「在肚子裡感到蜷縮」——這是一個高度音樂敏感體質的人對自身天賦的第一次接觸。他稱之為「獸（Beast）」、夢見它追逐他，卻又在它響起時無法離開。這份矛盾精確地描繪了藝術天賦對一個還未準備好承擔它的靈魂的侵入方式。全書最動人的一幕，或許就是序章中那段老評論家 Bowerman 的感嘆：「天才是殘酷的巨人，磨碎血肉骨骸製作麵包——我不知道 Groen 是以誰的血肉餵養了它，但我確信他用了自己的，也用了別人的。」那個「別人」，就是 Jane。</p>
+<p><strong>歷史背景注記</strong></p>
+<p>本書跨越 1890 年代末至 1920 年代，涵蓋布爾戰爭、第一次世界大戰、俄國革命後的蘇聯藝術運動。書中大量描述的「噪音交響樂」「工廠汽笛音樂會」「立體派舞台設計」均為真實的 1920 年代蘇俄前衛藝術現象，克莉絲蒂以此建構了 Boris Groen 的音樂美學底色，也使本書成為那個時代藝術思潮的珍貴側記。</p>
+    <a href="../index.html" class="back-link">← ホームに戻る</a>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p style="color: var(--gold-dim); font-family: var(--font-serif); font-size: 0.9rem; margin-bottom: 12px;">推理解剖室</p>
+    <p>五人の作家・八十八の作品・135年にわたる推理文学の難易度の進化。</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.lang-switcher-menu a.lang-item');
+  items.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      localStorage.setItem('user_lang', a.getAttribute('data-lang'));
+      sessionStorage.removeItem('lang_redirected');
+    });
+  });
+  // 點外面關閉選單
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('lang-menu');
+    var btn  = document.querySelector('.lang-switcher-btn');
+    if (!menu) return;
+    if (!menu.contains(e.target) && e.target !== btn) menu.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>
